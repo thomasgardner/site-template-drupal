@@ -45,6 +45,11 @@
 #}
 
 <header id="site-branding" role="banner">
+  {% if page.alerts %}
+  <div class="layout-alerts" role="region">
+    {{ page.alerts }}
+  </div>
+  {% endif %}
   <div class="container">
     <div class="row">
       <div class="col-md-12">{{ page.header }}</div>

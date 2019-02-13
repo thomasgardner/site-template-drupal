@@ -17,6 +17,7 @@ libraries:
 base theme: classy
 
 regions:
+  alerts: 'Alerts'
   header: 'Header'
   slide_in_navigation: 'Slide In Navigation'
   hero: 'Hero'
