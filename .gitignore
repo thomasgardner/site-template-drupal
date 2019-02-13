@@ -1,0 +1,43 @@
+# Ignore configuration files that may contain sensitive information.
+
+docroot/sites/*/settings.local.php
+docroot/sites/*/services.local.yml
+docroot/sites/*/settings*.php
+docroot/sites/*/services*.yml
+
+docroot/!sites/default/settings.php
+docroot/!sites/default/services.yml
+# Ignore paths that contain user-generated content.
+docroot/files
+docroot/sites/*/files
+docroot/sites/*/private
+private-files
+docroot/sites/default/config
+
+docroot/themes/custom/custom_theme/package-lock.json
+
+# Ignore phpstorm configurations.
+.idea
+
+# Ignore grunt/gulp directories.
+node_modules
+
+# Ignore Mac files
+.DS_Store
+
+DS_Store
+.sass-cache
+.sass-cache/*
+
+# Ignore CSS maps files.
+# *.map
+
+# Ignore core when managing all of a project's dependencies with Composer
+# including Drupal core.
+# core
+
+# Ignore dependencies that are managed with Composer.
+# Generally you should only ignore the root vendor directory. It's important
+# that core/assets/vendor and any other vendor directories within contrib or
+# custom module, theme, etc., are not ignored unless you purposely do so.
+#docroot/vendor/
