@@ -63,7 +63,8 @@
         "drupal/facets": "^1.2",
         "drupal/search_api_autocomplete": "^1.1",
         "drupal/search_api_solr": "^2.5",
-        "drush/drush": "^9.5"
+        "drush/drush": "^9.5",
+        "drupal/date_popup": "^1.0"
     },
     "replace": {
         "drupal/core": "^8.6"
