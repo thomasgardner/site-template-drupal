@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "29831e45f1d4952cc5dc757f78dfeccb",
+    "content-hash": "4dc6ef54cc2677c76071cc803c6c98ac",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -8992,6 +8992,44 @@
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
             "time": "2019-01-16T10:59:17+00:00"
+        },
+        {
+            "name": "topfloor/composer-cleanup-vcs-dirs",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TopFloorTech/composer-cleanup-vcs-dirs.git",
+                "reference": "0158853dd054321b5048108ed5532c4b5e002d1b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TopFloorTech/composer-cleanup-vcs-dirs/zipball/0158853dd054321b5048108ed5532c4b5e002d1b",
+                "reference": "0158853dd054321b5048108ed5532c4b5e002d1b",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0.0",
+                "php": ">=5.5",
+                "symfony/finder": "*"
+            },
+            "require-dev": {
+                "composer/composer": "dev-master"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "TopFloor\\ComposerCleanupVcsDirs\\Plugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "TopFloor\\ComposerCleanupVcsDirs\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Automatically deletes .git directories in newly installed or updated dependencies.",
+            "time": "2016-10-06T04:35:51+00:00"
         },
         {
             "name": "twig/twig",
