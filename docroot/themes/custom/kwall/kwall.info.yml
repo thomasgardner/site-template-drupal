@@ -1,17 +1,17 @@
-name: Fresh
+name: kwall
 type: theme
 description: 'A blank theme that offers only the basic.'
 core: 8.x
 logo: 'assets/images/logo.png'
 
 libraries:
-  - fresh/default
-  - fresh/bootstrap
-  - fresh/flexslider
-  - fresh/slickslider
-  - fresh/fontawesome
-  - fresh/scrollmagic
-  - fresh/isotope
+  - kwall/default
+  - kwall/bootstrap
+  - kwall/flexslider
+  - kwall/slickslider
+  - kwall/fontawesome
+  - kwall/scrollmagic
+  - kwall/isotope
 
 
 base theme: classy

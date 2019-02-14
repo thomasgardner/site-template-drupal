@@ -1,7 +1,7 @@
 {
   "name": "kwall",
   "version": "1.0.1",
-  "author": "Shawn MacDonald",
+  "author": "kwall",
   "private": true,
   "devDependencies": {
     "autoprefixer": "^9.0.1",
