@@ -57,6 +57,77 @@
           
         }); // END Interior Slideshow
 
+
+        /*
+         * Video Tab Carousel
+        */
+        $('.paragraph--type--video-tab-carousel .video-carousel ', context).once('flexSliderInit').each(function () {
+          var $video_carousel = $(this),
+              $videos = $(this).find('.tab-video-wrap'),
+              $tabs = $(this).find('.tab-title-wrap');
+
+          // Mobile Slider Display - initial load
+          if ( $(window).width() <= 767 ) {
+            $video_carousel.addClass('mobile-display');
+            $videos.slick({
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              arrows: false,
+              fade: true,
+              asNavFor: '.tab-title-wrap'
+            });
+            $tabs.slick({
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              asNavFor: '.tab-video-wrap',
+              arrows: true,
+              dots: true,
+              focusOnSelect: true,
+            });
+          }
+
+          // Slider/Tab Display Toggle
+          $(window).on('resize',function(){
+
+            // Desktop tab toggle - window resize
+            if ( $(window).width() >= 768 && $video_carousel.hasClass('mobile-display')) {
+              $video_carousel.removeClass('mobile-display');
+              $tabs.slick('unslick');
+              $videos.slick('unslick');
+            	$video_carousel.find('.tab-title').on('click',function(){
+            		var video_tab = $(this).data('tab-target');
+            		$('.tab-item-content').each(function(){
+            			$(this).removeClass('active');
+            		});
+            		$(video_tab).addClass('active');
+            	});
+            }
+
+            // Mobile Slider Display - window resize
+            if ( $(window).width() <= 767 && !$video_carousel.hasClass('mobile-display') ) {
+              $videos.slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                fade: true,
+                asNavFor: '.tab-title-wrap'
+              });
+              $tabs.slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                asNavFor: '.tab-video-wrap',
+                arrows: true,
+                dots: true,
+                focusOnSelect: true,
+              });
+              $video_carousel.addClass('mobile-display');
+            }
+
+          });
+
+      	});
+
+
       }); // END $(document).ready
 
     }
