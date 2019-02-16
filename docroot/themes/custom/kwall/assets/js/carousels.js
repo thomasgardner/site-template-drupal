@@ -61,14 +61,23 @@
         /*
          * Video Tab Carousel
         */
-        $('.paragraph--type--video-tab-carousel .video-carousel ', context).once('flexSliderInit').each(function () {
+        $('.paragraph--type--video-tab-carousel .video-carousel', context).once('flexSliderInit').each(function () {
           var $video_carousel = $(this),
               $videos = $(this).find('.tab-video-wrap'),
               $tabs = $(this).find('.tab-title-wrap');
 
+          // Desktop tab toggle - window resize
+          if ( $(window).width() >= 768 ) {
+          	$video_carousel.find('.tab-title').on('click',function(){
+          		var video_tab = $(this).data('tab-target');
+          		$('.tab-item-content').each(function(){
+          			$(this).removeClass('active');
+          		});
+          		$(video_tab).addClass('active');
+          	});
+          }
           // Mobile Slider Display - initial load
           if ( $(window).width() <= 767 ) {
-            $video_carousel.addClass('mobile-display');
             $videos.slick({
               slidesToShow: 1,
               slidesToScroll: 1,
