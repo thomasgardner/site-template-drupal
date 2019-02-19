@@ -12,7 +12,7 @@ use Drupal\entity_browser\Form\GeneralInfoConfig;
 use Drupal\entity_browser\Form\SelectionDisplayConfig;
 use Drupal\entity_browser\Form\WidgetsConfig;
 use Drupal\entity_browser\Form\WidgetSelectorConfig;
-use Drupal\user\SharedTempStoreFactory;
+use Drupal\Core\TempStore\SharedTempStoreFactory;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 
 /**

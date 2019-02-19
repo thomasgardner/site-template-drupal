@@ -123,7 +123,10 @@
                 "Menus disappeared from menu administration menu after module installation": "https://www.drupal.org/files/issues/2018-07-06/menus-disappeared-after-installation-2896706-11.patch"
             },
             "drupal/entity_embed": {
-                "[PP-1] Image entities/fields embedded using Entity Embed cannot be linked in CKEditor" : "https://www.drupal.org/files/issues/2018-09-17/entity-embed-link-2511404-68.patch"
+                "[PP-1] Image entities/fields embedded using Entity Embed cannot be linked in CKEditor": "https://www.drupal.org/files/issues/2018-09-17/entity-embed-link-2511404-68.patch"
+            },
+            "drupal/entity_browser": {
+              "unable to access/create entity browsers from /admin/config/content/entity_browser.": "https://www.drupal.org/files/issues/2019-02-08/3031561-fix-temp-store-ref-1.patch"
             }
             
         }

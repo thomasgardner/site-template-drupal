@@ -3288,6 +3288,9 @@
                     "status": "covered",
                     "message": "Covered by Drupal's security advisory policy"
                 }
+            },
+            "patches_applied": {
+                "unable to access/create entity browsers from /admin/config/content/entity_browser.": "https://www.drupal.org/files/issues/2019-02-08/3031561-fix-temp-store-ref-1.patch"
             }
         },
         "installation-source": "dist",
