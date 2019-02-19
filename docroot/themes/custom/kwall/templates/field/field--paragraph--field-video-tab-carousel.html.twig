@@ -46,17 +46,17 @@
         <div class="row no-gutters">
 
         {% set count = 1 %}
-          <div class="col-md-8 tab-video-wrap">
+          <div class="col-md-4 tab-title-wrap">
           {% for item in items %}
-            <div id="tab-item-{{ count }}" class="tab-item-content{% if count == 1 %} active{% endif %}">{{ item.content }}</div>
+            <div id="tab-{{ count }}" class="tab-title{% if count == 1 %} active{% endif %}" data-tab-target="#tab-item-{{ count }}" tabindex="0">{{ item.content['#paragraph'].field_title.0.value }}</div>
             {% set count = count + 1 %}
           {% endfor %}
           </div>
 
         {% set count = 1 %}
-          <div class="col-md-4 tab-title-wrap">
+          <div class="col-md-8 tab-video-wrap">
           {% for item in items %}
-            <div id="tab-{{ count }}" class="tab-title{% if count == 1 %} active{% endif %}" data-tab-target="#tab-item-{{ count }}">{{ item.content['#paragraph'].field_title.0.value }}</div>
+            <div id="tab-item-{{ count }}" class="tab-item-content{% if count == 1 %} active{% endif %}">{{ item.content }}</div>
             {% set count = count + 1 %}
           {% endfor %}
           </div>

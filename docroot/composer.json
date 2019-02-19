@@ -115,15 +115,16 @@
               "Add a new FeedsTarget plugin to make name fields mappable in feeds importers.": "https://www.drupal.org/files/issues/NameTarget-2785491-2.patch"
             },
             "drupal/group": {
-                "Configurable entities as group content": "https://www.drupal.org/files/issues/group-configurable-entities-as-group-content-2797793-48.patch"
+              "Configurable entities as group content": "https://www.drupal.org/files/issues/group-configurable-entities-as-group-content-2797793-48.patch"
             },
             "drupal/groupmenu": {
-                "UndefinedLinkTemplateException": "https://www.drupal.org/files/issues/2880714.patch",
-                "Urls without route in admin menu cause fatal error": "https://www.drupal.org/files/issues/non-routed-urls-in-admin-menu-2927842.patch",
-                "Menus disappeared from menu administration menu after module installation": "https://www.drupal.org/files/issues/2018-07-06/menus-disappeared-after-installation-2896706-11.patch"
+              "UndefinedLinkTemplateException": "https://www.drupal.org/files/issues/2880714.patch",
+              "Urls without route in admin menu cause fatal error": "https://www.drupal.org/files/issues/non-routed-urls-in-admin-menu-2927842.patch",
+              "Menus disappeared from menu administration menu after module installation": "https://www.drupal.org/files/issues/2018-07-06/menus-disappeared-after-installation-2896706-11.patch",
+              "Undefined index: node_form_group_menu in groupmenu_form_alter": "https://www.drupal.org/files/issues/2019-01-24/UndefinedIndexError-3028195-1.patch"
             },
             "drupal/entity_embed": {
-                "[PP-1] Image entities/fields embedded using Entity Embed cannot be linked in CKEditor": "https://www.drupal.org/files/issues/2018-09-17/entity-embed-link-2511404-68.patch"
+              "[PP-1] Image entities/fields embedded using Entity Embed cannot be linked in CKEditor": "https://www.drupal.org/files/issues/2018-09-17/entity-embed-link-2511404-68.patch"
             },
             "drupal/entity_browser": {
               "unable to access/create entity browsers from /admin/config/content/entity_browser.": "https://www.drupal.org/files/issues/2019-02-08/3031561-fix-temp-store-ref-1.patch"
