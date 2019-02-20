@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "4dc6ef54cc2677c76071cc803c6c98ac",
+    "content-hash": "b15a76ab9843d2f2efbaeee67a2d8a89",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2027,6 +2027,9 @@
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
                     }
+                },
+                "patches_applied": {
+                    "Notice: Undefined property: CalendarEvent $date_id": "https://www.drupal.org/files/issues/calendar-undefined_property_date_id-2876414-3.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -2874,6 +2877,9 @@
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
+                },
+                "patches_applied": {
+                    "unable to access/create entity browsers from /admin/config/content/entity_browser.": "https://www.drupal.org/files/issues/2019-02-08/3031561-fix-temp-store-ref-1.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -3691,7 +3697,8 @@
                     }
                 },
                 "patches_applied": {
-                    "Configurable entities as group content": "https://www.drupal.org/files/issues/group-configurable-entities-as-group-content-2797793-48.patch"
+                    "Configurable entities as group content": "https://www.drupal.org/files/issues/group-configurable-entities-as-group-content-2797793-48.patch",
+                    "Notice: Undefined index: section": "./patches/group-undefined-index.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -3751,7 +3758,8 @@
                 "patches_applied": {
                     "UndefinedLinkTemplateException": "https://www.drupal.org/files/issues/2880714.patch",
                     "Urls without route in admin menu cause fatal error": "https://www.drupal.org/files/issues/non-routed-urls-in-admin-menu-2927842.patch",
-                    "Menus disappeared from menu administration menu after module installation": "https://www.drupal.org/files/issues/2018-07-06/menus-disappeared-after-installation-2896706-11.patch"
+                    "Menus disappeared from menu administration menu after module installation": "https://www.drupal.org/files/issues/2018-07-06/menus-disappeared-after-installation-2896706-11.patch",
+                    "Undefined index: node_form_group_menu in groupmenu_form_alter": "https://www.drupal.org/files/issues/2019-01-24/UndefinedIndexError-3028195-1.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -4972,6 +4980,74 @@
             "homepage": "https://drupal.org/project/smart_ip",
             "support": {
                 "source": "http://cgit.drupalcode.org/smart_ip"
+            }
+        },
+        {
+            "name": "drupal/smtp",
+            "version": "1.0.0-beta4",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/smtp",
+                "reference": "8.x-1.0-beta4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/smtp-8.x-1.0-beta4.zip",
+                "reference": "8.x-1.0-beta4",
+                "shasum": "80a4df4b2fd2d1b2dc653552d232ce98cb54bb9d"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-beta4",
+                    "datestamp": "1527598380",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "LukeLast",
+                    "homepage": "https://www.drupal.org/user/30151"
+                },
+                {
+                    "name": "japerry",
+                    "homepage": "https://www.drupal.org/user/45640"
+                },
+                {
+                    "name": "josesanmartin",
+                    "homepage": "https://www.drupal.org/user/72012"
+                },
+                {
+                    "name": "oadaeh",
+                    "homepage": "https://www.drupal.org/user/4649"
+                },
+                {
+                    "name": "wundo",
+                    "homepage": "https://www.drupal.org/user/25523"
+                },
+                {
+                    "name": "yettyn",
+                    "homepage": "https://www.drupal.org/user/93281"
+                }
+            ],
+            "description": "Allow for site emails to be sent through an SMTP server of your choice.",
+            "homepage": "https://www.drupal.org/project/smtp",
+            "support": {
+                "source": "http://cgit.drupalcode.org/smtp",
+                "issues": "https://www.drupal.org/project/issues/smtp"
             }
         },
         {

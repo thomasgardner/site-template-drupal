@@ -64,7 +64,8 @@
         "drupal/search_api_solr": "^2.5",
         "drush/drush": "^9.5",
         "drupal/date_popup": "^1.0",
-        "topfloor/composer-cleanup-vcs-dirs": "^1.0"
+        "topfloor/composer-cleanup-vcs-dirs": "^1.0",
+        "drupal/smtp": "^1.0"
     },
     "replace": {
         "drupal/core": "^8.6"
