@@ -38,9 +38,16 @@
  * @ingroup themeable
  */
 #}
+{%
+  set classes = [
+    paragraph.field_fluid_width.0.value == 0 ? 'container',
+    paragraph.field_fluid_width.0.value == 1 ? 'container-fluid',
+    content.field_boolean.0['#markup'] == 'On' ? 'p-0'
+  ]
+%}
 {% set breaker = content.field_flexible_blocks_display.0['#markup'] %}
 {% block paragraph %}
-  <div class="container">
+  <div {{ attributes.addClass(classes) }}>
     <div class="row{% if content.field_boolean.0['#markup'] == 'On' %} no-gutters{% endif %}">
     {% block content %}
 
@@ -52,9 +59,7 @@
 
       {% for key, item in content.field_flexible_bg_image_blocks if key|first != '#' %}
         {% set paragraph_id = 'cta-block-' ~ item['#paragraph'].id.value %}
-        <div class="col bg-img-col-wrap">
-          {{ item }}
-        </div>
+        {{ item }}
         {% if (key + 1) % breaker == '0' %}
           <div class="w-100"></div>
         {% endif %}

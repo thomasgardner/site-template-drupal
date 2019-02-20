@@ -685,18 +685,14 @@
   height: auto;
 }
 
-#block-contentbottom .paragraph--type--accordion {
+.layout-content-bottom .paragraph--type--accordion, .layout-content-bottom
+.paragraph--type--wysiwyg {
   max-width: 100%;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-}
-
-@media (min-width: 1200px) {
-  #block-contentbottom .paragraph--type--accordion {
-    width: 1140px;
-  }
+  width: 1140px;
 }
 
 .paragraph--type--interior-slideshow-slide {

@@ -40,13 +40,15 @@
 #}
 {% block content %}
   {% set image_url = file_url(content.field_image[0]['#media'].field_media_image_11.entity.uri.value) %}
-  <div class="bg-img-container" style="background-image:url({{image_url}});background-size:cover;">
-  {% if content.field_link.0['#title'] is not null %}
-    <a class="bg-img-link-wrap" href="{{ content.field_link.0['#title'] }}">
-  {% endif %}
-      {{ content|without('field_image','field_link') }}
-  {% if content.field_link.0['#title'] is not null %}
-    </a>
-  {% endif %}
+  <div class="col bg-img-col-wrap">
+    <div class="bg-img-container" style="background-image:url({{image_url}});background-size:cover;">
+    {% if content.field_link.0['#title'] is not null %}
+      <a class="bg-img-link-wrap" href="{{ content.field_link.0['#title'] }}">
+    {% endif %}
+        {{ content|without('field_image','field_link') }}
+    {% if content.field_link.0['#title'] is not null %}
+      </a>
+    {% endif %}
+    </div>
   </div>
 {% endblock %}
