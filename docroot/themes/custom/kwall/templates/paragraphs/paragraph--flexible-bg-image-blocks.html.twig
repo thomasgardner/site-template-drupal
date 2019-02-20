@@ -42,7 +42,7 @@
   set classes = [
     paragraph.field_fluid_width.0.value == 0 ? 'container',
     paragraph.field_fluid_width.0.value == 1 ? 'container-fluid',
-    content.field_boolean.0['#markup'] == 'On' ? 'p-0'
+    content.field_boolean.0['#markup'] == 'On' and paragraph.field_fluid_width.0.value == 1 ? 'p-0'
   ]
 %}
 {% set breaker = content.field_flexible_blocks_display.0['#markup'] %}
