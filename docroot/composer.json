@@ -115,7 +115,8 @@
               "Add a new FeedsTarget plugin to make name fields mappable in feeds importers.": "https://www.drupal.org/files/issues/NameTarget-2785491-2.patch"
             },
             "drupal/group": {
-              "Configurable entities as group content": "https://www.drupal.org/files/issues/group-configurable-entities-as-group-content-2797793-48.patch"
+              "Configurable entities as group content": "https://www.drupal.org/files/issues/group-configurable-entities-as-group-content-2797793-48.patch",
+              "Notice: Undefined index: section": "./patches/group-undefined-index.patch"
             },
             "drupal/groupmenu": {
               "UndefinedLinkTemplateException": "https://www.drupal.org/files/issues/2880714.patch",
@@ -128,6 +129,9 @@
             },
             "drupal/entity_browser": {
               "unable to access/create entity browsers from /admin/config/content/entity_browser.": "https://www.drupal.org/files/issues/2019-02-08/3031561-fix-temp-store-ref-1.patch"
+            },
+            "drupal/calendar": {
+              "Notice: Undefined property: CalendarEvent $date_id": "https://www.drupal.org/files/issues/calendar-undefined_property_date_id-2876414-3.patch"
             }
             
         }

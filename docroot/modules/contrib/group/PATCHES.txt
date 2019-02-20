@@ -5,3 +5,7 @@ Configurable entities as group content
 Source: https://www.drupal.org/files/issues/group-configurable-entities-as-group-content-2797793-48.patch
 
 
+Notice: Undefined index: section
+Source: ./patches/group-undefined-index.patch
+
+

@@ -281,15 +281,17 @@ class GroupPermissionHandler implements GroupPermissionHandlerInterface {
     // Sort all permissions by provider, section and title, in that order.
     uasort($permissions, function (array $permission_a, array $permission_b) use ($modules) {
       if ($permission_a['provider'] == $permission_b['provider']) {
-        if ($permission_a['section'] == $permission_b['section']) {
-          // All permissions should have gone through ::completePermission() so
-          // the titles are \Drupal\Core\StringTranslation\TranslatableMarkup.
-          $title_a = $permission_a['title']->__toString();
-          $title_b = $permission_b['title']->__toString();
-          return strip_tags($title_a) > strip_tags($title_b);
-        }
-        else {
-          return $permission_a['section'] > $permission_b['section'];
+        if (isset($permission_a['section']) && isset($permission_b['section'])) {
+          if ( $permission_a['section'] == $permission_b['section']) {
+            // All permissions should have gone through ::completePermission() so
+            // the titles are \Drupal\Core\StringTranslation\TranslatableMarkup.
+            $title_a = $permission_a['title']->__toString();
+            $title_b = $permission_b['title']->__toString();
+            return strip_tags($title_a) > strip_tags($title_b);
+          }
+          else {
+            return $permission_a['section'] > $permission_b['section'];
+          }
         }
       }
       else {

@@ -1061,7 +1061,8 @@ class Calendar extends StylePluginBase {
           foreach ($day as $time => $hour) {
             foreach ($hour as $key => $item) {
               $total_count++;
-              $ids[] = $item->date_id;
+              $entity = $item->getEntity();
+              $ids[] = $entity->date_id;
             }
           }
         }

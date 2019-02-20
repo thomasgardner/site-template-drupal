@@ -134,4 +134,52 @@
   };
 
 
+  /**
+   * Common tweaks for the theme.
+   *
+   * @type {{attach: Drupal.behaviors.sidebarAccordionInit.attach}}
+   */
+  Drupal.behaviors.calenderRestAPI = {
+    attach: function (context, settings) {
+
+      /*
+       * Sidebar Accordion Toggle
+       */
+      $(document).ready(function(){
+        $('.calendar-month').once('calenderRestAPI').each(function(){
+          $(this).find('.event-content').on('click',function(){
+            var date = $(this).data('date-trigger'),
+            parent = $(this).parent('.contents');
+
+            if (!parent.hasClass('import')) {
+              $.getJSON( "/rest/events/day/"+date, function( data ) {
+                var items = [],
+                    count = data.length - 1;
+                $.each( data, function( key, val ) {
+                  if ( key == 0 ) {
+                    items.push( "<li><span class='fa fa-close'></span></li>" );
+                  }
+                  items.push( "<li id='event-"+ date + '-' + key + "'>" + val.nothing + "</li>" );
+                  if ( key >= 2 && key == count ) {
+                    items.push( "<li><a href='/events/day/"+date+"'>View All <i class='fa fa-chevron-right'></i></a></li>" );
+                  }
+                });
+
+                $( "<ul/>", {
+                  "class": "popup list-unstyled",
+                  html: items.join( "" )
+                }).appendTo( parent );
+              });
+              parent.addClass('import open');
+            } else {
+              parent.toggleClass('open close');
+            }
+          });
+        });
+      });
+
+    }
+  };
+
+
 })(jQuery, Drupal, drupalSettings);

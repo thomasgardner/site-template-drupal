@@ -2378,6 +2378,9 @@
                     "status": "not-covered",
                     "message": "Dev releases are not covered by Drupal security advisories."
                 }
+            },
+            "patches_applied": {
+                "Notice: Undefined property: CalendarEvent $date_id": "https://www.drupal.org/files/issues/calendar-undefined_property_date_id-2876414-3.patch"
             }
         },
         "installation-source": "source",
@@ -4134,7 +4137,8 @@
                 }
             },
             "patches_applied": {
-                "Configurable entities as group content": "https://www.drupal.org/files/issues/group-configurable-entities-as-group-content-2797793-48.patch"
+                "Configurable entities as group content": "https://www.drupal.org/files/issues/group-configurable-entities-as-group-content-2797793-48.patch",
+                "Notice: Undefined index: section": "./patches/group-undefined-index.patch"
             }
         },
         "installation-source": "dist",
