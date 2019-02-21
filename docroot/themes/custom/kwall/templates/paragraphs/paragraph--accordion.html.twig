@@ -50,31 +50,71 @@
 
 {% block paragraph %}
   <div id ="{{ parent_id }}" {{ attributes.addClass(classes) }}>
-    {% block content %}
+    <div class="container">
+      <div class="row">
+      {% block content %}
 
-      {% if content.field_title.0['#context'].value != '' %}
-      <div class="accordion-section-title">{{ content.field_title }}</div>
-      {% endif %}      
-
-
-      {% for key, item in content.field_accordion_items if key|first != '#' %}
-        {% set paragraph_id = 'accordion-' ~ item['#paragraph'].id.value %}
-
-        <div class="card">
-          <div class="card-header">      				
-            <a data-toggle="collapse" href="#{{paragraph_id}}" aria-expanded="true" aria-controls="{{paragraph_id}}">{{ item['#paragraph'].field_title.value }}</a>
-          </div>
-        {% if key == '0' and content.field_boolean.0['#markup'] == 'On' %}
-          <div id="{{paragraph_id}}" class="collapse open show" aria-labelledby="headingOne" data-parent="#{{parent_id}}">
-        {% else %}
-          <div id="{{paragraph_id}}" class="collapse hide" aria-labelledby="headingOne" data-parent="#{{parent_id}}">
+        {#
+         * Section Title
+        #}
+        {% if content.field_title.0['#context'].value != '' %}
+        <div class="col-md-12 accordion-section-title-wrap">
         {% endif %}
-            <div class="card-body">{{ item['#paragraph'].field_body_formatted.value|raw }}</div>
+
+          {#
+           * Toggle All Link
+          #}
+          {% if content.field_toggle_all.0['#markup'] == 'On' %}
+          <div class="row">
+            <div class="col-auto">
+          {% endif %}
+
+          {# Section Title #}
+          {% if content.field_title.0['#context'].value != '' %}
+            <div class="accordion-section-title">{{ content.field_title }}</div>
+          {% endif %}
+
+          {# Toggle All Link #}
+          {% if content.field_toggle_all.0['#markup'] == 'On' %}
+            </div>
+            <div class="col-auto ml-auto">
+              <div class="toggle-all-wrap">
+                <div class="toggle-all collapsed">Toggle All</div>
+              </div>
+            </div>
           </div>
+          {% endif %}{# END toggle all link #}
+
+        {% if content.field_title.0['#context'].value != '' %}
         </div>
+        {% endif %}{# END section title #}
 
-      {% endfor %}
 
-    {% endblock %}
+        {#
+         * Accordion Items
+        #}
+        {% for key, item in content.field_accordion_items if key|first != '#' %}
+          {% set paragraph_id = 'accordion-' ~ item['#paragraph'].id.value %}
+
+          <div class="col-md-12 card-wrap">
+            <div class="card">
+              <div class="card-header">      				
+                <a data-toggle="collapse" href="#{{paragraph_id}}" aria-expanded="true" aria-controls="{{paragraph_id}}">{{ item['#paragraph'].field_title.value }}</a>
+              </div>
+            {% if key == '0' and content.field_boolean.0['#markup'] == 'On' %}
+              <div id="{{paragraph_id}}" class="collapse open show" aria-labelledby="headingOne">
+            {% else %}
+              <div id="{{paragraph_id}}" class="collapse hide" aria-labelledby="headingOne">
+            {% endif %}
+                <div class="card-body">{{ item['#paragraph'].field_body_formatted.value|raw }}</div>
+              </div>
+            </div>
+          </div>
+
+        {% endfor %}{# END accordion items #}
+
+      {% endblock %}
+      </div>
+    </div>
   </div>
 {% endblock paragraph %}

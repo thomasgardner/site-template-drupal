@@ -76,7 +76,35 @@
 
       });
 
+      $('.paragraph--type--accordion', context).once('commnTweaks').each(function(){
+        var $toggle_all = $(this).find('.toggle-all');
+        
+        if ( $toggle_all.length ) {
+          var $accordion_parent = $(this),
+              $accordion_parent_id = $(this).attr('id'),
+              $accordion_item = $(this).find('.collapse');
 
+          $toggle_all.on('click',function(){
+
+            if ( !$accordion_parent.hasClass('show-all') ) {
+
+              $accordion_item.each(function(){
+                $(this).collapse('show');
+              });
+              $accordion_parent.addClass('show-all');
+
+            } else {
+
+              $accordion_item.each(function(){
+                $(this).collapse('hide');
+              });
+              $accordion_parent.removeClass('show-all');
+
+            }
+
+          });
+        }
+      });
 
 
 

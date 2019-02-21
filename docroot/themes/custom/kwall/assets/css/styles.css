@@ -685,14 +685,18 @@
   height: auto;
 }
 
-.layout-content-bottom .paragraph--type--accordion, .layout-content-bottom
-.paragraph--type--wysiwyg {
+.layout-content-bottom .paragraph--type--wysiwyg {
   max-width: 100%;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
   width: 1140px;
+}
+
+.field--name-field-after-content .paragraph--type--accordion .accordion-section-title-wrap, .field--name-field-after-content
+.paragraph--type--accordion .card-wrap {
+  padding: 0;
 }
 
 .paragraph--type--interior-slideshow-slide {
