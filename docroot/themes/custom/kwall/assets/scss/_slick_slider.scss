@@ -1,7 +1,4 @@
 .view-id-carousels.view-display-id-block_1 {
-  .hide-overflow &{
-    overflow-y: hidden;
-  }
   .slick-arrow {
     z-index: 10;
 
@@ -14,10 +11,14 @@
   }
   .slick-list {
     margin: 0 -10px;
+    overflow: visible;
+    .hide-overflow &{
+      overflow-y: hidden;
+    }
     .slick-slide {
       float: left;
       padding: 0 10px;
-      opacity: 0.6;
+      opacity: 0.2;
       transition: ease all 0.4s;
       &.slick-active {
         opacity: 1;
