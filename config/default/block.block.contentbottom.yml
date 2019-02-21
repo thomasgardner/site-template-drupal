@@ -1,0 +1,33 @@
+uuid: f797e621-239d-42c7-b469-2a642498cb93
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - ctools_block
+  theme:
+    - fresh
+third_party_settings:
+  block_class:
+    classes: asdfasdfasd
+id: contentbottom
+theme: fresh
+region: content_bottom
+weight: -8
+provider: null
+plugin: 'entity_field:node:field_content_bottom'
+settings:
+  id: 'entity_field:node:field_content_bottom'
+  label: 'Content Bottom'
+  provider: ctools_block
+  label_display: '0'
+  formatter:
+    label: hidden
+    type: entity_reference_revisions_entity_view
+    settings:
+      view_mode: default
+    third_party_settings: {  }
+    weight: 0
+  context_mapping:
+    entity: '@node.node_route_context:node'
+visibility: {  }

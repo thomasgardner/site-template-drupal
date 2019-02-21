@@ -128,9 +128,6 @@
             "drupal/entity_embed": {
               "[PP-1] Image entities/fields embedded using Entity Embed cannot be linked in CKEditor": "https://www.drupal.org/files/issues/2018-09-17/entity-embed-link-2511404-68.patch"
             },
-            "drupal/entity_browser": {
-              "unable to access/create entity browsers from /admin/config/content/entity_browser.": "https://www.drupal.org/files/issues/2019-02-08/3031561-fix-temp-store-ref-1.patch"
-            },
             "drupal/calendar": {
               "Notice: Undefined property: CalendarEvent $date_id": "https://www.drupal.org/files/issues/calendar-undefined_property_date_id-2876414-3.patch"
             }

@@ -1,0 +1,22 @@
+uuid: 757387a8-ef6d-496b-b397-c05e6e87f1bc
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - kwall
+_core:
+  default_config_hash: jQQUUWN2Uxr5qZtc9zcJKBCxpKY8orN1u2HPqYYRQDI
+id: kwall_powered
+theme: kwall
+region: footer_copyright
+weight: -7
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

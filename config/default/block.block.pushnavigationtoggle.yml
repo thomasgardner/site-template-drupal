@@ -1,0 +1,28 @@
+uuid: fc816527-b6cb-4b14-9dc2-93a1ef735d92
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.push-navigation-toggle
+  module:
+    - block_class
+    - system
+  theme:
+    - fresh
+third_party_settings:
+  block_class:
+    classes: push-nav-menu
+id: pushnavigationtoggle
+theme: fresh
+region: header
+weight: -9
+provider: null
+plugin: 'system_menu_block:push-navigation-toggle'
+settings:
+  id: 'system_menu_block:push-navigation-toggle'
+  label: 'Push Navigation Toggle'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }
