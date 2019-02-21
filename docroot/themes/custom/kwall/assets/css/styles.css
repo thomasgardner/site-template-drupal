@@ -62,39 +62,43 @@
   text-shadow: -1px 1px 2px #000;
 }
 
-.view-id-carousels.view-display-id-block_1 .slick-arrow {
+.paragraph--type--person-carousel {
+  overflow: hidden;
+}
+
+.paragraph--type--person-carousel .view-id-carousels.view-display-id-block_1 .slick-arrow {
   z-index: 10;
 }
 
-.view-id-carousels.view-display-id-block_1 .slick-arrow.slick-prev {
+.paragraph--type--person-carousel .view-id-carousels.view-display-id-block_1 .slick-arrow.slick-prev {
   left: 15px;
 }
 
-.view-id-carousels.view-display-id-block_1 .slick-arrow.slick-next {
+.paragraph--type--person-carousel .view-id-carousels.view-display-id-block_1 .slick-arrow.slick-next {
   right: 15px;
 }
 
-.view-id-carousels.view-display-id-block_1 .slick-list {
+.paragraph--type--person-carousel .view-id-carousels.view-display-id-block_1 .slick-list {
   margin: 0 -10px;
   overflow: visible;
 }
 
-.hide-overflow .view-id-carousels.view-display-id-block_1 .slick-list {
+.hide-overflow .paragraph--type--person-carousel .view-id-carousels.view-display-id-block_1 .slick-list {
   overflow-y: hidden;
 }
 
-.view-id-carousels.view-display-id-block_1 .slick-list .slick-slide {
+.paragraph--type--person-carousel .view-id-carousels.view-display-id-block_1 .slick-list .slick-slide {
   float: left;
   padding: 0 10px;
   opacity: 0.2;
   transition: ease all 0.4s;
 }
 
-.view-id-carousels.view-display-id-block_1 .slick-list .slick-slide.slick-active {
+.paragraph--type--person-carousel .view-id-carousels.view-display-id-block_1 .slick-list .slick-slide.slick-active {
   opacity: 1;
 }
 
-.view-id-carousels.view-display-id-block_1 .slick-list .slick-slide img {
+.paragraph--type--person-carousel .view-id-carousels.view-display-id-block_1 .slick-list .slick-slide img {
   width: 100%;
   height: auto;
   max-width: 100%;

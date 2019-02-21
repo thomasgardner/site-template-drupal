@@ -43,16 +43,16 @@
     'paragraph',
     'paragraph--type--' ~ paragraph.bundle|clean_id,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_id,
-    paragraph.field_fluid_width.0.value == 0 ? 'container',
-    paragraph.field_fluid_width.0.value == 1 ? 'container-fluid',
     paragraph.field_hide_overflow.0.value == 1 ? 'hide-overflow',
     not paragraph.isPublished() ? 'paragraph--unpublished'
   ]
 %}
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }} data-autoplay="{{ paragraph.field_boolean.0.value }}">
-    {% block content %}
-      {{ content|without('field_fluid_width','field_boolean','field_hide_overflow') }}
-    {% endblock %}
+    <div class="container{% if paragraph.field_fluid_width.0.value == 1 %}-fluid{% endif %}">
+      {% block content %}
+        {{ content|without('field_fluid_width','field_boolean','field_hide_overflow') }}
+      {% endblock %}
+    </div>
   </div>
 {% endblock paragraph %}
