@@ -39,8 +39,18 @@
  */
 #}
 {% set breaker = content.field_flexible_blocks_display.0['#markup'] %}
+{%
+  set classes = [
+    'paragraph',
+    'container',
+    'col-display-' ~ content.field_flexible_blocks_display.0['#markup'],
+    'paragraph--type--' ~ paragraph.bundle|clean_id,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_id,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
 {% block paragraph %}
-  <div class="container">
+  <div{{ attributes.addClass(classes) }}>
     <div class="row{% if content.field_boolean.0['#markup'] == 'On' %} no-gutters{% endif %}">
     {% block content %}
 

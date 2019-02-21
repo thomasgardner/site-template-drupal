@@ -97,3 +97,42 @@
     }
   }
 }
+
+.paragraph--type--flexible-cta-blocks {
+  &.col-display-4 {
+    .col {
+      &.flexible-cta-block {
+        @media (max-width: $screen-md-max) {
+          flex-basis: 50%;
+        }
+        @media (max-width: $screen-xs-max) {
+          flex-basis: 100%;
+        }
+      }
+    }
+  }
+  &.col-display-3 {
+    .col {
+      &.flexible-cta-block {
+        @media (max-width: $screen-md-max) {
+          flex-basis: 50%;
+        }
+        @media (max-width: $screen-xs-max) {
+          flex-basis: 100%;
+        }
+      }
+    }
+  }
+  &.col-display-2 {
+    .col {
+      &.flexible-cta-block {
+        @media (max-width: $screen-md-max) {
+          flex-basis: 50%;
+        }
+        @media (max-width: $screen-xs-max) {
+          flex-basis: 100%;
+        }
+      }
+    }
+  }
+}
