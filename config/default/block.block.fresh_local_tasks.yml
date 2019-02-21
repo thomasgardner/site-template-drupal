@@ -1,0 +1,22 @@
+uuid: 61b4a05b-513d-4fb8-9513-d177129e0214
+langcode: en
+status: true
+dependencies:
+  theme:
+    - fresh
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: fresh_local_tasks
+theme: fresh
+region: content
+weight: -12
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

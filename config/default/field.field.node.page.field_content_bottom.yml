@@ -1,0 +1,132 @@
+uuid: 9ca4d3eb-bacc-48a8-8884-0fa3f6ce0288
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_bottom
+    - node.type.page
+    - paragraphs.paragraphs_type.accordion
+    - paragraphs.paragraphs_type.adjustable_media_and_content
+    - paragraphs.paragraphs_type.column_section
+    - paragraphs.paragraphs_type.flexible_bg_image_blocks
+    - paragraphs.paragraphs_type.flexible_cta_blocks
+    - paragraphs.paragraphs_type.full_width_image_section
+    - paragraphs.paragraphs_type.interior_slideshow
+    - paragraphs.paragraphs_type.person_carousel
+    - paragraphs.paragraphs_type.recent_articles_upcoming_events
+    - paragraphs.paragraphs_type.video_tab_carousel
+    - paragraphs.paragraphs_type.wysiwyg
+  module:
+    - entity_reference_revisions
+id: node.page.field_content_bottom
+field_name: field_content_bottom
+entity_type: node
+bundle: page
+label: 'Content Bottom'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      column_section: column_section
+      full_width_image_section: full_width_image_section
+      interior_slideshow: interior_slideshow
+      adjustable_media_and_content: adjustable_media_and_content
+      accordion: accordion
+      wysiwyg: wysiwyg
+      flexible_cta_blocks: flexible_cta_blocks
+      recent_articles_upcoming_events: recent_articles_upcoming_events
+      flexible_bg_image_blocks: flexible_bg_image_blocks
+      person_carousel: person_carousel
+      video_tab_carousel: video_tab_carousel
+    target_bundles_drag_drop:
+      3_column_cta:
+        weight: 3
+        enabled: false
+      hero_slide:
+        weight: 4
+        enabled: false
+      2_column_cta:
+        weight: 6
+        enabled: false
+      4_column_cta:
+        weight: 8
+        enabled: false
+      column_section:
+        enabled: true
+        weight: 9
+      full_width_image_section:
+        enabled: true
+        weight: 14
+      interior_slideshow:
+        enabled: true
+        weight: 16
+      interior_slideshow_slide:
+        weight: 17
+        enabled: false
+      quick_link:
+        weight: 18
+        enabled: false
+      hero_banner:
+        weight: 20
+        enabled: false
+      adjustable_media_and_content:
+        enabled: true
+        weight: 21
+      hero_slideshow:
+        weight: 22
+        enabled: false
+      interior_column_section:
+        weight: 23
+        enabled: false
+      accordion:
+        enabled: true
+        weight: 23
+      accordion_item:
+        weight: 24
+        enabled: false
+      recent_articles:
+        weight: 27
+        enabled: false
+      wysiwyg:
+        enabled: true
+        weight: 28
+      flexible_cta_block:
+        weight: 29
+        enabled: false
+      flexible_cta_blocks:
+        enabled: true
+        weight: 30
+      recent_articles_upcoming_events:
+        enabled: true
+        weight: 30
+      flexible_bg_image_block:
+        weight: 31
+        enabled: false
+      upcoming_events:
+        weight: 31
+        enabled: false
+      flexible_bg_image_blocks:
+        enabled: true
+        weight: 32
+      person_carousel:
+        enabled: true
+        weight: 45
+      quick_link_minimal:
+        weight: 45
+        enabled: false
+      video_embed:
+        weight: 49
+        enabled: false
+      video_tab_carousel:
+        enabled: true
+        weight: 54
+      video_tab_item:
+        weight: 55
+        enabled: false
+field_type: entity_reference_revisions

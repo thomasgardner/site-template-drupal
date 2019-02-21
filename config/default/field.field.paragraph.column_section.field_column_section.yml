@@ -1,0 +1,81 @@
+uuid: b4c8427f-d804-421a-bbc9-4a0bea732049
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_column_section
+    - paragraphs.paragraphs_type.2_column_cta
+    - paragraphs.paragraphs_type.3_column_cta
+    - paragraphs.paragraphs_type.4_column_cta
+    - paragraphs.paragraphs_type.column_section
+    - paragraphs.paragraphs_type.recent_articles
+    - paragraphs.paragraphs_type.upcoming_events
+  module:
+    - entity_reference_revisions
+id: paragraph.column_section.field_column_section
+field_name: field_column_section
+entity_type: paragraph
+bundle: column_section
+label: 'Column Section'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      2_column_cta: 2_column_cta
+      3_column_cta: 3_column_cta
+      4_column_cta: 4_column_cta
+      recent_articles: recent_articles
+      upcoming_events: upcoming_events
+    target_bundles_drag_drop:
+      2_column_cta:
+        enabled: true
+        weight: 6
+      3_column_cta:
+        enabled: true
+        weight: 7
+      4_column_cta:
+        enabled: true
+        weight: 8
+      column_section:
+        weight: 9
+        enabled: false
+      hero_slide:
+        weight: 10
+        enabled: false
+      full_width_image_section:
+        weight: 19
+        enabled: false
+      hero_banner:
+        weight: 20
+        enabled: false
+      hero_slideshow:
+        weight: 22
+        enabled: false
+      interior_column_section:
+        weight: 23
+        enabled: false
+      interior_slideshow:
+        weight: 24
+        enabled: false
+      interior_slideshow_slide:
+        weight: 25
+        enabled: false
+      quick_link:
+        weight: 26
+        enabled: false
+      recent_articles:
+        enabled: true
+        weight: 27
+      wysiwyg:
+        weight: 28
+        enabled: false
+      upcoming_events:
+        enabled: true
+        weight: 29
+field_type: entity_reference_revisions
