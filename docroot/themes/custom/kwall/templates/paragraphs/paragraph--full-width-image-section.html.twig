@@ -50,11 +50,11 @@
 {% set image_url = file_url(content.field_image[0]['#media'].field_media_image_5.entity.uri.value) %}
 
 {% block paragraph %}
-<div class="full-width-img-section{% if content.field_boolean.0['#markup'] == 'On' %} init{% endif %}" style="background-image:url('{{ image_url }}');background-size:cover;">
+<div class="full-width-img-section{% if content.field_boolean.0['#markup'] == 'On' %} init{% endif %}" style="background-image:url('{{ image_url }}');background-size:cover;" data-parallax-speed="{{ content.field_parallax_speed.0['#markup'] }}">
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
       <div class="row">
-        <div class="col-md-12">{{ content|without('field_image','field_boolean') }}</div>
+        <div class="col-md-12">{{ content|without('field_image','field_boolean','field_parallax_speed') }}</div>
       </div>
     {% endblock %}
   </div>

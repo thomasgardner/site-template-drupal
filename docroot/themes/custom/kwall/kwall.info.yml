@@ -1,6 +1,6 @@
 name: kwall
 type: theme
-description: 'A blank theme that offers only the basic.'
+description: 'A custom theme built by KWALL using Bootstrap 4, Font Awesome 4, Flexslider , Slick slider, Scrollmagic, Isotope, NPM, Gulp, SCSS(source files need to be compiled).'
 core: 8.x
 logo: 'assets/images/logo.png'
 
