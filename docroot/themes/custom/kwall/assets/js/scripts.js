@@ -14,27 +14,32 @@
       /**
        * background image paralax effect
       **/
-      $('.full-width-img-section',context).once('commnTweaks').each(function(){
-        var $img_section = $(this);
-        if ( !$img_section.hasClass('init') ) {
-          $img_section.css({
-            'background-position':'center center'
-          })
-        } else {
-          $(window).once('parallaxInit').on('load', function(){
+      $(window).on('load', function(){
+        $('.full-width-img-section',context).once('commnTweaks').each(function(){
+          var $img_section = $(this);
+          if ( !$img_section.hasClass('init') ) {
+            $img_section.css({
+              'background-position':'center center'
+            })
+          } else {
             var controller = new ScrollMagic.Controller(),
                 $scroll_duration = $(window).height() + $img_section.outerHeight(),
                 scroll_speed = ( $img_section.data('parallax-speed') == '' ) ? '5' : $img_section.data('parallax-speed');
 
           	// build scene
-          	var scene = new ScrollMagic.Scene({triggerElement: ".full-width-img-section.init", duration: $scroll_duration, triggerHook: 'onEnter'})
-          					.addTo(controller)
-          					// .addIndicators() // remove for production
-          					.on("progress", function (e) {
-          						$img_section.css('background-position', 'center ' + (e.progress.toFixed(2) * (100 / scroll_speed)) + '%');
-          					});
-          });
-        }
+          	var scene = new ScrollMagic.Scene({
+            	    triggerElement: ".full-width-img-section.init",
+            	    duration: $scroll_duration,
+            	    triggerHook: 'onEnter'
+            })
+  					.addTo(controller)
+  					// .addIndicators() // remove for production
+  					.on("progress", function (e) {
+  						$img_section.css('background-position', 'center ' + (e.progress.toFixed(2) * (100 / scroll_speed)) + '%');
+  					});
+
+          }
+        });
       });
 
 
