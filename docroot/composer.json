@@ -65,7 +65,10 @@
         "drush/drush": "^9.5",
         "drupal/date_popup": "^1.0",
         "topfloor/composer-cleanup-vcs-dirs": "^1.0",
-        "drupal/smtp": "^1.0"
+        "drupal/smtp": "^1.0",
+        "drupal/captcha": "^1.0@beta",
+        "drupal/captcha_pack": "^1.0",
+        "drupal/recaptcha": "^2.4"
     },
     "replace": {
         "drupal/core": "^8.6"
