@@ -18,6 +18,23 @@
       .hide-overflow &{
         overflow-y: hidden;
       }
+      &:before,
+      &:after {
+        content: '';
+        display: block;
+        height: 100%;
+        width: 100%;
+        background: transparent;
+        position: absolute;
+        top: 0;
+        z-index: 2;
+      }
+      &:before {
+        right: 100%;
+      }
+      &:after {
+        left: 100%;
+      }
       .slick-slide {
         float: left;
         padding: 0 10px;

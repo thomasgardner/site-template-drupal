@@ -87,6 +87,25 @@
   overflow-y: hidden;
 }
 
+.paragraph--type--person-carousel .view-id-carousels.view-display-id-block_1 .slick-list:before, .paragraph--type--person-carousel .view-id-carousels.view-display-id-block_1 .slick-list:after {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+}
+
+.paragraph--type--person-carousel .view-id-carousels.view-display-id-block_1 .slick-list:before {
+  right: 100%;
+}
+
+.paragraph--type--person-carousel .view-id-carousels.view-display-id-block_1 .slick-list:after {
+  left: 100%;
+}
+
 .paragraph--type--person-carousel .view-id-carousels.view-display-id-block_1 .slick-list .slick-slide {
   float: left;
   padding: 0 10px;

@@ -37,7 +37,6 @@
   					.on("progress", function (e) {
   						$img_section.css('background-position', 'center ' + (e.progress.toFixed(2) * (100 / scroll_speed)) + '%');
   					});
-
           }
         });
       });
