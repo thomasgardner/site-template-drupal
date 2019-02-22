@@ -24,11 +24,12 @@
           } else {
             var controller = new ScrollMagic.Controller(),
                 $scroll_duration = $(window).height() + $img_section.outerHeight(),
+                paragraph_id = '#'+$img_section.attr('id'),
                 scroll_speed = ( $img_section.data('parallax-speed') == '' ) ? '5' : $img_section.data('parallax-speed');
 
           	// build scene
           	var scene = new ScrollMagic.Scene({
-            	    triggerElement: ".full-width-img-section.init",
+            	    triggerElement: paragraph_id,
             	    duration: $scroll_duration,
             	    triggerHook: 'onEnter'
             })
