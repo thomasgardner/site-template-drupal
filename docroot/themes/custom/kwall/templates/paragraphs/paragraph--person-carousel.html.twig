@@ -48,10 +48,10 @@
   ]
 %}
 {% block paragraph %}
-  <div{{ attributes.addClass(classes) }} data-autoplay="{{ paragraph.field_boolean.0.value }}">
+  <div{{ attributes.addClass(classes) }} data-autoplay="{{ paragraph.field_boolean.0.value }}" data-display="{{ paragraph.field_display_count.0.value }}" data-scroll="{{ paragraph.field_scroll_count.0.value }}">
     <div class="container{% if paragraph.field_fluid_width.0.value == 1 %}-fluid{% endif %}">
       {% block content %}
-        {{ content|without('field_fluid_width','field_boolean','field_hide_overflow') }}
+        {{ content|without('field_fluid_width','field_boolean','field_hide_overflow','field_display_count','field_scroll_count') }}
       {% endblock %}
     </div>
   </div>

@@ -181,15 +181,16 @@
        * Sidebar Accordion Toggle
        */
       $(document).ready(function(){
-        $('.calendar-month').once('calenderRestAPI').each(function(){
+        $('.calendar-month',context).once('calenderRestAPI').each(function(){
           $(this).find('.event-content').on('click',function(){
             var date = $(this).data('date-trigger'),
-            parent = $(this).parent('.contents');
+                parent = $(this).parent('.contents');
 
-            if (!parent.hasClass('import')) {
+            if ( !parent.hasClass('import') ) {
               $.getJSON( "/rest/events/day/"+date, function( data ) {
                 var items = [],
                     count = data.length - 1;
+
                 $.each( data, function( key, val ) {
                   if ( key == 0 ) {
                     items.push( "<li><span class='fa fa-close'></span></li>" );
@@ -204,6 +205,7 @@
                   "class": "popup list-unstyled",
                   html: items.join( "" )
                 }).appendTo( parent );
+
               });
               parent.addClass('import open');
             } else {
