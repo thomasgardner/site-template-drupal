@@ -65,22 +65,11 @@ function kwall_preprocess_breadcrumb(&$variables) {
     else {
     // Check if Directory or Calendar view page
       $title = \Drupal::service('title_resolver')->getTitle($request, $route);
-      $url = explode('/',\Drupal::service('path.current')->getPath());
-      $data = end($url);
-
-      // Directory breadcrumbs
-      if ( strtolower($title) == 'directory' ) {
-        if ( preg_match('/^[a-z]$/', $data) ) {
-          // Directory filtering by 
-          $variables['current_page_title'] = ucwords($data);
-        } 
-        else {
-          $variables['current_page_title'] = \Drupal::service('title_resolver')->getTitle($request, $route);
-        }
-      }
 
       // Calendar breadcrumbs
       if ( $title == null ) {
+        $url = explode('/',\Drupal::service('path.current')->getPath());
+        $data = end($url);
         // Calendar landing display
         if ( $data == 'day'|| $data == 'week' || $data == 'month' || $data == 'year'  ) {
           // Calendar starting date breadcrumb display
@@ -111,6 +100,22 @@ function kwall_preprocess_breadcrumb(&$variables) {
           }
 
         }
+      }
+      // Directory breadcrumbs
+      elseif ( strtolower($title) == 'directory' ) {
+        $url = explode('/',\Drupal::service('path.current')->getPath());
+        $data = end($url);
+        if ( preg_match('/^[a-z]$/', $data) ) {
+          // Directory filtering by 
+          $variables['current_page_title'] = ucwords($data);
+        } 
+        else {
+          $variables['current_page_title'] = \Drupal::service('title_resolver')->getTitle($request, $route);
+        }
+      }
+      // Fallback to page title
+      else {
+        $variables['current_page_title'] = $title;
       }
 
     }
