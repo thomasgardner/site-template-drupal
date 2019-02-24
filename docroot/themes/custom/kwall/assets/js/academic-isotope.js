@@ -16,17 +16,25 @@
          * Academic Isotope Filter
         */
         // init Isotope
-        var $grid = $('.view-academics > .view-content').isotope({
-          itemSelector: '.grid-item',
-          layoutMode: 'fitRows'
-        });
-        // bind filter button click
-        $('.view-academic-filter-taxonomy-terms .filter-toggle').on( 'click', function() {
-          var filterValue = $( this ).data('tid');
-          // use filterFn if matches value
-          $grid.isotope({ filter: filterValue });
-        });
+        $('.view-academics',context).once('academicIsotopeInit').each(function(){
 
+          var $grid = $('.view-academics > .view-content').isotope({
+            itemSelector: '.grid-item',
+            layoutMode: 'fitRows'
+          });
+
+          // bind filter button click
+          $('.view-academic-filter-taxonomy-terms .filter-toggle').on( 'click', function() {
+            var filterValue = $( this ).data('tid');
+            // use filterFn if matches value
+            $grid.isotope({ filter: filterValue });
+          });
+
+          // bind filter rest
+          $('.isotope-reset').click(function(){
+            $grid.isotope({ filter: '*' });
+          });
+        });
 
       }); // END $(document).ready
 
