@@ -13,6 +13,7 @@ default:
     assets/js/sliders.js: {}
     assets/js/carousels.js: {}
     assets/js/push-navigation.js: {}
+    assets/js/academic-isotope.js: {}
 
 bootstrap:
   remote: getbootstrap.com

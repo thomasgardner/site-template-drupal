@@ -181,6 +181,7 @@
        * Sidebar Accordion Toggle
        */
       $(document).ready(function(){
+
         $('.calendar-month',context).once('calenderRestAPI').each(function(){
           $(this).find('.event-content').on('click',function(){
             var date = $(this).data('date-trigger'),
@@ -208,11 +209,14 @@
 
               });
               parent.addClass('import open');
-            } else {
+            } 
+            else {
               parent.toggleClass('open close');
             }
+
           });
         });
+
       });
 
     }

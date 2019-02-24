@@ -1,13 +1,13 @@
 <?php
-use Symfony\Cmf\Component\Routing\RouteObjectInterface;
 
 /**
  * @file
- * Bootstrap sub-theme.
+ * KWALL theme.
  *
  * Place your custom PHP code in this file.
  */
 
+use Symfony\Cmf\Component\Routing\RouteObjectInterface;
 use Drupal\node\NodeInterface;
 
 /**
