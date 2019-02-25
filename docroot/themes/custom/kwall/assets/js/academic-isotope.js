@@ -18,23 +18,37 @@
         // init Isotope
         $('.view-academics',context).once('academicIsotopeInit').each(function(){
 
-          var $grid = $('.view-academics > .view-content').isotope({
+          var $grid = $(this).children('.view-content'),
+              $checkboxes = $(this).find('.filter-toggle'),
+              $reset = $(this).find('.isotope-reset');
+
+          $grid.isotope({
             itemSelector: '.grid-item',
             layoutMode: 'fitRows'
           });
 
           // bind filter button click
-          $('.view-academic-filter-taxonomy-terms .filter-toggle').on( 'click', function() {
-            var filterValue = $( this ).data('tid');
-            // use filterFn if matches value
-            $grid.isotope({ filter: filterValue });
+          $checkboxes.on('click',function(){
+            var filters = [];
+            $(this).toggleClass('active');
+            // get checked checkboxes values
+            $checkboxes.filter('.active').each(function(){
+              filters.push( $(this).data('tid') );
+            });
+            filters = filters.join(', ');
+            $grid.isotope({ filter: filters });
           });
 
           // bind filter rest
-          $('.isotope-reset').click(function(){
+          $reset.click(function(){
+            $checkboxes.each(function(){
+              $(this).removeClass('active');
+            });
             $grid.isotope({ filter: '*' });
           });
+
         });
+    
 
       }); // END $(document).ready
 
