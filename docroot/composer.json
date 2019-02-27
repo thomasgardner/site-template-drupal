@@ -70,7 +70,8 @@
         "drupal/captcha_pack": "^1.0",
         "drupal/recaptcha": "^2.4",
         "drupal/views_block_area": "^1.0",
-        "drupal/backup_migrate": "^4.0"
+        "drupal/backup_migrate": "^4.0",
+        "drupal/fences": "^2.0@alpha"
     },
     "replace": {
         "drupal/core": "^8.6"
