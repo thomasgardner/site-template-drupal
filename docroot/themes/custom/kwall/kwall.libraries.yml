@@ -14,6 +14,7 @@ default:
     assets/js/carousels.js: {}
     assets/js/push-navigation.js: {}
     assets/js/academic-isotope.js: {}
+    assets/js/gridder.js: {}
 
 bootstrap:
   remote: getbootstrap.com
@@ -90,3 +91,12 @@ isotope:
     gpl-compatible: true
   js:
     /libraries/isotope/dist/isotope.pkgd.min.js: { minified: true }
+
+gridder:
+  remote: https://github.com/oriongunning/gridder
+  license:
+    name: GNU-GPL-2.0-or-later
+    url: https://github.com/oriongunning/gridder/blob/master/README.md
+    gpl-compatible: true
+  js:
+    /libraries/gridder/dist/js/jquery.gridder.min.js: { minified: true }

@@ -12,6 +12,7 @@ libraries:
   - kwall/fontawesome
   - kwall/scrollmagic
   - kwall/isotope
+  - kwall/gridder
 
 
 base theme: classy
