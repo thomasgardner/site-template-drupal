@@ -1,0 +1,32 @@
+name: schedule
+recipe: drupal8
+config:
+  php: '7.1'
+  via: apache
+  webroot: docroot
+
+proxy:
+  index:
+    - solr.schedule.lndo.site:8983
+  pma:
+    - pma.schedule.lndo.site
+
+services:
+  appserver:
+    config:
+      conf: lando/php/php.ini
+  index:
+    type: solr
+    portforward: 9999
+    core: schedule
+    config:
+      conf: lando/solr
+  pma:
+    type: phpmyadmin
+    hosts:
+      - database
+
+events:
+  post-start:
+    - appserver: /bin/bash $LANDO_MOUNT/lando/scripts/drupal-settings.sh
+    - appserver: /bin/bash $LANDO_MOUNT/lando/scripts/drush-aliases.sh
