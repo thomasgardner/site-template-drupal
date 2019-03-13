@@ -19,10 +19,10 @@ class CustomBlock extends BlockBase {
    * {@inheritdoc}
    */
   public function build() {
-    return array(
-			'#type' => 'markup',
+    return [
+      '#type' => 'markup',
       '#markup' => $this->t('Hello, World!'),
-    );
+    ];
   }
 
 }

@@ -1,7 +1,9 @@
 <?php
+
 namespace Drupal\custom_module\Plugin\Field\FieldFormatter;
 
 use Drupal\Core\Field\FieldItemListInterface;
+use Drupal\Component\Utility\Random;
 use Drupal\link\Plugin\Field\FieldFormatter\LinkFormatter;
 
 /**
@@ -25,28 +27,30 @@ class AdvanceLinkFormatter extends LinkFormatter {
     if (is_array($element)) {
       foreach ($element as $delta => $ele) {
 
-        $random = new \Drupal\Component\Utility\Random();
-        $string = $random->name(5,true);
+        $random = new Random();
+        $string = $random->name(5, TRUE);
 
-        // adding class
-        if(!empty($ele['#options']['data_video_link'])) {
-          
-          // set data attribute
-          $element[$delta]['#attributes']['data-src'] = ( strpos($ele['#options']['data_video_link'],'youtube') ? $ele['#options']['data_video_link'].'/?enablejsapi=1': $ele['#options']['data_video_link']);
-          $element[$delta]['#attributes']['data-toggle'] = ['al_'.$string];
+        // Adding class.
+        if (!empty($ele['#options']['data_video_link'])) {
 
-          // add play button
-          if(!empty($ele['#options']['class'])){
-            $element[$delta]['#attributes']['class'] = ['advanced-link play '.$ele['#options']['class']];
-          } else {
+          // Set data attribute.
+          $element[$delta]['#attributes']['data-src'] = (strpos($ele['#options']['data_video_link'], 'youtube') ? $ele['#options']['data_video_link'] . '/?enablejsapi=1' : $ele['#options']['data_video_link']);
+          $element[$delta]['#attributes']['data-toggle'] = ['al_' . $string];
+
+          // Add play button.
+          if (!empty($ele['#options']['class'])) {
+            $element[$delta]['#attributes']['class'] = ['advanced-link play ' . $ele['#options']['class']];
+          }
+          else {
             $element[$delta]['#attributes']['class'] = ['advanced-link play'];
           }
-        } else {
-          $element[$delta]['#attributes']['class'] = ['advanced-link '.$ele['#options']['class']];
+        }
+        else {
+          $element[$delta]['#attributes']['class'] = ['advanced-link ' . $ele['#options']['class']];
         }
 
-        // adding aria label
-        if(!empty($ele['#options']['aria_label'])){
+        // Adding aria label.
+        if (!empty($ele['#options']['aria_label'])) {
           $element[$delta]['#attributes']['aria-label'] = $ele['#options']['aria_label'];
         }
       }
@@ -54,3 +58,4 @@ class AdvanceLinkFormatter extends LinkFormatter {
     return $element;
   }
 }
+

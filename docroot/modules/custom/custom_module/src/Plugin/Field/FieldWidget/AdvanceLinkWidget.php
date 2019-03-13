@@ -1,4 +1,5 @@
 <?php
+
 namespace Drupal\custom_module\Plugin\Field\FieldWidget;
 
 use Drupal\Core\Field\FieldItemListInterface;
@@ -60,7 +61,7 @@ class AdvanceLinkWidget extends LinkWidget {
   }
 
   /**
-   * Validate url of video
+   * Validate url of video.
    *
    * @param $element
    * @param \Drupal\Core\Form\FormStateInterface $form_state

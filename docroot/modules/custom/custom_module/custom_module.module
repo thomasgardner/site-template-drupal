@@ -17,29 +17,29 @@ use Drupal\taxonomy\Entity\Term;
  *   Array that holds the current path as returned from arg() function
  */
 function custom_module_help($path, $arg) {
-	switch ($path) {
-		case "help.page.custom_module":
-			return '' . t("Hello, This is my Help Page") . '';
-			break;
-	}
+  switch ($path) {
+    case "help.page.custom_module":
+      return '' . t("Nothing to show for now.") . '';
+
+      break;
+  }
 }
 
 /**
-  * Implements hook__page_attachments()
-  */
+ * Implements hook__page_attachments()
+ */
 
 function custom_module_page_attachments(array &$attachments) {
-	// get current route
-	$route = \Drupal::routeMatch()->getRouteName();
-	// check route set in custom_module.routing.yml file
-	if ( $route == 'custom_module.content') {
-		$attachments['#attached']['library'][] = 'custom_module/global-styling';
-		$attachments['#attached']['library'][] = 'custom_module/global-scripts';
-	}
+  // Get current route.
+  $route = \Drupal::routeMatch()->getRouteName();
+  // check route set in custom_module.routing.yml file
+  if ($route == 'custom_module.content') {
+    $attachments['#attached']['library'][] = 'custom_module/global-styling';
+    $attachments['#attached']['library'][] = 'custom_module/global-scripts';
+  }
 
-	$attachments['#attached']['library'][] = 'custom_module/advance-link';
+  $attachments['#attached']['library'][] = 'custom_module/advance-link';
 }
-
 
 
 /**
@@ -60,11 +60,11 @@ function kwall_preprocess_views_view_field(&$vars) {
 
     if ($vars['field']->options['id'] == 'term_node_tid_1') {
       $content = '';
-      $icons = explode(',',$vars['field']->last_render);
-      foreach ( $icons as $k=>$v) {
+      $icons = explode(',', $vars['field']->last_render);
+      foreach ($icons as $k => $v) {
         $term = Term::load($v);
-        if ( isset($term->field_font_awesome_icon->value) ) {
-          $content .= '<i class="'.$term->field_font_awesome_icon->value.'"></i>';
+        if (isset($term->field_font_awesome_icon->value)) {
+          $content .= '<i class="' . $term->field_font_awesome_icon->value . '"></i>';
         }
       }
       $vars['output'] = t($content);
@@ -81,7 +81,7 @@ function kwall_preprocess_views_view_field(&$vars) {
 function custom_module_views_pre_view(ViewExecutable $view, $display_id, array &$args) {
   // Apply custom arguments to the views.
 
-  // view display in column content paragraph
+  // View display in column content paragraph.
   if ($view->id() == 'article_view' && $display_id == 'block_2') {
     $node = \Drupal::routeMatch()->getParameter('node');
     if ($node instanceof NodeInterface) {
@@ -99,7 +99,7 @@ function custom_module_views_pre_view(ViewExecutable $view, $display_id, array &
       }
     }
   }
-  // view display in column content paragraph
+  // View display in column content paragraph.
   if ($view->id() == 'event_view' && $display_id == 'block_1') {
     $node = \Drupal::routeMatch()->getParameter('node');
     if ($node instanceof NodeInterface) {
@@ -170,8 +170,12 @@ function custom_module_views_pre_view(ViewExecutable $view, $display_id, array &
 
 }
 
-
-function kwall_get_article_selected_taxonomy( $pid ) {
+/**
+ * @param $pid
+ *
+ * @return string
+ */
+function kwall_get_article_selected_taxonomy($pid) {
   $connection = \Drupal::database();
   $cat = '';
   $result = $connection->query("SELECT paragraphs_item_revision_field_data.id AS paragraphs_item_revision_field_data_id, paragraphs_item_field_data_paragraph_revision__field_column_section__paragraph__field_article_category.field_article_category_target_id AS paragraphs_item_field_data_paragraph_revision__field_column_, paragraph_revision__field_article_category.field_article_category_target_id AS paragraph_revision__field_article_category_field_article_cat, MIN(paragraphs_item_revision_field_data.revision_id) AS revision_id, MIN(paragraphs_item_field_data_paragraph_revision__field_column_section.id) AS paragraphs_item_field_data_paragraph_revision__field_column__1
@@ -181,7 +185,7 @@ LEFT JOIN {paragraph_revision__field_column_section} paragraph_revision__field_c
 LEFT JOIN {paragraphs_item_field_data} paragraphs_item_field_data_paragraph_revision__field_column_section ON paragraph_revision__field_column_section.field_column_section_target_revision_id = paragraphs_item_field_data_paragraph_revision__field_column_section.revision_id
 LEFT JOIN {paragraph__field_article_category} paragraphs_item_field_data_paragraph_revision__field_column_section__paragraph__field_article_category ON paragraphs_item_field_data_paragraph_revision__field_column_section.id = paragraphs_item_field_data_paragraph_revision__field_column_section__paragraph__field_article_category.entity_id AND paragraphs_item_field_data_paragraph_revision__field_column_section__paragraph__field_article_category.deleted = '0'
 LEFT JOIN {paragraph_revision__field_article_category} paragraph_revision__field_article_category ON paragraphs_item_revision_field_data.revision_id = paragraph_revision__field_article_category.revision_id AND paragraph_revision__field_article_category.deleted = '0'
-WHERE ((paragraphs_item_revision_field_data.id = '".$pid."')) AND ((paragraphs_item_revision_field_data.status = '1') AND (paragraphs_item_field_data_paragraph_revision__field_column_section__paragraph__field_article_category.field_article_category_target_id IS NOT NULL))
+WHERE ((paragraphs_item_revision_field_data.id = '" . $pid . "')) AND ((paragraphs_item_revision_field_data.status = '1') AND (paragraphs_item_field_data_paragraph_revision__field_column_section__paragraph__field_article_category.field_article_category_target_id IS NOT NULL))
 GROUP BY paragraphs_item_revision_field_data_id, paragraphs_item_field_data_paragraph_revision__field_column_, paragraph_revision__field_article_category_field_article_cat");
   foreach ($result as $id) {
     if (isset($id->paragraphs_item_field_data_paragraph_revision__field_column_)) {
@@ -191,7 +195,12 @@ GROUP BY paragraphs_item_revision_field_data_id, paragraphs_item_field_data_para
   return $cat;
 }
 
-function kwall_get_news_selected_taxonomy( $pid ) {
+/**
+ * @param $pid
+ *
+ * @return string
+ */
+function kwall_get_news_selected_taxonomy($pid) {
   $connection = \Drupal::database();
   $cat = '';
   $result = $connection->query("SELECT paragraphs_item_field_data.id AS id, paragraphs_item_field_data_paragraph__field_column_section.id AS paragraphs_item_field_data_paragraph__field_column_section_i, taxonomy_term_field_data_paragraph__field_event_category.tid AS taxonomy_term_field_data_paragraph__field_event_category_tid
@@ -201,7 +210,7 @@ LEFT JOIN {paragraph__field_column_section} paragraph__field_column_section ON p
 LEFT JOIN {paragraphs_item_field_data} paragraphs_item_field_data_paragraph__field_column_section ON paragraph__field_column_section.field_column_section_target_revision_id = paragraphs_item_field_data_paragraph__field_column_section.revision_id
 LEFT JOIN {paragraph__field_event_category} paragraphs_item_field_data_paragraph__field_column_section__paragraph__field_event_category ON paragraphs_item_field_data_paragraph__field_column_section.id = paragraphs_item_field_data_paragraph__field_column_section__paragraph__field_event_category.entity_id AND paragraphs_item_field_data_paragraph__field_column_section__paragraph__field_event_category.deleted = '0'
 LEFT JOIN {taxonomy_term_field_data} taxonomy_term_field_data_paragraph__field_event_category ON paragraphs_item_field_data_paragraph__field_column_section__paragraph__field_event_category.field_event_category_target_id = taxonomy_term_field_data_paragraph__field_event_category.tid
-WHERE ((paragraphs_item_field_data.id = '".$pid."')) AND ((paragraphs_item_field_data.status = '1') AND (paragraphs_item_field_data.type IN ('column_section')) AND (paragraphs_item_field_data_paragraph__field_column_section.type IN ('upcoming_events')))");
+WHERE ((paragraphs_item_field_data.id = '" . $pid . "')) AND ((paragraphs_item_field_data.status = '1') AND (paragraphs_item_field_data.type IN ('column_section')) AND (paragraphs_item_field_data_paragraph__field_column_section.type IN ('upcoming_events')))");
   foreach ($result as $id) {
     if (isset($id->taxonomy_term_field_data_paragraph__field_event_category_tid)) {
       $cat .= $id->taxonomy_term_field_data_paragraph__field_event_category_tid;

@@ -1,4 +1,4 @@
-# custom module admin settings page
+# Custom module admin settings page.
 custom_module.settings:
   path: '/admin/config/custom-module-settings'
   defaults:
@@ -7,7 +7,7 @@ custom_module.settings:
   requirements:
     _permission: 'access content'
 
-# custom module page display
+# Custom module page display.
 custom_module.content:
   path: '/custom-module'
   defaults:

@@ -16,7 +16,6 @@ advance-link:
       assets/css/advance-link.css: {}
   js:
     assets/js/advance-link.js: {}
-
   dependencies:
     - core/jquery
     - core/drupalSettings

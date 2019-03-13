@@ -1,5 +1,5 @@
 name: Custom Module
-description: Starter custom module for this website
+description: "Starter custom module for this website."
 package: Custom
 
 type: module
