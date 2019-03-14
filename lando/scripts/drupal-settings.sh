@@ -12,3 +12,5 @@ rsync -aq --ignore-existing /app/install/public /app/docroot/sites/default/files
 mkdir -p /app/docroot/sites/default/files/private
 rsync -aq --ignore-existing /app/install/private /app/docroot/sites/default/files/private/
 #TODO: Letsencrypt https?
+
+#install db
