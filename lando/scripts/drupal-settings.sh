@@ -8,7 +8,7 @@ else
   echo "Drupal settings: settings.local.php exists"
 fi
 #TODO: Copy over public and private files into site
-rsync -av --progress /app/install/public /app/docroot/sites/default/files --exclude php
-mkdir /app/docroot/sites/default/files/private
-rsync -av --progress /app/install/private /app/docroot/sites/default/files/private/
+rsync -aq --ignore-existing /app/install/public /app/docroot/sites/default/files --exclude php
+mkdir -p /app/docroot/sites/default/files/private
+rsync -aq --ignore-existing /app/install/private /app/docroot/sites/default/files/private/
 #TODO: Letsencrypt https?

@@ -2,7 +2,7 @@
 
 docroot/sites/*/settings.local.php
 docroot/sites/*/services.local.yml
-docroot/sites/*/settings*.php
+#docroot/sites/*/settings*.php
 docroot/sites/*/services*.yml
 
 docroot/!sites/default/settings.php
