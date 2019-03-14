@@ -1,15 +1,32 @@
-name: schedule
+name: template
 recipe: drupal8
 config:
-  php: '7.1'
+  php: '7.2'
   via: apache
   webroot: docroot
+  database: mariadb
+  drush: "*"
+
+tooling:
+  'db-import install/database/install.sql':
+    service: :host
+    description: Imports a dump file into a database service
+    cmd: /helpers/sql-import.sh
+    options:
+      host:
+        description: The database service to use
+        default: database
+        alias:
+          - h
+      no-wipe:
+        description: Do not destroy the existing database before an import
+        boolean: false
 
 proxy:
   index:
-    - solr.schedule.lndo.site:8983
+    - solr.template.lndo.site:8983
   pma:
-    - pma.schedule.lndo.site
+    - pma.template.lndo.site
 
 services:
   appserver:
@@ -18,7 +35,7 @@ services:
   index:
     type: solr
     portforward: 9999
-    core: schedule
+    core: template
     config:
       conf: lando/solr
   pma:
