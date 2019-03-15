@@ -15,8 +15,8 @@ TODO: list what features and modules / etc exist here.
     lando start - starts and/or downloads containers
                 - Lots of stuff will happen, the scripts run and the files are placed from install into the sites/default/files/ respectively
                 - When done, if successful a list of links to Drupal, Solr, PhpMyAdmin are listed and you can visit the links after then next command.
-    lando db-import install/database/install.sql (a staged database file for installation)
-    lando drush uli --root=/app/docroot (relative to the containers docroot for drupal)
+2b. lando db-import install/database/install.sql (a staged database file for installation)
+2c. lando drush uli --root=/app/docroot (relative to the containers docroot for drupal)
     
 Now you'll have a login to the site, and the site will resolve locally. 
 
