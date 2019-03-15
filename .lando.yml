@@ -17,6 +17,12 @@ services:
   appserver:
     config:
       conf: lando/php/php.ini
+  database:
+    creds: {
+      user: "template",
+      password: "template",
+      database: "template"
+    }
   index:
     type: solr
     portforward: 9999
