@@ -84,6 +84,8 @@ else {
 $settings['trusted_host_patterns'][] = '^.*\.dd$';
 $settings['trusted_host_patterns'][] = '^.*\.test$';
 $settings['trusted_host_patterns'][] = '^.*\.lndo.site$';
+$settings['trusted_host_patterns'][] = '^.*\.localtunnel.me$';
+
 
 // Set the install profile if one is not already set
 if (!isset($settings['install_profile'])) {
