@@ -12,11 +12,12 @@ TODO: list what features and modules / etc exist here.
 -- How to run locally  --
 1. Download or pull down a copy of this codebase locally
 2. in the base directory in your terminal or command prompt in windows run: 
-    lando start - starts and/or downloads containers
+3. lando start - starts and/or downloads containers
                 - Lots of stuff will happen, the scripts run and the files are placed from install into the sites/default/files/ respectively
                 - When done, if successful a list of links to Drupal, Solr, PhpMyAdmin are listed and you can visit the links after then next command.
-2b. lando db-import install/database/install.sql (a staged database file for installation)
-2c. lando drush uli --root=/app/docroot (relative to the containers docroot for drupal)
+4.  lando db-import install/database/install.sql (a staged database file for installation)
+5.  lando drush uli --root=/app/docroot (relative to the containers docroot for drupal)
+ 
     
 Now you'll have a login to the site, and the site will resolve locally. 
 
