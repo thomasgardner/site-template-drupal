@@ -22,3 +22,9 @@ TODO: list what features and modules / etc exist here.
 Now you'll have a login to the site, and the site will resolve locally. 
 
 WANT TO MAKE A SECOND SITE? I bet you do. All you need to do is copy the codebase and change all references to "template" within the file .lando.yml (hidden) within the base directory and then run the process above. This will allow lando start to run on a new name of your choice. Any questions please ask. 
+
+Want to stop this one? 
+*  lando stop 
+
+Want to start over? 
+*  lando destroy -y
