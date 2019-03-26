@@ -779,3 +779,4 @@ $settings['entity_update_batch_size'] = 50;
 //   'driver' => 'mysql',
 // );
 $config_directories['sync'] = 'sites/default/files/config_eKycI6T9tM9IzoGZpJv0Z8qu8vxoGX9ogLCH4Qqvbj4i7If3-nADF9gK__b2oTDZ_JJCDm6Tjg/sync';
+$settings['install_profile'] = 'standard';
