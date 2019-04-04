@@ -88,6 +88,7 @@ class ViewsReferenceFieldFormatter extends FormatterBase {
       $view->element['#viewsreference'] = [
         'data' => $data,
         'enabled_settings' => array_filter($this->getFieldSetting('enabled_settings')),
+        'entity' => $items->getEntity(),
       ];
 
       $view->preExecute();

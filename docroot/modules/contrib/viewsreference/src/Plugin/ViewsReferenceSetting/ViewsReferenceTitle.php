@@ -2,6 +2,7 @@
 
 namespace Drupal\viewsreference\Plugin\ViewsReferenceSetting;
 
+use Drupal\Core\Entity\EntityInterface;
 use Drupal\Component\Plugin\PluginBase;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Drupal\views\ViewExecutable;
@@ -31,7 +32,7 @@ class ViewsReferenceTitle extends PluginBase implements ViewsReferenceSettingInt
   /**
    * {@inheritdoc}
    */
-  public function alterView(ViewExecutable $view, $value) {
+  public function alterView(ViewExecutable $view, $value, EntityInterface $entity) {
     if (empty($value)) {
       $view->display_handler->setOption('title', '');
     }

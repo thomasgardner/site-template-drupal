@@ -66,6 +66,7 @@ function viewsreference_views_pre_build(ViewExecutable $view) {
   }
 
   // Let all settings plugins alter the view.
+  $entity = $view->element['#viewsreference']['entity'];
   $viewsreference_plugin_manager = \Drupal::service('plugin.manager.viewsreference.setting');
   $plugin_definitions = $viewsreference_plugin_manager->getDefinitions();
   foreach ($view->element['#viewsreference']['enabled_settings'] as $enabled_setting) {
@@ -74,7 +75,7 @@ function viewsreference_views_pre_build(ViewExecutable $view) {
       /** @var \Drupal\viewsreference\Plugin\ViewsReferenceSettingInterface $plugin_instance */
       $plugin_instance = $viewsreference_plugin_manager->createInstance($plugin_definition['id']);
       $value = isset($view->element['#viewsreference']['data'][$plugin_definition['id']]) ? $view->element['#viewsreference']['data'][$plugin_definition['id']] : $plugin_definition['default_value'];
-      $plugin_instance->alterView($view, $value);
+      $plugin_instance->alterView($view, $value, $entity);
     }
   }
 }
