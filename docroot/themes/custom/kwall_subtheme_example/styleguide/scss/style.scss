@@ -8,7 +8,20 @@
  *
  ****/
 
+//Bootstrap
+@import url("https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css");
+
+//Slick CSS
+@import "../libraries/slick/slick/slick.scss";
+
+//Flex CSS
+@import "../libraries/flexslider/flexslider.scss";
+
 //fonts
-@import url('../fonts/fonts.css');
+@import "../fonts/stylesheet.scss";
+
+//Code highlighting
+@import "../libraries/solarized-light.scss";
+
 //scss files
-@import "variables", "styleguide", "elements", "forms", "content-list", "color", "component", "wysiwyg";
+@import "variables", "styleguide", "typography.scss", "elements", "content-list", "color";

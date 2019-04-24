@@ -786,9 +786,6 @@ $settings['entity_update_batch_size'] = 50;
 $config_directories['sync'] = 'sites/default/files/config_eKycI6T9tM9IzoGZpJv0Z8qu8vxoGX9ogLCH4Qqvbj4i7If3-nADF9gK__b2oTDZ_JJCDm6Tjg/sync';
 $settings['install_profile'] = 'standard';
 
-if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
-  include $app_root . '/' . $site_path . '/settings.local.php';
-}
 $databases['default']['default'] = array (
   'database' => 'fresh',
   'username' => 'fresh',
@@ -800,3 +797,7 @@ $databases['default']['default'] = array (
   'collation' => 'utf8mb4_general_ci',
 );
 $config_directories['sync'] = '../config/default';
+
+if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
+  include $app_root . '/' . $site_path . '/settings.local.php';
+}

@@ -5,12 +5,12 @@
  ****
  *
  * Styleguide Page Styles
+ * Demo Grid
  * Styleguide Typography
  * Welcome page
  * Styleguide Header & Footer
  * Code Blocks
- * Icons
- * Columns
+ * Grid
  *
  ****
 
@@ -25,43 +25,77 @@
 .style-wrap {
 	min-width: 300px;
 	max-width: $width-page;
-	margin:auto;
-	padding: 0 2.5rem;
+	margin: auto;
+	padding-left: 25px;
+	padding-right: 25px;
 }
 body {
-	padding-top: 10rem;
+	padding-top: 200px;
 	@media #{$mobile} {
-		padding-top: 5rem;
+		padding-top: 70px;
 	}
 }
 
-//dark background for demonstration purposes
-.style-dark {
-	background-image: $gradient-blue;
-	padding-top: 1rem;
-	.style-header,
-	label {
-		color: #fff;
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px, 1px, 1px, 1px);
+	overflow: hidden;
+	height: 1px;
+	width: 1px;
+	word-wrap: normal;
+}
+
+.img-fluid {
+	max-width: 100%;
+	height: auto;
+}
+
+
+
+
+/****
+ *
+ * Demo Grid
+ *
+ ****/
+.layout-container {
+	overflow: hidden;
+	min-height: 200px;
+	position: relative;
+	
+	.demo-grid {
+		width: 100%;
+	}
+	.grid-inner {
+		height: 100%;
+		left: 0;
+		margin: auto;
+		top: 0;
+		width: 100%;
+		z-index: -1;
+	}
+	.demo-item {
+		background-color: transparentize($color-blue , 0.8);
+		height: 100%;
+		min-height: 200px;
+		padding-top: 10px;
+		text-align: center;
+		@media #{$mobile} {
+			min-height: 50px;
+		}
+	}
+	.row {
+		height: 100%;
+	}
+	.demo-col {
+		height: 100%;
+		margin-bottom: 5px;
 	}
 }
-.style-grey {
-	background-image: url(../images/Stone-white-texture.jpg);
-}
-
-//format buttons on forms.html
-#buttons {
-  button {
-	  display: block;
-	  margin-bottom: 10px;
-  }
-  a.button {
-    margin-bottom: 10px;
-  }
-}
-
-
-
-
+ 
+ 
+ 
+ 
 /****
  *
  * Styleguide Typography
@@ -71,20 +105,20 @@ body {
 	clear: both;
 	color: #999;
 	display: inline-block;
-	font-family: $font-family-header;
+	font-family: $font-helvetica;
 	font-size: 1.8rem;
 	letter-spacing: 1px;
 	line-height: 1.2em;
-	margin-bottom: 3rem;
-	margin-top: 9rem;
+	margin-bottom: 20px;
+	margin-top: 90px;
 	padding: 0px;
 	padding-left: 20px;
 	text-transform: uppercase;
 	text-indent: none;
 	width: 100%;
 	@media #{$mobile} {
-		margin-bottom: 2rem;
-		margin-top: 6rem;
+		margin-bottom: 20px;
+		margin-top: 60px;
 	}
 }
 div .style-header {
@@ -94,50 +128,40 @@ div .style-header {
 .style-caption {
 	color: #999;
 	font-size: 1.6rem;
-	margin-bottom: 3rem;
-	margin-top: -3rem;
+	margin-bottom: 30px;
+	margin-top: -30px;
 }
 
 .two-letter {
-	float: left;
-	font-size: 8rem;
+	font-size: 80px;
 	line-height: 58px;
-	margin-right: 1rem;
 }
 
 .text-right {
 	text-align: right;
 }
 
-.body-font-light {
-	font-family: $font-family-light;
-}
 .body-font {
-	font-family: $font-family;
-}
-.body-font-bold {
-	font-family: $font-family-bold;
+	font-family: $font-helvetica;
+	font-style: regular;
+	font-weight: normal;
 }
 .header-font {
-	font-family: $font-family-header;
-}
-.header-font-bold {
-	font-family: $font-family-header-bold;
-}
-.header-font-condensed {
-	font-family: $font-family-condensed;
+	font-family: $font-helvetica;
+	font-style: regular;
+	font-weight: bold;
 }
 
-.style-regular {
+.regular {
 	font-weight: normal;
 	font-style: normal;
 }
 
-.style-bold {
+.bold {
 	font-weight: 700;
 }
 
-.style-italic {
+.italic {
 	font-style: italic;
 }
 
@@ -158,37 +182,31 @@ span.inline-label {
 #welcome {
 	text-align: center;
 	margin: 0 auto 5rem auto;
-	max-width: 60rem;
-	h1 {
-  	color: $color-blue;
-  }
-
-  hr {
-  	width: 15rem;
-  }
-
+	max-width: 600px;
   p {
   	color: #8c8c8c;
+  }
+  img {
+  	margin-bottom: 20px;
+  	max-width: 200px;
   }
 }
 
 /* Invision */
 #links {
+	background-color: $color-style-light-grey;
+	padding: 40px 0;
 	text-align: center;
-	h3 {
-		color: $color-style-dark-grey;
-	}
 	ul {
+		list-style: none;
 		padding: 0;
 	}
-	li {
-		list-style: none;
-		a {
-			color: $color-blue;
-		}
+	h3 {
+		margin-bottom: 20px;
 	}
-	> div {
-		background: $color-style-light-grey;
+	.button {
+		margin-bottom: 10px;
+		width: 100%;
 	}
 }
 
@@ -200,46 +218,34 @@ span.inline-label {
  * Styleguide Header & Footer
  *
  ****/
-.style-navbar .navbar-nav > li > a.active {
-	border-bottom: 2px solid $color-blue;
-	@media #{$mobile} {
-		background-color: $color-blue;
-		color: #fff;
+.style-navbar {
+	font-size: 1.4rem;
+	.btn {
+		appearance: none;
+		-webkit-appearance: none;
 	}
-}
-
-@media #{$mobile} {
-	.style-navbar .navbar-collapse {
-		box-shadow: 0 8px 10px rgba(0,0,0,0.3);
-	}
-}
-
-.style-navbar .navbar-brand {
 	a {
-		color: #333;
-		span:before {
-			content: "|";
-			font-size: 2rem;
-			margin: 0 1rem;
-		}
-		&:hover {
-			text-decoration: none;
+		text-decoration: none;
+	}
+	.navbar-brand {
+		font-size: 1.6rem;
+		span {
+			&:before {
+				content: "|";
+				padding-right: 20px;
+			}
 		}
 	}
-	
 	img {
-		display: inline-block;
-		margin-right: 10px;
-		margin-top: -15px;
-		max-width: 40px;
-		vertical-align: middle;
+		margin-right: 20px;
+		margin-left: 20px;
+		max-width: 90px;
+		vertical-align: bottom;
 	}
-}
-
-.style-navbar a {
-	font-size: 1.1rem;
-	letter-spacing: 1px;
-	text-transform: uppercase;
+	.navbar-nav .nav-item .nav-link {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
 }
 
 .style-footer {
@@ -264,18 +270,44 @@ pre {
 	border-color: #e0e6ed;
 	border-radius: 2px;
 	font-size: 1.2rem;
+	font-weight: normal;
 	margin: 1rem 0 3rem 0;
+	position: relative;
+	&.scss {
+		&:after {
+			background: $color-style-light-grey;
+			color: $color-body;
+			content: "SCSS";
+			font-size: 1rem;
+			padding: 0 1px;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+	}
+	&.html {
+		&:after {
+			background: $color-style-light-grey;
+			color: $color-body;
+			content: "HTML";
+			font-size: 1rem;
+			padding: 0 1px;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+	}
 }
 
 .hljs {
 	background: none;
-	padding: 0;
+	padding: 10px;
 }
 
 .description {
 	color: #777;
 	font-size: 1.2rem;
-	line-height: 18px;
+	line-height: 1.6;
 }
 
 
@@ -283,75 +315,26 @@ pre {
 
 /****
  *
- * icons
+ * Grid
  *
  ****/
-#icons p {
-	font-size: 1rem;
-  vertical-align: middle;
 
-  .fa {
-  	font-size: 2rem;
-  	vertical-align: middle;
-  }
-}
-
-
-
-
-/****
- *
- * columns
- *
- ****/
-.col-xs-5ths,
-.col-sm-5ths,
-.col-md-5ths,
-.col-lg-5ths {
-    position: relative;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
-}
-
-.col-xs-5ths {
-    width: 20%;
-    float: left;
-}
-
-@media (min-width: 768px) {
-    .col-sm-5ths {
-        width: 20%;
-        float: left;
-    }
-}
-
-@media (min-width: 992px) {
-    .col-md-5ths {
-        width: 20%;
-        float: left;
-    }
-}
-
-@media (min-width: 1200px) {
-    .col-lg-5ths {
-        width: 20%;
-        float: left;
-    }
-}
-
-//Grid Settings
+.col-xl,
 .col-lg,
 .col-md,
 .col-sm,
-.col-xs {
+.col-xs,
+.col {
 	&-1, &-2, &-3, &-4, &-5, &-6, &-7, &-8, &-9, &-10, &-11, &-12 {
 		padding-left: 10px;
 		padding-right: 10px;
-	} 
+	}
+	padding-left: 10px;
+	padding-right: 10px; 
 }
 
 .row {
-    margin-right: -10px;
-    margin-left: -10px;
+	margin-right: -10px;
+	margin-left: -10px;
 }
+
