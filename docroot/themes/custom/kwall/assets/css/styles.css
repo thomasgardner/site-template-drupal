@@ -45,7 +45,8 @@
   transition: ease all 0.4s;
 }
 
-.flexslider .controls .flex-prev:active, .flexslider .controls .flex-prev:hover,
+.flexslider .controls .flex-prev:active,
+.flexslider .controls .flex-prev:hover,
 .flexslider .controls .flex-next:active,
 .flexslider .controls .flex-next:hover {
   text-decoration: none;
@@ -87,7 +88,8 @@
   overflow-y: hidden;
 }
 
-.paragraph--type--person-carousel .view-id-carousels.view-display-id-block_1 .slick-list:before, .paragraph--type--person-carousel .view-id-carousels.view-display-id-block_1 .slick-list:after {
+.paragraph--type--person-carousel .view-id-carousels.view-display-id-block_1 .slick-list:before,
+.paragraph--type--person-carousel .view-id-carousels.view-display-id-block_1 .slick-list:after {
   content: '';
   display: block;
   height: 100%;
@@ -623,7 +625,8 @@
   background: #eeeeee;
 }
 
-.sidebar-menu-block .menu .menu__item .fa:hover:before, .sidebar-menu-block .menu .menu__item .fa:active:before {
+.sidebar-menu-block .menu .menu__item .fa:hover:before,
+.sidebar-menu-block .menu .menu__item .fa:active:before {
   text-decoration: underline;
 }
 
@@ -718,8 +721,8 @@
   width: 1140px;
 }
 
-.field--name-field-after-content .paragraph--type--accordion .accordion-section-title-wrap, .field--name-field-after-content
-.paragraph--type--accordion .card-wrap {
+.field--name-field-after-content .paragraph--type--accordion .accordion-section-title-wrap,
+.field--name-field-after-content .paragraph--type--accordion .card-wrap {
   padding: 0;
 }
 
