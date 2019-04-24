@@ -280,7 +280,7 @@ $config_directories = [];
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = 'WAX7kiKlevLfD1oz3QffHU9wFZKuA43us-k6e2ZCAiJO3UcqkKFkCCmvIQRaOeZXKH5xUPiUmQ';
+$settings['hash_salt'] = 'mGsdPX72eY8E-0mjPPsVYPe_lGNJuDZQq6ug096GONr1bV-srnV5LNhLumMd1pXR2DlAo6MknA';
 
 /**
  * Deployment identifier.
@@ -535,6 +535,7 @@ if ($settings['hash_salt']) {
  * about securing private files.
  */
 # $settings['file_private_path'] = '';
+$settings['file_private_path'] = '/mnt/template/d8/private';
 
 /**
  * Session write interval:
@@ -728,6 +729,10 @@ $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
  * will allow the site to run off of all variants of example.com and
  * example.org, with all subdomains included.
  */
+$settings['trusted_host_patterns'] = [
+  '^localhost$',
+  '^.+\.staging-preview\.com$'
+];
 
 /**
  * The default list of directories that will be ignored by Drupal's file API.
@@ -780,13 +785,18 @@ $settings['entity_update_batch_size'] = 50;
 // );
 $config_directories['sync'] = 'sites/default/files/config_eKycI6T9tM9IzoGZpJv0Z8qu8vxoGX9ogLCH4Qqvbj4i7If3-nADF9gK__b2oTDZ_JJCDm6Tjg/sync';
 $settings['install_profile'] = 'standard';
+
+if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
+  include $app_root . '/' . $site_path . '/settings.local.php';
+}
 $databases['default']['default'] = array (
-  'database' => 'd8',
-  'username' => 'root',
-  'password' => 'root',
-  'prefix' => '',
-  'host' => 'localhost',
+  'database' => 'fresh',
+  'username' => 'fresh',
+  'password' => 'fresh',
+  'host' => 'kwalldev3-cluster-1.cluster-cxjupadozp3r.us-west-2.rds.amazonaws.com',
   'port' => '3306',
-  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',
+  'prefix' => '',
+  'collation' => 'utf8mb4_general_ci',
 );
+$config_directories['sync'] = '../config/default';
