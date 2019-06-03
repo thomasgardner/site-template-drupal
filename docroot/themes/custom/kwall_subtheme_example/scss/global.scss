@@ -1,5 +1,9 @@
 @charset "UTF-8";
-
 @import '../styleguide/scss/style';
+@import 'variables';
 @import 'mixin';
+@import 'elements_theme';
+@import 'header';
+@import 'footer';
+@import 'views';
 

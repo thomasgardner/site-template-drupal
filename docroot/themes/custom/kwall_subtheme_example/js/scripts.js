@@ -223,4 +223,60 @@
   };
 
 
+    /**
+     *
+     * @type {{attach: Drupal.behaviors.utilityMenu.attach}}
+     * click, mouse leave functionality for utility menu
+     */
+    Drupal.behaviors.utilityMenu = {
+        attach: function (context, settings) {
+
+
+
+            $('.utility-nav-block .menu-item--expanded > a').unbind( "click" );
+            $('.utility-nav-block .menu-item--expanded > a').on('click touch',function(e){
+                e.preventDefault();
+                var parent = $(this).parent();
+                var menu = parent.find('ul');
+                if(parent.hasClass('open')) {
+                    parent.removeClass('open');
+                    menu.slideUp();
+                } else {
+                    parent.addClass('open');
+                    menu.slideDown();
+                }
+            });
+
+
+            var count = 0;
+            $(document).on('mouseenter','.utility-nav-block .menu-item--expanded, .utility-nav-block .menu-item--expanded ul', function(){
+                count++;
+            }).on('mouseleave','.utility-nav-block .menu-item--expanded, .utility-nav-block .menu-item--expanded ul', function(){
+                count--;
+                if (!count) {
+                    $('.utility-nav-block .menu-item--expanded.open ul').slideUp();
+                    $('.utility-nav-block .menu-item--expanded.open').removeClass('open');
+                }
+            });
+
+            $('.tb-megamenu-item').hover(function() {
+                var menu = $(this).find(' > .tb-megamenu-submenu');
+                if($(this).hasClass('open')) {
+                    menu.slideUp();
+                } else {
+                    menu.slideDown();
+                }
+            });
+
+
+
+
+        }
+
+
+    };
+
+
+
+
 })(jQuery, Drupal, drupalSettings);

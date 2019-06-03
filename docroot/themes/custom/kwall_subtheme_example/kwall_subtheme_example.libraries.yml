@@ -3,7 +3,7 @@ default:
   css:
     theme:
       styleguide/css/style.css: {}
-      styleguide/fonts/fonts.css: {}
+      styleguide/fonts/stylesheet.scss: {}
       css/global.css: {}
   dependencies:
     - core/jquery
