@@ -13,6 +13,8 @@ docroot/sites/*/files
 docroot/sites/*/private
 private-files
 docroot/sites/default/config
+kwall.dd/*
+*.css.map
 
 docroot/themes/custom/custom_theme/package-lock.json
 
