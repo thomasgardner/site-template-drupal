@@ -797,6 +797,17 @@ $databases['default']['default'] = array(
     'host' => '127.0.0.1',
     'port' => 33067 );
 
+$databases['default']['default'] = array (
+	  'database' => 'fresh',
+	    'username' => 'fresh',
+	      'password' => 'fresh',
+	        'host' => 'kwalldev3-cluster-1.cluster-cxjupadozp3r.us-west-2.rds.amazonaws.com',
+		  'port' => '3306',
+		    'driver' => 'mysql',
+		      'prefix' => '',
+		        'collation' => 'utf8mb4_general_ci',
+		);
+
 if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
   include $app_root . '/' . $site_path . '/settings.local.php';
 }
