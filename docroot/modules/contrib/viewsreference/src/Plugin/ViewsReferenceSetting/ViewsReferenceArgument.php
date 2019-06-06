@@ -40,10 +40,14 @@ class ViewsReferenceArgument extends PluginBase implements ViewsReferenceSetting
 
       $replacements = [];
       $replacements[$entity->getEntityTypeId()] = $entity;
-      if (!array_key_exists('node', $replacements)) {
-        $node = \Drupal::routeMatch()->getParameter('node');
-        $replacements['node'] = $node;
-      }
+        if (!array_key_exists('node', $replacements)) {
+            $replacements = [];
+            $replacements[$entity->getEntityTypeId()] = $entity;
+            if (!array_key_exists('node', $replacements)) {
+                $node = \Drupal::routeMatch()->getParameter('node');
+                $replacements['node'] = $node;
+            }
+        }
 
       $token_service = \Drupal::token();
       if (is_array($arguments)) {
