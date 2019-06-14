@@ -521,12 +521,6 @@ Orginal Style from ethanschoonover.com/solarized (c) Jeremy Hull <sourdrums@gmai
   padding-left: 25px;
   padding-right: 25px; }
 
-body {
-  padding-top: 200px; }
-  @media (max-width: 767px) {
-    body {
-      padding-top: 70px; } }
-
 .visually-hidden {
   position: absolute !important;
   clip: rect(1px, 1px, 1px, 1px);
@@ -1813,16 +1807,24 @@ select {
       color: #005794; }
       #site-branding .region-header .block-tb-megamenu .tb-megamenu-nav > li.open > a:before {
         background: #005794; }
+    #site-branding .region-header .block-tb-megamenu .tb-megamenu-nav > li:not(.open) .tb-megamenu-submenu.processed {
+      height: 0 !important; }
     #site-branding .region-header .block-tb-megamenu .tb-megamenu-nav > li.active a, #site-branding .region-header .block-tb-megamenu .tb-megamenu-nav > li.active span {
       background: none; }
     #site-branding .region-header .block-tb-megamenu .tb-megamenu-nav > li .tb-megamenu-submenu {
       background: #d8d8d8;
       font-size: 1.6rem;
-      padding: 2px 4px; }
+      overflow: hidden;
+      transition: height 0.3s ease-out;
+      padding: 0;
+      border: 0; }
+      #site-branding .region-header .block-tb-megamenu .tb-megamenu-nav > li .tb-megamenu-submenu .mega-dropdown-inner {
+        padding: 2px 4px; }
       #site-branding .region-header .block-tb-megamenu .tb-megamenu-nav > li .tb-megamenu-submenu ul {
         padding: 0; }
-    #site-branding .region-header .block-tb-megamenu .tb-megamenu-nav > li.mega.open .mega-dropdown-menu, #site-branding .region-header .block-tb-megamenu .tb-megamenu-nav > li:hover .mega-dropdown-menu {
-      display: none; }
+    #site-branding .region-header .block-tb-megamenu .tb-megamenu-nav > li:last-child .tb-megamenu-submenu {
+      left: auto;
+      right: 0; }
   #site-branding .region-header .block-tb-megamenu .tb-megamenu-nav .dropdown-menu {
     border-bottom: 0; }
   #site-branding .region-header .block-tb-megamenu .tb-megamenu-nav .mega-innder {
@@ -1836,9 +1838,24 @@ select {
   background: none !important; }
 #site-branding .tb-megamenu-submenu ul.menu li:hover a, #site-branding .tb-megamenu-submenu ul.tb-megamenu-subnav li:hover a, #site-branding .utility-nav-block ul li ul.menu li:hover a, #site-branding .utility-nav-block ul li ul.tb-megamenu-subnav li:hover a {
   color: #005794; }
-#site-branding .menu--push-navigation-toggle ul .push-menu-toggle {
-  margin-top: 10px; }
-  #site-branding .menu--push-navigation-toggle ul .push-menu-toggle:before {
+#site-branding .push-nav-menu {
+  display: inline-block;
+  float: right; }
+  #site-branding .push-nav-menu .contextual {
+    display: none; }
+#site-branding .push-menu-toggle {
+  margin-top: 16px;
+  color: #005794;
+  background: none;
+  border: 0;
+  padding: 0;
+  letter-spacing: 5rem;
+  overflow: hidden;
+  width: 25px; }
+  @media (min-width: 992px) {
+    #site-branding .push-menu-toggle {
+      display: none; } }
+  #site-branding .push-menu-toggle:before {
     font-size: 2.5rem; }
 
 .layout-footer-content {

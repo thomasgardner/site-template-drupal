@@ -11,4 +11,5 @@ default:
     - core/drupal
     - core/drupalSettings
   js:
+    js/jquery.actual.min.js: {}
     js/scripts.js: {}

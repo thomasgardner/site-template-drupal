@@ -230,9 +230,6 @@
      */
     Drupal.behaviors.utilityMenu = {
         attach: function (context, settings) {
-
-
-
             $('.utility-nav-block .menu-item--expanded > a').unbind( "click" );
             $('.utility-nav-block .menu-item--expanded > a').on('click touch',function(e){
                 e.preventDefault();
@@ -259,21 +256,22 @@
                 }
             });
 
-            $('.tb-megamenu-item').hover(function() {
-                var menu = $(this).find(' > .tb-megamenu-submenu');
-                if($(this).hasClass('open')) {
-                    menu.slideUp();
-                } else {
-                    menu.slideDown();
-                }
+
+
+
+
+
+
+            $('.tb-megamenu-submenu', context).once('mega_submenus').each(function () {
+                var height = $(this).actual('height');
+                $(this).css('display', 'block');
+                $(this).addClass('processed');
+                $(this).css('height', height + 'px');
+
             });
 
 
-
-
         }
-
-
     };
 
 

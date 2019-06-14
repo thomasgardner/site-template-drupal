@@ -38,6 +38,8 @@
  * @ingroup themeable
  */
 #}
+<div {{ attributes }}>
 {% block content %}
   {{ content|without('field_title')|raw }}
 {% endblock %}
+</div>

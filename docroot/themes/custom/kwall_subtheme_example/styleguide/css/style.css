@@ -603,14 +603,8 @@ Orginal Style from ethanschoonover.com/solarized (c) Jeremy Hull <sourdrums@gmai
   padding-right: 25px;
 }
 
-body {
-  padding-top: 200px;
-}
-@media (max-width: 767px) {
-  body {
-    padding-top: 70px;
-  }
-}
+
+
 
 .visually-hidden {
   position: absolute !important;

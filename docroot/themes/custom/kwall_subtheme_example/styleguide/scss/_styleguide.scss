@@ -29,12 +29,8 @@
 	padding-left: 25px;
 	padding-right: 25px;
 }
-body {
-	padding-top: 200px;
-	@media #{$mobile} {
-		padding-top: 70px;
-	}
-}
+
+
 
 .visually-hidden {
 	position: absolute !important;
