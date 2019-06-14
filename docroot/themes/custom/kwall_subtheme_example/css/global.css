@@ -1707,6 +1707,19 @@ select {
 .container {
   max-width: 1200px; }
 
+.layout-container {
+  min-height: unset; }
+
+.node__content {
+  margin-bottom: 6rem; }
+  .node__content h1 {
+    font-size: 4rem;
+    line-height: 5.2rem;
+    margin-bottom: 2rem; }
+  .node__content p {
+    font-size: 2.4rem;
+    line-height: 3.4rem; }
+
 #site-branding a {
   text-decoration: none; }
 #site-branding .utility-nav-block {
