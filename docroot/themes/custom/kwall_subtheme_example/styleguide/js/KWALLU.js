@@ -69,6 +69,8 @@ var currentTallest = 0,
  });
 }
 
+
+
 $(window).load(function() {
   equalheight('.equalHeight-parent .equalHeight-child');
 });
