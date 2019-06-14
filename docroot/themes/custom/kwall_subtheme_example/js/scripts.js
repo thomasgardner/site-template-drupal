@@ -274,22 +274,6 @@
         }
     };
 
-    var change_slider_height = function() {
-        if($('.hero-slideshow').length > 0 && $('.block-kwall-site-alert .slick-list').length > 0) {
-            var height1 = $('.hero-slideshow').height();
-            var height2 = $('.block-kwall-site-alert .slick-list').height();
-            console.log(height1);
-            console.log(height2);
-            $('.hero-slideshow').css('height', height1- height2 + 'px');
-        }
-    }
-/*
-    $(document).ready(function(){
-        change_slider_height();
-    });
-*/
-
-
 
 
 

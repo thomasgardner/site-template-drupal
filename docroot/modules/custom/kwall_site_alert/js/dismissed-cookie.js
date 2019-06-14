@@ -9,6 +9,13 @@ function stickyAlerts(header, sticky) {
   }
 }
 
+function change_slider_height()  {
+    if(jQuery('.hero-slideshow').length > 0) {
+        var height = jQuery('#site-branding').height();
+        jQuery('.hero-slideshow').css( { height: 'calc(100vh - ' + height + 'px)' } );
+    }
+}
+
 (function ($, Drupal) {
   Drupal.behaviors.kwallSiteAlert = {
     attach: function (context, drupalSettings) {
@@ -80,6 +87,18 @@ function stickyAlerts(header, sticky) {
 					}
 				});
 	    }
+
+        //if($('#kwall-alerts').hasClass('slick-processed')) {
+            $(document).ready(function () {
+                change_slider_height();
+            });
+
+
+            $(window).resize(function () {
+                change_slider_height();
+            });
+        //}
+
     }
   }
 })(jQuery, Drupal);
