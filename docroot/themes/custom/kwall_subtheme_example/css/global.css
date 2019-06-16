@@ -2502,6 +2502,15 @@ select {
   border: 0;
 }
 
+.layout-container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.layout-container .layout-center {
+  padding-left: 30px;
+}
+
 .layout-hero-content .hero-banner-img-section.banner-short {
   height: 250px;
 }
