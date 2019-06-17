@@ -1,5 +1,13 @@
-.container {
-  max-width: $width-page;
+.layout-hero-content {
+  // For Home Page:
+
+  // For General Pages:
+  .hero-banner-img-section {
+    &.banner-short {
+      height: 250px;
+    }
+    &.banner-tall {
+      height: 400px;
+    }
+  }
 }
-
-
