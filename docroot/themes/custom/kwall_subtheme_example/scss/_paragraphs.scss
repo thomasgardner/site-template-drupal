@@ -45,6 +45,10 @@
       &:last-child {
         border-bottom: 4px solid #d8d8d8;
       }
+      @media (max-width: 784px) {
+        border: 0;
+        padding: 15px;
+      }
       &:focus {
         outline: 0;
       }
@@ -99,6 +103,10 @@
 
     }
   }
+  .field--name-field-link {
+    margin-top: -5px;
+  }
+
   .field--name-field-title {
     font-size: 4rem;
     line-height: 5.2rem;

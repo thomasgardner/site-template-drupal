@@ -153,13 +153,12 @@
             transition: height 0.3s ease-out;
             padding: 0;
             border: 0;
-            .mega-dropdown-inner {
-              padding: 2px 4px;
-            }
             ul {
               padding: 0;
             }
-
+            .mega-dropdown-inner {
+              padding: 2px 4px;
+            }
           }
           &:last-child {
             .tb-megamenu-submenu {

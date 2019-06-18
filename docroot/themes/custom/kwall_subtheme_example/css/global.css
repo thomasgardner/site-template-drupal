@@ -519,18 +519,7 @@ Orginal Style from ethanschoonover.com/solarized (c) Jeremy Hull <sourdrums@gmai
   max-width: 1200px;
   margin: auto;
   padding-left: 25px;
-  padding-right: 25px;
-}
-
-body {
-  padding-top: 200px;
-}
-
-@media (max-width: 767px) {
-  body {
-    padding-top: 70px;
-  }
-}
+  padding-right: 25px; }
 
 .visually-hidden {
   position: absolute !important;
@@ -835,7 +824,7 @@ pre {
  ****
  *
  * Typography
- * Lists
+ * Lists 
  *
  ****
 */
@@ -957,7 +946,7 @@ ol li {
  * Figures and Tables
  * Accordions
  * Buttons
- * Inputs
+ * Inputs 
  *
  ****
 */
@@ -1533,7 +1522,7 @@ select {
  *
  * Color Page Styles
  * Primary Colors
- * Secondary Colors
+ * Secondary Colors 
  * Patterns
  *
  ****
@@ -1843,10 +1832,10 @@ select {
       transition: height 0.3s ease-out;
       padding: 0;
       border: 0; }
-      #site-branding .region-header .block-tb-megamenu .tb-megamenu-nav > li .tb-megamenu-submenu .mega-dropdown-inner {
-        padding: 2px 4px; }
       #site-branding .region-header .block-tb-megamenu .tb-megamenu-nav > li .tb-megamenu-submenu ul {
         padding: 0; }
+      #site-branding .region-header .block-tb-megamenu .tb-megamenu-nav > li .tb-megamenu-submenu .mega-dropdown-inner {
+        padding: 2px 4px; }
     #site-branding .region-header .block-tb-megamenu .tb-megamenu-nav > li:last-child .tb-megamenu-submenu {
       left: auto;
       right: 0; }
@@ -1854,68 +1843,6 @@ select {
     border-bottom: 0; }
   #site-branding .region-header .block-tb-megamenu .tb-megamenu-nav .mega-innder {
     padding: 0; }
-
-#site-branding .region-header .block-tb-megamenu .tb-megamenu-nav > li {
-  margin-left: 34px;
-}
-
-#site-branding .region-header .block-tb-megamenu .tb-megamenu-nav > li:first-child {
-  margin-left: 0;
-}
-
-#site-branding .region-header .block-tb-megamenu .tb-megamenu-nav > li > a, #site-branding .region-header .block-tb-megamenu .tb-megamenu-nav > li > span {
-  line-height: 67px;
-  display: inline-block;
-  position: relative;
-  font-weight: bold;
-  color: #333;
-}
-
-#site-branding .region-header .block-tb-megamenu .tb-megamenu-nav > li > a:before, #site-branding .region-header .block-tb-megamenu .tb-megamenu-nav > li > span:before {
-  content: "" !important;
-  height: 4px;
-  width: 100%;
-  background: rgba(0, 0, 0, 0);
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  display: block !important;
-}
-
-#site-branding .region-header .block-tb-megamenu .tb-megamenu-nav > li.open > a {
-  color: #005794;
-}
-
-#site-branding .region-header .block-tb-megamenu .tb-megamenu-nav > li.open > a:before {
-  background: #005794;
-}
-
-#site-branding .region-header .block-tb-megamenu .tb-megamenu-nav > li.active a, #site-branding .region-header .block-tb-megamenu .tb-megamenu-nav > li.active span {
-  background: none;
-}
-
-#site-branding .region-header .block-tb-megamenu .tb-megamenu-nav > li .tb-megamenu-submenu {
-  background: #d8d8d8;
-  font-size: 1.6rem;
-  padding: 2px 4px;
-}
-
-#site-branding .region-header .block-tb-megamenu .tb-megamenu-nav > li .tb-megamenu-submenu ul {
-  padding: 0;
-}
-
-#site-branding .region-header .block-tb-megamenu .tb-megamenu-nav > li.mega.open .mega-dropdown-menu, #site-branding .region-header .block-tb-megamenu .tb-megamenu-nav > li:hover .mega-dropdown-menu {
-  display: none;
-}
-
-#site-branding .region-header .block-tb-megamenu .tb-megamenu-nav .dropdown-menu {
-  border-bottom: 0;
-}
-
-#site-branding .region-header .block-tb-megamenu .tb-megamenu-nav .mega-innder {
-  padding: 0;
-}
-
 #site-branding .tb-megamenu-submenu ul.menu li a, #site-branding .tb-megamenu-submenu ul.menu li span, #site-branding .tb-megamenu-submenu ul.tb-megamenu-subnav li a, #site-branding .tb-megamenu-submenu ul.tb-megamenu-subnav li span, #site-branding .utility-nav-block ul li ul.menu li a, #site-branding .utility-nav-block ul li ul.menu li span, #site-branding .utility-nav-block ul li ul.tb-megamenu-subnav li a, #site-branding .utility-nav-block ul li ul.tb-megamenu-subnav li span {
   color: #333;
   padding: 7px 0;
@@ -1944,14 +1871,6 @@ select {
       display: none; } }
   #site-branding .push-menu-toggle:before {
     font-size: 2.5rem; }
-
-#site-branding .menu--push-navigation-toggle ul .push-menu-toggle {
-  margin-top: 10px;
-}
-
-#site-branding .menu--push-navigation-toggle ul .push-menu-toggle:before {
-  font-size: 2.5rem;
-}
 
 .layout-footer-content {
   background: #282B2D;
@@ -2078,6 +1997,10 @@ select {
     padding: 13px 17px; }
     .paragraph--type--video-tab-carousel .tab-title-wrap .tab-title:last-child {
       border-bottom: 4px solid #d8d8d8; }
+    @media (max-width: 784px) {
+      .paragraph--type--video-tab-carousel .tab-title-wrap .tab-title {
+        border: 0;
+        padding: 15px; } }
     .paragraph--type--video-tab-carousel .tab-title-wrap .tab-title:focus {
       outline: 0; }
     .paragraph--type--video-tab-carousel .tab-title-wrap .tab-title h3 {
@@ -2115,6 +2038,8 @@ select {
     line-height: 1;
     text-decoration: none;
     font-weight: bold; }
+.paragraph--type--column-section .field--name-field-link {
+  margin-top: -5px; }
 .paragraph--type--column-section .field--name-field-title {
   font-size: 4rem;
   line-height: 5.2rem;
