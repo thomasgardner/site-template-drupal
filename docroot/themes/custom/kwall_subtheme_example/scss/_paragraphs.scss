@@ -69,13 +69,46 @@
 }
 
 .paragraph--type--column-section {
-  .view-event-view, .view-article-view {
+  > .row {
+    > .col-md-4 {
+      @media #{$mobile} {
+        margin-bottom: 40px;
+      }
+      .field--name-field-view-reference, .column-content-inner {
+        overflow: hidden;
+      }
+      .field--name-field-view-reference {
+        > .field__item, .views-element-container, .view-event-view, .view-content {
+          height: inherit;
+        }
+      }
 
+      .column-content-inner {
+        .column-content-inner2 {
+          @media (min-width: $screen-sm-min) {
+            background-color: #F4F5F5;
+            background-clip: content-box;
+            padding-bottom: 25px;
+            height: inherit;
+          }
+        }
+      }
+
+    }
+  }
+
+  .view-event-view, .view-article-view {
+    .views-row {
+      overflow: hidden;
+    }
     .post-title, .title {
       font-size: 2.4rem;
       line-height: 3.2rem;
       font-weight: bold;
-    }
+      @media (max-width: $screen-tablet-max) {
+        font-size: 2rem;
+        line-height: 2.6rem;
+      }    }
     .post-title {
       margin-bottom: 1.5rem;
     }
@@ -92,6 +125,46 @@
       line-height: 1.9rem;
     }
   }
+  .view-event-view {
+    .views-row {
+      @media (min-width: $screen-sm-min) {
+        height: 33.33333%;
+      }
+      background: none !important;
+      margin-bottom: 0 !important;
+      padding-bottom: 25px;
+      > .views-field-nothing {
+        background: #F4F5F5;
+        height: 100%;
+      }
+    }
+    .event-wrap {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  .view-article-view {
+    height: inherit;
+    .views-row {
+      @media (min-width: $screen-sm-min) {
+        height: 50%;
+      }
+      .views-field-nothing {
+        height: 100%;
+        .field-content {
+          display: block;
+          height: inherit;
+        }
+        .post-wrap {
+          padding-bottom: 25px;
+          height: inherit;
+          background-clip: content-box;
+        }
+      }
+    }
+  }
+
+
   .field--name-field-link, .post-link {
     line-height: 1;
     a {
@@ -105,6 +178,9 @@
   }
   .field--name-field-link {
     margin-top: -5px;
+    @media #{$mobile} {
+      text-align: center;
+    }
   }
 
   .field--name-field-title {
@@ -113,6 +189,13 @@
     margin: 0;
     font-weight: bold;
     margin-bottom: 1.2rem;
+    @media (max-width: $screen-tablet-max) {
+      font-size: 2.5rem;
+      line-height: 3.5rem;
+    }
+    @media #{$mobile} {
+      text-align: center;
+    }
   }
   .field--type-image {
     img {

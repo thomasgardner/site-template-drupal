@@ -2,6 +2,41 @@
 
   'use strict';
 
+
+    /**
+     * Equal height.
+     */
+    $.equalHeight = function (container) {
+        var currentTallest = 0,
+            currentRowStart = 0,
+            rowDivs = [],
+            $el;
+        $(container).each(function () {
+            $el = $(this);
+            $($el).height('auto');
+            var topPosition = $el.position().top;
+
+            if (currentRowStart !== topPosition) {
+                for (var currentDiv = 0; currentDiv < rowDivs.length; currentDiv++) {
+                    rowDivs[currentDiv].height(currentTallest);
+                }
+                rowDivs.length = 0; // Empty the array.
+                currentRowStart = topPosition;
+                currentTallest = $el.height();
+                rowDivs.push($el);
+            }
+            else {
+                rowDivs.push($el);
+                currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
+            }
+            for (currentDiv = 0; currentDiv < rowDivs.length; currentDiv++) {
+                rowDivs[currentDiv].height(currentTallest);
+            }
+
+        });
+    };
+
+
   /**
    * Common tweaks for the theme.
    *
@@ -9,8 +44,6 @@
    */
   Drupal.behaviors.commnTweaks = {
     attach: function (context, settings) {
-
-
       /**
        * background image paralax effect
       **/
@@ -257,11 +290,6 @@
             });
 
 
-
-
-
-
-
             $('.tb-megamenu-submenu', context).once('mega_submenus').each(function () {
                 var height = $(this).actual('height');
                 $(this).css('display', 'block');
@@ -269,10 +297,36 @@
                 $(this).css('height', height + 'px');
 
             });
-
-
         }
     };
+
+
+
+    /**
+     *
+     * @type {{attach: Drupal.behaviors.equalHeight.attach}}
+     * equal height for homepage Column Section paragraph
+     */
+    Drupal.behaviors.equalHeight = {
+        attach: function (context, settings) {
+            var columns = $('.paragraph--type--column-section > .row > .col-md-4 .field--name-field-view-reference, .paragraph--type--column-section > .row > .col-md-4 .column-content-inner', context);
+            var column_titles = $('.paragraph--type--column-section .field--name-field-title', context);
+            if ($(window).width() > 767) {
+                $.equalHeight(columns);
+                $.equalHeight(column_titles);
+            }
+            $(window).on('resize', function() {
+                if ($(window).width() > 767) {
+                    $.equalHeight(columns);
+                    $.equalHeight(column_titles);
+                } else {
+                    columns.css('height', 'auto');
+                    column_titles.css('height', 'auto');
+                }
+            });
+        }
+    };
+
 
 
 

@@ -2014,10 +2014,29 @@ select {
       font-weight: normal;
       margin-bottom: 0; }
 
+@media (max-width: 767px) {
+  .paragraph--type--column-section > .row > .col-md-4 {
+    margin-bottom: 40px; } }
+.paragraph--type--column-section > .row > .col-md-4 .field--name-field-view-reference, .paragraph--type--column-section > .row > .col-md-4 .column-content-inner {
+  overflow: hidden; }
+.paragraph--type--column-section > .row > .col-md-4 .field--name-field-view-reference > .field__item, .paragraph--type--column-section > .row > .col-md-4 .field--name-field-view-reference .views-element-container, .paragraph--type--column-section > .row > .col-md-4 .field--name-field-view-reference .view-event-view, .paragraph--type--column-section > .row > .col-md-4 .field--name-field-view-reference .view-content {
+  height: inherit; }
+@media (min-width: 768px) {
+  .paragraph--type--column-section > .row > .col-md-4 .column-content-inner .column-content-inner2 {
+    background-color: #F4F5F5;
+    background-clip: content-box;
+    padding-bottom: 25px;
+    height: inherit; } }
+.paragraph--type--column-section .view-event-view .views-row, .paragraph--type--column-section .view-article-view .views-row {
+  overflow: hidden; }
 .paragraph--type--column-section .view-event-view .post-title, .paragraph--type--column-section .view-event-view .title, .paragraph--type--column-section .view-article-view .post-title, .paragraph--type--column-section .view-article-view .title {
   font-size: 2.4rem;
   line-height: 3.2rem;
   font-weight: bold; }
+  @media (max-width: 991px) {
+    .paragraph--type--column-section .view-event-view .post-title, .paragraph--type--column-section .view-event-view .title, .paragraph--type--column-section .view-article-view .post-title, .paragraph--type--column-section .view-article-view .title {
+      font-size: 2rem;
+      line-height: 2.6rem; } }
 .paragraph--type--column-section .view-event-view .post-title, .paragraph--type--column-section .view-article-view .post-title {
   margin-bottom: 1.5rem; }
 .paragraph--type--column-section .view-event-view .post-date, .paragraph--type--column-section .view-event-view .time, .paragraph--type--column-section .view-article-view .post-date, .paragraph--type--column-section .view-article-view .time {
@@ -2030,6 +2049,32 @@ select {
   text-decoration: none;
   font-size: 1.4rem;
   line-height: 1.9rem; }
+.paragraph--type--column-section .view-event-view .views-row {
+  background: none !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 25px; }
+  @media (min-width: 768px) {
+    .paragraph--type--column-section .view-event-view .views-row {
+      height: 33.33333%; } }
+  .paragraph--type--column-section .view-event-view .views-row > .views-field-nothing {
+    background: #F4F5F5;
+    height: 100%; }
+.paragraph--type--column-section .view-event-view .event-wrap {
+  margin-bottom: 0 !important; }
+.paragraph--type--column-section .view-article-view {
+  height: inherit; }
+  @media (min-width: 768px) {
+    .paragraph--type--column-section .view-article-view .views-row {
+      height: 50%; } }
+  .paragraph--type--column-section .view-article-view .views-row .views-field-nothing {
+    height: 100%; }
+    .paragraph--type--column-section .view-article-view .views-row .views-field-nothing .field-content {
+      display: block;
+      height: inherit; }
+    .paragraph--type--column-section .view-article-view .views-row .views-field-nothing .post-wrap {
+      padding-bottom: 25px;
+      height: inherit;
+      background-clip: content-box; }
 .paragraph--type--column-section .field--name-field-link, .paragraph--type--column-section .post-link {
   line-height: 1; }
   .paragraph--type--column-section .field--name-field-link a, .paragraph--type--column-section .post-link a {
@@ -2040,12 +2085,22 @@ select {
     font-weight: bold; }
 .paragraph--type--column-section .field--name-field-link {
   margin-top: -5px; }
+  @media (max-width: 767px) {
+    .paragraph--type--column-section .field--name-field-link {
+      text-align: center; } }
 .paragraph--type--column-section .field--name-field-title {
   font-size: 4rem;
   line-height: 5.2rem;
   margin: 0;
   font-weight: bold;
   margin-bottom: 1.2rem; }
+  @media (max-width: 991px) {
+    .paragraph--type--column-section .field--name-field-title {
+      font-size: 2.5rem;
+      line-height: 3.5rem; } }
+  @media (max-width: 767px) {
+    .paragraph--type--column-section .field--name-field-title {
+      text-align: center; } }
 .paragraph--type--column-section .field--type-image img {
   width: 100%; }
 .paragraph--type--column-section .event-date-wrap .date-day {
