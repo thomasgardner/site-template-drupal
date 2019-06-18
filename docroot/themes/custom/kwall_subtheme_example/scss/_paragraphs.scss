@@ -1,3 +1,7 @@
+.paragraph, div[id^="paragraph-"] {
+  margin-top: 60px;
+}
+
 .full-width-img-section {
   padding: 90px 15px;
   text-align: center;
@@ -28,6 +32,122 @@
       a {
         margin-bottom: 2rem;
       }
+    }
+  }
+}
+
+.paragraph--type--video-tab-carousel {
+  .tab-title-wrap {
+    padding-right: 25px;
+    .tab-title {
+      border-top: 4px solid #d8d8d8;
+      padding: 13px 17px;
+      &:last-child {
+        border-bottom: 4px solid #d8d8d8;
+      }
+      &:focus {
+        outline: 0;
+      }
+      h3 {
+        font-size: 2.4rem;
+        line-height: 3.2rem;
+        font-weight: normal;
+        margin-bottom: 0;
+      }
+      h4 {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        font-weight: normal;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.paragraph--type--column-section {
+  .view-event-view, .view-article-view {
+
+    .post-title, .title {
+      font-size: 2.4rem;
+      line-height: 3.2rem;
+      font-weight: bold;
+    }
+    .post-title {
+      margin-bottom: 1.5rem;
+    }
+    .post-date, .time {
+      font-weight: normal;
+      font-size: 1.4rem;
+      line-height: 1.7rem;
+      text-transform: none;
+      margin-bottom: 1.5rem;
+    }
+    .post-link a {
+      text-decoration: none;
+      font-size: 1.4rem;
+      line-height: 1.9rem;
+    }
+  }
+  .field--name-field-link, .post-link {
+    line-height: 1;
+    a {
+      color: $color-orange;
+      font-size: 1.4rem;
+      line-height: 1;
+      text-decoration: none;
+      font-weight: bold;
+
+    }
+  }
+  .field--name-field-title {
+    font-size: 4rem;
+    line-height: 5.2rem;
+    margin: 0;
+    font-weight: bold;
+    margin-bottom: 1.2rem;
+  }
+  .field--type-image {
+    img {
+      width: 100%;
+    }
+  }
+  .event-date-wrap {
+    .date-day {
+      font-size: 2.8rem;
+      line-height: 3.7rem;
+    }
+    .date-month {
+      font-size: 1.5rem;
+      line-height: 2rem;
+      font-weight: normal;
+    }
+  }
+
+  .post-wrap, .view-event-view .views-row, .field--name-field-body-formatted {
+    background-color: $color-style-light-grey;
+    margin-bottom: 25px;
+  }
+  .post-wrap {
+    .content-wrap {
+      padding: 18px;
+    }
+  }
+  .post-body {
+    margin-bottom: 1.5rem;
+  }
+  .post-body, .field--name-field-body-formatted {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+  .field--name-field-body-formatted {
+    padding: 18px;
+  }
+  .view-display-id-block_2, .view-event-view.view-display-id-block_1 {
+    background: none;
+  }
+  .view-event-view.view-display-id-block_1 {
+    .content-wrap {
+      margin-left: 54px;
     }
   }
 }
