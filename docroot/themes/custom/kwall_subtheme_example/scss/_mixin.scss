@@ -6,3 +6,19 @@
   padding-right: 15px;
   margin: 0 auto;
 }
+
+@mixin button-text($color, $hover-color) {
+  display: inline-block;
+  font-size: rem-calc(14);
+  font-family: $font-helvetica;
+  font-weight: 700;
+  line-height: rem-calc(17);
+  color: $color;
+  transition: $transition-short color ease;
+
+  &:hover,
+  &:focus {
+    color: $hover-color;
+    text-decoration: underline;
+  }
+}

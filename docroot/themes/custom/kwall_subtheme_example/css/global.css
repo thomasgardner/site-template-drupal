@@ -2818,6 +2818,38 @@ select {
   line-height: 3.4rem;
 }
 
+.paragraph--type--flexible-cta-blocks .flexible-cta-block {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.paragraph--type--flexible-cta-blocks .flexible-cta-block h4 {
+  font-size: 2.4rem;
+}
+
+.paragraph--type--flexible-cta-blocks .flexible-cta-block p {
+  font-size: 1.6rem;
+}
+
+.paragraph--type--flexible-cta-blocks .flexible-cta-block a {
+  display: inline-block;
+  font-size: 1.4rem;
+  font-family: "helvetica", Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1.7rem;
+  color: #E84708;
+  transition: 0.2s color ease;
+  position: relative;
+  text-decoration: none;
+}
+
+.paragraph--type--flexible-cta-blocks .flexible-cta-block a:hover, .paragraph--type--flexible-cta-blocks .flexible-cta-block a:focus {
+  color: #fff;
+  text-decoration: underline;
+}
+
 .region-hero .flexslider {
   border: 0;
 }
