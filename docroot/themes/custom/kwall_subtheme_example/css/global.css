@@ -2862,6 +2862,10 @@ select {
   color: #fff;
 }
 
+.paragraph--type--flexible-cta-blocks .flexible-cta-block:hover a {
+  text-decoration: underline;
+}
+
 .region-hero .flexslider {
   border: 0;
 }
