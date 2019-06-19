@@ -2821,16 +2821,19 @@ select {
 .paragraph--type--flexible-cta-blocks .flexible-cta-block {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
   margin: 10px;
-  padding: 10px;
+  padding: 48px 20px;
   text-align: center;
 }
 
 .paragraph--type--flexible-cta-blocks .flexible-cta-block h4 {
   font-size: 2.4rem;
+  line-height: 3.2rem;
+  margin-bottom: 2.8rem;
 }
 
 .paragraph--type--flexible-cta-blocks .flexible-cta-block p {
   font-size: 1.6rem;
+  line-height: 2.4rem;
 }
 
 .paragraph--type--flexible-cta-blocks .flexible-cta-block a {
@@ -2843,11 +2846,20 @@ select {
   transition: 0.2s color ease;
   position: relative;
   text-decoration: none;
+  line-height: 3.2rem;
 }
 
 .paragraph--type--flexible-cta-blocks .flexible-cta-block a:hover, .paragraph--type--flexible-cta-blocks .flexible-cta-block a:focus {
   color: #fff;
   text-decoration: underline;
+}
+
+.paragraph--type--flexible-cta-blocks .flexible-cta-block:hover {
+  background-color: #005794;
+}
+
+.paragraph--type--flexible-cta-blocks .flexible-cta-block:hover h4, .paragraph--type--flexible-cta-blocks .flexible-cta-block:hover p, .paragraph--type--flexible-cta-blocks .flexible-cta-block:hover a {
+  color: #fff;
 }
 
 .region-hero .flexslider {
