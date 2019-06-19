@@ -2998,6 +2998,17 @@ select {
   color: #005794;
 }
 
+.layout-hero-content {
+  position: relative;
+}
+
+.layout-hero-content .layout-alerts {
+  position: absolute;
+  top: 1.5rem;
+  left: 0;
+  right: 0;
+}
+
 .layout-container {
   padding-top: 60px;
 }

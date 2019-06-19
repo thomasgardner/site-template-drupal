@@ -45,11 +45,6 @@
 #}
 
 <header id="site-branding" role="banner">
-  {% if page.alerts %}
-  <div class="layout-alerts" role="region">
-    {{ page.alerts }}
-  </div>
-  {% endif %}
   {{ page.utility }}
   <div class="container">
     <div class="row">
@@ -61,6 +56,17 @@
 
 {% if page.hero %}
 <section class="layout-hero-content" role="region">
+  {% if page.alerts %}
+    <div class="layout-alerts" role="region">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+      {{ page.alerts }}
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
   {{ page.hero }}
 </section>
 {% endif %}
