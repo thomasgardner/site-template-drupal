@@ -99,7 +99,7 @@
           <div class="col-md-12 card-wrap">
             <div class="card">
               <div class="card-header">      				
-                <a data-toggle="collapse" href="#{{paragraph_id}}" aria-expanded="false" aria-controls="{{paragraph_id}}">{{ item['#paragraph'].field_title.value }}</a>
+                <a data-toggle="collapse" href="#{{paragraph_id}}" aria-expanded="false" aria-controls="{{paragraph_id}}" class="collapsed">{{ item['#paragraph'].field_title.value }}</a>
               </div>
             {% if key == '0' and content.field_boolean.0['#markup'] == 'On' %}
               <div id="{{paragraph_id}}" class="collapse open show" aria-labelledby="headingOne">
