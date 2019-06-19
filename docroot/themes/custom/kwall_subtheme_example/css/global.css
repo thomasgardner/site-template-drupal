@@ -3021,6 +3021,14 @@ select {
   margin-bottom: 60px;
 }
 
+.paragraph--type--accordion .card-header a.collapsed:after {
+  content: "\f067";
+}
+
+.paragraph--type--accordion .card-header a:after {
+  content: "\f068";
+}
+
 .layout-hero-content .hero-banner-img-section.banner-short {
   height: 250px;
 }
