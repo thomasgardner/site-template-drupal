@@ -2807,6 +2807,17 @@ select {
   margin-left: 54px;
 }
 
+.paragraph--type--wysiwyg h2 {
+  font-size: 4rem;
+  line-height: 5.2rem;
+  margin-bottom: 2.4rem;
+}
+
+.paragraph--type--wysiwyg p {
+  font-size: 2.4rem;
+  line-height: 3.4rem;
+}
+
 .region-hero .flexslider {
   border: 0;
 }

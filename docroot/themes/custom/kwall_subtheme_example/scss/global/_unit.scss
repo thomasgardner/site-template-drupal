@@ -23,7 +23,7 @@ $global-font-size: 100% !default;
 /// @param {Number} $base [null] - The base value to use when calculating the `rem`. If you're using Foundation out of the box, this is 16px. If this parameter is `null`, the function will reference the `$global-font-size` variable as the base.
 ///
 /// @returns {List} A list of converted values.
-@function rem-calc($values, $base: null) {
+@function rem-calc($values, $base: 10) {
   $rem-values: ();
   $count: length($values);
 

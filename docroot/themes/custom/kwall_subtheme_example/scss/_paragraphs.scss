@@ -242,3 +242,15 @@
     }
   }
 }
+
+.paragraph--type--wysiwyg {
+  h2 {
+    font-size: rem-calc(40);
+    line-height: rem-calc(52);
+    margin-bottom: rem-calc(24);
+  }
+  p {
+    font-size: rem-calc(24);
+    line-height: rem-calc(34);
+  }
+}
