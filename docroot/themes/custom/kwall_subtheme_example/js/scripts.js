@@ -7,33 +7,16 @@
      * Equal height.
      */
     $.equalHeight = function (container) {
-        var currentTallest = 0,
-            currentRowStart = 0,
-            rowDivs = [],
-            $el;
-        $(container).each(function () {
-            $el = $(this);
-            $($el).height('auto');
-            var topPosition = $el.position().top;
+        var max_height = 0,
+            height = 0;
+        container.css('height', 'auto')
 
-            if (currentRowStart !== topPosition) {
-                for (var currentDiv = 0; currentDiv < rowDivs.length; currentDiv++) {
-                    rowDivs[currentDiv].height(currentTallest);
-                }
-                rowDivs.length = 0; // Empty the array.
-                currentRowStart = topPosition;
-                currentTallest = $el.height();
-                rowDivs.push($el);
-            }
-            else {
-                rowDivs.push($el);
-                currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
-            }
-            for (currentDiv = 0; currentDiv < rowDivs.length; currentDiv++) {
-                rowDivs[currentDiv].height(currentTallest);
-            }
+        $(container).each(function () {
+           height = $(this).height();
+           max_height = (height > max_height)?height:max_height;
 
         });
+        $(container).css('height', max_height + 'px');
     };
 
 
@@ -309,19 +292,27 @@
      */
     Drupal.behaviors.equalHeight = {
         attach: function (context, settings) {
-            var columns = $('.paragraph--type--column-section > .row > .col-md-4 .field--name-field-view-reference, .paragraph--type--column-section > .row > .col-md-4 .column-content-inner', context);
-            var column_titles = $('.paragraph--type--column-section .field--name-field-title', context);
+            var columns = $('.paragraph--type--column-section > .row > .col-md-4 .field--name-field-view-reference, .paragraph--type--column-section > .row > .col-md-4 .column-content-inner', context),
+                columns_articles_events =  $('.paragraph--type--recent-articles-upcoming-events .view-article-view, .paragraph--type--recent-articles-upcoming-events .view-event-view', context),
+                column_titles = $('.paragraph--type--column-section .field--name-field-title', context),
+                column_titles_articles_events = $('.paragraph--type--recent-articles-upcoming-events .field--name-field-title, .paragraph--type--recent-articles-upcoming-events .field--name-field-title-2', context);
             if ($(window).width() > 767) {
                 $.equalHeight(columns);
+                $.equalHeight(columns_articles_events);
                 $.equalHeight(column_titles);
+                $.equalHeight(column_titles_articles_events);
             }
             $(window).on('resize', function() {
                 if ($(window).width() > 767) {
                     $.equalHeight(columns);
+                    $.equalHeight(columns_articles_events);
                     $.equalHeight(column_titles);
+                    $.equalHeight(column_titles_articles_events);
                 } else {
                     columns.css('height', 'auto');
                     column_titles.css('height', 'auto');
+                    columns_articles_events.css('height', 'auto');
+                    column_titles_articles_events.css('height', 'auto');
                 }
             });
         }

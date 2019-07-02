@@ -72,7 +72,7 @@
   }
 }
 
-.paragraph--type--column-section {
+.paragraph--type--column-section, .paragraph--type--recent-articles-upcoming-events {
   > .row {
     > .col-md-4 {
       @media #{$mobile} {
@@ -113,6 +113,9 @@
         font-size: 2rem;
         line-height: 2.6rem;
       }    }
+    .title {
+      margin-bottom: 6px;
+    }
     .post-title {
       margin-bottom: 1.5rem;
     }
@@ -169,7 +172,7 @@
   }
 
 
-  .field--name-field-link, .post-link {
+  .field--name-field-link, .field--name-field-link-2, .post-link {
     line-height: 1;
     a {
       color: $color-orange;
@@ -180,14 +183,14 @@
 
     }
   }
-  .field--name-field-link {
+  .field--name-field-link, .field--name-field-link-2 {
     margin-top: -5px;
     @media #{$mobile} {
       text-align: center;
     }
   }
 
-  .field--name-field-title {
+  .field--name-field-title, .field--name-field-title-2 {
     font-size: 4rem;
     line-height: 5.2rem;
     margin: 0;
@@ -243,6 +246,17 @@
   .view-event-view.view-display-id-block_1 {
     .content-wrap {
       margin-left: 54px;
+    }
+  }
+}
+
+.paragraph--type--recent-articles-upcoming-events {
+  .view-article-view {
+    > .view-content, .views-row, .views-field-field-media-image-9, .field-content {
+      height: 100%;
+      .post-wrap {
+        height: calc(100% - 25px);
+      }
     }
   }
 }
