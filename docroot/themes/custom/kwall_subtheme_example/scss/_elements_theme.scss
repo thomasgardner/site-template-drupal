@@ -18,4 +18,6 @@
   }
 }
 
-
+.section-title {
+  @include section_title();
+}

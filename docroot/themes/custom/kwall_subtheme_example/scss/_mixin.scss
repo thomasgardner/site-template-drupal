@@ -22,3 +22,18 @@
     text-decoration: underline;
   }
 }
+
+@mixin section_title {
+  font-size: 4rem;
+  line-height: 5.2rem;
+  margin: 0;
+  font-weight: bold;
+  margin-bottom: 1.2rem;
+  @media (max-width: $screen-tablet-max) {
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+  }
+  @media #{$mobile} {
+    text-align: center;
+  }
+}

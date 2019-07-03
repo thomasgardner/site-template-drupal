@@ -20,7 +20,10 @@
   // Right Sidebar
   .layout-center {
 
-    padding-left: 30px
+    padding-left: 30px;
+    @media (max-width: $screen-mobile) {
+      padding-left: 10px;
+    }
   }
 }
 

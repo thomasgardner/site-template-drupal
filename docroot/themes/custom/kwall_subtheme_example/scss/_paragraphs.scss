@@ -2,19 +2,18 @@
   margin-top: 60px;
 }
 
-.full-width-img-section {
+.full-width-img-section, .paragraph--type--flexible-bg-image-blocks .bg-img-container {
   padding: 90px 15px;
   text-align: center;
   color: #f5f5f5;
-  .paragraph.container {
+  .paragraph.container, .content-wrapper{
     max-width: 700px;
     padding: 50px 60px 30px 60px;
     background: rgba(0,87,148, 0.8);
     .field--name-field-title {
-      color: #f5f5f5;
-      font-size: 4rem;
-      line-height: 5.2rem;
-      font-weight: bold;
+      @include section_title();
+      margin-bottom: 0;
+      color: #fff;
     }
     .field--name-field-subtitle {
       color: #f5f5f5;
@@ -31,6 +30,23 @@
     .field--name-field-links {
       a {
         margin-bottom: 2rem;
+      }
+    }
+  }
+}
+.paragraph--type--flexible-bg-image-blocks {
+  .bg-img-container {
+    .content-wrapper {
+      margin: 0 auto;
+      a {
+        text-decoration: none;
+      }
+      .field--name-field-subtitle {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        margin-bottom: 2.2rem;
+        font-weight: normal;
+        margin-top: 2rem;
       }
     }
   }
@@ -191,18 +207,7 @@
   }
 
   .field--name-field-title, .field--name-field-title-2 {
-    font-size: 4rem;
-    line-height: 5.2rem;
-    margin: 0;
-    font-weight: bold;
-    margin-bottom: 1.2rem;
-    @media (max-width: $screen-tablet-max) {
-      font-size: 2.5rem;
-      line-height: 3.5rem;
-    }
-    @media #{$mobile} {
-      text-align: center;
-    }
+    @include section_title();
   }
   .field--type-image {
     img {
@@ -261,7 +266,7 @@
   }
 }
 
-// Para: Wysiwyg
+// Para: Wysiwyg7yu6i98o
 .paragraph--type--wysiwyg {
   h2 {
     font-size: rem-calc(40);
@@ -307,5 +312,21 @@
         text-decoration: underline;
       }
     }
+  }
+}
+
+.paragraph--type--interior-slideshow-slide {
+  .slide-content {
+    background: rgba(0,0,0,0.62);
+    color: #fff;
+    .field--name-field-title {
+      line-height: 3.2rem;
+      font-weight: bold;
+    }
+    .field--name-field-body-formatted {
+      font-size: 1.4rem;
+      line-height: 2.2rem;
+    }
+
   }
 }
