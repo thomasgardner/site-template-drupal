@@ -2021,6 +2021,9 @@ select {
     margin-bottom: 2.2rem;
     font-weight: normal;
     margin-top: 2rem; }
+.paragraph--type--flexible-bg-image-blocks.container-fluid .cta-image-block-section-title {
+  padding-left: 15px;
+  padding-right: 15px; }
 
 .paragraph--type--video-tab-carousel .video-carousel .tab-title-wrap {
   padding-right: 25px; }

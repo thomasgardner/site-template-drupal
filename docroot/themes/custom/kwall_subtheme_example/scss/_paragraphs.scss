@@ -50,6 +50,12 @@
       }
     }
   }
+  &.container-fluid {
+    .cta-image-block-section-title {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
 }
 
 .paragraph--type--video-tab-carousel {
