@@ -2009,7 +2009,25 @@ select {
       line-height: 2.4rem;
       margin-bottom: 2.2rem; }
     .full-width-img-section .paragraph.container .field--name-field-links a, .full-width-img-section .content-wrapper .field--name-field-links a, .paragraph--type--flexible-bg-image-blocks .bg-img-container .paragraph.container .field--name-field-links a, .paragraph--type--flexible-bg-image-blocks .bg-img-container .content-wrapper .field--name-field-links a {
-      margin-bottom: 2rem; }
+      border-radius: 0;
+      box-shadow: none;
+      font-size: 1.6rem;
+      font-weight: bold;
+      padding: 10.5px 50px;
+      background: none;
+      border: 2px solid #fff;
+      color: #fff;
+      margin-bottom: 2rem;
+      text-decoration: none;
+      display: inline-block;
+      margin-right: 1em;
+      margin-left: 1em; }
+      .full-width-img-section .paragraph.container .field--name-field-links a:hover, .full-width-img-section .content-wrapper .field--name-field-links a:hover, .paragraph--type--flexible-bg-image-blocks .bg-img-container .paragraph.container .field--name-field-links a:hover, .paragraph--type--flexible-bg-image-blocks .bg-img-container .content-wrapper .field--name-field-links a:hover {
+        background-color: #fff;
+        color: #005794; }
+      .full-width-img-section .paragraph.container .field--name-field-links a:first-child, .full-width-img-section .content-wrapper .field--name-field-links a:first-child, .paragraph--type--flexible-bg-image-blocks .bg-img-container .paragraph.container .field--name-field-links a:first-child, .paragraph--type--flexible-bg-image-blocks .bg-img-container .content-wrapper .field--name-field-links a:first-child {
+        margin-left: 0;
+        margin-right: 0; }
 
 .paragraph--type--flexible-bg-image-blocks .bg-img-container .content-wrapper {
   margin: 0 auto; }
