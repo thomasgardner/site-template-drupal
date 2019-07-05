@@ -1764,6 +1764,14 @@ figure.embedded-entity {
     margin-bottom: 0; }
   figure.embedded-entity figcaption {
     border: 1px solid #eee; }
+  @media (max-width: 767px) {
+    figure.embedded-entity.align-right, figure.embedded-entity.align-right {
+      width: 100%; }
+      figure.embedded-entity.align-right article, figure.embedded-entity.align-right article {
+        margin: 0; }
+      figure.embedded-entity.align-right figcaption, figure.embedded-entity.align-right figcaption {
+        margin: 0;
+        width: 100%; } }
 
 #site-branding a {
   text-decoration: none; }

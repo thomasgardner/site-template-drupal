@@ -75,6 +75,19 @@ figure {
     figcaption {
       border: 1px solid #eee;
     }
+
+    &.align-right, &.align-right {
+      @media (max-width: $screen-mobile) {
+        width: 100%;
+        article {
+          margin: 0;
+        }
+        figcaption {
+          margin: 0;
+          width: 100%;
+        }
+      }
+    }
   }
 
 }
