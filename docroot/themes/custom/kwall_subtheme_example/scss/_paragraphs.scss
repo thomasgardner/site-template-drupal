@@ -217,12 +217,7 @@
   .field--name-field-link, .field--name-field-link-2, .post-link {
     line-height: 1;
     a {
-      color: $color-orange;
-      font-size: 1.4rem;
-      line-height: 1;
-      text-decoration: none;
-      font-weight: bold;
-
+      @include link_orange();
     }
   }
   .field--name-field-link, .field--name-field-link-2 {
@@ -355,4 +350,73 @@
     }
 
   }
+}
+
+.paragraph--type--person-carousel {
+  .field--name-field-title {
+    @include section-title();
+    float: left;
+    margin-bottom: 2rem;
+  }
+  .field--name-field-link {
+    float: right;
+    line-height: 5.2rem;
+    @media (max-width: $screen-tablet-max) {
+      line-height: 3.5rem;
+    }
+  }
+  .row {
+    clear: both;
+  }
+  .field--name-field-link, .views-field-view-node-1 {
+    a {
+      @include link_orange();
+    }
+  }
+  .views-field-field-name {
+    margin-top: 1.5rem;
+    .full-name {
+      font-size: 2.4rem;
+      line-height: 3.2rem;
+      font-weight: bold;
+    }
+    .credentials {
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+    }
+  }
+  a:focus {
+    outline: 0;
+  }
+  .view-id-carousels.view-display-id-block_1 .slick-list .slick-slide {
+    padding: 0 13px;
+  }
+  .slick-prev, .slick-next {
+    transform: translateY(-50%);
+    color: #ffffff;
+    transition: ease all 0.4s;
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.6);
+    top: 30%;
+    &:hover, &:focus {
+      &:before {
+        opacity: 0.5;
+      }
+    }
+    &:before {
+      font-size: 5rem;
+      font-family: $font-awesome;
+      opacity: 1;
+    }
+  }
+  .slick-prev {
+    &:before {
+      content: "\f104";
+    }
+  }
+  .slick-next {
+    &:before {
+      content: "\f105";
+    }
+  }
+
 }

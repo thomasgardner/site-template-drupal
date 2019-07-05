@@ -37,3 +37,11 @@
     text-align: center;
   }
 }
+
+@mixin link_orange() {
+  color: $color-orange;
+  font-size: 1.4rem;
+  line-height: 1;
+  text-decoration: none;
+  font-weight: bold;
+}

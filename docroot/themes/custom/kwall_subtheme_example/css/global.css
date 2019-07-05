@@ -1729,6 +1729,25 @@ select {
     .section-title {
       text-align: center; } }
 
+.slick-dots {
+  bottom: auto;
+  margin-top: 2rem;
+  position: relative; }
+  .slick-dots li {
+    margin: 0; }
+    .slick-dots li button {
+      width: 12px;
+      height: 12px;
+      background: #696666;
+      border-radius: 100%; }
+      .slick-dots li button:before {
+        display: none; }
+    .slick-dots li.slick-active button {
+      background: none;
+      border: 2px solid #696666;
+      width: 10px;
+      height: 10px; }
+
 #site-branding a {
   text-decoration: none; }
 #site-branding .utility-nav-block {
@@ -2239,6 +2258,65 @@ select {
   .paragraph--type--interior-slideshow-slide .slide-content .field--name-field-body-formatted {
     font-size: 1.4rem;
     line-height: 2.2rem; }
+
+.paragraph--type--person-carousel .field--name-field-title {
+  font-size: 4rem;
+  line-height: 5.2rem;
+  margin: 0;
+  font-weight: bold;
+  margin-bottom: 1.2rem;
+  float: left;
+  margin-bottom: 2rem; }
+  @media (max-width: 991px) {
+    .paragraph--type--person-carousel .field--name-field-title {
+      font-size: 2.5rem;
+      line-height: 3.5rem; } }
+  @media (max-width: 767px) {
+    .paragraph--type--person-carousel .field--name-field-title {
+      text-align: center; } }
+.paragraph--type--person-carousel .field--name-field-link {
+  float: right;
+  line-height: 5.2rem; }
+  @media (max-width: 991px) {
+    .paragraph--type--person-carousel .field--name-field-link {
+      line-height: 3.5rem; } }
+.paragraph--type--person-carousel .row {
+  clear: both; }
+.paragraph--type--person-carousel .field--name-field-link a, .paragraph--type--person-carousel .views-field-view-node-1 a {
+  color: #E84708;
+  font-size: 1.4rem;
+  line-height: 1;
+  text-decoration: none;
+  font-weight: bold; }
+.paragraph--type--person-carousel .views-field-field-name {
+  margin-top: 1.5rem; }
+  .paragraph--type--person-carousel .views-field-field-name .full-name {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    font-weight: bold; }
+  .paragraph--type--person-carousel .views-field-field-name .credentials {
+    font-size: 1.6rem;
+    line-height: 2.4rem; }
+.paragraph--type--person-carousel a:focus {
+  outline: 0; }
+.paragraph--type--person-carousel .view-id-carousels.view-display-id-block_1 .slick-list .slick-slide {
+  padding: 0 13px; }
+.paragraph--type--person-carousel .slick-prev, .paragraph--type--person-carousel .slick-next {
+  transform: translateY(-50%);
+  color: #ffffff;
+  transition: ease all 0.4s;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6);
+  top: 30%; }
+  .paragraph--type--person-carousel .slick-prev:hover:before, .paragraph--type--person-carousel .slick-prev:focus:before, .paragraph--type--person-carousel .slick-next:hover:before, .paragraph--type--person-carousel .slick-next:focus:before {
+    opacity: 0.5; }
+  .paragraph--type--person-carousel .slick-prev:before, .paragraph--type--person-carousel .slick-next:before {
+    font-size: 5rem;
+    font-family: "FontAwesome";
+    opacity: 1; }
+.paragraph--type--person-carousel .slick-prev:before {
+  content: "\f104"; }
+.paragraph--type--person-carousel .slick-next:before {
+  content: "\f105"; }
 
 .region-sidebar-left .block {
   margin-bottom: 40px; }
