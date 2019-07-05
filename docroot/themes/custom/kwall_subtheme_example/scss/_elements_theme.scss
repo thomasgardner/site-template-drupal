@@ -46,3 +46,35 @@
     }
   }
 }
+figure {
+  &.embedded-entity {
+    width: 48%;
+    &.align-right {
+      article {
+        margin-left: 20px;
+      }
+      figcaption {
+        margin-left: 20px;
+        width: calc(100% - 20px);
+      }
+    }
+    &.align-left {
+      article {
+        margin-right: 20px;
+      }
+      figcaption {
+        margin-right: 20px;
+        width: calc(100% - 20px);
+      }
+    }
+    article {
+      p {
+        margin-bottom: 0;
+      }
+    }
+    figcaption {
+      border: 1px solid #eee;
+    }
+  }
+
+}
