@@ -1,0 +1,51 @@
+// Feature News
+
+.view-id-article_view.featured-news-grid {
+
+  // Featured Attachment Block
+  > .attachment {
+    .featured-post-wrap {
+      padding: 2rem;
+    }
+  }
+
+  // Featured Articles
+  > .view-content {
+    padding-left: 2rem;
+    > div {
+      @include grid_black_shadow();
+      &:first-child {
+        margin-bottom: 2rem;
+      }
+      .featured-post-wrap {
+        min-height: 21.5rem;
+        position: relative;
+        .content-wrap {
+          @include grid_absolute_text();
+        }
+      }
+    }
+  }
+
+  .featured-post-wrap {
+    .post-title {
+      font-size: 2rem;
+      line-height: 1.2;
+      a {
+        color: $color-white;
+      }
+    }
+
+    .post-date {
+      margin: 0;
+      color: $color-white;
+    }
+
+    .post-link {
+      line-height: 1;
+      .read-more-link {
+        @include read_more_link();
+      }
+    }
+  }
+}

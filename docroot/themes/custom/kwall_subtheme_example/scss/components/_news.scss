@@ -1,0 +1,6 @@
+
+.view-display-id-page_1 {
+  .view-filters {
+    @include exposed_filter_form();
+  }
+}
