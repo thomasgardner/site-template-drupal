@@ -45,3 +45,42 @@
   text-decoration: none;
   font-weight: bold;
 }
+
+@mixin read_more_link($color: $color-white, $hover-color: $color-orange) {
+  @include button-text($color, $hover-color);
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+@mixin grid_black_shadow() {
+  position: relative;
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 80%;
+    width: 100%;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+1,1+100 */
+    background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 1%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 1%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 1%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+  }
+}
+
+@mixin grid_absolute_text($color: $color-white, $padding: 2rem){
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: $padding;
+  z-index: 5;
+  color: $color;
+}
+
+@mixin exposed_filter_form($bg: $color-grey-bg){
+  background: $bg;
+}
