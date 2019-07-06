@@ -89,5 +89,41 @@ figure {
       }
     }
   }
+}
 
+nav.pager {
+  text-align: center;
+  margin-top: 20px;
+  .pager__items {
+    display: inline-block;
+    .pager__item {
+      padding: 0;
+      display: block;
+      float: left;
+      margin-left: -1px;
+      a {
+        display: inline-block;
+        padding: 9px 18px;
+        color: #005794;
+        &:hover, &:focus, &:active {
+          color: #fff;
+          background-color: $color-orange;
+        }
+      }
+      &.is-active {
+        a {
+          font-weight: normal;
+          color: #fff;
+        }
+      }
+      &--next, &--previous, &--last, &--first {
+        a {
+          &:hover, &:focus, &:active {
+            background: none;
+            color: $color-orange;
+          }
+        }
+      }
+    }
+  }
 }

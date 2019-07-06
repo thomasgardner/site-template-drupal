@@ -214,3 +214,79 @@
     }
   }
 }
+
+.view-id-directory.view-display-id-page_1 {
+  margin-bottom: 70px;
+  > .view-content {
+    margin-top: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    .profile-wrap {
+      margin-bottom: 30px;
+      .content-wrap {
+        padding-left: 25px;
+      }
+    }
+  }
+  .fa {
+    &:before {
+      padding-right: 7px;
+    }
+  }
+  .view-header {
+    background: #f0f0f0;
+    padding: 20px;
+    padding-top: 0;
+    .alpaha-item {
+      color: #acacac;
+      a {
+        color: $color-blue;
+      }
+    }
+  }
+  .views-exposed-form {
+    background: #f0f0f0;
+    padding: 10px 20px 0 20px;
+    .form-text, .form-select {
+      height: 50px;
+      background: #fff;
+      border: 0;
+      margin-top: 0;
+      font-size: 1.4rem;
+    }
+    label {
+      text-shadow: 0px 1px #ffffff;
+      color: #4a4a4a;
+      font-size: 1.6rem;
+      line-height: 2.1rem;
+    }
+    .form-item {
+      margin-left: 0;
+      margin-right: 0;
+      padding-right: 12px;
+      @media (min-width: $screen-sm-min) {
+        width: 40%;
+      }
+      @media (max-width: $screen-mobile) {
+        float: none;
+      }
+    }
+    .form-actions {
+      display: inline-block;
+      margin-top: 2.5em;
+      @media (min-width: $screen-sm-min) {
+        width: 20%;
+        text-align: right;
+      }
+      @media (max-width: $screen-mobile) {
+        margin-top: 0;
+      }
+      input {
+        @media (min-width: $screen-sm-min) and (max-width: 1070px) {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+      }
+    }
+  }
+}
