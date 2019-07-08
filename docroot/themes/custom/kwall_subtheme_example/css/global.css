@@ -4044,4 +4044,8 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   width: auto;
 }
 
+.view-events-calendar > nav.pager {
+  display: none;
+}
+
 /*# sourceMappingURL=../sourcemaps/global.css.map */
