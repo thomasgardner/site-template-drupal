@@ -3875,7 +3875,6 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
 }
 
 .node--type-person .person--tel .field__item::before, .node--type-person .person--email .field__item::before {
-  content: "\f095";
   font-family: "FontAwesome";
   font-size: 18px;
   padding-right: 5px;
