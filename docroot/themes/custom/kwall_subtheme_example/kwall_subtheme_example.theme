@@ -1,5 +1,8 @@
 <?php
 
+use Drupal\node\NodeInterface;
+use Drupal\Core\Datetime\DrupalDateTime;
+
 /**
  * @file
  * KWALL Sub-Theme Example
@@ -7,3 +10,15 @@
  * Place your custom PHP code in this file.
  */
 
+function kwall_subtheme_example_preprocess_node(&$vars) {
+  $node = $vars['node'];
+  $yo = 'man';
+  if($node->getType() == 'event') {
+    if (!$node->get('field_start_date')->isEmpty()) {
+      $date = $node->get('field_start_date')->value;
+      $timestamp = strtotime($date);
+      $vars['eventMonth'] = \Drupal::service('date.formatter')->format($timestamp, 'custom', 'M', drupal_get_user_timezone());
+      $vars['eventDate'] = \Drupal::service('date.formatter')->format($timestamp, 'custom', 'j', drupal_get_user_timezone());
+    }
+  }
+}
