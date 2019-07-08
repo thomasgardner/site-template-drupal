@@ -83,4 +83,11 @@
 
 @mixin exposed_filter_form($bg: $color-grey-bg){
   background: $bg;
+  padding: 2rem 2.5rem 3rem;
+  .views-exposed-form {
+
+    .form-actions {
+      margin: 0;
+    }
+  }
 }

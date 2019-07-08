@@ -3734,97 +3734,6 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   width: 100%;
 }
 
-.article .section-top {
-  border-bottom: 2px solid #CCC;
-  padding-bottom: 20px;
-  margin: 20px 0;
-}
-
-.article .section-top .post-author {
-  font-size: 16px;
-}
-
-.article .section-top .post-social {
-  display: inline-flex;
-  float: right;
-  /*.sharethis-wrapper {
-        .stButton {
-          font-size: 40px;
-          font-family: $font-awesome;
-          position: relative;
-
-          .stLarge {
-            display: none;
-          }
-        }
-
-        .st_facebook_large {
-          .stButton {
-            &::before {
-              content: "\f082";
-              color: $color-blue;
-            }
-          }
-        }
-
-        .st_twitter_large {
-          .stButton {
-            &::before {
-              content: "\f081";
-              color: $color-style-blue;
-            }
-          }
-        }
-        .st_pinterest_large {
-          .stButton {
-            &::before {
-              content: "\f0d3";
-              color: $color-orange;
-            }
-          }
-        }
-      }*/
-}
-
-.article .section-top .post-social .share {
-  margin: 0 20px 0px 0;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.article .section-top .post-social .sharethis-wrapper .st_plusone_large, .article .section-top .post-social .sharethis-wrapper .st_fblike_large {
-  display: none;
-}
-
-.view-article-view .view-content {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-}
-
-.view-article-view .view-content .views-row {
-  width: 32%;
-}
-
-.view-article-view .view-content .views-row .post-wrapper .content-wrapper .content-image img {
-  width: 100%;
-}
-
-.view-article-view .view-content .views-row .post-wrapper .content-wrapper .content-date {
-  margin: 10px 0 5px 0;
-  color: #959595;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.view-article-view .view-content .views-row .post-wrapper .content-wrapper .content-title a {
-  font-size: 24px;
-  font-weight: bold;
-  line-height: 32px;
-  color: #333;
-  text-decoration: none;
-}
-
 .layout-hero-content {
   position: relative;
 }
@@ -3868,6 +3777,112 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
 
 .layout-hero-content .hero-banner-img-section.banner-tall {
   height: 400px;
+}
+
+.view-display-id-page_1 .view-filters {
+  background: #f0f0f0;
+  padding: 2rem 2.5rem 3rem;
+}
+
+.view-display-id-page_1 .view-filters .views-exposed-form .form-actions {
+  margin: 0;
+}
+
+.view-id-article_view.featured-news-grid > .attachment .featured-post-wrap {
+  padding: 2rem;
+}
+
+.view-id-article_view.featured-news-grid > .view-content {
+  padding-left: 2rem;
+}
+
+.view-id-article_view.featured-news-grid > .view-content > div {
+  position: relative;
+}
+
+.view-id-article_view.featured-news-grid > .view-content > div:before {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 80%;
+  width: 100%;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+1,1+100 */
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 1%, black 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 1%, black 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 1%, black 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 );
+  /* IE6-9 */
+}
+
+.view-id-article_view.featured-news-grid > .view-content > div:first-child {
+  margin-bottom: 2rem;
+}
+
+.view-id-article_view.featured-news-grid > .view-content > div .featured-post-wrap {
+  min-height: 21.5rem;
+  position: relative;
+}
+
+.view-id-article_view.featured-news-grid > .view-content > div .featured-post-wrap .content-wrap {
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  z-index: 5;
+  color: #fff;
+}
+
+.view-id-article_view.featured-news-grid .featured-post-wrap .post-title {
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.view-id-article_view.featured-news-grid .featured-post-wrap .post-title a {
+  color: #fff;
+}
+
+.view-id-article_view.featured-news-grid .featured-post-wrap .post-date {
+  margin: 0;
+  color: #fff;
+}
+
+.view-id-article_view.featured-news-grid .featured-post-wrap .post-link {
+  line-height: 1;
+}
+
+.view-id-article_view.featured-news-grid .featured-post-wrap .post-link .read-more-link {
+  display: inline-block;
+  font-size: 1.4rem;
+  font-family: "helvetica", Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1.7rem;
+  color: #fff;
+  transition: 0.2s color ease;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+.view-id-article_view.featured-news-grid .featured-post-wrap .post-link .read-more-link:hover, .view-id-article_view.featured-news-grid .featured-post-wrap .post-link .read-more-link:focus {
+  color: #E84708;
+  text-decoration: underline;
+}
+
+@media (min-width: 992px) {
+  .view-map-view .geolocation-common-map-locations {
+    padding-right: 2rem;
+  }
+}
+
+.view-map-view .geolocation-common-map-locations-inner {
+  max-height: 40rem;
+  overflow-x: auto;
 }
 
 /*# sourceMappingURL=../sourcemaps/global.css.map */

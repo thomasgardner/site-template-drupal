@@ -1,0 +1,18 @@
+
+.view-map-view {
+  .geolocation-common-map {
+    &-locations {
+      @media (min-width: $screen-md-min) {
+        padding-right: 2rem;
+      }
+
+      &-inner {
+        max-height: 40rem;
+        overflow-x: auto;
+      }
+    }
+
+    &-container {
+    }
+  }
+}
