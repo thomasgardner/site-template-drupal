@@ -4006,4 +4006,36 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   padding: 6px;
 }
 
+.view-events-calendar .calendar-calendar table tbody tr td .inner {
+  display: block;
+  overflow: hidden;
+  padding: .5rem 1.2rem;
+}
+
+.view-events-calendar .calendar-calendar table tbody tr td .inner .contents {
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  color: #005794;
+  font-weight: bold;
+}
+
+.view-events-calendar .calendar-calendar table tbody tr td .inner .contents span.start-date + span.start-date {
+  display: none;
+}
+
+.view-events-calendar .calendar-calendar table tbody tr td .inner .contents .event-content {
+  padding-top: .5rem;
+  font-weight: normal;
+  color: #333;
+}
+
+.view-events-calendar .calendar-calendar table tbody tr td .day {
+  float: left;
+  color: #282B2C;
+  font-size: 3rem;
+  line-height: 3rem;
+  padding: 0;
+  width: auto;
+}
+
 /*# sourceMappingURL=../sourcemaps/global.css.map */

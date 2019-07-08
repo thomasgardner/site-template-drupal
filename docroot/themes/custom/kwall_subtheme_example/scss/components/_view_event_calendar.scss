@@ -52,6 +52,42 @@
         color: $color-black;
         padding: 6px;
       }
+      tbody {
+        tr {
+          td {
+            .inner {
+              display: block;
+              overflow: hidden;
+              padding: .5rem 1.2rem;
+              .contents {
+                font-size: 1.4rem;
+                line-height: 1.4rem;
+                color: $color-blue;
+                font-weight: bold;
+                span.start-date + span.start-date {
+                  display: none;
+                }
+                .event-content {
+                  padding-top: .5rem;
+                  font-weight: normal;
+                  color: $color-body;
+                }
+              }
+            }
+            .day {
+              float: left;
+              color: $color-black;
+              font-size: 3rem;
+              line-height: 3rem;
+              padding: 0;
+              width: auto;
+            }
+            .single-day {
+
+            }
+          }
+        }
+      }
     }
   }
 }
