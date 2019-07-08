@@ -62,14 +62,18 @@
               .contents {
                 font-size: 1.4rem;
                 line-height: 1.4rem;
-                color: $color-blue;
-                font-weight: bold;
-                span.start-date + span.start-date {
+                span.start-date {
                   display: none;
+                }
+                .event-time {
+                  color: $color-blue;
+                  font-weight: bold;
+                  span.start-date {
+                    display: block;
+                  }
                 }
                 .event-content {
                   padding-top: .5rem;
-                  font-weight: normal;
                   color: $color-body;
                 }
               }

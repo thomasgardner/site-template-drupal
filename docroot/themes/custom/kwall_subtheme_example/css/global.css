@@ -4015,17 +4015,23 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
 .view-events-calendar .calendar-calendar table tbody tr td .inner .contents {
   font-size: 1.4rem;
   line-height: 1.4rem;
+}
+
+.view-events-calendar .calendar-calendar table tbody tr td .inner .contents span.start-date {
+  display: none;
+}
+
+.view-events-calendar .calendar-calendar table tbody tr td .inner .contents .event-time {
   color: #005794;
   font-weight: bold;
 }
 
-.view-events-calendar .calendar-calendar table tbody tr td .inner .contents span.start-date + span.start-date {
-  display: none;
+.view-events-calendar .calendar-calendar table tbody tr td .inner .contents .event-time span.start-date {
+  display: block;
 }
 
 .view-events-calendar .calendar-calendar table tbody tr td .inner .contents .event-content {
   padding-top: .5rem;
-  font-weight: normal;
   color: #333;
 }
 
