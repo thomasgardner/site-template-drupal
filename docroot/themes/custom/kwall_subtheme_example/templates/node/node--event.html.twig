@@ -91,7 +91,7 @@
           </div>
         </div>
         <div class="field-type-time">
-          {% if content.field_all_day_event is not empty %}
+          {% if content.field_all_day_event.value %}
             <div class="time">{{ 'Time:'|t }}</div>
             {{ content.field_all_day_event }}
           {% else %}
@@ -99,7 +99,7 @@
             {{ content.field_start_date.0 }} - {{ content.field_end_date.0 }}
           {% endif %}
         </div>
-        {% if content.field_address != '' %}
+        {% if content.field_address.0 != '' %}
           <div class="event-location">
             <div class="location-title">{{ 'Location:'|t }}</div>
             <div class="location-info">
