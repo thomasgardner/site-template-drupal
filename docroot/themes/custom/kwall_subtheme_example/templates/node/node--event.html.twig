@@ -75,9 +75,6 @@
 ] %}
 
 
-{{ dump(content) }}
-
-
 <article{{ attributes.addClass(classes) }}>
   <div class="listing">
     <div class="row header">
@@ -91,9 +88,9 @@
           </div>
         </div>
         <div class="field-type-time">
-          {% if content.field_all_day_event == 'true' %}
+          {% if content.field_all_day_event %}
             <div class="time">{{ 'Time:'|t }}</div>
-            {{ content.field_all_day_event }}
+            ALL DAY
           {% else %}
             <div class="time">{{ 'Time:'|t }}</div>
             {{ content.field_start_date.0 }} - {{ content.field_end_date.0 }}
