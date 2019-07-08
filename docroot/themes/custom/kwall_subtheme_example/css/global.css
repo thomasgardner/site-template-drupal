@@ -3862,29 +3862,31 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   font-size: 52px;
 }
 
-.node--type-person .person--contact {
+.node--type-person .person--contact .label {
+  display: inline-block;
+  margin-bottom: 5px;
   font-size: 24px;
   line-height: 32px;
 }
 
-.node--type-person .person--tel .field__item, .node--type-person .person--email .field__item {
+.node--type-person .person--contact .person--tel .field__item, .node--type-person .person--contact .person--email .field__item {
   color: #E84708;
   text-decoration: none;
   font-size: 16px;
   line-height: 24px;
 }
 
-.node--type-person .person--tel .field__item::before, .node--type-person .person--email .field__item::before {
+.node--type-person .person--contact .person--tel .field__item::before, .node--type-person .person--contact .person--email .field__item::before {
   font-family: "FontAwesome";
   font-size: 18px;
   padding-right: 5px;
 }
 
-.node--type-person .person--tel .field__item::before {
+.node--type-person .person--contact .person--tel .field__item::before {
   content: "\f095";
 }
 
-.node--type-person .person--email .field__item::before {
+.node--type-person .person--contact .person--email .field__item::before {
   content: "\f0e0";
 }
 
