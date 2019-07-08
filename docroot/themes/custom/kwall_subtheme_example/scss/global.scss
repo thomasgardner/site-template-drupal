@@ -5,6 +5,7 @@
 @import 'variables';
 @import 'mixin';
 @import 'elements_theme';
+@import "global_style";
 @import 'header';
 @import 'footer';
 @import 'paragraphs.scss';
@@ -17,4 +18,3 @@
 @import "components/featured_news";
 @import "components/campus_map";
 @import "components/person";
-

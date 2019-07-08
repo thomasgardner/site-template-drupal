@@ -2286,6 +2286,10 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   color: #E84708;
 }
 
+.orange-text {
+  color: #E84708;
+}
+
 #site-branding a {
   text-decoration: none;
 }
@@ -3847,6 +3851,11 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   text-decoration: underline;
 }
 
+.view-map-view .geolocation-common-map {
+  padding-bottom: 4rem;
+  overflow: hidden;
+}
+
 @media (min-width: 992px) {
   .view-map-view .geolocation-common-map-locations {
     padding-right: 2rem;
@@ -3856,6 +3865,60 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
 .view-map-view .geolocation-common-map-locations-inner {
   max-height: 40rem;
   overflow-x: auto;
+}
+
+.view-map-view .geolocation-common-map-locations-inner::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #D62929;
+}
+
+.view-map-view .geolocation-common-map-locations .geolocation {
+  padding: 0.8rem 2rem 1.8rem;
+  border-top: solid 0.5rem #d8d8d8;
+}
+
+.view-map-view .geolocation-common-map-locations .geolocation .location-title {
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  margin: 0;
+}
+
+.view-map-view .geolocation-common-map-locations .geolocation .location-content {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+
+.view-map-view .geolocation-common-map-locations .geolocation .location-content p:last-child {
+  margin-bottom: 0;
+}
+
+.view-map-view .geolocation-common-map-locations .geolocation .location-content .read-more-link {
+  display: inline-block;
+  font-size: 1.4rem;
+  font-family: "helvetica", Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1.7rem;
+  color: #E84708;
+  transition: 0.2s color ease;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+.view-map-view .geolocation-common-map-locations .geolocation .location-content .read-more-link:hover, .view-map-view .geolocation-common-map-locations .geolocation .location-content .read-more-link:focus {
+  color: #E84708;
+  text-decoration: underline;
+}
+
+.view-map-view .geolocation-common-map-locations .geolocation:last-child {
+  border-bottom: solid 0.5rem #d8d8d8;
+}
+
+@media (max-width: 991px) {
+  .view-map-view .geolocation-common-map-container {
+    width: 100% !important;
+    margin-top: 3rem;
+  }
 }
 
 .node--type-person .person--name {
