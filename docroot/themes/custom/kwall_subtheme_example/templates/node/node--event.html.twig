@@ -91,7 +91,7 @@
           </div>
         </div>
         <div class="field-type-time">
-          {% if content.field_all_day_event %}
+          {% if content.field_all_day_event is not empty %}
             <div class="time">{{ 'Time:'|t }}</div>
             {{ content.field_all_day_event }}
           {% else %}
