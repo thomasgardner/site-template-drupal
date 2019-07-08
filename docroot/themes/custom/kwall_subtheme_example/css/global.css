@@ -3707,33 +3707,6 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   color: #005794;
 }
 
-.node--type-person .field--name-field-telephone-number .field__item {
-  color: #E84708;
-  text-decoration: none;
-  font-size: 16px;
-}
-
-.node--type-person .field--name-field-telephone-number .field__item::before {
-  content: "\f095";
-  font-family: "FontAwesome";
-  padding-right: 5px;
-}
-
-.node--type-person .field--name-field-email {
-  color: #E84708;
-  font-size: 16px;
-}
-
-.node--type-person .field--name-field-email .field__item::before {
-  content: "\f0e0";
-  font-family: "FontAwesome";
-  padding-right: 5px;
-}
-
-.node--type-person .field--name-field-media-image-6 img {
-  width: 100%;
-}
-
 .layout-hero-content {
   position: relative;
 }
@@ -3883,6 +3856,33 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
 .view-map-view .geolocation-common-map-locations-inner {
   max-height: 40rem;
   overflow-x: auto;
+}
+
+.node--type-person .field--name-field-telephone-number .field__item {
+  color: #E84708;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.node--type-person .field--name-field-telephone-number .field__item::before {
+  content: "\f095";
+  font-family: "FontAwesome";
+  padding-right: 5px;
+}
+
+.node--type-person .field--name-field-email {
+  color: #E84708;
+  font-size: 16px;
+}
+
+.node--type-person .field--name-field-email .field__item::before {
+  content: "\f0e0";
+  font-family: "FontAwesome";
+  padding-right: 5px;
+}
+
+.node--type-person .field--name-field-media-image-6 img {
+  width: 100%;
 }
 
 /*# sourceMappingURL=../sourcemaps/global.css.map */
