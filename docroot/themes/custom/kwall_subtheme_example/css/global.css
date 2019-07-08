@@ -3994,7 +3994,7 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
 }
 
 .view-events-calendar .calendar-calendar table tbody tr td .inner .contents .event-time span.start-date {
-  display: block;
+  display: inline-block;
 }
 
 .view-events-calendar .calendar-calendar table tbody tr td .inner .contents .event-content {
