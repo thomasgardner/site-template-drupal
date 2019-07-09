@@ -460,3 +460,27 @@
     }
   }
 }
+
+.paragraph--type--quicktabs {
+  margin-top: 30px;
+  .nav-tabs {
+    .nav-link {
+      background: $color-grey-lt;
+      text-decoration: none;
+      color: $color-body;
+      &.active {
+        background-color: $color-blue;
+        color: $color-white;
+      }
+    }
+  }
+}
+
+.paragraph--type--quicktab-item {
+  border: 1px solid #dee2e6;
+  border-top: 0;
+  margin-top: 0;
+  .field--name-field-body-formatted {
+    padding: 20px;
+  }
+}

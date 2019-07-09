@@ -3236,6 +3236,31 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   }
 }
 
+.paragraph--type--quicktabs {
+  margin-top: 30px;
+}
+
+.paragraph--type--quicktabs .nav-tabs .nav-link {
+  background: #eeeeee;
+  text-decoration: none;
+  color: #333;
+}
+
+.paragraph--type--quicktabs .nav-tabs .nav-link.active {
+  background-color: #005794;
+  color: #fff;
+}
+
+.paragraph--type--quicktab-item {
+  border: 1px solid #dee2e6;
+  border-top: 0;
+  margin-top: 0;
+}
+
+.paragraph--type--quicktab-item .field--name-field-body-formatted {
+  padding: 20px;
+}
+
 .region-sidebar-left .block {
   margin-bottom: 40px;
 }

@@ -1,8 +1,5 @@
 <?php
 
-use Drupal\node\NodeInterface;
-use Drupal\Core\Datetime\DrupalDateTime;
-
 /**
  * @file
  * KWALL Sub-Theme Example
@@ -10,15 +7,38 @@ use Drupal\Core\Datetime\DrupalDateTime;
  * Place your custom PHP code in this file.
  */
 
-function kwall_subtheme_example_preprocess_node(&$vars) {
-  $node = $vars['node'];
-  $yo = 'man';
-  if($node->getType() == 'event') {
-    if (!$node->get('field_start_date')->isEmpty()) {
-      $date = $node->get('field_start_date')->value;
-      $timestamp = strtotime($date);
-      $vars['eventMonth'] = \Drupal::service('date.formatter')->format($timestamp, 'custom', 'M', drupal_get_user_timezone());
-      $vars['eventDate'] = \Drupal::service('date.formatter')->format($timestamp, 'custom', 'j', drupal_get_user_timezone());
-    }
+/**
+ * Implements template_preprocess_paragraph.
+ */
+function kwall_subtheme_example_preprocess_paragraph(&$variables) {
+$yo = '';
+  switch ($variables['elements']['#paragraph']->getParagraphType()->id()) {
+
+    case 'quicktabs':
+      $tabHtml = '';
+      if (isset($variables['content']) && isset($variables['content']['field_quicktab'])) {
+        $tabs = $variables['content']['field_quicktab'];
+        foreach ($tabs as $key => $tab) {
+          if(is_numeric($key) && isset($tab['#paragraph'])) {
+            $para = $tab['#paragraph'];
+            if($para) {
+              if(!$para->get('field_title')->isEmpty()) {
+                $title = $para->get('field_title')->value;
+                if ($key == 0) {
+                  $tabHtml .= '<li class="nav-item"><a class="nav-link active" id="tab-' . $para->id() . '" data-toggle="tab" href="#content-tab-' . $para->id() . '" role="tab">' . $title . '</a></li>';
+                }else{
+                  $tabHtml .= '<li class="nav-item"><a class="nav-link" id="tab-' . $para->id() . '" data-toggle="tab" href="#content-tab-' . $para->id() . '" role="tab">' . $title . '</a></li>';
+                }
+              }
+            }
+          }
+        }
+        if($tabHtml) {
+          $tabHtml = '<ul class="nav nav-tabs" id="myTab" role="tablist">' . $tabHtml . '</ul>';
+        }
+        $variables['paragraphCustomQuicktabs'] = $tabHtml;
+      }
+      break;
   }
+
 }
