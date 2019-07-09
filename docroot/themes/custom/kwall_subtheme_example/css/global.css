@@ -3859,15 +3859,13 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
     flex-flow: row wrap;
     align-items: flex-end;
   }
-  @medi .js-form-type {
-    .path-news .view-display-id-page_1 .view-filters form .form--inline-textfield {
-      flex: 0 0 60%;
-      margin: 0;
-    }
-    .path-news .view-display-id-page_1 .view-filters form .form--inline-select {
-      flex: 0 0 25%;
-      margin: 0;
-    }
+  .path-news .view-display-id-page_1 .view-filters form .form--inline .js-form-type-textfield {
+    flex: 0 0 60%;
+    margin: 0;
+  }
+  .path-news .view-display-id-page_1 .view-filters form .form--inline .js-form-type-select {
+    flex: 0 0 25%;
+    margin: 0;
   }
   .path-news .view-display-id-page_1 .view-filters form .form--inline .js-form-wrapper {
     flex: 0 0 15%;
