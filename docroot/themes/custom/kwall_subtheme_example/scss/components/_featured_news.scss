@@ -12,14 +12,18 @@
   // Featured Articles
   > .view-content {
     padding-left: 2rem;
+
     > div {
       @include grid_black_shadow();
+
       &:first-child {
         margin-bottom: 2rem;
       }
+
       .featured-post-wrap {
         min-height: 21.5rem;
         position: relative;
+
         .content-wrap {
           @include grid_absolute_text();
         }
@@ -40,13 +44,15 @@
       margin: 0;
       color: $color-white;
     }
-    .post-body{
-      font-size:1.6rem;
+
+    .post-body {
+      font-size: 1.6rem;
       line-height: 2.4rem;
     }
 
     .post-link {
       line-height: 1;
+
       .read-more-link {
         @include read_more_link();
       }

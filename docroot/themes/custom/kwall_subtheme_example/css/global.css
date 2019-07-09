@@ -3853,6 +3853,30 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   text-decoration: underline;
 }
 
+.block-views-blockevent-view-block-3 .featured-events-grid .content-wrap {
+  margin: 0;
+}
+
+.block-views-blockevent-view-block-3 .featured-events-grid .content-wrap .featured-title a {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  color: #fff;
+}
+
+.block-views-blockevent-view-block-3 .featured-events-grid .content-wrap .featured-time .time {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.block-views-blockevent-view-block-3 .featured-events-grid .content-wrap .featured-body p {
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
+
+.block-views-blockevent-view-block-3 .date-wraps {
+  left: 0 !important;
+}
+
 .view-map-view .geolocation-common-map {
   padding-bottom: 4rem;
   overflow: hidden;
