@@ -48,6 +48,7 @@
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
+      {{ content.field_title }}
         {{ paragraphCustomQuicktabs|raw }}
       <div class="tab-content" id="myTabContent">
             {% for key, item in content.field_quicktab if key|first != '#' %}
