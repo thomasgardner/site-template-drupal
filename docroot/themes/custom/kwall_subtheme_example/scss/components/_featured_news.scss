@@ -1,61 +1,66 @@
 // Feature News
+.path-news {
+  .view-id-article_view.featured-news-grid {
 
-.view-id-article_view.featured-news-grid {
-
-  // Featured Attachment Block
-  > .attachment {
-    .featured-post-wrap {
-      padding: 2rem;
+    // Featured Attachment Block
+    > .attachment {
+      .featured-post-wrap {
+        padding: 2rem;
+      }
     }
-  }
 
-  // Featured Articles
-  > .view-content {
-    padding-left: 2rem;
+    // Featured Articles
+    > .view-content {
+      padding-left: 2rem;
 
-    > div {
-      @include grid_black_shadow();
+      > div {
+        @include grid_black_shadow();
 
-      &:first-child {
-        margin-bottom: 2rem;
+        &:first-child {
+          margin-bottom: 2rem;
+        }
+
+        .featured-post-wrap {
+          min-height: 21.5rem;
+          position: relative;
+
+          .content-wrap {
+            @include grid_absolute_text();
+          }
+        }
+      }
+    }
+
+    .featured-post-wrap {
+      .post-title {
+        a {
+          color: $color-white;
+          font-size: 2rem;
+          line-height: 1.2;
+        }
       }
 
-      .featured-post-wrap {
-        min-height: 21.5rem;
-        position: relative;
+      .post-date {
+        margin: 0;
+        color: $color-white;
+      }
 
-        .content-wrap {
-          @include grid_absolute_text();
+      .post-body {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+      }
+
+      .post-link {
+        line-height: 1;
+
+        .read-more-link {
+          @include read_more_link();
         }
       }
     }
   }
 
-  .featured-post-wrap {
-    .post-title {
-      a {
-        color: $color-white;
-        font-size: 2rem;
-        line-height: 1.2;
-      }
-    }
+  .block-views-blockarticle-view-block-1 {
 
-    .post-date {
-      margin: 0;
-      color: $color-white;
-    }
-
-    .post-body {
-      font-size: 1.6rem;
-      line-height: 2.4rem;
-    }
-
-    .post-link {
-      line-height: 1;
-
-      .read-more-link {
-        @include read_more_link();
-      }
-    }
   }
 }

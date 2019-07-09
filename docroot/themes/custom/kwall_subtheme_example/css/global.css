@@ -3765,19 +3765,19 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   margin: 0;
 }
 
-.view-id-article_view.featured-news-grid > .attachment .featured-post-wrap {
+.path-news .view-id-article_view.featured-news-grid > .attachment .featured-post-wrap {
   padding: 2rem;
 }
 
-.view-id-article_view.featured-news-grid > .view-content {
+.path-news .view-id-article_view.featured-news-grid > .view-content {
   padding-left: 2rem;
 }
 
-.view-id-article_view.featured-news-grid > .view-content > div {
+.path-news .view-id-article_view.featured-news-grid > .view-content > div {
   position: relative;
 }
 
-.view-id-article_view.featured-news-grid > .view-content > div:before {
+.path-news .view-id-article_view.featured-news-grid > .view-content > div:before {
   content: '';
   display: block;
   position: absolute;
@@ -3796,16 +3796,16 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   /* IE6-9 */
 }
 
-.view-id-article_view.featured-news-grid > .view-content > div:first-child {
+.path-news .view-id-article_view.featured-news-grid > .view-content > div:first-child {
   margin-bottom: 2rem;
 }
 
-.view-id-article_view.featured-news-grid > .view-content > div .featured-post-wrap {
+.path-news .view-id-article_view.featured-news-grid > .view-content > div .featured-post-wrap {
   min-height: 21.5rem;
   position: relative;
 }
 
-.view-id-article_view.featured-news-grid > .view-content > div .featured-post-wrap .content-wrap {
+.path-news .view-id-article_view.featured-news-grid > .view-content > div .featured-post-wrap .content-wrap {
   box-sizing: border-box;
   position: absolute;
   bottom: 0;
@@ -3816,27 +3816,27 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   color: #fff;
 }
 
-.view-id-article_view.featured-news-grid .featured-post-wrap .post-title a {
+.path-news .view-id-article_view.featured-news-grid .featured-post-wrap .post-title a {
   color: #fff;
   font-size: 2rem;
   line-height: 1.2;
 }
 
-.view-id-article_view.featured-news-grid .featured-post-wrap .post-date {
+.path-news .view-id-article_view.featured-news-grid .featured-post-wrap .post-date {
   margin: 0;
   color: #fff;
 }
 
-.view-id-article_view.featured-news-grid .featured-post-wrap .post-body {
+.path-news .view-id-article_view.featured-news-grid .featured-post-wrap .post-body {
   font-size: 1.6rem;
   line-height: 2.4rem;
 }
 
-.view-id-article_view.featured-news-grid .featured-post-wrap .post-link {
+.path-news .view-id-article_view.featured-news-grid .featured-post-wrap .post-link {
   line-height: 1;
 }
 
-.view-id-article_view.featured-news-grid .featured-post-wrap .post-link .read-more-link {
+.path-news .view-id-article_view.featured-news-grid .featured-post-wrap .post-link .read-more-link {
   display: inline-block;
   font-size: 1.4rem;
   font-family: "helvetica", Arial, sans-serif;
@@ -3848,32 +3848,32 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   text-decoration: none;
 }
 
-.view-id-article_view.featured-news-grid .featured-post-wrap .post-link .read-more-link:hover, .view-id-article_view.featured-news-grid .featured-post-wrap .post-link .read-more-link:focus {
+.path-news .view-id-article_view.featured-news-grid .featured-post-wrap .post-link .read-more-link:hover, .path-news .view-id-article_view.featured-news-grid .featured-post-wrap .post-link .read-more-link:focus {
   color: #E84708;
   text-decoration: underline;
 }
 
-.block-views-blockevent-view-block-3 .featured-events-grid .content-wrap {
+.path-events .block-views-blockevent-view-block-3 .featured-events-grid .content-wrap {
   margin: 0;
 }
 
-.block-views-blockevent-view-block-3 .featured-events-grid .content-wrap .featured-title a {
+.path-events .block-views-blockevent-view-block-3 .featured-events-grid .content-wrap .featured-title a {
   font-size: 2rem;
   line-height: 2.4rem;
   color: #fff;
 }
 
-.block-views-blockevent-view-block-3 .featured-events-grid .content-wrap .featured-time .time {
+.path-events .block-views-blockevent-view-block-3 .featured-events-grid .content-wrap .featured-time .time {
   font-size: 1.4rem;
   font-weight: bold;
 }
 
-.block-views-blockevent-view-block-3 .featured-events-grid .content-wrap .featured-body p {
+.path-events .block-views-blockevent-view-block-3 .featured-events-grid .content-wrap .featured-body p {
   font-size: 1.6rem;
   line-height: 2rem;
 }
 
-.block-views-blockevent-view-block-3 .date-wraps {
+.path-events .block-views-blockevent-view-block-3 .date-wraps {
   left: 0 !important;
 }
 
