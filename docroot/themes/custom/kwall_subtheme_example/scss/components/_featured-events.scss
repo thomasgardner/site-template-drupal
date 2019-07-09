@@ -1,42 +1,44 @@
 .path-events {
   .block-views-blockevent-view-block-3 {
     .featured-events-grid {
-      .content-wrap {
-        margin: 0;
+      &.view-display-id-block_3 {
+        .content-wrap {
+          margin: 0;
 
-        .featured {
-          &-title {
-            a {
-              font-size: 2rem;
-              line-height: 2.4rem;
-              color: $color-white;
-            }
-
-          }
-
-          &-time {
-            .time {
-              font-size: 1.4rem;
-              font-weight: bold;
+          .featured {
+            &-title {
+              a {
+                font-size: 2rem;
+                line-height: 2.4rem;
+                color: $color-white;
+              }
 
             }
 
-          }
+            &-time {
+              .time {
+                font-size: 1.4rem;
+                font-weight: bold;
 
-          &-body {
-            p {
-              font-size: 1.6rem;
-              line-height: 2rem;
+              }
+
             }
 
+            &-body {
+              p {
+                font-size: 1.6rem;
+                line-height: 2rem;
+              }
+
+            }
           }
         }
+
+        .date-wraps {
+          left: 0 !important;
+        }
       }
-
     }
 
-    .date-wraps {
-      left: 0 !important;
-    }
   }
 }
