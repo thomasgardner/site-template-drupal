@@ -3816,18 +3816,20 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   color: #fff;
 }
 
-.view-id-article_view.featured-news-grid .featured-post-wrap .post-title {
-  font-size: 2rem;
-  line-height: 1.2;
-}
-
 .view-id-article_view.featured-news-grid .featured-post-wrap .post-title a {
   color: #fff;
+  font-size: 2rem;
+  line-height: 1.2;
 }
 
 .view-id-article_view.featured-news-grid .featured-post-wrap .post-date {
   margin: 0;
   color: #fff;
+}
+
+.view-id-article_view.featured-news-grid .featured-post-wrap .post-body {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
 }
 
 .view-id-article_view.featured-news-grid .featured-post-wrap .post-link {

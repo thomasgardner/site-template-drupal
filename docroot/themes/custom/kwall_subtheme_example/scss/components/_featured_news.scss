@@ -29,16 +29,20 @@
 
   .featured-post-wrap {
     .post-title {
-      font-size: 2rem;
-      line-height: 1.2;
       a {
         color: $color-white;
+        font-size: 2rem;
+        line-height: 1.2;
       }
     }
 
     .post-date {
       margin: 0;
       color: $color-white;
+    }
+    .post-body{
+      font-size:1.6rem;
+      line-height: 2.4rem;
     }
 
     .post-link {
