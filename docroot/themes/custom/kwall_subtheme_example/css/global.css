@@ -3237,7 +3237,13 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
 }
 
 .paragraph--type--quicktabs {
-  margin-top: 30px;
+  margin-top: 0;
+}
+
+.paragraph--type--quicktabs .field--name-field-title {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .paragraph--type--quicktabs .nav-tabs .nav-link {

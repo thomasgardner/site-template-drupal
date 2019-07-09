@@ -462,7 +462,12 @@
 }
 
 .paragraph--type--quicktabs {
-  margin-top: 30px;
+  margin-top: 0;
+  .field--name-field-title {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
   .nav-tabs {
     .nav-link {
       background: $color-grey-lt;
