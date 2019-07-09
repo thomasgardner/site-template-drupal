@@ -3853,6 +3853,27 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   text-decoration: underline;
 }
 
+@media (min-width: 768px) {
+  .path-news .view-display-id-page_1 .view-filters form .form--inline {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-end;
+  }
+  @medi .js-form-type {
+    .path-news .view-display-id-page_1 .view-filters form .form--inline-textfield {
+      flex: 0 0 60%;
+      margin: 0;
+    }
+    .path-news .view-display-id-page_1 .view-filters form .form--inline-select {
+      flex: 0 0 25%;
+      margin: 0;
+    }
+  }
+  .path-news .view-display-id-page_1 .view-filters form .form--inline .js-form-wrapper {
+    flex: 0 0 15%;
+  }
+}
+
 .path-events .block-views-blockevent-view-block-3 .featured-events-grid.view-display-id-block_3 .content-wrap {
   margin: 0;
 }

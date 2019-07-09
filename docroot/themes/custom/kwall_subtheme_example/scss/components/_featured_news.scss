@@ -60,7 +60,36 @@
     }
   }
 
-  .block-views-blockarticle-view-block-1 {
+  .view-display-id-page_1 {
+    // Search form
+    .view-filters {
+      form {
+        @media #{$tablet-min} {
+          .form--inline {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: flex-end;
+            @medi .js-form-type {
+              &-textfield {
+                flex: 0 0 60%;
+                margin: 0;
 
+              }
+
+              &-select {
+                flex: 0 0 25%;
+                margin: 0;
+
+              }
+            }
+            .js-form-wrapper {
+              flex: 0 0 15%;
+
+            }
+          }
+
+        }
+      }
+    }
   }
 }
