@@ -1,0 +1,48 @@
+.node--type-event {
+  .event-info {
+    .date {
+      float: left;
+      margin-right: 40px;
+    }
+
+    .event-location {
+      float: left;
+      font-size: 18px;
+      line-height: 28px;
+
+      label {
+        font-weight: normal;
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .event-social {
+    .sharethis-wrapper {
+      span {
+        &:not(.st_sharethis_large) {
+          .stButton {
+            display: none !important;
+          }
+        }
+
+        &.st_fblike_large {
+          display: none;
+        }
+        &.st_sharethis_large {
+          .stButton {
+            display: flex !important;
+            align-items: center;
+            &:after {
+              content: 'share';
+              color: $color-orange;
+              margin-left: 5px;
+              font-size: 14px;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+}
