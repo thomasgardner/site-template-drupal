@@ -4150,7 +4150,6 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
 
 .node--type-event .event-social .sharethis-wrapper span.st_sharethis_large .stButton {
   display: flex !important;
-  align-items: center;
   float: right;
 }
 
@@ -4164,6 +4163,12 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
 
 .node--type-event .event-social .sharethis-wrapper span.st_sharethis_large .stButton .stLarge {
   background-image: url(../images/share.png) !important;
+  background-position: initial;
+  opacity: initial;
+  background-repeat: no-repeat;
+  margin-right: 5px;
+  width: 15px;
+  height: 18px;
 }
 
 /*# sourceMappingURL=../sourcemaps/global.css.map */

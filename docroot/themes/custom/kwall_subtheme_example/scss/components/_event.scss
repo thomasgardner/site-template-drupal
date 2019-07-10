@@ -32,7 +32,6 @@
         &.st_sharethis_large {
           .stButton {
             display: flex !important;
-            align-items: center;
             float: right;
             &:after {
               content: 'share';
@@ -43,6 +42,12 @@
             }
             .stLarge {
               background-image: url(../images/share.png) !important;
+              background-position: initial;
+              opacity: initial;
+              background-repeat: no-repeat;
+              margin-right: 5px;
+              width: 15px;
+              height: 18px;
             }
           }
         }
