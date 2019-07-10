@@ -4124,36 +4124,40 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   float: right;
 }
 
-.node--type-event .event-info .date {
+.node--type-event .event {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.node--type-event .event .event-info .date {
   float: left;
   margin-right: 40px;
 }
 
-.node--type-event .event-info .event-location {
+.node--type-event .event .event-info .event-location {
   float: left;
   font-size: 18px;
-  line-height: 28px;
 }
 
-.node--type-event .event-info .event-location .label {
+.node--type-event .event .event-info .event-location .label {
   font-weight: normal;
   margin-right: 5px;
 }
 
-.node--type-event .event-social .sharethis-wrapper span:not(.st_sharethis_large) .stButton {
+.node--type-event .event .event-social .sharethis-wrapper span:not(.st_sharethis_large) .stButton {
   display: none !important;
 }
 
-.node--type-event .event-social .sharethis-wrapper span.st_fblike_large {
+.node--type-event .event .event-social .sharethis-wrapper span.st_fblike_large {
   display: none;
 }
 
-.node--type-event .event-social .sharethis-wrapper span.st_sharethis_large .stButton {
+.node--type-event .event .event-social .sharethis-wrapper span.st_sharethis_large .stButton {
   display: flex !important;
   float: right;
 }
 
-.node--type-event .event-social .sharethis-wrapper span.st_sharethis_large .stButton:after {
+.node--type-event .event .event-social .sharethis-wrapper span.st_sharethis_large .stButton:after {
   content: 'share';
   color: #E84708;
   margin-left: 5px;
@@ -4161,7 +4165,7 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   font-weight: bold;
 }
 
-.node--type-event .event-social .sharethis-wrapper span.st_sharethis_large .stButton .stLarge {
+.node--type-event .event .event-social .sharethis-wrapper span.st_sharethis_large .stButton .stLarge {
   background-image: url(../images/share.png) !important;
   background-position: initial;
   opacity: initial;
@@ -4169,6 +4173,10 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   margin-right: 5px;
   width: 15px;
   height: 18px;
+}
+
+.node--type-event .field--name-field-media-image-8 {
+  margin-bottom: 20px;
 }
 
 /*# sourceMappingURL=../sourcemaps/global.css.map */

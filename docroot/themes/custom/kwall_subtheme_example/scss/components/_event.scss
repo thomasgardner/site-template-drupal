@@ -1,57 +1,67 @@
 .node--type-event {
-  .event-info {
-    .date {
-      float: left;
-      margin-right: 40px;
+  .event {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    .event-info {
+      .date {
+        float: left;
+        margin-right: 40px;
+      }
+
+      .event-location {
+        float: left;
+        font-size: 18px;
+
+        .label {
+          font-weight: normal;
+          margin-right: 5px;
+        }
+      }
     }
 
-    .event-location {
-      float: left;
-      font-size: 18px;
-      line-height: 28px;
+    .event-social {
+      .sharethis-wrapper {
+        span {
+          &:not(.st_sharethis_large) {
+            .stButton {
+              display: none !important;
+            }
+          }
 
-      .label {
-        font-weight: normal;
-        margin-right: 5px;
+          &.st_fblike_large {
+            display: none;
+          }
+
+          &.st_sharethis_large {
+            .stButton {
+              display: flex !important;
+              float: right;
+
+              &:after {
+                content: 'share';
+                color: $color-orange;
+                margin-left: 5px;
+                font-size: 14px;
+                font-weight: bold;
+              }
+
+              .stLarge {
+                background-image: url(../images/share.png) !important;
+                background-position: initial;
+                opacity: initial;
+                background-repeat: no-repeat;
+                margin-right: 5px;
+                width: 15px;
+                height: 18px;
+              }
+            }
+          }
+        }
       }
     }
   }
-
-  .event-social {
-    .sharethis-wrapper {
-      span {
-        &:not(.st_sharethis_large) {
-          .stButton {
-            display: none !important;
-          }
-        }
-
-        &.st_fblike_large {
-          display: none;
-        }
-        &.st_sharethis_large {
-          .stButton {
-            display: flex !important;
-            float: right;
-            &:after {
-              content: 'share';
-              color: $color-orange;
-              margin-left: 5px;
-              font-size: 14px;
-              font-weight: bold;
-            }
-            .stLarge {
-              background-image: url(../images/share.png) !important;
-              background-position: initial;
-              opacity: initial;
-              background-repeat: no-repeat;
-              margin-right: 5px;
-              width: 15px;
-              height: 18px;
-            }
-          }
-        }
-      }
-    }
+  .field--name-field-media-image-8 {
+    margin-bottom: 20px;
   }
 }
