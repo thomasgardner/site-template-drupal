@@ -4290,6 +4290,11 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   margin-bottom: 30px;
 }
 
+.node--type-event .field--name-field-event-category {
+  display: flex;
+  flex-flow: row wrap;
+}
+
 .node--type-event .field--name-field-event-category .field__label {
   margin-right: 10px;
   font-size: 20px;

@@ -82,6 +82,8 @@
     margin-bottom: 30px;
   }
   .field--name-field-event-category {
+    display: flex;
+    flex-flow: row wrap;
     .field__label {
       margin-right: 10px;
       font-size: 20px;
