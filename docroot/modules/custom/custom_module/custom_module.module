@@ -222,12 +222,17 @@ WHERE ((paragraphs_item_field_data.id = '" . $pid . "')) AND ((paragraphs_item_f
 }
 
 function custom_module_entity_extra_field_info() {
-  $yo = '';
   $extra_field = [];
 
   $extra_field['node']['event']['display']['extra_date_field'] = [
-    'label' => t('Extra date field'),
-    'description' => t('Extra date field.'),
+    'label' => t('Event Date (Custom Extra Field)'),
+    'description' => t('Event Date we need for different place'),
+    'weight' => 100,
+    'visible' => TRUE,
+  ];
+  $extra_field['node']['event']['display']['event_time'] = [
+    'label' => t('Event Time (Custom Event Time Field)'),
+    'description' => t('Custom Event Time Field.'),
     'weight' => 100,
     'visible' => TRUE,
   ];
@@ -239,16 +244,47 @@ function custom_module_entity_extra_field_info() {
 function custom_module_node_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
   if ($view_mode == 'full' && $entity->getType() == 'event') {
     if ($display->getComponent('extra_date_field')) {
+
       $date = $entity->get('field_start_date')->value;
+
       $timestamp = strtotime($date);
+
       $date_month = \Drupal::service('date.formatter')
         ->format($timestamp, 'custom', 'M', drupal_get_user_timezone());
+
       $date_day = \Drupal::service('date.formatter')
         ->format($timestamp, 'custom', 'j', drupal_get_user_timezone());
+
       $build['extra_date_field'] = [
         '#type' => 'markup',
         '#markup' => '<div class="date"> <span class="date-month">' . $date_month . '</span> <span class="date-day">' . $date_day . '</span> </div>',
       ];
+    }
+
+    if ($display->getComponent('event_time')) {
+      if ($entity->get('field_all_day_event')->value != 0) {
+        $build['event_time'] = [
+          '#type' => 'markup',
+          '#markup' => '<div class="time"><div class="label">Time:</div>' . 'ALL DAY' . '</div>',
+        ];
+      }
+      else {
+        //Start time
+        $start_time = $entity->get('field_start_date')->value;
+        $start_time = \Drupal::service('date.formatter')
+          ->format(strtotime($start_time), 'custom', 'g:ia', drupal_get_user_timezone());
+
+        //End time
+        $end_time = $entity->get('field_end_date')->value;
+        $end_time = \Drupal::service('date.formatter')
+          ->format(strtotime($end_time), 'custom', 'g:ia', drupal_get_user_timezone());
+
+
+        $build['event_time'] = [
+          '#type' => 'markup',
+          '#markup' => '<div class="time"><div class="label">Time:</div>' . $start_time . '-' . $end_time . '</div>',
+        ];
+      }
     }
   }
 }
