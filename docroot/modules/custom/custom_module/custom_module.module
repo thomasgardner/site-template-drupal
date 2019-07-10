@@ -288,3 +288,35 @@ function custom_module_node_view(array &$build, EntityInterface $entity, EntityV
     }
   }
 }
+
+/**
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ * @param $form_id
+ * implement hook_form_formid_alter
+ */
+
+// Add Class if we have values in Exposed form
+function custom_module_form_views_exposed_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  $view = $form_state->getStorage('view');
+  if ($view) {
+    $inputs = $form_state->getUserInput();
+    if ($inputs) {
+      $flag = FALSE;
+      foreach ($inputs as $key => $input) {
+        if (isset($form[$key]) && isset($form[$key]['#default_value']) && $form[$key]['#default_value'] != $input) {
+          $flag = TRUE;
+          break;
+        }
+      }
+      if ($flag) {
+        $form['#attributes']['class'][] = 'form-values-exist';
+      }
+    }
+    // Check if View Ajax Enabled then make sure its reload current page
+    if($view['view']->id() == 'faqs' && $view['view']->current_display == 'default' && $view['view']->ajaxEnabled()) {
+      $currPathAlias = \Drupal::service('path.alias_manager')->getAliasByPath('/node/87');
+      $form['#action'] = $currPathAlias;
+    }
+  }
+}

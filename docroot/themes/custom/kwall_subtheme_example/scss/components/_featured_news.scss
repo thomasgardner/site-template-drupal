@@ -1,95 +1,60 @@
 // Feature News
-.path-news {
-  .view-id-article_view.featured-news-grid {
-
-    // Featured Attachment Block
-    > .attachment {
-      .featured-post-wrap {
-        padding: 2rem;
-      }
-    }
-
-    // Featured Articles
-    > .view-content {
-      padding-left: 2rem;
-
-      > div {
-        @include grid_black_shadow();
-
-        &:first-child {
-          margin-bottom: 2rem;
-        }
-
-        .featured-post-wrap {
-          min-height: 21.5rem;
-          position: relative;
-
-          .content-wrap {
-            @include grid_absolute_text();
-          }
-        }
-      }
-    }
-
+.view-id-article_view.featured-news-grid {
+  // Featured Attachment Block
+  > .attachment {
     .featured-post-wrap {
-      .post-title {
-        a {
-          color: $color-white;
-          font-size: 2rem;
-          line-height: 1.2;
-        }
+      padding: 2rem;
+    }
+  }
+
+  // Featured Articles
+  > .view-content {
+    padding-left: 2rem;
+
+    > div {
+      @include grid_black_shadow();
+
+      &:first-child {
+        margin-bottom: 2rem;
       }
 
-      .post-date {
-        margin: 0;
-        color: $color-white;
-      }
+      .featured-post-wrap {
+        min-height: 21.5rem;
+        position: relative;
 
-      .post-body {
-        font-size: 1.6rem;
-        line-height: 2.4rem;
-      }
-
-      .post-link {
-        line-height: 1;
-
-        .read-more-link {
-          @include read_more_link();
+        .content-wrap {
+          @include grid_absolute_text();
         }
       }
     }
   }
 
-  .view-display-id-page_1 {
-    // Search form
-    .view-filters {
-      form {
-        @media #{$tablet-min} {
-          .form--inline {
-            display: flex;
-            flex-flow: row wrap;
-            align-items: flex-end;
-             .js-form-type {
-              &-textfield {
-                flex: 0 0 60%;
-                margin: 0;
+  .featured-post-wrap {
+    .post-title {
+      a {
+        color: $color-white;
+        font-size: 2rem;
+        line-height: 1.2;
+      }
+    }
 
-              }
+    .post-date {
+      margin: 0;
+      color: $color-white;
+    }
 
-              &-select {
-                flex: 0 0 25%;
-                margin: 0;
+    .post-body {
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+    }
 
-              }
-            }
-            .js-form-wrapper {
-              flex: 0 0 15%;
+    .post-link {
+      line-height: 1;
 
-            }
-          }
-
-        }
+      .read-more-link {
+        @include read_more_link();
       }
     }
   }
 }
+

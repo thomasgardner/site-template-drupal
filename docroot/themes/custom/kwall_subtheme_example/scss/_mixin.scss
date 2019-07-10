@@ -63,14 +63,14 @@
     height: 80%;
     width: 100%;
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+1,1+100 */
-    background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 1%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 1%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 1%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#000000', GradientType=0); /* IE6-9 */
   }
 }
 
-@mixin grid_absolute_text($color: $color-white, $padding: 2rem){
+@mixin grid_absolute_text($color: $color-white, $padding: 2rem) {
   box-sizing: border-box;
   position: absolute;
   bottom: 0;
@@ -81,13 +81,105 @@
   color: $color;
 }
 
-@mixin exposed_filter_form($bg: $color-grey-bg){
+@mixin exposedForm($bg: $color-grey-bg) {
   background: $bg;
   padding: 2rem 2.5rem 3rem;
+  margin-bottom: 3rem;
   .views-exposed-form {
+    padding: 0;
 
-    .form-actions {
-      margin: 0;
+    .form--inline {
+      @media #{$tablet-min} {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+      }
+
+      .form {
+        &-item {
+          padding-right: 2rem;
+          margin: 0 0 2rem;
+          @media #{$tablet-min} {
+            margin-bottom: 0;
+            flex-basis: calc((100% - 13rem) / 2);
+            max-width: calc((100% - 13rem) / 2);
+          }
+
+          &.form-type-textfield {
+            @media (min-width: $screen-md-min) {
+              max-width: 65rem;
+              flex: 0 0 65rem;
+            }
+          }
+          &.form-type-select {
+            @media (min-width: $screen-md-min) {
+              flex: 0 0 34rem;
+              max-width: 34rem;
+            }
+          }
+        }
+        &-actions {
+          margin: 0;
+          display: block;
+          text-align: center;
+          width: auto;
+          @media #{$tablet-min} {
+            position: relative;
+            display: inline-flex;
+            margin: 2.5rem 0 0;
+            max-height: 50px;
+            float: right;
+            input[data-drupal-selector="edit-submit-article-view"] {
+              padding: 1.15rem 4rem;
+              max-height: 50px;
+            }
+
+            input[data-drupal-selector="edit-reset"] {
+              background: none;
+              order: -1;
+              border: none;
+              color: $color-blue;
+              margin: 0;
+              display: none;
+              padding: 0 2rem 0 0;
+            }
+          }
+        }
+      }
+    }
+
+    &.form-values-exist {
+      .form--inline {
+        .form-item {
+          @media #{$tablet-min} {
+            flex-grow: 1;
+            flex-shrink: 0;
+            flex-basis: calc((100% - 19.3rem) / 2);
+            max-width: calc((100% - 19.3rem) / 2);
+          }
+          &.form-type-textfield {
+            @media (min-width: $screen-md-min) {
+              max-width: 60rem;
+              flex: 0 0 60rem;
+            }
+          }
+          &.form-type-select {
+            @media (min-width: $screen-md-min) {
+              flex: 0 0 32.7rem;
+              max-width: 32.7rem;
+            }
+          }
+        }
+
+        .form-actions {
+          input[data-drupal-selector="edit-reset"] {
+            display: block;
+          }
+
+          @media #{$tablet-min} {
+          }
+        }
+      }
     }
   }
 }

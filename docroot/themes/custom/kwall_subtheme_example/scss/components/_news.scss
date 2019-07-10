@@ -1,6 +1,26 @@
 
+.path-news {
+  .layout-container .layout-center {
+    padding-left: 10px;
+  }
+}
+
 .view-display-id-page_1 {
   .view-filters {
-    @include exposed_filter_form();
+    @include exposedForm();
+  }
+  .view-content {
+    .post-wrap {
+      .content-wrap {
+        padding-left: 0;
+        .post {
+          &-link {
+            a {
+              @include read_more_link($color-orange);
+            }
+          }
+        }
+      }
+    }
   }
 }
