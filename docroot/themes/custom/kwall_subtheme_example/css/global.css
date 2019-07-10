@@ -4135,7 +4135,6 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
 }
 
 .node--type-event .event .event-info .event-location {
-  float: left;
   font-size: 18px;
 }
 
