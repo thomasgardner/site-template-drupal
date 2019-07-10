@@ -4126,7 +4126,7 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
 
 .node--type-event .event {
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .node--type-event .event .event-info .date {
@@ -4142,6 +4142,15 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
 .node--type-event .event .event-info .event-location .label {
   font-weight: normal;
   margin-right: 5px;
+}
+
+.node--type-event .event .event-info .event-location .location .field--name-field-address .address br {
+  display: none;
+}
+
+.node--type-event .event .event-info .event-location .location .field--name-field-address .address .postal-code:after, .node--type-event .event .event-info .event-location .location .field--name-field-address .address .organization:after, .node--type-event .event .event-info .event-location .location .field--name-field-address .address .address-line1:after, .node--type-event .event .event-info .event-location .location .field--name-field-address .address .address-line2:after {
+  content: ',';
+  padding-left: 2px;
 }
 
 .node--type-event .event .event-social .sharethis-wrapper span:not(.st_sharethis_large) .stButton {

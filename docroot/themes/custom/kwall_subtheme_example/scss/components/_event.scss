@@ -1,7 +1,7 @@
 .node--type-event {
   .event {
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 
     .event-info {
       .date {
@@ -16,6 +16,21 @@
         .label {
           font-weight: normal;
           margin-right: 5px;
+        }
+        .location {
+          .field--name-field-address {
+            .address {
+              br {
+                display: none;
+              }
+              .postal-code, .organization, .address-line1, .address-line2 {
+                &:after {
+                  content: ',';
+                  padding-left: 2px;
+                }
+              }
+            }
+          }
         }
       }
     }
