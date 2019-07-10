@@ -4135,7 +4135,7 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   line-height: 28px;
 }
 
-.node--type-event .event-info .event-location label {
+.node--type-event .event-info .event-location .label {
   font-weight: normal;
   margin-right: 5px;
 }
@@ -4151,6 +4151,7 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
 .node--type-event .event-social .sharethis-wrapper span.st_sharethis_large .stButton {
   display: flex !important;
   align-items: center;
+  float: right;
 }
 
 .node--type-event .event-social .sharethis-wrapper span.st_sharethis_large .stButton:after {
@@ -4159,6 +4160,10 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   margin-left: 5px;
   font-size: 14px;
   font-weight: bold;
+}
+
+.node--type-event .event-social .sharethis-wrapper span.st_sharethis_large .stButton .stLarge {
+  background-image: url(../images/share.png) !important;
 }
 
 /*# sourceMappingURL=../sourcemaps/global.css.map */

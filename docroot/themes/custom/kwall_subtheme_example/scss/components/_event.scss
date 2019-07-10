@@ -10,7 +10,7 @@
       font-size: 18px;
       line-height: 28px;
 
-      label {
+      .label {
         font-weight: normal;
         margin-right: 5px;
       }
@@ -33,12 +33,16 @@
           .stButton {
             display: flex !important;
             align-items: center;
+            float: right;
             &:after {
               content: 'share';
               color: $color-orange;
               margin-left: 5px;
               font-size: 14px;
               font-weight: bold;
+            }
+            .stLarge {
+              background-image: url(../images/share.png) !important;
             }
           }
         }
