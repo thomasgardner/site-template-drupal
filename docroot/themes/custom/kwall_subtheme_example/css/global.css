@@ -3965,6 +3965,7 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#000000', GradientType=0);
   /* IE6-9 */
+  z-index: 9;
 }
 
 .view-id-article_view.featured-news-grid > .view-content > div:first-child {
@@ -4024,28 +4025,125 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   text-decoration: underline;
 }
 
-.path-events .block-views-blockevent-view-block-3 .featured-events-grid.view-display-id-block_3 .content-wrap {
-  margin: 0;
+.featured-events-grid.view-display-id-block_3 > .attachment {
+  min-height: 21.5rem;
+  height: auto;
+  margin: 0 0 20px;
 }
 
-.path-events .block-views-blockevent-view-block-3 .featured-events-grid.view-display-id-block_3 .content-wrap .featured-title a {
-  font-size: 2rem;
-  line-height: 2.4rem;
+@media (min-width: 992px) {
+  .featured-events-grid.view-display-id-block_3 > .attachment {
+    margin-bottom: 0;
+  }
+}
+
+.featured-events-grid.view-display-id-block_3 > .attachment .featured-post-wrap {
+  padding: 2rem;
+}
+
+@media (min-width: 992px) {
+  .featured-events-grid.view-display-id-block_3 > .view-content {
+    padding-left: 2rem;
+  }
+}
+
+.featured-events-grid.view-display-id-block_3 > .view-content > div {
+  position: relative;
+}
+
+.featured-events-grid.view-display-id-block_3 > .view-content > div:before {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 80%;
+  width: 100%;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+1,1+100 */
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 1%, black 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 1%, black 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 1%, black 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#000000', GradientType=0);
+  /* IE6-9 */
+  z-index: 9;
+}
+
+.featured-events-grid.view-display-id-block_3 > .view-content > div:first-child {
+  margin-bottom: 2rem;
+}
+
+.featured-events-grid.view-display-id-block_3 > .view-content > div .featured-post-wrap {
+  min-height: 21.5rem;
+  position: relative;
+}
+
+.featured-events-grid.view-display-id-block_3 > .view-content > div .featured-post-wrap .content-wrap {
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  z-index: 5;
   color: #fff;
 }
 
-.path-events .block-views-blockevent-view-block-3 .featured-events-grid.view-display-id-block_3 .content-wrap .featured-time .time {
-  font-size: 1.4rem;
-  font-weight: bold;
+.featured-events-grid.view-display-id-block_3 .featured-event-wrap {
+  position: relative;
 }
 
-.path-events .block-views-blockevent-view-block-3 .featured-events-grid.view-display-id-block_3 .content-wrap .featured-body p {
+.featured-events-grid.view-display-id-block_3 .featured-event-wrap .content-wrap {
+  margin-left: 0;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  z-index: 5;
+  color: #fff;
+  z-index: 10;
+}
+
+.featured-events-grid.view-display-id-block_3 .featured-event-wrap .content-wrap .title a, .featured-events-grid.view-display-id-block_3 .featured-event-wrap .content-wrap .featured-title a {
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.featured-events-grid.view-display-id-block_3 .featured-event-wrap .content-wrap .time, .featured-events-grid.view-display-id-block_3 .featured-event-wrap .content-wrap .featured-time {
+  margin: 0;
+  color: #fff;
+}
+
+.featured-events-grid.view-display-id-block_3 .featured-event-wrap .content-wrap .featured-body {
   font-size: 1.6rem;
-  line-height: 2rem;
+  line-height: 2.4rem;
 }
 
-.path-events .block-views-blockevent-view-block-3 .featured-events-grid.view-display-id-block_3 .date-wraps {
-  left: 0 !important;
+.featured-events-grid.view-display-id-block_3 .featured-event-wrap .content-wrap .link {
+  line-height: 1;
+}
+
+.featured-events-grid.view-display-id-block_3 .featured-event-wrap .content-wrap .link .read-more-link {
+  display: inline-block;
+  font-size: 1.4rem;
+  font-family: "helvetica", Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1.7rem;
+  color: #fff;
+  transition: 0.2s color ease;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+.featured-events-grid.view-display-id-block_3 .featured-event-wrap .content-wrap .link .read-more-link:hover, .featured-events-grid.view-display-id-block_3 .featured-event-wrap .content-wrap .link .read-more-link:focus {
+  color: #E84708;
+  text-decoration: underline;
 }
 
 .view-map-view .geolocation-common-map {
@@ -4203,6 +4301,7 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
 .view-events-calendar .calendar-calendar table tbody tr td .inner .contents .event-content {
   padding-top: .5rem;
   color: #333;
+  cursor: pointer;
 }
 
 .view-events-calendar .calendar-calendar table tbody tr td .day {
@@ -4212,6 +4311,37 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   line-height: 3rem;
   padding: 0;
   width: auto;
+}
+
+.view-events-calendar .calendar-calendar ul.popup {
+  position: absolute;
+  background: #fff;
+  z-index: 12;
+  box-shadow: 0 0 1rem #282B2C;
+  padding: 1.5rem 3.5rem 1.5rem 2.5rem;
+}
+
+.view-events-calendar .calendar-calendar ul.popup li span.fa-close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+}
+
+.view-events-calendar .calendar-calendar ul.popup li .event-popup .date {
+  color: #005794;
+  text-align: left;
+  font-size: 1.8rem;
+  line-height: 1.8rem;
+  text-transform: capitalize;
+  margin: 0 0 5px;
+}
+
+.view-events-calendar .calendar-calendar ul.popup li .event-popup .date .date-wrap {
+  position: inherit;
+}
+
+.view-events-calendar .calendar-calendar ul.popup li .event-popup .content {
+  padding: 0;
 }
 
 .view-events-calendar nav.pager {
