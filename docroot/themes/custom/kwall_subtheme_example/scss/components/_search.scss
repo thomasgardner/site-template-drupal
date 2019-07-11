@@ -7,12 +7,12 @@
   margin-bottom: 35px;
   form {
     .form--inline {
-      @media ($tablet-min){
+      @media #{$tablet-min}{
         display: flex;
         flex-flow: row wrap;
       }
       .form-type-textfield {
-        @media ($tablet-min) {
+        @media #{$tablet-min} {
           flex: 1;
         }
         .form-text {
@@ -21,11 +21,11 @@
         }
       }
       .form-actions {
-        @media ($tablet-min){
+        @media #{$tablet-min}{
           width: 16%;
         }
         .button {
-          @media ($tablet-min){
+          @media #{$tablet-min}{
             width: 100%;
             padding-left: 5px;
           }

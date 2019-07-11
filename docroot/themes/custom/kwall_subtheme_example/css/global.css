@@ -4379,14 +4379,14 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   margin-bottom: 35px;
 }
 
-@media ((min-width: 768px)) {
+@media (min-width: 768px) {
   .vb-search-form form .form--inline {
     display: flex;
     flex-flow: row wrap;
   }
 }
 
-@media ((min-width: 768px)) {
+@media (min-width: 768px) {
   .vb-search-form form .form--inline .form-type-textfield {
     flex: 1;
   }
@@ -4397,13 +4397,13 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   font-size: 18px;
 }
 
-@media ((min-width: 768px)) {
+@media (min-width: 768px) {
   .vb-search-form form .form--inline .form-actions {
     width: 16%;
   }
 }
 
-@media ((min-width: 768px)) {
+@media (min-width: 768px) {
   .vb-search-form form .form--inline .form-actions .button {
     width: 100%;
     padding-left: 5px;
