@@ -1,8 +1,9 @@
 .node--type-event {
   .event {
     margin-top: 20px;
-    margin-bottom: 30px;
-
+    @media #{$tablet-min}{
+      margin-bottom: 30px;
+    }
     .event-info {
       .date {
         float: left;
@@ -35,6 +36,10 @@
     }
 
     .event-social {
+      margin-top: 20px;
+      @media #{$tablet-min}{
+        margin-top: 0;
+      }
       .sharethis-wrapper {
         span {
           &:not(.st_sharethis_large) {
@@ -50,8 +55,10 @@
           &.st_sharethis_large {
             .stButton {
               display: flex !important;
-              float: right;
-
+              float: left;
+              @media #{$tablet-min}{
+                float: right;
+              }
               &:after {
                 content: 'share';
                 color: $color-orange;
@@ -74,12 +81,6 @@
         }
       }
     }
-  }
-  .field--name-field-media-image-8 {
-    margin-bottom: 15px;
-  }
-  .field--name-body {
-    margin-bottom: 30px;
   }
   .field--name-field-event-category {
     display: flex;
