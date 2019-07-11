@@ -39,6 +39,7 @@
       .content-wrap {
         margin-left: 0;
         @include grid_absolute_text();
+        padding-top: 85px;
         z-index: 10;
         .title, .featured-title {
           a {
@@ -51,6 +52,7 @@
         .time, .featured-time {
           margin: 0;
           color: $color-white;
+          float: left;
         }
         .featured-body {
           font-size: 1.6rem;
@@ -58,6 +60,7 @@
         }
         .link {
           line-height: 1;
+          float: right;
           .read-more-link {
             @include read_more_link();
           }
@@ -66,3 +69,5 @@
     }
   }
 }
+
+
