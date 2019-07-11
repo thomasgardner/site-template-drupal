@@ -139,6 +139,9 @@
 
     //single-day-calendar
     #single-day-container {
+      .calendar-time-holder {
+        width: 14%;
+      }
       .calendar-agenda-hour {
         padding-right: 0;
         &:before {
