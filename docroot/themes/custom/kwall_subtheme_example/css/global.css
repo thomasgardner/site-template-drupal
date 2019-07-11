@@ -4150,8 +4150,14 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   content: "\f0e0";
 }
 
-.node--type-person .field--name-field-media-image-6 img {
-  width: 100%;
+.node--type-person .field--name-field-media-image-6 {
+  margin-top: 25px;
+}
+
+@media (min-width: 768px) {
+  .node--type-person .field--name-field-media-image-6 {
+    margin-top: 0;
+  }
 }
 
 .view-events-calendar {
