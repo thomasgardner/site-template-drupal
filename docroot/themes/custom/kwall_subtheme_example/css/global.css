@@ -4620,6 +4620,13 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   }
 }
 
+@media (min-width: 768px) {
+  .node--type-person .field--name-field-media-image-6 img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
 .node--type-event .event {
   margin-top: 20px;
 }
