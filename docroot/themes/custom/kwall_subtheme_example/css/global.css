@@ -3931,6 +3931,27 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   line-height: 3.2rem;
 }
 
+.view-id-event_view.view-display-id-page_1 .event-wrap .content-wrap .event-link {
+  line-height: 1;
+}
+
+.view-id-event_view.view-display-id-page_1 .event-wrap .content-wrap .event-link a {
+  display: inline-block;
+  font-size: 1.4rem;
+  font-family: "helvetica", Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1.7rem;
+  color: #E84708;
+  transition: 0.2s color ease;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+.view-id-event_view.view-display-id-page_1 .event-wrap .content-wrap .event-link a:hover, .view-id-event_view.view-display-id-page_1 .event-wrap .content-wrap .event-link a:focus {
+  color: #E84708;
+  text-decoration: underline;
+}
+
 .view-id-article_view.featured-news-grid > .attachment {
   min-height: 21.5rem;
   height: auto;

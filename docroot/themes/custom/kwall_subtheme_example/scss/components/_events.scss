@@ -11,6 +11,12 @@
         font-size: 2.4rem;
         line-height: 3.2rem;
       }
+      .event-link {
+        line-height: 1;
+        a {
+          @include read_more_link($color-orange);
+        }
+      }
     }
   }
 }
