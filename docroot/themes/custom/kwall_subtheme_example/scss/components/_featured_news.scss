@@ -2,6 +2,12 @@
 .view-id-article_view.featured-news-grid {
   // Featured Attachment Block
   > .attachment {
+    min-height: 21.5rem;
+    height: auto;
+    margin: 0 0 20px;
+    @media (min-width: $screen-md-min) {
+      margin-bottom: 0;
+    }
     .featured-post-wrap {
       padding: 2rem;
     }
@@ -9,8 +15,9 @@
 
   // Featured Articles
   > .view-content {
-    padding-left: 2rem;
-
+    @media (min-width: $screen-md-min) {
+      padding-left: 2rem;
+    }
     > div {
       @include grid_black_shadow();
 

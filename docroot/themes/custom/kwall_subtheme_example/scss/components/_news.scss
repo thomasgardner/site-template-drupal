@@ -6,6 +6,7 @@
 }
 
 .view-display-id-page_1 {
+  margin: 0 0 40px;
   .view-filters {
     @include exposedForm();
 
@@ -70,4 +71,9 @@
       }
     }
   }
+
+  nav.pager {
+    margin: 60px 0 0px;
+  }
 }
+
