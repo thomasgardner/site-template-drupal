@@ -1,0 +1,39 @@
+.vb-search-form {
+  background: none;
+  padding: 0;
+  margin-bottom: 35px;
+  form {
+    .form--inline {
+      display: flex;
+      flex-flow: row wrap;
+      .form-item-keywords {
+        flex: 1;
+        .form-text {
+          background: $color-grey-lt;
+        }
+      }
+      .form-actions {
+        width: 16%;
+        .button {
+          width: 100%;
+          padding-left: 5px;
+        }
+      }
+    }
+  }
+}
+.vp-site-search {
+  .view-content {
+    .views-row {
+      margin-bottom: 35px;
+      .views-field-title {
+        font-size: 24px;
+        line-height: 32px;
+      }
+      .views-field-body {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
+}
