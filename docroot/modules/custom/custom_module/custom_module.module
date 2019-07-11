@@ -282,7 +282,7 @@ function custom_module_node_view(array &$build, EntityInterface $entity, EntityV
 
         $build['event_time'] = [
           '#type' => 'markup',
-          '#markup' => '<div class="time"><div class="label">Time:</div>' . $start_time . '-' . $end_time . '</div>',
+          '#markup' => '<div class="time"><div class="label">Time:</div>' . $start_time . ' - ' . $end_time . '</div>',
         ];
       }
     }
