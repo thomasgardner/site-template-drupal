@@ -4458,4 +4458,47 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   display: none;
 }
 
+.article .section-top {
+  border-bottom: 2px solid #CCC;
+  padding-bottom: 20px;
+  margin: 20px 0;
+}
+
+.article .section-top .post-author {
+  font-size: 16px;
+}
+
+.article .section-top .post-social {
+  display: inline-flex;
+  float: right;
+}
+
+.article .section-top .post-social .label {
+  margin-right: 10px;
+}
+
+.article .section-top .post-social .sharethis-wrapper .stLarge {
+  background-repeat: no-repeat;
+}
+
+.article .section-top .post-social .sharethis-wrapper .st_facebook_large .stLarge {
+  background-image: url(../images/facebook.png) !important;
+}
+
+.article .section-top .post-social .sharethis-wrapper .st_twitter_large .stLarge {
+  background-image: url(../images/twitter.png) !important;
+}
+
+.article .section-top .post-social .sharethis-wrapper .st_email_large .stLarge {
+  background-image: url(../images/email.png) !important;
+}
+
+.article .section-top .post-social .sharethis-wrapper .st_pinterest_large .stLarge {
+  background-image: url(../images/pinterest.png) !important;
+}
+
+.article .section-top .post-social .sharethis-wrapper .st_sharethis_large, .article .section-top .post-social .sharethis-wrapper .st_plusone_large, .article .section-top .post-social .sharethis-wrapper .st_fblike_large {
+  display: none;
+}
+
 /*# sourceMappingURL=../sourcemaps/global.css.map */

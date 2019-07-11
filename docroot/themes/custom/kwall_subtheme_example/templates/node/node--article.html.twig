@@ -74,6 +74,7 @@
   'clearfix',
 ] %}
 
+{{ content|without('sharethis') }}
 
 <article{{ attributes.addClass(classes) }}>
   <div class="section-top">
@@ -85,17 +86,17 @@
       </div>
       <div class="col-sm-5">
         <div class="post-social">
-          <div class="share">Share:</div>
+          <div class="label">Share:</div>
           {{ content.sharethis }}
         </div>
       </div>
     </div>
   </div>
-  <div class="section-middle">
+ {# <div class="section-middle">
     {{ content.body }}
   </div>
   <div class="section-bottom">
 
-  </div>
+  </div>#}
 
 </article>
