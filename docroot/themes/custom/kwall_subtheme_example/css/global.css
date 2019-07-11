@@ -4374,7 +4374,7 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
 }
 
 .view-events-calendar .calendar-calendar #single-day-container .calendar-time-holder {
-  width: 14%;
+  width: 14% !important;
 }
 
 .view-events-calendar .calendar-calendar #single-day-container .calendar-agenda-hour {
