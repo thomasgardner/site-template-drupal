@@ -3817,22 +3817,6 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
 @media (min-width: 768px) {
   .view-display-id-page_1 .view-filters .views-exposed-form .form--inline .form-item {
     margin-bottom: 0;
-    flex-basis: calc((100% - 13rem) / 2);
-    max-width: calc((100% - 13rem) / 2);
-  }
-}
-
-@media (min-width: 992px) {
-  .view-display-id-page_1 .view-filters .views-exposed-form .form--inline .form-item.form-type-textfield {
-    max-width: 65rem;
-    flex: 0 0 65rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .view-display-id-page_1 .view-filters .views-exposed-form .form--inline .form-item.form-type-select {
-    flex: 0 0 34rem;
-    max-width: 34rem;
   }
 }
 
@@ -3851,7 +3835,7 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
     max-height: 50px;
     float: right;
   }
-  .view-display-id-page_1 .view-filters .views-exposed-form .form--inline .form-actions input[data-drupal-selector="edit-submit-article-view"] {
+  .view-display-id-page_1 .view-filters .views-exposed-form .form--inline .form-actions input[data-drupal-selector*="edit-submit"] {
     padding: 1.15rem 4rem;
     max-height: 50px;
   }
@@ -3866,6 +3850,28 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   }
 }
 
+.view-display-id-page_1 .view-filters .views-exposed-form.form-values-exist .form--inline .form-actions input[data-drupal-selector="edit-reset"] {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .view-display-id-page_1 .view-filters .views-exposed-form .form--inline .form-item {
+    flex-basis: calc((100% - 13rem) / 2);
+    max-width: calc((100% - 13rem) / 2);
+  }
+}
+
+@media (min-width: 992px) {
+  .view-display-id-page_1 .view-filters .views-exposed-form .form--inline .form-item.form-type-textfield {
+    max-width: calc(calc(100% - 30rem) - 13rem);
+    flex: 0 0 calc(calc(100% - 30rem) - 13rem);
+  }
+  .view-display-id-page_1 .view-filters .views-exposed-form .form--inline .form-item.form-type-select {
+    flex: 0 0 30rem;
+    max-width: 30rem;
+  }
+}
+
 @media (min-width: 768px) {
   .view-display-id-page_1 .view-filters .views-exposed-form.form-values-exist .form--inline .form-item {
     flex-grow: 1;
@@ -3877,24 +3883,18 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
 
 @media (min-width: 992px) {
   .view-display-id-page_1 .view-filters .views-exposed-form.form-values-exist .form--inline .form-item.form-type-textfield {
-    max-width: 60rem;
-    flex: 0 0 60rem;
+    max-width: calc(calc(100% - 30rem) - 19.3rem);
+    flex: 0 0 calc(calc(100% - 30rem) - 19.3rem);
   }
-}
-
-@media (min-width: 992px) {
   .view-display-id-page_1 .view-filters .views-exposed-form.form-values-exist .form--inline .form-item.form-type-select {
-    flex: 0 0 32.7rem;
-    max-width: 32.7rem;
+    flex: 0 0 30rem;
+    max-width: 30rem;
   }
-}
-
-.view-display-id-page_1 .view-filters .views-exposed-form.form-values-exist .form--inline .form-actions input[data-drupal-selector="edit-reset"] {
-  display: block;
 }
 
 .view-display-id-page_1 .view-content .post-wrap .content-wrap {
   padding-left: 0;
+  padding-top: 0;
 }
 
 .view-display-id-page_1 .view-content .post-wrap .content-wrap .post-link a {
@@ -4336,7 +4336,13 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
 }
 
 .featured-news-slider .featured-article-slider .featured-post-wrap .content-wrap {
-  padding: 15px 15px 15px 5px;
+  padding: 15px 15px 60px 15px;
+}
+
+@media (min-width: 992px) {
+  .featured-news-slider .featured-article-slider .featured-post-wrap .content-wrap {
+    padding-left: 5px;
+  }
 }
 
 .featured-news-slider .featured-article-slider .featured-post-wrap .content-wrap .post-title {
@@ -4365,8 +4371,28 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   text-decoration: underline;
 }
 
-.featured-news-slider .custom-controls-container {
+.featured-news-slider .controls .custom-controls-container {
   display: none;
+}
+
+.featured-news-slider .controls a.flex-prev, .featured-news-slider .controls a.flex-next {
+  color: #696666;
+  text-shadow: none;
+}
+
+@media (min-width: 992px) {
+  .featured-news-slider .controls a.flex-prev, .featured-news-slider .controls a.flex-next {
+    bottom: -15px;
+    top: auto;
+    left: 59.2%;
+  }
+}
+
+@media (min-width: 992px) {
+  .featured-news-slider .controls a.flex-next {
+    left: calc(59.2% + 50px);
+    right: auto;
+  }
 }
 
 .search-title {

@@ -101,21 +101,6 @@
           margin: 0 0 2rem;
           @media #{$tablet-min} {
             margin-bottom: 0;
-            flex-basis: calc((100% - 13rem) / 2);
-            max-width: calc((100% - 13rem) / 2);
-          }
-
-          &.form-type-textfield {
-            @media (min-width: $screen-md-min) {
-              max-width: 65rem;
-              flex: 0 0 65rem;
-            }
-          }
-          &.form-type-select {
-            @media (min-width: $screen-md-min) {
-              flex: 0 0 34rem;
-              max-width: 34rem;
-            }
           }
         }
         &-actions {
@@ -129,7 +114,7 @@
             margin: 2.5rem 0 0;
             max-height: 50px;
             float: right;
-            input[data-drupal-selector="edit-submit-article-view"] {
+            input[data-drupal-selector*="edit-submit"] {
               padding: 1.15rem 4rem;
               max-height: 50px;
             }
@@ -150,33 +135,9 @@
 
     &.form-values-exist {
       .form--inline {
-        .form-item {
-          @media #{$tablet-min} {
-            flex-grow: 1;
-            flex-shrink: 0;
-            flex-basis: calc((100% - 19.3rem) / 2);
-            max-width: calc((100% - 19.3rem) / 2);
-          }
-          &.form-type-textfield {
-            @media (min-width: $screen-md-min) {
-              max-width: 60rem;
-              flex: 0 0 60rem;
-            }
-          }
-          &.form-type-select {
-            @media (min-width: $screen-md-min) {
-              flex: 0 0 32.7rem;
-              max-width: 32.7rem;
-            }
-          }
-        }
-
         .form-actions {
           input[data-drupal-selector="edit-reset"] {
             display: block;
-          }
-
-          @media #{$tablet-min} {
           }
         }
       }

@@ -2,31 +2,36 @@
   .featured-article-slider {
     background: $color-grey-xlt;
     .featured-post-wrap {
-      //@media #{$tablet-min} {
-      //  height: 48rem;
-      //}
       .post-img {
         height: 100%;
         a {
           display: block;
           height: 100%;
         }
+
         img {
           max-height: 48rem;
           object-fit: cover;
           height: 100%;
         }
       }
+
       .content-wrap {
-        padding: 15px 15px 15px 5px;
+        padding: 15px 15px 60px 15px;
+        @media (min-width: $screen-md-min) {
+          padding-left: 5px;
+        }
+
         .post {
           &-title {
             font-size: 2.4rem;
             margin: 0 0 7px;
           }
+
           &-date {
             margin-bottom: 5px;
           }
+
           &-link {
             a {
               @include read_more_link($color-orange);
@@ -36,7 +41,26 @@
       }
     }
   }
-  .custom-controls-container {
-    display: none;
+
+  .controls {
+    .custom-controls-container {
+      display: none;
+    }
+
+    a.flex-prev, a.flex-next {
+      color: $color-grey-900;
+      text-shadow: none;
+      @media (min-width: $screen-md-min) {
+        bottom: -15px;
+        top: auto;
+        left: 59.2%;
+      }
+    }
+    a.flex-next {
+      @media (min-width: $screen-md-min) {
+        left: calc(59.2% + 50px);
+        right: auto;
+      }
+    }
   }
 }
