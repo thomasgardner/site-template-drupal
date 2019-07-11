@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * @file
  * Style
@@ -4872,6 +4873,56 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
 }
 
 .vp-site-search .pager ul li.pager__item--ellipsis {
+  display: none;
+}
+
+.search-menu-block {
+  display: inline-block;
+  background: none;
+  position: absolute;
+  right: 0;
+  padding: 0;
+}
+
+.search-menu-block form .form-type-textfield {
+  /* position: relative;*/
+  margin: 10px 0;
+  padding: 0;
+  text-align: left;
+  cursor: pointer;
+}
+
+.search-menu-block form .form-type-textfield:before {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-family: "FontAwesome";
+  z-index: 999;
+}
+
+.search-menu-block form .form-type-textfield label {
+  display: none;
+}
+
+.search-menu-block form .form-type-textfield input {
+  opacity: 0;
+  background: #eeeeee;
+  transition: all 0.5s;
+  width: 40px;
+  border: 1px solid #eeeeee;
+  padding: 0 0 0 10px;
+  height: 40px;
+  border-radius: 40px;
+  color: #333 !important;
+}
+
+.search-menu-block form .form-type-textfield:hover input {
+  opacity: 1;
+  width: 250px;
+}
+
+.search-menu-block form .form-actions {
   display: none;
 }
 

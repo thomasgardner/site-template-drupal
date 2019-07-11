@@ -59,3 +59,50 @@
     }
   }
 }
+
+// Search menu block
+.search-menu-block {
+  display: inline-block;
+  background: none;
+  position: absolute;
+  right: 0;
+  padding: 0;
+  form {
+    .form-type-textfield {
+     /* position: relative;*/
+      margin: 10px 0;
+      padding: 0;
+      text-align: left;
+      cursor: pointer;
+      &:before {
+        content: "";
+        position: absolute;
+        right: 10px;
+        top: 5px;
+        font-family: $font-awesome;
+        z-index: 999;
+      }
+      label {
+        display: none;
+      }
+      input {
+        opacity: 0;
+        background: $color-grey-lt;
+        transition: all 0.5s;
+        width: 40px;
+        border: 1px solid $color-grey-lt;
+        padding: 0 0 0 10px;
+        height: 40px;
+        border-radius: 40px;
+        color: $color-body !important;
+      }
+      &:hover input {
+        opacity: 1;
+        width: 250px;
+      }
+    }
+    .form-actions {
+      display: none;
+    }
+  }
+}
