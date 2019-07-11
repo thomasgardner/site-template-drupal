@@ -4481,48 +4481,48 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   display: none;
 }
 
-.article .section-top {
+.page-node-type-article .author-info {
   border-bottom: 2px solid #CCC;
   padding-bottom: 20px;
   margin: 20px 0;
 }
 
-.article .section-top .post-author {
+.page-node-type-article .author-info .post-author {
   font-size: 16px;
 }
 
-.article .section-top .post-social {
+.page-node-type-article .author-info .post-social {
   display: inline-flex;
   float: right;
 }
 
-.article .section-top .post-social .label {
+.page-node-type-article .author-info .post-social .label {
   margin-right: 10px;
 }
 
-.article .section-top .post-social .sharethis-wrapper .stLarge {
+.page-node-type-article .author-info .post-social .sharethis-wrapper .stLarge {
   background-repeat: no-repeat;
   background-position: initial;
   opacity: initial;
 }
 
-.article .section-top .post-social .sharethis-wrapper .st_facebook_large .stLarge {
+.page-node-type-article .author-info .post-social .sharethis-wrapper .st_facebook_large .stLarge {
   background-image: url(../images/facebook.png) !important;
 }
 
-.article .section-top .post-social .sharethis-wrapper .st_twitter_large .stLarge {
+.page-node-type-article .author-info .post-social .sharethis-wrapper .st_twitter_large .stLarge {
   background-image: url(../images/twitter.png) !important;
 }
 
-.article .section-top .post-social .sharethis-wrapper .st_email_large .stLarge {
+.page-node-type-article .author-info .post-social .sharethis-wrapper .st_email_large .stLarge {
   background-image: url(../images/email.png) !important;
 }
 
-.article .section-top .post-social .sharethis-wrapper .st_pinterest_large .stLarge {
+.page-node-type-article .author-info .post-social .sharethis-wrapper .st_pinterest_large .stLarge {
   background-image: url(../images/pinterest.png) !important;
 }
 
-.article .section-top .post-social .sharethis-wrapper .st_sharethis_large, .article .section-top .post-social .sharethis-wrapper .st_plusone_large, .article .section-top .post-social .sharethis-wrapper .st_fblike_large {
+.page-node-type-article .author-info .post-social .sharethis-wrapper .st_sharethis_large, .page-node-type-article .author-info .post-social .sharethis-wrapper .st_plusone_large, .page-node-type-article .author-info .post-social .sharethis-wrapper .st_fblike_large {
   display: none;
 }
 
