@@ -5,6 +5,10 @@
   }
 }
 .view-id-event_view.view-display-id-page_1 {
+  .view-filters {
+    @include exposedForm();
+  }
+
   .event-wrap {
     .content-wrap {
       .title {
