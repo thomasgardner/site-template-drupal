@@ -4493,7 +4493,14 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
 
 .page-node-type-article .author-info .post-social {
   display: inline-flex;
-  float: right;
+  margin-top: 15px;
+}
+
+@media (min-width: 768px) {
+  .page-node-type-article .author-info .post-social {
+    float: right;
+    margin-top: 0;
+  }
 }
 
 .page-node-type-article .author-info .post-social .label {
@@ -4524,6 +4531,32 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
 
 .page-node-type-article .author-info .post-social .sharethis-wrapper .st_sharethis_large, .page-node-type-article .author-info .post-social .sharethis-wrapper .st_plusone_large, .page-node-type-article .author-info .post-social .sharethis-wrapper .st_fblike_large {
   display: none;
+}
+
+.page-node-type-article .field--name-field-article-taxonomies {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.page-node-type-article .field--name-field-article-taxonomies .field__label {
+  margin-right: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  padding: 5px 15px 5px 0;
+}
+
+.page-node-type-article .field--name-field-article-taxonomies .field__item {
+  padding: 5px 15px;
+  background: #eeeeee;
+  margin-right: 10px;
+}
+
+.page-node-type-article .field--name-field-article-taxonomies .field__item a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  color: #E84708;
 }
 
 /*# sourceMappingURL=../sourcemaps/global.css.map */

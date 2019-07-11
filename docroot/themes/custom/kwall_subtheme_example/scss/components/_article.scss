@@ -10,7 +10,11 @@
 
     .post-social {
       display: inline-flex;
-      float: right;
+      margin-top: 15px;
+      @media #{$tablet-min}{
+        float: right;
+        margin-top: 0;
+      }
       .label {
         margin-right: 10px;
       }
@@ -48,6 +52,28 @@
         .st_sharethis_large, .st_plusone_large, .st_fblike_large {
           display: none;
         }
+      }
+    }
+  }
+  .field--name-field-article-taxonomies {
+    display: flex;
+    flex-flow: row wrap;
+    .field__label {
+      margin-right: 10px;
+      font-size: 20px;
+      font-weight: bold;
+      color: $color-body;
+      padding: 5px 15px 5px 0;
+    }
+    .field__item {
+      padding: 5px 15px;
+      background: $color-grey-lt;
+      margin-right: 10px;
+      a {
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 16px;
+        color: $color-orange;
       }
     }
   }
