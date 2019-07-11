@@ -4907,7 +4907,7 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
 
 .search-menu-block form .form-type-textfield input {
   opacity: 0;
-  background: #eeeeee;
+  background: #fff;
   transition: all 0.5s;
   width: 40px;
   border: 1px solid #eeeeee;
@@ -4917,7 +4917,7 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   color: #333 !important;
 }
 
-.search-menu-block form .form-type-textfield:hover input {
+.search-menu-block form .form-type-textfield input:focus {
   opacity: 1;
   width: 250px;
 }
