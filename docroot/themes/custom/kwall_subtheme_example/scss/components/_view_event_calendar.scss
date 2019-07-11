@@ -141,7 +141,7 @@
     #single-day-container {
       .calendar-agenda-hour {
         padding-right: 0;
-        .calendar-agenda-hour:before {
+        &:before {
           content: '';
           width: 50px;
           background: $color-grey;
