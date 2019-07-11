@@ -74,29 +74,22 @@
   'clearfix',
 ] %}
 
-{{ content|without('sharethis') }}
 
-<article{{ attributes.addClass(classes) }}>
-  <div class="section-top">
-    <div class="row">
-      <div class="col-sm-7">
-        <div class="post-author">
-          {{ node.created.value|date('F j, Y') }} | By {{ node.Owner.name.value }}
-        </div>
+<div class="section-top">
+  <div class="row">
+    <div class="col-sm-7">
+      <div class="post-author">
+        {{ node.created.value|date('F j, Y') }} | By {{ node.Owner.name.value }}
       </div>
-      <div class="col-sm-5">
-        <div class="post-social">
-          <div class="label">Share:</div>
-          {{ content.sharethis }}
-        </div>
+    </div>
+    <div class="col-sm-5">
+      <div class="post-social">
+        <div class="label">Share:</div>
+        {{ content.sharethis }}
       </div>
     </div>
   </div>
- {# <div class="section-middle">
-    {{ content.body }}
-  </div>
-  <div class="section-bottom">
+</div>
 
-  </div>#}
+{{ content|without('sharethis') }}
 
-</article>

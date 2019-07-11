@@ -4502,6 +4502,8 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
 
 .article .section-top .post-social .sharethis-wrapper .stLarge {
   background-repeat: no-repeat;
+  background-position: initial;
+  opacity: initial;
 }
 
 .article .section-top .post-social .sharethis-wrapper .st_facebook_large .stLarge {
