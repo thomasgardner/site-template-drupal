@@ -4523,6 +4523,7 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
 .view-events-calendar .calendar-calendar ul.popup li .event-popup .address .label {
   font-size: 18px;
   line-height: 26px;
+  color: #333;
 }
 
 .view-events-calendar .calendar-calendar ul.popup li .event-popup .address .location {
