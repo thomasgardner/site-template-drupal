@@ -357,14 +357,11 @@
             var dataId = eventContent.find('.item.active .event-content').data("id");
             eventContent.find('.event-popup[data-id=' + dataId + ']').addClass('active');
             var height = eventContent.find('.event-popup.active').outerHeight() + eventContent.find('.item.active').outerHeight() - 10;
-
             eventContent.find('.event-popup.active').parents('ul.popup').css('top', -height);
-
-
           }
         });
 
-        eventContent.find('.fa-close').click(function () {
+        $(document).on('click', '.view-events-calendar .single-day span.fa-close', function(){
           eventContent.find('.item').removeClass('active');
           eventContent.find('.event-popup').removeClass('active');
         });

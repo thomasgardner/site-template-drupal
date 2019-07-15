@@ -115,6 +115,14 @@
       //top: 65px;
       margin-left: -135px;
 
+      span.fa-close {
+        display: block;
+        float: right;
+        position: relative;
+        right: -15px;
+        cursor: pointer;
+      }
+
       li {
         .event-popup {
           .date {
