@@ -98,12 +98,20 @@
 
       .form {
         &-item {
-          padding-right: 2rem;
+          padding: 0;
           margin: 0 0 2rem;
           @media #{$tablet-min} {
             margin-bottom: 0;
+            padding-right: 2rem;
+          }
+
+          &.form-type-select {
+            select {
+              height: 5rem;
+            }
           }
         }
+
         &-actions {
           margin: 0;
           display: flex;
@@ -142,6 +150,29 @@
           }
         }
       }
+    }
+  }
+}
+
+@mixin slide_controls() {
+  .custom-controls-container {
+    display: none;
+  }
+
+  a.flex-prev, a.flex-next {
+    color: $color-grey-900;
+    text-shadow: none;
+    top: 30%;
+    @media (min-width: $screen-md-min) {
+      bottom: -15px;
+      top: auto;
+      left: 59.2%;
+    }
+  }
+  a.flex-next {
+    @media (min-width: $screen-md-min) {
+      left: calc(59.2% + 50px);
+      right: auto;
     }
   }
 }

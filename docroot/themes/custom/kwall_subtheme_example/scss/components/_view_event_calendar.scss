@@ -154,6 +154,16 @@
           margin-left: 2px;
         }
       }
+
+      .calendar-agenda-items {
+        .view-item {
+          max-width: calc(100% - 125px);
+          a:hover {
+            color: $color-orange;
+            text-decoration: none;
+          }
+        }
+      }
     }
   }
 
