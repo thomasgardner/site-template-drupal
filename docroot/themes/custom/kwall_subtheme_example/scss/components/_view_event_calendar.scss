@@ -48,6 +48,7 @@
                   padding-top: .5rem;
                   color: $color-body;
                   cursor: pointer;
+                  font-weight: bold;
                 }
               }
             }
@@ -99,17 +100,22 @@
             margin: 0 0 5px;
             .date-wrap {
               position: inherit;
+              .date-month {
+                text-transform: initial;
+              }
             }
           }
           .address {
             .label {
               font-size: 18px;
               line-height: 26px;
+              color: $color-body;
             }
             .location {
               color: $color-orange;
               font-size: 18px;
               line-height: 26px;
+              font-weight: bold;
             }
           }
           .content {
@@ -118,6 +124,7 @@
             font-size: 20px;
             line-height: 24px;
             margin: 5px 0 0;
+            color: $color-body;
           }
         }
       }
@@ -152,6 +159,16 @@
           text-decoration: none;
           height: 100%;
           margin-left: 2px;
+        }
+      }
+
+      .calendar-agenda-items {
+        .view-item {
+          max-width: calc(100% - 125px);
+          a:hover {
+            color: $color-orange;
+            text-decoration: none;
+          }
         }
       }
     }

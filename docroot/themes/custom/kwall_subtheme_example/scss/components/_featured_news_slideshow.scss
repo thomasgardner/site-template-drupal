@@ -44,24 +44,6 @@
   }
 
   .controls {
-    .custom-controls-container {
-      display: none;
-    }
-
-    a.flex-prev, a.flex-next {
-      color: $color-grey-900;
-      text-shadow: none;
-      @media (min-width: $screen-md-min) {
-        bottom: -15px;
-        top: auto;
-        left: 59.2%;
-      }
-    }
-    a.flex-next {
-      @media (min-width: $screen-md-min) {
-        left: calc(59.2% + 50px);
-        right: auto;
-      }
-    }
+    @include slide_controls();
   }
 }
