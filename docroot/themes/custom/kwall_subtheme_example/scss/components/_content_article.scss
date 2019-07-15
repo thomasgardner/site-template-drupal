@@ -15,15 +15,18 @@
         float: right;
         margin-top: 0;
       }
+
       .label {
         margin-right: 10px;
       }
+
       .sharethis-wrapper {
         .stLarge {
           background-repeat: no-repeat;
           background-position: initial;
           opacity: initial;
         }
+
         .st_facebook_large {
           .stLarge {
             background-image: url(../images/facebook.png) !important;
@@ -55,10 +58,21 @@
       }
     }
   }
+
+  .field--name-field-media {
+    img {
+      width: 100%;
+      @media #{$tablet-min}{
+        object-fit: cover;
+      }
+    }
+  }
+
   .field--name-field-article-taxonomies {
     display: flex;
     flex-flow: row wrap;
     margin: 50px 0;
+
     .field__label {
       margin-right: 10px;
       font-size: 20px;
@@ -66,10 +80,12 @@
       color: $color-body;
       padding: 5px 15px 5px 0;
     }
+
     .field__item {
       padding: 5px 15px;
       background: $color-grey-lt;
       margin-right: 10px;
+
       a {
         text-decoration: none;
         font-weight: bold;
