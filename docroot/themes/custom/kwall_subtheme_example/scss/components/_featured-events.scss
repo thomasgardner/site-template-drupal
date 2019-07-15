@@ -4,6 +4,12 @@
       min-height: 21.5rem;
       height: auto;
       margin: 0 0 20px;
+      @media (max-width: $screen-md-min) {
+        height: 30rem;
+      }
+      @media (max-width: 480px) {
+        height: 21.5rem;
+      }
       @media (min-width: $screen-md-min) {
         margin-bottom: 0;
       }
@@ -39,6 +45,24 @@
 
     .featured-event-wrap {
       position: relative;
+      @media (max-width: $screen-md-min) {
+        height: 30rem;
+        overflow: hidden;
+      }
+      @media (max-width: 480px) {
+        height: 21.5rem;
+      }
+      .image-wrap {
+        img {
+          @media (max-width: $screen-md-min) {
+            height: 30rem !important;
+            object-fit: cover;
+          }
+          @media (max-width: 480px) {
+            height: 21.5rem !important;
+          }
+        }
+      }
 
       .content-wrap {
         margin-left: 0;
@@ -52,6 +76,7 @@
             font-size: 2rem;
             line-height: 1.2;
             text-decoration: none;
+            font-weight: bold;
           }
         }
 
