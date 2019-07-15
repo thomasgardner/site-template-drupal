@@ -4444,9 +4444,14 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
 
 .view-events-calendar .calendar-calendar table tbody tr td .inner {
   display: block;
-  overflow: hidden;
   padding: .5rem 1.2rem;
   position: unset !important;
+}
+
+.view-events-calendar .calendar-calendar table tbody tr td .inner .item {
+  float: left;
+  padding-bottom: 1.5rem;
+  position: relative;
 }
 
 .view-events-calendar .calendar-calendar table tbody tr td .inner .contents {
@@ -4484,7 +4489,19 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   width: auto;
 }
 
-.view-events-calendar .calendar-calendar .contents.close ul.popup {
+.view-events-calendar .calendar-calendar .item.active .contents .popup {
+  display: block;
+}
+
+.view-events-calendar .calendar-calendar .item.active .contents .popup .event-popup {
+  display: none;
+}
+
+.view-events-calendar .calendar-calendar .item.active .contents .popup .event-popup.active {
+  display: block;
+}
+
+.view-events-calendar .calendar-calendar .item .contents .popup {
   display: none;
 }
 
@@ -4495,12 +4512,7 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   box-shadow: 0 0 1rem #282B2C;
   padding: 1.5rem 3.5rem 1.5rem 2.5rem;
   width: 383px;
-  top: 65px;
   margin-left: -135px;
-}
-
-.view-events-calendar .calendar-calendar ul.popup li span.fa-close {
-  display: none;
 }
 
 .view-events-calendar .calendar-calendar ul.popup li .event-popup .date {

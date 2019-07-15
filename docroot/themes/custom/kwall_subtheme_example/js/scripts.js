@@ -328,5 +328,49 @@
     }
   };
 
+  // var data = jQuery('.event-content').attr("data-id");
+  // jQuery('.contents .popup .event-popup').each(function(){
+  //   if(jQuery(this).data('id') == data) {
+  //     jQuery(this).parent().addClass('show');
+  //   }
+  // });
+
+
+  Drupal.behaviors.customAjaxComplete = {
+    attach: function (context, settings) {
+      var eventContent = $('.view-events-calendar .single-day');
+      if (eventContent.length) {
+        eventContent.find('.item').click(function () {
+          eventContent.find('.item').removeClass('active');
+          eventContent.find('.event-popup').removeClass('active');
+          $(this).addClass('active');
+          var dataId = eventContent.find('.item.active .event-content').data("id");
+          eventContent.find('.event-popup[data-id=' + dataId + ']').addClass('active');
+
+          var height = eventContent.find('.event-popup.active').outerHeight() + eventContent.find('.item.active').outerHeight() - 10;
+          eventContent.find('.event-popup.active').parents('ul.popup').css('top', -height);
+
+        });
+
+        $(document).ajaxComplete(function (event, xhr, settings) {
+          if (eventContent.find('.item.active .event-content').length) {
+            var dataId = eventContent.find('.item.active .event-content').data("id");
+            eventContent.find('.event-popup[data-id=' + dataId + ']').addClass('active');
+            var height = eventContent.find('.event-popup.active').outerHeight() + eventContent.find('.item.active').outerHeight() - 10;
+
+            eventContent.find('.event-popup.active').parents('ul.popup').css('top', -height);
+
+
+          }
+        });
+
+        eventContent.find('.fa-close').click(function () {
+          eventContent.find('.item').removeClass('active');
+          eventContent.find('.event-popup').removeClass('active');
+        });
+      }
+    }
+  };
+
 
 })(jQuery, Drupal, drupalSettings);

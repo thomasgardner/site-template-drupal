@@ -22,9 +22,14 @@
           td {
             .inner {
               display: block;
-              overflow: hidden;
               padding: .5rem 1.2rem;
               position: unset !important;
+
+              .item  {
+                float: left;
+                padding-bottom: 1.5rem;
+                position: relative;
+              }
 
               .contents {
                 font-size: 1.4rem;
@@ -70,11 +75,35 @@
       }
     }
 
-    .contents.close {
-      ul.popup {
-        display: none;
+    //.contents.close {
+    //  ul.popup {
+    //    display: none;
+    //  }
+    //}
+
+    .item {
+      &.active {
+        .contents {
+          .popup {
+            display: block;
+            .event-popup {
+              display: none;
+              &.active {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+
+      .contents {
+        .popup {
+          display: none;
+        }
       }
     }
+
+
 
     ul.popup {
       position: absolute;
@@ -83,13 +112,10 @@
       box-shadow: 0 0 1rem $color-black;
       padding: 1.5rem 3.5rem 1.5rem 2.5rem;
       width: 383px;
-      top: 65px;
+      //top: 65px;
       margin-left: -135px;
 
       li {
-        span.fa-close {
-          display: none;
-        }
         .event-popup {
           .date {
             color: $color-blue;
