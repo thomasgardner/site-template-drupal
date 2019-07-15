@@ -269,15 +269,20 @@ function custom_module_node_view(array &$build, EntityInterface $entity, EntityV
         ];
       }
       else {
+
+        date_default_timezone_set("UTC");
+
         //Start time
-        $start_time = $entity->get('field_start_date')->value;
-        $start_time = \Drupal::service('date.formatter')
-          ->format(strtotime($start_time), 'custom', 'g:ia', drupal_get_user_timezone());
+        $start_time = strtotime($entity->get('field_start_date')->value);
+        $start_time = \Drupal\Core\Datetime\DrupalDateTime::createFromTimestamp($start_time);
+
+        $start_time = $start_time->format('g:ia');
 
         //End time
-        $end_time = $entity->get('field_end_date')->value;
-        $end_time = \Drupal::service('date.formatter')
-          ->format(strtotime($end_time), 'custom', 'g:ia', drupal_get_user_timezone());
+        $end_time = strtotime($entity->get('field_end_date')->value);
+        $end_time = \Drupal\Core\Datetime\DrupalDateTime::createFromTimestamp($end_time);
+
+        $end_time = $end_time->format('g:ia');
 
 
         $build['event_time'] = [
