@@ -347,8 +347,8 @@
           var dataId = eventContent.find('.item.active .event-content').data("id");
           eventContent.find('.event-popup[data-id=' + dataId + ']').addClass('active');
 
-          var height = eventContent.find('.event-popup.active').outerHeight() + eventContent.find('.item.active').outerHeight() - 10;
-          eventContent.find('.event-popup.active').parents('ul.popup').css('top', -height);
+          // var height = eventContent.find('.event-popup.active').outerHeight() + eventContent.find('.item.active').outerHeight() - 10;
+          // eventContent.find('.event-popup.active').parents('ul.popup').css('top', -height);
 
         });
 
