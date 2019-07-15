@@ -4472,6 +4472,7 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   padding-top: .5rem;
   color: #333;
   cursor: pointer;
+  font-weight: bold;
 }
 
 .view-events-calendar .calendar-calendar table tbody tr td .day {
@@ -4515,6 +4516,10 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   position: inherit;
 }
 
+.view-events-calendar .calendar-calendar ul.popup li .event-popup .date .date-wrap .date-month {
+  text-transform: initial;
+}
+
 .view-events-calendar .calendar-calendar ul.popup li .event-popup .address .label {
   font-size: 18px;
   line-height: 26px;
@@ -4524,6 +4529,7 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   color: #E84708;
   font-size: 18px;
   line-height: 26px;
+  font-weight: bold;
 }
 
 .view-events-calendar .calendar-calendar ul.popup li .event-popup .content {
@@ -4532,6 +4538,7 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   font-size: 20px;
   line-height: 24px;
   margin: 5px 0 0;
+  color: #333;
 }
 
 .view-events-calendar .calendar-calendar ul.popup:after {
