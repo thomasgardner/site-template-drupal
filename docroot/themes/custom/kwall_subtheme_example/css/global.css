@@ -4554,6 +4554,14 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   margin-left: -135px;
 }
 
+.view-events-calendar .calendar-calendar ul.popup span.fa-close {
+  display: block;
+  float: right;
+  position: relative;
+  right: -15px;
+  cursor: pointer;
+}
+
 .view-events-calendar .calendar-calendar ul.popup li .event-popup .date {
   color: #005794;
   text-align: left;
