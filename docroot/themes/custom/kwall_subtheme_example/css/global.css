@@ -5224,26 +5224,36 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   color: #fff;
 }
 
+.page-user-login .views-page-title {
+  padding-top: 3rem;
+}
+
 @media (min-width: 768px) {
   .page-user-login .views-page-title {
     flex: 0 0 83.333333%;
     max-width: 83.333333%;
     left: 8.335%;
     position: relative;
-    padding-top: 115px;
+    padding-top: 75px;
   }
 }
 
 .page-user-login .layout-container {
   padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 .page-user-login .layout-container .layout-center {
-  flex: 0 0 83.333333%;
-  max-width: 83.333333%;
-  left: 8.335%;
-  position: relative;
   padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .page-user-login .layout-container .layout-center {
+    flex: 0 0 83.333333%;
+    max-width: 83.333333%;
+    left: 8.335%;
+    position: relative;
+  }
 }
 
 .page-user-login .layout-container .block-local-tasks-block .tabs.primary {

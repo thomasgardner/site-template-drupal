@@ -1,21 +1,25 @@
 .page-user-login {
   .views-page-title {
+    padding-top: 3rem;
     @media (min-width: $screen-sm-min) {
       flex: 0 0 83.333333%;
       max-width: 83.333333%;
       left: 8.335%;
       position: relative;
-      padding-top: 115px;
+      padding-top: 75px;
     }
   }
 
   .layout-container {
     padding-top: 4rem;
+    padding-bottom: 4rem;
     .layout-center {
-      flex: 0 0 83.333333%;
-      max-width: 83.333333%;
-      left: 8.335%;
-      position: relative;
+      @media (min-width: $screen-sm-min) {
+        flex: 0 0 83.333333%;
+        max-width: 83.333333%;
+        left: 8.335%;
+        position: relative;
+      }
       padding: 0 1rem;
     }
 
