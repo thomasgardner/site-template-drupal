@@ -5224,17 +5224,39 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   color: #fff;
 }
 
-.page-no-node.path-user main .region-content .block-local-tasks-block .tabs.primary {
+@media (min-width: 768px) {
+  .page-user-login .views-page-title {
+    flex: 0 0 83.333333%;
+    max-width: 83.333333%;
+    left: 8.335%;
+    position: relative;
+    padding-top: 115px;
+  }
+}
+
+.page-user-login .layout-container {
+  padding-top: 4rem;
+}
+
+.page-user-login .layout-container .layout-center {
+  flex: 0 0 83.333333%;
+  max-width: 83.333333%;
+  left: 8.335%;
+  position: relative;
+  padding: 0 1rem;
+}
+
+.page-user-login .layout-container .block-local-tasks-block .tabs.primary {
   border-bottom: 2px solid #a5a5a5;
 }
 
-.page-no-node.path-user main .region-content .block-local-tasks-block .tabs.primary li {
+.page-user-login .layout-container .block-local-tasks-block .tabs.primary li {
   margin: 0;
   padding: 0;
   line-height: normal;
 }
 
-.page-no-node.path-user main .region-content .block-local-tasks-block .tabs.primary li a {
+.page-user-login .layout-container .block-local-tasks-block .tabs.primary li a {
   height: 40px;
   color: #4a4a4a;
   display: flex;
@@ -5242,32 +5264,64 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   align-items: center;
 }
 
-.page-no-node.path-user main .region-content .block-local-tasks-block .tabs.primary li a:hover {
+.page-user-login .layout-container .block-local-tasks-block .tabs.primary li a:hover {
   color: #fff;
   background: #015794;
 }
 
-.page-no-node.path-user main .region-content .block-local-tasks-block .tabs.primary li.is-active a {
+.page-user-login .layout-container .block-local-tasks-block .tabs.primary li.is-active a {
   color: #fff;
   background: #015794;
   margin: 0;
 }
 
-.page-no-node.path-user main .region-content .block-system-main-block form .form-item {
+.page-user-login .layout-container form.user-pass .form-item, .page-user-login .layout-container form.user-login-form .form-item {
   margin-bottom: 40px;
 }
 
-.page-no-node.path-user main .region-content .block-system-main-block form .form-item input {
+.page-user-login .layout-container form.user-pass .form-item input, .page-user-login .layout-container form.user-login-form .form-item input {
   height: 50px;
   border-radius: 0;
   font-size: 16px;
 }
 
-.page-no-node.path-user main .region-content .block-system-main-block form .form-item input:focus {
+.page-user-login .layout-container form.user-pass .form-item input:focus, .page-user-login .layout-container form.user-login-form .form-item input:focus {
   background: #eee;
 }
 
-.page-no-node.path-user main .region-content .block-system-main-block form .form-actions input {
+.page-user-login .layout-container form.user-pass details.captcha, .page-user-login .layout-container form.user-login-form details.captcha {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.page-user-login .layout-container form.user-pass details.captcha summary, .page-user-login .layout-container form.user-pass details.captcha .details-description, .page-user-login .layout-container form.user-login-form details.captcha summary, .page-user-login .layout-container form.user-login-form details.captcha .details-description {
+  display: none;
+}
+
+.page-user-login .layout-container form.user-pass details.captcha .details-wrapper, .page-user-login .layout-container form.user-login-form details.captcha .details-wrapper {
+  padding: 0;
+  border: none;
+}
+
+.page-user-login .layout-container form.user-pass details.captcha .js-form-item-captcha-response span.field-prefix, .page-user-login .layout-container form.user-login-form details.captcha .js-form-item-captcha-response span.field-prefix {
+  display: block;
+  float: left;
+  line-height: 50px;
+  padding-right: 15px;
+}
+
+.page-user-login .layout-container form.user-pass details.captcha .js-form-item-captcha-response input, .page-user-login .layout-container form.user-login-form details.captcha .js-form-item-captcha-response input {
+  float: left;
+  width: 100px;
+  margin: 0;
+}
+
+.page-user-login .layout-container form.user-pass details.captcha .js-form-item-captcha-response .description, .page-user-login .layout-container form.user-login-form details.captcha .js-form-item-captcha-response .description {
+  clear: both;
+}
+
+.page-user-login .layout-container form.user-pass .form-actions input, .page-user-login .layout-container form.user-login-form .form-actions input {
   padding: 10.5px 30px;
 }
 
