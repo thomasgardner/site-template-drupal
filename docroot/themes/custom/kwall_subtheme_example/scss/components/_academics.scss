@@ -46,6 +46,13 @@
             color: $color-white;
           }
         }
+        @media (max-width: $screen-mobile) {
+          width: 100%;
+          padding: 5px 0;
+          &:first-child {
+            width: 100%;
+          }
+        }
       }
     }
   }
@@ -63,8 +70,9 @@
         cursor: pointer;
         font-size: 18px;
         font-weight: 600;
+        display: inline-flex;
         i.fa {
-          margin: 0 8px 0 0;
+          margin: 5px 8px 0 0;
         }
       }
     }

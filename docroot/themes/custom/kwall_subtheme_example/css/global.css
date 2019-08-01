@@ -5470,6 +5470,16 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   color: #fff;
 }
 
+@media (max-width: 767px) {
+  .view-academics .menu--academics-menu ul.menu li {
+    width: 100%;
+    padding: 5px 0;
+  }
+  .view-academics .menu--academics-menu ul.menu li:first-child {
+    width: 100%;
+  }
+}
+
 .view-academics .view-academic-filter-taxonomy-terms .view-content {
   display: flex;
   flex-flow: row wrap;
@@ -5482,10 +5492,11 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   cursor: pointer;
   font-size: 18px;
   font-weight: 600;
+  display: inline-flex;
 }
 
 .view-academics .view-academic-filter-taxonomy-terms .view-content .filter-toggle i.fa {
-  margin: 0 8px 0 0;
+  margin: 5px 8px 0 0;
 }
 
 .view-academics .view-academic-filter-taxonomy-terms .view-footer {

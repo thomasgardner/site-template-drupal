@@ -373,5 +373,15 @@
     }
   };
 
+  // Acadmic filters
+  $(document).ready(function () {
+    $('.view-academic-filter-taxonomy-terms .view-content .filter-button .filter-toggle').each(function () {
+      var $class = $(this).data('tid');
+      if (!$('.view-academics ' + $class).length) {
+        $(this).parent().addClass('inactive');
+      }
+    });
+  });
+
 
 })(jQuery, Drupal, drupalSettings);
