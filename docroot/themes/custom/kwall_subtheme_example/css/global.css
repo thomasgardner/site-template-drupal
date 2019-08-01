@@ -3941,6 +3941,38 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   padding-left: 10px;
 }
 
+.path-events .views-page-title {
+  float: left;
+  display: inline-block;
+}
+
+.cb-event-view-toggle {
+  float: right;
+  margin-top: 14px;
+}
+
+.cb-event-view-toggle .event-menu {
+  margin: 0;
+}
+
+.cb-event-view-toggle .event-menu li a {
+  padding: 4px 20px;
+  display: block;
+  border-radius: 3px;
+  border: 0.1rem solid #D1D0CE;
+  text-decoration: none;
+  color: #666;
+}
+
+.cb-event-view-toggle .event-menu li a:hover {
+  background: #015794;
+  color: #fff;
+}
+
+.cb-event-view-toggle + .block {
+  clear: both;
+}
+
 .view-id-event_view.view-display-id-page_1 .view-filters {
   background: #f0f0f0;
   padding: 2rem 2.5rem 3rem;
@@ -4832,7 +4864,7 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
 }
 
 .view-map-view .geolocation-common-map-container .gm-style .gm-style-iw-c {
-  padding: 16px 20px 8px 20px !important;
+  padding: 16px 20px 6px 20px !important;
 }
 
 .view-map-view .geolocation-common-map-container .gm-style .gm-style-iw-c .location-title {
