@@ -4831,6 +4831,38 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   }
 }
 
+.view-map-view .geolocation-common-map-container .location-title {
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  margin: 0;
+}
+
+.view-map-view .geolocation-common-map-container .location-content {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+
+.view-map-view .geolocation-common-map-container .location-content p:last-child {
+  margin-bottom: 0;
+}
+
+.view-map-view .geolocation-common-map-container .location-content .read-more-link {
+  display: inline-block;
+  font-size: 1.4rem;
+  font-family: "helvetica", Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1.7rem;
+  color: #E84708;
+  transition: 0.2s color ease;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+.view-map-view .geolocation-common-map-container .location-content .read-more-link:hover, .view-map-view .geolocation-common-map-container .location-content .read-more-link:focus {
+  color: #E84708;
+  text-decoration: underline;
+}
+
 .node--type-person .person--name {
   font-size: 52px;
 }
@@ -5345,6 +5377,127 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
 
 .paragraph--type--flexible-bg-image-blocks .bg-img-col-wrap .bg-img-container .content-wrapper {
   height: 100%;
+}
+
+.view-academics .menu--academics-menu ul.menu {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 -5px;
+}
+
+.view-academics .menu--academics-menu ul.menu li {
+  display: flex;
+  list-style: none;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  transition: .5s;
+  width: 22.5%;
+  padding: 0 5px;
+  min-height: 80px;
+}
+
+.view-academics .menu--academics-menu ul.menu li:first-child {
+  width: 10%;
+}
+
+.view-academics .menu--academics-menu ul.menu li a {
+  background: #eeeeee;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background 500ms;
+  font-weight: 600;
+  color: #333;
+  text-decoration: none;
+}
+
+.view-academics .menu--academics-menu ul.menu li a.is-active {
+  background: #015794;
+  color: #fff;
+}
+
+.view-academics .menu--academics-menu ul.menu li:hover a {
+  background: #015794;
+  color: #fff;
+}
+
+.view-academics .view-academic-filter-taxonomy-terms .view-content {
+  display: flex;
+  flex-flow: row wrap;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.view-academics .view-academic-filter-taxonomy-terms .view-content .filter-toggle {
+  color: #015794;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.view-academics .view-academic-filter-taxonomy-terms .view-content .filter-toggle i.fa {
+  margin: 0 8px 0 0;
+}
+
+.view-academics .view-academic-filter-taxonomy-terms .view-footer {
+  margin-top: 30px;
+  border-top: 2px solid #eeeeee;
+  padding-top: 18px;
+  text-align: center;
+}
+
+.view-academics .view-academic-filter-taxonomy-terms .view-footer .isotope-reset {
+  color: #015794;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.view-academics > .view-content {
+  margin: 40px -10px 30px -10px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.view-academics > .view-content .course {
+  background: #f2f2f2;
+  display: block;
+  height: 100%;
+  text-decoration: none;
+}
+
+.view-academics > .view-content .course-media {
+  position: relative;
+}
+
+.view-academics > .view-content .course-media img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.view-academics > .view-content .course-tags {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}
+
+.view-academics > .view-content .course-tags span {
+  background-color: rgba(255, 255, 255, 0.7);
+  font-size: 13px;
+  padding: 5px 10px;
+  color: #015794;
+  font-weight: 600;
+  transition: 0.2s all;
+  width: auto;
+}
+
+.view-academics > .view-content .course-description {
+  padding: 18px 22px;
+  min-height: 100px;
 }
 
 /*# sourceMappingURL=../sourcemaps/global.css.map */
