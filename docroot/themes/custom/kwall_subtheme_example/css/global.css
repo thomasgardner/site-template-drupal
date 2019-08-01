@@ -4786,26 +4786,6 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
 .view-map-view .geolocation-common-map-locations .geolocation {
   padding: 0.8rem 2rem 1.8rem;
   border-top: solid 0.5rem #d8d8d8;
-  /*.location {
-          &-title {
-            font-size: 2.4rem;
-            line-height: 3.2rem;
-            margin: 0;
-          }
-
-          &-content {
-            font-size: 1.6rem;
-            line-height: 2.4rem;
-
-            p:last-child {
-              margin-bottom: 0;
-            }
-
-            .read-more-link {
-              @include read_more_link($color-orange)
-            }
-          }
-        }*/
 }
 
 .view-map-view .geolocation-common-map-locations .geolocation .location-title {
@@ -4851,22 +4831,30 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   }
 }
 
-.view-map-view .geolocation-common-map-container .location-title {
+.view-map-view .geolocation-common-map-container .gm-style .gm-style-iw-c {
+  padding: 16px 20px 8px 20px !important;
+}
+
+.view-map-view .geolocation-common-map-container .gm-style .gm-style-iw-c .location-title {
   font-size: 2.4rem;
   line-height: 3.2rem;
   margin: 0;
 }
 
-.view-map-view .geolocation-common-map-container .location-content {
+.view-map-view .geolocation-common-map-container .gm-style .gm-style-iw-c .location-content {
   font-size: 1.6rem;
   line-height: 2.4rem;
 }
 
-.view-map-view .geolocation-common-map-container .location-content p:last-child {
+.view-map-view .geolocation-common-map-container .gm-style .gm-style-iw-c .location-content .views-field-field-address {
+  font-weight: 400;
+}
+
+.view-map-view .geolocation-common-map-container .gm-style .gm-style-iw-c .location-content p:last-child {
   margin-bottom: 0;
 }
 
-.view-map-view .geolocation-common-map-container .location-content .read-more-link {
+.view-map-view .geolocation-common-map-container .gm-style .gm-style-iw-c .location-content .read-more-link {
   display: inline-block;
   font-size: 1.4rem;
   font-family: "helvetica", Arial, sans-serif;
@@ -4878,7 +4866,7 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   text-decoration: none;
 }
 
-.view-map-view .geolocation-common-map-container .location-content .read-more-link:hover, .view-map-view .geolocation-common-map-container .location-content .read-more-link:focus {
+.view-map-view .geolocation-common-map-container .gm-style .gm-style-iw-c .location-content .read-more-link:hover, .view-map-view .geolocation-common-map-container .gm-style .gm-style-iw-c .location-content .read-more-link:focus {
   color: #E84708;
   text-decoration: underline;
 }

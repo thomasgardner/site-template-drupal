@@ -176,26 +176,3 @@
     }
   }
 }
-
-@mixin campus-location(){
-  .location {
-    &-title {
-      font-size: 2.4rem;
-      line-height: 3.2rem;
-      margin: 0;
-    }
-
-    &-content {
-      font-size: 1.6rem;
-      line-height: 2.4rem;
-
-      p:last-child {
-        margin-bottom: 0;
-      }
-
-      .read-more-link {
-        @include read_more_link($color-orange)
-      }
-    }
-  }
-}

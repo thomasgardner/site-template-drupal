@@ -24,7 +24,7 @@
         padding: 0.8rem 2rem 1.8rem;
         border-top: solid .5rem $color-grey;
 
-        /*.location {
+        .location {
           &-title {
             font-size: 2.4rem;
             line-height: 3.2rem;
@@ -43,8 +43,7 @@
               @include read_more_link($color-orange)
             }
           }
-        }*/
-        @include campus-location();
+        }
 
         &:last-child {
           border-bottom: solid .5rem $color-grey;
@@ -57,7 +56,34 @@
         width: 100% !important;
         margin-top: 3rem;
       }
-      @include campus-location();
+
+      .gm-style {
+        .gm-style-iw-c {
+          padding: 16px 20px 8px 20px !important;
+          .location {
+            &-title {
+              font-size: 2.4rem;
+              line-height: 3.2rem;
+              margin: 0;
+            }
+
+            &-content {
+              font-size: 1.6rem;
+              line-height: 2.4rem;
+              .views-field-field-address {
+                font-weight: 400;
+              }
+              p:last-child {
+                margin-bottom: 0;
+              }
+
+              .read-more-link {
+                @include read_more_link($color-orange)
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
