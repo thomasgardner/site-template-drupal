@@ -5266,6 +5266,11 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   display: none;
 }
 
+.mb-event-calendar {
+  float: left;
+  display: inline-block;
+}
+
 .mb-event-calendar ul.menu {
   margin: 0;
   padding: 0;
