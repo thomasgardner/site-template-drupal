@@ -365,22 +365,24 @@
           }
         });
 
-        $(document).on('click', '.view-events-calendar .single-day span.fa-close', function(){
+        $(document).on('click', '.view-events-calendar .single-day span.fa-close', function () {
           eventContent.find('.item').removeClass('active');
           eventContent.find('.event-popup').removeClass('active');
         });
       }
+
+      // Acadmic filters
+      $(document).ready(function () {
+        $('.view-academic-filter-taxonomy-terms .view-content .filter-button .filter-toggle').each(function () {
+          var $class = $(this).data('tid');
+          if (!$('.view-academics ' + $class).length) {
+            $(this).parent().addClass('inactive');
+          }
+        });
+      });
+
     }
   };
 
-  // Acadmic filters
-  jQuery(document).ready(function () {
-  jQuery('.view-academic-filter-taxonomy-terms .view-content .filter-button .filter-toggle').each(function () {
-    var $class = jQuery(this).data('tid');
-    if (!jQuery('.view-academics ' + $class).length) {
-      jQuery(this).parent().addClass('inactive');
-    }
-  });
-  });
 
 })(jQuery, Drupal, drupalSettings);
