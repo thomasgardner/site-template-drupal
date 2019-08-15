@@ -14,7 +14,7 @@ docroot/files
 docroot/sites/*/files
 docroot/sites/*/private
 private-files
-docroot/sites/default/config
+#docroot/sites/default/config
 kwall.dd/*
 *.css.map
 
