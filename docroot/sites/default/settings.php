@@ -778,36 +778,37 @@ $settings['entity_update_batch_size'] = 50;
 //   'port' => '3306',
 //   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
 //   'driver' => 'mysql',
-// );
-$config_directories['sync'] = 'sites/default/files/config_eKycI6T9tM9IzoGZpJv0Z8qu8vxoGX9ogLCH4Qqvbj4i7If3-nADF9gK__b2oTDZ_JJCDm6Tjg/sync';
-$settings['install_profile'] = 'standard';
+// ); switch ($_SERVER[HTTP_HOST]) {
+if($_SERVER[HTTP_HOST] == 'd8-template.dev-2.staging-preview.com' || $_SERVER[HTTP_HOST] == 'd8-template.dev-2.development-preview.com') {
+  $config_directories['sync'] = 'sites/default/files/config_eKycI6T9tM9IzoGZpJv0Z8qu8vxoGX9ogLCH4Qqvbj4i7If3-nADF9gK__b2oTDZ_JJCDm6Tjg/sync';
+  $settings['install_profile'] = 'standard';
 
-//D6 DB config
-$db_url = 'mysqli://drupaluser@127.0.0.1:33067/kwall';
+  //D6 DB config
+  $db_url = 'mysqli://drupaluser@127.0.0.1:33067/kwall';
 
-//D7 DB config
-if (!isset($databases))
-    $databases = array();
+  //D7 DB config
+  if (!isset($databases))
+      $databases = array();
 
-$databases['default']['default'] = array(
-    'driver' => 'mysql',
-    'database' => 'kwall',
-    'username' => 'drupaluser',
-    'password' => '',
-    'host' => '127.0.0.1',
-    'port' => 33067 );
+  $databases['default']['default'] = array(
+      'driver' => 'mysql',
+      'database' => 'kwall',
+      'username' => 'drupaluser',
+      'password' => '',
+      'host' => '127.0.0.1',
+      'port' => 33067 );
 
-$databases['default']['default'] = array (
-	  'database' => 'fresh',
-	    'username' => 'fresh',
-	      'password' => 'fresh',
-	        'host' => 'kwalldev3-cluster-1.cluster-cxjupadozp3r.us-west-2.rds.amazonaws.com',
-		  'port' => '3306',
-		    'driver' => 'mysql',
-		      'prefix' => '',
-		        'collation' => 'utf8mb4_general_ci',
-		);
-
+  $databases['default']['default'] = array (
+  	  'database' => 'fresh',
+  	    'username' => 'fresh',
+  	      'password' => 'fresh',
+  	        'host' => 'kwalldev3-cluster-1.cluster-cxjupadozp3r.us-west-2.rds.amazonaws.com',
+  		  'port' => '3306',
+  		    'driver' => 'mysql',
+  		      'prefix' => '',
+  		        'collation' => 'utf8mb4_general_ci',
+  		);
+}
 if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
   include $app_root . '/' . $site_path . '/settings.local.php';
 }
