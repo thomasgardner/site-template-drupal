@@ -2,10 +2,12 @@
 
 docroot/sites/*/settings.local.php
 docroot/sites/*/services.local.yml
-docroot/sites/*/settings*.php
+#docroot/sites/*/settings*.php
 docroot/sites/*/services*.yml
+!*/settings.pantheon.php
 
 docroot/!sites/default/settings.php
+docroot/!sites/default/settings.pantheon.php
 docroot/!sites/default/services.yml
 # Ignore paths that contain user-generated content.
 docroot/files
