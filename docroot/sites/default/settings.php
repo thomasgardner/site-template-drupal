@@ -779,7 +779,7 @@ $settings['entity_update_batch_size'] = 50;
 //   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
 //   'driver' => 'mysql',
 // ); switch ($_SERVER[HTTP_HOST]) {
-if($_SERVER[HTTP_HOST] == 'd8-template.dev-2.staging-preview.com' || $_SERVER[HTTP_HOST] == 'd8-template.dev-2.development-preview.com') {
+//if($_SERVER[HTTP_HOST] == 'd8-template.dev-2.staging-preview.com' || $_SERVER[HTTP_HOST] == 'd8-template.dev-2.development-preview.com') {
   $config_directories['sync'] = 'sites/default/files/config_eKycI6T9tM9IzoGZpJv0Z8qu8vxoGX9ogLCH4Qqvbj4i7If3-nADF9gK__b2oTDZ_JJCDm6Tjg/sync';
   $settings['install_profile'] = 'standard';
 
@@ -808,7 +808,7 @@ if($_SERVER[HTTP_HOST] == 'd8-template.dev-2.staging-preview.com' || $_SERVER[HT
   		      'prefix' => '',
   		        'collation' => 'utf8mb4_general_ci',
   		);
-}
+//}
 if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
   include $app_root . '/' . $site_path . '/settings.local.php';
 }
