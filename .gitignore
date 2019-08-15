@@ -3,7 +3,7 @@
 docroot/sites/*/settings.local.php
 docroot/sites/*/services.local.yml
 #docroot/sites/*/settings*.php
-docroot/sites/*/services*.yml
+#docroot/sites/*/services*.yml
 !*/settings.pantheon.php
 
 docroot/!sites/default/settings.php
