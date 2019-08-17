@@ -73,6 +73,22 @@
           }
         }
       }
+      &.menu-level-0 {
+        &> .menu__item {
+          &> a {
+            font-weight: bold;
+          }
+        }
+        .menu-level-1 {
+          .menu__item {
+            .menu__link {
+              padding: 4px 0 4px 40px;
+              min-height: auto;
+              height: auto;
+            }
+          }
+        }
+      }
     }
   }
   .block-ctools-block {
