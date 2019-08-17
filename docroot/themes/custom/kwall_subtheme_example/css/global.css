@@ -3529,6 +3529,7 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
 
 .view-hero-banner .hero-slideshow {
   height: calc(100vh - 107px);
+  margin: 0;
 }
 
 @media (max-width: 991px) {

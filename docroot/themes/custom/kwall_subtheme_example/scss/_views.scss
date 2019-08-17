@@ -127,6 +127,7 @@
   }
   .hero-slideshow {
     height: calc(100vh - 107px);
+    margin: 0;
     @media (max-width: $screen-tablet-max) {
       height: calc(100vh - 94px);
     }
