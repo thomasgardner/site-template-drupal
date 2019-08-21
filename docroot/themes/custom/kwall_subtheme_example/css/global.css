@@ -5681,4 +5681,93 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   min-height: 100px;
 }
 
+.paragraph--type--gridder .gridder {
+  width: 100%;
+  font-size: 0;
+  padding: 0;
+}
+
+.paragraph--type--gridder .gridder .gridder-list {
+  margin-left: 0;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 1.8rem;
+}
+
+.paragraph--type--gridder .gridder .gridder-list .icon-tile {
+  display: inline-block;
+  overflow: hidden;
+  padding: 20px 22px;
+  text-align: center;
+  transition: all 0.2s ease-out;
+  width: 100%;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .paragraph--type--gridder .gridder .gridder-list .icon-tile {
+    text-align: left;
+  }
+}
+
+.paragraph--type--gridder .gridder .gridder-list .icon-tile:hover {
+  background-color: #015794;
+  color: #fff;
+}
+
+.paragraph--type--gridder .gridder .gridder-list .icon-tile .icon-wrap {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+  .paragraph--type--gridder .gridder .gridder-list .icon-tile .icon-wrap {
+    float: left;
+    margin: 0;
+    margin-right: 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  .paragraph--type--gridder .gridder .gridder-list .icon-tile .icon-wrap img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid;
+    padding: 5px;
+    background: #fff;
+  }
+}
+
+.paragraph--type--gridder .gridder .gridder-list .icon-tile .title {
+  font-size: 1.8rem;
+}
+
+.paragraph--type--gridder .gridder .gridder-list.selectedItem .icon-tile {
+  background-color: #015794;
+}
+
+.paragraph--type--gridder .gridder .gridder-list.selectedItem .icon-tile .title {
+  color: #fff;
+}
+
+.paragraph--type--gridder .gridder .gridder-show {
+  margin-bottom: 20px;
+  display: block;
+  float: left;
+  width: 100%;
+  position: relative;
+  font-size: 1.8rem;
+}
+
+.paragraph--type--gridder .gridder .gridder-show .gridder-padding .gridder-navigation {
+  display: none;
+}
+
+.paragraph--type--gridder .gridder .gridder-show .gridder-padding .gridder-expanded-content {
+  background: #f5f5f5;
+  padding: 3rem 2rem;
+  margin: 0 10px;
+}
+
 /*# sourceMappingURL=../sourcemaps/global.css.map */

@@ -2,48 +2,66 @@
   .gridder {
     width: 100%;
     font-size: 0;
+    padding: 0;
+
     .gridder-list {
       margin-left: 0;
       display: inline-block;
       vertical-align: top;
-      width: 100%;
       font-size: 1.8rem;
+
       .icon-tile {
-        background-color: rgba(255, 255, 255, 0.55);
-        border-radius: 5px;
-        border-top: 6px solid #1A2D57;
         display: inline-block;
         overflow: hidden;
         padding: 20px 22px;
         text-align: center;
         transition: all 0.2s ease-out;
         width: 100%;
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, .25);
+        cursor: pointer;
+        @media (max-width: $screen-mobile) {
+         text-align: left;
+        }
         &:hover {
-          background-color: #1A2D57;
-          text-decoration: none;
+          background-color: $color-blue;
+          color: $color-white;
         }
+
         .icon-wrap {
-          height: 80px;
-          margin: auto;
-          margin-bottom: 30px;
-          padding: 14px;
-          width: 80px;
+          margin-bottom: 20px;
+          @media (max-width: $screen-mobile) {
+            float: left;
+            margin: 0;
+            margin-right: 15px;
+          }
+          img {
+            @media (max-width: $screen-mobile) {
+              height: 50px;
+              width: 50px;
+              border-radius: 50%;
+              border: 1px solid;
+              padding: 5px;
+              background: $color-white;
+            }
+          }
         }
-        .field-title {
-          color: #000;
+
+        .title {
+          font-size: 1.8rem;
         }
       }
 
       &.selectedItem {
         .icon-tile {
-          background-color: #1A2D57;
-          .field-title {
-            color: #fff;
+          background-color: $color-blue;
+
+          .title {
+            color: $color-white;
           }
         }
-
       }
     }
+
     .gridder-show {
       margin-bottom: 20px;
       display: block;
@@ -51,6 +69,18 @@
       width: 100%;
       position: relative;
       font-size: 1.8rem;
+
+      .gridder-padding {
+        .gridder-navigation {
+          display: none;
+        }
+
+        .gridder-expanded-content {
+          background: $color-grey-xlt;
+          padding: 3rem 2rem;
+          margin: 0 10px;
+        }
+      }
     }
   }
 }
