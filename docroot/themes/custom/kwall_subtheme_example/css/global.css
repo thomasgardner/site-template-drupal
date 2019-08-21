@@ -2555,6 +2555,7 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   background: #282B2D;
   color: #eeeeee;
   padding: 40px 0;
+  clear: both;
 }
 
 .layout-footer-content a {

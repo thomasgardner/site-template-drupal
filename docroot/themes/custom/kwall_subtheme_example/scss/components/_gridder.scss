@@ -1,0 +1,56 @@
+.paragraph--type--gridder {
+  .gridder {
+    width: 100%;
+    font-size: 0;
+    .gridder-list {
+      margin-left: 0;
+      display: inline-block;
+      vertical-align: top;
+      width: 100%;
+      font-size: 1.8rem;
+      .icon-tile {
+        background-color: rgba(255, 255, 255, 0.55);
+        border-radius: 5px;
+        border-top: 6px solid #1A2D57;
+        display: inline-block;
+        overflow: hidden;
+        padding: 20px 22px;
+        text-align: center;
+        transition: all 0.2s ease-out;
+        width: 100%;
+        &:hover {
+          background-color: #1A2D57;
+          text-decoration: none;
+        }
+        .icon-wrap {
+          height: 80px;
+          margin: auto;
+          margin-bottom: 30px;
+          padding: 14px;
+          width: 80px;
+        }
+        .field-title {
+          color: #000;
+        }
+      }
+
+      &.selectedItem {
+        .icon-tile {
+          background-color: #1A2D57;
+          .field-title {
+            color: #fff;
+          }
+        }
+
+      }
+    }
+    .gridder-show {
+      margin-bottom: 20px;
+      display: block;
+      float: left;
+      width: 100%;
+      position: relative;
+      font-size: 1.8rem;
+    }
+  }
+}
