@@ -1,0 +1,56 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.instagram.body
+    - field.field.node.instagram.field_insta_image
+    - field.field.node.instagram.field_insta_link
+    - image.style.large
+    - node.type.instagram
+  module:
+    - image
+    - link
+    - text
+    - user
+_core:
+  default_config_hash: cujsizFjP1fp1wcTfxGfxM2ceDcorRKf5xTC4iIePG4
+id: node.instagram.default
+targetEntityType: node
+bundle: instagram
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_insta_image:
+    type: image
+    weight: -1
+    region: content
+    settings:
+      image_style: large
+      image_link: ''
+    third_party_settings: {  }
+    label: hidden
+  field_insta_link:
+    weight: 103
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  links:
+    weight: 100
+    region: content
+  sharethis:
+    weight: -25
+    region: content
+hidden: {  }
