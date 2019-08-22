@@ -1,5 +1,0 @@
-services:
-  kwall_insta_feed.commands:
-    class: \Drupal\kwall_insta_feed\Commands\InstaFeedsCommands
-    tags:
-      - { name: drush.command }

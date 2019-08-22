@@ -1,8 +1,0 @@
-name: 'Instagram Feeds Import'
-type: module
-description: 'Import Feeds from Instagram'
-core: 8.x
-dependencies:
-  - node
-  - media_entity
-configure: kwall_insta_feed.insta_config_form
