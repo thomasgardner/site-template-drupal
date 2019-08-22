@@ -48,29 +48,33 @@
 %}
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
-    {% block content %}
+    <div class="container">
+      <div class="row">
+        {% block content %}
 
-    <ul class="gridder d-block">
-    {% for key, item in content.field_gridder_items if key|first != '#' %}
-      {% set paragraph_id = 'cta-block-' ~ item['#paragraph'].id.value %}
-      <li class="gridder-list col-md-3 col-sm-12" data-griddercontent="#{{ paragraph_id }}">
-        <div class="icon-tile">
-        {% if content.field_gridder_items[key]['#paragraph'].field_image.0.entity.field_media_image_12.entity.uri.value != '' %}
-        <div class="icon-wrap"><img src="{{ file_url(content.field_gridder_items[key]['#paragraph'].field_image.0.entity.field_media_image_12.entity.uri.value) }}" /></div>
-        {% endif %}
-        <div class="title">{{ item['#paragraph'].field_title.0.value|raw }}</div>
-        </div>
-      </li>
-    {% endfor %}
-    </ul>
+          <ul class="gridder d-block">
+            {% for key, item in content.field_gridder_items if key|first != '#' %}
+              {% set paragraph_id = 'cta-block-' ~ item['#paragraph'].id.value %}
+              <li class="gridder-list col-md-3 col-sm-12" data-griddercontent="#{{ paragraph_id }}">
+                <div class="icon-tile">
+                  {% if content.field_gridder_items[key]['#paragraph'].field_image.0.entity.field_media_image_12.entity.uri.value != '' %}
+                    <div class="icon-wrap"><img src="{{ file_url(content.field_gridder_items[key]['#paragraph'].field_image.0.entity.field_media_image_12.entity.uri.value) }}" /></div>
+                  {% endif %}
+                  <div class="title">{{ item['#paragraph'].field_title.0.value|raw }}</div>
+                </div>
+              </li>
+            {% endfor %}
+          </ul>
 
-    <div class="hidden">
-    {% for key, item in content.field_gridder_items if key|first != '#' %}
-      {% set paragraph_id = 'cta-block-' ~ item['#paragraph'].id.value %}
-      <div id="{{ paragraph_id }}" class="gridder-content">{{ item['#paragraph'].field_body_formatted.0.value|raw }}</div>
-    {% endfor %}
+          <div class="hidden">
+            {% for key, item in content.field_gridder_items if key|first != '#' %}
+              {% set paragraph_id = 'cta-block-' ~ item['#paragraph'].id.value %}
+              <div id="{{ paragraph_id }}" class="gridder-content">{{ item['#paragraph'].field_body_formatted.0.value|raw }}</div>
+            {% endfor %}
+          </div>
+
+        {% endblock %}
+      </div>
     </div>
-
-    {% endblock %}
   </div>
 {% endblock paragraph %}
