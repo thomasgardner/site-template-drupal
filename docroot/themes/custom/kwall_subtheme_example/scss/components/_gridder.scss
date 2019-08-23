@@ -8,12 +8,12 @@
       margin-left: 0;
       display: inline-block;
       vertical-align: top;
-      font-size: 1.8rem;
+      font-size: 1.6rem;
 
       .icon-tile {
         display: inline-block;
         overflow: hidden;
-        padding: 20px 22px;
+        padding: 50px 30px;
         text-align: center;
         transition: all 0.2s ease-out;
         width: 100%;
@@ -22,41 +22,67 @@
         @media (max-width: $screen-mobile) {
          text-align: left;
         }
-        &:hover {
-          background-color: $color-blue;
-          color: $color-white;
-        }
-
         .icon-wrap {
-          margin-bottom: 20px;
+          height: 80px;
+          width: 80px;
+          overflow: hidden;
+          border-radius: 100%;
+          background: $color-white;
+          margin: 0 auto 20px;
+          border: 1px solid $border-color;
           @media (max-width: $screen-mobile) {
             float: left;
             margin: 0;
             margin-right: 15px;
           }
           img {
+            width: 100%;
+            height: auto;
             @media (max-width: $screen-mobile) {
-              height: 50px;
-              width: 50px;
-              border-radius: 50%;
-              border: 1px solid;
-              padding: 5px;
-              background: $color-white;
             }
           }
         }
 
         .title {
-          font-size: 1.8rem;
+          font-size: 2.4rem;
+          line-height: 3.2rem;
+          font-weight: bold;
+          margin-bottom: 1.2rem;
+        }
+        .excerpt{
+          span{
+            display: block;
+            color: #E84708;
+            margin-top: 1rem;
+            @media (max-width: $screen-mobile) {
+              display: inline-block;
+            }
+          }
+        }
+        &:hover {
+          background-color: $color-blue;
+          color: $color-white;
+          .excerpt {
+            span {
+              color: $color-white;
+              text-decoration: underline;
+            }
+          }
         }
       }
 
       &.selectedItem {
         .icon-tile {
           background-color: $color-blue;
-
           .title {
             color: $color-white;
+          }
+          .excerpt {
+            color: $color-white;
+            span {
+              color: $color-white;
+              text-decoration: underline;
+            }
           }
         }
       }
