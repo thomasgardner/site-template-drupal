@@ -6,10 +6,9 @@
       $(window).bind("load", function () {
         if (Drupal.geolocation != undefined && !$('body').hasClass('kwall-map-processed')) {
 
-          $.each(drupalSettings.kwall_map.locations, function (i, el) {
+          $.each(drupalSettings.kwall_map.locations, function (i, KwallMapSettings) {
 
-            var KwallMapSettings = drupalSettings.kwall_map.locations[i],
-              imgOverlay = KwallMapSettings['overlay_' + i],
+            var imgOverlay = KwallMapSettings['overlay_' + i],
               neLat = KwallMapSettings['neLat_' + i],
               neLon = KwallMapSettings['neLon_' + i],
               swLat = KwallMapSettings['swLat_' + i],
@@ -88,17 +87,8 @@
                 });
               }, 250);
             }
-          });
 
-          var styles = drupalSettings.kwall_map['style'];
-          if (styles != '') {
-            // add custom map styles
-            setTimeout(function () {
-              Drupal.geolocation.maps[0].googleMap.setOptions({
-                styles: JSON.parse(styles)
-              });
-            }, 250);
-          }
+          });
 
           $('body').addClass('kwall-map-processed');
         }
