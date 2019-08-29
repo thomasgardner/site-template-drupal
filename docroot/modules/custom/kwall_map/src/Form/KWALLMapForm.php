@@ -70,11 +70,11 @@ class KWALLMapForm extends ConfigFormBase {
         'wrapper' => 'replace-textfield-container',
       ],
     ];
-    
+
     $initial = $config->get('num_campuses');
-    if ( $initial !== null ) {
+    if ($initial !== NULL) {
       $this->map_count = $initial;
-    } 
+    }
 
     $updated = $form_state->getValue('num_campuses');
     // The getValue() method returns NULL by default if the form element does
@@ -83,64 +83,65 @@ class KWALLMapForm extends ConfigFormBase {
       $this->map_count = $updated;
     }
 
-		for ($i = 1; $i <= $this->map_count; $i++) {
+    for ($i = 1; $i <= $this->map_count; $i++) {
 
-      $fid = $config->get('overlay_'.$i);
+      $fid = $config->get('overlay_' . $i);
       $image_url = '';
       if (isset($fid)) {
         foreach ($fid as $key => $value) {
           $image_url = '';
           $file = File::load($value);
           if ($file) {
-            $image_url = ImageStyle::load('medium')->buildUrl($file->getFileUri());
+            $image_url = ImageStyle::load('medium')
+              ->buildUrl($file->getFileUri());
           }
         }
       }
 
-    	$form['replace_textfield_container']['group_' . $i] = array(
-			  '#type' => 'details',
-			  '#title' => t('Campus #' . $i),
-			  '#open' => ($fid ? TRUE:FALSE),
-			  '#attributes' => array('class' => array('list-group-item'))
-			);
-      $form['replace_textfield_container']['group_' . $i]['overlay_'.$i] = [
+      $form['replace_textfield_container']['group_' . $i] = [
+        '#type' => 'details',
+        '#title' => t('Campus #' . $i),
+        '#open' => ($fid ? TRUE : FALSE),
+        '#attributes' => ['class' => ['list-group-item']],
+      ];
+      $form['replace_textfield_container']['group_' . $i]['overlay_' . $i] = [
         '#type' => 'managed_file',
-        '#title' => $this->t('Campus '.$i.' Overlay'),
+        '#title' => $this->t('Campus ' . $i . ' Overlay'),
         '#description' => $this->t('Upload the map overlay'),
         '#default_value' => $fid,
         '#upload_location' => 'public://kwall_map',
       ];
-      $form['replace_textfield_container']['group_' . $i]['overlay_path_'.$i] = [
+      $form['replace_textfield_container']['group_' . $i]['overlay_path_' . $i] = [
         '#type' => 'textfield',
         '#maxlength' => 9999,
-        '#attributes' => array('class' => array('hidden')),
-        '#default_value' => ($fid ? $image_url: ''),
+        '#attributes' => ['class' => ['hidden']],
+        '#default_value' => ($fid ? $image_url : ''),
       ];
-      $form['replace_textfield_container']['group_' . $i]['ne_lat_'.$i] = [
+      $form['replace_textfield_container']['group_' . $i]['ne_lat_' . $i] = [
         '#type' => 'textfield',
-        '#title' => $this->t('Campus '.$i.' Northeast Latitude'),
+        '#title' => $this->t('Campus ' . $i . ' Northeast Latitude'),
         '#description' => $this->t('Set the Northeast Latitude coordinates. Empty for default.'),
-        '#default_value' => $config->get('ne_lat_'.$i),
+        '#default_value' => $config->get('ne_lat_' . $i),
       ];
-      $form['replace_textfield_container']['group_' . $i]['ne_lon_'.$i] = [
+      $form['replace_textfield_container']['group_' . $i]['ne_lon_' . $i] = [
         '#type' => 'textfield',
-        '#title' => $this->t('Campus '.$i.' Northeast Longitude'),
+        '#title' => $this->t('Campus ' . $i . ' Northeast Longitude'),
         '#description' => $this->t('Set the Northeast Longitude coordinates. Empty for default.'),
-        '#default_value' => $config->get('ne_lon_'.$i),
+        '#default_value' => $config->get('ne_lon_' . $i),
       ];
-      $form['replace_textfield_container']['group_' . $i]['sw_lat_'.$i] = [
+      $form['replace_textfield_container']['group_' . $i]['sw_lat_' . $i] = [
         '#type' => 'textfield',
-        '#title' => $this->t('Campus '.$i.' Southwest Latitude'),
+        '#title' => $this->t('Campus ' . $i . ' Southwest Latitude'),
         '#description' => $this->t('Set the Southwest Latitude coordinates. Empty for default.'),
-        '#default_value' => $config->get('sw_lat_'.$i),
+        '#default_value' => $config->get('sw_lat_' . $i),
       ];
-      $form['replace_textfield_container']['group_' . $i]['sw_lon_'.$i] = [
+      $form['replace_textfield_container']['group_' . $i]['sw_lon_' . $i] = [
         '#type' => 'textfield',
-        '#title' => $this->t('Campus '.$i.' Southwest Longitude'),
+        '#title' => $this->t('Campus ' . $i . ' Southwest Longitude'),
         '#description' => $this->t('Set the Southwest Longitude coordinates. Empty for default.'),
-        '#default_value' => $config->get('sw_lon_'.$i),
+        '#default_value' => $config->get('sw_lon_' . $i),
       ];
-		}
+    }
 
     $form['actions']['submit'] = [
       '#type' => 'submit',
@@ -161,12 +162,12 @@ class KWALLMapForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-		$config = $this->config('kwall_map.settings');
+    $config = $this->config('kwall_map.settings');
     $config->set('num_campuses', $form_state->getValue('num_campuses'));
-		for ($i = 1; $i <= $form_state->getValue('num_campuses'); $i++) {
-	    foreach (Element::children($form['replace_textfield_container']['group_' . $i]) as $variable) {
-	      $config->set($variable, $form_state->getValue($form['replace_textfield_container']['group_' . $i][$variable]['#parents']));
-	    }		
+    for ($i = 1; $i <= $form_state->getValue('num_campuses'); $i++) {
+      foreach (Element::children($form['replace_textfield_container']['group_' . $i]) as $variable) {
+        $config->set($variable, $form_state->getValue($form['replace_textfield_container']['group_' . $i][$variable]['#parents']));
+      }
     }
     $config->save();
     parent::submitForm($form, $form_state);
@@ -178,4 +179,5 @@ class KWALLMapForm extends ConfigFormBase {
   function promptCallback(array &$form, FormStateInterface $form_state) {
     return $form['replace_textfield_container'];
   }
+
 }

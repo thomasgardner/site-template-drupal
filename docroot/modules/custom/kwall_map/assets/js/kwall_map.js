@@ -1,10 +1,22 @@
-(function ($, Drupal) {
+(function ($, Drupal, drupalSettings) {
 
-  Drupal.behaviors.kwall_map = {
+  'use strict';
+
+  /**
+   * The common functionality for the module.
+   *
+   * @type {{attach: Drupal.behaviors.kwallMap.attach}}
+   */
+  Drupal.behaviors.kwallMap = {
     attach: function (context, drupalSettings) {
 
+      // Fixme: We shouldn't use
+      //  '$(window).bind("load"' inside Drupal.behaviors.
       $(window).bind("load", function () {
-        if (Drupal.geolocation != undefined && !$('body').hasClass('kwall-map-processed')) {
+        // Fixme: Don't use "$('body').hasClass('kwall-map-processed')", use
+        // once(), see more:
+        // https://www.drupal.org/docs/8/api/javascript-api/javascript-api-overview.
+        if (Drupal.geolocation !== undefined && !$('body').hasClass('kwall-map-processed')) {
 
           $.each(drupalSettings.kwall_map.locations, function (i, KwallMapSettings) {
 
@@ -14,10 +26,10 @@
               swLat = KwallMapSettings['swLat_' + i],
               swLon = KwallMapSettings['swLon_' + i];
 
-            if (imgOverlay != '') {
-              var southWest = new google.maps.LatLng(swLat, swLon);
-              var northEast = new google.maps.LatLng(neLat, neLon);
-              var overlayBounds = new google.maps.LatLngBounds(southWest, northEast);
+            if (imgOverlay !== '') {
+              var southWest = new google.maps.LatLng(swLat, swLon),
+                northEast = new google.maps.LatLng(neLat, neLon),
+                overlayBounds = new google.maps.LatLngBounds(southWest, northEast);
 
               kwallOverlay.prototype = new google.maps.OverlayView();
 
@@ -35,8 +47,8 @@
               }
 
               /**
-               * onAdd is called when the map's panes are ready and the overlay has been
-               * added to the map.
+               * onAdd is called when the map's panes are ready and the overlay
+               * has been added to the map.
                */
               kwallOverlay.prototype.onAdd = function () {
                 var div = document.createElement('div');
@@ -57,12 +69,13 @@
               };
               kwallOverlay.prototype.draw = function () {
                 // We use the south-west and north-east
-                // coordinates of the overlay to peg it to the correct position and size.
-                // To do this, we need to retrieve the projection from the overlay.
+                // coordinates of the overlay to peg it to the correct position
+                // and size. To do this, we need to retrieve the projection
+                // from the overlay.
                 var overlayProjection = this.getProjection();
 
-                // Retrieve the south-west and north-east coordinates of this overlay
-                // in LatLngs and convert them to pixel coordinates.
+                // Retrieve the south-west and north-east coordinates of this
+                // overlay in LatLngs and convert them to pixel coordinates.
                 // We'll use these coordinates to resize the div.
                 var sw = overlayProjection.fromLatLngToDivPixel(this.bounds_.getSouthWest());
                 var ne = overlayProjection.fromLatLngToDivPixel(this.bounds_.getNorthEast());
@@ -95,16 +108,16 @@
 
       });
     }
-  }
+  };
 
- /**
+  /**
    * Toogle map sidebar POI content
    *
    * @type {{attach: Drupal.behaviors.mapInfoToggle.attach}}
    */
   Drupal.behaviors.mapInfoToggle = {
     attach: function (context, settings) {
-      $(document).ready(function(){
+      $(document).ready(function () {
         var content_toggle = $('.geolocation-common-map-locations .location-title span', context),
           map_content = $('.geolocation-common-map-locations .location-content .more-info', context);
 
@@ -117,7 +130,8 @@
             $(content_toggle).each(function () {
               $(content_toggle).removeClass('active');
             });
-          } else {
+          }
+          else {
             $(content_toggle).each(function () {
               $(content_toggle).removeClass('active');
             });
@@ -129,7 +143,8 @@
             $(map_content).each(function () {
               $(map_content).removeClass('active').slideUp();
             });
-          } else {
+          }
+          else {
             $(map_content).each(function () {
               $(map_content).removeClass('active').slideUp();
             });
@@ -154,6 +169,4 @@
     }
   };
 
-})(jQuery, Drupal);
-
-
+})(jQuery, Drupal, drupalSettings);

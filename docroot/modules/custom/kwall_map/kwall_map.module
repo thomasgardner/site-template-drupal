@@ -33,14 +33,14 @@ phrases and it\'ll do the rest.</p>
  * Implements hook_theme().
  */
 function kwall_map_theme($existing, $type, $theme, $path) {
-  $variables = array(
-    'kwall_map' => array(
-      'variables' => array(
+  $variables = [
+    'kwall_map' => [
+      'variables' => [
         'source_text' => NULL,
-      ),
+      ],
       'template' => 'kwall_map',
-    ),
-  );
+    ],
+  ];
   return $variables;
 }
 
@@ -48,15 +48,15 @@ function kwall_map_theme($existing, $type, $theme, $path) {
 function kwall_map_page_attachments(array &$variables) {
   $config = \Drupal::config('kwall_map.settings');
   $count = $config->get('num_campuses');
-  $variables['#attached']['drupalSettings']['kwall_map']['locations'][] = array('num_campuses' => $config->get('num_campuses'));
-  for ($i=1;$i<=$count;$i++) {
-    $variables['#attached']['drupalSettings']['kwall_map']['locations'][] = array(
-                                                                                'overlay'.$i => $config->get('overlay_path_'.$i),
-                                                                                'swLat_'.$i => $config->get('sw_lat_'.$i),
-                                                                                'swLon'.$i => $config->get('sw_lon_'.$i),
-                                                                                'neLat'.$i => $config->get('ne_lat_'.$i),
-                                                                                'neLon'.$i => $config->get('ne_lon_'.$i)
-                                                                              );
+  $variables['#attached']['drupalSettings']['kwall_map']['locations'][] = ['num_campuses' => $config->get('num_campuses')];
+  for ($i = 1; $i <= $count; $i++) {
+    $variables['#attached']['drupalSettings']['kwall_map']['locations'][] = [
+      'overlay' . $i => $config->get('overlay_path_' . $i),
+      'swLat_' . $i => $config->get('sw_lat_' . $i),
+      'swLon' . $i => $config->get('sw_lon_' . $i),
+      'neLat' . $i => $config->get('ne_lat_' . $i),
+      'neLon' . $i => $config->get('ne_lon_' . $i),
+    ];
   }
   $variables['#attached']['library'][] = 'kwall_map/kwall_map';
 }
