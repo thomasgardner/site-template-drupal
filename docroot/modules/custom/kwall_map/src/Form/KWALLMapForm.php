@@ -10,6 +10,8 @@ use Drupal\image\Entity\ImageStyle;
 
 class KWALLMapForm extends ConfigFormBase {
 
+  private $map_count;
+
   /**
    * {@inheritdoc}
    */
@@ -42,6 +44,7 @@ class KWALLMapForm extends ConfigFormBase {
       '#title' => $this->t("Choose the # of campus map overlay"),
       '#type' => 'select',
       '#options' => [
+        '0' => 0,
         '1' => 1,
         '2' => 2,
         '3' => 3,
@@ -62,20 +65,20 @@ class KWALLMapForm extends ConfigFormBase {
         'wrapper' => 'replace-textfield-container',
       ],
     ];
-
+    
     $initial = $config->get('num_campuses');
     if ( $initial !== null ) {
-      $count = $initial;
+      $this->map_count = $initial;
     } 
 
     $updated = $form_state->getValue('num_campuses');
     // The getValue() method returns NULL by default if the form element does
     // not exist. It won't exist yet if we're building it for the first time.
     if ($updated !== NULL) {
-      $count = $updated;
+      $this->map_count = $updated;
     }
 
-		for ($i = 1; $i <= $count; $i++) {
+		for ($i = 1; $i <= $this->map_count; $i++) {
 
       $fid = $config->get('overlay_'.$i);
       $image_url = '';
