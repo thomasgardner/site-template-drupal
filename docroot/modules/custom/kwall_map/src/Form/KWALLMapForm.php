@@ -10,7 +10,12 @@ use Drupal\image\Entity\ImageStyle;
 
 class KWALLMapForm extends ConfigFormBase {
 
-  private $map_count;
+  /**
+   * Store number of map overlay fields to display.
+   *
+   * @var
+   */
+  protected $map_count;
 
   /**
    * {@inheritdoc}
