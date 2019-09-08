@@ -2692,6 +2692,9 @@ nav.pager {
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis; }
+@media (max-width: 767px) {
+  .view-id-directory.view-display-id-page_1 > .view-content .profile-img img {
+    max-width: 250px; } }
 .view-id-directory.view-display-id-page_1 .fa:before {
   padding-right: 7px; }
 .view-id-directory.view-display-id-page_1 .view-header {

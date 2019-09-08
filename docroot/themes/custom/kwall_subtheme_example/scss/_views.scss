@@ -301,6 +301,13 @@
         }
       }
     }
+    .profile-img {
+      @media (max-width: $screen-mobile) {
+        img {
+          max-width: 250px;
+        }
+      }
+    }
   }
   .fa {
     &:before {
