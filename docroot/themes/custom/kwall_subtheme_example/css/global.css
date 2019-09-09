@@ -1361,6 +1361,19 @@ figcaption {
  * Accordions
  *
  ****/
+.paragraph--type--accordion .accordion-section-title {
+  font-size: 4rem;
+  line-height: 5.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.paragraph--type--accordion .toggle-all-wrap {
+  color: #005794;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
 .paragraph--type--accordion .card,
 .paragraph--type--accordion .card-header {
   border: none;
@@ -1376,12 +1389,16 @@ figcaption {
 .paragraph--type--accordion .card-header {
   font-size: 2.4rem;
   font-weight: bold;
-  margin-bottom: 2px;
+  margin-bottom: 0;
+  background: none;
 }
 
 .paragraph--type--accordion .card-header a {
   display: block;
   padding: 11px 20px;
+  color: #333;
+  margin-bottom: 2px;
+  background-color: rgba(0, 0, 0, 0.03);
 }
 
 .paragraph--type--accordion .card-header a:after {
@@ -1390,19 +1407,27 @@ figcaption {
   float: right;
 }
 
+.paragraph--type--accordion .card-header a[aria-expanded=true] {
+  background-color: #005794;
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.paragraph--type--accordion .card-header a[aria-expanded=true]:after {
+  content: "\f068";
+}
+
 .paragraph--type--accordion .card-body {
   border: 1px solid #a7a7a7;
+  border-top: 0;
   margin-bottom: 4px;
   padding: 28px 34px;
 }
 
-.paragraph--type--accordion [aria-expanded=true] {
-  background-color: #005794;
-  color: #fff;
-}
-
-.paragraph--type--accordion [aria-expanded=true]:after {
-  content: "\f068";
+.paragraph--type--accordion .card-body .paragraph-title {
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 3.2rem;
 }
 
 /****

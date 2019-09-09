@@ -106,7 +106,9 @@
             {% else %}
               <div id="{{paragraph_id}}" class="collapse hide" aria-labelledby="headingOne">
             {% endif %}
-                <div class="card-body">{{ item['#paragraph'].field_body_formatted.value|raw }}</div>
+                <div class="card-body">
+                    {% if item['#paragraph'].field_title_2.value %}<h3 class="paragraph-title">{{ item['#paragraph'].field_title_2.value }}</h3>{% endif %}
+                    {{ item['#paragraph'].field_body_formatted.value|raw }}</div>
               </div>
             </div>
           </div>

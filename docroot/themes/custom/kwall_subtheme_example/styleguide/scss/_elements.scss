@@ -226,6 +226,17 @@ figcaption {
  *
  ****/
 .paragraph--type--accordion {
+	.accordion-section-title {
+		font-size: 4rem;
+		line-height: 5.2rem;
+		font-weight: 600;
+		margin-bottom: 10px;
+	}
+	.toggle-all-wrap {
+		color: $color-blue;
+		margin-top: 20px;
+		cursor: pointer;
+	}
 	.card,
 	.card-header {
 		border: none;
@@ -238,30 +249,43 @@ figcaption {
 	.card-header {
 		font-size: 2.4rem;
 		font-weight: bold;
-		margin-bottom: 2px;
+		margin-bottom: 0;
+		background: none;
 		a {
 			display: block;
 			padding: 11px 20px;
+			color: #333;
+			margin-bottom: 2px;
+			background-color: rgba(0,0,0,.03);
+
 			&:after {
 				content: "\f067";
 				font-family: $font-awesome; 
 				float: right;
 			}
+			&[aria-expanded=true] {
+				background-color: $color-blue;
+				color: #fff;
+				margin-bottom: 0;
+				&:after {
+					content: "\f068";
+				}
+			}
 		}
 	}
 	.card-body {
 		border: 1px solid $color-style-dark-grey;
+		border-top: 0;
 		margin-bottom: 4px;
 		padding: 28px 34px;
-	}
-	//active
-	[aria-expanded=true] {
-		background-color: $color-blue;
-		color: #fff;
-		&:after {
-			content: "\f068"; 
+		.paragraph-title {
+			font-size: 2.4rem;
+			font-weight: 600;
+			line-height: 3.2rem;
 		}
 	}
+	//active
+
 }
 
 

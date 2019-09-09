@@ -115,6 +115,10 @@
       $('.paragraph--type--accordion', context).once('commnTweaks').each(function () {
         var $toggle_all = $(this).find('.toggle-all');
 
+        if($('.paragraph--type--accordion .collapse.show').length) {
+            $('.paragraph--type--accordion .collapse.show').prev().find('a').attr('aria-expanded', 'true');
+        }
+
         if ($toggle_all.length) {
           var $accordion_parent = $(this),
             $accordion_parent_id = $(this).attr('id'),
