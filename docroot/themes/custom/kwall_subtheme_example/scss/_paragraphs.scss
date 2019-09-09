@@ -6,15 +6,18 @@
   padding: 90px 15px;
   text-align: center;
   color: #f5f5f5;
-  .paragraph.container, .content-wrapper{
+
+  .paragraph.container, .content-wrapper {
     max-width: 700px;
     padding: 50px 60px 30px 60px;
-    background: rgba(0,87,148, 0.8);
+    background: rgba(0, 87, 148, 0.8);
+
     .field--name-field-title {
       @include section_title();
       margin-bottom: 0;
       color: #fff;
     }
+
     .field--name-field-subtitle {
       color: #f5f5f5;
       font-size: 3rem;
@@ -22,11 +25,13 @@
       font-weight: bold;
       margin-bottom: 1.3rem;
     }
+
     .field--name-field-body-unformatted {
       font-size: 1.6rem;
       line-height: 2.4rem;
       margin-bottom: 2.2rem;
     }
+
     .field--name-field-links {
       a {
         border-radius: 0;
@@ -42,10 +47,12 @@
         display: inline-block;
         margin-right: 1em;
         margin-left: 1em;
+
         &:hover {
           background-color: #fff;
           color: #005794;
         }
+
         &:first-child {
           margin-left: 0;
           margin-right: 0;
@@ -54,13 +61,16 @@
     }
   }
 }
+
 .paragraph--type--flexible-bg-image-blocks {
   .bg-img-container {
     .content-wrapper {
       margin: 0 auto;
+
       a {
         text-decoration: none;
       }
+
       .field--name-field-subtitle {
         font-size: 1.6rem;
         line-height: 2.4rem;
@@ -70,6 +80,7 @@
       }
     }
   }
+
   &.container-fluid {
     .cta-image-block-section-title {
       padding-left: 15px;
@@ -82,27 +93,33 @@
   .video-carousel {
     .tab-title-wrap {
       padding-right: 25px;
+
       .tab-title {
         border-top: 4px solid #d8d8d8;
         padding: 13px 17px;
         cursor: pointer;
+
         &:last-child {
           border-bottom: 4px solid #d8d8d8;
         }
+
         @media (max-width: 784px) {
           border: 0;
           padding: 15px;
         }
+
         &:focus, &:hover {
           outline: 0;
           background: #d8d8d8;
         }
+
         h3 {
           font-size: 2.4rem;
           line-height: 3.2rem;
           font-weight: normal;
           margin-bottom: 0;
         }
+
         h4 {
           font-size: 1.6rem;
           line-height: 2.4rem;
@@ -120,9 +137,11 @@
       @media #{$mobile} {
         margin-bottom: 40px;
       }
+
       .field--name-field-view-reference, .column-content-inner {
         overflow: hidden;
       }
+
       .field--name-field-view-reference {
         > .field__item, .views-element-container, .view-event-view, .view-content {
           height: inherit;
@@ -134,8 +153,8 @@
           @media (min-width: $screen-sm-min) {
             background-color: #F4F5F5;
             background-clip: content-box;
-            padding-bottom: 25px;
-            height: inherit;
+            //padding-bottom: 25px;
+            //height: inherit;
           }
         }
       }
@@ -147,6 +166,7 @@
     .views-row {
       overflow: hidden;
     }
+
     .post-title, .title {
       font-size: 2.4rem;
       line-height: 3.2rem;
@@ -154,13 +174,17 @@
       @media (max-width: $screen-tablet-max) {
         font-size: 2rem;
         line-height: 2.6rem;
-      }    }
+      }
+    }
+
     .title {
       margin-bottom: 6px;
     }
+
     .post-title {
       margin-bottom: 1.5rem;
     }
+
     .post-date, .time {
       font-weight: normal;
       font-size: 1.4rem;
@@ -168,12 +192,14 @@
       text-transform: none;
       margin-bottom: 1.5rem;
     }
+
     .post-link a {
       text-decoration: none;
       font-size: 1.4rem;
       line-height: 1.9rem;
     }
   }
+
   .view-event-view {
     .views-row {
       @media (min-width: $screen-sm-min) {
@@ -182,11 +208,13 @@
       background: none !important;
       margin-bottom: 0 !important;
       padding-bottom: 25px;
+
       > .views-field-nothing {
         background: #F4F5F5;
         height: 100%;
       }
     }
+
     .event-wrap {
       margin-bottom: 0 !important;
     }
@@ -194,16 +222,20 @@
 
   .view-article-view {
     height: inherit;
+
     .views-row {
       @media (min-width: $screen-sm-min) {
         height: 50%;
       }
+
       .views-field-nothing {
         height: 100%;
+
         .field-content {
           display: block;
           height: inherit;
         }
+
         .post-wrap {
           padding-bottom: 25px;
           height: inherit;
@@ -216,10 +248,12 @@
 
   .field--name-field-link, .field--name-field-link-2, .post-link {
     line-height: 1;
+
     a {
       @include link_orange();
     }
   }
+
   .field--name-field-link, .field--name-field-link-2 {
     margin-top: -5px;
     @media #{$mobile} {
@@ -230,16 +264,19 @@
   .field--name-field-title, .field--name-field-title-2 {
     @include section_title();
   }
+
   .field--type-image {
     img {
       width: 100%;
     }
   }
+
   .event-date-wrap {
     .date-day {
       font-size: 2.8rem;
       line-height: 3.7rem;
     }
+
     .date-month {
       font-size: 1.5rem;
       line-height: 2rem;
@@ -251,24 +288,30 @@
     background-color: $color-style-light-grey;
     margin-bottom: 25px;
   }
+
   .post-wrap {
     .content-wrap {
       padding: 18px;
     }
   }
+
   .post-body {
     margin-bottom: 1.5rem;
   }
+
   .post-body, .field--name-field-body-formatted {
     font-size: 1.6rem;
     line-height: 2.4rem;
   }
+
   .field--name-field-body-formatted {
-    padding: 18px;
+    padding: 18px 18px 9px;
   }
+
   .view-display-id-block_2, .view-event-view.view-display-id-block_1 {
     background: none;
   }
+
   .view-event-view.view-display-id-block_1 {
     .content-wrap {
       margin-left: 54px;
@@ -280,6 +323,7 @@
   .view-article-view {
     > .view-content, .views-row, .views-field-field-media-image-9, .field-content {
       height: 100%;
+
       .post-wrap {
         height: calc(100% - 25px);
       }
@@ -294,6 +338,7 @@
     line-height: rem-calc(52);
     margin-bottom: rem-calc(24);
   }
+
   p {
     font-size: rem-calc(24);
     line-height: rem-calc(34);
@@ -308,15 +353,18 @@
     margin: 10px;
     padding: 48px 20px;
     text-align: center;
+
     h4 {
       font-size: rem-calc(24);
       line-height: rem-calc(32);
       margin-bottom: rem-calc(18);
     }
+
     p {
       font-size: rem-calc(16);
       line-height: rem-calc(24);
     }
+
     a {
       @include button-text($color-orange, $color-white);
       position: relative;
@@ -326,9 +374,11 @@
 
     &:hover {
       background-color: $color-blue;
+
       h4, p, a {
         color: $color-white;
       }
+
       a {
         text-decoration: underline;
       }
@@ -338,17 +388,82 @@
 
 .paragraph--type--interior-slideshow-slide {
   .slide-content {
-    background: rgba(0,0,0,0.62);
-    color: #fff;
+    @media (min-width: $screen-sm-min) {
+      background: rgba(0, 0, 0, 0.62);
+      color: #fff;
+    }
+
     .field--name-field-title {
       line-height: 3.2rem;
       font-weight: bold;
     }
+
     .field--name-field-body-formatted {
       font-size: 1.4rem;
       line-height: 2.2rem;
     }
 
+  }
+}
+
+.flexslider.interior-slideshow {
+  margin: 0;
+
+  .paragraph--type--interior-slideshow {
+    @media (max-width: $screen-mobile) {
+      background: #F4F5F5;
+    }
+
+    .paragraph--type--interior-slideshow-slide {
+      .slide-content {
+        padding: 15px 15px 25px 15px;
+        @media (max-width: $screen-mobile) {
+          position: unset;
+        }
+      }
+    }
+
+    & + .controls {
+      @media (max-width: $screen-mobile) {
+        position: absolute;
+        bottom: -10px;
+        padding: 0 7px;
+      }
+      .custom-controls-container {
+        @media (min-width: $screen-sm-min) {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          padding: 0 15px;
+        }
+
+        .play, .pause {
+          display: none;
+        }
+
+        .flex-control-nav {
+          margin-left: 0;
+          @media (min-width: $screen-sm-min) {
+            margin-left: -7px;
+          }
+
+          li {
+            a {
+              @media (min-width: $screen-sm-min) {
+                background: #fff;
+              }
+              &.flex-active {
+                @media (min-width: $screen-sm-min) {
+                  background: none;
+                  border: 1px solid #fff;
+                }
+                line-height: 27px;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -358,6 +473,7 @@
     float: left;
     margin-bottom: 2rem;
   }
+
   .field--name-field-link {
     float: right;
     line-height: 5.2rem;
@@ -365,54 +481,66 @@
       line-height: 3.5rem;
     }
   }
+
   .row {
     clear: both;
   }
+
   .field--name-field-link, .views-field-view-node-1 {
     a {
       @include link_orange();
     }
   }
+
   .views-field-field-name {
     margin-top: 1.5rem;
+
     .full-name {
       font-size: 2.4rem;
       line-height: 3.2rem;
       font-weight: bold;
     }
+
     .credentials {
       font-size: 1.6rem;
       line-height: 2.4rem;
     }
   }
+
   a:focus {
     outline: 0;
   }
+
   .view-id-carousels.view-display-id-block_1 .slick-list .slick-slide {
-    padding: 0 13px;
+    padding: 0 8px;
   }
+
   .slick-prev, .slick-next {
     transform: translateY(-50%);
     color: #ffffff;
     transition: ease all 0.4s;
-    text-shadow: 0px 0px 5px rgba(0,0,0,0.6);
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6);
     top: 30%;
+
     &:hover, &:focus {
       &:before {
         opacity: 0.5;
       }
     }
+
     &:before {
       font-size: 5rem;
       font-family: $font-awesome;
       opacity: 1;
     }
   }
+
   .slick-prev {
     &:before {
       content: "\f104";
     }
   }
+
   .slick-next {
     &:before {
       content: "\f105";
@@ -425,12 +553,18 @@
   .field--name-field-body-formatted {
     font-size: 1.6rem;
     line-height: 2.4rem;
+
     h3 {
       font-size: 3.2rem;
       margin-bottom: 1rem;
       @media (max-width: $screen-mobile) {
         font-size: 2.2rem;
       }
+    }
+
+    a {
+      color: #E84708;
+      text-decoration: none;
     }
   }
 
@@ -452,11 +586,53 @@
     }
 
   }
+
   &.media-right-mobile-top {
     .content-wrap {
       @media (max-width: $screen-mobile) {
         margin-top: 1.6rem;
       }
+    }
+  }
+}
+
+.paragraph--type--quicktabs {
+  margin-top: 0;
+
+  .field--name-field-title {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .nav-tabs {
+    .nav-link {
+      background: $color-grey-lt;
+      text-decoration: none;
+      color: $color-body;
+
+      &.active {
+        background-color: $color-blue;
+        color: $color-white;
+      }
+    }
+  }
+}
+
+.paragraph--type--quicktab-item {
+  border: 1px solid #dee2e6;
+  border-top: 0;
+  margin-top: 0;
+
+  .field--name-field-body-formatted {
+    padding: 20px;
+  }
+}
+
+.paragraph--type--column-section {
+  .view-event-view {
+    .views-row {
+      height: auto;
     }
   }
 }

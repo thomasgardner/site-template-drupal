@@ -19,6 +19,11 @@ function menu_link_content_post_update_make_menu_link_content_revisionable(&$san
   $entity_type = $definition_update_manager->getEntityType('menu_link_content');
   $field_storage_definitions = $last_installed_schema_repository->getLastInstalledFieldStorageDefinitions('menu_link_content');
 
+  // Remove revision tables before run update.
+  if (\Drupal::database()->schema()->tableExists('menu_link_content_revision')) {
+    \Drupal::database()->schema()->dropTable('menu_link_content_revision');
+    \Drupal::database()->schema()->dropTable('menu_link_content_field_revision');
+  }
   // Update the entity type definition.
   $entity_keys = $entity_type->getKeys();
   $entity_keys['revision'] = 'revision_id';
@@ -33,6 +38,13 @@ function menu_link_content_post_update_make_menu_link_content_revisionable(&$san
     'revision_log_message' => 'revision_log_message',
   ];
   $entity_type->set('revision_metadata_keys', $revision_metadata_keys);
+  // Skip update when entity is already revisionable.
+  if (\Drupal::database()->schema()->tableExists('taxonomy_term_revision')) {
+    \Drupal::database()->schema()->dropTable('taxonomy_term_revision');
+    \Drupal::database()->schema()->dropTable('taxonomy_term_field_revision');
+    \Drupal::database()->schema()->dropTable('taxonomy_term_revision__parent');
+    \Drupal::database()->schema()->dropTable('taxonomy_term_revision__field_safe_name');
+  }
 
   // Update the field storage definitions and add the new ones required by a
   // revisionable entity type.

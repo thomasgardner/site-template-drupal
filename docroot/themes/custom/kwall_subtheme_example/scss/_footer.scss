@@ -2,6 +2,7 @@
   background: #282B2D;
   color: #eeeeee;
   padding: 40px 0;
+  clear: both;
   a {
     color: #eeeeee;
     text-decoration: none;
@@ -23,9 +24,13 @@
         width: 36%;
         .field__item {
           display: flex;
+          flex-flow: row wrap;
         }
-        .footer-logo-left, .footer-logo-right {
-          width: 50%;
+        .footer-logo-left {
+          flex: auto;
+          img {
+            margin-top: 6px;
+          }
         }
       }
       @media #{$mobile} {
@@ -56,6 +61,8 @@
         li {
           @media #{$tablet-min} {
             width: 50%;
+            padding-bottom: 0.2rem;
+            padding-top: 0;
           }
           a {
             color: #eeeeee;
@@ -78,9 +85,16 @@
       .field--name-field-title {
         display: inline-block;
         padding-right: 5px;
+        @media (min-width: $screen-sm-min) {
+          float: left;
+          margin-top: 3px;
+        }
       }
       .field--name-field-link {
         display: inline-block;
+        @media (min-width: $screen-sm-min) {
+          margin-top: 6px;
+        }
         a {
           font-size: 1.8rem;
           letter-spacing: 0.8rem;
@@ -110,3 +124,5 @@
     margin-bottom: 0;
   }
 }
+
+

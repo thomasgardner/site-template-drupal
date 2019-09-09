@@ -1,17 +1,20 @@
 .container {
   max-width: $width-page;
 }
+
 .layout-container {
   min-height: unset;
 }
 
 .node__content {
   margin-bottom: 6rem;
+
   h1 {
     font-size: 4rem;
     line-height: 5.2rem;
     margin-bottom: 2rem;
   }
+
   p {
     //font-size: 2.4rem;
     //line-height: 3.4rem;
@@ -32,21 +35,26 @@
 .section-title {
   @include section_title();
 }
+
 .slick-dots {
   bottom: auto;
   margin-top: 2rem;
   position: relative;
+
   li {
     margin: 0;
+
     button {
       width: 12px;
       height: 12px;
       background: #696666;
       border-radius: 100%;
+
       &:before {
         display: none;
       }
     }
+
     &.slick-active {
       button {
         background: none;
@@ -57,32 +65,47 @@
     }
   }
 }
+
 figure {
   &.embedded-entity {
     width: 48%;
+
+    img {
+      width: 100%;
+    }
+
     &.align-right {
       article {
         margin-left: 20px;
       }
+
       figcaption {
         margin-left: 20px;
         width: calc(100% - 20px);
+        padding: 18px 25px;
+        font-size: 16px;
       }
     }
+
     &.align-left {
       article {
         margin-right: 20px;
       }
+
       figcaption {
         margin-right: 20px;
         width: calc(100% - 20px);
+        padding: 18px 25px;
+        font-size: 16px;
       }
     }
+
     article {
       p {
         margin-bottom: 0;
       }
     }
+
     figcaption {
       border: 1px solid #eee;
     }
@@ -105,28 +128,34 @@ figure {
 nav.pager {
   text-align: center;
   margin-top: 20px;
+
   .pager__items {
     display: inline-block;
+
     .pager__item {
       padding: 0;
       display: block;
       float: left;
       margin-left: -1px;
+
       a {
         display: inline-block;
         padding: 9px 18px;
         color: #005794;
+
         &:hover, &:focus, &:active {
           color: #fff;
           background-color: $color-orange;
         }
       }
+
       &.is-active {
         a {
           font-weight: normal;
           color: #fff;
         }
       }
+
       &--next, &--previous, &--last, &--first {
         a {
           &:hover, &:focus, &:active {
@@ -136,5 +165,26 @@ nav.pager {
         }
       }
     }
+  }
+}
+.node__content {
+  .field--name-field-intro {
+    font-size: 2.4rem;
+    line-height: 3.4rem;
+    margin-bottom: 15px;
+  }
+}
+
+
+.page-node-type-page {
+  .node__content {
+    margin-bottom: 0;
+  }
+}
+
+.intro-text {
+  p {
+    font-size: 24px;
+    line-height: 34px;
   }
 }

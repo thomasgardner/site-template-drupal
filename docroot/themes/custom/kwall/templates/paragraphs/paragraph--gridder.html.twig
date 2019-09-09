@@ -51,6 +51,7 @@
     {% block content %}
 
     <ul class="gridder">
+
     {% for key, item in content.field_gridder_items if key|first != '#' %}
       {% set paragraph_id = 'cta-block-' ~ item['#paragraph'].id.value %}
       <li class="gridder-list" data-griddercontent="#{{ paragraph_id }}">
@@ -60,6 +61,7 @@
         <div class="title">{{ item['#paragraph'].field_title.0.value|raw }}</div>
       </li>
     {% endfor %}
+
     </ul>
 
     <div class="hidden">

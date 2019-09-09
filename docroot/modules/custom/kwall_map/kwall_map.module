@@ -33,41 +33,30 @@ phrases and it\'ll do the rest.</p>
  * Implements hook_theme().
  */
 function kwall_map_theme($existing, $type, $theme, $path) {
-  $variables = array(
-    'kwall_map' => array(
-      'variables' => array(
+  $variables = [
+    'kwall_map' => [
+      'variables' => [
         'source_text' => NULL,
-      ),
+      ],
       'template' => 'kwall_map',
-    ),
-  );
+    ],
+  ];
   return $variables;
 }
 
 
 function kwall_map_page_attachments(array &$variables) {
   $config = \Drupal::config('kwall_map.settings');
-  $variables['#attached']['drupalSettings']['kwall_map']['style'] = $config->get('style');
-  $variables['#attached']['drupalSettings']['kwall_map']['locations'][] = array(
-                                                                      'overlay_0' => $config->get('overlay_path_0'),
-                                                                      'swLat_0' => $config->get('sw_lat_0'),
-                                                                      'swLon_0' => $config->get('sw_lon_0'),
-                                                                      'neLat_0' => $config->get('ne_lat_0'),
-                                                                      'neLon_0' => $config->get('ne_lon_0')
-                                                                    );
-  $variables['#attached']['drupalSettings']['kwall_map']['locations'][] = array(
-                                                                      'overlay_1' => $config->get('overlay_path_1'),
-                                                                      'swLat_1' => $config->get('sw_lat_1'),
-                                                                      'swLon_1' => $config->get('sw_lon_1'),
-                                                                      'neLat_1' => $config->get('ne_lat_1'),
-                                                                      'neLon_1' => $config->get('ne_lon_1')
-                                                                    );
-  $variables['#attached']['drupalSettings']['kwall_map']['locations'][] = array(
-                                                                      'overlay_2' => $config->get('overlay_path_2'),
-                                                                      'swLat_2' => $config->get('sw_lat_2'),
-                                                                      'swLon_2' => $config->get('sw_lon_2'),
-                                                                      'neLat_2' => $config->get('ne_lat_2'),
-                                                                      'neLon_2' => $config->get('ne_lon_2')
-                                                                    );
+  $count = $config->get('num_campuses');
+  $variables['#attached']['drupalSettings']['kwall_map']['locations'][] = ['num_campuses' => $config->get('num_campuses')];
+  for ($i = 1; $i <= $count; $i++) {
+    $variables['#attached']['drupalSettings']['kwall_map']['locations'][] = [
+      'overlay' . $i => $config->get('overlay_path_' . $i),
+      'swLat_' . $i => $config->get('sw_lat_' . $i),
+      'swLon' . $i => $config->get('sw_lon_' . $i),
+      'neLat' . $i => $config->get('ne_lat_' . $i),
+      'neLon' . $i => $config->get('ne_lon_' . $i),
+    ];
+  }
   $variables['#attached']['library'][] = 'kwall_map/kwall_map';
 }

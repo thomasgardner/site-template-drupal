@@ -127,6 +127,7 @@
   }
   .hero-slideshow {
     height: calc(100vh - 107px);
+    margin: 0;
     @media (max-width: $screen-tablet-max) {
       height: calc(100vh - 94px);
     }
@@ -265,7 +266,7 @@
 }
 
 .views-element-container {
-  > .view-article-view, > .view-directory {
+  > .view-directory {
     &.view-display-id-page_1 {
       margin-bottom: 70px;
       > .view-content {

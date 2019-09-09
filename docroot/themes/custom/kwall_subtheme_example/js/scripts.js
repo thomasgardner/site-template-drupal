@@ -328,5 +328,60 @@
     }
   };
 
+  // var data = jQuery('.event-content').attr("data-id");
+  // jQuery('.contents .popup .event-popup').each(function(){
+  //   if(jQuery(this).data('id') == data) {
+  //     jQuery(this).parent().addClass('show');
+  //   }
+  // });
+
+
+  Drupal.behaviors.customAjaxComplete = {
+    attach: function (context, settings) {
+      var eventContent = $('.view-events-calendar .single-day');
+      if (eventContent.length) {
+        eventContent.find('.item').click(function () {
+          eventContent.find('.item').removeClass('active');
+          eventContent.find('.event-popup').removeClass('active');
+          $(this).addClass('active');
+          var dataId = eventContent.find('.item.active .event-content').data("id");
+          eventContent.find('.event-popup[data-id=' + dataId + ']').addClass('active');
+
+          eventContent.find('.event-popup.active').each(function () {
+            var height = $(this).outerHeight() + $(this).parents('.item.active').outerHeight() - 10;
+            $(this).parents('ul.popup').css('top', -height);
+          });
+
+        });
+
+        $(document).ajaxComplete(function (event, xhr, settings) {
+          if (eventContent.find('.item.active .event-content').length) {
+            var dataId = eventContent.find('.item.active .event-content').data("id");
+            eventContent.find('.event-popup[data-id=' + dataId + ']').addClass('active');
+            eventContent.find('.event-popup.active').each(function () {
+              var height = $(this).outerHeight() + $(this).parents('.item.active').outerHeight() - 10;
+              $(this).parents('ul.popup').css('top', -height);
+            });
+          }
+        });
+
+        $(document).on('click', '.view-events-calendar .single-day span.fa-close', function () {
+          eventContent.find('.item').removeClass('active');
+          eventContent.find('.event-popup').removeClass('active');
+        });
+      }
+    }
+  };
+
+  // Acadmic filters
+  $(document).ready(function () {
+    $('.view-academic-filter-taxonomy-terms .view-content .filter-button .filter-toggle').each(function () {
+      var $class = $(this).data('tid');
+      if (!$('.view-academics ' + $class).length) {
+        $(this).parent().addClass('inactive');
+      }
+    });
+  });
+
 
 })(jQuery, Drupal, drupalSettings);

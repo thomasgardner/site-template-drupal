@@ -76,7 +76,6 @@
         }
         player.contentWindow.postMessage(JSON.stringify(command), "*");
       }
-
     }
   };
 

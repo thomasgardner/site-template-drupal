@@ -7,3 +7,50 @@
  * Place your custom PHP code in this file.
  */
 
+/**
+ * Implements template_preprocess_paragraph.
+ */
+function kwall_subtheme_example_preprocess_paragraph(&$variables) {
+  $yo = '';
+  switch ($variables['elements']['#paragraph']->getParagraphType()->id()) {
+
+    case 'quicktabs':
+      $tabHtml = '';
+      if (isset($variables['content']) && isset($variables['content']['field_quicktab'])) {
+        $tabs = $variables['content']['field_quicktab'];
+        foreach ($tabs as $key => $tab) {
+          if (is_numeric($key) && isset($tab['#paragraph'])) {
+            $para = $tab['#paragraph'];
+            if ($para) {
+              if (!$para->get('field_title')->isEmpty()) {
+                $title = $para->get('field_title')->value;
+                if ($key == 0) {
+                  $tabHtml .= '<li class="nav-item"><a class="nav-link active" id="tab-' . $para->id() . '" data-toggle="tab" href="#content-tab-' . $para->id() . '" role="tab">' . $title . '</a></li>';
+                }
+                else {
+                  $tabHtml .= '<li class="nav-item"><a class="nav-link" id="tab-' . $para->id() . '" data-toggle="tab" href="#content-tab-' . $para->id() . '" role="tab">' . $title . '</a></li>';
+                }
+              }
+            }
+          }
+        }
+        if ($tabHtml) {
+          $tabHtml = '<ul class="nav nav-tabs" id="myTab" role="tablist">' . $tabHtml . '</ul>';
+        }
+        $variables['paragraphCustomQuicktabs'] = $tabHtml;
+      }
+      break;
+  }
+}
+
+
+/**
+ * Implements template_preprocess_html.
+ */
+function kwall_subtheme_example_preprocess_html(&$variables) {
+
+  $route_name = \Drupal::routeMatch()->getRouteName();
+  if($route_name == 'user.login' ||  $route_name == 'user.pass') {
+    $variables['attributes']['class'][] = 'page-user-login';
+  }
+}

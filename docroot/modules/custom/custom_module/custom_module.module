@@ -5,6 +5,8 @@ use Drupal\views\ViewExecutable;
 use Drupal\node\NodeInterface;
 use Drupal\paragraphs\Entity\Paragraph;
 use Drupal\taxonomy\Entity\Term;
+use \Drupal\Core\Entity\EntityInterface;
+use \Drupal\Core\Entity\Display\EntityViewDisplayInterface;
 
 /**
  * Implements hook_help().
@@ -217,4 +219,109 @@ WHERE ((paragraphs_item_field_data.id = '" . $pid . "')) AND ((paragraphs_item_f
     }
   }
   return $cat;
+}
+
+function custom_module_entity_extra_field_info() {
+  $extra_field = [];
+
+  $extra_field['node']['event']['display']['extra_date_field'] = [
+    'label' => t('Event Date (Custom Extra Field)'),
+    'description' => t('Event Date we need for different place'),
+    'weight' => 100,
+    'visible' => TRUE,
+  ];
+  $extra_field['node']['event']['display']['event_time'] = [
+    'label' => t('Event Time (Custom Event Time Field)'),
+    'description' => t('Custom Event Time Field.'),
+    'weight' => 100,
+    'visible' => TRUE,
+  ];
+
+  return $extra_field;
+
+}
+
+function custom_module_node_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
+  if ($view_mode == 'full' && $entity->getType() == 'event') {
+    if ($display->getComponent('extra_date_field')) {
+
+      $date = $entity->get('field_start_date')->value;
+
+      $timestamp = strtotime($date);
+
+      $date_month = \Drupal::service('date.formatter')
+        ->format($timestamp, 'custom', 'M', drupal_get_user_timezone());
+
+      $date_day = \Drupal::service('date.formatter')
+        ->format($timestamp, 'custom', 'j', drupal_get_user_timezone());
+
+      $build['extra_date_field'] = [
+        '#type' => 'markup',
+        '#markup' => '<div class="date"> <span class="date-month">' . $date_month . '</span> <span class="date-day">' . $date_day . '</span> </div>',
+      ];
+    }
+
+    if ($display->getComponent('event_time')) {
+      if ($entity->get('field_all_day_event')->value != 0) {
+        $build['event_time'] = [
+          '#type' => 'markup',
+          '#markup' => '<div class="time"><div class="label">Time:</div>' . 'ALL DAY' . '</div>',
+        ];
+      }
+      else {
+
+        date_default_timezone_set("UTC");
+
+        //Start time
+        $start_time = strtotime($entity->get('field_start_date')->value);
+        $start_time = \Drupal\Core\Datetime\DrupalDateTime::createFromTimestamp($start_time);
+
+        $start_time = $start_time->format('g:ia');
+
+        //End time
+        $end_time = strtotime($entity->get('field_end_date')->value);
+        $end_time = \Drupal\Core\Datetime\DrupalDateTime::createFromTimestamp($end_time);
+
+        $end_time = $end_time->format('g:ia');
+
+
+        $build['event_time'] = [
+          '#type' => 'markup',
+          '#markup' => '<div class="time"><div class="label">Time:</div>' . $start_time . ' - ' . $end_time . '</div>',
+        ];
+      }
+    }
+  }
+}
+
+/**
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ * @param $form_id
+ * implement hook_form_formid_alter
+ */
+
+// Add Class if we have values in Exposed form
+function custom_module_form_views_exposed_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  $view = $form_state->getStorage('view');
+  if ($view) {
+    $inputs = $form_state->getUserInput();
+    if ($inputs) {
+      $flag = FALSE;
+      foreach ($inputs as $key => $input) {
+        if (isset($form[$key]) && isset($form[$key]['#default_value']) && $form[$key]['#default_value'] != $input) {
+          $flag = TRUE;
+          break;
+        }
+      }
+      if ($flag) {
+        $form['#attributes']['class'][] = 'form-values-exist';
+      }
+    }
+    // Check if View Ajax Enabled then make sure its reload current page
+    if($view['view']->id() == 'faqs' && $view['view']->current_display == 'default' && $view['view']->ajaxEnabled()) {
+      $currPathAlias = \Drupal::service('path.alias_manager')->getAliasByPath('/node/87');
+      $form['#action'] = $currPathAlias;
+    }
+  }
 }
