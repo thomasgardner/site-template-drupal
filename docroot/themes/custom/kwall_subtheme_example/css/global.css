@@ -2769,6 +2769,12 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   color: #f5f5f5;
 }
 
+.full-width-img-section h2.section-title, .paragraph--type--flexible-bg-image-blocks .bg-img-container h2.section-title {
+  padding-left: 0;
+  padding-right: 0;
+  margin-bottom: 10px;
+}
+
 .full-width-img-section .paragraph.container, .full-width-img-section .content-wrapper, .paragraph--type--flexible-bg-image-blocks .bg-img-container .paragraph.container, .paragraph--type--flexible-bg-image-blocks .bg-img-container .content-wrapper {
   max-width: 700px;
   padding: 50px 60px 30px 60px;
@@ -2850,6 +2856,10 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
 .paragraph--type--flexible-bg-image-blocks.container-fluid > .row.no-gutters {
   margin-left: 0;
   margin-right: 0;
+}
+
+.paragraph--type--flexible-bg-image-blocks.container-fluid > .row.no-gutters h2.section-title {
+  margin-bottom: 0;
 }
 
 .paragraph--type--flexible-bg-image-blocks > .row:not(.no-gutters) .bg-img-col-wrap {
