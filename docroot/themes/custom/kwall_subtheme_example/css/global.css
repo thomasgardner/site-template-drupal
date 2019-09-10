@@ -2834,6 +2834,10 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   margin-right: 0;
 }
 
+.full-width-img-section .paragraph--type--full-width-image-section, .paragraph--type--flexible-bg-image-blocks .bg-img-container .paragraph--type--full-width-image-section {
+  margin-top: 0;
+}
+
 .paragraph--type--flexible-bg-image-blocks .bg-img-container .content-wrapper {
   margin: 0 auto;
 }
@@ -3115,15 +3119,16 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   text-align: center;
 }
 
-.paragraph--type--flexible-cta-blocks .flexible-cta-block h4 {
+.paragraph--type--flexible-cta-blocks .flexible-cta-block .field--name-field-title {
   font-size: 2.4rem;
   line-height: 3.2rem;
   margin-bottom: 1.8rem;
 }
 
-.paragraph--type--flexible-cta-blocks .flexible-cta-block p {
+.paragraph--type--flexible-cta-blocks .flexible-cta-block .field--name-field-subtitle {
   font-size: 1.6rem;
   line-height: 2.4rem;
+  margin-bottom: 5px;
 }
 
 .paragraph--type--flexible-cta-blocks .flexible-cta-block a {
@@ -3148,8 +3153,8 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   background-color: #015794;
 }
 
-.paragraph--type--flexible-cta-blocks .flexible-cta-block:hover h4, .paragraph--type--flexible-cta-blocks .flexible-cta-block:hover p, .paragraph--type--flexible-cta-blocks .flexible-cta-block:hover a {
-  color: #fff;
+.paragraph--type--flexible-cta-blocks .flexible-cta-block:hover * {
+  color: #fff !important;
 }
 
 .paragraph--type--flexible-cta-blocks .flexible-cta-block:hover a {
@@ -3415,6 +3420,10 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
 
 .paragraph--type--column-section .view-event-view .views-row {
   height: auto;
+}
+
+.paragraph--type--flexible-cta-blocks {
+  margin-top: 45px;
 }
 
 .region-sidebar-left .block {

@@ -60,6 +60,9 @@
       }
     }
   }
+  .paragraph--type--full-width-image-section {
+    margin-top: 0;
+  }
 }
 
 .paragraph--type--flexible-bg-image-blocks {
@@ -354,15 +357,16 @@
     padding: 48px 20px;
     text-align: center;
 
-    h4 {
+    .field--name-field-title {
       font-size: rem-calc(24);
       line-height: rem-calc(32);
       margin-bottom: rem-calc(18);
     }
 
-    p {
+    .field--name-field-subtitle {
       font-size: rem-calc(16);
       line-height: rem-calc(24);
+      margin-bottom: 5px;
     }
 
     a {
@@ -375,8 +379,8 @@
     &:hover {
       background-color: $color-blue;
 
-      h4, p, a {
-        color: $color-white;
+      * {
+        color: $color-white !important;
       }
 
       a {
@@ -635,4 +639,8 @@
       height: auto;
     }
   }
+}
+
+.paragraph--type--flexible-cta-blocks {
+  margin-top: 45px;
 }
