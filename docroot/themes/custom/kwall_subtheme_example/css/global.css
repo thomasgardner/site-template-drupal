@@ -2772,7 +2772,7 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
 .full-width-img-section h2.section-title, .paragraph--type--flexible-bg-image-blocks .bg-img-container h2.section-title {
   padding-left: 0;
   padding-right: 0;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .full-width-img-section .paragraph.container, .full-width-img-section .content-wrapper, .paragraph--type--flexible-bg-image-blocks .bg-img-container .paragraph.container, .paragraph--type--flexible-bg-image-blocks .bg-img-container .content-wrapper {
@@ -2859,12 +2859,16 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
 }
 
 .paragraph--type--flexible-bg-image-blocks.container-fluid > .row.no-gutters h2.section-title {
-  margin-bottom: 0;
+  margin-bottom: 5px;
 }
 
 .paragraph--type--flexible-bg-image-blocks > .row:not(.no-gutters) .bg-img-col-wrap {
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+.paragraph--type--flexible-bg-image-blocks .bg-img-container {
+  padding: 60px;
 }
 
 .paragraph--type--flexible-bg-image-blocks .bg-img-container .content-wrapper {
@@ -2959,6 +2963,10 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   font-size: 2.4rem;
   line-height: 3.2rem;
   font-weight: bold;
+}
+
+.paragraph--type--column-section .view-event-view .post-title a, .paragraph--type--column-section .view-event-view .title a, .paragraph--type--column-section .view-article-view .post-title a, .paragraph--type--column-section .view-article-view .title a, .paragraph--type--recent-articles-upcoming-events .view-event-view .post-title a, .paragraph--type--recent-articles-upcoming-events .view-event-view .title a, .paragraph--type--recent-articles-upcoming-events .view-article-view .post-title a, .paragraph--type--recent-articles-upcoming-events .view-article-view .title a {
+  color: #333;
 }
 
 @media (max-width: 991px) {
