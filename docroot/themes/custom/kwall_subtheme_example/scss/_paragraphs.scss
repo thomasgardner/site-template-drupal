@@ -194,6 +194,7 @@
   }
 
   .view-event-view, .view-article-view {
+
     .views-row {
       overflow: hidden;
     }
@@ -351,6 +352,12 @@
     .content-wrap {
       margin-left: 54px;
     }
+  }
+}
+
+.paragraph--type--recent-articles-upcoming-events {
+  .view-event-view, .view-article-view {
+    margin-bottom: 20px;
   }
 }
 
