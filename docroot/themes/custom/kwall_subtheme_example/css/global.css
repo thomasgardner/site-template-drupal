@@ -1008,8 +1008,8 @@ html {
 
 body {
   font-family: "helvetica", Arial, sans-serif;
-  font-size: 1.8rem;
-  line-height: 1.6;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
   color: #333;
 }
 
@@ -2184,6 +2184,14 @@ select {
     font-size: 3.6rem;
     line-height: 3.6rem;
   }
+}
+
+h1.page-title {
+  margin-bottom: 25px;
+}
+
+.node .field--name-body {
+  margin-bottom: 40px;
 }
 
 .section-title {
