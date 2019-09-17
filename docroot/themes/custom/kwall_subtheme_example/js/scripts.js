@@ -58,6 +58,21 @@
         });
       });
 
+      /*
+       * change links to for alpha block on directory page
+       *
+       */
+        $('.view-directory.view-display-id-block_1 .alpaha-item a').each(function() {
+            var href= $(this).attr('href');
+            var index = href.indexOf('y/');
+            var index2 = href.indexOf('?');
+            if (index && index2 == -1) {
+                var letter = href.substr(index+2);
+                href = href.substr(0, index+1) + '?field_name_family=' + letter;
+                $(this).attr('href', href);
+            }
+        });
+
 
       $(document).ready(function () {
 
@@ -72,6 +87,9 @@
             'background-position': 'center top'
           })
         });
+
+
+
 
         /*
          * Featured Article Background Image

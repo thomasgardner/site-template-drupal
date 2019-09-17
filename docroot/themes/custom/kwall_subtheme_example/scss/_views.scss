@@ -267,7 +267,7 @@
 
 .views-element-container {
   > .view-directory {
-    &.view-display-id-page_1 {
+    &.view-display-id-block_2 {
       margin-bottom: 70px;
       > .view-content {
         margin-top: 30px;
@@ -285,7 +285,90 @@
   }
 }
 
-.view-id-directory.view-display-id-page_1 {
+
+.view-id-directory.view-display-id-block_2 {
+  display: flex;
+  flex-direction: column;
+  background: none;
+  .js-form-item-field-name-family {
+    display: none;
+  }
+  > .view-content {
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+    .alpaha-item {
+      float: left;
+      width: calc(100% / 27);
+      text-align: center;
+    }
+  }
+
+  >.view-header {
+    order: 2;
+  }
+  >.view-filters {
+    order: 1;
+  }
+  >.view-content {
+    order: 3;
+    .profile-wrap {
+      margin-bottom: 15px;
+
+      .profile-img {
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+      .content-wrap {
+        padding-left: 10px;
+
+        .item-list {
+          ul {
+            list-style: none;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+              margin: 0;
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  .event-wrap {
+    .image-wrap {
+      position: relative;
+      .date-wrap {
+        position: absolute;
+        top: 0;
+        left: 10px;
+        z-index: 3;
+      }
+      img {
+        position: relative;
+        height: auto;
+        width: 100%;
+        z-index: 1;
+      }
+    }
+    .content-wrap {
+
+    }
+  }
+  .pager {
+    order: 4;
+  }
+}
+
+
+.view-id-directory.view-display-id-block_2 {
   > .view-content {
     .profile-wrap {
       margin-bottom: 30px;
@@ -309,7 +392,13 @@
         }
       }
     }
+    .profile-department {
+      font-size: 1.4rem;
+      line-height: 1.6rem;
+      margin-bottom: 10px;
+    }
   }
+
   .fa {
     &:before {
       padding-right: 7px;
@@ -326,5 +415,11 @@
         color: $color-blue;
       }
     }
+  }
+}
+
+.page-node-76 {
+  .paragraph--type--views {
+    margin-top: 10px;
   }
 }
