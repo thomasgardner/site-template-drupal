@@ -28,6 +28,11 @@
     margin-bottom: 30px;
   }
 }
+body[class *= "path-events-day"] {
+  .layout-container .layout-center {
+    padding-left: 60px;
+  }
+}
 
 .cb-event-view-toggle  {
   float: right;

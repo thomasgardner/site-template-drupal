@@ -15,7 +15,7 @@
       float: none;
       display: block;
       text-align: right;
-      @include container-style; 
+      @include container-style;
       width: 100%;
       li {
         display: inline-block;
@@ -224,7 +224,7 @@
       display: none;
     }
     &:before {
-      font-size: 2.5rem;
+      font-size: 2.5rem; 
     }
 
   }
