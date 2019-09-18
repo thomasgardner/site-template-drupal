@@ -5027,13 +5027,14 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   font-size: 18px;
   line-height: 26px;
   color: #333;
+  font-weight: normal;
 }
 
 .view-events-calendar .calendar-calendar ul.popup li .event-popup .address .location {
   color: #E84708;
   font-size: 18px;
   line-height: 26px;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 .view-events-calendar .calendar-calendar ul.popup li .event-popup .content {
