@@ -17,6 +17,9 @@
       .featured-post-wrap {
         padding: 2rem;
       }
+      .date-wrap {
+        left: 0;
+      }
     }
 
 
@@ -178,6 +181,18 @@
 
     .controls {
       @include slide_controls();
+      .custom-controls-container {
+        display: block !important;
+        margin: 0;
+        max-width: none;
+        .play, .pause {
+          display: none;
+        }
+        .flex-control-nav {
+          right: 42%;
+          margin-right: 40px;
+        }
+      }
     }
   }
 }
