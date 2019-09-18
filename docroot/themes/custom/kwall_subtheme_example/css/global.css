@@ -5502,6 +5502,24 @@ body[class*="path-events-day"] .layout-container .layout-center {
   color: #E84708;
 }
 
+.page-node-type-article .layout-container {
+  padding-top: 20px;
+}
+
+.page-node-type-article h1.page-title {
+  margin-bottom: 40px;
+}
+
+.page-node-type-article .field--name-field-intro1 {
+  font-size: 2.4rem;
+  line-height: 3.4rem;
+}
+
+.page-node-type-article .field--name-field-intro2 {
+  font-size: 2.4rem;
+  line-height: 3.4rem;
+}
+
 .page-node-type-article .author-info {
   border-bottom: 2px solid #CCC;
   padding-bottom: 20px;
@@ -5510,6 +5528,7 @@ body[class*="path-events-day"] .layout-container .layout-center {
 
 .page-node-type-article .author-info .post-author {
   font-size: 16px;
+  margin-top: 6px;
 }
 
 .page-node-type-article .author-info .post-social {
@@ -5526,6 +5545,7 @@ body[class*="path-events-day"] .layout-container .layout-center {
 
 .page-node-type-article .author-info .post-social .label {
   margin-right: 10px;
+  margin-top: 6px;
 }
 
 .page-node-type-article .author-info .post-social .sharethis-wrapper .stLarge {
