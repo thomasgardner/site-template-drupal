@@ -5515,11 +5515,6 @@ body[class*="path-events-day"] .layout-container .layout-center {
   line-height: 3.4rem;
 }
 
-.page-node-type-article .field--name-field-intro2 {
-  font-size: 2.4rem;
-  line-height: 3.4rem;
-}
-
 .page-node-type-article .author-info {
   border-bottom: 2px solid #CCC;
   padding-bottom: 20px;
