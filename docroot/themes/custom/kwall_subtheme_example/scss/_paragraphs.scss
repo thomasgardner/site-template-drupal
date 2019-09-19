@@ -546,7 +546,7 @@
       }
     }
   }
-  .paragraph--type--article-slideshow  .controls {
+  .paragraph--type--article-slideshow + .controls {
     @media (max-width: $screen-mobile) {
       right: 10px;
       bottom: -10px;
@@ -561,7 +561,6 @@
         margin-left: 10px;
       }
     }
-
   }
   .controls-count {
     position: absolute;

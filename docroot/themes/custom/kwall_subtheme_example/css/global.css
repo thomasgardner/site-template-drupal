@@ -3355,18 +3355,18 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
 }
 
 @media (max-width: 767px) {
-  .flexslider.article-slideshow .paragraph--type--article-slideshow .controls {
+  .flexslider.article-slideshow .paragraph--type--article-slideshow + .controls {
     right: 10px;
     bottom: -10px;
   }
-  .flexslider.article-slideshow .paragraph--type--article-slideshow .controls .flex-prev, .flexslider.article-slideshow .paragraph--type--article-slideshow .controls .flex-next {
+  .flexslider.article-slideshow .paragraph--type--article-slideshow + .controls .flex-prev, .flexslider.article-slideshow .paragraph--type--article-slideshow + .controls .flex-next {
     float: none;
     display: inline-block;
   }
-  .flexslider.article-slideshow .paragraph--type--article-slideshow .controls .flex-prev {
+  .flexslider.article-slideshow .paragraph--type--article-slideshow + .controls .flex-prev {
     margin-right: 10px;
   }
-  .flexslider.article-slideshow .paragraph--type--article-slideshow .controls .flex-next {
+  .flexslider.article-slideshow .paragraph--type--article-slideshow + .controls .flex-next {
     margin-left: 10px;
   }
 }
