@@ -5511,7 +5511,7 @@ body[class*="path-events-day"] .layout-container .layout-center {
   margin-bottom: 40px;
 }
 
-.page-node-type-article .block-page-title-block, .page-node-type-article .author-info, .page-node-type-article .field--name-field-intro1, .page-node-type-article .field--name-field-intro2,
+.page-node-type-article .block-page-title-block, .page-node-type-article .block-system-breadcrumb-block, .page-node-type-article .author-info, .page-node-type-article .field--name-field-intro1, .page-node-type-article .field--name-field-intro2,
 .page-node-type-article .field--type-image, .page-node-type-article .field--name-body, .page-node-type-article .field--name-field-article-taxonomies {
   max-width: 895px;
   margin-left: auto;
@@ -5531,7 +5531,7 @@ body[class*="path-events-day"] .layout-container .layout-center {
 .page-node-type-article .author-info {
   border-bottom: 2px solid #CCC;
   padding-bottom: 20px;
-  margin: 20px 0;
+  margin: 20px auto;
 }
 
 .page-node-type-article .author-info .post-author {
@@ -5595,7 +5595,7 @@ body[class*="path-events-day"] .layout-container .layout-center {
 .page-node-type-article .field--name-field-article-taxonomies {
   display: flex;
   flex-flow: row wrap;
-  margin: 50px 0;
+  margin: 50px auto;
 }
 
 .page-node-type-article .field--name-field-article-taxonomies .field__label {
@@ -5619,7 +5619,7 @@ body[class*="path-events-day"] .layout-container .layout-center {
   color: #E84708;
 }
 
-.page-node-type-article .article-quote {
+.page-node-type-article .paragraph--type--quote {
   background: #f5f5f5;
   padding: 15px 30px 25px 30px;
   position: relative;
@@ -5627,7 +5627,7 @@ body[class*="path-events-day"] .layout-container .layout-center {
   margin-bottom: 40px;
 }
 
-.page-node-type-article .article-quote blockquote {
+.page-node-type-article .paragraph--type--quote blockquote {
   font-style: italic;
   color: #696666;
   font-size: 2.6rem;
@@ -5637,7 +5637,7 @@ body[class*="path-events-day"] .layout-container .layout-center {
   margin-bottom: 20px;
 }
 
-.page-node-type-article .article-quote blockquote::before {
+.page-node-type-article .paragraph--type--quote blockquote::before {
   content: "“";
   font-size: 10rem;
   line-height: 11.4rem;
@@ -5648,17 +5648,17 @@ body[class*="path-events-day"] .layout-container .layout-center {
   top: 0;
 }
 
-.page-node-type-article .article-quote blockquote::after {
+.page-node-type-article .paragraph--type--quote blockquote::after {
   content: "”";
   font-size: 2.6rem;
   line-height: 3.6rem;
 }
 
-.page-node-type-article .article-quote .field--name-field-quote-author {
+.page-node-type-article .paragraph--type--quote .field--name-field-quote-author {
   padding-left: 50px;
 }
 
-.page-node-type-article .article-quote .field--name-field-quote-details {
+.page-node-type-article .paragraph--type--quote .field--name-field-quote-details {
   line-height: 3rem;
   color: #595959;
   font-weight: 100;
