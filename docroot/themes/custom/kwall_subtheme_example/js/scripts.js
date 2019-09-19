@@ -34,7 +34,7 @@
         $('.article-slideshow').once('flexSliderInit').each(function () {
             $(this).flexslider({
                 touch: true,
-                slideshow: true,
+                slideshow: false,
                 slideshowSpeed: 4000,
                 controlNav: false,
                 customDirectionNav: jQuery(this).find('.controls a'),
@@ -42,7 +42,7 @@
                     $('.total-slides').text(slider.count);
                 },
                 after: function(slider) {
-                    $('.current-slide').text(slider.currentSlide);
+                    $('.current-slide').text(slider.currentSlide + 1);
                 },
             });
         });

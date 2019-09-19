@@ -3299,6 +3299,51 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   }
 }
 
+.paragraph--type--article-slideshow {
+  margin-top: 40px;
+}
+
+.flexslider.article-slideshow {
+  margin-bottom: 50px;
+}
+
+.flexslider.article-slideshow .slide-content {
+  line-height: 2.2rem;
+  padding: 20px 60px 20px 20px;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.flexslider.article-slideshow .slide-content .field--name-field-body-unformatted {
+  display: inline;
+}
+
+.flexslider.article-slideshow .slide-content .field--name-field-body-unformatted .field__item {
+  display: inline;
+}
+
+.flexslider.article-slideshow .slide-content .field--name-field-link {
+  display: inline-block;
+  padding-left: 10px;
+}
+
+.flexslider.article-slideshow .slide-content .field--name-field-link a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.flexslider.article-slideshow .slide-content .field--name-field-link a:hover, .flexslider.article-slideshow .slide-content .field--name-field-link a:focus, .flexslider.article-slideshow .slide-content .field--name-field-link a:active {
+  text-decoration: underline;
+}
+
+.flexslider.article-slideshow .controls-count {
+  position: absolute;
+  color: #fff;
+  right: 20px;
+  bottom: 18px;
+  z-index: 2;
+}
+
 .paragraph--type--person-carousel .field--name-field-title {
   font-size: 4rem;
   line-height: 5.2rem;
@@ -5512,7 +5557,7 @@ body[class*="path-events-day"] .layout-container .layout-center {
 }
 
 .page-node-type-article .block-page-title-block, .page-node-type-article .block-system-breadcrumb-block, .page-node-type-article .author-info, .page-node-type-article .field--name-field-intro1, .page-node-type-article .field--name-field-intro2,
-.page-node-type-article .field--type-image, .page-node-type-article .field--name-body, .page-node-type-article .field--name-field-article-taxonomies {
+.page-node-type-article .field--name-field-media, .page-node-type-article .field--name-body, .page-node-type-article .field--name-field-article-taxonomies {
   max-width: 895px;
   margin-left: auto;
   margin-right: auto;

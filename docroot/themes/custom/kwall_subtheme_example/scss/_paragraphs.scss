@@ -509,6 +509,42 @@
     }
   }
 }
+.paragraph--type--article-slideshow {
+  margin-top: 40px;
+}
+.flexslider.article-slideshow {
+  margin-bottom: 50px;
+  .slide-content {
+    line-height: 2.2rem;
+    padding: 20px 60px 20px 20px;
+    background: rgba(0, 0, 0, 0.75);
+    .field--name-field-body-unformatted {
+      display: inline;
+      .field__item {
+        display: inline;
+      }
+    }
+    .field--name-field-link {
+      display: inline-block;
+      padding-left: 10px;
+      a {
+        color: #fff;
+        text-decoration: none;
+        text-transform: capitalize;
+        &:hover, &:focus, &:active {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .controls-count {
+    position: absolute;
+    color: #fff;
+    right: 20px;
+    bottom: 18px;
+    z-index: 2;
+  }
+}
 
 .paragraph--type--person-carousel {
   .field--name-field-title {
