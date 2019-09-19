@@ -3231,28 +3231,28 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   line-height: 2.2rem;
 }
 
-.flexslider.interior-slideshow {
+.flexslider.interior-slideshow, .flexslider.article-slideshow {
   margin: 0;
 }
 
 @media (max-width: 767px) {
-  .flexslider.interior-slideshow .paragraph--type--interior-slideshow {
+  .flexslider.interior-slideshow .paragraph--type--interior-slideshow, .flexslider.article-slideshow .paragraph--type--interior-slideshow {
     background: #F4F5F5;
   }
 }
 
-.flexslider.interior-slideshow .paragraph--type--interior-slideshow .paragraph--type--interior-slideshow-slide .slide-content {
+.flexslider.interior-slideshow .paragraph--type--interior-slideshow .paragraph--type--interior-slideshow-slide .slide-content, .flexslider.article-slideshow .paragraph--type--interior-slideshow .paragraph--type--interior-slideshow-slide .slide-content {
   padding: 15px 15px 25px 15px;
 }
 
 @media (max-width: 767px) {
-  .flexslider.interior-slideshow .paragraph--type--interior-slideshow .paragraph--type--interior-slideshow-slide .slide-content {
+  .flexslider.interior-slideshow .paragraph--type--interior-slideshow .paragraph--type--interior-slideshow-slide .slide-content, .flexslider.article-slideshow .paragraph--type--interior-slideshow .paragraph--type--interior-slideshow-slide .slide-content {
     position: unset;
   }
 }
 
 @media (max-width: 767px) {
-  .flexslider.interior-slideshow .paragraph--type--interior-slideshow + .controls {
+  .flexslider.interior-slideshow .paragraph--type--interior-slideshow + .controls, .flexslider.article-slideshow .paragraph--type--interior-slideshow + .controls {
     position: absolute;
     bottom: -10px;
     padding: 0 7px;
@@ -3260,7 +3260,7 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
 }
 
 @media (min-width: 768px) {
-  .flexslider.interior-slideshow .paragraph--type--interior-slideshow + .controls .custom-controls-container {
+  .flexslider.interior-slideshow .paragraph--type--interior-slideshow + .controls .custom-controls-container, .flexslider.article-slideshow .paragraph--type--interior-slideshow + .controls .custom-controls-container {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -3268,32 +3268,32 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   }
 }
 
-.flexslider.interior-slideshow .paragraph--type--interior-slideshow + .controls .custom-controls-container .play, .flexslider.interior-slideshow .paragraph--type--interior-slideshow + .controls .custom-controls-container .pause {
+.flexslider.interior-slideshow .paragraph--type--interior-slideshow + .controls .custom-controls-container .play, .flexslider.interior-slideshow .paragraph--type--interior-slideshow + .controls .custom-controls-container .pause, .flexslider.article-slideshow .paragraph--type--interior-slideshow + .controls .custom-controls-container .play, .flexslider.article-slideshow .paragraph--type--interior-slideshow + .controls .custom-controls-container .pause {
   display: none;
 }
 
-.flexslider.interior-slideshow .paragraph--type--interior-slideshow + .controls .custom-controls-container .flex-control-nav {
+.flexslider.interior-slideshow .paragraph--type--interior-slideshow + .controls .custom-controls-container .flex-control-nav, .flexslider.article-slideshow .paragraph--type--interior-slideshow + .controls .custom-controls-container .flex-control-nav {
   margin-left: 0;
 }
 
 @media (min-width: 768px) {
-  .flexslider.interior-slideshow .paragraph--type--interior-slideshow + .controls .custom-controls-container .flex-control-nav {
+  .flexslider.interior-slideshow .paragraph--type--interior-slideshow + .controls .custom-controls-container .flex-control-nav, .flexslider.article-slideshow .paragraph--type--interior-slideshow + .controls .custom-controls-container .flex-control-nav {
     margin-left: -7px;
   }
 }
 
 @media (min-width: 768px) {
-  .flexslider.interior-slideshow .paragraph--type--interior-slideshow + .controls .custom-controls-container .flex-control-nav li a {
+  .flexslider.interior-slideshow .paragraph--type--interior-slideshow + .controls .custom-controls-container .flex-control-nav li a, .flexslider.article-slideshow .paragraph--type--interior-slideshow + .controls .custom-controls-container .flex-control-nav li a {
     background: #fff;
   }
 }
 
-.flexslider.interior-slideshow .paragraph--type--interior-slideshow + .controls .custom-controls-container .flex-control-nav li a.flex-active {
+.flexslider.interior-slideshow .paragraph--type--interior-slideshow + .controls .custom-controls-container .flex-control-nav li a.flex-active, .flexslider.article-slideshow .paragraph--type--interior-slideshow + .controls .custom-controls-container .flex-control-nav li a.flex-active {
   line-height: 27px;
 }
 
 @media (min-width: 768px) {
-  .flexslider.interior-slideshow .paragraph--type--interior-slideshow + .controls .custom-controls-container .flex-control-nav li a.flex-active {
+  .flexslider.interior-slideshow .paragraph--type--interior-slideshow + .controls .custom-controls-container .flex-control-nav li a.flex-active, .flexslider.article-slideshow .paragraph--type--interior-slideshow + .controls .custom-controls-container .flex-control-nav li a.flex-active {
     background: none;
     border: 1px solid #fff;
   }

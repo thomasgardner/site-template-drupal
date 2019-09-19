@@ -27,7 +27,29 @@
    */
   Drupal.behaviors.commnTweaks = {
     attach: function (context, settings) {
-      /**
+      /*
+       * article slideshow
+       */
+
+        $('.article-slideshow').once('flexSliderInit').each(function () {
+            $(this).flexslider({
+                touch: true,
+                slideshow: true,
+                slideshowSpeed: 4000,
+                controlNav: false,
+                customDirectionNav: jQuery(this).find('.controls a'),
+                start: function(slider) {
+                    $('.total-slides').text(slider.count);
+                },
+                after: function(slider) {
+                    $('.current-slide').text(slider.currentSlide);
+                },
+            });
+        });
+
+
+
+        /**
        * background image paralax effect
        **/
       $(window).on('load', function () {
