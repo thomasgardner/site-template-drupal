@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * @file
  * Style
@@ -5510,9 +5511,21 @@ body[class*="path-events-day"] .layout-container .layout-center {
   margin-bottom: 40px;
 }
 
+.page-node-type-article .block-page-title-block, .page-node-type-article .author-info, .page-node-type-article .field--name-field-intro1, .page-node-type-article .field--name-field-intro2,
+.page-node-type-article .field--type-image, .page-node-type-article .field--name-body, .page-node-type-article .field--name-field-article-taxonomies {
+  max-width: 895px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .page-node-type-article .field--name-field-intro1 {
   font-size: 2.4rem;
   line-height: 3.4rem;
+  margin-bottom: 15px;
+}
+
+.page-node-type-article .field--name-field-intro2 {
+  margin-bottom: 15px;
 }
 
 .page-node-type-article .author-info {
@@ -5604,6 +5617,52 @@ body[class*="path-events-day"] .layout-container .layout-center {
   font-weight: bold;
   font-size: 16px;
   color: #E84708;
+}
+
+.page-node-type-article .article-quote {
+  background: #f5f5f5;
+  padding: 15px 30px 25px 30px;
+  position: relative;
+  margin-top: 45px;
+  margin-bottom: 40px;
+}
+
+.page-node-type-article .article-quote blockquote {
+  font-style: italic;
+  color: #696666;
+  font-size: 2.6rem;
+  line-height: 3.6rem;
+  padding-left: 50px;
+  padding-top: 10px;
+  margin-bottom: 20px;
+}
+
+.page-node-type-article .article-quote blockquote::before {
+  content: "“";
+  font-size: 10rem;
+  line-height: 11.4rem;
+  color: #e84708;
+  font-family: Georgia;
+  position: absolute;
+  left: 20px;
+  top: 0;
+}
+
+.page-node-type-article .article-quote blockquote::after {
+  content: "”";
+  font-size: 2.6rem;
+  line-height: 3.6rem;
+}
+
+.page-node-type-article .article-quote .field--name-field-quote-author {
+  padding-left: 50px;
+}
+
+.page-node-type-article .article-quote .field--name-field-quote-details {
+  line-height: 3rem;
+  color: #595959;
+  font-weight: 100;
+  padding-left: 50px;
 }
 
 .search-title {

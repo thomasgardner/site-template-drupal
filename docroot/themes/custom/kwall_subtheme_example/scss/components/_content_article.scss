@@ -5,11 +5,20 @@
   h1.page-title {
     margin-bottom: 40px;
   }
+  .block-page-title-block, .author-info, .field--name-field-intro1, .field--name-field-intro2,
+  .field--type-image, .field--name-body, .field--name-field-article-taxonomies  {
+    max-width: 895px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .field--name-field-intro1 {
     font-size: 2.4rem;
     line-height: 3.4rem;
+    margin-bottom: 15px;
   }
-
+  .field--name-field-intro2 {
+    margin-bottom: 15px;
+  }
   .author-info {
     border-bottom: 2px solid $color-style-grey;
     padding-bottom: 20px;
@@ -105,6 +114,46 @@
         font-size: 16px;
         color: $color-orange;
       }
+    }
+  }
+  .article-quote {
+    background: #f5f5f5;
+    padding: 15px 30px 25px 30px;
+    position: relative;
+    margin-top: 45px;
+    margin-bottom: 40px;
+    blockquote {
+      font-style: italic;
+      color: #696666;
+      font-size: 2.6rem;
+      line-height: 3.6rem;
+      padding-left: 50px;
+      padding-top: 10px;
+      margin-bottom: 20px;
+      &::before {
+        content: "“";
+        font-size: 10rem;
+        line-height: 11.4rem;
+        color: #e84708;
+        font-family: Georgia;
+        position: absolute;
+        left: 20px;
+        top: 0;
+      }
+      &::after {
+        content: "”";
+        font-size: 2.6rem;
+        line-height: 3.6rem;
+      }
+    }
+    .field--name-field-quote-author {
+      padding-left: 50px;
+    }
+    .field--name-field-quote-details {
+      line-height: 3rem;
+      color: #595959;
+      font-weight: 100;
+      padding-left: 50px;
     }
   }
 }
