@@ -2,11 +2,19 @@
   .layout-container {
     padding-top: 20px;
   }
+  .layout-container .layout-center {
+    padding-left: 0;
+    padding-right: 0;
+    @media (max-width: 1220px) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
   h1.page-title {
     margin-bottom: 40px;
   }
   .block-page-title-block, .block-system-breadcrumb-block, .author-info, .field--name-field-intro1, .field--name-field-intro2,
-  .field--name-field-media, .field--name-body, .field--name-field-article-taxonomies  {
+  .field--name-field-media, .field--name-body, .field--name-field-article-taxonomies, .article-slideshow-description  {
     max-width: 895px;
     margin-left: auto;
     margin-right: auto;

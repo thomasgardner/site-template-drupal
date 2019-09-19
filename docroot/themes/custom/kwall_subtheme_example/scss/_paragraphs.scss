@@ -514,10 +514,14 @@
 }
 .flexslider.article-slideshow {
   margin-bottom: 50px;
+  border: 0;
   .slide-content {
     line-height: 2.2rem;
     padding: 20px 60px 20px 20px;
     background: rgba(0, 0, 0, 0.75);
+    @media (max-width: $mobile) {
+      padding-bottom: 40px !important;
+    }
     .field--name-field-body-unformatted {
       display: inline;
       .field__item {
@@ -534,8 +538,28 @@
         &:hover, &:focus, &:active {
           text-decoration: underline;
         }
+        @media (max-width: $mobile) {
+          color: #333;
+        }
       }
     }
+  }
+  .paragraph--type--article-slideshow + .controls {
+    @media (max-width: $mobile) {
+      right: 10px;
+      bottom: -10px;
+      .flex-prev, .flex-next {
+        float: none;
+        display: inline-block;
+      }
+      .flex-prev {
+        margin-right: 10px;
+      }
+      .flex-next {
+        margin-left: 10px;
+      }
+    }
+
   }
   .controls-count {
     position: absolute;
@@ -543,7 +567,15 @@
     right: 20px;
     bottom: 18px;
     z-index: 2;
+    @media (max-width: $mobile) {
+      color: #333;
+      position: relative;
+      display: inline-block;
+      float: left;
+      margin-top: 24px;
+    }
   }
+
 }
 
 .paragraph--type--person-carousel {

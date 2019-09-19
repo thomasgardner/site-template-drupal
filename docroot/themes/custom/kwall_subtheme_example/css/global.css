@@ -3305,12 +3305,19 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
 
 .flexslider.article-slideshow {
   margin-bottom: 50px;
+  border: 0;
 }
 
 .flexslider.article-slideshow .slide-content {
   line-height: 2.2rem;
   padding: 20px 60px 20px 20px;
   background: rgba(0, 0, 0, 0.75);
+}
+
+@media (max-width: (max-width: 767px)) {
+  .flexslider.article-slideshow .slide-content {
+    padding-bottom: 40px !important;
+  }
 }
 
 .flexslider.article-slideshow .slide-content .field--name-field-body-unformatted {
@@ -3336,12 +3343,45 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   text-decoration: underline;
 }
 
+@media (max-width: (max-width: 767px)) {
+  .flexslider.article-slideshow .slide-content .field--name-field-link a {
+    color: #333;
+  }
+}
+
+@media (max-width: (max-width: 767px)) {
+  .flexslider.article-slideshow .paragraph--type--article-slideshow + .controls {
+    right: 10px;
+    bottom: -10px;
+  }
+  .flexslider.article-slideshow .paragraph--type--article-slideshow + .controls .flex-prev, .flexslider.article-slideshow .paragraph--type--article-slideshow + .controls .flex-next {
+    float: none;
+    display: inline-block;
+  }
+  .flexslider.article-slideshow .paragraph--type--article-slideshow + .controls .flex-prev {
+    margin-right: 10px;
+  }
+  .flexslider.article-slideshow .paragraph--type--article-slideshow + .controls .flex-next {
+    margin-left: 10px;
+  }
+}
+
 .flexslider.article-slideshow .controls-count {
   position: absolute;
   color: #fff;
   right: 20px;
   bottom: 18px;
   z-index: 2;
+}
+
+@media (max-width: (max-width: 767px)) {
+  .flexslider.article-slideshow .controls-count {
+    color: #333;
+    position: relative;
+    display: inline-block;
+    float: left;
+    margin-top: 24px;
+  }
 }
 
 .paragraph--type--person-carousel .field--name-field-title {
@@ -5552,12 +5592,24 @@ body[class*="path-events-day"] .layout-container .layout-center {
   padding-top: 20px;
 }
 
+.page-node-type-article .layout-container .layout-center {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media (max-width: 1220px) {
+  .page-node-type-article .layout-container .layout-center {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
 .page-node-type-article h1.page-title {
   margin-bottom: 40px;
 }
 
 .page-node-type-article .block-page-title-block, .page-node-type-article .block-system-breadcrumb-block, .page-node-type-article .author-info, .page-node-type-article .field--name-field-intro1, .page-node-type-article .field--name-field-intro2,
-.page-node-type-article .field--name-field-media, .page-node-type-article .field--name-body, .page-node-type-article .field--name-field-article-taxonomies {
+.page-node-type-article .field--name-field-media, .page-node-type-article .field--name-body, .page-node-type-article .field--name-field-article-taxonomies, .page-node-type-article .article-slideshow-description {
   max-width: 895px;
   margin-left: auto;
   margin-right: auto;

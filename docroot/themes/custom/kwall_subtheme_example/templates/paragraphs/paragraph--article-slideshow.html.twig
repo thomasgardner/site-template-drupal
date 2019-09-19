@@ -44,6 +44,7 @@
     'slides',
     'paragraph',
     'paragraph--type--' ~ paragraph.bundle|clean_id,
+    'paragraph--type--interior-slideshow',
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_id,
     not paragraph.isPublished() ? 'paragraph--unpublished'
   ]
