@@ -18,6 +18,9 @@
       padding-bottom: 50px;
       h2 {
         margin-bottom: 15px;
+        @media (max-width: $screen-mobile) {
+          text-align: center;
+        }
       }
     }
   }
