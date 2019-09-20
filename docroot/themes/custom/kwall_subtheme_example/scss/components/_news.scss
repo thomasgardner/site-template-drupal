@@ -9,6 +9,13 @@
   .layout-container .layout-center {
     padding-left: 10px;
   }
+  .region-content-top {
+    .views-page-title {
+      > h2 {
+        margin-bottom: 25px;
+      }
+    }
+  }
 }
 
 .view-id-article_view.view-display-id-page_1 {
