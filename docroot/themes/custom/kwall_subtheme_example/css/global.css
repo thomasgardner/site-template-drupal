@@ -4417,6 +4417,9 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
     flex: 0 0 30rem;
     max-width: 30rem;
   }
+  .view-id-article_view.view-display-id-page_1 .view-filters .views-exposed-form .form--inline .form-item.form-type-select select {
+    background: #fff url(../images/arrow-top-bottom.png) no-repeat 95%;
+  }
 }
 
 @media (min-width: 768px) {

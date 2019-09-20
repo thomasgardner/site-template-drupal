@@ -39,6 +39,9 @@
             &.form-type-select {
               flex: 0 0 30rem;
               max-width: 30rem;
+              select {
+                background: #fff url(../images/arrow-top-bottom.png) no-repeat 95%;
+              }
             }
           }
         }
