@@ -413,7 +413,7 @@
       min-width: 20px;
       a {
         color: $color-blue;
-      } 
+      }
     }
   }
 }
@@ -427,7 +427,7 @@
 .view-article-view.view-display-id-block_5 {
   .views-col {
     @media (max-width: $screen-mobile) {
-      width: 100%;
+      width: 100% !important;
       max-width: 407px;
       margin: 0 auto;
       float: none;
@@ -444,6 +444,10 @@
         margin-bottom: 0;
       }
     }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
   }
   .views-field-title {
     a {
@@ -459,5 +463,6 @@
     font-weight: 600;
     line-height: 1.9rem;
     margin: 20px 0 10px 0;
+    color: #696666;
   }
 }
