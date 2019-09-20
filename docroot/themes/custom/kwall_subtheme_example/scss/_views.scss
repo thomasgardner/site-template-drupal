@@ -436,11 +436,19 @@
     &:first-child {
       @media (min-width: $screen-sm-min) {
         padding-left: 0;
+        padding-right: 13.3px;
+      }
+    }
+    &:nth-child(2) {
+      @media (min-width: $screen-sm-min) {
+        padding-left: 6.7px;
+        padding-right: 6.7px;
       }
     }
     &:last-child {
       @media (min-width: $screen-sm-min) {
         padding-right: 0;
+        padding-left: 13.3px;
         margin-bottom: 0;
       }
     }

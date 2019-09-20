@@ -4228,12 +4228,21 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
 @media (min-width: 768px) {
   .view-article-view.view-display-id-block_5 .views-col:first-child {
     padding-left: 0;
+    padding-right: 13.3px;
+  }
+}
+
+@media (min-width: 768px) {
+  .view-article-view.view-display-id-block_5 .views-col:nth-child(2) {
+    padding-left: 6.7px;
+    padding-right: 6.7px;
   }
 }
 
 @media (min-width: 768px) {
   .view-article-view.view-display-id-block_5 .views-col:last-child {
     padding-right: 0;
+    padding-left: 13.3px;
     margin-bottom: 0;
   }
 }
