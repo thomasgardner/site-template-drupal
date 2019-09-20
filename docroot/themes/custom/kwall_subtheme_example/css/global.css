@@ -4317,6 +4317,10 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
 }
 
+.path-news h1.page-title {
+  margin-top: 30px;
+}
+
 .path-news .layout-container .layout-center {
   padding-left: 10px;
 }
