@@ -10,6 +10,17 @@
       padding-right: 10px;
     }
   }
+  .layout-content-bottom {
+    margin-bottom: 0;
+    .region-content-bottom {
+      background: #f5f5f5;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      h2 {
+        margin-bottom: 15px;
+      }
+    }
+  }
   h1.page-title {
     margin-bottom: 40px;
   }

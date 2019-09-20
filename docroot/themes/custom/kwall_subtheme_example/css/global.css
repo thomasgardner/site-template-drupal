@@ -4208,6 +4208,14 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   margin-top: 10px;
 }
 
+.view-article-view.view-display-id-block_5 .views-col:first-child {
+  padding-left: 0;
+}
+
+.view-article-view.view-display-id-block_5 .views-col:last-child {
+  padding-right: 0;
+}
+
 .layout-hero-content {
   position: relative;
 }
@@ -5607,6 +5615,20 @@ body[class*="path-events-day"] .layout-container .layout-center {
     padding-left: 10px;
     padding-right: 10px;
   }
+}
+
+.page-node-type-article .layout-content-bottom {
+  margin-bottom: 0;
+}
+
+.page-node-type-article .layout-content-bottom .region-content-bottom {
+  background: #f5f5f5;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.page-node-type-article .layout-content-bottom .region-content-bottom h2 {
+  margin-bottom: 15px;
 }
 
 .page-node-type-article h1.page-title {
