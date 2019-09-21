@@ -4305,7 +4305,7 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   display: none;
 }
 
-.layout-container.not-found a {
+.layout-container.not-found .block-system-main-block a {
   color: #e84708;
   font-size: 1.4rem;
   line-height: 1.9rem;
