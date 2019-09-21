@@ -6043,6 +6043,10 @@ body[class*="path-events-day"] .layout-container .layout-center {
   color: #fff;
 }
 
+.page-user-login #site-branding {
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
+}
+
 .page-user-login .views-page-title {
   padding-top: 3rem;
 }
@@ -6058,7 +6062,7 @@ body[class*="path-events-day"] .layout-container .layout-center {
 }
 
 .page-user-login .layout-container {
-  padding-top: 4rem;
+  padding-top: 2rem;
   padding-bottom: 4rem;
 }
 
@@ -6091,6 +6095,7 @@ body[class*="path-events-day"] .layout-container .layout-center {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: 600;
 }
 
 .page-user-login .layout-container .block-local-tasks-block .tabs.primary li a:hover {
@@ -6108,6 +6113,10 @@ body[class*="path-events-day"] .layout-container .layout-center {
   margin-bottom: 40px;
 }
 
+.page-user-login .layout-container form.user-pass .form-item:first-child, .page-user-login .layout-container form.user-login-form .form-item:first-child {
+  margin-top: 45px;
+}
+
 .page-user-login .layout-container form.user-pass .form-item input, .page-user-login .layout-container form.user-login-form .form-item input {
   height: 50px;
   border-radius: 0;
@@ -6116,6 +6125,10 @@ body[class*="path-events-day"] .layout-container .layout-center {
 
 .page-user-login .layout-container form.user-pass .form-item input:focus, .page-user-login .layout-container form.user-login-form .form-item input:focus {
   background: #eee;
+}
+
+.page-user-login .layout-container form.user-pass .form-item .description, .page-user-login .layout-container form.user-login-form .form-item .description {
+  color: #333;
 }
 
 .page-user-login .layout-container form.user-pass details.captcha, .page-user-login .layout-container form.user-login-form details.captcha {
