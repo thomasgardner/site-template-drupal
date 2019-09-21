@@ -25,6 +25,19 @@
       padding-left: 10px;
     }
   }
+  &.not-found {
+    padding-bottom: 60px;
+    .block-system-breadcrumb-block {
+      display: none;
+    }
+    a {
+      color: #e84708;
+      font-size: 1.4rem;
+      line-height: 1.9rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+  }
 }
 
 .layout-content-bottom {
