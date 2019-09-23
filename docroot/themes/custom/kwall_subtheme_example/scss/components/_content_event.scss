@@ -103,6 +103,9 @@
               padding-right: 8px;
             }
           }
+          &:not(.atcb-link) {
+            padding-left: 23px;
+          }
         }
       }
     }

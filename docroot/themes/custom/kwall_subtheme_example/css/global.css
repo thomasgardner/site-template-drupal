@@ -5685,6 +5685,10 @@ body[class*="path-events-day"] .layout-container .layout-center {
   padding-right: 8px;
 }
 
+.node--type-event .event .event-social .field--name-field-add a:not(.atcb-link) {
+  padding-left: 23px;
+}
+
 .node--type-event .field--name-field-event-featured-image {
   margin-bottom: 30px;
 }
@@ -6354,6 +6358,20 @@ body[class*="path-events-day"] .layout-container .layout-center {
 .view-academics > .view-content .course-description {
   padding: 18px 22px;
   min-height: 100px;
+}
+
+.view-academics > .view-content .course-description .course-type {
+  margin-bottom: 12px;
+}
+
+.view-academics > .view-content .course-description .course-type a {
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+}
+
+.view-academics > .view-content .course-description .course-title {
+  font-size: 2.5rem;
 }
 
 .paragraph--type--gridder .gridder {
