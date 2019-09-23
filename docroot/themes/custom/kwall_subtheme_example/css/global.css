@@ -5666,7 +5666,6 @@ body[class*="path-events-day"] .layout-container .layout-center {
   display: block;
   font-size: 1.4rem;
   line-height: 1.9rem;
-  font-weight: bold;
   float: left;
   padding-right: 10px;
 }
@@ -5676,7 +5675,11 @@ body[class*="path-events-day"] .layout-container .layout-center {
   color: #e84708;
 }
 
-.node--type-event .event .event-social .field--name-field-add a::before {
+.node--type-event .event .event-social .field--name-field-add a.atcb-link {
+  font-weight: bold;
+}
+
+.node--type-event .event .event-social .field--name-field-add a.atcb-link::before {
   font-family: "FontAwesome";
   content: "\f271";
   padding-right: 8px;

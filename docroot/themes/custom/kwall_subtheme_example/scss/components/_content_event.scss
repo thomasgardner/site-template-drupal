@@ -90,17 +90,18 @@
         display: block;
         font-size: 1.4rem;
         line-height: 1.9rem;
-        font-weight: bold;
         float: left;
         padding-right: 10px;
         a {
           text-decoration: none;
           color: #e84708;
-          &::before {
-            font-family: $font-awesome;
-            content: "\f271";
-            padding-right: 8px;
-
+          &.atcb-link {
+            font-weight: bold;
+            &::before {
+              font-family: $font-awesome;
+              content: "\f271";
+              padding-right: 8px;
+            }
           }
         }
       }
