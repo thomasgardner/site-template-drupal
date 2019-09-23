@@ -5658,6 +5658,10 @@ body[class*="path-events-day"] .layout-container .layout-center {
   height: 18px;
 }
 
+.node--type-event .field--name-field-event-featured-image {
+  margin-bottom: 30px;
+}
+
 .node--type-event .field--name-field-event-featured-image img {
   width: 100%;
 }
@@ -5666,6 +5670,12 @@ body[class*="path-events-day"] .layout-container .layout-center {
   .node--type-event .field--name-field-event-featured-image img {
     object-fit: cover;
   }
+}
+
+.node--type-event .field--name-field-intro1 {
+  font-size: 2.4rem;
+  line-height: 3.4rem;
+  margin-bottom: 32px;
 }
 
 .node--type-event .field--name-field-event-category {
