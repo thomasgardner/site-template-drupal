@@ -5662,7 +5662,7 @@ body[class*="path-events-day"] .layout-container .layout-center {
   height: 18px;
 }
 
-.node--type-event .event .event-social .field--name-field-add-to-calendar {
+.node--type-event .event .event-social .field--name-field-add {
   display: block;
   font-size: 1.4rem;
   line-height: 1.9rem;
@@ -5671,12 +5671,12 @@ body[class*="path-events-day"] .layout-container .layout-center {
   padding-right: 10px;
 }
 
-.node--type-event .event .event-social .field--name-field-add-to-calendar a {
+.node--type-event .event .event-social .field--name-field-add a {
   text-decoration: none;
   color: #e84708;
 }
 
-.node--type-event .event .event-social .field--name-field-add-to-calendar a::before {
+.node--type-event .event .event-social .field--name-field-add a::before {
   font-family: "FontAwesome";
   content: "\f271";
   padding-right: 8px;
