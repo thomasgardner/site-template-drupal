@@ -45,6 +45,7 @@
       }
 
       .sharethis-wrapper {
+        display: inline-block;
         span {
           &:not(.st_sharethis_large) {
             .stButton {
@@ -85,6 +86,24 @@
           }
         }
       }
+      .field--name-field-add-to-calendar {
+        display: block;
+        font-size: 1.4rem;
+        line-height: 1.9rem;
+        font-weight: bold;
+        float: left;
+        padding-right: 10px;
+        a {
+          text-decoration: none;
+          color: #e84708;
+          &::before {
+            font-family: $font-awesome;
+            content: "\f271";
+            padding-right: 8px;
+
+          }
+        }
+      }
     }
   }
 
@@ -96,6 +115,12 @@
         object-fit: cover;
       }
     }
+  }
+  .price {
+    margin-top: -9px;
+  }
+  .field--name-field-price {
+    display: inline;
   }
 
   .field--name-field-intro1 {

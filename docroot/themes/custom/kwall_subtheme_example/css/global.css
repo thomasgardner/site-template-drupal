@@ -5621,6 +5621,10 @@ body[class*="path-events-day"] .layout-container .layout-center {
   }
 }
 
+.node--type-event .event .event-social .sharethis-wrapper {
+  display: inline-block;
+}
+
 .node--type-event .event .event-social .sharethis-wrapper span:not(.st_sharethis_large) .stButton {
   display: none !important;
 }
@@ -5658,6 +5662,26 @@ body[class*="path-events-day"] .layout-container .layout-center {
   height: 18px;
 }
 
+.node--type-event .event .event-social .field--name-field-add-to-calendar {
+  display: block;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  font-weight: bold;
+  float: left;
+  padding-right: 10px;
+}
+
+.node--type-event .event .event-social .field--name-field-add-to-calendar a {
+  text-decoration: none;
+  color: #e84708;
+}
+
+.node--type-event .event .event-social .field--name-field-add-to-calendar a::before {
+  font-family: "FontAwesome";
+  content: "\f271";
+  padding-right: 8px;
+}
+
 .node--type-event .field--name-field-event-featured-image {
   margin-bottom: 30px;
 }
@@ -5670,6 +5694,14 @@ body[class*="path-events-day"] .layout-container .layout-center {
   .node--type-event .field--name-field-event-featured-image img {
     object-fit: cover;
   }
+}
+
+.node--type-event .price {
+  margin-top: -9px;
+}
+
+.node--type-event .field--name-field-price {
+  display: inline;
 }
 
 .node--type-event .field--name-field-intro1 {
