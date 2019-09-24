@@ -5533,6 +5533,10 @@ body[class*="path-events-day"] .layout-container .layout-center {
   font-size: 52px;
 }
 
+.node--type-person .person--contact {
+  margin-bottom: 35px;
+}
+
 .node--type-person .person--contact .label {
   display: inline-block;
   margin-bottom: 5px;
@@ -5540,14 +5544,14 @@ body[class*="path-events-day"] .layout-container .layout-center {
   line-height: 32px;
 }
 
-.node--type-person .person--contact .person--tel .field__item, .node--type-person .person--contact .person--email .field__item {
+.node--type-person .person--contact .person--tel .field__item, .node--type-person .person--contact .person--email .field__item, .node--type-person .person--contact .person--website .field__item {
   color: #E84708;
   text-decoration: none;
   font-size: 16px;
   line-height: 24px;
 }
 
-.node--type-person .person--contact .person--tel .field__item::before, .node--type-person .person--contact .person--email .field__item::before {
+.node--type-person .person--contact .person--tel .field__item::before, .node--type-person .person--contact .person--email .field__item::before, .node--type-person .person--contact .person--website .field__item::before {
   font-family: "FontAwesome";
   font-size: 18px;
   padding-right: 5px;
@@ -5559,6 +5563,10 @@ body[class*="path-events-day"] .layout-container .layout-center {
 
 .node--type-person .person--contact .person--email .field__item::before {
   content: "\f0e0";
+}
+
+.node--type-person .person--contact .person--website .field__item::before {
+  content: "\f0ac";
 }
 
 .node--type-person .field--name-field-media {
@@ -5576,6 +5584,24 @@ body[class*="path-events-day"] .layout-container .layout-center {
     width: 100%;
     object-fit: cover;
   }
+}
+
+.node--type-person .field--name-field-position {
+  font-size: 2.4rem;
+  line-height: 3.4rem;
+  margin-bottom: 25px;
+}
+
+.node--type-person .field--name-field-office2, .node--type-person .field--name-field-education, .node--type-person .field--name-field-academic-interests, .node--type-person .field--name-field-about, .node--type-person .field--name-field-bio, .node--type-person .field--name-field-selected-publications {
+  margin-bottom: 30px;
+}
+
+.node--type-person .field--name-field-office2 .field__label, .node--type-person .field--name-field-education .field__label, .node--type-person .field--name-field-academic-interests .field__label, .node--type-person .field--name-field-about .field__label, .node--type-person .field--name-field-bio .field__label, .node--type-person .field--name-field-selected-publications .field__label {
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 3.2rem;
+  text-transform: uppercase;
+  margin-bottom: 5px;
 }
 
 .node--type-event .event {

@@ -4,6 +4,7 @@
   }
 
   .person--contact {
+    margin-bottom: 35px;
     .label {
       display: inline-block;
       margin-bottom: 5px;
@@ -11,7 +12,7 @@
       line-height: 32px;
     }
 
-    .person--tel, .person--email {
+    .person--tel, .person--email, .person--website {
       .field__item {
         color: $color-orange;
         text-decoration: none;
@@ -41,6 +42,14 @@
         }
       }
     }
+
+    .person--website {
+      .field__item {
+        &::before {
+          content: "\f0ac";
+        }
+      }
+    }
   }
 
   .field--name-field-media {
@@ -54,6 +63,23 @@
         width: 100%;
         object-fit: cover;
       }
+    }
+  }
+
+  .field--name-field-position {
+    font-size: 2.4rem;
+    line-height: 3.4rem;
+    margin-bottom: 25px;
+  }
+
+  .field--name-field-office2, .field--name-field-education, .field--name-field-academic-interests, .field--name-field-about, .field--name-field-bio, .field--name-field-selected-publications {
+    margin-bottom: 30px;
+    .field__label {
+      font-size: 2.4rem;
+      font-weight: 600;
+      line-height: 3.2rem;
+      text-transform: uppercase;
+      margin-bottom: 5px;
     }
   }
 }
