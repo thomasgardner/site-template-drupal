@@ -4333,6 +4333,10 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
   height: 400px;
 }
 
+.page-node-article .layout-hero-content .hero-banner-img-section.banner-tall {
+  height: 600px;
+}
+
 .path-news #site-branding {
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
 }

@@ -11,3 +11,11 @@
     }
   }
 }
+
+.page-node-article .layout-hero-content {
+  .hero-banner-img-section {
+    &.banner-tall {
+      height: 600px;
+    }
+  }
+}
