@@ -50,7 +50,7 @@
 %}
 
 {% block paragraph %}
-<div {{ attributes.addClass(classes) }} data-bg-img="{{ content.field_image|render|trim }}" style="background-image: url('{{ content.field_image|render|trim }}'); background-size:cover;">
+<div {{ attributes.addClass(classes) }} data-bg-img="{{ content.field_image|render|remove_html_comments|trim }}" style="background-image: url('{{ content.field_image|render|remove_html_comments|trim }}'); background-size:cover;">
   <div>
     {% block content %}
     <div class="container">

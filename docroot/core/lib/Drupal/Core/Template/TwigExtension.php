@@ -171,6 +171,9 @@ class TwigExtension extends \Twig_Extension {
       // Replace twig's escape filter with our own.
       new \Twig_SimpleFilter('drupal_escape', [$this, 'escapeFilter'], ['needs_environment' => TRUE, 'is_safe_callback' => 'twig_escape_filter_is_safe']),
 
+      //Remove html comments
+      new \Twig_SimpleFilter('remove_html_comments', [$this, 'removeHtmlComments']),
+
       // Implements safe joining.
       // @todo Make that the default for |join? Upstream issue:
       //   https://github.com/fabpot/Twig/issues/1420
@@ -404,6 +407,18 @@ class TwigExtension extends \Twig_Extension {
     $return = $this->escapeFilter($env, $string);
 
     return $return ? '<em class="placeholder">' . $return . '</em>' : NULL;
+  }
+
+    /**
+       * Removes html comments from string.
+       *
+       * @param $string
+       *
+       * @return string|null
+       */
+  public function removeHtmlComments($string) {
+    $output = preg_replace('/<!--(.|\s)*?-->/', '', $string);
+    return $output;
   }
 
   /**
