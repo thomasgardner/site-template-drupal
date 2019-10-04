@@ -1,7 +1,0 @@
-name: 'Feeds test extra sources'
-type: module
-description: 'Provides various dummy Feeds source plugins.'
-package: Testing
-core: 8.x
-dependencies:
-  - feeds
