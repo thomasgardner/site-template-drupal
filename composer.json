@@ -13,10 +13,13 @@
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
         }
     ],
     "require": {
-        "php": ">=7.0.8",
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6.5",
         "drupal-composer/drupal-scaffold": "^2.5",
@@ -87,6 +90,8 @@
         "drupal/webform": "^5.1",
         "drupal/xmlsitemap": "^1.0",
         "drush/drush": "^9.5",
+        "grasmash/drupal-security-warning": "^1.0.0",
+        "oomphinc/composer-installers-extender": "^1.1",
         "topfloor/composer-cleanup-vcs-dirs": "^1.0",
         "vlucas/phpdotenv": "^2.4",
         "webflo/drupal-finder": "^1.0.0",
@@ -103,8 +108,14 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
+        "preferred-install": "dist",
+        "autoloader-suffix": "Drupal8",
         "sort-packages": true,
-        "preferred-install": "dist"
+        "discard-changes": true,
+        "optimize-autoloader": true,
+        "platform": {
+            "php": "7.3"
+        }
     },
     "autoload": {
         "classmap": [
@@ -127,13 +138,29 @@
         ]
     },
     "extra": {
+        "merge-plugin": {
+            "include": [
+                "core/composer.json",
+                "modules/custom/*/composer.json",
+                "themes/custom/*/composer.json"
+            ],
+            "recurse": true,
+            "replace": false,
+            "merge-extra": false,
+            "ignore-duplicates": true
+        },
+        "installer-types": [
+            "bower-asset",
+            "npm-asset"
+        ],
+        "enable-patching": true,
         "composer-exit-on-patch-failure": true,
         "patchLevel": {
             "drupal/core": "-p2"
         },
         "installer-paths": {
             "web/core": ["type:drupal-core"],
-            "web/libraries/{$name}": ["type:drupal-library"],
+            "web/libraries/{$name}": ["type:drupal-library", "type:bower-asset", "type:npm-asset"],
             "web/modules/contrib/{$name}": ["type:drupal-module"],
             "web/profiles/contrib/{$name}": ["type:drupal-profile"],
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
