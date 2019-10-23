@@ -2,7 +2,6 @@
 
   'use strict';
 
-
   /**
    * Equal height.
    */
@@ -31,25 +30,24 @@
        * article slideshow
        */
 
-        $('.article-slideshow').once('flexSliderInit').each(function () {
-            $(this).flexslider({
-                touch: true,
-                slideshow: false,
-                slideshowSpeed: 4000,
-                controlNav: false,
-                customDirectionNav: jQuery(this).find('.controls a'),
-                start: function(slider) {
-                    $('.total-slides').text(slider.count);
-                },
-                after: function(slider) {
-                    $('.current-slide').text(slider.currentSlide + 1);
-                },
-            });
+      $('.article-slideshow').once('flexSliderInit').each(function () {
+        $(this).flexslider({
+          touch: true,
+          slideshow: false,
+          slideshowSpeed: 4000,
+          controlNav: false,
+          customDirectionNav: jQuery(this).find('.controls a'),
+          start: function (slider) {
+            $('.total-slides').text(slider.count);
+          },
+          after: function (slider) {
+            $('.current-slide').text(slider.currentSlide + 1);
+          },
         });
+      });
 
 
-
-        /**
+      /**
        * background image paralax effect
        **/
       $(window).on('load', function () {
@@ -59,7 +57,8 @@
             $img_section.css({
               'background-position': 'center center'
             })
-          } else {
+          }
+          else {
             var controller = new ScrollMagic.Controller(),
               $scroll_duration = $(window).height() + $img_section.outerHeight(),
               paragraph_id = '#' + $img_section.attr('id'),
@@ -84,16 +83,16 @@
        * change links to for alpha block on directory page
        *
        */
-        $('.view-directory.view-display-id-block_1 .alpaha-item a').each(function() {
-            var href= $(this).attr('href');
-            var index = href.indexOf('y/');
-            var index2 = href.indexOf('?');
-            if (index && index2 == -1) {
-                var letter = href.substr(index+2);
-                href = href.substr(0, index+1) + '?field_name_family=' + letter;
-                $(this).attr('href', href);
-            }
-        });
+      $('.view-directory.view-display-id-block_1 .alpaha-item a').each(function () {
+        var href = $(this).attr('href');
+        var index = href.indexOf('y/');
+        var index2 = href.indexOf('?');
+        if (index && index2 == -1) {
+          var letter = href.substr(index + 2);
+          href = href.substr(0, index + 1) + '?field_name_family=' + letter;
+          $(this).attr('href', href);
+        }
+      });
 
 
       $(document).ready(function () {
@@ -109,8 +108,6 @@
             'background-position': 'center top'
           })
         });
-
-
 
 
         /*
@@ -155,8 +152,8 @@
       $('.paragraph--type--accordion', context).once('commnTweaks').each(function () {
         var $toggle_all = $(this).find('.toggle-all');
 
-        if($('.paragraph--type--accordion .collapse.show').length) {
-            $('.paragraph--type--accordion .collapse.show').prev().find('a').attr('aria-expanded', 'true');
+        if ($('.paragraph--type--accordion .collapse.show').length) {
+          $('.paragraph--type--accordion .collapse.show').prev().find('a').attr('aria-expanded', 'true');
         }
 
         if ($toggle_all.length) {
@@ -173,7 +170,8 @@
               });
               $accordion_parent.addClass('show-all');
 
-            } else {
+            }
+            else {
 
               $accordion_item.each(function () {
                 $(this).collapse('hide');
@@ -281,7 +279,8 @@
 
               });
               parent.addClass('import open');
-            } else {
+            }
+            else {
               parent.toggleClass('open close');
             }
 
@@ -309,7 +308,8 @@
         if (parent.hasClass('open')) {
           parent.removeClass('open');
           menu.slideUp();
-        } else {
+        }
+        else {
           parent.addClass('open');
           menu.slideDown();
         }
@@ -362,7 +362,8 @@
           $.equalHeight(columns_articles_events);
           $.equalHeight(column_titles);
           $.equalHeight(column_titles_articles_events);
-        } else {
+        }
+        else {
           columns.css('height', 'auto');
           column_titles.css('height', 'auto');
           columns_articles_events.css('height', 'auto');
