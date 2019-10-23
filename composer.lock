@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "77c99eaeaa8048b2eb0b5f5b4337ca4d",
+    "content-hash": "88aef4e60a5be89eb07ea3f5ff0ff0ba",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2281,6 +2281,62 @@
             "homepage": "http://drupal.org/project/address",
             "support": {
                 "source": "https://git.drupalcode.org/project/address"
+            }
+        },
+        {
+            "name": "drupal/advupdate",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/advupdate.git",
+                "reference": "8.x-1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/advupdate-8.x-1.0.zip",
+                "reference": "8.x-1.0",
+                "shasum": "786646cd3bebebdeebba10674a1b33e6442e7146"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0",
+                    "datestamp": "1520169184",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Ruslan Piskarev",
+                    "homepage": "http://makedrupaleasy.com",
+                    "email": "ruslan.piskarev@gmail.com",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "The module modifies the Drupal \"Updates available\" email to include the information normally shown at /admin/reports/updates/update, with links to the module updates and their release notes.",
+            "homepage": "https://drupal.org/project/advupdate",
+            "keywords": [
+                "administration",
+                "developer",
+                "mail",
+                "utility"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/advupdate",
+                "issues": "https://drupal.org/project/issues/advupdate"
             }
         },
         {
