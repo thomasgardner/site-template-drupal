@@ -2,77 +2,69 @@
 
   'use strict';
 
-
   /**
    * Equal height.
+   *
+   * @param container
    */
   $.equalHeight = function (container) {
     var max_height = 0,
       height = 0;
-    container.css('height', 'auto')
+    container.css('height', 'auto');
 
     $(container).each(function () {
       height = $(this).height();
       max_height = (height > max_height) ? height : max_height;
-
     });
     $(container).css('height', max_height + 'px');
   };
 
-
   /**
    * Common tweaks for the theme.
    *
-   * @type {{attach: Drupal.behaviors.flexSliderInit.attach}}
+   * @type {{attach: Drupal.behaviors.commonTweaks.attach}}
    */
-  Drupal.behaviors.commnTweaks = {
+  Drupal.behaviors.commonTweaks = {
     attach: function (context, settings) {
-      /*
-       * article slideshow
-       */
-
-        $('.article-slideshow').once('flexSliderInit').each(function () {
-            $(this).flexslider({
-                touch: true,
-                slideshow: false,
-                slideshowSpeed: 4000,
-                controlNav: false,
-                customDirectionNav: jQuery(this).find('.controls a'),
-                start: function(slider) {
-                    $('.total-slides').text(slider.count);
-                },
-                after: function(slider) {
-                    $('.current-slide').text(slider.currentSlide + 1);
-                },
-            });
+      // Article Slide Show.
+      $('.article-slideshow').once('flexSliderInit').each(function () {
+        $(this).flexslider({
+          touch: true,
+          slideshow: false,
+          slideshowSpeed: 4000,
+          controlNav: false,
+          customDirectionNav: jQuery(this).find('.controls a'),
+          start: function (slider) {
+            $('.total-slides').text(slider.count);
+          },
+          after: function (slider) {
+            $('.current-slide').text(slider.currentSlide + 1);
+          }
         });
+      });
 
-
-
-        /**
-       * background image paralax effect
-       **/
+      // Background image Parallax effect.
       $(window).on('load', function () {
-        $('.full-width-img-section', context).once('commnTweaks').each(function () {
+        $('.full-width-img-section', context).once('backgroundParallax').each(function () {
           var $img_section = $(this);
+
           if (!$img_section.hasClass('init')) {
             $img_section.css({
               'background-position': 'center center'
             })
-          } else {
+          }
+          else {
             var controller = new ScrollMagic.Controller(),
               $scroll_duration = $(window).height() + $img_section.outerHeight(),
               paragraph_id = '#' + $img_section.attr('id'),
-              scroll_speed = ($img_section.data('parallax-speed') == '') ? '5' : $img_section.data('parallax-speed');
+              scroll_speed = ($img_section.data('parallax-speed') === '') ? '5' : $img_section.data('parallax-speed');
 
-            // build scene
+            // Build a scene.
             var scene = new ScrollMagic.Scene({
               triggerElement: paragraph_id,
               duration: $scroll_duration,
               triggerHook: 'onEnter'
-            })
-              .addTo(controller)
-              // .addIndicators() // remove for production
+            }).addTo(controller)
               .on("progress", function (e) {
                 $img_section.css('background-position', 'center ' + (e.progress.toFixed(2) * (100 / scroll_speed)) + '%');
               });
@@ -80,71 +72,58 @@
         });
       });
 
-      /*
-       * change links to for alpha block on directory page
-       *
-       */
-        $('.view-directory.view-display-id-block_1 .alpaha-item a').each(function() {
-            var href= $(this).attr('href');
-            var index = href.indexOf('y/');
-            var index2 = href.indexOf('?');
-            if (index && index2 == -1) {
-                var letter = href.substr(index+2);
-                href = href.substr(0, index+1) + '?field_name_family=' + letter;
-                $(this).attr('href', href);
-            }
-        });
+      // Change links to for alpha block on directory page.
+      $('.view-directory.view-display-id-block_1 .alpaha-item a').each(function () {
+        var href = $(this).attr('href'),
+          index = href.indexOf('y/'),
+          index2 = href.indexOf('?');
 
+        if (index && index2 === -1) {
+          var letter = href.substr(index + 2);
 
+          href = href.substr(0, index + 1) + '?field_name_family=' + letter;
+          $(this).attr('href', href);
+        }
+      });
+
+      // FIXME: This is performance issue to use $(document).ready()
+      //  inside Drupal.behaviors and not accurate.
+      //  Stop copy-paste code from the internet.
       $(document).ready(function () {
-
-        /*
-         * Hero Banner
-         */
+        // Hero Banner.
         $('.hero-banner-img-section', context).once('setHeroBannerImg').each(function () {
-          var bg_img_url = $(this).data('bg-img');
           $(this).css({
-            'background-image': 'url(' + bg_img_url + ')',
+            'background-image': 'url(' + $(this).data('bg-img') + ')',
             'background-size': 'cover',
             'background-position': 'center top'
           })
         });
 
+        // TODO: Bellow the duplicates of the similar code. Maybe we can adjust.
 
-
-
-        /*
-         * Featured Article Background Image
-         */
+        // Featured Article Background Image for articles.
         $('.view-id-article_view.view-display-id-attachment_1 .featured-post-wrap', context).once('setFeaturedArticleImage').each(function () {
-          var bg_img = $(this).data('featured-article');
           $(this).parents('.featured-news-grid.view-display-id-block_1 .attachment').css({
-            'background-image': 'url(' + bg_img + ')',
+            'background-image': 'url(' + $(this).data('featured-article') + ')',
             'background-size': 'cover',
             'background-position': 'center center'
           });
         });
 
-        /*
-         * Featured Article Background Image
-         */
+        // Featured Article Background Image for news.
         $('.featured-news-grid > .view-content .featured-post-wrap', context).once('setFeaturedArticleImage').each(function () {
-          var bg_img = $(this).data('featured-article');
           $(this).parents('.view-content > div').css({
-            'background-image': 'url(' + bg_img + ')',
+            'background-image': 'url(' + $(this).data('featured-article') + ')',
             'background-size': 'cover',
             'background-position': 'center center'
           });
         });
 
 
-        /*
-         * Featured Article Background Image
-         */
+        // Featured Article Background Image for events.
         $('.view-id-event_view.view-display-id-attachment_1 .featured-event-wrap', context).once('setFeaturedArticleImage').each(function () {
-          var bg_img = $(this).data('featured-event');
           $(this).parents('.featured-events-grid.view-display-id-block_3 .attachment').css({
-            'background-image': 'url(' + bg_img + ')',
+            'background-image': 'url(' + $(this).data('featured-event') + ')',
             'background-size': 'cover',
             'background-position': 'center center'
           });
@@ -152,44 +131,36 @@
 
       });
 
-      $('.paragraph--type--accordion', context).once('commnTweaks').each(function () {
-        var $toggle_all = $(this).find('.toggle-all');
+      $('.paragraph--type--accordion', context).once('accordionInit').each(function () {
+        var $toggle_all = $(this).find('.toggle-all'),
+          $collapse_show = $('.paragraph--type--accordion .collapse.show');
 
-        if($('.paragraph--type--accordion .collapse.show').length) {
-            $('.paragraph--type--accordion .collapse.show').prev().find('a').attr('aria-expanded', 'true');
+        if ($collapse_show.length > 0) {
+          $collapse_show.prev().find('a').attr('aria-expanded', 'true');
         }
 
-        if ($toggle_all.length) {
+        if ($toggle_all.length > 0) {
           var $accordion_parent = $(this),
-            $accordion_parent_id = $(this).attr('id'),
             $accordion_item = $(this).find('.collapse');
 
           $toggle_all.on('click', function () {
-
             if (!$accordion_parent.hasClass('show-all')) {
-
               $accordion_item.each(function () {
                 $(this).collapse('show');
               });
               $accordion_parent.addClass('show-all');
-
-            } else {
-
+            }
+            else {
               $accordion_item.each(function () {
                 $(this).collapse('hide');
               });
               $accordion_parent.removeClass('show-all');
-
             }
-
           });
         }
       });
-
-
     }
   };
-
 
   /**
    * Common tweaks for the theme.
@@ -198,12 +169,12 @@
    */
   Drupal.behaviors.sidebarAccordionInit = {
     attach: function (context, settings) {
-
-      /*
-       * Sidebar Accordion Toggle
-       */
+      // Sidebar Accordion Toggle.
       var $sidebar_menu = $('.sidebar-menu-block', context);
-      // Sidebar navigation toggle.
+
+      // FIXME: This is performance issue to use $(document).ready()
+      //  inside Drupal.behaviors and not accurate.
+      //  Stop copy-paste code from the internet.
       $(document).ready(function () {
         $sidebar_menu.once('sidebarAccordionInit').each(function () {
           // Open active submenu.
@@ -215,7 +186,7 @@
             $(this).parent('li').toggleClass('toggled');
             $(this).siblings($(this).attr('data-toggle')).slideToggle();
           });
-          //  Toggle on 'Enter' keypress
+          //  Toggle on 'Enter' keypress.
           $toggler.keypress(function (e) {
             if (e.keyCode == 13) {
               $(this).toggleClass('fa-angle-down fa-angle-up');
@@ -228,6 +199,7 @@
         $sidebar_menu.find('.is-active').once('sidebarAccordionInit').each(function () {
           var $parents = $(this).parents('.dropdown-menu-list'),
             $is_active = $(this).parent('.dropdown-item');
+
           $parents.siblings('.fa-angle-down').toggleClass('fa-angle-down fa-angle-up');
           $parents.slideDown();
           $is_active.children('.fa-angle-down').toggleClass('fa-angle-down fa-angle-up');
@@ -235,25 +207,24 @@
         });
 
 
-      });// END $(document)ready
+      });
 
     }
   };
 
 
   /**
-   * Common tweaks for the theme.
+   * Calender Rest API.
    *
-   * @type {{attach: Drupal.behaviors.sidebarAccordionInit.attach}}
+   * @type {{attach: Drupal.behaviors.calenderRestAPI.attach}}
    */
   Drupal.behaviors.calenderRestAPI = {
     attach: function (context, settings) {
-
-      /*
-       * Sidebar Accordion Toggle
-       */
+      // Sidebar Accordion Toggle.
+      // FIXME: This is performance issue to use $(document).ready()
+      //  inside Drupal.behaviors and not accurate.
+      //  Stop copy-paste code from the internet.
       $(document).ready(function () {
-
         $('.calendar-month', context).once('calenderRestAPI').each(function () {
           $(this).find('.event-content').on('click', function () {
             var date = $(this).data('date-trigger'),
@@ -265,12 +236,12 @@
                   count = data.length - 1;
 
                 $.each(data, function (key, val) {
-                  if (key == 0) {
+                  if (key === 0) {
                     items.push("<li><span class='fa fa-close'></span></li>");
                   }
                   items.push("<li id='event-" + date + '-' + key + "'>" + val.nothing + "</li>");
-                  if (key >= 2 && key == count) {
-                    items.push("<li><a href='/events/day/" + date + "'>View All <i class='fa fa-chevron-right'></i></a></li>");
+                  if (key >= 2 && key === count) {
+                    items.push("<li><a href='/events/day/" + date + "'>" + Drupal.t('View All') + " <i class='fa fa-chevron-right'></i></a></li>");
                   }
                 });
 
@@ -281,42 +252,43 @@
 
               });
               parent.addClass('import open');
-            } else {
+            }
+            else {
               parent.toggleClass('open close');
             }
-
           });
         });
-
       });
-
     }
   };
 
-
   /**
+   * Click, mouse leave functionality for utility menu.
    *
    * @type {{attach: Drupal.behaviors.utilityMenu.attach}}
-   * click, mouse leave functionality for utility menu
    */
   Drupal.behaviors.utilityMenu = {
     attach: function (context, settings) {
-      $('.utility-nav-block .menu-item--expanded > a').unbind("click");
-      $('.utility-nav-block .menu-item--expanded > a').on('click touch', function (e) {
+      var count = 0,
+        $link = $('.utility-nav-block .menu-item--expanded > a');
+
+      $link.unbind("click");
+      $link.on('click touch', function (e) {
         e.preventDefault();
-        var parent = $(this).parent();
-        var menu = parent.find('ul');
+        var parent = $(this).parent(),
+          menu = parent.find('ul');
+
+        // TODO: Replace to jQuery toggle.
         if (parent.hasClass('open')) {
           parent.removeClass('open');
           menu.slideUp();
-        } else {
+        }
+        else {
           parent.addClass('open');
           menu.slideDown();
         }
       });
 
-
-      var count = 0;
       $(document).on('mouseenter', '.utility-nav-block .menu-item--expanded, .utility-nav-block .menu-item--expanded ul', function () {
         count++;
       }).on('mouseleave', '.utility-nav-block .menu-item--expanded, .utility-nav-block .menu-item--expanded ul', function () {
@@ -327,22 +299,19 @@
         }
       });
 
-
       $('.tb-megamenu-submenu', context).once('mega_submenus').each(function () {
         var height = $(this).actual('height');
         $(this).css('display', 'block');
         $(this).addClass('processed');
         $(this).css('height', height + 'px');
-
       });
     }
   };
 
-
   /**
+   * Equal height for homepage Column Section paragraph.
    *
    * @type {{attach: Drupal.behaviors.equalHeight.attach}}
-   * equal height for homepage Column Section paragraph
    */
   Drupal.behaviors.equalHeight = {
     attach: function (context, settings) {
@@ -350,6 +319,7 @@
         columns_articles_events = $('.paragraph--type--recent-articles-upcoming-events .view-article-view, .paragraph--type--recent-articles-upcoming-events .view-event-view', context),
         column_titles = $('.paragraph--type--column-section .field--name-field-title', context),
         column_titles_articles_events = $('.paragraph--type--recent-articles-upcoming-events .field--name-field-title, .paragraph--type--recent-articles-upcoming-events .field--name-field-title-2', context);
+
       if ($(window).width() > 767) {
         $.equalHeight(columns);
         $.equalHeight(columns_articles_events);
@@ -362,7 +332,8 @@
           $.equalHeight(columns_articles_events);
           $.equalHeight(column_titles);
           $.equalHeight(column_titles_articles_events);
-        } else {
+        }
+        else {
           columns.css('height', 'auto');
           column_titles.css('height', 'auto');
           columns_articles_events.css('height', 'auto');
@@ -372,35 +343,33 @@
     }
   };
 
-  // var data = jQuery('.event-content').attr("data-id");
-  // jQuery('.contents .popup .event-popup').each(function(){
-  //   if(jQuery(this).data('id') == data) {
-  //     jQuery(this).parent().addClass('show');
-  //   }
-  // });
-
-
+  /**
+   * A custom functionality for Ajax.
+   *
+   * @type {{attach: Drupal.behaviors.customAjaxComplete.attach}}
+   */
   Drupal.behaviors.customAjaxComplete = {
     attach: function (context, settings) {
       var eventContent = $('.view-events-calendar .single-day');
-      if (eventContent.length) {
+
+      if (eventContent.length > 0) {
         eventContent.find('.item').click(function () {
           eventContent.find('.item').removeClass('active');
           eventContent.find('.event-popup').removeClass('active');
           $(this).addClass('active');
           var dataId = eventContent.find('.item.active .event-content').data("id");
-          eventContent.find('.event-popup[data-id=' + dataId + ']').addClass('active');
 
+          eventContent.find('.event-popup[data-id=' + dataId + ']').addClass('active');
           eventContent.find('.event-popup.active').each(function () {
             var height = $(this).outerHeight() + $(this).parents('.item.active').outerHeight() - 10;
             $(this).parents('ul.popup').css('top', -height);
           });
-
         });
 
         $(document).ajaxComplete(function (event, xhr, settings) {
-          if (eventContent.find('.item.active .event-content').length) {
+          if (eventContent.find('.item.active .event-content').length > 0) {
             var dataId = eventContent.find('.item.active .event-content').data("id");
+
             eventContent.find('.event-popup[data-id=' + dataId + ']').addClass('active');
             eventContent.find('.event-popup.active').each(function () {
               var height = $(this).outerHeight() + $(this).parents('.item.active').outerHeight() - 10;
@@ -417,15 +386,20 @@
     }
   };
 
-  // Acadmic filters
-  $(document).ready(function () {
-    $('.view-academic-filter-taxonomy-terms .view-content .filter-button .filter-toggle').each(function () {
-      var $class = $(this).data('tid');
-      if (!$('.view-academics ' + $class).length) {
-        $(this).parent().addClass('inactive');
-      }
-    });
-  });
-
+  /**
+   * Academic filters.
+   *
+   * @type {{attach: Drupal.behaviors.academicFilters.attach}}
+   */
+  Drupal.behaviors.academicFilters = {
+    attach: function (context, settings) {
+      $('.view-academic-filter-taxonomy-terms .view-content .filter-button .filter-toggle').each(function () {
+        var $class = $(this).data('tid');
+        if (!$('.view-academics ' + $class).length > 0) {
+          $(this).parent().addClass('inactive');
+        }
+      });
+    }
+  };
 
 })(jQuery, Drupal, drupalSettings);
