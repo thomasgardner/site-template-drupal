@@ -1,10 +1,7 @@
 .view-id-directory.view-display-id-page_1,
 .view-id-article_view.view-display-id-block_3 {
-  >.view-content {
-    display: -webkit-box;
-    display: -ms-flexbox;
+  > .view-content {
     display: flex;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
@@ -17,14 +14,18 @@
     border: 1px solid #cfcfcf;
     border-radius: 3px;
     margin-bottom: 15px;
-    box-shadow: 1px 1px 11px rgba(0,0,0,0.1);
+    box-shadow: 1px 1px 11px rgba(0, 0, 0, 0.1);
 
     .content-wrap {
       padding: 15px;
 
-      .post-title {}
-      .post-body {}
+      .post-title {
+      }
+
+      .post-body {
+      }
     }
+
     .post-img {
       img {
         height: auto;
@@ -41,6 +42,7 @@
       display: block;
       clear: both;
     }
+
     .alpaha-item {
       float: left;
       width: calc(100% / 27);
@@ -53,14 +55,17 @@
   display: flex;
   flex-direction: column;
 
-  >.view-header {
+  > .view-header {
     order: 2;
   }
-  >.view-filters {
+
+  > .view-filters {
     order: 1;
   }
-  >.view-content {
+
+  > .view-content {
     order: 3;
+
     .profile-wrap {
       margin-bottom: 15px;
 
@@ -70,13 +75,13 @@
           height: auto;
         }
       }
+
       .content-wrap {
         padding-left: 10px;
 
         .item-list {
           ul {
             list-style: none;
-            list-style-type: none;
             margin: 0;
             padding: 0;
 
@@ -89,6 +94,7 @@
       }
     }
   }
+
   .pager {
     order: 4;
   }
@@ -99,12 +105,14 @@
   .event-wrap {
     .image-wrap {
       position: relative;
+
       .date-wrap {
         position: absolute;
         top: 0;
         left: 10px;
         z-index: 3;
       }
+
       img {
         position: relative;
         height: auto;
@@ -112,8 +120,9 @@
         z-index: 1;
       }
     }
+
     .content-wrap {
-      
+
     }
   }
 }

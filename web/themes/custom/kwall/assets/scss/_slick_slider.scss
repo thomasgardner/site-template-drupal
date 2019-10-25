@@ -8,16 +8,20 @@
       &.slick-prev {
         left: 15px;
       }
+
       &.slick-next {
         right: 15px;
       }
     }
+
     .slick-list {
       margin: 0 -10px;
       overflow: visible;
-      .hide-overflow &{
+
+      .hide-overflow & {
         overflow-y: hidden;
       }
+
       &:before,
       &:after {
         content: '';
@@ -29,20 +33,25 @@
         top: 0;
         z-index: 2;
       }
+
       &:before {
         right: 100%;
       }
+
       &:after {
         left: 100%;
       }
+
       .slick-slide {
         float: left;
         padding: 0 10px;
         opacity: 0.2;
         transition: ease all 0.4s;
+
         &.slick-active {
           opacity: 1;
         }
+
         img {
           width: 100%;
           height: auto;

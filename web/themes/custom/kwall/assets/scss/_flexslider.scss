@@ -12,12 +12,15 @@
         display: inline-block;
         vertical-align: top;
       }
+
       .pause {
-        
+
       }
+
       .play {
-        
+
       }
+
       .flex-control-nav {
         display: inline-block;
         vertical-align: middle;
@@ -27,6 +30,7 @@
         text-align: inherit;
       }
     }
+
     .flex-prev,
     .flex-next {
       position: absolute;
@@ -36,16 +40,19 @@
       font-size: 30px;
       color: #ffffff;
       transition: ease all 0.4s;
+
       &:active,
       &:hover {
         text-decoration: none;
         opacity: .5;
       }
     }
+
     .flex-prev {
       left: 0;
       text-shadow: 1px 1px 2px #000;
     }
+
     .flex-next {
       right: 0;
       text-shadow: -1px 1px 2px #000;
