@@ -10,14 +10,14 @@
   Drupal.behaviors.pushMenu = {
     attach: function (context, settings) {
 
-      $(document).ready(function(){
+      $(document).ready(function () {
 
         /*
          * Push Menu
         */
         var push_menu = $('.layout-push-navigation', context);
 
-        $('.push-menu-toggle', context).once('pushMenu').on('click',function (e) {
+        $('.push-menu-toggle', context).once('pushMenu').on('click', function (e) {
           e.preventDefault();
           push_menu.toggleClass('active');
         }); // END .push-menu-toggle
@@ -25,23 +25,23 @@
       })
 
       var $body = $('body'),
-          ESCAPE_CODE = 27;
+        ESCAPE_CODE = 27;
 
-/*
-      // close menu if open and clicking on body
-      $(document).on('click touchstart',function(e){
-        if ( !$('.push-menu-toggle').is(e.target) && !$('.layout-push-navigation').is(e.target) && $('.layout-push-navigation').has(e.target).length === 0 && $('.layout-push-navigation').hasClass('open') ) {
-          $('.layout-push-navigation').removeClass('active');
-          $('body').removeClass('overflow-hide');
-        }
-      });
-*/
+      /*
+            // close menu if open and clicking on body
+            $(document).on('click touchstart',function(e){
+              if ( !$('.push-menu-toggle').is(e.target) && !$('.layout-push-navigation').is(e.target) && $('.layout-push-navigation').has(e.target).length === 0 && $('.layout-push-navigation').hasClass('open') ) {
+                $('.layout-push-navigation').removeClass('active');
+                $('body').removeClass('overflow-hide');
+              }
+            });
+      */
 
       $.fn.mobileMenuToggle = function (theElement) {
         $(this).on('click touchstart', theElement, function (e) {
 
           var menuName = $(this).closest('.fa').attr('title'),
-              menuName = menuName.toLowerCase().replace(' ', '-');
+            menuName = menuName.toLowerCase().replace(' ', '-');
 
           if ($('.child-menu-container.' + menuName).length === 0) {
             var $subMenu = $(this).parent('.menu__item').clone(true, true),
@@ -52,9 +52,10 @@
               $sub_head = '';
 
             // add description to slide in menu
-            if ($sub_heading_attr === '' || $sub_heading_attr === undefined ) {
+            if ($sub_heading_attr === '' || $sub_heading_attr === undefined) {
               $sub_head = '<h5 class="sub-head">' + $sub_heading + ' Overview</h5>';
-            } else {
+            }
+            else {
               $sub_head = '<h5 class="sub-head">' + $sub_heading_attr + '</h5>';
             }
 
@@ -75,7 +76,8 @@
                 $(this).parent('.child-menu-container').removeClass('active');
               }
             });
-          } else {
+          }
+          else {
             $('.child-menu-container.' + menuName).addClass('active');
           }
         });
