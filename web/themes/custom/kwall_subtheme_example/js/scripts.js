@@ -239,6 +239,7 @@
                   if (key === 0) {
                     items.push("<li><span class='fa fa-close'></span></li>");
                   }
+                  // FIXME: Unresolved variable val.nothing.
                   items.push("<li id='event-" + date + '-' + key + "'>" + val.nothing + "</li>");
                   if (key >= 2 && key === count) {
                     items.push("<li><a href='/events/day/" + date + "'>" + Drupal.t('View All') + " <i class='fa fa-chevron-right'></i></a></li>");
