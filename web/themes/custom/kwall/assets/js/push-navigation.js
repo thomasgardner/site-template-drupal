@@ -3,45 +3,39 @@
   'use strict';
 
   /**
-   * Common tweaks for the theme.
+   * Push menu functionality.
    *
    * @type {{attach: Drupal.behaviors.pushMenu.attach}}
    */
   Drupal.behaviors.pushMenu = {
     attach: function (context, settings) {
+      var push_menu = $('.layout-push-navigation', context),
+        $body = $('body'),
+        ESCAPE_CODE = 27;
 
-      $(document).ready(function(){
+      $('.push-menu-toggle', context).once('pushMenu').on('click', function (e) {
+        e.preventDefault();
+        push_menu.toggleClass('active');
+      }); // END .push-menu-toggle.
 
-        /*
-         * Push Menu
-        */
-        var push_menu = $('.layout-push-navigation', context);
-
-        $('.push-menu-toggle', context).once('pushMenu').on('click',function (e) {
-          e.preventDefault();
-          push_menu.toggleClass('active');
-        }); // END .push-menu-toggle
-
-      })
-
-      var $body = $('body'),
-          ESCAPE_CODE = 27;
-
-/*
-      // close menu if open and clicking on body
-      $(document).on('click touchstart',function(e){
-        if ( !$('.push-menu-toggle').is(e.target) && !$('.layout-push-navigation').is(e.target) && $('.layout-push-navigation').has(e.target).length === 0 && $('.layout-push-navigation').hasClass('open') ) {
+      // Close menu if open and clicking on body.
+      /*
+      $(document).on('click touchstart', function (e) {
+        if (!$('.push-menu-toggle').is(e.target)
+          && !$('.layout-push-navigation').is(e.target)
+          && $('.layout-push-navigation').has(e.target).length === 0
+          && $('.layout-push-navigation').hasClass('open')) {
           $('.layout-push-navigation').removeClass('active');
           $('body').removeClass('overflow-hide');
         }
       });
-*/
+      */
 
       $.fn.mobileMenuToggle = function (theElement) {
         $(this).on('click touchstart', theElement, function (e) {
+          var menuName = $(this).closest('.fa').attr('title');
 
-          var menuName = $(this).closest('.fa').attr('title'),
-              menuName = menuName.toLowerCase().replace(' ', '-');
+          menuName = menuName.toLowerCase().replace(' ', '-');
 
           if ($('.child-menu-container.' + menuName).length === 0) {
             var $subMenu = $(this).parent('.menu__item').clone(true, true),
@@ -51,10 +45,11 @@
               $children_links = $subMenu.html().replace($parent_link, ''),
               $sub_head = '';
 
-            // add description to slide in menu
-            if ($sub_heading_attr === '' || $sub_heading_attr === undefined ) {
+            // Add description to slide in menu.
+            if ($sub_heading_attr === '' || typeof $sub_heading_attr === undefined) {
               $sub_head = '<h5 class="sub-head">' + $sub_heading + ' Overview</h5>';
-            } else {
+            }
+            else {
               $sub_head = '<h5 class="sub-head">' + $sub_heading_attr + '</h5>';
             }
 
@@ -62,7 +57,7 @@
             $('.layout-push-navigation').append('<div class="child-menu-container ' + menuName + '">' +
               '<h2>' + $parent_link + '</h2>' +
               '<span class="prev-menu"><i class="fa fa-angle-left"></i> Back</span>' +
-              // add description to slide in menu
+              // Add description to slide in menu.
               $sub_head +
               '<ul class="parent-wrap">' + $children_links + '</ul>' +
               '</div>');
@@ -75,7 +70,8 @@
                 $(this).parent('.child-menu-container').removeClass('active');
               }
             });
-          } else {
+          }
+          else {
             $('.child-menu-container.' + menuName).addClass('active');
           }
         });
@@ -90,9 +86,7 @@
 
       $(document).once('subMenuToggle').mobileMenuToggle('.layout-push-navigation .push-nav-menu .fa-angle-right');
 
-
     }
   };
-
 
 })(jQuery, Drupal, drupalSettings);

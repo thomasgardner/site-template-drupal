@@ -1,12 +1,15 @@
 .layout-push-navigation {
   position: fixed;
   top: 0;
-  .toolbar-horizontal &{
+
+  .toolbar-horizontal & {
     top: 39px;
   }
+
   .toolbar-horizontal.toolbar-tray-open & {
     top: 79px;
   }
+
   left: 100%;
   height: 100%;
   width: 400px;
@@ -18,6 +21,7 @@
   &.active {
     transform: translateX(-400px);
   }
+
   @media (max-width: $screen-xs-max) {
     &.active {
       left: 0;
@@ -25,19 +29,22 @@
       transform: translateX(0);
     }
   }
+
   ul {
     list-style: none;
-    list-style-type: none;
     margin: 0;
     padding: 0;
+
     li {
       margin: 0;
       padding: 0;
+
       .dropdown-toggle {
         &:after {
           display: none;
         }
       }
+
       .dropdown-menu-list {
         display: none;
       }
@@ -54,16 +61,18 @@
   width: 93%;
   height: 100%;
   padding: 30px;
-  box-shadow: -2px -1px 4px rgba(0,0,0,.3);
+  box-shadow: -2px -1px 4px rgba(0, 0, 0, .3);
   transition: ease all 0.4s;
+
   &.active {
     transform: translateX(-100%);
   }
+
   ul {
     list-style: none;
-    list-style-type: none;
     margin: 0;
     padding: 0;
+
     li {
       margin: 0;
       padding: 0;

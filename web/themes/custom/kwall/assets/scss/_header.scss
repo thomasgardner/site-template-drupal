@@ -1,28 +1,32 @@
 #site-branding {
   z-index: 10;
+
   &:after {
     content: '';
     display: block;
     clear: both;
   }
 
-  // utility navigation styling
+  // Utility navigation styling.
   .utility-nav-block {
     float: right;
     width: 65%;
     @media (max-width: $screen-sm-max) {
       width: 100%;
     }
+
     ul {
       float: right;
       margin: 0;
       padding: 0;
+
       li {
         float: left;
         position: relative;
+
         &:hover {
-          // submenu
-          >ul {
+          // Submenu.
+          > ul {
             float: none;
             display: block;
             position: absolute;
@@ -32,13 +36,13 @@
             z-index: 10;
           }
         }
+
         &.menu-item--expanded {
           list-style: none;
-          list-style-type: none;
-          list-style-image: none;
         }
       }
-      // submenu
+
+      // Submenu.
       ul {
         display: none;
         float: none;
@@ -46,7 +50,7 @@
     }
   }
 
-  // logo styling
+  // logo styling.
   .company-brand {
     float: left;
     width: 35%;
@@ -55,18 +59,21 @@
     }
   }
 
-  // mega menu styling
+  // Mega menu styling.
   .block-tb-megamenu {
     float: right;
     width: 65%;
     @media (max-width: $screen-sm-max) {
       display: none;
     }
+
     .tb-megamenu {
       background: transparent;
+
       .level-0 {
         float: right;
       }
+
       .tb-megamenu-item {
         .dropdown-toggle {
           &:after {
@@ -74,6 +81,7 @@
           }
         }
       }
+
       a {
         color: initial;
         border: none;
@@ -83,21 +91,21 @@
     }
   }
 
-  // hamburger push menu toggle
+  // Hamburger push menu toggle.
   .menu--push-navigation-toggle {
     float: right;
     display: none;
     @media (max-width: $screen-sm-max) {
       display: inline-block;
     }
+
     ul {
       float: right;
       margin: 0;
       padding: 0;
       list-style: none;
-      list-style-type: none;
 
-      .push-menu-toggle  {
+      .push-menu-toggle {
         font-size: 0;
         line-height: 0;
 
