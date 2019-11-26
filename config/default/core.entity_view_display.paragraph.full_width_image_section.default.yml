@@ -7,18 +7,20 @@ dependencies:
     - field.field.paragraph.full_width_image_section.field_boolean
     - field.field.paragraph.full_width_image_section.field_image
     - field.field.paragraph.full_width_image_section.field_links
+    - field.field.paragraph.full_width_image_section.field_parallax_speed
     - field.field.paragraph.full_width_image_section.field_subtitle
     - field.field.paragraph.full_width_image_section.field_title
     - paragraphs.paragraphs_type.full_width_image_section
   module:
     - custom_module
+    - options
 id: paragraph.full_width_image_section.default
 targetEntityType: paragraph
 bundle: full_width_image_section
 mode: default
 content:
   field_body_unformatted:
-    weight: 4
+    weight: 5
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -35,7 +37,7 @@ content:
     type: boolean
     region: content
   field_image:
-    weight: 1
+    weight: 2
     label: hidden
     settings:
       link: true
@@ -44,7 +46,7 @@ content:
     type: entity_reference_entity_view
     region: content
   field_links:
-    weight: 5
+    weight: 6
     label: hidden
     settings:
       trim_length: 80
@@ -55,8 +57,15 @@ content:
     third_party_settings: {  }
     type: link_advance
     region: content
+  field_parallax_speed:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
   field_subtitle:
-    weight: 3
+    weight: 4
     label: hidden
     settings:
       link_to_entity: false
@@ -64,7 +73,7 @@ content:
     type: string
     region: content
   field_title:
-    weight: 2
+    weight: 3
     label: hidden
     settings:
       link_to_entity: false

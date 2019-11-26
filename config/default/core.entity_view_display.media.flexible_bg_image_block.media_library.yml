@@ -1,0 +1,31 @@
+uuid: 7952eab0-94ec-4087-859d-a2b3f4fd90e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.media_library
+    - field.field.media.flexible_bg_image_block.field_media_image_11
+    - image.style.medium
+    - media.type.flexible_bg_image_block
+  module:
+    - image
+id: media.flexible_bg_image_block.media_library
+targetEntityType: media
+bundle: flexible_bg_image_block
+mode: media_library
+content:
+  thumbnail:
+    type: image
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: ''
+    weight: 0
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  field_media_image_11: true
+  langcode: true
+  name: true
+  uid: true

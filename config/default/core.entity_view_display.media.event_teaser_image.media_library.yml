@@ -1,0 +1,31 @@
+uuid: 748a9182-9669-44ef-906a-a83731dc6ff6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.media_library
+    - field.field.media.event_teaser_image.field_media_image_7
+    - image.style.medium
+    - media.type.event_teaser_image
+  module:
+    - image
+id: media.event_teaser_image.media_library
+targetEntityType: media
+bundle: event_teaser_image
+mode: media_library
+content:
+  thumbnail:
+    type: image
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: ''
+    weight: 0
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  field_media_image_7: true
+  langcode: true
+  name: true
+  uid: true

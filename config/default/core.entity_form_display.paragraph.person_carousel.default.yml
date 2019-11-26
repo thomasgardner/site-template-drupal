@@ -4,9 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.person_carousel.field_boolean
+    - field.field.paragraph.person_carousel.field_display_count
     - field.field.paragraph.person_carousel.field_fluid_width
     - field.field.paragraph.person_carousel.field_hide_overflow
     - field.field.paragraph.person_carousel.field_link
+    - field.field.paragraph.person_carousel.field_scroll_count
     - field.field.paragraph.person_carousel.field_title
     - field.field.paragraph.person_carousel.field_view_reference
     - paragraphs.paragraphs_type.person_carousel
@@ -24,6 +26,12 @@ content:
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
+  field_display_count:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_fluid_width:
     weight: 3
     settings:
@@ -39,12 +47,18 @@ content:
     type: boolean_checkbox
     region: content
   field_link:
-    weight: 4
+    weight: 6
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+    region: content
+  field_scroll_count:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_title:
     weight: 0

@@ -61,9 +61,10 @@ display:
         options:
           calendar_type: month
           mini: '0'
+          month_name_size: '99'
           name_size: '3'
           with_weekno: '0'
-          max_items: '0'
+          max_items: '3'
           max_items_behavior: more
           groupby_times: hour
           groupby_times_custom: null
@@ -71,6 +72,9 @@ display:
           groupby_field: ''
           multiday_theme: '1'
           multiday_hidden: {  }
+          granularity_links:
+            day: view.events_calendar.page_day
+            week: ''
       row:
         type: calendar_row
         options:
@@ -255,7 +259,8 @@ display:
     display_title: Day
     position: 3
     display_options:
-      display_extenders: {  }
+      display_extenders:
+        metatag_display_extender: {  }
       display_description: ''
       style:
         type: calendar
@@ -289,7 +294,7 @@ display:
             calendar_colors_vocabulary: {  }
       path: events/day
       menu:
-        type: tab
+        type: none
         title: Day
         description: ''
         expanded: false
@@ -377,7 +382,7 @@ display:
       path: events/month
       display_description: ''
       menu:
-        type: tab
+        type: none
         title: Month
         description: ''
         expanded: false
@@ -665,7 +670,8 @@ display:
     display_title: Week
     position: 2
     display_options:
-      display_extenders: {  }
+      display_extenders:
+        metatag_display_extender: {  }
       display_description: ''
       style:
         type: calendar
@@ -703,7 +709,7 @@ display:
             calendar_colors_vocabulary: {  }
       path: events/week
       menu:
-        type: tab
+        type: none
         title: Week
         description: ''
         expanded: false
@@ -786,7 +792,8 @@ display:
     display_title: Year
     position: 4
     display_options:
-      display_extenders: {  }
+      display_extenders:
+        metatag_display_extender: {  }
       display_description: ''
       style:
         type: calendar
@@ -879,7 +886,7 @@ display:
           plugin_id: calendar_header
       path: events/year
       menu:
-        type: tab
+        type: none
         title: Year
         description: ''
         expanded: false

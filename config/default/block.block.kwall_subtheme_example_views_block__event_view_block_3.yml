@@ -1,0 +1,30 @@
+uuid: 5a1cae83-45db-4339-ab0c-d92720c65c7d
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.event_view
+  module:
+    - system
+    - views
+  theme:
+    - kwall_subtheme_example
+id: kwall_subtheme_example_views_block__event_view_block_3
+theme: kwall_subtheme_example
+region: content_top
+weight: 0
+provider: null
+plugin: 'views_block:event_view-block_3'
+settings:
+  id: 'views_block:event_view-block_3'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /events
+    negate: false
+    context_mapping: {  }

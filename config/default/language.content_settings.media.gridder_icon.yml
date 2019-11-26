@@ -1,0 +1,11 @@
+uuid: 527059bf-057c-4209-9c1f-45124e862928
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.gridder_icon
+id: media.gridder_icon
+target_entity_type_id: media
+target_bundle: gridder_icon
+default_langcode: site_default
+language_alterable: false

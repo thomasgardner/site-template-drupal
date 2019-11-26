@@ -1,15 +1,15 @@
-uuid: fa4627f2-7781-4e7a-8e9d-1ec65548bd0f
+uuid: e43b0f07-e72a-4e66-85c1-7ac10361f83b
 langcode: en
 status: true
 dependencies:
   module:
     - tb_megamenu
   theme:
-    - fresh
+    - kwall_subtheme_example
 id: mainnavigation
-theme: fresh
+theme: kwall_subtheme_example
 region: header
-weight: -10
+weight: -12
 provider: null
 plugin: 'tb_megamenu_menu_block:main'
 settings:
