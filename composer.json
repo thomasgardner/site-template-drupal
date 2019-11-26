@@ -54,6 +54,19 @@
               "reference": "origin/master"
             }
           }
+        },
+        {
+          "type": "package",
+          "package": {
+            "name": "ckeditor/templates",
+            "type": "drupal-library",
+            "version": "4.11.1",
+            "dist": {
+              "type": "zip",
+              "url": "https://download.ckeditor.com/templates/releases/templates_4.11.1.zip",
+              "reference": "master"
+            }
+          }
         }
     ],
     "require": {
@@ -126,6 +139,7 @@
         "drupal/views_bulk_operations": "^2.4",
         "drupal/viewsreference": "^2.0",
         "drupal/webform": "^5.1",
+        "drupal/wysiwyg_template": "^2.1",
         "drupal/xmlsitemap": "^1.0",
         "drush/drush": "^9.5",
         "enyo/dropzone": "^5.5",

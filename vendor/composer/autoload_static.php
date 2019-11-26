@@ -177,6 +177,7 @@ class ComposerStaticInitDrupal8
         array (
             'Drush\\Internal\\' => 15,
             'Drush\\' => 6,
+            'Drupal\\wysiwyg_template\\' => 24,
             'Drupal\\Driver\\' => 14,
             'Drupal\\Core\\' => 12,
             'Drupal\\Console\\Core\\' => 20,
@@ -544,6 +545,10 @@ class ComposerStaticInitDrupal8
         'Drush\\' => 
         array (
             0 => __DIR__ . '/..' . '/drush/drush/src',
+        ),
+        'Drupal\\wysiwyg_template\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/web/modules/contrib/wysiwyg_template/src',
         ),
         'Drupal\\Driver\\' => 
         array (
@@ -3787,6 +3792,15 @@ class ComposerStaticInitDrupal8
         'Drupal\\bad\\BadUnitTest' => __DIR__ . '/..' . '/drupal/coder/coder_sniffer/Drupal/Test/bad/BadUnitTest.php',
         'Drupal\\good\\GoodUnitTest' => __DIR__ . '/..' . '/drupal/coder/coder_sniffer/Drupal/Test/good/GoodUnitTest.php',
         'Drupal\\random\\bunny_hat\\long\\namingspace\\wtf\\still\\going\\strong\\LongNamespace' => __DIR__ . '/..' . '/drupal/coder/coder_sniffer/Drupal/Test/good/drupal8/LongNamespace.php',
+        'Drupal\\wysiwyg_template\\Controller\\TemplateController' => __DIR__ . '/../..' . '/web/modules/contrib/wysiwyg_template/src/Controller/TemplateController.php',
+        'Drupal\\wysiwyg_template\\Entity\\Template' => __DIR__ . '/../..' . '/web/modules/contrib/wysiwyg_template/src/Entity/Template.php',
+        'Drupal\\wysiwyg_template\\Form\\TemplateDeleteForm' => __DIR__ . '/../..' . '/web/modules/contrib/wysiwyg_template/src/Form/TemplateDeleteForm.php',
+        'Drupal\\wysiwyg_template\\Form\\TemplateForm' => __DIR__ . '/../..' . '/web/modules/contrib/wysiwyg_template/src/Form/TemplateForm.php',
+        'Drupal\\wysiwyg_template\\Plugin\\CKEditorPlugin\\TemplateSelector' => __DIR__ . '/../..' . '/web/modules/contrib/wysiwyg_template/src/Plugin/CKEditorPlugin/TemplateSelector.php',
+        'Drupal\\wysiwyg_template\\Plugin\\CKEditorPlugin\\Templates' => __DIR__ . '/../..' . '/web/modules/contrib/wysiwyg_template/src/Plugin/CKEditorPlugin/Templates.php',
+        'Drupal\\wysiwyg_template\\TemplateListBuilder' => __DIR__ . '/../..' . '/web/modules/contrib/wysiwyg_template/src/TemplateListBuilder.php',
+        'Drupal\\wysiwyg_template\\Tests\\DefaultContentTest' => __DIR__ . '/../..' . '/web/modules/contrib/wysiwyg_template/src/Tests/DefaultContentTest.php',
+        'Drupal\\wysiwyg_template\\Tests\\Form\\CrudTest' => __DIR__ . '/../..' . '/web/modules/contrib/wysiwyg_template/src/Tests/Form/CrudTest.php',
         'Drush\\Application' => __DIR__ . '/..' . '/drush/drush/src/Application.php',
         'Drush\\Backend\\BackendPathEvaluator' => __DIR__ . '/..' . '/drush/drush/src/Backend/BackendPathEvaluator.php',
         'Drush\\Backend\\BackendResultSetter' => __DIR__ . '/..' . '/drush/drush/src/Backend/BackendResultSetter.php',
