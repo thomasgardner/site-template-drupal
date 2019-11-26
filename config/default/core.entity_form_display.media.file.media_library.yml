@@ -6,8 +6,6 @@ dependencies:
     - core.entity_form_mode.media.media_library
     - field.field.media.file.field_media_file
     - media.type.file
-  module:
-    - content_moderation
 _core:
   default_config_hash: RFmywOcuem167havmD4VLgBTO1Swq9hyA-_f5aYTi8c
 id: media.file.media_library
@@ -21,12 +19,6 @@ content:
     region: content
     settings:
       include_locked: true
-    third_party_settings: {  }
-  moderation_state:
-    type: moderation_state_default
-    weight: 100
-    settings: {  }
-    region: content
     third_party_settings: {  }
   name:
     type: string_textfield

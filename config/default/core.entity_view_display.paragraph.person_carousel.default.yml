@@ -4,15 +4,18 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.person_carousel.field_boolean
+    - field.field.paragraph.person_carousel.field_display_count
     - field.field.paragraph.person_carousel.field_fluid_width
     - field.field.paragraph.person_carousel.field_hide_overflow
     - field.field.paragraph.person_carousel.field_link
+    - field.field.paragraph.person_carousel.field_scroll_count
     - field.field.paragraph.person_carousel.field_title
     - field.field.paragraph.person_carousel.field_view_reference
     - paragraphs.paragraphs_type.person_carousel
   module:
     - field_group
     - link
+    - options
     - viewsreference
 third_party_settings:
   field_group:
@@ -20,7 +23,7 @@ third_party_settings:
       children:
         - group_column_content
       parent_name: ''
-      weight: 4
+      weight: 6
       format_type: html_element
       format_settings:
         id: ''
@@ -67,6 +70,13 @@ content:
     third_party_settings: {  }
     type: boolean
     region: content
+  field_display_count:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
   field_fluid_width:
     weight: 1
     label: above
@@ -88,7 +98,7 @@ content:
     type: boolean
     region: content
   field_link:
-    weight: 5
+    weight: 7
     label: hidden
     settings:
       trim_length: 80
@@ -99,8 +109,15 @@ content:
     third_party_settings: {  }
     type: link
     region: content
+  field_scroll_count:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
   field_title:
-    weight: 3
+    weight: 5
     label: hidden
     settings:
       link_to_entity: false

@@ -1,0 +1,13 @@
+uuid: c18c84ec-dbb3-4164-beb2-6af708790d73
+langcode: en
+status: true
+dependencies: {  }
+id: gridder_icon
+label: 'Gridder Icon'
+description: ''
+source: image
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_image_12
+field_map: {  }

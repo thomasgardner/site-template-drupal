@@ -6,7 +6,6 @@ dependencies:
     - block_content.type.quick_link
     - field.field.block_content.quick_link.field_quick_link_styles
   module:
-    - content_moderation
     - paragraphs
 id: block_content.quick_link.default
 targetEntityType: block_content
@@ -39,11 +38,5 @@ content:
     region: content
     settings:
       include_locked: true
-    third_party_settings: {  }
-  moderation_state:
-    type: moderation_state_default
-    weight: 100
-    settings: {  }
-    region: content
     third_party_settings: {  }
 hidden: {  }

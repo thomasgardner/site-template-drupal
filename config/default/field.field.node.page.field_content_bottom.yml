@@ -11,6 +11,7 @@ dependencies:
     - paragraphs.paragraphs_type.flexible_bg_image_blocks
     - paragraphs.paragraphs_type.flexible_cta_blocks
     - paragraphs.paragraphs_type.full_width_image_section
+    - paragraphs.paragraphs_type.gridder
     - paragraphs.paragraphs_type.interior_slideshow
     - paragraphs.paragraphs_type.person_carousel
     - paragraphs.paragraphs_type.recent_articles_upcoming_events
@@ -42,6 +43,7 @@ settings:
       flexible_cta_blocks: flexible_cta_blocks
       recent_articles_upcoming_events: recent_articles_upcoming_events
       flexible_bg_image_blocks: flexible_bg_image_blocks
+      gridder: gridder
       person_carousel: person_carousel
       video_tab_carousel: video_tab_carousel
     target_bundles_drag_drop:
@@ -114,6 +116,12 @@ settings:
       flexible_bg_image_blocks:
         enabled: true
         weight: 32
+      gridder:
+        enabled: true
+        weight: 43
+      gridder_item:
+        weight: 44
+        enabled: false
       person_carousel:
         enabled: true
         weight: 45

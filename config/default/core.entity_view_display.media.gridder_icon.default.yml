@@ -1,0 +1,29 @@
+uuid: bb3c869a-108d-4098-be44-10dfb497b298
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.gridder_icon.field_media_image_12
+    - media.type.gridder_icon
+  module:
+    - image
+id: media.gridder_icon.default
+targetEntityType: media
+bundle: gridder_icon
+mode: default
+content:
+  field_media_image_12:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

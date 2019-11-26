@@ -17,6 +17,56 @@
         {
             "type": "composer",
             "url": "https://asset-packagist.org"
+        },
+        {
+          "type": "package",
+          "package": {
+            "name": "desandro/masonry",
+            "version": "3.3.2",
+            "type": "drupal-library",
+            "dist": {
+              "url": "https://github.com/desandro/masonry/archive/v3.3.2.zip",
+              "type": "zip"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
+            "name": "desandro/imagesloaded",
+            "version": "3.2.0",
+            "type": "drupal-library",
+            "dist": {
+              "url": "https://github.com/desandro/imagesloaded/archive/v3.2.0.zip",
+              "type": "zip"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
+            "name": "enyo/dropzone",
+            "version": "dev-master",
+            "type": "drupal-library",
+            "source": {
+              "url": "https://github.com/enyo/dropzone",
+              "type": "git",
+              "reference": "origin/master"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
+            "name": "ckeditor/templates",
+            "type": "drupal-library",
+            "version": "4.11.1",
+            "dist": {
+              "type": "zip",
+              "url": "https://download.ckeditor.com/templates/releases/templates_4.11.1.zip",
+              "reference": "master"
+            }
+          }
         }
     ],
     "require": {
@@ -89,8 +139,10 @@
         "drupal/views_bulk_operations": "^2.4",
         "drupal/viewsreference": "^2.0",
         "drupal/webform": "^5.1",
+        "drupal/wysiwyg_template": "^2.1",
         "drupal/xmlsitemap": "^1.0",
         "drush/drush": "^9.5",
+        "enyo/dropzone": "^5.5",
         "grasmash/drupal-security-warning": "^1.0.0",
         "oomphinc/composer-installers-extender": "^1.1",
         "topfloor/composer-cleanup-vcs-dirs": "^1.0",
@@ -161,7 +213,12 @@
         },
         "installer-paths": {
             "web/core": ["type:drupal-core"],
-            "web/libraries/{$name}": ["type:drupal-library", "type:bower-asset", "type:npm-asset"],
+            "web/libraries/{$name}": [
+                "type:drupal-library",
+                "type:bower-asset",
+                "type:npm-asset",
+                "enyo/dropzone"
+            ],
             "web/modules/contrib/{$name}": ["type:drupal-module"],
             "web/profiles/contrib/{$name}": ["type:drupal-profile"],
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
