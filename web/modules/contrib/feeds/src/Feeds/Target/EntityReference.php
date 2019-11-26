@@ -7,7 +7,6 @@ use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Entity\EntityFieldManagerInterface;
 use Drupal\Core\Entity\EntityRepositoryInterface;
-use Drupal\Core\Entity\Query\QueryFactory;
 use Drupal\Core\Field\FieldDefinitionInterface;
 use Drupal\Core\Field\FieldStorageDefinitionInterface;
 use Drupal\Core\Form\FormStateInterface;
@@ -40,13 +39,6 @@ class EntityReference extends FieldTargetBase implements ConfigurableTargetInter
   protected $entityTypeManager;
 
   /**
-   * The entity query factory object.
-   *
-   * @var \Drupal\Core\Entity\Query\QueryFactory
-   */
-  protected $queryFactory;
-
-  /**
    * The entity field manager.
    *
    * @var \Drupal\Core\Entity\EntityFieldManagerInterface
@@ -71,16 +63,13 @@ class EntityReference extends FieldTargetBase implements ConfigurableTargetInter
    *   The plugin definition.
    * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager
    *   The entity type manager.
-   * @param \Drupal\Core\Entity\Query\QueryFactory $query_factory
-   *   The entity query factory.
    * @param \Drupal\Core\Entity\EntityFieldManagerInterface $entity_field_manager
    *   The entity field manager.
    * @param \Drupal\Core\Entity\EntityRepositoryInterface $entity_repository
    *   The entity repository service.
    */
-  public function __construct(array $configuration, $plugin_id, array $plugin_definition, EntityTypeManagerInterface $entity_type_manager, QueryFactory $query_factory, EntityFieldManagerInterface $entity_field_manager, EntityRepositoryInterface $entity_repository) {
+  public function __construct(array $configuration, $plugin_id, array $plugin_definition, EntityTypeManagerInterface $entity_type_manager, EntityFieldManagerInterface $entity_field_manager, EntityRepositoryInterface $entity_repository) {
     $this->entityTypeManager = $entity_type_manager;
-    $this->queryFactory = $query_factory;
     $this->entityFieldManager = $entity_field_manager;
     $this->entityRepository = $entity_repository;
     parent::__construct($configuration, $plugin_id, $plugin_definition);
@@ -95,7 +84,6 @@ class EntityReference extends FieldTargetBase implements ConfigurableTargetInter
       $plugin_id,
       $plugin_definition,
       $container->get('entity_type.manager'),
-      $container->get('entity.query'),
       $container->get('entity_field.manager'),
       $container->get('entity.repository')
     );
@@ -298,7 +286,9 @@ class EntityReference extends FieldTargetBase implements ConfigurableTargetInter
       return NULL;
     }
 
-    $items = $this->queryFactory->get($entity_type)
+    $items = $this->entityTypeManager
+      ->getStorage($entity_type)
+      ->getQuery()
       ->condition('feeds_item.guid', $guid)
       ->execute();
     if (!empty($items)) {
@@ -327,7 +317,7 @@ class EntityReference extends FieldTargetBase implements ConfigurableTargetInter
       }
     }
     else {
-      $query = $this->queryFactory->get($this->getEntityType());
+      $query = $this->entityTypeManager->getStorage($this->getEntityType())->getQuery();
 
       if ($bundles = $this->getBundles()) {
         $query->condition($this->getBundleKey(), $bundles, 'IN');

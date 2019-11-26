@@ -55,7 +55,7 @@ class MappingForm extends FormBase {
 
     $target_options = [];
     foreach ($targets as $key => $target) {
-      $target_options[$key] = $target->getLabel();
+      $target_options[$key] = $target->getLabel() . ' (' . $key . ')';
     }
     $target_options = $this->sortOptions($target_options);
 
@@ -224,13 +224,16 @@ class MappingForm extends FormBase {
         ],
       ];
 
-      $label = Html::escape($this->targets[$mapping['target']]->getLabel());
+      $label = Html::escape($this->targets[$mapping['target']]->getLabel() . ' (' . $mapping['target'] . ')');
 
       if (count($mapping['map']) > 1) {
-        $label .= ': ' . $this->targets[$mapping['target']]->getPropertyLabel($column);
+        $desc = $this->targets[$mapping['target']]->getPropertyLabel($column);
       }
       else {
-        $label .= ': ' . $this->targets[$mapping['target']]->getDescription();
+        $desc = $this->targets[$mapping['target']]->getDescription();
+      }
+      if ($desc) {
+        $label .= ': ' . $desc;
       }
       $row['targets']['#items'][] = $label;
     }

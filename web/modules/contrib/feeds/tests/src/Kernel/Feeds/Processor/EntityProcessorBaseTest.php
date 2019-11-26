@@ -58,7 +58,7 @@ class EntityProcessorBaseTest extends FeedsKernelTestBase {
   public function setUp() {
     parent::setUp();
 
-    $this->feedType = $this->getMock(FeedTypeInterface::class);
+    $this->feedType = $this->createMock(FeedTypeInterface::class);
     $this->feedType->expects($this->any())
       ->method('getMappings')
       ->will($this->returnValue([]));
@@ -78,7 +78,6 @@ class EntityProcessorBaseTest extends FeedsKernelTestBase {
         'entity_type' => 'node',
         'arguments' => [
           '@entity_type.manager',
-          '@entity.query',
           '@entity_type.bundle.info',
         ],
         'form' => [
@@ -90,11 +89,10 @@ class EntityProcessorBaseTest extends FeedsKernelTestBase {
         'plugin_type' => 'processor',
       ],
       \Drupal::service('entity_type.manager'),
-      \Drupal::service('entity.query'),
       \Drupal::service('entity_type.bundle.info'),
     ]);
 
-    $this->feed = $this->getMock(FeedInterface::class);
+    $this->feed = $this->createMock(FeedInterface::class);
     $this->feed->expects($this->any())
       ->method('id')
       ->will($this->returnValue(1));
@@ -113,7 +111,7 @@ class EntityProcessorBaseTest extends FeedsKernelTestBase {
    * @covers ::process
    */
   public function testProcess() {
-    $item = $this->getMock(ItemInterface::class);
+    $item = $this->createMock(ItemInterface::class);
     $item->expects($this->any())
       ->method('toArray')
       ->will($this->returnValue([]));
@@ -170,7 +168,7 @@ class EntityProcessorBaseTest extends FeedsKernelTestBase {
     $this->processor->clean($this->feed, $node, new CleanState());
 
     // Reload node.
-    $node = \Drupal::entityTypeManager()->getStorage('node')->load($node->id());
+    $node = $this->container->get('entity_type.manager')->getStorage('node')->load($node->id());
 
     // Assert that the node is unpublished now.
     $this->assertFalse($node->isPublished());
@@ -364,7 +362,7 @@ class EntityProcessorBaseTest extends FeedsKernelTestBase {
    */
   public function testBuildAdvancedForm() {
     $form = [];
-    $form_state = $this->getMock(FormStateInterface::class);
+    $form_state = $this->createMock(FormStateInterface::class);
     $this->assertInternalType('array', $this->processor->buildAdvancedForm($form, $form_state));
   }
 
@@ -381,7 +379,7 @@ class EntityProcessorBaseTest extends FeedsKernelTestBase {
    */
   public function testMapWithEmptySource() {
     // Create a new feed type mock.
-    $feed_type = $this->getMock(FeedTypeInterface::class);
+    $feed_type = $this->createMock(FeedTypeInterface::class);
     $feed_type->expects($this->once())
       ->method('getMappings')
       ->will($this->returnValue([
@@ -397,7 +395,7 @@ class EntityProcessorBaseTest extends FeedsKernelTestBase {
     $this->setProtectedProperty($this->processor, 'feedType', $feed_type);
 
     // Instantiate target plugin.
-    $field_definition = $this->getMock(FieldDefinitionInterface::class);
+    $field_definition = $this->createMock(FieldDefinitionInterface::class);
     $definition = FieldTargetDefinition::createFromFieldDefinition($field_definition)
       ->addProperty('value');
 
@@ -425,8 +423,8 @@ class EntityProcessorBaseTest extends FeedsKernelTestBase {
     // Map.
     $this->callProtectedMethod($this->processor, 'map', [
       $this->feed,
-      $this->getMock(EntityInterface::class),
-      $this->getMock(ItemInterface::class),
+      $this->createMock(EntityInterface::class),
+      $this->createMock(ItemInterface::class),
     ]);
   }
 

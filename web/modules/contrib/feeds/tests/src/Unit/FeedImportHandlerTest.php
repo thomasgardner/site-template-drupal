@@ -43,7 +43,7 @@ class FeedImportHandlerTest extends FeedsUnitTestCase {
     $this->handler = new FeedImportHandler($this->dispatcher);
     $this->handler->setStringTranslation($this->getStringTranslationStub());
 
-    $this->feed = $this->getMock(FeedInterface::class);
+    $this->feed = $this->createMock(FeedInterface::class);
     $this->feed->expects($this->any())
       ->method('id')
       ->will($this->returnValue(10));
@@ -79,15 +79,15 @@ class FeedImportHandlerTest extends FeedsUnitTestCase {
 
     $this->handler->batchFetch($this->feed);
     $this->handler->batchParse($this->feed);
-    $this->handler->batchProcess($this->feed, $this->getMock(ItemInterface::class));
+    $this->handler->batchProcess($this->feed, $this->createMock(ItemInterface::class));
   }
 
   /**
    * Adds default listeners to event dispatcher.
    */
   protected function addDefaultEventListeners() {
-    $fetcher_result = $this->getMock(FetcherResultInterface::class);
-    $parser_result = $this->getMock(ParserResultInterface::class);
+    $fetcher_result = $this->createMock(FetcherResultInterface::class);
+    $parser_result = $this->createMock(ParserResultInterface::class);
 
     $this->dispatcher->addListener(FeedsEvents::FETCH, function (FetchEvent $event) use ($fetcher_result) {
       $event->setFetcherResult($fetcher_result);

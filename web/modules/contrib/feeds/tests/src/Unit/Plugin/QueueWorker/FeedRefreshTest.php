@@ -49,23 +49,26 @@ class FeedRefreshTest extends FeedsUnitTestCase {
   public function setUp() {
     parent::setUp();
     $this->dispatcher = new EventDispatcher();
-    $queue_factory = $this->getMock(QueueFactory::class, [], [], '', FALSE);
+    $queue_factory = $this->createMock(QueueFactory::class, [], [], '', FALSE);
     $queue_factory->expects($this->any())
       ->method('get')
       ->with('feeds_feed_refresh:')
-      ->will($this->returnValue($this->getMock(QueueInterface::class)));
+      ->will($this->returnValue($this->createMock(QueueInterface::class)));
 
-    $entity_type_manager = $this->getMock(EntityTypeManagerInterface::class);
+    $entity_type_manager = $this->createMock(EntityTypeManagerInterface::class);
 
-    $this->plugin = $this->getMock(FeedRefresh::class, ['feedExists'], [
-      [],
-      'feeds_feed_refresh',
-      [],
-      $queue_factory,
-      $this->dispatcher,
-      $this->getMockedAccountSwitcher(),
-      $entity_type_manager,
-    ]);
+    $this->plugin = $this->getMockBuilder(FeedRefresh::class)
+      ->setMethods(['feedExists'])
+      ->setConstructorArgs([
+        [],
+        'feeds_feed_refresh',
+        [],
+        $queue_factory,
+        $this->dispatcher,
+        $this->getMockedAccountSwitcher(),
+        $entity_type_manager,
+      ])
+      ->getMock();
     $this->plugin->expects($this->any())
       ->method('feedExists')
       ->will($this->returnValue(TRUE));

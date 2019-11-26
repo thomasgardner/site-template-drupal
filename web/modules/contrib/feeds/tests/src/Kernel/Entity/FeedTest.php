@@ -379,7 +379,7 @@ class FeedTest extends FeedsKernelTestBase {
     $feed = $this->createFeed($this->feedType->id());
 
     // Mock a state object.
-    $state = $this->getMock(StateInterface::class);
+    $state = $this->createMock(StateInterface::class);
 
     // Set state on the fetch stage.
     $feed->setState(StateInterface::FETCH, $state);
@@ -398,7 +398,7 @@ class FeedTest extends FeedsKernelTestBase {
     $feed = $this->createFeed($this->feedType->id());
 
     // Set a state.
-    $state = $this->getMock(StateInterface::class);
+    $state = $this->createMock(StateInterface::class);
     $feed->setState(StateInterface::FETCH, $state);
     $this->assertSame($state, $feed->getState(StateInterface::FETCH));
 
@@ -414,7 +414,7 @@ class FeedTest extends FeedsKernelTestBase {
     $feed = $this->createFeed($this->feedType->id());
 
     // Set a state.
-    $state = $this->getMock(StateInterface::class);
+    $state = $this->createMock(StateInterface::class);
     $feed->setState(StateInterface::FETCH, $state);
 
     // Save states.
@@ -455,7 +455,7 @@ class FeedTest extends FeedsKernelTestBase {
     ];
 
     foreach ($classes as $class) {
-      $plugin = $this->getMock($class);
+      $plugin = $this->createMock($class);
       $plugin->expects($this->atLeastOnce())
         ->method('defaultFeedConfiguration')
         ->will($this->returnValue([]));
@@ -480,7 +480,7 @@ class FeedTest extends FeedsKernelTestBase {
     ];
 
     foreach ($classes as $class) {
-      $plugin = $this->getMock($class);
+      $plugin = $this->createMock($class);
       $plugin->expects($this->atLeastOnce())
         ->method('defaultFeedConfiguration')
         ->will($this->returnValue([]));

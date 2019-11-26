@@ -2,7 +2,7 @@
 
 namespace Drupal\feeds\Feeds\Processor\Form;
 
-use Drupal\Component\Plugin\ConfigurablePluginInterface;
+use Drupal\Component\Plugin\ConfigurableInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\feeds\Plugin\Type\ExternalPluginFormBase;
 use Drupal\feeds\Plugin\Type\Processor\ProcessorInterface;
@@ -52,6 +52,12 @@ class DefaultEntityProcessorForm extends ExternalPluginFormBase {
     $period = array_map([$this, 'formatExpire'], array_combine($times, $times));
 
     $options = $this->getUpdateNonExistentActions();
+    $selected = $this->plugin->getConfiguration('update_non_existent');
+    if (!isset($options[$selected])) {
+      $options[$selected] = $this->t('@label (action no longer available)', [
+        '@label' => $selected,
+      ]);
+    }
     if (!empty($options)) {
       $form['update_non_existent'] = [
         '#type' => 'select',
@@ -136,6 +142,15 @@ class DefaultEntityProcessorForm extends ExternalPluginFormBase {
    */
   public function validateConfigurationForm(array &$form, FormStateInterface $form_state) {
     $form_state->setValue('owner_id', (int) $form_state->getValue('owner_id', 0));
+
+    // Check if the selected option for 'update_non_existent' is still available.
+    $options = $this->getUpdateNonExistentActions();
+    $selected = $form_state->getValue('update_non_existent');
+    if (!isset($options[$selected])) {
+      $form_state->setError($form['update_non_existent'], $this->t('The option %label is no longer available. Please select a different option.', [
+        '%label' => $selected,
+      ]));
+    }
   }
 
   /**
@@ -159,7 +174,7 @@ class DefaultEntityProcessorForm extends ExternalPluginFormBase {
    * Get available actions to apply on the entity.
    *
    * @return array
-   *   A list of applyable actions.
+   *   A list of applicable actions.
    */
   protected function getUpdateNonExistentActions() {
     $options = [];
@@ -168,13 +183,24 @@ class DefaultEntityProcessorForm extends ExternalPluginFormBase {
     foreach ($action_definitions as $id => $definition) {
       // Filter out configurable actions.
       $interfaces = class_implements($definition['class']);
-      if (isset($interfaces[ConfigurablePluginInterface::class])) {
+      if (isset($interfaces[ConfigurableInterface::class])) {
+        continue;
+      }
+      // @todo remove when Drupal 8 support has ended.
+      if (isset($interfaces['Drupal\Component\Plugin\ConfigurablePluginInterface'])) {
         continue;
       }
 
       // Filter out actions that need confirmation.
       if (!empty($definition['confirm_form_route_name'])) {
         continue;
+      }
+
+      // Check for deprecated action plugins.
+      foreach ($this->getDeprecatedActionClasses() as $deprecated_class_name) {
+        if ($definition['class'] === $deprecated_class_name || is_subclass_of($definition['class'], $deprecated_class_name)) {
+          continue 2;
+        }
       }
 
       $options[$id] = $definition['label'];
@@ -184,6 +210,24 @@ class DefaultEntityProcessorForm extends ExternalPluginFormBase {
       '_keep' => $this->t('Keep'),
       '_delete' => $this->t('Delete'),
     ] + $options;
+  }
+
+  /**
+   * Returns a list of classes from deprecated action plugins.
+   *
+   * @return string[]
+   *   An array of class names.
+   */
+  protected function getDeprecatedActionClasses() {
+    // @todo remove when Drupal 8 support has ended.
+    return [
+      'Drupal\comment\Plugin\Action\PublishComment',
+      'Drupal\comment\Plugin\Action\UnpublishComment',
+      'Drupal\comment\Plugin\Action\SaveComment',
+      'Drupal\node\Plugin\Action\PublishNode',
+      'Drupal\node\Plugin\Action\UnpublishNode',
+      'Drupal\node\Plugin\Action\SaveNode',
+    ];
   }
 
 }

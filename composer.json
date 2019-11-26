@@ -21,8 +21,32 @@
         {
           "type": "package",
           "package": {
+            "name": "desandro/masonry",
+            "version": "3.3.2",
+            "type": "drupal-library",
+            "dist": {
+              "url": "https://github.com/desandro/masonry/archive/v3.3.2.zip",
+              "type": "zip"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
+            "name": "desandro/imagesloaded",
+            "version": "3.2.0",
+            "type": "drupal-library",
+            "dist": {
+              "url": "https://github.com/desandro/imagesloaded/archive/v3.2.0.zip",
+              "type": "zip"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
             "name": "enyo/dropzone",
-            "version": "4.2.0",
+            "version": "dev-master",
             "type": "drupal-library",
             "source": {
               "url": "https://github.com/enyo/dropzone",
@@ -175,7 +199,12 @@
         },
         "installer-paths": {
             "web/core": ["type:drupal-core"],
-            "web/libraries/{$name}": ["type:drupal-library", "type:bower-asset", "type:npm-asset"],
+            "web/libraries/{$name}": [
+                "type:drupal-library",
+                "type:bower-asset",
+                "type:npm-asset",
+                "enyo/dropzone"
+            ],
             "web/modules/contrib/{$name}": ["type:drupal-module"],
             "web/profiles/contrib/{$name}": ["type:drupal-profile"],
             "web/themes/contrib/{$name}": ["type:drupal-theme"],

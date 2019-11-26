@@ -7,7 +7,9 @@
 
 namespace Drupal\views_block_area\Plugin\views\area;
 
+use Drupal\Core\Entity\EntityRepositoryInterface;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Render\RendererInterface;
 use Drupal\views\Plugin\views\area\AreaPluginBase;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\Block\BlockManagerInterface;
@@ -29,17 +31,37 @@ class ViewsBlockArea extends AreaPluginBase {
   protected $blockManager;
 
   /**
+   * The entity repository.
+   *
+   * @var \Drupal\Core\Entity\EntityRepositoryInterface
+   */
+  protected $entityRepository;
+
+  /**
+   * The renderer.
+   *
+   * @var \Drupal\Core\Render\RendererInterface
+   */
+  protected $renderer;
+
+  /**
    * {@inheritdoc}
    */
   public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
-    return new static($configuration, $plugin_id, $plugin_definition, $container->get('plugin.manager.block'));
+    return new static($configuration, $plugin_id, $plugin_definition,
+      $container->get('plugin.manager.block'),
+      $container->get('entity.repository'),
+      $container->get('renderer')
+    );
   }
 
   /**
    * {@inheritdoc}
    */
-  public function __construct(array $configuration, $plugin_id, $plugin_definition, BlockManagerInterface $block_manager) {
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, BlockManagerInterface $block_manager, EntityRepositoryInterface $entity_repository = NULL, RendererInterface $renderer) {
     $this->blockManager = $block_manager;
+    $this->entityRepository = $entity_repository;
+    $this->renderer = $renderer;
     parent::__construct($configuration, $plugin_id, $plugin_definition);
   }
 
@@ -93,7 +115,7 @@ class ViewsBlockArea extends AreaPluginBase {
       // Core and component plugins can be context-aware
       // https://www.drupal.org/node/1938688
       // @see \Drupal\ctools\Plugin\Block\EntityView
-      if (isset($definition['context'])) {
+      if (!empty($definition['context'])) {
         continue;
       }
 
@@ -127,7 +149,7 @@ class ViewsBlockArea extends AreaPluginBase {
       'content' => $block_instance->build(),
     ];
     /** @var \Drupal\Core\Render\RendererInterface $renderer */
-    $renderer = \Drupal::service('renderer');
+    $renderer = $this->renderer;
     $renderer->addCacheableDependency($element, $block_instance);
     return $element;
   }
@@ -141,7 +163,7 @@ class ViewsBlockArea extends AreaPluginBase {
     }
 
     /** @var \Drupal\Core\Block\BlockManagerInterface $block_manager */
-    $block_manager = \Drupal::service('plugin.manager.block');
+    $block_manager = $this->blockManager;
 
     /** @var \Drupal\Core\Block\BlockPluginInterface $block_instance */
     $block_instance = $block_manager->createInstance($this->options['block_id'], []);
@@ -156,7 +178,7 @@ class ViewsBlockArea extends AreaPluginBase {
     // Don't return broken block content instances.
     if ($plugin_definition['id'] == 'block_content') {
       $uuid = $block_instance->getDerivativeId();
-      if (!\Drupal::entityManager()->loadEntityByUuid('block_content', $uuid)) {
+      if (!$this->entityRepository->loadEntityByUuid('block_content', $uuid)) {
         return NULL;
       }
     }

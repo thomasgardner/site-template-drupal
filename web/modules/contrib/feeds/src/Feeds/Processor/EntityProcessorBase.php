@@ -7,7 +7,6 @@ use Drupal\Component\Render\FormattableMarkup;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Entity\EntityTypeBundleInfoInterface;
-use Drupal\Core\Entity\Query\QueryFactory;
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
@@ -55,13 +54,6 @@ abstract class EntityProcessorBase extends ProcessorBase implements EntityProces
   protected $entityType;
 
   /**
-   * The entity query factory object.
-   *
-   * @var \Drupal\Core\Entity\Query\QueryFactory
-   */
-  protected $queryFactory;
-
-  /**
    * Flag indicating that this processor is locked.
    *
    * @var bool
@@ -86,16 +78,13 @@ abstract class EntityProcessorBase extends ProcessorBase implements EntityProces
    *   The plugin definition.
    * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager
    *   The entity type manager.
-   * @param \Drupal\Core\Entity\Query\QueryFactory $query_factory
-   *   The entity query factory.
    * @param \Drupal\Core\Entity\EntityTypeBundleInfoInterface $entity_type_bundle_info
    *   The entity type bundle info.
    */
-  public function __construct(array $configuration, $plugin_id, array $plugin_definition, EntityTypeManagerInterface $entity_type_manager, QueryFactory $query_factory, EntityTypeBundleInfoInterface $entity_type_bundle_info) {
+  public function __construct(array $configuration, $plugin_id, array $plugin_definition, EntityTypeManagerInterface $entity_type_manager, EntityTypeBundleInfoInterface $entity_type_bundle_info) {
     $this->entityTypeManager = $entity_type_manager;
     $this->entityType = $entity_type_manager->getDefinition($plugin_definition['entity_type']);
     $this->storageController = $entity_type_manager->getStorage($plugin_definition['entity_type']);
-    $this->queryFactory = $query_factory;
     $this->entityTypeBundleInfo = $entity_type_bundle_info;
 
     parent::__construct($configuration, $plugin_id, $plugin_definition);
@@ -110,7 +99,6 @@ abstract class EntityProcessorBase extends ProcessorBase implements EntityProces
       $plugin_id,
       $plugin_definition,
       $container->get('entity_type.manager'),
-      $container->get('entity.query'),
       $container->get('entity_type.bundle.info')
     );
   }
@@ -225,7 +213,9 @@ abstract class EntityProcessorBase extends ProcessorBase implements EntityProces
     }
 
     // Set list of entities to clean.
-    $ids = $this->queryFactory->get($this->entityType())
+    $ids = $this->entityTypeManager
+      ->getStorage($this->entityType())
+      ->getQuery()
       ->condition('feeds_item.target_id', $feed->id())
       ->condition('feeds_item.hash', $this->getConfiguration('update_non_existent'), '<>')
       ->execute();
@@ -282,7 +272,9 @@ abstract class EntityProcessorBase extends ProcessorBase implements EntityProces
    */
   public function clear(FeedInterface $feed, StateInterface $state) {
     // Build base select statement.
-    $query = $this->queryFactory->get($this->entityType())
+    $query = $this->entityTypeManager
+      ->getStorage($this->entityType())
+      ->getQuery()
       ->condition('feeds_item.target_id', $feed->id());
 
     // If there is no total, query it.
@@ -560,7 +552,7 @@ abstract class EntityProcessorBase extends ProcessorBase implements EntityProces
       'update_non_existent' => static::KEEP_NON_EXISTENT,
       'skip_hash_check' => FALSE,
       'values' => [],
-      'authorize' => $this->entityType->isSubclassOf('Drupal\user\EntityOwnerInterface'),
+      'authorize' => $this->entityType->entityClassImplements('Drupal\user\EntityOwnerInterface'),
       'expire' => static::EXPIRE_NEVER,
       'owner_id' => 0,
       'owner_feed_author' => 0,
@@ -682,7 +674,9 @@ abstract class EntityProcessorBase extends ProcessorBase implements EntityProces
       return;
     }
     $expire_time = \Drupal::service('datetime.time')->getRequestTime() - $time;
-    return $this->queryFactory->get($this->entityType())
+    return $this->entityTypeManager
+      ->getStorage($this->entityType())
+      ->getQuery()
       ->condition('feeds_item.target_id', $feed->id())
       ->condition('feeds_item.imported', $expire_time, '<')
       ->execute();
@@ -700,7 +694,9 @@ abstract class EntityProcessorBase extends ProcessorBase implements EntityProces
    * {@inheritdoc}
    */
   public function getItemCount(FeedInterface $feed) {
-    return $this->queryFactory->get($this->entityType())
+    return $this->entityTypeManager
+      ->getStorage($this->entityType())
+      ->getQuery()
       ->condition('feeds_item.target_id', $feed->id())
       ->count()
       ->execute();
@@ -710,7 +706,9 @@ abstract class EntityProcessorBase extends ProcessorBase implements EntityProces
    * {@inheritdoc}
    */
   public function getImportedItemIds(FeedInterface $feed) {
-    return $this->queryFactory->get($this->entityType())
+    return $this->entityTypeManager
+      ->getStorage($this->entityType())
+      ->getQuery()
       ->condition('feeds_item.target_id', $feed->id())
       ->execute();
   }
@@ -766,7 +764,9 @@ abstract class EntityProcessorBase extends ProcessorBase implements EntityProces
   public function isLocked() {
     if ($this->isLocked === NULL) {
       // Look for feeds.
-      $this->isLocked = (bool) $this->queryFactory->get('feeds_feed')
+      $this->isLocked = (bool) $this->entityTypeManager
+        ->getStorage('feeds_feed')
+        ->getQuery()
         ->condition('type', $this->feedType->id())
         ->range(0, 1)
         ->execute();

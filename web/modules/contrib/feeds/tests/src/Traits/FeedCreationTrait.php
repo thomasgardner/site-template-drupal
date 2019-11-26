@@ -154,7 +154,7 @@ trait FeedCreationTrait {
    */
   protected function reloadFeed(FeedInterface $feed) {
     /** @var \Drupal\feeds\FeedStorageInterface $storage */
-    $storage = \Drupal::entityTypeManager()->getStorage('feeds_feed');
+    $storage = $this->container->get('entity_type.manager')->getStorage('feeds_feed');
     return $storage->load($feed->id());
   }
 

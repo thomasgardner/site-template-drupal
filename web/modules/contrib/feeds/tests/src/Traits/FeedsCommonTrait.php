@@ -115,7 +115,7 @@ trait FeedsCommonTrait {
    */
   protected function reloadEntity(EntityInterface $entity) {
     /** @var \Drupal\Core\Entity\ $storageEntityStorageInterface */
-    $storage = \Drupal::entityTypeManager()->getStorage($entity->getEntityTypeId());
+    $storage = $this->container->get('entity_type.manager')->getStorage($entity->getEntityTypeId());
     $storage->resetCache([$entity->id()]);
     return $storage->load($entity->id());
   }

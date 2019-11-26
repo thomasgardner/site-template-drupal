@@ -6,7 +6,7 @@ use Drupal\Component\Utility\Html;
 use Drupal\feeds\FeedInterface;
 use Drupal\feeds\Entity\FeedType;
 use Drupal\FunctionalJavascriptTests\DrupalSelenium2Driver;
-use Drupal\FunctionalJavascriptTests\JavascriptTestBase;
+use Drupal\FunctionalJavascriptTests\WebDriverTestBase;
 use Drupal\Tests\feeds\Traits\FeedCreationTrait;
 use Drupal\Tests\feeds\Traits\FeedsCommonTrait;
 use Drupal\Tests\Traits\Core\CronRunTrait;
@@ -14,7 +14,7 @@ use Drupal\Tests\Traits\Core\CronRunTrait;
 /**
  * Base class for Feeds javascript tests.
  */
-abstract class FeedsJavascriptTestBase extends JavascriptTestBase {
+abstract class FeedsJavascriptTestBase extends WebDriverTestBase {
 
   use CronRunTrait;
   use FeedCreationTrait;
