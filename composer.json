@@ -17,6 +17,19 @@
         {
             "type": "composer",
             "url": "https://asset-packagist.org"
+        },
+        {
+          "type": "package",
+          "package": {
+            "name": "enyo/dropzone",
+            "version": "4.2.0",
+            "type": "drupal-library",
+            "source": {
+              "url": "https://github.com/enyo/dropzone",
+              "type": "git",
+              "reference": "origin/master"
+            }
+          }
         }
     ],
     "require": {
@@ -91,6 +104,7 @@
         "drupal/webform": "^5.1",
         "drupal/xmlsitemap": "^1.0",
         "drush/drush": "^9.5",
+        "enyo/dropzone": "^5.5",
         "grasmash/drupal-security-warning": "^1.0.0",
         "oomphinc/composer-installers-extender": "^1.1",
         "topfloor/composer-cleanup-vcs-dirs": "^1.0",
