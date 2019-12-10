@@ -7,7 +7,7 @@ _core:
 id: feedback
 label: 'Website feedback'
 recipients:
-  - smmacdonald@me.com
+  - info@kwallcompany.com
 reply: ''
 weight: 0
 message: 'Your message has been sent.'
