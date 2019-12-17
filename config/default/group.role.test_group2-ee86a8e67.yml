@@ -1,0 +1,17 @@
+uuid: 52dcffe4-90f4-4f0f-a5af-42d5000b04d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.test_group2
+  enforced:
+    config:
+      - user.role.group_content_publisher
+id: test_group2-ee86a8e67
+label: 'Group Content Publisher'
+weight: -2
+internal: true
+audience: outsider
+group_type: test_group2
+permissions_ui: false
+permissions: {  }

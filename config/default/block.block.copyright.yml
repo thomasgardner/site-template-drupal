@@ -1,0 +1,29 @@
+uuid: aaac3263-5c78-4bf1-9a51-477686e477a4
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:f9654f63-c34c-42c2-94f1-38393f0d550f'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - kwall_subtheme_example
+third_party_settings:
+  block_class:
+    classes: copyright
+id: copyright
+theme: kwall_subtheme_example
+region: footer_copyright
+weight: 0
+provider: null
+plugin: 'block_content:f9654f63-c34c-42c2-94f1-38393f0d550f'
+settings:
+  id: 'block_content:f9654f63-c34c-42c2-94f1-38393f0d550f'
+  label: Copyright
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

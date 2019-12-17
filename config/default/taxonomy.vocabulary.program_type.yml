@@ -5,4 +5,5 @@ dependencies: {  }
 name: 'Program Type'
 vid: program_type
 description: ''
+hierarchy: 0
 weight: 0

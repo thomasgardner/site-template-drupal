@@ -1,0 +1,9 @@
+uuid: e295336c-3563-4092-a036-c1c6f03b9ffa
+langcode: en
+status: true
+dependencies: {  }
+id: article_slideshow
+label: 'Article Slideshow'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

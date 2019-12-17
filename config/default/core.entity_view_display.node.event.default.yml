@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.event.body
+    - field.field.node.event.field_add
     - field.field.node.event.field_address
     - field.field.node.event.field_all_day_event
     - field.field.node.event.field_end_date
@@ -12,13 +13,134 @@ dependencies:
     - field.field.node.event.field_event_teaser_image
     - field.field.node.event.field_featured
     - field.field.node.event.field_geolocation
+    - field.field.node.event.field_intro1
     - field.field.node.event.field_meta_tags
+    - field.field.node.event.field_price
     - field.field.node.event.field_section_title
     - field.field.node.event.field_start_date
     - node.type.event
   module:
+    - address
+    - addtocalendar
+    - fences
+    - field_group
     - text
     - user
+third_party_settings:
+  field_group:
+    group_row:
+      children:
+        - group_event_details
+        - group_event_social
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'row event'
+      label: Row
+      region: content
+    group_event_details:
+      children:
+        - extra_date_field
+        - group_event_location
+      parent_name: group_row
+      weight: 2
+      format_type: html_element
+      format_settings:
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'col-md-8 event-info'
+      label: 'Event Info'
+      region: content
+    group_event_location:
+      children:
+        - event_time
+        - group_location
+        - group_price_
+      parent_name: group_event_details
+      weight: 4
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: event-location
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Event Location'
+      region: content
+    group_event_social:
+      children:
+        - field_add
+        - sharethis
+      parent_name: group_row
+      weight: 3
+      format_type: html_element
+      format_settings:
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'col-md-4 event-social'
+      label: 'Event Social'
+      region: content
+    group_location:
+      children:
+        - field_address
+      parent_name: group_event_location
+      weight: 13
+      format_type: html_element
+      format_settings:
+        element: div
+        show_label: true
+        label_element: div
+        label_element_classes: label
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'location d-flex flex-row'
+      label: 'Location:'
+      region: content
+    group_price_:
+      children:
+        - field_price
+      parent_name: group_event_location
+      weight: 14
+      format_type: html_element
+      format_settings:
+        element: div
+        show_label: true
+        label_element: div
+        label_element_classes: label
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: price
+      label: 'Price: '
+      region: content
 id: node.event.default
 targetEntityType: node
 bundle: event
@@ -27,34 +149,100 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 2
+    weight: 3
     settings: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: mb-4
+        fences_label_tag: div
+        fences_label_classes: ''
     region: content
   content_moderation_control:
     weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
+  event_time:
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  extra_date_field:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_add:
+    weight: 16
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: add_to_calendar
+    region: content
+  field_address:
+    type: address_default
+    weight: 3
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_event_category:
+    type: entity_reference_label
+    weight: 4
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
   field_event_featured_image:
     type: entity_reference_entity_view
-    weight: 0
+    weight: 2
     region: content
     label: hidden
     settings:
-      link: true
       view_mode: default
-    third_party_settings: {  }
-  links:
+      link: false
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: mb-4
+        fences_label_tag: div
+        fences_label_classes: ''
+  field_intro1:
     weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_price:
+    weight: 15
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    type: string
+    region: content
+  sharethis:
+    weight: 17
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
-  field_address: true
   field_all_day_event: true
   field_end_date: true
-  field_event_category: true
   field_event_teaser_image: true
   field_featured: true
   field_geolocation: true
@@ -62,3 +250,4 @@ hidden:
   field_section_title: true
   field_start_date: true
   langcode: true
+  links: true

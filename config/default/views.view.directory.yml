@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.node.field_department2
     - field.storage.node.field_email
     - field.storage.node.field_media
     - field.storage.node.field_name
@@ -49,7 +50,7 @@ display:
         type: basic
         options:
           submit_button: Apply
-          reset_button: true
+          reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
           expose_sort_order: false
@@ -63,8 +64,8 @@ display:
           id: 0
           total_pages: null
           tags:
-            previous: ‹‹
-            next: ››
+            previous: '‹ Prev'
+            next: 'Next ›'
             first: '« First'
             last: 'Last »'
           expose:
@@ -198,6 +199,69 @@ display:
             alternative_field_reference: ''
             alternative_field_reference_separator: ', '
           group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_department2:
+          id: field_department2
+          table: node__field_department2
+          field: field_department2
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: false
+          group_column: target_id
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -344,7 +408,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"profile-wrap\">\r\n  <div class=\"row no-gutters\">\r\n\r\n    <div class=\"col-sm-4\">\r\n      <div class=\"profile-img\"><a href=\"{{ view_node }}\">{{ field_media }}</a></div>\r\n    </div>\r\n\r\n    <div class=\"col-sm-8\">\r\n      <div class=\"content-wrap\">\r\n        <div class=\"profile-title\">{{ field_name }}</div>\r\n        <div class=\"profile-email\">{{ field_email }}</div>\r\n        <div class=\"profile-telephone\">{{ field_telephone_number }}</div>\r\n      </div>\r\n    </div>\r\n\r\n  </div>\r\n</div>"
+            text: "<div class=\"profile-wrap\">\r\n  <div class=\"row no-gutters\">\r\n\r\n    <div class=\"col-sm-4\">\r\n      <div class=\"profile-img\"><a href=\"{{ view_node }}\">{{ field_media }}</a></div>\r\n    </div>\r\n\r\n    <div class=\"col-sm-8\">\r\n      <div class=\"content-wrap\">\r\n        <div class=\"profile-title\">{{ field_name }}</div>\r\n       <div class=\"profile-department\">{{ field_department2 }}</div>\r\n        <div class=\"profile-email\">{{ field_email }}</div>\r\n        <div class=\"profile-telephone\">{{ field_telephone_number }}</div>\r\n      </div>\r\n    </div>\r\n\r\n  </div>\r\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -377,7 +441,7 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: 'img-fluid both'
           element_default_classes: true
-          empty: "<div class=\"profile-wrap\">\r\n  <div class=\"row no-gutters\">\r\n\r\n    <div class=\"col-sm-4\">\r\n      <div class=\"profile-img\"><a href=\"{{ view_node }}\"><img class=\"img-fluid\" src=\"http://via.placeholder.com/175x225\" /></a></div>\r\n    </div>\r\n\r\n    <div class=\"col-sm-8\">\r\n      <div class=\"content-wrap\">\r\n        <div class=\"profile-title\">{{ field_name }}</div>\r\n        <div class=\"profile-email\">{{ field_email }}</div>\r\n        <div class=\"profile-telephone\">{{ field_telephone_number }}</div>\r\n      </div>\r\n    </div>\r\n\r\n  </div>\r\n</div>"
+          empty: "<div class=\"profile-wrap\">\r\n  <div class=\"row no-gutters\">\r\n\r\n    <div class=\"col-sm-4\">\r\n      <div class=\"profile-img\"><a href=\"{{ view_node }}\"><img class=\"img-fluid\" src=\"http://via.placeholder.com/175x225\" /></a></div>\r\n    </div>\r\n\r\n    <div class=\"col-sm-8\">\r\n      <div class=\"content-wrap\">\r\n        <div class=\"profile-title\">{{ field_name }}</div>\r\n       <div class=\"profile-department\">{{ field_department2 }}</div>\r\n        <div class=\"profile-email\">{{ field_email }}</div>\r\n        <div class=\"profile-telephone\">{{ field_telephone_number }}</div>\r\n      </div>\r\n    </div>\r\n\r\n  </div>\r\n</div>"
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -556,6 +620,7 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
+        - 'config:field.storage.node.field_department2'
         - 'config:field.storage.node.field_email'
         - 'config:field.storage.node.field_media'
         - 'config:field.storage.node.field_name'
@@ -728,14 +793,244 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.field_name'
+  block_2:
+    display_plugin: block
+    id: block_2
+    display_title: 'Directory block'
+    position: 1
+    display_options:
+      display_extenders:
+        metatag_display_extender: {  }
+      header:
+        view:
+          id: view
+          table: views
+          field: view
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          view_to_insert: 'directory:block_1'
+          inherit_arguments: false
+          plugin_id: view
+      defaults:
+        header: false
+        arguments: false
+        title: false
+        empty: false
+        filters: false
+        filter_groups: false
+      exposed_block: false
+      arguments: {  }
+      title: ''
+      display_description: ''
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content:
+            value: ''
+            format: full_html
+          plugin_id: text
+      filters:
+        status:
+          value: '1'
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+          group: 1
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            person: person
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+        field_name:
+          id: field_name
+          table: node__field_name
+          field: field_name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: word
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_name_op
+            label: Search
+            description: ''
+            use_operator: false
+            operator: field_name_op
+            identifier: field_name
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              article_editor: '0'
+              event_editor: '0'
+              group_member: '0'
+              content_editor: '0'
+              group_content_editor: '0'
+              content_publisher: '0'
+              group_content_publisher: '0'
+              administrator: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: name_fulltext
+        tid:
+          id: tid
+          table: taxonomy_index
+          field: tid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: tid_op
+            label: Department
+            description: ''
+            use_operator: false
+            operator: tid_op
+            identifier: tid
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              article_editor: '0'
+              event_editor: '0'
+              group_member: '0'
+              content_editor: '0'
+              group_content_editor: '0'
+              content_publisher: '0'
+              group_content_publisher: '0'
+              administrator: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: person_department
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        field_name_family:
+          id: field_name_family
+          table: node__field_name
+          field: field_name_family
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: starts
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_name_family_op
+            label: 'Name (field_name:family)'
+            description: ''
+            use_operator: false
+            operator: field_name_family_op
+            identifier: field_name_family
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              article_editor: '0'
+              event_editor: '0'
+              group_member: '0'
+              content_editor: '0'
+              group_content_editor: '0'
+              content_publisher: '0'
+              group_content_publisher: '0'
+              administrator: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: string
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_department2'
+        - 'config:field.storage.node.field_email'
+        - 'config:field.storage.node.field_media'
+        - 'config:field.storage.node.field_name'
+        - 'config:field.storage.node.field_telephone_number'
   page_1:
     display_plugin: page
     id: page_1
     display_title: Page
     position: 1
     display_options:
-      display_extenders: {  }
-      path: directory
+      display_extenders:
+        metatag_display_extender: {  }
+      path: directory/%
       header:
         view:
           id: view
@@ -805,6 +1100,7 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
+        - 'config:field.storage.node.field_department2'
         - 'config:field.storage.node.field_email'
         - 'config:field.storage.node.field_media'
         - 'config:field.storage.node.field_name'

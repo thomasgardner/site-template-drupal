@@ -1,0 +1,33 @@
+uuid: 7cc25959-7862-4f7c-8171-7d5b7ef2012d
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.article_view
+  module:
+    - node
+    - views
+  theme:
+    - kwall_subtheme_example
+id: views_block__article_view_block_5
+theme: kwall_subtheme_example
+region: content_bottom
+weight: -18
+provider: null
+plugin: 'views_block:article_view-block_5'
+settings:
+  id: 'views_block:article_view-block_5'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      article: article
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

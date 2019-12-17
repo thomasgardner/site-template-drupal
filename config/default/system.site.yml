@@ -1,10 +1,10 @@
 uuid: 06864346-2a80-4937-a8b5-f748cc12125e
 name: 'KWALL D8 Template'
-mail: smmacdonald@me.com
+mail: info@kwallcompany.com
 slogan: ''
 page:
   403: ''
-  404: ''
+  404: /node/81
   front: /node/1
 admin_compact_mode: false
 weight_select_max: 100

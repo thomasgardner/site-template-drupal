@@ -9,7 +9,7 @@ dependencies:
 id: mainnavigation
 theme: kwall_subtheme_example
 region: header
-weight: -12
+weight: -17
 provider: null
 plugin: 'tb_megamenu_menu_block:main'
 settings:

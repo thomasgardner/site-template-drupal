@@ -38,7 +38,7 @@ bundle: interior_slideshow_slide
 mode: default
 content:
   field_body_formatted:
-    weight: 3
+    weight: 5
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -54,7 +54,7 @@ content:
     type: entity_reference_entity_view
     region: content
   field_title:
-    weight: 2
+    weight: 4
     label: hidden
     settings:
       link_to_entity: false

@@ -13,7 +13,7 @@ third_party_settings:
 id: kwall_subtheme_example_contentbottom
 theme: kwall_subtheme_example
 region: content_bottom
-weight: -8
+weight: -17
 provider: null
 plugin: 'entity_field:node:field_content_bottom'
 settings:

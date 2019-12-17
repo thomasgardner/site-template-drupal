@@ -545,7 +545,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"full-name\"><a href=\"{{ view_node }}\">{{ field_name__given }} {{ field_name__family }}</a></div>\r\n<div class=\"credentials\">{{ field_name__credentials }}</div>"
+            text: "<div class=\"full-name\">{{ field_name__given }} {{ field_name__family }}</div>\r\n<div class=\"credentials\">{{ field_name__credentials }}</div>"
             make_link: false
             path: ''
             absolute: false
@@ -652,7 +652,7 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          text: view
+          text: 'View Profile'
           output_url_as_text: false
           absolute: false
           entity_type: node

@@ -9,7 +9,7 @@ _core:
 id: kwall_subtheme_example_local_tasks
 theme: kwall_subtheme_example
 region: content
-weight: -12
+weight: -19
 provider: null
 plugin: local_tasks_block
 settings:

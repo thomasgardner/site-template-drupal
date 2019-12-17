@@ -9,6 +9,7 @@ dependencies:
     - paragraphs.paragraphs_type.interior_column_section
     - paragraphs.paragraphs_type.interior_slideshow
     - paragraphs.paragraphs_type.video_embed
+    - paragraphs.paragraphs_type.views
     - paragraphs.paragraphs_type.wysiwyg
   module:
     - entity_reference_revisions
@@ -30,6 +31,7 @@ settings:
       interior_column_section: interior_column_section
       interior_slideshow: interior_slideshow
       accordion: accordion
+      views: views
       wysiwyg: wysiwyg
       video_embed: video_embed
     target_bundles_drag_drop:
@@ -87,10 +89,13 @@ settings:
       flexible_cta_block:
         weight: 34
         enabled: false
-      flexible_cta_blocks:
+      recent_articles:
         weight: 35
         enabled: false
-      recent_articles:
+      views:
+        enabled: true
+        weight: 35
+      flexible_cta_blocks:
         weight: 35
         enabled: false
       recent_articles_upcoming_events:
@@ -102,10 +107,34 @@ settings:
       wysiwyg:
         enabled: true
         weight: 38
+      cta_buttons:
+        weight: 43
+        enabled: false
       quick_link_minimal:
         weight: 44
+        enabled: false
+      gridder:
+        weight: 49
         enabled: false
       video_embed:
         enabled: true
         weight: 49
+      gridder_item:
+        weight: 50
+        enabled: false
+      person_carousel:
+        weight: 57
+        enabled: false
+      quicktab_item:
+        weight: 60
+        enabled: false
+      quicktabs:
+        weight: 61
+        enabled: false
+      video_tab_carousel:
+        weight: 66
+        enabled: false
+      video_tab_item:
+        weight: 67
+        enabled: false
 field_type: entity_reference_revisions

@@ -13,6 +13,7 @@ dependencies:
   module:
     - address
     - entity_reference_revisions
+    - fences
     - geolocation
     - text
     - user
@@ -37,7 +38,14 @@ content:
     weight: 2
     label: hidden
     settings: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: pt-3
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
     type: address_default
     region: content
   field_geolocation:
@@ -72,7 +80,14 @@ content:
         disableDoubleClickZoom: 0
       use_overridden_map_settings: 0
       common_map: ''
-    third_party_settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: pt-4
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
   field_hero_content:
     weight: 4
     label: above

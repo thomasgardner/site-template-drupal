@@ -1,0 +1,17 @@
+uuid: b83cd445-8f08-494b-a15a-365e051ef1e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.test_group2
+  enforced:
+    config:
+      - user.role.article_editor
+id: test_group2-d182ae8cf
+label: 'Article Editor'
+weight: -8
+internal: true
+audience: outsider
+group_type: test_group2
+permissions_ui: false
+permissions: {  }

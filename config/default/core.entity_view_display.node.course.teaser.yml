@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.course.body
+    - field.field.node.course.field_course_image
     - field.field.node.course.field_course_type
     - field.field.node.course.field_parent_program
     - field.field.node.course.field_program_type
@@ -30,7 +31,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
+  sharethis:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
 hidden:
+  field_course_image: true
   field_course_type: true
   field_parent_program: true
   field_program_type: true

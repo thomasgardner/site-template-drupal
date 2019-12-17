@@ -5,9 +5,9 @@ dependencies:
   config:
     - field.storage.node.field_sidebar_content
     - node.type.page
+    - paragraphs.paragraphs_type.cta_buttons
     - paragraphs.paragraphs_type.quick_link
     - paragraphs.paragraphs_type.quick_link_minimal
-    - paragraphs.paragraphs_type.wysiwyg
   module:
     - entity_reference_revisions
 id: node.page.field_sidebar_content
@@ -26,8 +26,8 @@ settings:
     negate: 0
     target_bundles:
       quick_link: quick_link
+      cta_buttons: cta_buttons
       quick_link_minimal: quick_link_minimal
-      wysiwyg: wysiwyg
     target_bundles_drag_drop:
       2_column_cta:
         weight: 13
@@ -83,6 +83,9 @@ settings:
       flexible_cta_block:
         weight: 33
         enabled: false
+      cta_buttons:
+        enabled: true
+        weight: 34
       flexible_cta_blocks:
         weight: 34
         enabled: false
@@ -99,6 +102,30 @@ settings:
         weight: 45
         enabled: false
       wysiwyg:
-        enabled: true
         weight: 46
+        enabled: false
+      gridder:
+        weight: 47
+        enabled: false
+      gridder_item:
+        weight: 48
+        enabled: false
+      person_carousel:
+        weight: 55
+        enabled: false
+      quicktab_item:
+        weight: 58
+        enabled: false
+      quicktabs:
+        weight: 59
+        enabled: false
+      video_embed:
+        weight: 63
+        enabled: false
+      video_tab_carousel:
+        weight: 64
+        enabled: false
+      video_tab_item:
+        weight: 65
+        enabled: false
 field_type: entity_reference_revisions
