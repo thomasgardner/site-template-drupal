@@ -107,6 +107,7 @@
         "drupal/google_analytics": "^2.3",
         "drupal/group": "^1.0@RC",
         "drupal/groupmenu": "^1.0@alpha",
+        "drupal/gtranslate": "^1.13",
         "drupal/inline_entity_form": "^1.0@RC",
         "drupal/libraries": "^3.0",
         "drupal/link_attributes": "^1.9",
