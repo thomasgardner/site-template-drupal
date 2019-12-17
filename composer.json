@@ -130,6 +130,7 @@
         "drupal/search_api": "^1.11",
         "drupal/search_api_autocomplete": "^1.1",
         "drupal/search_api_solr": "^2.5",
+        "drupal/sharethis": "^2.0@beta",
         "drupal/smart_ip": "^3.6",
         "drupal/smtp": "^1.0",
         "drupal/tb_megamenu": "1.x-dev",
