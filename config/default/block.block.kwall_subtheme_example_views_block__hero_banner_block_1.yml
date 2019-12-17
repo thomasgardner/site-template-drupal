@@ -5,6 +5,7 @@ dependencies:
   config:
     - views.view.hero_banner
   module:
+    - system
     - views
   theme:
     - kwall_subtheme_example
@@ -22,4 +23,9 @@ settings:
   views_label: ''
   items_per_page: none
   context_mapping: {  }
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: "/events/*\r\n/news/*"
+    negate: true
+    context_mapping: {  }

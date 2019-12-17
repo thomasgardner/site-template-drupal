@@ -4,12 +4,13 @@ status: true
 dependencies:
   module:
     - kwall_site_alert
+    - system
   theme:
     - kwall_subtheme_example
 id: kwall_subtheme_example_sitealert
 theme: kwall_subtheme_example
 region: alerts
-weight: 0
+weight: -18
 provider: null
 plugin: kwall_site_alert_block
 settings:
@@ -17,4 +18,9 @@ settings:
   label: 'Site Alert'
   provider: kwall_site_alert
   label_display: '0'
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: "/events\r\n/news"
+    negate: true
+    context_mapping: {  }

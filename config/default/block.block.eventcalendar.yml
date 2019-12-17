@@ -1,0 +1,37 @@
+uuid: e475e444-c389-46b6-8b00-5014294c528b
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.event-calendar
+  module:
+    - block_class
+    - menu_block
+    - system
+  theme:
+    - kwall_subtheme_example
+third_party_settings:
+  block_class:
+    classes: mb-event-calendar
+id: eventcalendar
+theme: kwall_subtheme_example
+region: content
+weight: -18
+provider: null
+plugin: 'menu_block:event-calendar'
+settings:
+  id: 'menu_block:event-calendar'
+  label: 'Event Calendar'
+  provider: menu_block
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand: 0
+  parent: 'event-calendar:'
+  suggestion: event_calendar
+visibility:
+  request_path:
+    id: request_path
+    pages: "/events/year\r\n/events/year/*\r\n/events/month\r\n/events/month/*\r\n/events/week\r\n/events/week/*\r\n/events/day\r\n/events/day/*"
+    negate: false
+    context_mapping: {  }

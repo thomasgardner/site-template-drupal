@@ -11,8 +11,8 @@ dependencies:
     - kwall_subtheme_example
 id: kwall_subtheme_example_views_block__map_view_block_1
 theme: kwall_subtheme_example
-region: content_top
-weight: -10
+region: content
+weight: -9
 provider: null
 plugin: 'views_block:map_view-block_1'
 settings:

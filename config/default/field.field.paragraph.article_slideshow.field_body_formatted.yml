@@ -1,0 +1,21 @@
+uuid: 663c9280-58e2-446e-9cdb-85b1670d8006
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body_formatted
+    - paragraphs.paragraphs_type.article_slideshow
+  module:
+    - text
+id: paragraph.article_slideshow.field_body_formatted
+field_name: field_body_formatted
+entity_type: paragraph
+bundle: article_slideshow
+label: 'Slideshow description'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

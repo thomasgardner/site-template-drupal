@@ -11,8 +11,8 @@ dependencies:
     - kwall_subtheme_example
 id: kwall_subtheme_example_views_block__article_view_block_4
 theme: kwall_subtheme_example
-region: content_top
-weight: -8
+region: hero
+weight: -11
 provider: null
 plugin: 'views_block:article_view-block_4'
 settings:

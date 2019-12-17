@@ -5,4 +5,5 @@ dependencies: {  }
 name: 'Person Department'
 vid: person_department
 description: ''
+hierarchy: 0
 weight: 0

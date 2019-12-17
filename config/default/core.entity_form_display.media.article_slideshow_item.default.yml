@@ -1,0 +1,36 @@
+uuid: 694ca079-d240-4003-bb9e-261247063257
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.article_slideshow_item.field_media_image_14
+    - image.style.thumbnail
+    - media.type.article_slideshow_item
+  module:
+    - image
+id: media.article_slideshow_item.default
+targetEntityType: media
+bundle: article_slideshow_item
+mode: default
+content:
+  field_media_image_14:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden:
+  created: true
+  name: true
+  path: true
+  status: true
+  uid: true

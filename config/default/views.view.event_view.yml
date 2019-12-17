@@ -9,7 +9,9 @@ dependencies:
     - field.storage.node.field_all_day_event
     - field.storage.node.field_end_date
     - field.storage.node.field_start_date
+    - image.style.hero_slide_image
     - image.style.horizontal_styling
+    - image.style.image_style_350x200
     - node.type.event
   module:
     - datetime
@@ -1254,18 +1256,18 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_media_image_7:
-          id: field_media_image_7
-          table: media__field_media_image_7
-          field: field_media_image_7
-          relationship: field_event_teaser_image
+        view_node:
+          id: view_node
+          table: node
+          field: view_node
+          relationship: none
           group_type: group
           admin_label: ''
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: true
-            text: "<div class=\"date-wrap\">\r\n  <div class=\"date\">{{ field_start_date_2 }}</div>\r\n</div>\r\n\r\n<div class=\"featured-event-wrap\" data-featured-event=\"{{ field_media_image_7 }}\">\r\n  <div class=\"content-wrap\">\r\n\r\n    <div class=\"featured-time\">{{ field_all_day_event }}</div>\r\n    <div class=\"featured-title\">{{ title }}</div>\r\n    <div class=\"featured-body\">{{ body }}</div>\r\n\r\n  </div>\r\n</div>"
+            text: '<div class="link"><a href="{{ view_node }}" class="read-more-link">read more <i class="fa fa-angle-right"></i></a></div>'
             make_link: false
             path: ''
             absolute: false
@@ -1298,7 +1300,60 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: "<div class=\"featured-event-wrap\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-sm-12\">\r\n\r\n      <div class=\"date-wrap\">\r\n        <div class=\"date\">{{ field_start_date_2 }}</div>\r\n      </div>\r\n\r\n      <div class=\"content-wrap\">\r\n        <div class=\"featured-time\">{{ field_all_day_event }}</div>\r\n        <div class=\"featured-title\">{{ title }}</div>\r\n        <div class=\"featured-body\">{{ body }}</div>\r\n      </div>\r\n\r\n    </div>\r\n\r\n  </div>\r\n</div>"
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          text: view
+          output_url_as_text: true
+          absolute: false
+          entity_type: node
+          plugin_id: entity_link
+        field_media_image_7:
+          id: field_media_image_7
+          table: media__field_media_image_7
+          field: field_media_image_7
+          relationship: field_event_teaser_image
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: "<div class=\"date-wrap\">\r\n  <div class=\"date\">{{ field_start_date_2 }}</div>\r\n</div>\r\n\r\n<div class=\"featured-event-wrap\" data-featured-event=\"{{ field_media_image_7 }}\">\r\n  <div class=\"content-wrap\">\r\n\r\n    <div class=\"featured-title\">{{ title }}</div>\r\n    <div class=\"featured-time\">{{ field_all_day_event }}</div>\r\n{{ view_node }}\r\n  </div>\r\n</div>"
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: "<div class=\"featured-event-wrap\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-sm-12\">\r\n\r\n      <div class=\"date-wrap\">\r\n        <div class=\"date\">{{ field_start_date_2 }}</div>\r\n      </div>\r\n\r\n      <div class=\"content-wrap\">\r\n        <div class=\"featured-time\">{{ field_all_day_event }}</div>\r\n        <div class=\"featured-title\">{{ title }}</div>\r\n{{ view_node }}      </div>\r\n\r\n    </div>\r\n\r\n  </div>\r\n</div>"
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -2061,6 +2116,70 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
+        field_start_date_4:
+          id: field_start_date_4
+          table: node__field_start_date
+          field: field_start_date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: datetime_custom
+          settings:
+            timezone_override: ''
+            date_format: 'F j, Y'
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
         body:
           id: body
           table: node__body
@@ -2124,18 +2243,18 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_media_image_7:
-          id: field_media_image_7
-          table: media__field_media_image_7
-          field: field_media_image_7
-          relationship: field_event_teaser_image
+        view_node:
+          id: view_node
+          table: node
+          field: view_node
+          relationship: none
           group_type: group
           admin_label: ''
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: true
-            text: "<div class=\"event-wrap\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-sm-4\">\r\n      <div class=\"image-wrap\">\r\n\r\n        <div class=\"date-wrap\">\r\n          <div class=\"date\">{{ field_start_date_2 }}</div>\r\n        </div>\r\n        <div class=\"event-image\">{{ field_media_image_7 }}</div>\r\n\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col-sm-8\">\r\n      <div class=\"content-wrap\">\r\n\r\n        <div class=\"time\">{{ field_all_day_event }}</div>\r\n        <div class=\"title\">{{ title }}</div>\r\n        <div class=\"body\">{{ body }}</div>\r\n\r\n      </div>\r\n    </div>\r\n\r\n  </div>\r\n</div>"
+            text: '<div class="event-link"><a href="{{ view_node }}" class="read-more-link">learn more</a></div>'
             make_link: false
             path: ''
             absolute: false
@@ -2168,7 +2287,60 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: "<div class=\"event-wrap\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-sm-12\">\r\n\r\n      <div class=\"date-wrap\">\r\n        <div class=\"date\">{{ field_start_date_2 }}</div>\r\n      </div>\r\n\r\n      <div class=\"content-wrap\">\r\n        <div class=\"time\">{{ field_all_day_event }}</div>\r\n        <div class=\"title\">{{ title }}</div>\r\n        <div class=\"body\">{{ body }}</div>\r\n      </div>\r\n\r\n    </div>\r\n\r\n  </div>\r\n</div>"
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          text: view
+          output_url_as_text: true
+          absolute: false
+          entity_type: node
+          plugin_id: entity_link
+        field_media_image_7:
+          id: field_media_image_7
+          table: media__field_media_image_7
+          field: field_media_image_7
+          relationship: field_event_teaser_image
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: "<div class=\"event-wrap\">\r\n  <div class=\"row\">\r\n    <div class=\"col-sm-8\">\r\n      <div class=\"date-wrap\">\r\n        <div class=\"date\">{{ field_start_date_2 }}</div>\r\n      </div>\r\n      <div class=\"content-wrap\">\r\n        <div class=\"title\">{{ title }}</div>\r\n        <div class=\"time\">{{ field_start_date_4 }}</div>\r\n        <div class=\"body\">{{ body }}</div>\r\n         {{ view_node }}   \r\n      </div>\r\n    </div>\r\n    <div class=\"col-sm-4\">\r\n      <div class=\"image-wrap\">\r\n        <div class=\"event-image\">{{ field_media_image_7 }}</div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>"
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: "<div class=\"event-wrap\">\r\n  <div class=\"row\">\r\n    <div class=\"col-sm-12\">\r\n      <div class=\"date-wrap\">\r\n        <div class=\"date\">{{ field_start_date_2 }}</div>\r\n      </div>\r\n      <div class=\"content-wrap\">\r\n        <div class=\"title\">{{ title }}</div>\r\n        <div class=\"time\">{{ field_start_date_4 }}</div>\r\n        <div class=\"body\">{{ body }}</div>\r\n        {{ view_node }}        \r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>"
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -2191,17 +2363,19 @@ display:
       style:
         type: default
         options:
-          grouping:
-            -
-              field: field_start_date_3
-              rendered: true
-              rendered_strip: false
+          grouping: {  }
           row_class: ''
           default_row_class: true
       row:
         type: fields
         options: {  }
       inherit_exposed_filters: true
+      pager:
+        type: some
+        options:
+          items_per_page: 10
+          offset: 0
+      render_pager: false
     cache_metadata:
       max-age: -1
       contexts:
@@ -2625,7 +2799,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"event-wrap\">\r\n\r\n  <div class=\"date-wrap\">\r\n    <div class=\"date\">{{ field_start_date_2 }}</div>\r\n  </div>\r\n\r\n  <div class=\"content-wrap\">\r\n    <div class=\"time\">{{ field_all_day_event }}</div>\r\n    <div class=\"title\">{{ title }}</div>\r\n  </div>\r\n\r\n</div>"
+            text: "<div class=\"event-wrap\">\r\n\r\n  <div class=\"date-wrap\">\r\n    <div class=\"date\">{{ field_start_date_2 }}</div>\r\n  </div>\r\n\r\n  <div class=\"content-wrap\">\r\n    <div class=\"title\">{{ title }}</div>\r\n<div class=\"time\">{{ field_all_day_event }}</div>\r\n  </div>\r\n\r\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -3084,7 +3258,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"event-wrap\">\r\n\r\n  <div class=\"date-wrap\">\r\n    <div class=\"date\">{{ field_start_date_2 }}</div>\r\n  </div>\r\n\r\n  <div class=\"content-wrap\">\r\n    <div class=\"time\">{{ field_all_day_event }}</div>\r\n    <div class=\"title\">{{ title }}</div>\r\n  </div>\r\n\r\n</div>"
+            text: "<div class=\"event-wrap\">\r\n\r\n  <div class=\"date-wrap\">\r\n    <div class=\"date\">{{ field_start_date_2 }}</div>\r\n  </div>\r\n\r\n  <div class=\"content-wrap\">\r\n    <div class=\"title\">{{ title }}</div>\r\n    <div class=\"time\">{{ field_all_day_event }}</div>\r\n  </div>\r\n\r\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -3140,7 +3314,8 @@ display:
     display_title: 'Featured Grid'
     position: 4
     display_options:
-      display_extenders: {  }
+      display_extenders:
+        metatag_display_extender: {  }
       display_description: ''
       block_description: 'Featured Events Grid'
       style:
@@ -3156,6 +3331,7 @@ display:
         filters: false
         filter_groups: false
         fields: false
+        pager: false
       row:
         type: fields
         options: {  }
@@ -3712,18 +3888,18 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_media_image_7:
-          id: field_media_image_7
-          table: media__field_media_image_7
-          field: field_media_image_7
-          relationship: field_event_teaser_image
+        view_node:
+          id: view_node
+          table: node
+          field: view_node
+          relationship: none
           group_type: group
           admin_label: ''
           label: ''
-          exclude: false
+          exclude: true
           alter:
-            alter_text: true
-            text: "<div class=\"featured-event-wrap\">\r\n  <div class=\"row no-gutters\">\r\n\r\n    <div class=\"col-sm-4\">\r\n      <div class=\"image-wrap\">\r\n        <div class=\"date-wrap\">\r\n          <div class=\"date\">{{ field_start_date_2 }}</div>\r\n        </div>\r\n        {{ field_media_image_7 }}\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col-sm-8\">\r\n      <div class=\"content-wrap\">\r\n        <div class=\"time\">{{ field_all_day_event }}</div>\r\n        <div class=\"title\">{{ title }}</div>\r\n        <div class=\"body\">{{ body }}</div>\r\n      </div>\r\n    </div>\r\n\r\n  </div>\r\n</div>"
+            alter_text: false
+            text: ''
             make_link: false
             path: ''
             absolute: false
@@ -3756,14 +3932,67 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: "<div class=\"featured-event-wrap\">\r\n  <div class=\"row no-gutters\">\r\n\r\n    <div class=\"col-sm-12\">\r\n      <div class=\"date-wrap\">\r\n        <div class=\"date\">{{ field_start_date_2 }}</div>\r\n      </div>\r\n      <div class=\"content-wrap\">\r\n        <div class=\"time\">{{ field_all_day_event }}</div>\r\n      <div class=\"title\">{{ title }}</div>\r\n    </div>\r\n\r\n  </div>\r\n</div>"
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          text: 'Read More'
+          output_url_as_text: true
+          absolute: false
+          entity_type: node
+          plugin_id: entity_link
+        field_media_image_7:
+          id: field_media_image_7
+          table: media__field_media_image_7
+          field: field_media_image_7
+          relationship: field_event_teaser_image
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: "<div class=\"featured-event-wrap\">\r\n  <div class=\"no-gutters\">\r\n      <div class=\"image-wrap\">\r\n        <div class=\"date-wrap\">\r\n          <div class=\"date\">{{ field_start_date_2 }}</div>\r\n        </div>\r\n        {{ field_media_image_7 }}\r\n      </div>\r\n      <div class=\"content-wrap\">\r\n        <div class=\"title\">{{ title }}</div>\r\n        <div class=\"time\">{{ field_all_day_event }}</div>\r\n        <div class=\"link\"><a href=\"{{ view_node }}\" class=\"read-more-link\">read more <i class=\"fa fa-angle-right\"></i></a></div>\r\n      </div>\r\n  </div>\r\n</div>"
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: "<div class=\"featured-event-wrap\">\r\n  <div class=\"no-gutters\">\r\n\r\n    <div class=\"col-sm-12\">\r\n      <div class=\"date-wrap\">\r\n        <div class=\"date\">{{ field_start_date_2 }}</div>\r\n      </div>\r\n      <div class=\"content-wrap\">\r\n  <div class=\"title\">{{ title }}</div>\r\n        <div class=\"time\">{{ field_all_day_event }}</div>\r\n               <div class=\"link\"><a href=\"{{ view_node }}\" class=\"read-more-link\">read more <i class=\"fa fa-angle-right\"></i></a></div>\r\n    </div>\r\n\r\n  </div>\r\n</div>"
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
           type: image
           settings:
-            image_style: ''
+            image_style: image_style_350x200
             image_link: ''
           group_column: ''
           group_columns: {  }
@@ -3776,6 +4005,11 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
+      pager:
+        type: some
+        options:
+          items_per_page: 2
+          offset: 0
     cache_metadata:
       max-age: -1
       contexts:
@@ -3796,7 +4030,8 @@ display:
     display_title: 'Featured Slider'
     position: 5
     display_options:
-      display_extenders: {  }
+      display_extenders:
+        metatag_display_extender: {  }
       display_description: ''
       block_description: 'Featured Events Slider'
       style:
@@ -3816,6 +4051,8 @@ display:
         filter_groups: false
         footer: false
         fields: false
+        title: false
+        header: false
       row:
         type: fields
         options: {  }
@@ -4000,6 +4237,70 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
+        field_start_date_3:
+          id: field_start_date_3
+          table: node__field_start_date
+          field: field_start_date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: datetime_custom
+          settings:
+            timezone_override: ''
+            date_format: 'F j, Y'
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
         field_end_date:
           id: field_end_date
           table: node__field_end_date
@@ -4075,7 +4376,7 @@ display:
           exclude: true
           alter:
             alter_text: true
-            text: '{{ field_start_date }}-{{ field_end_date }}'
+            text: '{{ field_start_date_3 }} | {{ field_start_date }} - {{ field_end_date }}'
             make_link: false
             path: ''
             absolute: false
@@ -4267,7 +4568,7 @@ display:
           exclude: true
           alter:
             alter_text: true
-            text: '<div class="time"><i class="fa fa-clock-o"></i> All Day</div>'
+            text: '<div class="time">{{ field_start_date_3 }} | All Day</div>'
             make_link: false
             path: ''
             absolute: false
@@ -4300,7 +4601,7 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: '<div class="time"><i class="fa fa-clock-o"></i> {{ field_start_date }}</div>'
+          empty: '<div class="time">{{ field_start_date }}</div>'
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -4384,18 +4685,18 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_media_image_7:
-          id: field_media_image_7
-          table: media__field_media_image_7
-          field: field_media_image_7
-          relationship: field_event_teaser_image
+        view_node:
+          id: view_node
+          table: node
+          field: view_node
+          relationship: none
           group_type: group
           admin_label: ''
           label: ''
-          exclude: false
+          exclude: true
           alter:
-            alter_text: true
-            text: "<div class=\"featured-event-wrap\">\r\n  <div class=\"row no-gutters\">\r\n\r\n    <div class=\"col-sm-4\">\r\n      <div class=\"image-wrap\">\r\n\r\n        <div class=\"date-wrap\">\r\n          <div class=\"date\">{{ field_start_date_2 }}</div>\r\n        </div>\r\n        {{ field_media_image_7 }}\r\n\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col-sm-8\">\r\n      <div class=\"content-wrap\">\r\n\r\n        <div class=\"featured-time\">{{ field_all_day_event }}</div>\r\n        <div class=\"featured-title\">{{ title }}</div>\r\n        <div class=\"featured-body\">{{ body }}</div>\r\n\r\n      </div>\r\n    </div>\r\n\r\n  </div>\r\n</div>"
+            alter_text: false
+            text: ''
             make_link: false
             path: ''
             absolute: false
@@ -4428,14 +4729,67 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: "<div class=\"featured-event-wrap\">\r\n  <div class=\"row no-gutters\">\r\n\r\n    <div class=\"col-sm-12\">\r\n\r\n      <div class=\"date-wrap\">\r\n        <div class=\"date\">{{ field_start_date_2 }}</div>\r\n      </div>\r\n\r\n      <div class=\"content-wrap\">\r\n        <div class=\"featured-time\">{{ field_all_day_event }}</div>\r\n        <div class=\"featured-title\">{{ title }}</div>\r\n        <div class=\"featured-body\">{{ body }}</div>\r\n      </div>\r\n\r\n    </div>\r\n\r\n  </div>\r\n</div>"
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          text: view
+          output_url_as_text: true
+          absolute: false
+          entity_type: node
+          plugin_id: entity_link
+        field_media_image_7:
+          id: field_media_image_7
+          table: media__field_media_image_7
+          field: field_media_image_7
+          relationship: field_event_teaser_image
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: "<div class=\"featured-event-wrap\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-lg-7 col-md-12\">\r\n      <div class=\"image-wrap\">\r\n        <a href=\"{{ view_node }}\">{{ field_media_image_7 }}</a>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col-lg-5 col-md-12\">\r\n      <div class=\"content-wrap\">\r\n<div class=\"featured-top\">\r\n      <div class=\"date-wrap\">\r\n           <div class=\"date\">{{ field_start_date_2 }}</div>\r\n        </div>\r\n        <div class=\"featured-title\">{{ title }}</div>\r\n  </div>\r\n        <div class=\"featured-time\">{{ field_all_day_event }}</div>\r\n        <div class=\"featured-body\">{{ body }}</div>\r\n        <div class=\"featured-link\"><a href=\"{{ view_node }}\" class=\"read-more-link\">read more</a></div>\r\n\r\n      </div>\r\n    </div>\r\n\r\n  </div>\r\n</div>"
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: "<div class=\"featured-event-wrap\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-sm-12\">\r\n\r\n      <div class=\"date-wrap\">\r\n        <div class=\"date\">{{ field_start_date_2 }}</div>\r\n      </div>\r\n\r\n      <div class=\"content-wrap\">\r\n        <div class=\"featured-time\">{{ field_all_day_event }}</div>\r\n        <div class=\"featured-title\">{{ title }}</div>\r\n        <div class=\"featured-body\">{{ body }}</div>\r\n        <div class=\"featured-link\"><a href=\"{{ view_node }}\" class=\"read-more-link\">read more</a></div>\r\n      </div>\r\n\r\n    </div>\r\n\r\n  </div>\r\n</div>"
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
           type: image
           settings:
-            image_style: ''
+            image_style: hero_slide_image
             image_link: ''
           group_column: ''
           group_columns: {  }
@@ -4448,6 +4802,21 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
+      title: Events
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content:
+            value: '<div class="container"><h1 class="page-title">Events</h1></div>'
+            format: full_html
+          plugin_id: text
     cache_metadata:
       max-age: -1
       contexts:
@@ -4485,7 +4854,7 @@ display:
       pager:
         type: full
         options:
-          items_per_page: 10
+          items_per_page: 5
           offset: 0
           id: 0
           total_pages: null
@@ -4888,6 +5257,70 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
+        field_start_date_3:
+          id: field_start_date_3
+          table: node__field_start_date
+          field: field_start_date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: datetime_custom
+          settings:
+            timezone_override: ''
+            date_format: 'F j, Y'
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
         body:
           id: body
           table: node__body
@@ -4951,18 +5384,18 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_media_image_8:
-          id: field_media_image_8
-          table: media__field_media_image_8
-          field: field_media_image_8
-          relationship: field_event_featured_image
+        view_node:
+          id: view_node
+          table: node
+          field: view_node
+          relationship: none
           group_type: group
           admin_label: ''
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: true
-            text: "<div class=\"event-wrap\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-sm-4\">\r\n      <div class=\"image-wrap\">\r\n\r\n        <div class=\"date-wrap\">\r\n          <div class=\"date\">{{ field_start_date_2 }}</div>\r\n        </div>\r\n        <div class=\"event-image\">{{ field_media_image_8 }}</div>\r\n\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col-sm-8\">\r\n      <div class=\"content-wrap\">\r\n\r\n        <div class=\"time\">{{ field_all_day_event }}</div>\r\n        <div class=\"title\">{{ title }}</div>\r\n        <div class=\"body\">{{ body }}</div>\r\n\r\n      </div>\r\n    </div>\r\n\r\n  </div>\r\n</div>"
+            text: '<div class="event-link"><a href="{{ view_node }}" class="read-more-link">learn more</a></div>'
             make_link: false
             path: ''
             absolute: false
@@ -4995,7 +5428,60 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: "<div class=\"event-wrap\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-sm-12\">\r\n\r\n      <div class=\"date-wrap\">\r\n        <div class=\"date\">{{ field_start_date_2 }}</div>\r\n      </div>\r\n\r\n      <div class=\"content-wrap\">\r\n        <div class=\"time\">{{ field_all_day_event }}</div>\r\n        <div class=\"title\">{{ title }}</div>\r\n        <div class=\"body\">{{ body }}</div>\r\n      </div>\r\n\r\n    </div>\r\n\r\n  </div>\r\n</div>"
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          text: view
+          output_url_as_text: true
+          absolute: false
+          entity_type: node
+          plugin_id: entity_link
+        field_media_image_8:
+          id: field_media_image_8
+          table: media__field_media_image_8
+          field: field_media_image_8
+          relationship: field_event_featured_image
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: "<div class=\"event-wrap\">\r\n  <div class=\"row\">\r\n    <div class=\"col-sm-8\">\r\n      <div class=\"date-wrap\">\r\n        <div class=\"date\">{{ field_start_date_2 }}</div>\r\n      </div>\r\n      <div class=\"content-wrap\">\r\n        <div class=\"title\">{{ title }}</div>\r\n        <div class=\"time\">{{ field_start_date_3 }}</div>\r\n        <div class=\"body\">{{ body }}</div>\r\n        {{ view_node }} \r\n      </div>\r\n    </div>\r\n    <div class=\"col-sm-4\">\r\n      <div class=\"image-wrap\">\r\n        <div class=\"event-image\">{{ field_media_image_8 }}</div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>"
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: "<div class=\"event-wrap\">\r\n  <div class=\"row\">\r\n    <div class=\"col-sm-12\">\r\n      <div class=\"date-wrap\">\r\n        <div class=\"date\">{{ field_start_date_2 }}</div>\r\n      </div>\r\n      <div class=\"content-wrap\">\r\n        <div class=\"title\">{{ title }}</div>\r\n        <div class=\"time\">{{ field_start_date_3 }}</div>\r\n        <div class=\"body\">{{ body }}</div>\r\n        {{ view_node }}    \r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>"
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true

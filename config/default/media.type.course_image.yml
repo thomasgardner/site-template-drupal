@@ -1,0 +1,13 @@
+uuid: ec658589-2ba6-4187-b2fd-4d6e16e20c02
+langcode: en
+status: true
+dependencies: {  }
+id: course_image
+label: 'Course Image'
+description: ''
+source: image
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_image_13
+field_map: {  }

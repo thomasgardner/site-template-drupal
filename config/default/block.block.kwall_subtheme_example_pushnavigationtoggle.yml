@@ -1,6 +1,6 @@
 uuid: 91713226-7fd9-43f3-9b8f-984b94bb5f64
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.push-navigation-toggle
@@ -15,7 +15,7 @@ third_party_settings:
 id: kwall_subtheme_example_pushnavigationtoggle
 theme: kwall_subtheme_example
 region: header
-weight: -11
+weight: -14
 provider: null
 plugin: 'system_menu_block:push-navigation-toggle'
 settings:

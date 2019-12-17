@@ -12,7 +12,7 @@ dependencies:
 id: kwall_subtheme_example_views_block__article_view_block_1
 theme: kwall_subtheme_example
 region: content_top
-weight: -9
+weight: -15
 provider: null
 plugin: 'views_block:article_view-block_1'
 settings:
