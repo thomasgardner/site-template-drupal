@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e16cdc2a6009b666f9c3f1c5da795b35",
+    "content-hash": "d27740847fa55f98423643659436ffdf",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -5363,6 +5363,53 @@
             "homepage": "https://www.drupal.org/project/link_attributes",
             "support": {
                 "source": "https://git.drupalcode.org/project/link_attributes"
+            }
+        },
+        {
+            "name": "drupal/link_class",
+            "version": "1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/link_class.git",
+                "reference": "8.x-1.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/link_class-8.x-1.4.zip",
+                "reference": "8.x-1.4",
+                "shasum": "21bd635a57620261b4959f98b83a26680fe32b22"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.4",
+                    "datestamp": "1564049892",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "flocondetoile",
+                    "homepage": "https://www.drupal.org/user/2006064"
+                }
+            ],
+            "description": "Provide a widget to Link field type for adding class to link.",
+            "homepage": "https://www.drupal.org/project/link_class",
+            "support": {
+                "source": "https://git.drupalcode.org/project/link_class"
             }
         },
         {

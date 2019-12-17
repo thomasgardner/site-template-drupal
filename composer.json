@@ -110,6 +110,7 @@
         "drupal/inline_entity_form": "^1.0@RC",
         "drupal/libraries": "^3.0",
         "drupal/link_attributes": "^1.9",
+        "drupal/link_class": "^1.4",
         "drupal/linked_field": "^1.1",
         "drupal/linkit": "^5.0",
         "drupal/masquerade": "^2.0",
