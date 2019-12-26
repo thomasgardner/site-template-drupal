@@ -78,7 +78,7 @@
         "drupal/advupdate": "^1.0",
         "drupal/asset_injector": "^2.4",
         "drupal/auto_entitylabel": "^2.1",
-        "drupal/backup_migrate": "^4.0",
+        "drupal/backup_migrate": "^4.1",
         "drupal/block_class": "^1.0",
         "drupal/calendar": "1.x-dev",
         "drupal/captcha": "^1.0@beta",
