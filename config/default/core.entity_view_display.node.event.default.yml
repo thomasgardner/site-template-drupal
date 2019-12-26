@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.event.body
+    - field.field.node.event.field_add
     - field.field.node.event.field_address
     - field.field.node.event.field_all_day_event
     - field.field.node.event.field_end_date
@@ -20,6 +21,7 @@ dependencies:
     - node.type.event
   module:
     - address
+    - addtocalendar
     - fences
     - field_group
     - text
@@ -173,6 +175,13 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_add:
+    weight: 16
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: add_to_calendar
+    region: content
   field_address:
     type: address_default
     weight: 3
