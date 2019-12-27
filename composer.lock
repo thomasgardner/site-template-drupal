@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "18941db6085779f791139258667c14a3",
+    "content-hash": "232ad5a9df407e3ffc906662fb1a4424",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -8811,6 +8811,17 @@
             "dist": {
                 "type": "zip",
                 "url": "https://github.com/RobinHerbots/Inputmask/archive/4.0.4.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "drupal-library"
+        },
+        {
+            "name": "jquery.rateit",
+            "version": "1.1.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/gjunge/rateit.js/archive/1.1.1.zip",
                 "reference": null,
                 "shasum": null
             },

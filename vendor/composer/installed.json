@@ -9669,6 +9669,19 @@
         "installation-source": "dist"
     },
     {
+        "name": "jquery.rateit",
+        "version": "1.1.1",
+        "version_normalized": "1.1.1.0",
+        "dist": {
+            "type": "zip",
+            "url": "https://github.com/gjunge/rateit.js/archive/1.1.1.zip",
+            "reference": null,
+            "shasum": null
+        },
+        "type": "drupal-library",
+        "installation-source": "dist"
+    },
+    {
         "name": "justinrainbow/json-schema",
         "version": "5.2.9",
         "version_normalized": "5.2.9.0",
