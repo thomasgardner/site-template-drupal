@@ -83,6 +83,18 @@
         {
           "type": "package",
           "package": {
+            "name": "oriongunning/gridder",
+            "version": "1.4.2",
+            "type": "drupal-library",
+            "dist": {
+              "url": "https://github.com/oriongunning/gridder/archive/v1.4.2.zip",
+              "type": "zip"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
             "name": "woocommerce/FlexSlider",
             "version": "2.7.1",
             "type": "drupal-library",
@@ -176,6 +188,7 @@
         "enyo/dropzone": "^5.5",
         "grasmash/drupal-security-warning": "^1.0.0",
         "oomphinc/composer-installers-extender": "^1.1",
+        "oriongunning/gridder": "^1.4.2",
         "topfloor/composer-cleanup-vcs-dirs": "^1.0",
         "vlucas/phpdotenv": "^2.4",
         "webflo/drupal-finder": "^1.0.0",

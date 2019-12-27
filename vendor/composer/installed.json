@@ -10261,6 +10261,19 @@
         "homepage": "http://www.oomphinc.com/"
     },
     {
+        "name": "oriongunning/gridder",
+        "version": "1.4.2",
+        "version_normalized": "1.4.2.0",
+        "dist": {
+            "type": "zip",
+            "url": "https://github.com/oriongunning/gridder/archive/v1.4.2.zip",
+            "reference": null,
+            "shasum": null
+        },
+        "type": "drupal-library",
+        "installation-source": "dist"
+    },
+    {
         "name": "paragonie/random_compat",
         "version": "v9.99.99",
         "version_normalized": "9.99.99.0",

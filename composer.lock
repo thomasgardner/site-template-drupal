@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3a3aa702102f281dcefbcb19fd32b0d3",
+    "content-hash": "29678acb1ab923c53a5a0e6793fa4ddb",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -9240,6 +9240,17 @@
             "description": "Extend the composer/installers plugin to accept any arbitrary package type.",
             "homepage": "http://www.oomphinc.com/",
             "time": "2017-03-31T16:57:39+00:00"
+        },
+        {
+            "name": "oriongunning/gridder",
+            "version": "1.4.2",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/oriongunning/gridder/archive/v1.4.2.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "drupal-library"
         },
         {
             "name": "paragonie/random_compat",
