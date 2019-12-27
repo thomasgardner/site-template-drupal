@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8f711a150cd38b73381f0f521ac3a761",
+    "content-hash": "e61a38812fdfa083856ec3750403386d",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -8804,6 +8804,17 @@
             ],
             "description": "Highlight PHP code in terminal",
             "time": "2018-09-29T18:48:56+00:00"
+        },
+        {
+            "name": "jquery.inputmask",
+            "version": "4.0.4",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/RobinHerbots/Inputmask/archive/4.0.4.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "drupal-library"
         },
         {
             "name": "league/container",
