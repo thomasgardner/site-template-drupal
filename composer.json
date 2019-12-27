@@ -70,6 +70,18 @@
         {
           "type": "package",
           "package": {
+            "name": "ckeditor.image",
+            "version": "4.11.4",
+            "type": "drupal-library",
+            "dist": {
+              "url": "https://download.ckeditor.com/image/releases/image_4.11.4.zip",
+              "type": "zip"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
             "name": "codemirror",
             "version": "5.42.0",
             "type": "drupal-library",
@@ -289,6 +301,7 @@
         "ckeditor.autogrow": "^4.11",
         "ckeditor.codemirror": "^1.17.2",
         "ckeditor.fakeobjects": "^4.11",
+        "ckeditor.image": "^4.11",
         "codemirror": "^5.42.0",
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6.5",

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "44f98eb40f951bdf0f9d9c7073e9e236",
+    "content-hash": "33232632b4eb7fa87f847d092a32c3c6",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -231,6 +231,17 @@
             "dist": {
                 "type": "zip",
                 "url": "https://download.ckeditor.com/fakeobjects/releases/fakeobjects_4.11.4.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "drupal-library"
+        },
+        {
+            "name": "ckeditor.image",
+            "version": "4.11.4",
+            "dist": {
+                "type": "zip",
+                "url": "https://download.ckeditor.com/image/releases/image_4.11.4.zip",
                 "reference": null,
                 "shasum": null
             },
