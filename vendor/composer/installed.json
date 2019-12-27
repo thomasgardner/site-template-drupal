@@ -483,6 +483,19 @@
         "installation-source": "dist"
     },
     {
+        "name": "ckeditor.fakeobjects",
+        "version": "4.11.4",
+        "version_normalized": "4.11.4.0",
+        "dist": {
+            "type": "zip",
+            "url": "https://download.ckeditor.com/fakeobjects/releases/fakeobjects_4.11.4.zip",
+            "reference": null,
+            "shasum": null
+        },
+        "type": "drupal-library",
+        "installation-source": "dist"
+    },
+    {
         "name": "ckeditor/templates",
         "version": "4.11.1",
         "version_normalized": "4.11.1.0",
