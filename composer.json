@@ -21,12 +21,13 @@
         {
           "type": "package",
           "package": {
-            "name": "desandro/masonry",
-            "version": "3.3.2",
+            "name": "ckeditor/templates",
             "type": "drupal-library",
+            "version": "4.11.1",
             "dist": {
-              "url": "https://github.com/desandro/masonry/archive/v3.3.2.zip",
-              "type": "zip"
+              "type": "zip",
+              "url": "https://download.ckeditor.com/templates/releases/templates_4.11.1.zip",
+              "reference": "master"
             }
           }
         },
@@ -45,6 +46,18 @@
         {
           "type": "package",
           "package": {
+            "name": "desandro/masonry",
+            "version": "3.3.2",
+            "type": "drupal-library",
+            "dist": {
+              "url": "https://github.com/desandro/masonry/archive/v3.3.2.zip",
+              "type": "zip"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
             "name": "enyo/dropzone",
             "version": "dev-master",
             "type": "drupal-library",
@@ -52,19 +65,6 @@
               "url": "https://github.com/enyo/dropzone",
               "type": "git",
               "reference": "origin/master"
-            }
-          }
-        },
-        {
-          "type": "package",
-          "package": {
-            "name": "ckeditor/templates",
-            "type": "drupal-library",
-            "version": "4.11.1",
-            "dist": {
-              "type": "zip",
-              "url": "https://download.ckeditor.com/templates/releases/templates_4.11.1.zip",
-              "reference": "master"
             }
           }
         }
