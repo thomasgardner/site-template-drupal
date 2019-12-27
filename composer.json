@@ -82,6 +82,18 @@
         {
           "type": "package",
           "package": {
+            "name": "ckeditor.link",
+            "version": "4.11.4",
+            "type": "drupal-library",
+            "dist": {
+              "url": "https://download.ckeditor.com/link/releases/link_4.11.4.zip",
+              "type": "zip"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
             "name": "codemirror",
             "version": "5.42.0",
             "type": "drupal-library",
@@ -302,6 +314,7 @@
         "ckeditor.codemirror": "^1.17.2",
         "ckeditor.fakeobjects": "^4.11",
         "ckeditor.image": "^4.11",
+        "ckeditor.link": "^4.11",
         "codemirror": "^5.42.0",
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6.5",

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "33232632b4eb7fa87f847d092a32c3c6",
+    "content-hash": "72ee5d5b6d4b3fc943d404026af254f0",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -242,6 +242,17 @@
             "dist": {
                 "type": "zip",
                 "url": "https://download.ckeditor.com/image/releases/image_4.11.4.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "drupal-library"
+        },
+        {
+            "name": "ckeditor.link",
+            "version": "4.11.4",
+            "dist": {
+                "type": "zip",
+                "url": "https://download.ckeditor.com/link/releases/link_4.11.4.zip",
                 "reference": null,
                 "shasum": null
             },
