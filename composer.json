@@ -21,18 +21,6 @@
         {
           "type": "package",
           "package": {
-            "name": "algolia/places",
-            "version": "1.15.0",
-            "type": "drupal-library",
-            "dist": {
-              "url": "https://github.com/algolia/places/archive/v1.15.0.zip",
-              "type": "zip"
-            }
-          }
-        },
-        {
-          "type": "package",
-          "package": {
             "name": "ckeditor/templates",
             "type": "drupal-library",
             "version": "4.11.1",
@@ -119,6 +107,18 @@
         {
           "type": "package",
           "package": {
+            "name": "places",
+            "version": "1.15.0",
+            "type": "drupal-library",
+            "dist": {
+              "url": "https://github.com/algolia/places/archive/v1.15.0.zip",
+              "type": "zip"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
             "name": "woocommerce/FlexSlider",
             "version": "2.7.1",
             "type": "drupal-library",
@@ -130,7 +130,6 @@
         }
     ],
     "require": {
-        "algolia/places": "^1.15",
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6.5",
         "desandro/imagesloaded": "^3.2",
@@ -215,6 +214,7 @@
         "metafizzy/isotope": "^3.0.6",
         "oomphinc/composer-installers-extender": "^1.1",
         "oriongunning/gridder": "^1.4.2",
+        "places": "^1.15",
         "topfloor/composer-cleanup-vcs-dirs": "^1.0",
         "vlucas/phpdotenv": "^2.4",
         "webflo/drupal-finder": "^1.0.0",
