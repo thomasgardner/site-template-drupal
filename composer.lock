@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "93e43d64413aa8a0b35697dc9bb55dd7",
+    "content-hash": "5129297fd8ced61363b9d0ef9d4dcf29",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -69,6 +69,17 @@
                 "zip"
             ],
             "time": "2018-02-22T13:58:36+00:00"
+        },
+        {
+            "name": "algolia/places",
+            "version": "1.15.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/algolia/places/archive/v1.15.0.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "drupal-library"
         },
         {
             "name": "asm89/stack-cors",

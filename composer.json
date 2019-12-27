@@ -21,6 +21,18 @@
         {
           "type": "package",
           "package": {
+            "name": "algolia/places",
+            "version": "1.15.0",
+            "type": "drupal-library",
+            "dist": {
+              "url": "https://github.com/algolia/places/archive/v1.15.0.zip",
+              "type": "zip"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
             "name": "ckeditor/templates",
             "type": "drupal-library",
             "version": "4.11.1",
@@ -70,6 +82,7 @@
         }
     ],
     "require": {
+        "algolia/places": "^1.15",
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6.5",
         "drupal-composer/drupal-scaffold": "^2.5",
