@@ -143,6 +143,18 @@
         {
           "type": "package",
           "package": {
+            "name": "jquery.timepicker",
+            "version": "1.11.14",
+            "type": "drupal-library",
+            "dist": {
+              "url": "https://github.com/jonthornton/jquery-timepicker/archive/1.11.14.zip",
+              "type": "zip"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
             "name": "metafizzy/isotope",
             "version": "3.0.6",
             "type": "drupal-library",
@@ -276,6 +288,7 @@
         "jquery.rateit": "^1.1.1",
         "jquery.select2": "^4.0.5",
         "jquery.textcounter": "^0.8.0",
+        "jquery.timepicker": "^1.11.14",
         "metafizzy/isotope": "^3.0.6",
         "oomphinc/composer-installers-extender": "^1.1",
         "oriongunning/gridder": "^1.4.2",

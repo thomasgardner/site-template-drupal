@@ -9721,6 +9721,19 @@
         "installation-source": "dist"
     },
     {
+        "name": "jquery.timepicker",
+        "version": "1.11.14",
+        "version_normalized": "1.11.14.0",
+        "dist": {
+            "type": "zip",
+            "url": "https://github.com/jonthornton/jquery-timepicker/archive/1.11.14.zip",
+            "reference": null,
+            "shasum": null
+        },
+        "type": "drupal-library",
+        "installation-source": "dist"
+    },
+    {
         "name": "justinrainbow/json-schema",
         "version": "5.2.9",
         "version_normalized": "5.2.9.0",

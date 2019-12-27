@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "73623b9bfe946204e527ef1facd5fbd8",
+    "content-hash": "2ae5c33aa3be1f92bbbc22ae772c3a34",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -8855,6 +8855,17 @@
             "dist": {
                 "type": "zip",
                 "url": "https://github.com/ractoon/jQuery-Text-Counter/archive/0.8.0.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "drupal-library"
+        },
+        {
+            "name": "jquery.timepicker",
+            "version": "1.11.14",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/jonthornton/jquery-timepicker/archive/1.11.14.zip",
                 "reference": null,
                 "shasum": null
             },
