@@ -34,6 +34,18 @@
         {
           "type": "package",
           "package": {
+            "name": "codemirror",
+            "version": "5.42.0",
+            "type": "drupal-library",
+            "dist": {
+              "url": "https://github.com/codemirror/CodeMirror/archive/5.42.0.zip",
+              "type": "zip"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
             "name": "desandro/imagesloaded",
             "version": "3.2.0",
             "type": "drupal-library",
@@ -154,6 +166,7 @@
         }
     ],
     "require": {
+        "codemirror": "^5.42.0",
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6.5",
         "desandro/imagesloaded": "^3.2",
