@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cad10fc6489c54f4a5788ed9822148f8",
+    "content-hash": "3a3aa702102f281dcefbcb19fd32b0d3",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -12082,6 +12082,17 @@
             ],
             "description": "Composer plugin to merge multiple composer.json files",
             "time": "2017-04-25T02:31:25+00:00"
+        },
+        {
+            "name": "woocommerce/FlexSlider",
+            "version": "2.7.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/woocommerce/FlexSlider/archive/2.7.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "drupal-library"
         },
         {
             "name": "zaporylie/composer-drupal-optimizations",

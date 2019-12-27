@@ -79,6 +79,18 @@
               "reference": "origin/master"
             }
           }
+        },
+        {
+          "type": "package",
+          "package": {
+            "name": "woocommerce/FlexSlider",
+            "version": "2.7.1",
+            "type": "drupal-library",
+            "dist": {
+              "url": "https://github.com/woocommerce/FlexSlider/archive/2.7.1.zip",
+              "type": "zip"
+            }
+          }
         }
     ],
     "require": {
@@ -169,6 +181,7 @@
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3",
         "wikimedia/composer-merge-plugin": "^1.4",
+        "woocommerce/FlexSlider": "^2.7.1",
         "zaporylie/composer-drupal-optimizations": "^1.0"
     },
     "require-dev": {
