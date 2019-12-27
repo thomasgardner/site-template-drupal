@@ -71,6 +71,18 @@
         {
           "type": "package",
           "package": {
+            "name": "intl-tel-input",
+            "version": "14.0.6",
+            "type": "drupal-library",
+            "dist": {
+              "url": "https://github.com/jackocnr/intl-tel-input/archive/v14.0.6.zip",
+              "type": "zip"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
             "name": "jquery.inputmask",
             "version": "4.0.4",
             "type": "drupal-library",
@@ -210,6 +222,7 @@
         "drush/drush": "^9.5",
         "enyo/dropzone": "^5.5",
         "grasmash/drupal-security-warning": "^1.0.0",
+        "intl-tel-input": "^14.0.6",
         "jquery.inputmask": "^4.0.4",
         "metafizzy/isotope": "^3.0.6",
         "oomphinc/composer-installers-extender": "^1.1",

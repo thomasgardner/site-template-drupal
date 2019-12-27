@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "92eb841a133f70fb5301302f6a21132b",
+    "content-hash": "18941db6085779f791139258667c14a3",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -8665,6 +8665,17 @@
                 "url"
             ],
             "time": "2019-07-01T23:21:34+00:00"
+        },
+        {
+            "name": "intl-tel-input",
+            "version": "14.0.6",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/jackocnr/intl-tel-input/archive/v14.0.6.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "drupal-library"
         },
         {
             "name": "ip2location/ip2location-php",
