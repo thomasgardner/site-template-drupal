@@ -1613,6 +1613,19 @@
         "description": "Provides a way to patch Composer packages."
     },
     {
+        "name": "desandro/imagesloaded",
+        "version": "3.2.0",
+        "version_normalized": "3.2.0.0",
+        "dist": {
+            "type": "zip",
+            "url": "https://github.com/desandro/imagesloaded/archive/v3.2.0.zip",
+            "reference": null,
+            "shasum": null
+        },
+        "type": "drupal-library",
+        "installation-source": "dist"
+    },
+    {
         "name": "dflydev/dot-access-configuration",
         "version": "v1.0.3",
         "version_normalized": "1.0.3.0",
