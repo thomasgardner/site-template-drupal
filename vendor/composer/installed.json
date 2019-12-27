@@ -457,6 +457,19 @@
         "description": "Drupal code generator"
     },
     {
+        "name": "ckeditor.codemirror",
+        "version": "1.17.2",
+        "version_normalized": "1.17.2.0",
+        "dist": {
+            "type": "zip",
+            "url": "https://github.com/w8tcha/CKEditor-CodeMirror-Plugin/archive/v1.17.2.zip",
+            "reference": null,
+            "shasum": null
+        },
+        "type": "drupal-library",
+        "installation-source": "dist"
+    },
+    {
         "name": "ckeditor/templates",
         "version": "4.11.1",
         "version_normalized": "4.11.1.0",

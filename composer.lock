@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "85300485885ab382c3392963070cbeb5",
+    "content-hash": "1e3c27d0cbfb766b86b7c3be51bcbcde",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -202,6 +202,17 @@
             ],
             "description": "Drupal code generator",
             "time": "2019-10-27T14:27:26+00:00"
+        },
+        {
+            "name": "ckeditor.codemirror",
+            "version": "1.17.2",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/w8tcha/CKEditor-CodeMirror-Plugin/archive/v1.17.2.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "drupal-library"
         },
         {
             "name": "ckeditor/templates",

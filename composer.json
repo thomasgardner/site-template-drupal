@@ -34,6 +34,18 @@
         {
           "type": "package",
           "package": {
+            "name": "ckeditor.codemirror",
+            "version": "1.17.2",
+            "type": "drupal-library",
+            "dist": {
+              "url": "https://github.com/w8tcha/CKEditor-CodeMirror-Plugin/archive/v1.17.2.zip",
+              "type": "zip"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
             "name": "codemirror",
             "version": "5.42.0",
             "type": "drupal-library",
@@ -250,6 +262,7 @@
         }
     ],
     "require": {
+        "ckeditor.codemirror": "^1.17.2",
         "codemirror": "^5.42.0",
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6.5",
