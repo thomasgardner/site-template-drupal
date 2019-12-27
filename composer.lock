@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "29678acb1ab923c53a5a0e6793fa4ddb",
+    "content-hash": "8f711a150cd38b73381f0f521ac3a761",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -9146,6 +9146,17 @@
             "description": "Internal MaxMind Web Service API",
             "homepage": "https://github.com/maxmind/web-service-common-php",
             "time": "2018-02-12T22:31:54+00:00"
+        },
+        {
+            "name": "metafizzy/isotope",
+            "version": "3.0.6",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/metafizzy/isotope/archive/v3.0.6.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "drupal-library"
         },
         {
             "name": "nikic/php-parser",

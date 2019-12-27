@@ -10065,6 +10065,19 @@
         "homepage": "https://github.com/maxmind/web-service-common-php"
     },
     {
+        "name": "metafizzy/isotope",
+        "version": "3.0.6",
+        "version_normalized": "3.0.6.0",
+        "dist": {
+            "type": "zip",
+            "url": "https://github.com/metafizzy/isotope/archive/v3.0.6.zip",
+            "reference": null,
+            "shasum": null
+        },
+        "type": "drupal-library",
+        "installation-source": "dist"
+    },
+    {
         "name": "mikey179/vfsstream",
         "version": "v1.6.8",
         "version_normalized": "1.6.8.0",

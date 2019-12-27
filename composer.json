@@ -83,6 +83,18 @@
         {
           "type": "package",
           "package": {
+            "name": "metafizzy/isotope",
+            "version": "3.0.6",
+            "type": "drupal-library",
+            "dist": {
+              "url": "https://github.com/metafizzy/isotope/archive/v3.0.6.zip",
+              "type": "zip"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
             "name": "oriongunning/gridder",
             "version": "1.4.2",
             "type": "drupal-library",
@@ -187,6 +199,7 @@
         "drush/drush": "^9.5",
         "enyo/dropzone": "^5.5",
         "grasmash/drupal-security-warning": "^1.0.0",
+        "metafizzy/isotope": "^3.0.6",
         "oomphinc/composer-installers-extender": "^1.1",
         "oriongunning/gridder": "^1.4.2",
         "topfloor/composer-cleanup-vcs-dirs": "^1.0",
