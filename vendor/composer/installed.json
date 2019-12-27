@@ -12308,6 +12308,19 @@
         "homepage": "https://github.com/sebastianbergmann/version"
     },
     {
+        "name": "signature_pad",
+        "version": "2.3.0",
+        "version_normalized": "2.3.0.0",
+        "dist": {
+            "type": "zip",
+            "url": "https://github.com/szimek/signature_pad/archive/v2.3.0.zip",
+            "reference": null,
+            "shasum": null
+        },
+        "type": "drupal-library",
+        "installation-source": "dist"
+    },
+    {
         "name": "solarium/solarium",
         "version": "4.2.0",
         "version_normalized": "4.2.0.0",

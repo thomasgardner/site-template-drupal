@@ -215,6 +215,18 @@
         {
           "type": "package",
           "package": {
+            "name": "signature_pad",
+            "version": "2.3.0",
+            "type": "drupal-library",
+            "dist": {
+              "url": "https://github.com/szimek/signature_pad/archive/v2.3.0.zip",
+              "type": "zip"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
             "name": "woocommerce/FlexSlider",
             "version": "2.7.1",
             "type": "drupal-library",
@@ -319,6 +331,7 @@
         "oriongunning/gridder": "^1.4.2",
         "places": "^1.15",
         "progress-tracker": "^1.2.0",
+        "signature_pad": "^2.3.0",
         "topfloor/composer-cleanup-vcs-dirs": "^1.0",
         "vlucas/phpdotenv": "^2.4",
         "webflo/drupal-finder": "^1.0.0",
