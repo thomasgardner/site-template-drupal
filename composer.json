@@ -227,6 +227,18 @@
         {
           "type": "package",
           "package": {
+            "name": "slick",
+            "version": "1.8.1",
+            "type": "drupal-library",
+            "dist": {
+              "url": "https://github.com/kenwheeler/slick/archive/v1.8.1.zip",
+              "type": "zip"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
             "name": "woocommerce/FlexSlider",
             "version": "2.7.1",
             "type": "drupal-library",
@@ -332,6 +344,7 @@
         "places": "^1.15",
         "progress-tracker": "^1.2.0",
         "signature_pad": "^2.3.0",
+        "slick": "^1.8.1",
         "topfloor/composer-cleanup-vcs-dirs": "^1.0",
         "vlucas/phpdotenv": "^2.4",
         "webflo/drupal-finder": "^1.0.0",

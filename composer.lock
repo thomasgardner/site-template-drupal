@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d9f1e13db29d8ba3b0aea86fd6cc74ab",
+    "content-hash": "85300485885ab382c3392963070cbeb5",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -9922,6 +9922,17 @@
             "dist": {
                 "type": "zip",
                 "url": "https://github.com/szimek/signature_pad/archive/v2.3.0.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "drupal-library"
+        },
+        {
+            "name": "slick",
+            "version": "1.8.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/kenwheeler/slick/archive/v1.8.1.zip",
                 "reference": null,
                 "shasum": null
             },
