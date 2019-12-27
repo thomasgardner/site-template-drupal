@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2ae5c33aa3be1f92bbbc22ae772c3a34",
+    "content-hash": "0390938c166554203dd3d47fad430d0a",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -9109,6 +9109,17 @@
                 "xml"
             ],
             "time": "2019-07-25T07:03:26+00:00"
+        },
+        {
+            "name": "matchHeight",
+            "version": "0.7.2",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/liabru/jquery-match-height/archive/0.7.2.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "drupal-library"
         },
         {
             "name": "maxmind-db/reader",
