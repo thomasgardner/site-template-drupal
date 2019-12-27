@@ -34,6 +34,18 @@
         {
           "type": "package",
           "package": {
+            "name": "ckeditor.autogrow",
+            "version": "4.11.4",
+            "type": "drupal-library",
+            "dist": {
+              "url": "https://download.ckeditor.com/autogrow/releases/autogrow_4.11.4.zip",
+              "type": "zip"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
             "name": "ckeditor.codemirror",
             "version": "1.17.2",
             "type": "drupal-library",
@@ -262,6 +274,7 @@
         }
     ],
     "require": {
+        "ckeditor.autogrow": "^4.11",
         "ckeditor.codemirror": "^1.17.2",
         "codemirror": "^5.42.0",
         "composer/installers": "^1.2",
