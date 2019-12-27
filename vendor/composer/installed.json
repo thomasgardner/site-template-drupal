@@ -9708,6 +9708,19 @@
         "installation-source": "dist"
     },
     {
+        "name": "jquery.textcounter",
+        "version": "0.8.0",
+        "version_normalized": "0.8.0.0",
+        "dist": {
+            "type": "zip",
+            "url": "https://github.com/ractoon/jQuery-Text-Counter/archive/0.8.0.zip",
+            "reference": null,
+            "shasum": null
+        },
+        "type": "drupal-library",
+        "installation-source": "dist"
+    },
+    {
         "name": "justinrainbow/json-schema",
         "version": "5.2.9",
         "version_normalized": "5.2.9.0",

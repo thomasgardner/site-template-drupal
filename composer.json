@@ -131,6 +131,18 @@
         {
           "type": "package",
           "package": {
+            "name": "jquery.textcounter",
+            "version": "0.8.0",
+            "type": "drupal-library",
+            "dist": {
+              "url": "https://github.com/ractoon/jQuery-Text-Counter/archive/0.8.0.zip",
+              "type": "zip"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
             "name": "metafizzy/isotope",
             "version": "3.0.6",
             "type": "drupal-library",
@@ -263,6 +275,7 @@
         "jquery.inputmask": "^4.0.4",
         "jquery.rateit": "^1.1.1",
         "jquery.select2": "^4.0.5",
+        "jquery.textcounter": "^0.8.0",
         "metafizzy/isotope": "^3.0.6",
         "oomphinc/composer-installers-extender": "^1.1",
         "oriongunning/gridder": "^1.4.2",
