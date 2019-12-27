@@ -11444,6 +11444,19 @@
         "installation-source": "dist"
     },
     {
+        "name": "progress-tracker",
+        "version": "1.2.0",
+        "version_normalized": "1.2.0.0",
+        "dist": {
+            "type": "zip",
+            "url": "https://github.com/NigelOToole/progress-tracker/archive/v1.2.0.zip",
+            "reference": null,
+            "shasum": null
+        },
+        "type": "drupal-library",
+        "installation-source": "dist"
+    },
+    {
         "name": "psr/container",
         "version": "1.0.0",
         "version_normalized": "1.0.0.0",
