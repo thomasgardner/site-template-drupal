@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bee371fd8b167345c742839463c2acb8",
+    "content-hash": "324461129c316da86c2f9b54604f488b",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -8833,6 +8833,17 @@
             "dist": {
                 "type": "zip",
                 "url": "https://github.com/gjunge/rateit.js/archive/1.1.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "drupal-library"
+        },
+        {
+            "name": "jquery.select2",
+            "version": "4.0.5",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/select2/select2/archive/4.0.5.zip",
                 "reference": null,
                 "shasum": null
             },

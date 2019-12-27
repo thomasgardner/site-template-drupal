@@ -119,6 +119,18 @@
         {
           "type": "package",
           "package": {
+            "name": "jquery.select2",
+            "version": "4.0.5",
+            "type": "drupal-library",
+            "dist": {
+              "url": "https://github.com/select2/select2/archive/4.0.5.zip",
+              "type": "zip"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
             "name": "metafizzy/isotope",
             "version": "3.0.6",
             "type": "drupal-library",
@@ -250,6 +262,7 @@
         "intl-tel-input": "^14.0.6",
         "jquery.inputmask": "^4.0.4",
         "jquery.rateit": "^1.1.1",
+        "jquery.select2": "^4.0.5",
         "metafizzy/isotope": "^3.0.6",
         "oomphinc/composer-installers-extender": "^1.1",
         "oriongunning/gridder": "^1.4.2",
