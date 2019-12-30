@@ -21,6 +21,18 @@
         {
           "type": "package",
           "package": {
+            "name": "ckeditor-plugin/uploadimage",
+            "version": "4.11.4",
+            "type": "ckeditor-plugin",
+            "dist": {
+              "url": "https://download.ckeditor.com/uploadimage/releases/uploadimage_4.11.4.zip",
+              "type": "zip"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
             "name": "ckeditor/templates",
             "type": "drupal-library",
             "version": "4.11.1",
@@ -310,6 +322,7 @@
         }
     ],
     "require": {
+        "ckeditor-plugin/uploadimage": "^4.11",
         "ckeditor.autogrow": "^4.11",
         "ckeditor.codemirror": "^1.17.2",
         "ckeditor.fakeobjects": "^4.11",
