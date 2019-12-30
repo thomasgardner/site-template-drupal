@@ -45,6 +45,18 @@
         {
           "type": "package",
           "package": {
+            "name": "ckeditor-plugin/embed",
+            "version": "4.11.4",
+            "type": "ckeditor-plugin",
+            "dist": {
+              "url": "https://download.ckeditor.com/embed/releases/embed_4.11.4.zip",
+              "type": "zip"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
             "name": "ckeditor-plugin/embedbase",
             "version": "4.11.4",
             "type": "ckeditor-plugin",
@@ -384,6 +396,7 @@
     "require": {
         "ckeditor-plugin/autoembed": "^4.11",
         "ckeditor-plugin/autolink": "^4.11",
+        "ckeditor-plugin/embed": "^4.11",
         "ckeditor-plugin/embedbase": "^4.11",
         "ckeditor-plugin/notification": "^4.11",
         "ckeditor-plugin/uploadimage": "^4.11",
