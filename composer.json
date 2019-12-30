@@ -105,6 +105,18 @@
         {
           "type": "package",
           "package": {
+            "name": "ckeditor-plugin/notificationaggregator",
+            "version": "4.11.4",
+            "type": "ckeditor-plugin",
+            "dist": {
+              "url": "https://download.ckeditor.com/notificationaggregator/releases/notificationaggregator_4.11.4.zip",
+              "type": "zip"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
             "name": "ckeditor-plugin/uploadimage",
             "version": "4.11.4",
             "type": "ckeditor-plugin",
@@ -425,6 +437,7 @@
         "ckeditor-plugin/embedsemantic": "^4.11",
         "ckeditor-plugin/filetools": "^4.11",
         "ckeditor-plugin/notification": "^4.11",
+        "ckeditor-plugin/notificationaggregator": "^4.11",
         "ckeditor-plugin/uploadimage": "^4.11",
         "ckeditor-plugin/uploadwidget": "^4.11",
         "ckeditor.autogrow": "^4.11",

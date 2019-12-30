@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ee581f650b8c62d12b9f4ad16caaf317",
+    "content-hash": "b7aa8c5ee3c22349bb3458de0137d3fa",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -275,6 +275,17 @@
             "dist": {
                 "type": "zip",
                 "url": "https://download.ckeditor.com/notification/releases/notification_4.11.4.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "ckeditor-plugin"
+        },
+        {
+            "name": "ckeditor-plugin/notificationaggregator",
+            "version": "4.11.4",
+            "dist": {
+                "type": "zip",
+                "url": "https://download.ckeditor.com/notificationaggregator/releases/notificationaggregator_4.11.4.zip",
                 "reference": null,
                 "shasum": null
             },
