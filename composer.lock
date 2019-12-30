@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4466e654e533ede5eb68a6979257d9b7",
+    "content-hash": "391cd7c72ac4e6f78c94c8d9783fc53c",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -202,6 +202,17 @@
             ],
             "description": "Drupal code generator",
             "time": "2019-10-27T14:27:26+00:00"
+        },
+        {
+            "name": "ckeditor-plugin/autoembed",
+            "version": "4.11.4",
+            "dist": {
+                "type": "zip",
+                "url": "https://download.ckeditor.com/autoembed/releases/autoembed_4.11.4.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "ckeditor-plugin"
         },
         {
             "name": "ckeditor-plugin/uploadimage",
