@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9c5f5b6da205f41fce4d3c46ed30560d",
+    "content-hash": "e1413bfc603b414dbd719014563b2efe",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -242,6 +242,17 @@
             "dist": {
                 "type": "zip",
                 "url": "https://download.ckeditor.com/embedbase/releases/embedbase_4.11.4.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "ckeditor-plugin"
+        },
+        {
+            "name": "ckeditor-plugin/filetools",
+            "version": "4.11.4",
+            "dist": {
+                "type": "zip",
+                "url": "https://download.ckeditor.com/filetools/releases/filetools_4.11.4.zip",
                 "reference": null,
                 "shasum": null
             },
