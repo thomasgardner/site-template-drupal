@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "068d7da373e30cc265dab4113fa7702c",
+    "content-hash": "4466e654e533ede5eb68a6979257d9b7",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -209,6 +209,17 @@
             "dist": {
                 "type": "zip",
                 "url": "https://download.ckeditor.com/uploadimage/releases/uploadimage_4.11.4.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "ckeditor-plugin"
+        },
+        {
+            "name": "ckeditor-plugin/uploadwidget",
+            "version": "4.11.4",
+            "dist": {
+                "type": "zip",
+                "url": "https://download.ckeditor.com/uploadwidget/releases/uploadwidget_4.11.4.zip",
                 "reference": null,
                 "shasum": null
             },
