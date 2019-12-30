@@ -69,6 +69,18 @@
         {
           "type": "package",
           "package": {
+            "name": "ckeditor-plugin/embedsemantic",
+            "version": "4.11.4",
+            "type": "ckeditor-plugin",
+            "dist": {
+              "url": "https://download.ckeditor.com/embedsemantic/releases/embedsemantic_4.11.4.zip",
+              "type": "zip"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
             "name": "ckeditor-plugin/filetools",
             "version": "4.11.4",
             "type": "ckeditor-plugin",
@@ -410,6 +422,7 @@
         "ckeditor-plugin/autolink": "^4.11",
         "ckeditor-plugin/embed": "^4.11",
         "ckeditor-plugin/embedbase": "^4.11",
+        "ckeditor-plugin/embedsemantic": "^4.11",
         "ckeditor-plugin/filetools": "^4.11",
         "ckeditor-plugin/notification": "^4.11",
         "ckeditor-plugin/uploadimage": "^4.11",

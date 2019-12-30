@@ -509,6 +509,19 @@
         "installation-source": "dist"
     },
     {
+        "name": "ckeditor-plugin/embedsemantic",
+        "version": "4.11.4",
+        "version_normalized": "4.11.4.0",
+        "dist": {
+            "type": "zip",
+            "url": "https://download.ckeditor.com/embedsemantic/releases/embedsemantic_4.11.4.zip",
+            "reference": null,
+            "shasum": null
+        },
+        "type": "ckeditor-plugin",
+        "installation-source": "dist"
+    },
+    {
         "name": "ckeditor-plugin/filetools",
         "version": "4.11.4",
         "version_normalized": "4.11.4.0",
