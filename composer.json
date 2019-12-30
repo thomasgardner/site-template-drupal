@@ -33,6 +33,18 @@
         {
           "type": "package",
           "package": {
+            "name": "ckeditor-plugin/embedbase",
+            "version": "4.11.4",
+            "type": "ckeditor-plugin",
+            "dist": {
+              "url": "https://download.ckeditor.com/embedbase/releases/embedbase_4.11.4.zip",
+              "type": "zip"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
             "name": "ckeditor-plugin/uploadimage",
             "version": "4.11.4",
             "type": "ckeditor-plugin",
@@ -347,6 +359,7 @@
     ],
     "require": {
         "ckeditor-plugin/autoembed": "^4.11",
+        "ckeditor-plugin/embedbase": "^4.11",
         "ckeditor-plugin/uploadimage": "^4.11",
         "ckeditor-plugin/uploadwidget": "^4.11",
         "ckeditor.autogrow": "^4.11",
