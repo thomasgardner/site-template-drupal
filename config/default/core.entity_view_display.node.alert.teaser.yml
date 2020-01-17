@@ -21,10 +21,16 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  sharethis:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
 hidden:
   field_active: true
   field_alert_body: true
   field_alert_level: true
   field_expiration_date_alert: true
   field_not_dismissable: true
+  langcode: true
   search_api_excerpt: true
