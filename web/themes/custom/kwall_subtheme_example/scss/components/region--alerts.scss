@@ -1,0 +1,108 @@
+@import '../styleguide/scss/variables';
+@import 'mixin';
+
+.region-alerts {
+  background: $color-body;
+
+  div#kwall-alerts {
+    display: none;
+    width: 100%;
+    .alert-wrapper {
+      .alert {
+        margin: 0;
+        padding: 15px 0;
+        display: block;
+        position: relative;
+        &.not-dismissible-on {
+          .close {
+            display: none;
+          }
+        }
+        .alert-icon {
+          margin-left: 2rem;
+        }
+      }
+      &.alert-level {
+        &-info {
+          .alert {
+            background: $color-body;
+          }
+        }
+        &-danger {
+          .alert {
+            background: $color-alert-red;
+          }
+        }
+        &-warning {
+          .alert {
+            background: $color-orange;
+          }
+        }
+        &-success {
+          .alert {
+            background: $color-green-dark;
+          }
+        }
+      }
+
+      a.close {
+        background: url("../images/close-button.svg") no-repeat;
+        height: 22px;
+        width: 22px;
+        z-index: 1;
+        font-size: 0;
+        position: absolute;
+        top: calc(50% - 11px);
+        right: 2rem;
+
+        > span {
+          display: none;
+        }
+      }
+
+      .alert-content {
+        position: relative;
+        padding-left: 55px;
+        padding-right: 55px;
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        @media #{$tablet-min} {
+          font-size: 1.8rem;
+          line-height: 1.7rem;
+        }
+
+        &:before {
+          content: "\f12a";
+          font: 2.2rem/2.6rem $font-awesome;
+          position: absolute;
+          left: 0;
+          border: solid 2px;
+          width: 34px;
+          height: 34px;
+          border-radius: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: $color-grey;
+        }
+
+        a {
+          color: $color-grey;
+          text-transform: uppercase;
+          font: 700 1.4rem/1.7rem $font-family-header;
+          display: inline-block;
+          position: relative;
+          top: -2px;
+        }
+
+        p:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      &.alert-danger {
+      }
+    }
+  }
+}
+

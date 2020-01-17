@@ -1,0 +1,28 @@
+uuid: 54acffaa-38fa-46f3-b243-ae37c5175abe
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.alerts
+  module:
+    - block_class
+    - views
+  theme:
+    - kwall_subtheme_example
+third_party_settings:
+  block_class:
+    classes: site-alerts-block
+id: views_block__alerts_block_1
+theme: rancho
+region: alerts
+weight: -38
+provider: null
+plugin: 'views_block:alerts-block_1'
+settings:
+  id: 'views_block:alerts-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility: {  }
