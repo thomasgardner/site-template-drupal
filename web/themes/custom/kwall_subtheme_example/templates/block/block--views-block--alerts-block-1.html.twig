@@ -52,11 +52,12 @@
 'clearfix',
 'site-alerts-block'
 ] %}
+
 <section{{ attributes.addClass(classes) }}>
-    <div id="kwall-alerts-wrapper">
-        <div id="kwall-alerts">
-          {{ content }}
-        </div>
+  <div id="kwall-alerts-wrapper">
+    <div id="kwall-alerts" class="kwall-alerts">
+      {{ content }}
     </div>
+  </div>
 </section>
 

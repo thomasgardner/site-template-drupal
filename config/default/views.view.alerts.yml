@@ -62,7 +62,7 @@ display:
         type: default
         options:
           grouping: {  }
-          row_class: ''
+          row_class: alert
           default_row_class: false
       row:
         type: fields
@@ -149,7 +149,7 @@ display:
           exclude: true
           alter:
             alter_text: true
-            text: '<a class="alert-close close close-{{ field_not_dismissable }}" href="#" data-dismiss="alert" aria-label="close" title="close" tabindex="0">×</a>'
+            text: '<a class="alert-close close close-{{ field_not_dismissable }}" href="#" data-dismiss="alert" aria-label="close alert" title="close" tabindex="0"><span class="fa fa-times-circle"></span><span class="alert-close-text">Dismiss</span></a>'
             make_link: false
             path: ''
             absolute: false
@@ -341,7 +341,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '<div class="alert-wrapper alert-level-{{ field_alert_level|lower }}"><div class="alert kwall-site-alert{{ nid }} not-dismissible-{{ field_not_dismissable_1|lower }} "><span class="alert-icon fa fa-exclamation-circle" aria-hidden="true"></span><div class="alert-body">{{ field_alert_body }}</div>{{ field_not_dismissable }}</div></div>'
+            text: "<div class=\"alert-level alert-level-{{ field_alert_level|lower }}\">\r\n<div class=\"container alert-content kwall-site-alert{{ nid }} not-dismissible-{{ field_not_dismissable_1|lower }} \">\r\n<!--<span class=\"alert-icon fa fa-exclamation-circle\" aria-hidden=\"true\"></span>-->\r\n<div class=\"alert-body\">{{ field_alert_body }}</div>\r\n{{ field_not_dismissable }}\r\n</div>\r\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -366,14 +366,14 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: ''
+          element_type: '0'
           element_class: ''
-          element_label_type: ''
+          element_label_type: '0'
           element_label_class: ''
           element_label_colon: false
-          element_wrapper_type: ''
+          element_wrapper_type: '0'
           element_wrapper_class: ''
-          element_default_classes: true
+          element_default_classes: false
           empty: ''
           hide_empty: false
           empty_zero: false
