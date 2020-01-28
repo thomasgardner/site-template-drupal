@@ -4427,13 +4427,13 @@ nav.pager .pager__items .pager__item--next a:hover, nav.pager .pager__items .pag
 }
 
 .kwall-alerts .alert-level-success {
-  background-color: #356856;
-  color: #fff;
+  background-color: #A7DBD8;
+  color: #242628;
 }
 
 .kwall-alerts .alert-level-success .alert-content::before,
 .kwall-alerts .alert-level-success .close {
-  color: #fff;
+  color: #242628;
 }
 
 .layout-hero-content {

@@ -4,7 +4,7 @@
 $color-alert: #FFCF01;
 $color-alert-red: #BD1B00;
 $color-alert-orange: #E84708;
-$color-alert-green: #356856;
+$color-alert-green: #A7DBD8;
 $color-alert-text-light: $white;
 $color-alert-text-dark: $black;
 
@@ -139,11 +139,11 @@ $color-alert-text-dark: $black;
     }
     &-success {
       background-color: $color-alert-green;
-      color: $color-alert-text-light;
+      color: $color-alert-text-dark;
 
       .alert-content::before,
       .close {
-        color: $color-alert-text-light;
+        color: $color-alert-text-dark;
       }
     }
   }
