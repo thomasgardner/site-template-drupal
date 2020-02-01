@@ -5,5 +5,4 @@ dependencies: {  }
 name: 'Article Category'
 vid: article_category
 description: ''
-hierarchy: 0
 weight: 0
