@@ -8052,6 +8052,55 @@
         }
     },
     {
+        "name": "drupal/verf",
+        "version": "1.0.0-beta7",
+        "version_normalized": "1.0.0.0-beta7",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupalcode.org/project/verf.git",
+            "reference": "8.x-1.0-beta7"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://ftp.drupal.org/files/projects/verf-8.x-1.0-beta7.zip",
+            "reference": "8.x-1.0-beta7",
+            "shasum": "5e6e3ed49530c8d792a9cb60f9e5e72da4f8ff0d"
+        },
+        "require": {
+            "drupal/core": "~8.0"
+        },
+        "type": "drupal-module",
+        "extra": {
+            "branch-alias": {
+                "dev-1.x": "1.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-1.0-beta7",
+                "datestamp": "1556796785",
+                "security-coverage": {
+                    "status": "not-covered",
+                    "message": "Project has not opted into security advisory coverage!"
+                }
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "legolasbo",
+                "homepage": "https://www.drupal.org/user/2480548"
+            }
+        ],
+        "description": "Provides Views filters for entity reference fields.",
+        "homepage": "https://www.drupal.org/project/verf",
+        "support": {
+            "source": "https://git.drupalcode.org/project/verf"
+        }
+    },
+    {
         "name": "drupal/video_embed_field",
         "version": "2.2.0",
         "version_normalized": "2.2.0.0",
@@ -15266,7 +15315,8 @@
             "http",
             "psr",
             "psr-7"
-        ]
+        ],
+        "abandoned": "laminas/laminas-diactoros"
     },
     {
         "name": "zendframework/zend-escaper",
@@ -15313,7 +15363,8 @@
             "ZendFramework",
             "escaper",
             "zf"
-        ]
+        ],
+        "abandoned": "laminas/laminas-escaper"
     },
     {
         "name": "zendframework/zend-feed",
@@ -15378,7 +15429,8 @@
             "ZendFramework",
             "feed",
             "zf"
-        ]
+        ],
+        "abandoned": "laminas/laminas-feed"
     },
     {
         "name": "zendframework/zend-stdlib",
@@ -15426,6 +15478,7 @@
             "ZendFramework",
             "stdlib",
             "zf"
-        ]
+        ],
+        "abandoned": "laminas/laminas-stdlib"
     }
 ]
