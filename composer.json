@@ -138,6 +138,7 @@
         "drupal/views_block_area": "^1.0",
         "drupal/views_bulk_edit": "^2.2",
         "drupal/views_bulk_operations": "^2.4",
+        "drupal/views_ical": "^1.0@alpha",
         "drupal/viewsreference": "^2.0",
         "drupal/webform": "^5.1",
         "drupal/wysiwyg_template": "^2.1",
