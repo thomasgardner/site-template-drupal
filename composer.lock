@@ -71,17 +71,6 @@
             "time": "2018-02-22T13:58:36+00:00"
         },
         {
-            "name": "algolia/places",
-            "version": "1.15.0",
-            "dist": {
-                "type": "zip",
-                "url": "https://github.com/algolia/places/archive/v1.15.0.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "type": "drupal-library"
-        },
-        {
             "name": "asm89/stack-cors",
             "version": "1.3.0",
             "source": {
