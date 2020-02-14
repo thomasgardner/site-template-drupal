@@ -1,0 +1,31 @@
+uuid: 766fc5e4-f643-4ff4-a30c-f8a8a3f6a7e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.media_library
+    - field.field.media.course_image.field_media_image_13
+    - image.style.medium
+    - media.type.course_image
+  module:
+    - image
+id: media.course_image.media_library
+targetEntityType: media
+bundle: course_image
+mode: media_library
+content:
+  thumbnail:
+    type: image
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: ''
+    weight: 0
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  field_media_image_13: true
+  langcode: true
+  name: true
+  uid: true

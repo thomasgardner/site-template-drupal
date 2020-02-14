@@ -1,0 +1,19 @@
+uuid: 7a48c9cb-d9ed-4992-9ca6-9abb93a1f559
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body_unformatted
+    - paragraphs.paragraphs_type.article_slideshow_item
+id: paragraph.article_slideshow_item.field_body_unformatted
+field_name: field_body_unformatted
+entity_type: paragraph
+bundle: article_slideshow_item
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

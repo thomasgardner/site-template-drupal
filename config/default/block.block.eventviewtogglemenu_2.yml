@@ -1,0 +1,35 @@
+uuid: 8542ef1d-6326-4518-ba46-91872f933003
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:8ec0639a-c6e3-4d2f-914a-304636924e19'
+  module:
+    - block_class
+    - block_content
+    - system
+  theme:
+    - kwall_subtheme_example
+third_party_settings:
+  block_class:
+    classes: 'cb-event-view-toggle d-none d-lg-block'
+id: eventviewtogglemenu_2
+theme: kwall_subtheme_example
+region: content
+weight: -17
+provider: null
+plugin: 'block_content:8ec0639a-c6e3-4d2f-914a-304636924e19'
+settings:
+  id: 'block_content:8ec0639a-c6e3-4d2f-914a-304636924e19'
+  label: 'Event: View Toggle Menu'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /dgfsdgfsfdsf
+    negate: false
+    context_mapping: {  }

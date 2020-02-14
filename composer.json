@@ -21,11 +21,204 @@
         {
           "type": "package",
           "package": {
-            "name": "desandro/masonry",
-            "version": "3.3.2",
+            "name": "ckeditor-plugin/autoembed",
+            "version": "4.11.4",
+            "type": "ckeditor-plugin",
+            "dist": {
+              "url": "https://download.ckeditor.com/autoembed/releases/autoembed_4.11.4.zip",
+              "type": "zip"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
+            "name": "ckeditor-plugin/autolink",
+            "version": "4.11.4",
+            "type": "ckeditor-plugin",
+            "dist": {
+              "url": "https://download.ckeditor.com/autolink/releases/autolink_4.11.4.zip",
+              "type": "zip"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
+            "name": "ckeditor-plugin/embed",
+            "version": "4.11.4",
+            "type": "ckeditor-plugin",
+            "dist": {
+              "url": "https://download.ckeditor.com/embed/releases/embed_4.11.4.zip",
+              "type": "zip"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
+            "name": "ckeditor-plugin/embedbase",
+            "version": "4.11.4",
+            "type": "ckeditor-plugin",
+            "dist": {
+              "url": "https://download.ckeditor.com/embedbase/releases/embedbase_4.11.4.zip",
+              "type": "zip"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
+            "name": "ckeditor-plugin/embedsemantic",
+            "version": "4.11.4",
+            "type": "ckeditor-plugin",
+            "dist": {
+              "url": "https://download.ckeditor.com/embedsemantic/releases/embedsemantic_4.11.4.zip",
+              "type": "zip"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
+            "name": "ckeditor-plugin/filetools",
+            "version": "4.11.4",
+            "type": "ckeditor-plugin",
+            "dist": {
+              "url": "https://download.ckeditor.com/filetools/releases/filetools_4.11.4.zip",
+              "type": "zip"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
+            "name": "ckeditor-plugin/notification",
+            "version": "4.11.4",
+            "type": "ckeditor-plugin",
+            "dist": {
+              "url": "https://download.ckeditor.com/notification/releases/notification_4.11.4.zip",
+              "type": "zip"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
+            "name": "ckeditor-plugin/notificationaggregator",
+            "version": "4.11.4",
+            "type": "ckeditor-plugin",
+            "dist": {
+              "url": "https://download.ckeditor.com/notificationaggregator/releases/notificationaggregator_4.11.4.zip",
+              "type": "zip"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
+            "name": "ckeditor-plugin/uploadimage",
+            "version": "4.11.4",
+            "type": "ckeditor-plugin",
+            "dist": {
+              "url": "https://download.ckeditor.com/uploadimage/releases/uploadimage_4.11.4.zip",
+              "type": "zip"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
+            "name": "ckeditor-plugin/uploadwidget",
+            "version": "4.11.4",
+            "type": "ckeditor-plugin",
+            "dist": {
+              "url": "https://download.ckeditor.com/uploadwidget/releases/uploadwidget_4.11.4.zip",
+              "type": "zip"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
+            "name": "ckeditor/templates",
+            "type": "drupal-library",
+            "version": "4.11.1",
+            "dist": {
+              "type": "zip",
+              "url": "https://download.ckeditor.com/templates/releases/templates_4.11.1.zip",
+              "reference": "master"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
+            "name": "ckeditor.autogrow",
+            "version": "4.11.4",
             "type": "drupal-library",
             "dist": {
-              "url": "https://github.com/desandro/masonry/archive/v3.3.2.zip",
+              "url": "https://download.ckeditor.com/autogrow/releases/autogrow_4.11.4.zip",
+              "type": "zip"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
+            "name": "ckeditor.codemirror",
+            "version": "1.17.2",
+            "type": "drupal-library",
+            "dist": {
+              "url": "https://github.com/w8tcha/CKEditor-CodeMirror-Plugin/archive/v1.17.2.zip",
+              "type": "zip"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
+            "name": "ckeditor.fakeobjects",
+            "version": "4.11.4",
+            "type": "drupal-library",
+            "dist": {
+              "url": "https://download.ckeditor.com/fakeobjects/releases/fakeobjects_4.11.4.zip",
+              "type": "zip"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
+            "name": "ckeditor.image",
+            "version": "4.11.4",
+            "type": "drupal-library",
+            "dist": {
+              "url": "https://download.ckeditor.com/image/releases/image_4.11.4.zip",
+              "type": "zip"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
+            "name": "ckeditor.link",
+            "version": "4.11.4",
+            "type": "drupal-library",
+            "dist": {
+              "url": "https://download.ckeditor.com/link/releases/link_4.11.4.zip",
+              "type": "zip"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
+            "name": "codemirror",
+            "version": "5.42.0",
+            "type": "drupal-library",
+            "dist": {
+              "url": "https://github.com/codemirror/CodeMirror/archive/5.42.0.zip",
               "type": "zip"
             }
           }
@@ -38,6 +231,18 @@
             "type": "drupal-library",
             "dist": {
               "url": "https://github.com/desandro/imagesloaded/archive/v3.2.0.zip",
+              "type": "zip"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
+            "name": "desandro/masonry",
+            "version": "3.3.2",
+            "type": "drupal-library",
+            "dist": {
+              "url": "https://github.com/desandro/masonry/archive/v3.3.2.zip",
               "type": "zip"
             }
           }
@@ -58,26 +263,199 @@
         {
           "type": "package",
           "package": {
-            "name": "ckeditor/templates",
+            "name": "intl-tel-input",
+            "version": "14.0.6",
             "type": "drupal-library",
-            "version": "4.11.1",
             "dist": {
-              "type": "zip",
-              "url": "https://download.ckeditor.com/templates/releases/templates_4.11.1.zip",
-              "reference": "master"
+              "url": "https://github.com/jackocnr/intl-tel-input/archive/v14.0.6.zip",
+              "type": "zip"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
+            "name": "jquery.inputmask",
+            "version": "4.0.4",
+            "type": "drupal-library",
+            "dist": {
+              "url": "https://github.com/RobinHerbots/Inputmask/archive/4.0.4.zip",
+              "type": "zip"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
+            "name": "jquery.rateit",
+            "version": "1.1.1",
+            "type": "drupal-library",
+            "dist": {
+              "url": "https://github.com/gjunge/rateit.js/archive/1.1.1.zip",
+              "type": "zip"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
+            "name": "jquery.select2",
+            "version": "4.0.5",
+            "type": "drupal-library",
+            "dist": {
+              "url": "https://github.com/select2/select2/archive/4.0.5.zip",
+              "type": "zip"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
+            "name": "jquery.textcounter",
+            "version": "0.8.0",
+            "type": "drupal-library",
+            "dist": {
+              "url": "https://github.com/ractoon/jQuery-Text-Counter/archive/0.8.0.zip",
+              "type": "zip"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
+            "name": "jquery.timepicker",
+            "version": "1.11.14",
+            "type": "drupal-library",
+            "dist": {
+              "url": "https://github.com/jonthornton/jquery-timepicker/archive/1.11.14.zip",
+              "type": "zip"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
+            "name": "matchHeight",
+            "version": "0.7.2",
+            "type": "drupal-library",
+            "dist": {
+              "url": "https://github.com/liabru/jquery-match-height/archive/0.7.2.zip",
+              "type": "zip"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
+            "name": "metafizzy/isotope",
+            "version": "3.0.6",
+            "type": "drupal-library",
+            "dist": {
+              "url": "https://github.com/metafizzy/isotope/archive/v3.0.6.zip",
+              "type": "zip"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
+            "name": "oriongunning/gridder",
+            "version": "1.4.2",
+            "type": "drupal-library",
+            "dist": {
+              "url": "https://github.com/oriongunning/gridder/archive/v1.4.2.zip",
+              "type": "zip"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
+            "name": "places",
+            "version": "1.15.0",
+            "type": "drupal-library",
+            "dist": {
+              "url": "https://github.com/algolia/places/archive/v1.15.0.zip",
+              "type": "zip"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
+            "name": "progress-tracker",
+            "version": "1.2.0",
+            "type": "drupal-library",
+            "dist": {
+              "url": "https://github.com/NigelOToole/progress-tracker/archive/v1.2.0.zip",
+              "type": "zip"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
+            "name": "signature_pad",
+            "version": "2.3.0",
+            "type": "drupal-library",
+            "dist": {
+              "url": "https://github.com/szimek/signature_pad/archive/v2.3.0.zip",
+              "type": "zip"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
+            "name": "slick",
+            "version": "1.8.1",
+            "type": "drupal-library",
+            "dist": {
+              "url": "https://github.com/kenwheeler/slick/archive/v1.8.1.zip",
+              "type": "zip"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
+            "name": "woocommerce/flexslider",
+            "version": "2.7.1",
+            "type": "drupal-library",
+            "dist": {
+              "url": "https://github.com/woocommerce/FlexSlider/archive/2.7.1.zip",
+              "type": "zip"
             }
           }
         }
     ],
     "require": {
+        "ckeditor-plugin/autoembed": "^4.11",
+        "ckeditor-plugin/autolink": "^4.11",
+        "ckeditor-plugin/embed": "^4.11",
+        "ckeditor-plugin/embedbase": "^4.11",
+        "ckeditor-plugin/embedsemantic": "^4.11",
+        "ckeditor-plugin/filetools": "^4.11",
+        "ckeditor-plugin/notification": "^4.11",
+        "ckeditor-plugin/notificationaggregator": "^4.11",
+        "ckeditor-plugin/uploadimage": "^4.11",
+        "ckeditor-plugin/uploadwidget": "^4.11",
+        "ckeditor.autogrow": "^4.11",
+        "ckeditor.codemirror": "^1.17.2",
+        "ckeditor.fakeobjects": "^4.11",
+        "ckeditor.image": "^4.11",
+        "ckeditor.link": "^4.11",
+        "codemirror": "^5.42.0",
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6.5",
+        "desandro/imagesloaded": "^3.2",
         "drupal-composer/drupal-scaffold": "^2.5",
         "drupal/address": "^1.4",
+        "drupal/addtocalendar": "^3.1",
         "drupal/advupdate": "^1.0",
         "drupal/asset_injector": "^2.4",
         "drupal/auto_entitylabel": "^2.1",
-        "drupal/backup_migrate": "^4.0",
+        "drupal/backup_migrate": "^4.1",
         "drupal/block_class": "^1.0",
         "drupal/calendar": "1.x-dev",
         "drupal/captcha": "^1.0@beta",
@@ -85,7 +463,7 @@
         "drupal/ckeditor_media_embed": "^1.3",
         "drupal/ckeditor_templates": "1,1",
         "drupal/console": "^1.0.2",
-        "drupal/core": "^8.7.0",
+        "drupal/core": "^8.7",
         "drupal/ctools": "^3.0",
         "drupal/date_popup": "^1.0",
         "drupal/devel": "^2.0",
@@ -106,9 +484,11 @@
         "drupal/google_analytics": "^2.3",
         "drupal/group": "^1.0@RC",
         "drupal/groupmenu": "^1.0@alpha",
+        "drupal/gtranslate": "^1.13",
         "drupal/inline_entity_form": "^1.0@RC",
         "drupal/libraries": "^3.0",
         "drupal/link_attributes": "^1.9",
+        "drupal/link_class": "^1.4",
         "drupal/linked_field": "^1.1",
         "drupal/linkit": "^5.0",
         "drupal/masquerade": "^2.0",
@@ -127,6 +507,7 @@
         "drupal/search_api": "^1.11",
         "drupal/search_api_autocomplete": "^1.1",
         "drupal/search_api_solr": "^2.5",
+        "drupal/sharethis": "^2.0@beta",
         "drupal/smart_ip": "^3.6",
         "drupal/smtp": "^1.0",
         "drupal/tb_megamenu": "1.x-dev",
@@ -134,6 +515,7 @@
         "drupal/twig_link_attributes": "1.x-dev",
         "drupal/twig_tweak": "^2.1",
         "drupal/twig_vardumper": "^1.1",
+        "drupal/verf": "^1.0@beta",
         "drupal/video_embed_field": "^2.0",
         "drupal/views_block_area": "^1.0",
         "drupal/views_bulk_edit": "^2.2",
@@ -146,16 +528,30 @@
         "drush/drush": "^9.5",
         "enyo/dropzone": "^5.5",
         "grasmash/drupal-security-warning": "^1.0.0",
+        "intl-tel-input": "^14.0.6",
+        "jquery.inputmask": "^4.0.4",
+        "jquery.rateit": "^1.1.1",
+        "jquery.select2": "^4.0.5",
+        "jquery.textcounter": "^0.8.0",
+        "jquery.timepicker": "^1.11.14",
+        "matchHeight": "^0.7.2",
+        "metafizzy/isotope": "^3.0.6",
         "oomphinc/composer-installers-extender": "^1.1",
+        "oriongunning/gridder": "^1.4.2",
+        "places": "^1.15",
+        "progress-tracker": "^1.2.0",
+        "signature_pad": "^2.3.0",
+        "slick": "^1.8.1",
         "topfloor/composer-cleanup-vcs-dirs": "^1.0",
         "vlucas/phpdotenv": "^2.4",
+        "webflo/drupal-core-require-dev": "^8.7",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3",
         "wikimedia/composer-merge-plugin": "^1.4",
+        "woocommerce/flexslider": "^2.7.1",
         "zaporylie/composer-drupal-optimizations": "^1.0"
     },
     "require-dev": {
-        "webflo/drupal-core-require-dev": "^8.7.0"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -206,6 +602,7 @@
         },
         "installer-types": [
             "bower-asset",
+            "ckeditor-plugin",
             "npm-asset"
         ],
         "enable-patching": true,
@@ -221,6 +618,7 @@
                 "type:npm-asset",
                 "enyo/dropzone"
             ],
+            "web/libraries/ckeditor/plugins/{$name}": ["type:ckeditor-plugin"],
             "web/modules/contrib/{$name}": ["type:drupal-module"],
             "web/profiles/contrib/{$name}": ["type:drupal-profile"],
             "web/themes/contrib/{$name}": ["type:drupal-theme"],

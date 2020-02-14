@@ -23,7 +23,7 @@ third_party_settings:
       children:
         - group_column_content
       parent_name: ''
-      weight: 6
+      weight: 7
       format_type: html_element
       format_settings:
         id: ''
@@ -98,7 +98,7 @@ content:
     type: boolean
     region: content
   field_link:
-    weight: 7
+    weight: 6
     label: hidden
     settings:
       trim_length: 80

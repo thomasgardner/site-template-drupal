@@ -11,6 +11,7 @@ dependencies:
     - paragraphs.paragraphs_type.flexible_bg_image_blocks
   module:
     - entity_reference_revisions
+    - fences
     - options
 id: paragraph.flexible_bg_image_blocks.default
 targetEntityType: paragraph
@@ -58,7 +59,14 @@ content:
     label: hidden
     settings:
       link_to_entity: false
-    third_party_settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: h2
+        fences_field_classes: 'section-title container'
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
     type: string
     region: content
 hidden: {  }

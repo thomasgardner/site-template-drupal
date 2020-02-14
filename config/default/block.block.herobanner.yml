@@ -1,0 +1,31 @@
+uuid: 73c3a214-590e-499a-9290-c18e9e41f954
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:hero_banner:b56d4ada-e26a-47b0-8bab-4014260b9a41'
+  module:
+    - block_content
+    - system
+  theme:
+    - kwall_subtheme_example
+id: herobanner
+theme: kwall_subtheme_example
+region: hero
+weight: 0
+provider: null
+plugin: 'block_content:b56d4ada-e26a-47b0-8bab-4014260b9a41'
+settings:
+  id: 'block_content:b56d4ada-e26a-47b0-8bab-4014260b9a41'
+  label: 'Hero banner events'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: "/events/month\r\n/events/year\r\n/events/day\r\n/events/week\r\n"
+    negate: false
+    context_mapping: {  }

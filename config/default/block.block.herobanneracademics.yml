@@ -1,0 +1,31 @@
+uuid: fcf83892-0546-4e3b-8e68-5938e25c43ae
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:hero_banner:942fbff4-327e-42b6-8db6-1dd99b261af0'
+  module:
+    - block_content
+    - system
+  theme:
+    - kwall_subtheme_example
+id: herobanneracademics
+theme: kwall_subtheme_example
+region: hero
+weight: 0
+provider: null
+plugin: 'block_content:942fbff4-327e-42b6-8db6-1dd99b261af0'
+settings:
+  id: 'block_content:942fbff4-327e-42b6-8db6-1dd99b261af0'
+  label: 'Hero banner Academics'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: "/academics\r\n/academics/graduate\r\n/academics/undergraduate\r\n/academics/certificate"
+    negate: false
+    context_mapping: {  }

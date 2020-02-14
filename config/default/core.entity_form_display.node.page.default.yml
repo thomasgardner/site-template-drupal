@@ -8,10 +8,12 @@ dependencies:
     - field.field.node.page.field_content_bottom
     - field.field.node.page.field_hero_content
     - field.field.node.page.field_hide_page_title
+    - field.field.node.page.field_intro
     - field.field.node.page.field_meta_tags
     - field.field.node.page.field_section_title
     - field.field.node.page.field_sidebar_content
     - node.type.page
+    - workflows.workflow.editorial
   module:
     - content_moderation
     - field_group
@@ -39,13 +41,13 @@ third_party_settings:
         - title
         - field_hide_page_title
         - field_section_title
+        - field_intro
         - body
         - field_after_content
       parent_name: ''
       weight: 2
       format_type: details
       format_settings:
-        label: 'Main Content'
         open: true
         required_fields: true
         id: ''
@@ -87,7 +89,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 5
+    weight: 6
     region: content
     settings:
       rows: 9
@@ -102,7 +104,7 @@ content:
     third_party_settings: {  }
   field_after_content:
     type: entity_reference_paragraphs
-    weight: 6
+    weight: 7
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -142,6 +144,14 @@ content:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
+    region: content
+  field_intro:
+    weight: 5
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
     region: content
   field_meta_tags:
     weight: 51

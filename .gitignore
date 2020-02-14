@@ -1,9 +1,12 @@
 # Ignore sensitive information.
-/web/sites/*/settings.php
+#/web/sites/*/settings.php
 /web/sites/*/settings.local.php
 
 # Ignore Drupal's file directory.
 /web/sites/*/files/
+
+# Ignore Pantheon's symbolic link for Drupal's file directory.
+/web/sites/default/files
 
 # Ignore SimpleTest multi-site environment.
 /web/sites/simpletest

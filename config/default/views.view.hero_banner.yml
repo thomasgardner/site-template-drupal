@@ -716,7 +716,8 @@ display:
     display_title: 'Hero Slideshow'
     position: 1
     display_options:
-      display_extenders: {  }
+      display_extenders:
+        metatag_display_extender: {  }
       fields:
         field_boolean:
           id: field_boolean
@@ -1222,8 +1223,8 @@ display:
           delta_offset: 0
           delta_reversed: false
           delta_first_last: false
-          multi_type: ul
-          separator: ', '
+          multi_type: separator
+          separator: ' '
           field_api_classes: false
           plugin_id: field
         nothing:
@@ -1345,7 +1346,11 @@ display:
           class: slides
       row:
         type: fields
-        options: {  }
+        options:
+          default_field_elements: false
+          inline: {  }
+          separator: ''
+          hide_empty: false
       empty: {  }
       relationships:
         field_hero_content:

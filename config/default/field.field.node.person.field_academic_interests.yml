@@ -1,0 +1,21 @@
+uuid: 9486e287-1ec9-448c-b77e-86517d4d0027
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_academic_interests
+    - node.type.person
+  module:
+    - text
+id: node.person.field_academic_interests
+field_name: field_academic_interests
+entity_type: node
+bundle: person
+label: 'Academic Interests'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

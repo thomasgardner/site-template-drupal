@@ -1,0 +1,30 @@
+uuid: 2007e63e-5e1d-42f7-8919-9bf9442f6cd6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.course_image.field_media_image_13
+    - image.style.thumbnail
+    - media.type.course_image
+  module:
+    - image
+id: media.course_image.default
+targetEntityType: media
+bundle: course_image
+mode: default
+content:
+  field_media_image_13:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  path: true
+  status: true
+  uid: true
