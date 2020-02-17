@@ -173,6 +173,7 @@ class ComposerStaticInitDrupal8
         ),
         'E' => 
         array (
+            'Eluceo\\iCal\\' => 12,
             'Egulias\\EmailValidator\\' => 23,
         ),
         'D' => 
@@ -540,6 +541,10 @@ class ComposerStaticInitDrupal8
         'FontLib\\' => 
         array (
             0 => __DIR__ . '/..' . '/phenx/php-font-lib/src/FontLib',
+        ),
+        'Eluceo\\iCal\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/eluceo/ical/src',
         ),
         'Egulias\\EmailValidator\\' => 
         array (
@@ -4114,6 +4119,28 @@ class ComposerStaticInitDrupal8
         'Egulias\\EmailValidator\\Warning\\QuotedString' => __DIR__ . '/..' . '/egulias/email-validator/EmailValidator/Warning/QuotedString.php',
         'Egulias\\EmailValidator\\Warning\\TLD' => __DIR__ . '/..' . '/egulias/email-validator/EmailValidator/Warning/TLD.php',
         'Egulias\\EmailValidator\\Warning\\Warning' => __DIR__ . '/..' . '/egulias/email-validator/EmailValidator/Warning/Warning.php',
+        'Eluceo\\iCal\\Component' => __DIR__ . '/..' . '/eluceo/ical/src/Component.php',
+        'Eluceo\\iCal\\Component\\Alarm' => __DIR__ . '/..' . '/eluceo/ical/src/Component/Alarm.php',
+        'Eluceo\\iCal\\Component\\Calendar' => __DIR__ . '/..' . '/eluceo/ical/src/Component/Calendar.php',
+        'Eluceo\\iCal\\Component\\Event' => __DIR__ . '/..' . '/eluceo/ical/src/Component/Event.php',
+        'Eluceo\\iCal\\Component\\Timezone' => __DIR__ . '/..' . '/eluceo/ical/src/Component/Timezone.php',
+        'Eluceo\\iCal\\Component\\TimezoneRule' => __DIR__ . '/..' . '/eluceo/ical/src/Component/TimezoneRule.php',
+        'Eluceo\\iCal\\ParameterBag' => __DIR__ . '/..' . '/eluceo/ical/src/ParameterBag.php',
+        'Eluceo\\iCal\\Property' => __DIR__ . '/..' . '/eluceo/ical/src/Property.php',
+        'Eluceo\\iCal\\PropertyBag' => __DIR__ . '/..' . '/eluceo/ical/src/PropertyBag.php',
+        'Eluceo\\iCal\\Property\\ArrayValue' => __DIR__ . '/..' . '/eluceo/ical/src/Property/ArrayValue.php',
+        'Eluceo\\iCal\\Property\\DateTimeProperty' => __DIR__ . '/..' . '/eluceo/ical/src/Property/DateTimeProperty.php',
+        'Eluceo\\iCal\\Property\\DateTimesProperty' => __DIR__ . '/..' . '/eluceo/ical/src/Property/DateTimesProperty.php',
+        'Eluceo\\iCal\\Property\\Event\\Attendees' => __DIR__ . '/..' . '/eluceo/ical/src/Property/Event/Attendees.php',
+        'Eluceo\\iCal\\Property\\Event\\Geo' => __DIR__ . '/..' . '/eluceo/ical/src/Property/Event/Geo.php',
+        'Eluceo\\iCal\\Property\\Event\\Organizer' => __DIR__ . '/..' . '/eluceo/ical/src/Property/Event/Organizer.php',
+        'Eluceo\\iCal\\Property\\Event\\RecurrenceId' => __DIR__ . '/..' . '/eluceo/ical/src/Property/Event/RecurrenceId.php',
+        'Eluceo\\iCal\\Property\\Event\\RecurrenceRule' => __DIR__ . '/..' . '/eluceo/ical/src/Property/Event/RecurrenceRule.php',
+        'Eluceo\\iCal\\Property\\RawStringValue' => __DIR__ . '/..' . '/eluceo/ical/src/Property/RawStringValue.php',
+        'Eluceo\\iCal\\Property\\StringValue' => __DIR__ . '/..' . '/eluceo/ical/src/Property/StringValue.php',
+        'Eluceo\\iCal\\Property\\ValueInterface' => __DIR__ . '/..' . '/eluceo/ical/src/Property/ValueInterface.php',
+        'Eluceo\\iCal\\Util\\ComponentUtil' => __DIR__ . '/..' . '/eluceo/ical/src/Util/ComponentUtil.php',
+        'Eluceo\\iCal\\Util\\DateUtil' => __DIR__ . '/..' . '/eluceo/ical/src/Util/DateUtil.php',
         'Error' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/Error.php',
         'File_Iterator' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Iterator.php',
         'File_Iterator_Facade' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Facade.php',

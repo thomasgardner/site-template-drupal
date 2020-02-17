@@ -545,7 +545,18 @@ final class Mbstring
         }
 
         if ('UTF-8' === $encoding = self::getEncoding($encoding)) {
+<<<<<<< HEAD
             return preg_split("/(.{{$split_length}})/u", $string, null, PREG_SPLIT_DELIM_CAPTURE | PREG_SPLIT_NO_EMPTY);
+=======
+            $rx = '/(';
+            while (65535 < $split_length) {
+                $rx .= '.{65535}';
+                $split_length -= 65535;
+            }
+            $rx .= '.{'.$split_length.'})/us';
+
+            return preg_split($rx, $string, null, PREG_SPLIT_DELIM_CAPTURE | PREG_SPLIT_NO_EMPTY);
+>>>>>>> 8fae7d764... updating drupal
         }
 
         $result = array();
