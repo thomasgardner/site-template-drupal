@@ -1,0 +1,23 @@
+uuid: 9045fba1-3f65-4781-9414-a4a7d371d697
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link
+    - paragraphs.paragraphs_type.article_slideshow_item
+  module:
+    - link
+id: paragraph.article_slideshow_item.field_link
+field_name: field_link
+entity_type: paragraph
+bundle: article_slideshow_item
+label: Link
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

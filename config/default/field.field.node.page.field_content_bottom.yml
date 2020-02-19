@@ -14,6 +14,7 @@ dependencies:
     - paragraphs.paragraphs_type.gridder
     - paragraphs.paragraphs_type.interior_slideshow
     - paragraphs.paragraphs_type.person_carousel
+    - paragraphs.paragraphs_type.quicktabs
     - paragraphs.paragraphs_type.recent_articles_upcoming_events
     - paragraphs.paragraphs_type.video_tab_carousel
     - paragraphs.paragraphs_type.wysiwyg
@@ -45,6 +46,7 @@ settings:
       flexible_bg_image_blocks: flexible_bg_image_blocks
       gridder: gridder
       person_carousel: person_carousel
+      quicktabs: quicktabs
       video_tab_carousel: video_tab_carousel
     target_bundles_drag_drop:
       3_column_cta:
@@ -83,12 +85,12 @@ settings:
       hero_slideshow:
         weight: 22
         enabled: false
-      interior_column_section:
-        weight: 23
-        enabled: false
       accordion:
         enabled: true
         weight: 23
+      interior_column_section:
+        weight: 23
+        enabled: false
       accordion_item:
         weight: 24
         enabled: false
@@ -122,19 +124,25 @@ settings:
       gridder_item:
         weight: 44
         enabled: false
-      person_carousel:
-        enabled: true
-        weight: 45
       quick_link_minimal:
         weight: 45
         enabled: false
+      person_carousel:
+        enabled: true
+        weight: 45
       video_embed:
         weight: 49
         enabled: false
+      quicktabs:
+        enabled: true
+        weight: 54
       video_tab_carousel:
         enabled: true
         weight: 54
       video_tab_item:
+        weight: 55
+        enabled: false
+      quicktab_item:
         weight: 55
         enabled: false
 field_type: entity_reference_revisions

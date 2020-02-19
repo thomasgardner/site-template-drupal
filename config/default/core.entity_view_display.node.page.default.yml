@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.page.field_content_bottom
     - field.field.node.page.field_hero_content
     - field.field.node.page.field_hide_page_title
+    - field.field.node.page.field_intro
     - field.field.node.page.field_meta_tags
     - field.field.node.page.field_section_title
     - field.field.node.page.field_sidebar_content
@@ -26,26 +27,33 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 0
+    weight: 1
     region: content
     settings: {  }
     third_party_settings: {  }
   content_moderation_control:
-    weight: 0
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
   field_after_content:
     type: entity_reference_revisions_entity_view
-    weight: 2
+    weight: 4
     label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
     region: content
+  field_intro:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
   links:
-    weight: 1
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -57,3 +65,4 @@ hidden:
   field_section_title: true
   field_sidebar_content: true
   langcode: true
+  sharethis: true

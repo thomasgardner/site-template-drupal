@@ -1,0 +1,14 @@
+uuid: f2b3b83a-953e-489b-8df6-d999d7410637
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.test_group2
+id: test_group2-anonymous
+label: Anonymous
+weight: -102
+internal: true
+audience: anonymous
+group_type: test_group2
+permissions_ui: true
+permissions: {  }

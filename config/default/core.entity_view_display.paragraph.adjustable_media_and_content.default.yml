@@ -60,7 +60,6 @@ third_party_settings:
       weight: 20
       format_type: html_element
       format_settings:
-        label: 'Media Content'
         element: div
         show_label: false
         label_element: h3
@@ -69,7 +68,7 @@ third_party_settings:
         effect: none
         speed: fast
         id: ''
-        classes: 'col-md-7 media-wrap'
+        classes: 'col-md-8 media-wrap'
       label: 'Media Content'
       region: content
     group_content_wrap:
@@ -79,7 +78,6 @@ third_party_settings:
       weight: 21
       format_type: html_element
       format_settings:
-        label: 'Content Wrap'
         element: div
         show_label: false
         label_element: h3
@@ -88,7 +86,7 @@ third_party_settings:
         effect: none
         speed: fast
         id: ''
-        classes: 'col-md-5 content-wrap'
+        classes: 'col-md-4 content-wrap'
       label: 'Content Wrap'
       region: content
 id: paragraph.adjustable_media_and_content.default

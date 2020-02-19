@@ -9,6 +9,7 @@ dependencies:
     - field.field.paragraph.3_column_cta.field_title
     - paragraphs.paragraphs_type.3_column_cta
   module:
+    - fences
     - field_group
     - link
     - linked_field
@@ -22,7 +23,6 @@ third_party_settings:
       weight: 1
       format_type: html_element
       format_settings:
-        label: 'CTA Wrapper'
         element: div
         show_label: false
         label_element: h3
@@ -35,9 +35,8 @@ third_party_settings:
       region: content
     group_column_content:
       children:
-        - field_image
         - field_title
-        - field_body_formatted
+        - group_column_content_inner
         - field_link
       parent_name: group_cta_wrapper
       weight: 20
@@ -53,13 +52,50 @@ third_party_settings:
         speed: fast
       label: 'Column Content'
       region: content
+    group_column_content_inner:
+      children:
+        - group_column_content_inner2
+      parent_name: group_column_content
+      weight: 23
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: column-content-inner
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Column Content Inner'
+      region: content
+    group_column_content_inner2:
+      children:
+        - field_image
+        - field_body_formatted
+      parent_name: group_column_content_inner
+      weight: 20
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: column-content-inner2
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: column-content-inner2
+      region: content
 id: paragraph.3_column_cta.default
 targetEntityType: paragraph
 bundle: 3_column_cta
 mode: default
 content:
   field_body_formatted:
-    weight: 23
+    weight: 25
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -67,7 +103,7 @@ content:
     region: content
   field_image:
     type: entity_reference_entity_view
-    weight: 21
+    weight: 24
     label: hidden
     settings:
       view_mode: default
@@ -97,11 +133,13 @@ content:
     settings:
       link_to_entity: false
     third_party_settings:
-      linked_field:
-        linked: '1'
-        type: field
-        destination: field_link
-        advanced: {  }
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
     type: string
     region: content
 hidden: {  }

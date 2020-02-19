@@ -1,0 +1,28 @@
+uuid: acc994c2-02f3-4526-bf8a-4981ddacd176
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_course_image
+    - media.type.course_image
+    - node.type.course
+id: node.course.field_course_image
+field_name: field_course_image
+entity_type: node
+bundle: course
+label: 'Course Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      course_image: course_image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

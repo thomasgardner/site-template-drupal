@@ -1,0 +1,10 @@
+uuid: d7900849-5bcb-44bb-bd0a-283d0d647057
+langcode: en
+status: true
+dependencies: {  }
+id: test_group2
+label: 'Test Group2'
+description: ''
+creator_membership: true
+creator_wizard: true
+creator_roles: {  }

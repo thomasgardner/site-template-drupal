@@ -1,0 +1,15 @@
+uuid: 88ee758b-5a57-4b76-9657-609560c1968a
+langcode: en
+status: true
+dependencies: {  }
+name: full_width_image_1442x500
+label: 'Full width image (1442x500)'
+effects:
+  addce1ee-64c9-4052-ad03-06dcaabea8ad:
+    uuid: addce1ee-64c9-4052-ad03-06dcaabea8ad
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1442
+      height: 500
+      anchor: center-center
