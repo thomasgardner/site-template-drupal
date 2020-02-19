@@ -817,7 +817,7 @@ abstract class EntityProcessorBase extends ProcessorBase implements EntityProces
 
     // Gather all of the values for this item.
     $source_values = [];
-    foreach ($mappings as $mapping) {
+    foreach ($mappings as $delta => $mapping) {
       $target = $mapping['target'];
 
       foreach ($mapping['map'] as $column => $source) {
@@ -827,16 +827,16 @@ abstract class EntityProcessorBase extends ProcessorBase implements EntityProces
           continue;
         }
 
-        if (!isset($source_values[$target][$column])) {
-          $source_values[$target][$column] = [];
+        if (!isset($source_values[$delta][$column])) {
+          $source_values[$delta][$column] = [];
         }
 
         $value = $item->get($source);
         if (!is_array($value)) {
-          $source_values[$target][$column][] = $value;
+          $source_values[$delta][$column][] = $value;
         }
         else {
-          $source_values[$target][$column] = array_merge($source_values[$target][$column], $value);
+          $source_values[$delta][$column] = array_merge($source_values[$delta][$column], $value);
         }
       }
     }
@@ -856,8 +856,8 @@ abstract class EntityProcessorBase extends ProcessorBase implements EntityProces
     // Set target values.
     foreach ($mappings as $delta => $mapping) {
       $plugin = $this->feedType->getTargetPlugin($delta);
-      if (isset($field_values[$mapping['target']])) {
-        $plugin->setTarget($feed, $entity, $mapping['target'], $field_values[$mapping['target']]);
+      if (isset($field_values[$delta])) {
+        $plugin->setTarget($feed, $entity, $mapping['target'], $field_values[$delta]);
       }
     }
 

@@ -205,8 +205,13 @@ class FeedTest extends FeedsKernelTestBase {
   public function testPushImport() {
     $feed = $this->createFeed($this->feedType->id());
     $feed->pushImport(file_get_contents($this->resourcesPath() . '/rss/googlenewstz.rss2'));
-    // @todo pushImport() may be put a job on the queue in the future, so no
-    // further asserts are being made here.
+
+    // pushImport() is expected to put a job on a queue. Run all items from
+    // this queue.
+    $this->runCompleteQueue('feeds_feed_refresh:' . $this->feedType->id());
+
+    // Assert that 6 nodes have been created.
+    $this->assertNodeCount(6);
   }
 
   /**

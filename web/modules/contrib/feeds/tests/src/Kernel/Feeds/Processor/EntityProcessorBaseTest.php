@@ -99,7 +99,7 @@ class EntityProcessorBaseTest extends FeedsKernelTestBase {
     $this->feed->expects($this->any())
       ->method('getState')
       ->with(StateInterface::CLEAN)
-      ->will($this->returnValue(new CleanState()));
+      ->will($this->returnValue(new CleanState($this->feed->id())));
 
     $this->state = new State();
 
@@ -141,7 +141,7 @@ class EntityProcessorBaseTest extends FeedsKernelTestBase {
     $hash = $node->feeds_item->hash;
 
     // Clean.
-    $this->processor->clean($this->feed, $node, new CleanState());
+    $this->processor->clean($this->feed, $node, new CleanState($this->feed->id()));
 
     // Assert that the hash did not change.
     $this->assertEquals($hash, $node->feeds_item->hash);
@@ -165,7 +165,7 @@ class EntityProcessorBaseTest extends FeedsKernelTestBase {
     $this->assertTrue($node->isPublished());
 
     // Clean.
-    $this->processor->clean($this->feed, $node, new CleanState());
+    $this->processor->clean($this->feed, $node, new CleanState($this->feed->id()));
 
     // Reload node.
     $node = $this->container->get('entity_type.manager')->getStorage('node')->load($node->id());
@@ -193,7 +193,7 @@ class EntityProcessorBaseTest extends FeedsKernelTestBase {
     $this->assertNodeCount(1);
 
     // Clean.
-    $this->processor->clean($this->feed, $node, new CleanState());
+    $this->processor->clean($this->feed, $node, new CleanState($this->feed->id()));
 
     // Assert that the node is deleted.
     $this->assertNodeCount(0);
