@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fd47879a02ded942026d896034173cfe",
+    "content-hash": "03c70ad3b999105b6ee29a7d52f49167",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -439,9 +439,7 @@
             "version": "4.11.4",
             "dist": {
                 "type": "zip",
-                "url": "https://download.ckeditor.com/autoembed/releases/autoembed_4.11.4.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://download.ckeditor.com/autoembed/releases/autoembed_4.11.4.zip"
             },
             "type": "ckeditor-plugin"
         },
@@ -450,9 +448,7 @@
             "version": "4.11.4",
             "dist": {
                 "type": "zip",
-                "url": "https://download.ckeditor.com/autolink/releases/autolink_4.11.4.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://download.ckeditor.com/autolink/releases/autolink_4.11.4.zip"
             },
             "type": "ckeditor-plugin"
         },
@@ -461,9 +457,7 @@
             "version": "4.11.4",
             "dist": {
                 "type": "zip",
-                "url": "https://download.ckeditor.com/embed/releases/embed_4.11.4.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://download.ckeditor.com/embed/releases/embed_4.11.4.zip"
             },
             "type": "ckeditor-plugin"
         },
@@ -472,9 +466,7 @@
             "version": "4.11.4",
             "dist": {
                 "type": "zip",
-                "url": "https://download.ckeditor.com/embedbase/releases/embedbase_4.11.4.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://download.ckeditor.com/embedbase/releases/embedbase_4.11.4.zip"
             },
             "type": "ckeditor-plugin"
         },
@@ -483,9 +475,7 @@
             "version": "4.11.4",
             "dist": {
                 "type": "zip",
-                "url": "https://download.ckeditor.com/embedsemantic/releases/embedsemantic_4.11.4.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://download.ckeditor.com/embedsemantic/releases/embedsemantic_4.11.4.zip"
             },
             "type": "ckeditor-plugin"
         },
@@ -494,9 +484,7 @@
             "version": "4.11.4",
             "dist": {
                 "type": "zip",
-                "url": "https://download.ckeditor.com/filetools/releases/filetools_4.11.4.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://download.ckeditor.com/filetools/releases/filetools_4.11.4.zip"
             },
             "type": "ckeditor-plugin"
         },
@@ -505,9 +493,7 @@
             "version": "4.11.4",
             "dist": {
                 "type": "zip",
-                "url": "https://download.ckeditor.com/notification/releases/notification_4.11.4.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://download.ckeditor.com/notification/releases/notification_4.11.4.zip"
             },
             "type": "ckeditor-plugin"
         },
@@ -516,9 +502,7 @@
             "version": "4.11.4",
             "dist": {
                 "type": "zip",
-                "url": "https://download.ckeditor.com/notificationaggregator/releases/notificationaggregator_4.11.4.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://download.ckeditor.com/notificationaggregator/releases/notificationaggregator_4.11.4.zip"
             },
             "type": "ckeditor-plugin"
         },
@@ -527,9 +511,7 @@
             "version": "4.11.4",
             "dist": {
                 "type": "zip",
-                "url": "https://download.ckeditor.com/uploadimage/releases/uploadimage_4.11.4.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://download.ckeditor.com/uploadimage/releases/uploadimage_4.11.4.zip"
             },
             "type": "ckeditor-plugin"
         },
@@ -538,9 +520,7 @@
             "version": "4.11.4",
             "dist": {
                 "type": "zip",
-                "url": "https://download.ckeditor.com/uploadwidget/releases/uploadwidget_4.11.4.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://download.ckeditor.com/uploadwidget/releases/uploadwidget_4.11.4.zip"
             },
             "type": "ckeditor-plugin"
         },
@@ -549,9 +529,7 @@
             "version": "4.11.4",
             "dist": {
                 "type": "zip",
-                "url": "https://download.ckeditor.com/autogrow/releases/autogrow_4.11.4.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://download.ckeditor.com/autogrow/releases/autogrow_4.11.4.zip"
             },
             "type": "drupal-library"
         },
@@ -560,9 +538,7 @@
             "version": "1.17.2",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/w8tcha/CKEditor-CodeMirror-Plugin/archive/v1.17.2.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://github.com/w8tcha/CKEditor-CodeMirror-Plugin/archive/v1.17.2.zip"
             },
             "type": "drupal-library"
         },
@@ -571,9 +547,7 @@
             "version": "4.11.4",
             "dist": {
                 "type": "zip",
-                "url": "https://download.ckeditor.com/fakeobjects/releases/fakeobjects_4.11.4.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://download.ckeditor.com/fakeobjects/releases/fakeobjects_4.11.4.zip"
             },
             "type": "drupal-library"
         },
@@ -582,9 +556,7 @@
             "version": "4.11.4",
             "dist": {
                 "type": "zip",
-                "url": "https://download.ckeditor.com/image/releases/image_4.11.4.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://download.ckeditor.com/image/releases/image_4.11.4.zip"
             },
             "type": "drupal-library"
         },
@@ -593,9 +565,7 @@
             "version": "4.11.4",
             "dist": {
                 "type": "zip",
-                "url": "https://download.ckeditor.com/link/releases/link_4.11.4.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://download.ckeditor.com/link/releases/link_4.11.4.zip"
             },
             "type": "drupal-library"
         },
@@ -605,8 +575,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://download.ckeditor.com/templates/releases/templates_4.11.1.zip",
-                "reference": "master",
-                "shasum": null
+                "reference": "master"
             },
             "type": "drupal-library"
         },
@@ -615,9 +584,7 @@
             "version": "5.42.0",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/codemirror/CodeMirror/archive/5.42.0.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://github.com/codemirror/CodeMirror/archive/5.42.0.zip"
             },
             "type": "drupal-library"
         },
@@ -1738,9 +1705,7 @@
             "version": "3.2.0",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/desandro/imagesloaded/archive/v3.2.0.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://github.com/desandro/imagesloaded/archive/v3.2.0.zip"
             },
             "type": "drupal-library"
         },
@@ -6535,17 +6500,17 @@
         },
         {
             "name": "drupal/pathauto",
-            "version": "1.5.0",
+            "version": "1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/pathauto.git",
-                "reference": "8.x-1.5"
+                "reference": "8.x-1.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/pathauto-8.x-1.5.zip",
-                "reference": "8.x-1.5",
-                "shasum": "ae3c13f26d625e63da3b13dc64016888eca519c7"
+                "url": "https://ftp.drupal.org/files/projects/pathauto-8.x-1.6.zip",
+                "reference": "8.x-1.6",
+                "shasum": "eb976ae110d73c06fafb1b657adb967dd2cb8246"
             },
             "require": {
                 "drupal/core": "^8.6",
@@ -6558,8 +6523,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.5",
-                    "datestamp": "1570828084",
+                    "version": "8.x-1.6",
+                    "datestamp": "1575467285",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -9438,9 +9403,7 @@
             "version": "14.0.6",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/jackocnr/intl-tel-input/archive/v14.0.6.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://github.com/jackocnr/intl-tel-input/archive/v14.0.6.zip"
             },
             "type": "drupal-library"
         },
@@ -9692,9 +9655,7 @@
             "version": "4.0.4",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/RobinHerbots/Inputmask/archive/4.0.4.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://github.com/RobinHerbots/Inputmask/archive/4.0.4.zip"
             },
             "type": "drupal-library"
         },
@@ -9703,9 +9664,7 @@
             "version": "1.1.1",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/gjunge/rateit.js/archive/1.1.1.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://github.com/gjunge/rateit.js/archive/1.1.1.zip"
             },
             "type": "drupal-library"
         },
@@ -9714,9 +9673,7 @@
             "version": "4.0.5",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/select2/select2/archive/4.0.5.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://github.com/select2/select2/archive/4.0.5.zip"
             },
             "type": "drupal-library"
         },
@@ -9725,9 +9682,7 @@
             "version": "0.8.0",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/ractoon/jQuery-Text-Counter/archive/0.8.0.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://github.com/ractoon/jQuery-Text-Counter/archive/0.8.0.zip"
             },
             "type": "drupal-library"
         },
@@ -9736,9 +9691,7 @@
             "version": "1.11.14",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/jonthornton/jquery-timepicker/archive/1.11.14.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://github.com/jonthornton/jquery-timepicker/archive/1.11.14.zip"
             },
             "type": "drupal-library"
         },
@@ -10052,9 +10005,7 @@
             "version": "0.7.2",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/liabru/jquery-match-height/archive/0.7.2.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://github.com/liabru/jquery-match-height/archive/0.7.2.zip"
             },
             "type": "drupal-library"
         },
@@ -10166,9 +10117,7 @@
             "version": "3.0.6",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/metafizzy/isotope/archive/v3.0.6.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://github.com/metafizzy/isotope/archive/v3.0.6.zip"
             },
             "type": "drupal-library"
         },
@@ -10365,9 +10314,7 @@
             "version": "1.4.2",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/oriongunning/gridder/archive/v1.4.2.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://github.com/oriongunning/gridder/archive/v1.4.2.zip"
             },
             "type": "drupal-library"
         },
@@ -11380,9 +11327,7 @@
             "version": "1.15.0",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/algolia/places/archive/v1.15.0.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://github.com/algolia/places/archive/v1.15.0.zip"
             },
             "type": "drupal-library"
         },
@@ -11391,9 +11336,7 @@
             "version": "1.2.0",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/NigelOToole/progress-tracker/archive/v1.2.0.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://github.com/NigelOToole/progress-tracker/archive/v1.2.0.zip"
             },
             "type": "drupal-library"
         },
@@ -12221,9 +12164,7 @@
             "version": "2.3.0",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/szimek/signature_pad/archive/v2.3.0.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://github.com/szimek/signature_pad/archive/v2.3.0.zip"
             },
             "type": "drupal-library"
         },
@@ -12232,9 +12173,7 @@
             "version": "1.8.1",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/kenwheeler/slick/archive/v1.8.1.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://github.com/kenwheeler/slick/archive/v1.8.1.zip"
             },
             "type": "drupal-library"
         },
@@ -14622,6 +14561,17 @@
         {
             "name": "webflo/drupal-core-require-dev",
             "version": "8.7.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webflo/drupal-core-require-dev.git",
+                "reference": "0230f86e2813d8a44ffa3e497036d6990591c61f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webflo/drupal-core-require-dev/zipball/0230f86e2813d8a44ffa3e497036d6990591c61f",
+                "reference": "0230f86e2813d8a44ffa3e497036d6990591c61f",
+                "shasum": ""
+            },
             "require": {
                 "behat/mink": "1.7.x-dev",
                 "behat/mink-goutte-driver": "^1.2",
@@ -14835,9 +14785,7 @@
             "version": "2.7.1",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/woocommerce/FlexSlider/archive/2.7.1.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://github.com/woocommerce/FlexSlider/archive/2.7.1.zip"
             },
             "type": "drupal-library"
         },
