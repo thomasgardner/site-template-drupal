@@ -446,7 +446,7 @@
         "ckeditor.image": "^4.11",
         "ckeditor.link": "^4.11",
         "codemirror": "^5.42.0",
-        "composer/installers": "^1.2",
+        "composer/installers": "^1.7",
         "cweagans/composer-patches": "^1.6.5",
         "desandro/imagesloaded": "^3.2",
         "drupal-composer/drupal-scaffold": "^2.5",
@@ -463,7 +463,7 @@
         "drupal/ckeditor_media_embed": "^1.3",
         "drupal/ckeditor_templates": "1,1",
         "drupal/console": "^1.0.2",
-        "drupal/core": "^8.7",
+        "drupal/core-recommended": "^8.8",
         "drupal/ctools": "^3.0",
         "drupal/date_popup": "^1.0",
         "drupal/devel": "^2.0",
@@ -498,7 +498,7 @@
         "drupal/module_filter": "^3.1",
         "drupal/name": "1.x-dev",
         "drupal/paragraphs": "^1.5",
-        "drupal/pathauto": "^1.3",
+        "drupal/pathauto": "^1.6",
         "drupal/recaptcha": "^2.4",
         "drupal/redirect": "^1.3",
         "drupal/restui": "^1.16",
@@ -522,7 +522,6 @@
         "drupal/views_bulk_operations": "^2.4",
         "drupal/views_ical": "^1.0@alpha",
         "drupal/viewsreference": "^2.0",
-        "drupal/views_ical": "^1.0@alpha",
         "drupal/webform": "^5.1",
         "drupal/wysiwyg_template": "^2.1",
         "drupal/xmlsitemap": "^1.0",
@@ -545,7 +544,6 @@
         "slick": "^1.8.1",
         "topfloor/composer-cleanup-vcs-dirs": "^1.0",
         "vlucas/phpdotenv": "^2.4",
-        "webflo/drupal-core-require-dev": "^8.7",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3",
         "wikimedia/composer-merge-plugin": "^1.4",
@@ -590,17 +588,6 @@
         ]
     },
     "extra": {
-        "merge-plugin": {
-            "include": [
-                "core/composer.json",
-                "modules/custom/*/composer.json",
-                "themes/custom/*/composer.json"
-            ],
-            "recurse": true,
-            "replace": false,
-            "merge-extra": false,
-            "ignore-duplicates": true
-        },
         "installer-types": [
             "bower-asset",
             "ckeditor-plugin",

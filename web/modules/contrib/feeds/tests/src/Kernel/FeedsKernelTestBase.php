@@ -32,6 +32,7 @@ abstract class FeedsKernelTestBase extends EntityKernelTestBase {
     // Install database schemes.
     $this->installEntitySchema('feeds_feed');
     $this->installEntitySchema('feeds_subscription');
+    $this->installSchema('feeds', 'feeds_clean_list');
     $this->installSchema('node', 'node_access');
 
     // Create a content type.

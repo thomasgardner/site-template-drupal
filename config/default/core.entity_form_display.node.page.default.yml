@@ -13,13 +13,13 @@ dependencies:
     - field.field.node.page.field_section_title
     - field.field.node.page.field_sidebar_content
     - node.type.page
-    - workflows.workflow.editorial
   module:
     - content_moderation
     - field_group
     - metatag
     - paragraphs
     - path
+    - scheduler
     - text
 third_party_settings:
   field_group:
@@ -95,6 +95,7 @@ content:
       rows: 9
       summary_rows: 3
       placeholder: ''
+      show_summary: false
     third_party_settings: {  }
   created:
     type: datetime_timestamp
@@ -205,6 +206,12 @@ content:
     weight: 5
     region: content
     third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
@@ -235,6 +242,13 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 30
+    region: content
+    settings: {  }
     third_party_settings: {  }
   url_redirects:
     weight: 50
