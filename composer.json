@@ -454,14 +454,14 @@
         "drupal/addtocalendar": "^3.1",
         "drupal/advupdate": "^1.0",
         "drupal/asset_injector": "^2.4",
-        "drupal/auto_entitylabel": "^2.1",
+        "drupal/auto_entitylabel": "^3.0",
         "drupal/backup_migrate": "^4.1",
         "drupal/block_class": "^1.0",
         "drupal/calendar": "1.x-dev",
-        "drupal/captcha": "^1.0@beta",
+        "drupal/captcha": "^1.0",
         "drupal/captcha_pack": "^1.0",
         "drupal/ckeditor_media_embed": "^1.3",
-        "drupal/ckeditor_templates": "1,1",
+        "drupal/ckeditor_templates": "^1.1",
         "drupal/console": "^1.0.2",
         "drupal/core-recommended": "^8.8",
         "drupal/ctools": "^3.0",
@@ -513,6 +513,7 @@
         "drupal/tb_megamenu": "1.x-dev",
         "drupal/twig_field_value": "^1.1",
         "drupal/twig_link_attributes": "1.x-dev",
+        "drupal/twig_remove_html_comments": "^1.0@alpha",
         "drupal/twig_tweak": "^2.1",
         "drupal/twig_vardumper": "^1.1",
         "drupal/verf": "^1.0@beta",
@@ -616,6 +617,11 @@
             "initial": {
                 ".editorconfig": "../.editorconfig",
                 ".gitattributes": "../.gitattributes"
+            }
+        },
+        "patches": {
+            "drupal/sharethis" : {
+                "Fix: Error: [] operator not supported for strings" : "https://www.drupal.org/files/issues/Error-operator-not-supported-for-strings-2885710-12128018.patch"
             }
         }
     }

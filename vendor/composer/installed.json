@@ -172,7 +172,9 @@
         "version_normalized": "4.11.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/autoembed/releases/autoembed_4.11.4.zip"
+            "url": "https://download.ckeditor.com/autoembed/releases/autoembed_4.11.4.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "ckeditor-plugin",
         "installation-source": "dist"
@@ -183,7 +185,9 @@
         "version_normalized": "4.11.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/autolink/releases/autolink_4.11.4.zip"
+            "url": "https://download.ckeditor.com/autolink/releases/autolink_4.11.4.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "ckeditor-plugin",
         "installation-source": "dist"
@@ -194,7 +198,9 @@
         "version_normalized": "4.11.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/embed/releases/embed_4.11.4.zip"
+            "url": "https://download.ckeditor.com/embed/releases/embed_4.11.4.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "ckeditor-plugin",
         "installation-source": "dist"
@@ -205,7 +211,9 @@
         "version_normalized": "4.11.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/embedbase/releases/embedbase_4.11.4.zip"
+            "url": "https://download.ckeditor.com/embedbase/releases/embedbase_4.11.4.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "ckeditor-plugin",
         "installation-source": "dist"
@@ -216,7 +224,9 @@
         "version_normalized": "4.11.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/embedsemantic/releases/embedsemantic_4.11.4.zip"
+            "url": "https://download.ckeditor.com/embedsemantic/releases/embedsemantic_4.11.4.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "ckeditor-plugin",
         "installation-source": "dist"
@@ -227,7 +237,9 @@
         "version_normalized": "4.11.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/filetools/releases/filetools_4.11.4.zip"
+            "url": "https://download.ckeditor.com/filetools/releases/filetools_4.11.4.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "ckeditor-plugin",
         "installation-source": "dist"
@@ -238,7 +250,9 @@
         "version_normalized": "4.11.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/notification/releases/notification_4.11.4.zip"
+            "url": "https://download.ckeditor.com/notification/releases/notification_4.11.4.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "ckeditor-plugin",
         "installation-source": "dist"
@@ -249,7 +263,9 @@
         "version_normalized": "4.11.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/notificationaggregator/releases/notificationaggregator_4.11.4.zip"
+            "url": "https://download.ckeditor.com/notificationaggregator/releases/notificationaggregator_4.11.4.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "ckeditor-plugin",
         "installation-source": "dist"
@@ -260,7 +276,9 @@
         "version_normalized": "4.11.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/uploadimage/releases/uploadimage_4.11.4.zip"
+            "url": "https://download.ckeditor.com/uploadimage/releases/uploadimage_4.11.4.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "ckeditor-plugin",
         "installation-source": "dist"
@@ -271,7 +289,9 @@
         "version_normalized": "4.11.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/uploadwidget/releases/uploadwidget_4.11.4.zip"
+            "url": "https://download.ckeditor.com/uploadwidget/releases/uploadwidget_4.11.4.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "ckeditor-plugin",
         "installation-source": "dist"
@@ -282,7 +302,9 @@
         "version_normalized": "4.11.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/autogrow/releases/autogrow_4.11.4.zip"
+            "url": "https://download.ckeditor.com/autogrow/releases/autogrow_4.11.4.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -293,7 +315,9 @@
         "version_normalized": "1.17.2.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/w8tcha/CKEditor-CodeMirror-Plugin/archive/v1.17.2.zip"
+            "url": "https://github.com/w8tcha/CKEditor-CodeMirror-Plugin/archive/v1.17.2.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -304,7 +328,9 @@
         "version_normalized": "4.11.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/fakeobjects/releases/fakeobjects_4.11.4.zip"
+            "url": "https://download.ckeditor.com/fakeobjects/releases/fakeobjects_4.11.4.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -315,7 +341,9 @@
         "version_normalized": "4.11.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/image/releases/image_4.11.4.zip"
+            "url": "https://download.ckeditor.com/image/releases/image_4.11.4.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -326,7 +354,9 @@
         "version_normalized": "4.11.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/link/releases/link_4.11.4.zip"
+            "url": "https://download.ckeditor.com/link/releases/link_4.11.4.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -338,7 +368,8 @@
         "dist": {
             "type": "zip",
             "url": "https://download.ckeditor.com/templates/releases/templates_4.11.1.zip",
-            "reference": "master"
+            "reference": "master",
+            "shasum": null
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -349,7 +380,9 @@
         "version_normalized": "5.42.0.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/codemirror/CodeMirror/archive/5.42.0.zip"
+            "url": "https://github.com/codemirror/CodeMirror/archive/5.42.0.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -1499,7 +1532,9 @@
         "version_normalized": "3.2.0.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/desandro/imagesloaded/archive/v3.2.0.zip"
+            "url": "https://github.com/desandro/imagesloaded/archive/v3.2.0.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -2435,18 +2470,18 @@
     },
     {
         "name": "drupal/auto_entitylabel",
-        "version": "2.1.0-beta1",
-        "version_normalized": "2.1.0.0-beta1",
+        "version": "3.0.0-beta2",
+        "version_normalized": "3.0.0.0-beta2",
         "source": {
             "type": "git",
             "url": "https://git.drupalcode.org/project/auto_entitylabel.git",
-            "reference": "8.x-2.1-beta1"
+            "reference": "8.x-3.0-beta2"
         },
         "dist": {
             "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/auto_entitylabel-8.x-2.1-beta1.zip",
-            "reference": "8.x-2.1-beta1",
-            "shasum": "94a77f55896744075ff21bc2bdfab91308a69a27"
+            "url": "https://ftp.drupal.org/files/projects/auto_entitylabel-8.x-3.0-beta2.zip",
+            "reference": "8.x-3.0-beta2",
+            "shasum": "b1fcf53f57147bbe445d5ff97e42c5c1a2a2718a"
         },
         "require": {
             "drupal/core": "~8.0"
@@ -2454,11 +2489,11 @@
         "type": "drupal-module",
         "extra": {
             "branch-alias": {
-                "dev-2.x": "2.x-dev"
+                "dev-3.x": "3.x-dev"
             },
             "drupal": {
-                "version": "8.x-2.1-beta1",
-                "datestamp": "1510484584",
+                "version": "8.x-3.0-beta2",
+                "datestamp": "1570745586",
                 "security-coverage": {
                     "status": "not-covered",
                     "message": "Beta releases are not covered by Drupal security advisories."
@@ -2795,18 +2830,18 @@
     },
     {
         "name": "drupal/captcha",
-        "version": "1.0.0-beta4",
-        "version_normalized": "1.0.0.0-beta4",
+        "version": "1.0.0",
+        "version_normalized": "1.0.0.0",
         "source": {
             "type": "git",
             "url": "https://git.drupalcode.org/project/captcha.git",
-            "reference": "8.x-1.0-beta4"
+            "reference": "8.x-1.0"
         },
         "dist": {
             "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/captcha-8.x-1.0-beta4.zip",
-            "reference": "8.x-1.0-beta4",
-            "shasum": "08ecd947204852302704b0bd6ec73a6f6a871854"
+            "url": "https://ftp.drupal.org/files/projects/captcha-8.x-1.0.zip",
+            "reference": "8.x-1.0",
+            "shasum": "1707c67b97a17d701a194e6da86ad9b21631915b"
         },
         "require": {
             "drupal/core": "*"
@@ -2817,11 +2852,11 @@
                 "dev-1.x": "1.x-dev"
             },
             "drupal": {
-                "version": "8.x-1.0-beta4",
-                "datestamp": "1571689089",
+                "version": "8.x-1.0",
+                "datestamp": "1582292983",
                 "security-coverage": {
-                    "status": "not-covered",
-                    "message": "Beta releases are not covered by Drupal security advisories."
+                    "status": "covered",
+                    "message": "Covered by Drupal's security advisory policy"
                 }
             }
         },
@@ -2974,18 +3009,18 @@
     },
     {
         "name": "drupal/ckeditor_templates",
-        "version": "1.0.0",
-        "version_normalized": "1.0.0.0",
+        "version": "1.1.0",
+        "version_normalized": "1.1.0.0",
         "source": {
             "type": "git",
             "url": "https://git.drupalcode.org/project/ckeditor_templates.git",
-            "reference": "8.x-1.0"
+            "reference": "8.x-1.1"
         },
         "dist": {
             "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/ckeditor_templates-8.x-1.0.zip",
-            "reference": "8.x-1.0",
-            "shasum": "706be94033bb2babf6fd0fb499c6aa326914b7ff"
+            "url": "https://ftp.drupal.org/files/projects/ckeditor_templates-8.x-1.1.zip",
+            "reference": "8.x-1.1",
+            "shasum": "f8c793e34a5d6aea769fbc0204e818509a486a94"
         },
         "require": {
             "drupal/core": "*"
@@ -2996,7 +3031,7 @@
                 "dev-1.x": "1.x-dev"
             },
             "drupal": {
-                "version": "8.x-1.0",
+                "version": "8.x-1.1",
                 "datestamp": "1552809780",
                 "security-coverage": {
                     "status": "covered",
@@ -3522,17 +3557,6 @@
         "name": "drupal/core-recommended",
         "version": "8.8.2",
         "version_normalized": "8.8.2.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/drupal/core-recommended.git",
-            "reference": "67ed5b68da2784ead5a55330c6c0fde6bb3cb9f3"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/drupal/core-recommended/zipball/67ed5b68da2784ead5a55330c6c0fde6bb3cb9f3",
-            "reference": "67ed5b68da2784ead5a55330c6c0fde6bb3cb9f3",
-            "shasum": ""
-        },
         "require": {
             "asm89/stack-cors": "1.2.0",
             "composer/installers": "v1.7.0",
@@ -6797,6 +6821,9 @@
                     "status": "not-covered",
                     "message": "Beta releases are not covered by Drupal security advisories."
                 }
+            },
+            "patches_applied": {
+                "Fix: Error: [] operator not supported for strings": "https://www.drupal.org/files/issues/Error-operator-not-supported-for-strings-2885710-12128018.patch"
             }
         },
         "installation-source": "dist",
@@ -7284,6 +7311,65 @@
         "homepage": "https://www.drupal.org/project/twig_link_attributes",
         "support": {
             "source": "https://git.drupalcode.org/project/twig_link_attributes"
+        }
+    },
+    {
+        "name": "drupal/twig_remove_html_comments",
+        "version": "1.0.0-alpha2",
+        "version_normalized": "1.0.0.0-alpha2",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupalcode.org/project/twig_remove_html_comments.git",
+            "reference": "8.x-1.0-alpha2"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://ftp.drupal.org/files/projects/twig_remove_html_comments-8.x-1.0-alpha2.zip",
+            "reference": "8.x-1.0-alpha2",
+            "shasum": "5aecbd8c1cf1386c4e621df2480cbb5bf387dba0"
+        },
+        "require": {
+            "drupal/core": "^8.7"
+        },
+        "conflict": {
+            "drupal/drupal": "*"
+        },
+        "type": "drupal-module",
+        "extra": {
+            "branch-alias": {
+                "dev-1.x": "1.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-1.0-alpha2",
+                "datestamp": "1573052885",
+                "security-coverage": {
+                    "status": "not-covered",
+                    "message": "Project has not opted into security advisory coverage!"
+                }
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "Orlando Thöny",
+                "homepage": "https://www.drupal.org/user/3558789",
+                "email": "orlando.thoeny@gmail.com",
+                "role": "Maintainer"
+            }
+        ],
+        "description": "Provides a Twig filter that removes HTML comments.",
+        "homepage": "https://drupal.org/project/twig_remove_html_comments",
+        "keywords": [
+            "Drupal",
+            "Remove HTML comments",
+            "Twig"
+        ],
+        "support": {
+            "source": "https://git.drupalcode.org/project/twig_remove_html_comments"
         }
     },
     {
@@ -9059,7 +9145,9 @@
         "version_normalized": "14.0.6.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/jackocnr/intl-tel-input/archive/v14.0.6.zip"
+            "url": "https://github.com/jackocnr/intl-tel-input/archive/v14.0.6.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -9204,7 +9292,9 @@
         "version_normalized": "4.0.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/RobinHerbots/Inputmask/archive/4.0.4.zip"
+            "url": "https://github.com/RobinHerbots/Inputmask/archive/4.0.4.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -9215,7 +9305,9 @@
         "version_normalized": "1.1.1.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/gjunge/rateit.js/archive/1.1.1.zip"
+            "url": "https://github.com/gjunge/rateit.js/archive/1.1.1.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -9226,7 +9318,9 @@
         "version_normalized": "4.0.5.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/select2/select2/archive/4.0.5.zip"
+            "url": "https://github.com/select2/select2/archive/4.0.5.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -9237,7 +9331,9 @@
         "version_normalized": "0.8.0.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/ractoon/jQuery-Text-Counter/archive/0.8.0.zip"
+            "url": "https://github.com/ractoon/jQuery-Text-Counter/archive/0.8.0.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -9248,7 +9344,9 @@
         "version_normalized": "1.11.14.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/jonthornton/jquery-timepicker/archive/1.11.14.zip"
+            "url": "https://github.com/jonthornton/jquery-timepicker/archive/1.11.14.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -9504,7 +9602,9 @@
         "version_normalized": "0.7.2.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/liabru/jquery-match-height/archive/0.7.2.zip"
+            "url": "https://github.com/liabru/jquery-match-height/archive/0.7.2.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -9625,7 +9725,9 @@
         "version_normalized": "3.0.6.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/metafizzy/isotope/archive/v3.0.6.zip"
+            "url": "https://github.com/metafizzy/isotope/archive/v3.0.6.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -9734,7 +9836,9 @@
         "version_normalized": "1.4.2.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/oriongunning/gridder/archive/v1.4.2.zip"
+            "url": "https://github.com/oriongunning/gridder/archive/v1.4.2.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -10051,7 +10155,9 @@
         "version_normalized": "1.15.0.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/algolia/places/archive/v1.15.0.zip"
+            "url": "https://github.com/algolia/places/archive/v1.15.0.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -10062,7 +10168,9 @@
         "version_normalized": "1.2.0.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/NigelOToole/progress-tracker/archive/v1.2.0.zip"
+            "url": "https://github.com/NigelOToole/progress-tracker/archive/v1.2.0.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -10343,7 +10451,9 @@
         "version_normalized": "2.3.0.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/szimek/signature_pad/archive/v2.3.0.zip"
+            "url": "https://github.com/szimek/signature_pad/archive/v2.3.0.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -10354,7 +10464,9 @@
         "version_normalized": "1.8.1.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/kenwheeler/slick/archive/v1.8.1.zip"
+            "url": "https://github.com/kenwheeler/slick/archive/v1.8.1.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -12733,7 +12845,9 @@
         "version_normalized": "2.7.1.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/woocommerce/FlexSlider/archive/2.7.1.zip"
+            "url": "https://github.com/woocommerce/FlexSlider/archive/2.7.1.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "drupal-library",
         "installation-source": "dist"
