@@ -618,6 +618,11 @@
                 ".editorconfig": "../.editorconfig",
                 ".gitattributes": "../.gitattributes"
             }
+        },
+        "patches": {
+            "drupal/sharethis" : {
+                "Fix: Error: [] operator not supported for strings" : "https://www.drupal.org/files/issues/Error-operator-not-supported-for-strings-2885710-12128018.patch"
+            }
         }
     }
 }

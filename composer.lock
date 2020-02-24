@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "63077522cab0a01b36cb6d0c764db214",
+    "content-hash": "c32c270d2e4eea3612fa9b7487a37135",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -6602,6 +6602,9 @@
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
                     }
+                },
+                "patches_applied": {
+                    "Fix: Error: [] operator not supported for strings": "https://www.drupal.org/files/issues/Error-operator-not-supported-for-strings-2885710-12128018.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
