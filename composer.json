@@ -513,6 +513,7 @@
         "drupal/tb_megamenu": "1.x-dev",
         "drupal/twig_field_value": "^1.1",
         "drupal/twig_link_attributes": "1.x-dev",
+        "drupal/twig_remove_html_comments": "^1.0@alpha",
         "drupal/twig_tweak": "^2.1",
         "drupal/twig_vardumper": "^1.1",
         "drupal/verf": "^1.0@beta",
