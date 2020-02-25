@@ -49,7 +49,8 @@
   transition: ease all 0.4s;
 }
 
-.flexslider .controls .flex-prev:active, .flexslider .controls .flex-prev:hover,
+.flexslider .controls .flex-prev:focus, .flexslider .controls .flex-prev:active, .flexslider .controls .flex-prev:hover,
+.flexslider .controls .flex-next:focus,
 .flexslider .controls .flex-next:active,
 .flexslider .controls .flex-next:hover {
   text-decoration: none;
@@ -161,7 +162,7 @@
   position: relative;
 }
 
-#site-branding .utility-nav-block ul li:hover > ul {
+#site-branding .utility-nav-block ul li:focus > ul, #site-branding .utility-nav-block ul li:hover > ul {
   float: none;
   display: block;
   position: absolute;
@@ -641,7 +642,7 @@
   background: #eeeeee;
 }
 
-.sidebar-menu-block .menu .menu__item .fa:hover:before, .sidebar-menu-block .menu .menu__item .fa:active:before {
+.sidebar-menu-block .menu .menu__item .fa:focus:before, .sidebar-menu-block .menu .menu__item .fa:hover:before, .sidebar-menu-block .menu .menu__item .fa:active:before {
   text-decoration: underline;
 }
 
@@ -841,7 +842,7 @@
           flex-direction: column;
 }
 
-.paragraph--type--video-tab-carousel .video-carousel .tab-title-wrap .tab-title:hover {
+.paragraph--type--video-tab-carousel .video-carousel .tab-title-wrap .tab-title:focus, .paragraph--type--video-tab-carousel .video-carousel .tab-title-wrap .tab-title:hover {
   cursor: pointer;
 }
 
