@@ -1,9 +1,9 @@
-uuid: d1644223-312b-4ddc-bd38-58e2ef6ef522
+uuid: b8d77fc2-3ba5-4365-831d-f36cef4344be
 langcode: en
-status: false
+status: true
 dependencies:
   config:
-    - system.menu.main
+    - system.menu.sidebar-menu
   module:
     - block_class
     - ctools
@@ -14,28 +14,23 @@ dependencies:
 third_party_settings:
   block_class:
     classes: sidebar-menu-block
-id: kwall_subtheme_example_mainnavigation_2
+id: sidebarmenu
 theme: kwall_subtheme_example
 region: sidebar_left
-weight: -20
+weight: -19
 provider: null
-plugin: 'menu_block:main'
+plugin: 'menu_block:sidebar-menu'
 settings:
-  id: 'menu_block:main'
-  label: 'Main navigation'
+  id: 'menu_block:sidebar-menu'
+  label: 'Sidebar menu'
   provider: menu_block
   label_display: '0'
   level: 1
   depth: 0
-  expand: 1
-  parent: 'main:'
+  expand: 0
+  parent: 'sidebar-menu:'
   suggestion: sidebar_menu
 visibility:
-  request_path:
-    id: request_path
-    pages: "<front>\r\n/node/11\r\n/news\r\n/events\r\n/events/month\r\n/events/month/*\r\n/events/year\r\n/events/year/*\r\n/events/week\r\n/events/week/*\r\n/search\r\n/news/*\r\n/user\r\n/user/*\r\n/users\r\n/users/*"
-    negate: true
-    context_mapping: {  }
   'entity_bundle:node':
     id: 'entity_bundle:node'
     bundles:
@@ -43,3 +38,8 @@ visibility:
     negate: true
     context_mapping:
       node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/node/11\r\n/news\r\n/events\r\n/events/month\r\n/events/month/*\r\n/events/year\r\n/events/year/*\r\n/events/week\r\n/events/week/*\r\n/search\r\n/news/*\r\n/user\r\n/user/*\r\n/users\r\n/users/*"
+    negate: true
+    context_mapping: {  }
