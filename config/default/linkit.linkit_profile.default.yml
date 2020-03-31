@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   module:
+    - file
     - node
 _core:
   default_config_hash: Tt8DtxZ3Nooo0PoWPpJvszA3R_5d8MmpUW7LM_R-BzY
@@ -16,8 +17,32 @@ matchers:
     weight: 0
     settings:
       metadata: 'by [node:author] | [node:created:medium]'
-      bundles: {  }
-      group_by_bundle: false
+      bundles:
+        article: article
+        course: course
+        event: event
+        location: location
+        page: page
+        person: person
+        program: program
+        webform: webform
+      group_by_bundle: true
       include_unpublished: false
       substitution_type: canonical
+      limit: 100
+  6e92a80c-1ec4-4961-9bd3-019010ee2832:
+    uuid: 6e92a80c-1ec4-4961-9bd3-019010ee2832
+    id: 'entity:file'
+    weight: 0
+    settings:
+      file_extensions: 'pdf doc docx xls xlsx txt'
+      file_status: 1
+      images:
+        show_dimensions: false
+        show_thumbnail: false
+        thumbnail_image_style: null
+      substitution_type: file
+      metadata: ''
+      bundles: null
+      group_by_bundle: null
       limit: 100

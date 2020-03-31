@@ -9,7 +9,7 @@ dependencies:
 id: kwall_subtheme_example_sidebarcontent
 theme: kwall_subtheme_example
 region: sidebar_left
-weight: 0
+weight: -18
 provider: null
 plugin: 'entity_field:node:field_sidebar_content'
 settings:
