@@ -499,7 +499,7 @@
         "drupal/masquerade": "^2.0",
         "drupal/media_bulk_upload": "^1.0",
         "drupal/media_entity_file_replace": "^1.0",
-        "drupal/menu_block": "^1.5",
+        "drupal/menu_block": "1.x-dev",
         "drupal/menu_link_attributes": "^1.0",
         "drupal/metatag": "^1.7",
         "drupal/module_filter": "^3.1",
@@ -628,6 +628,24 @@
             }
         },
         "patches": {
+            "drupal/core": {
+                "Incorrect filter group OR behavior, LEFT JOIN changed to INNER JOIN": "https://www.drupal.org/files/issues/views-incorrect_filter_group_or_join-1766338-84.patch",
+                "Migrations fail due to missing dependency when dependency is clearly not missing.": "https://www.drupal.org/files/issues/2019-02-18/2797505-13.patch",
+                "Node revision routes don't convert {node} param": "https://www.drupal.org/files/issues/2019-04-04/2730631_85_0.patch",
+                "There is no way to delete or update file entities of other users incl. user/1": "https://www.drupal.org/files/issues/2019-12-12/2949017-59.patch",
+                "Allow media items to be edited in a modal when using the field widget": "https://www.drupal.org/files/issues/2020-02-21/2985168-31.patch",
+                "Content Edit page jumps when media library item is placed": "https://www.drupal.org/files/issues/2019-11-04/3073023-4.patch",
+                "Default theme favicon for administration theme": "https://www.drupal.org/files/issues/2019-12-14/default-theme-favicon-for-administration-theme-2981434-7.patch",
+                "Allow to alter aggregator items before rendering": "https://www.drupal.org/files/issues/2020-01-16/hook_aggregator_item_variables_alter-3106825-2.patch",
+                "Allow symfony/event-dispatcher 4+ to be installed in Drupal 8": "https://www.drupal.org/files/issues/2019-09-17/2876675-48.Fix-symfony-version-requirements-for-symfonyeventdispatcher.patch"
+            },
+            "drupal/address": {
+                "The locality.name data is missed in PlainFormater": "https://www.drupal.org/files/issues/locality-name-data-missed-plainformater-2881391-1.patch"
+            },
+            "drupal/addtocalendar": {
+                "Field settings Select Style always shows Blue skin if we want to use No Styling": "https://www.drupal.org/files/issues/2018-09-27/field-settings-select-style-always-shows-blue-3002766-2.patch",
+                "Allow to alter the values in the widget by contrib/custom modules": "https://www.drupal.org/files/issues/2018-09-27/addtocalendar-allow-to-alter-field-in-widget-3002818-4.patch"
+            },
             "drupal/group": {
                 "Reapply patch from https://www.drupal.org/files/issues/2797793-20.patch manually without db update.": "patches/group-groupmenu-patch-manual-rc5-reroll.patch",
                 "Custom patch to address Group errors from menus that were created without being assigned to Groups.": "patches/group-fatal-errors.patch",
@@ -640,11 +658,27 @@
                 "Custom patch to address Group Menu errors from menus that were created without being assigned to Groups.": "patches/groupmenu-fatal-errors.patch",
                 "Group Menu Block: Active Trail": "patches/groupmenu_activetrail.patch"
             },
+            "drupal/menu_block": {
+                "Add configuration options for dynamic block titles": "https://www.drupal.org/files/issues/2019-10-06/2809699-87.menu_block-label_configuration.patch",
+                "Region showing up, even when there are no sub menu items": "https://www.drupal.org/files/issues/2018-08-30/menu_block-empty_region-2974691-6.patch",
+                "[PP-1] Add links to menu parent block title": "https://www.drupal.org/files/issues/2019-10-06/2950943-15.menu_block-title_as_link.patch",
+                "Ability show items on same level if active menu level don't have children": "https://www.drupal.org/files/issues/2019-07-02/3037301-fallback-to-parent-2.patch"
+            },
+            "drupal/masquerade": {
+                "All users, also from not allowed user roles, showing up in auto complete": "https://www.drupal.org/files/issues/2019-06-16/masquerade_filter-roles_3003796_5.patch"
+            },
+            "drupal/media_bulk_upload": {
+                "Undefined index: file_extensions in...": "https://www.drupal.org/files/issues/2019-05-17/3033271-4.media_bulk_upload.Undefined-index-fileextensions-in-DrupalmediabulkuploadMediaTypeManagergetTargetFieldExtensions.patch"
+            },
+            "drupal/media_library_edit": {
+                "Open in modal": "https://www.drupal.org/files/issues/2020-03-05/3034205-27.patch"
+            },
             "drupal/sharethis" : {
                 "Fix: Error: [] operator not supported for strings" : "https://www.drupal.org/files/issues/Error-operator-not-supported-for-strings-2885710-12128018.patch"
             },
             "drupal/paragraphs" : {
-                "Integrity constraint violation: 1048 Column 'langcode' cannot be null" : "https://www.drupal.org/files/issues/2019-08-10/paragraphs-set_langcode_widgets-290139_updated.patch"
+                "Integrity constraint violation: 1048 Column 'langcode' cannot be null" : "https://www.drupal.org/files/issues/2019-08-10/paragraphs-set_langcode_widgets-290139_updated.patch",
+                "Library items are not displayed when field_layout module is enabled": "https://www.drupal.org/files/issues/2020-02-04/library-items-are-not-displayed-when-field_layout-module-is-enabled-2949978-8.patch"
             }
         }
     }

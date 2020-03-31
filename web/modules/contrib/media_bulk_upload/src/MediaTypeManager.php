@@ -98,8 +98,8 @@ class MediaTypeManager implements MediaTypeManagerInterface {
    * {@inheritdoc}
    */
   public function getTargetFieldExtensions(array $targetFieldSettings) {
-    $extensions = explode(' ', $targetFieldSettings['file_extensions']);
-    return array_map('trim', $extensions);
+    $extensions = isset($targetFieldSettings['file_extensions']) ? $targetFieldSettings['file_extensions'] : '';
+    return array_map('trim', explode(' ', $extensions));
   }
 
   /**

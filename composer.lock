@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "585aa6e700ffce8b998d55544bec23ce",
+    "content-hash": "af71242a3b79719be2559e69a0c284e1",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2120,11 +2120,14 @@
                 },
                 "drupal": {
                     "version": "8.x-1.7",
-                    "datestamp": "1559642884",
+                    "datestamp": "1582913039",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
+                },
+                "patches_applied": {
+                    "The locality.name data is missed in PlainFormater": "https://www.drupal.org/files/issues/locality-name-data-missed-plainformater-2881391-1.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -2192,6 +2195,10 @@
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
+                },
+                "patches_applied": {
+                    "Field settings Select Style always shows Blue skin if we want to use No Styling": "https://www.drupal.org/files/issues/2018-09-27/field-settings-select-style-always-shows-blue-3002766-2.patch",
+                    "Allow to alter the values in the widget by contrib/custom modules": "https://www.drupal.org/files/issues/2018-09-27/addtocalendar-allow-to-alter-field-in-widget-3002818-4.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -3435,6 +3442,17 @@
                         "[web-root]/profiles/README.txt": "assets/scaffold/files/profiles.README.txt",
                         "[web-root]/themes/README.txt": "assets/scaffold/files/themes.README.txt"
                     }
+                },
+                "patches_applied": {
+                    "Incorrect filter group OR behavior, LEFT JOIN changed to INNER JOIN": "https://www.drupal.org/files/issues/views-incorrect_filter_group_or_join-1766338-84.patch",
+                    "Migrations fail due to missing dependency when dependency is clearly not missing.": "https://www.drupal.org/files/issues/2019-02-18/2797505-13.patch",
+                    "Node revision routes don't convert {node} param": "https://www.drupal.org/files/issues/2019-04-04/2730631_85_0.patch",
+                    "There is no way to delete or update file entities of other users incl. user/1": "https://www.drupal.org/files/issues/2019-12-12/2949017-59.patch",
+                    "Allow media items to be edited in a modal when using the field widget": "https://www.drupal.org/files/issues/2020-02-21/2985168-31.patch",
+                    "Content Edit page jumps when media library item is placed": "https://www.drupal.org/files/issues/2019-11-04/3073023-4.patch",
+                    "Default theme favicon for administration theme": "https://www.drupal.org/files/issues/2019-12-14/default-theme-favicon-for-administration-theme-2981434-7.patch",
+                    "Allow to alter aggregator items before rendering": "https://www.drupal.org/files/issues/2020-01-16/hook_aggregator_item_variables_alter-3106825-2.patch",
+                    "Allow symfony/event-dispatcher 4+ to be installed in Drupal 8": "https://www.drupal.org/files/issues/2019-09-17/2876675-48.Fix-symfony-version-requirements-for-symfonyeventdispatcher.patch"
                 }
             },
             "autoload": {
@@ -5834,6 +5852,9 @@
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
                     }
+                },
+                "patches_applied": {
+                    "All users, also from not allowed user roles, showing up in auto complete": "https://www.drupal.org/files/issues/2019-06-16/masquerade_filter-roles_3003796_5.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -5909,6 +5930,9 @@
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
                     }
+                },
+                "patches_applied": {
+                    "Undefined index: file_extensions in...": "https://www.drupal.org/files/issues/2019-05-17/3033271-4.media_bulk_upload.Undefined-index-fileextensions-in-DrupalmediabulkuploadMediaTypeManagergetTargetFieldExtensions.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -5985,17 +6009,11 @@
         },
         {
             "name": "drupal/menu_block",
-            "version": "1.5.0",
+            "version": "dev-1.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/menu_block.git",
-                "reference": "8.x-1.5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/menu_block-8.x-1.5.zip",
-                "reference": "8.x-1.5",
-                "shasum": "b3ac3e23e426f702974d88cc8bf93bf2a0b6236b"
+                "reference": "95dbaf64bfa1ed6f63431caa1d9f3ecf0df731e4"
             },
             "require": {
                 "drupal/core": "*"
@@ -6006,12 +6024,18 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.5",
-                    "datestamp": "1525200184",
+                    "version": "8.x-1.5+9-dev",
+                    "datestamp": "1583794180",
                     "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
+                },
+                "patches_applied": {
+                    "Add configuration options for dynamic block titles": "https://www.drupal.org/files/issues/2019-10-06/2809699-87.menu_block-label_configuration.patch",
+                    "Region showing up, even when there are no sub menu items": "https://www.drupal.org/files/issues/2018-08-30/menu_block-empty_region-2974691-6.patch",
+                    "[PP-1] Add links to menu parent block title": "https://www.drupal.org/files/issues/2019-10-06/2950943-15.menu_block-title_as_link.patch",
+                    "Ability show items on same level if active menu level don't have children": "https://www.drupal.org/files/issues/2019-07-02/3037301-fallback-to-parent-2.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -6328,7 +6352,8 @@
                     }
                 },
                 "patches_applied": {
-                    "Integrity constraint violation: 1048 Column 'langcode' cannot be null": "https://www.drupal.org/files/issues/2019-08-10/paragraphs-set_langcode_widgets-290139_updated.patch"
+                    "Integrity constraint violation: 1048 Column 'langcode' cannot be null": "https://www.drupal.org/files/issues/2019-08-10/paragraphs-set_langcode_widgets-290139_updated.patch",
+                    "Library items are not displayed when field_layout module is enabled": "https://www.drupal.org/files/issues/2020-02-04/library-items-are-not-displayed-when-field_layout-module-is-enabled-2949978-8.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -13111,6 +13136,7 @@
         "drupal/group": 5,
         "drupal/groupmenu": 15,
         "drupal/inline_entity_form": 5,
+        "drupal/menu_block": 20,
         "drupal/name": 20,
         "drupal/sharethis": 10,
         "drupal/tb_megamenu": 20,
