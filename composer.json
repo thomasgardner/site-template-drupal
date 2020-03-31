@@ -470,6 +470,7 @@
         "drupal/devel": "^2.0",
         "drupal/devel_entity_updates": "^1.0",
         "drupal/dropzonejs": "^2.0",
+        "drupal/editor_advanced_link": "^1.6",
         "drupal/entity": "^1.0-beta4",
         "drupal/entity_block": "^1.0",
         "drupal/entity_browser": "^2.0",
