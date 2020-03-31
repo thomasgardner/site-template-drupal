@@ -517,6 +517,7 @@
         "drupal/sharethis": "^2.0@beta",
         "drupal/smart_ip": "^3.6",
         "drupal/smtp": "^1.0",
+        "drupal/switch_page_theme": "^1.0",
         "drupal/tb_megamenu": "1.x-dev",
         "drupal/twig_field_value": "^1.1",
         "drupal/twig_link_attributes": "1.x-dev",
