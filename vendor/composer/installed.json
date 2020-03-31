@@ -172,9 +172,7 @@
         "version_normalized": "4.11.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/autoembed/releases/autoembed_4.11.4.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://download.ckeditor.com/autoembed/releases/autoembed_4.11.4.zip"
         },
         "type": "ckeditor-plugin",
         "installation-source": "dist"
@@ -185,9 +183,7 @@
         "version_normalized": "4.11.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/autolink/releases/autolink_4.11.4.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://download.ckeditor.com/autolink/releases/autolink_4.11.4.zip"
         },
         "type": "ckeditor-plugin",
         "installation-source": "dist"
@@ -198,9 +194,7 @@
         "version_normalized": "4.11.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/embed/releases/embed_4.11.4.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://download.ckeditor.com/embed/releases/embed_4.11.4.zip"
         },
         "type": "ckeditor-plugin",
         "installation-source": "dist"
@@ -211,9 +205,7 @@
         "version_normalized": "4.11.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/embedbase/releases/embedbase_4.11.4.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://download.ckeditor.com/embedbase/releases/embedbase_4.11.4.zip"
         },
         "type": "ckeditor-plugin",
         "installation-source": "dist"
@@ -224,9 +216,7 @@
         "version_normalized": "4.11.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/embedsemantic/releases/embedsemantic_4.11.4.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://download.ckeditor.com/embedsemantic/releases/embedsemantic_4.11.4.zip"
         },
         "type": "ckeditor-plugin",
         "installation-source": "dist"
@@ -237,9 +227,7 @@
         "version_normalized": "4.11.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/filetools/releases/filetools_4.11.4.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://download.ckeditor.com/filetools/releases/filetools_4.11.4.zip"
         },
         "type": "ckeditor-plugin",
         "installation-source": "dist"
@@ -250,9 +238,7 @@
         "version_normalized": "4.11.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/notification/releases/notification_4.11.4.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://download.ckeditor.com/notification/releases/notification_4.11.4.zip"
         },
         "type": "ckeditor-plugin",
         "installation-source": "dist"
@@ -263,9 +249,7 @@
         "version_normalized": "4.11.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/notificationaggregator/releases/notificationaggregator_4.11.4.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://download.ckeditor.com/notificationaggregator/releases/notificationaggregator_4.11.4.zip"
         },
         "type": "ckeditor-plugin",
         "installation-source": "dist"
@@ -276,9 +260,7 @@
         "version_normalized": "4.11.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/uploadimage/releases/uploadimage_4.11.4.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://download.ckeditor.com/uploadimage/releases/uploadimage_4.11.4.zip"
         },
         "type": "ckeditor-plugin",
         "installation-source": "dist"
@@ -289,9 +271,7 @@
         "version_normalized": "4.11.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/uploadwidget/releases/uploadwidget_4.11.4.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://download.ckeditor.com/uploadwidget/releases/uploadwidget_4.11.4.zip"
         },
         "type": "ckeditor-plugin",
         "installation-source": "dist"
@@ -302,9 +282,7 @@
         "version_normalized": "4.11.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/autogrow/releases/autogrow_4.11.4.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://download.ckeditor.com/autogrow/releases/autogrow_4.11.4.zip"
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -315,9 +293,7 @@
         "version_normalized": "1.17.2.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/w8tcha/CKEditor-CodeMirror-Plugin/archive/v1.17.2.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://github.com/w8tcha/CKEditor-CodeMirror-Plugin/archive/v1.17.2.zip"
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -328,9 +304,7 @@
         "version_normalized": "4.11.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/fakeobjects/releases/fakeobjects_4.11.4.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://download.ckeditor.com/fakeobjects/releases/fakeobjects_4.11.4.zip"
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -341,9 +315,7 @@
         "version_normalized": "4.11.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/image/releases/image_4.11.4.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://download.ckeditor.com/image/releases/image_4.11.4.zip"
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -354,9 +326,7 @@
         "version_normalized": "4.11.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/link/releases/link_4.11.4.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://download.ckeditor.com/link/releases/link_4.11.4.zip"
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -368,8 +338,7 @@
         "dist": {
             "type": "zip",
             "url": "https://download.ckeditor.com/templates/releases/templates_4.11.1.zip",
-            "reference": "master",
-            "shasum": null
+            "reference": "master"
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -380,9 +349,7 @@
         "version_normalized": "5.42.0.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/codemirror/CodeMirror/archive/5.42.0.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://github.com/codemirror/CodeMirror/archive/5.42.0.zip"
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -1532,9 +1499,7 @@
         "version_normalized": "3.2.0.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/desandro/imagesloaded/archive/v3.2.0.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://github.com/desandro/imagesloaded/archive/v3.2.0.zip"
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -2243,11 +2208,14 @@
             },
             "drupal": {
                 "version": "8.x-1.7",
-                "datestamp": "1559642884",
+                "datestamp": "1582913039",
                 "security-coverage": {
                     "status": "covered",
                     "message": "Covered by Drupal's security advisory policy"
                 }
+            },
+            "patches_applied": {
+                "The locality.name data is missed in PlainFormater": "https://www.drupal.org/files/issues/locality-name-data-missed-plainformater-2881391-1.patch"
             }
         },
         "installation-source": "dist",
@@ -2317,6 +2285,10 @@
                     "status": "covered",
                     "message": "Covered by Drupal's security advisory policy"
                 }
+            },
+            "patches_applied": {
+                "Field settings Select Style always shows Blue skin if we want to use No Styling": "https://www.drupal.org/files/issues/2018-09-27/field-settings-select-style-always-shows-blue-3002766-2.patch",
+                "Allow to alter the values in the widget by contrib/custom modules": "https://www.drupal.org/files/issues/2018-09-27/addtocalendar-allow-to-alter-field-in-widget-3002818-4.patch"
             }
         },
         "installation-source": "dist",
@@ -3057,6 +3029,72 @@
         }
     },
     {
+        "name": "drupal/config_partial_export",
+        "version": "1.6.0",
+        "version_normalized": "1.6.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupalcode.org/project/config_partial_export.git",
+            "reference": "8.x-1.6"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://ftp.drupal.org/files/projects/config_partial_export-8.x-1.6.zip",
+            "reference": "8.x-1.6",
+            "shasum": "ae47bb4c427067731e6aaf0918baa53d650b7a3a"
+        },
+        "require": {
+            "drupal/core": "^8 || ^9"
+        },
+        "type": "drupal-module",
+        "extra": {
+            "branch-alias": {
+                "dev-1.x": "1.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-1.6",
+                "datestamp": "1583832593",
+                "security-coverage": {
+                    "status": "covered",
+                    "message": "Covered by Drupal's security advisory policy"
+                }
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-3.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "László Kovács",
+                "homepage": "https://www.drupal.org/u/laszlokovacs",
+                "role": "Original author"
+            },
+            {
+                "name": "Balu Ertl",
+                "homepage": "https://www.drupal.org/u/balu-ertl",
+                "role": "Current maintainer"
+            },
+            {
+                "name": "segi",
+                "homepage": "https://www.drupal.org/user/1421432"
+            }
+        ],
+        "description": "Partial export of modified configuration files.",
+        "homepage": "https://www.drupal.org/project/config_partial_export",
+        "keywords": [
+            "configuration",
+            "development",
+            "export"
+        ],
+        "support": {
+            "source": "https://git.drupalcode.org/project/config_partial_export",
+            "issues": "https://www.drupal.org/project/issues/config_partial_export",
+            "docs": "https://www.drupal.org/docs/8/modules/config-partial-export"
+        }
+    },
+    {
         "name": "drupal/console",
         "version": "1.9.4",
         "version_normalized": "1.9.4.0",
@@ -3528,6 +3566,17 @@
                     "[web-root]/profiles/README.txt": "assets/scaffold/files/profiles.README.txt",
                     "[web-root]/themes/README.txt": "assets/scaffold/files/themes.README.txt"
                 }
+            },
+            "patches_applied": {
+                "Incorrect filter group OR behavior, LEFT JOIN changed to INNER JOIN": "https://www.drupal.org/files/issues/views-incorrect_filter_group_or_join-1766338-84.patch",
+                "Migrations fail due to missing dependency when dependency is clearly not missing.": "https://www.drupal.org/files/issues/2019-02-18/2797505-13.patch",
+                "Node revision routes don't convert {node} param": "https://www.drupal.org/files/issues/2019-04-04/2730631_85_0.patch",
+                "There is no way to delete or update file entities of other users incl. user/1": "https://www.drupal.org/files/issues/2019-12-12/2949017-59.patch",
+                "Allow media items to be edited in a modal when using the field widget": "https://www.drupal.org/files/issues/2020-02-21/2985168-31.patch",
+                "Content Edit page jumps when media library item is placed": "https://www.drupal.org/files/issues/2019-11-04/3073023-4.patch",
+                "Default theme favicon for administration theme": "https://www.drupal.org/files/issues/2019-12-14/default-theme-favicon-for-administration-theme-2981434-7.patch",
+                "Allow to alter aggregator items before rendering": "https://www.drupal.org/files/issues/2020-01-16/hook_aggregator_item_variables_alter-3106825-2.patch",
+                "Allow symfony/event-dispatcher 4+ to be installed in Drupal 8": "https://www.drupal.org/files/issues/2019-09-17/2876675-48.Fix-symfony-version-requirements-for-symfonyeventdispatcher.patch"
             }
         },
         "installation-source": "dist",
@@ -3557,6 +3606,17 @@
         "name": "drupal/core-recommended",
         "version": "8.8.2",
         "version_normalized": "8.8.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/drupal/core-recommended.git",
+            "reference": "67ed5b68da2784ead5a55330c6c0fde6bb3cb9f3"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/drupal/core-recommended/zipball/67ed5b68da2784ead5a55330c6c0fde6bb3cb9f3",
+            "reference": "67ed5b68da2784ead5a55330c6c0fde6bb3cb9f3",
+            "shasum": ""
+        },
         "require": {
             "asm89/stack-cors": "1.2.0",
             "composer/installers": "v1.7.0",
@@ -4124,6 +4184,55 @@
         "homepage": "https://www.drupal.org/project/dropzonejs",
         "support": {
             "source": "https://git.drupalcode.org/project/dropzonejs"
+        }
+    },
+    {
+        "name": "drupal/editor_advanced_link",
+        "version": "1.6.0",
+        "version_normalized": "1.6.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupalcode.org/project/editor_advanced_link.git",
+            "reference": "8.x-1.6"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://ftp.drupal.org/files/projects/editor_advanced_link-8.x-1.6.zip",
+            "reference": "8.x-1.6",
+            "shasum": "920f22fd7841bc1c77b56c6ae51436319b47636e"
+        },
+        "require": {
+            "drupal/core": "*"
+        },
+        "type": "drupal-module",
+        "extra": {
+            "branch-alias": {
+                "dev-1.x": "1.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-1.6",
+                "datestamp": "1577188383",
+                "security-coverage": {
+                    "status": "covered",
+                    "message": "Covered by Drupal's security advisory policy"
+                }
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "DuaelFr",
+                "homepage": "https://www.drupal.org/user/931394"
+            }
+        ],
+        "description": "Add title, target etc. attributes to Text Editor's link dialog if the text format allows them.",
+        "homepage": "https://www.drupal.org/project/editor_advanced_link",
+        "support": {
+            "source": "https://git.drupalcode.org/project/editor_advanced_link"
         }
     },
     {
@@ -5276,6 +5385,12 @@
                     "status": "not-covered",
                     "message": "RC releases are not covered by Drupal security advisories."
                 }
+            },
+            "patches_applied": {
+                "Reapply patch from https://www.drupal.org/files/issues/2797793-20.patch manually without db update.": "patches/group-groupmenu-patch-manual-rc5-reroll.patch",
+                "Custom patch to address Group errors from menus that were created without being assigned to Groups.": "patches/group-fatal-errors.patch",
+                "Group outsiders grants issue.": "patches/group-outsiders-grants.patch",
+                "Add support for Views Bulk Operations (VBO)": "https://www.drupal.org/files/issues/2018-12-14/group_add-support-for-vbo-2865642-14.patch"
             }
         },
         "installation-source": "dist",
@@ -5336,6 +5451,12 @@
                     "status": "not-covered",
                     "message": "Beta releases are not covered by Drupal security advisories."
                 }
+            },
+            "patches_applied": {
+                "UndefinedLinkTemplateException": "https://www.drupal.org/files/issues/2880714.patch",
+                "Call to a member function id() on null in /modules/contrib/groupmenu/src/GroupMenuConfigOverrides.php on line 214": "patches/groupmenu-config-override-null-issue.patch",
+                "Custom patch to address Group Menu errors from menus that were created without being assigned to Groups.": "patches/groupmenu-fatal-errors.patch",
+                "Group Menu Block: Active Trail": "patches/groupmenu_activetrail.patch"
             }
         },
         "installation-source": "dist",
@@ -5494,6 +5615,135 @@
         "homepage": "https://www.drupal.org/project/inline_entity_form",
         "support": {
             "source": "https://git.drupalcode.org/project/inline_entity_form"
+        }
+    },
+    {
+        "name": "drupal/layout_builder_modal",
+        "version": "1.0.0",
+        "version_normalized": "1.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupalcode.org/project/layout_builder_modal.git",
+            "reference": "8.x-1.0"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://ftp.drupal.org/files/projects/layout_builder_modal-8.x-1.0.zip",
+            "reference": "8.x-1.0",
+            "shasum": "d8680bd1cc203600db91545d2ee9eba4220f506f"
+        },
+        "require": {
+            "drupal/core": "^8.7.0"
+        },
+        "type": "drupal-module",
+        "extra": {
+            "branch-alias": {
+                "dev-1.x": "1.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-1.0",
+                "datestamp": "1579042983",
+                "security-coverage": {
+                    "status": "covered",
+                    "message": "Covered by Drupal's security advisory policy"
+                }
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "John Svensson",
+                "homepage": "https://www.drupal.org/u/johndevman",
+                "email": "john@kodamera.se",
+                "role": "Maintainer"
+            },
+            {
+                "name": "Emil Johnsson",
+                "homepage": "https://www.drupal.org/u/johnzzon",
+                "email": "emil@kodamera.se",
+                "role": "Maintainer"
+            },
+            {
+                "name": "Henrik Larsson",
+                "homepage": "https://www.drupal.org/u/henriklarsson",
+                "email": "henrik@kodamera.se",
+                "role": "Maintainer"
+            },
+            {
+                "name": "twfahey",
+                "homepage": "https://www.drupal.org/user/3403722"
+            }
+        ],
+        "description": "Open blocks in a modal in the Layout Builder UI.",
+        "homepage": "https://www.drupal.org/project/layout_builder_modal",
+        "support": {
+            "source": "http://cgit.drupalcode.org/layout_builder_modal",
+            "issues": "https://www.drupal.org/project/issues/layout_builder_modal"
+        }
+    },
+    {
+        "name": "drupal/layout_builder_styles",
+        "version": "1.0.0-beta2",
+        "version_normalized": "1.0.0.0-beta2",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupalcode.org/project/layout_builder_styles.git",
+            "reference": "8.x-1.0-beta2"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://ftp.drupal.org/files/projects/layout_builder_styles-8.x-1.0-beta2.zip",
+            "reference": "8.x-1.0-beta2",
+            "shasum": "ec1a42c756b26f2da2349290eecc155ed1963287"
+        },
+        "require": {
+            "drupal/core": "^8.7.7 || ^9"
+        },
+        "type": "drupal-module",
+        "extra": {
+            "branch-alias": {
+                "dev-1.x": "1.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-1.0-beta2",
+                "datestamp": "1585270882",
+                "security-coverage": {
+                    "status": "not-covered",
+                    "message": "Beta releases are not covered by Drupal security advisories."
+                }
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "bkosborne",
+                "homepage": "https://www.drupal.org/user/788032"
+            },
+            {
+                "name": "mark_fullmer",
+                "homepage": "https://www.drupal.org/user/2612816"
+            },
+            {
+                "name": "phenaproxima",
+                "homepage": "https://www.drupal.org/user/205645"
+            },
+            {
+                "name": "twfahey",
+                "homepage": "https://www.drupal.org/user/3403722"
+            }
+        ],
+        "description": "Apply styles to blocks in Layout Builder.",
+        "homepage": "https://www.drupal.org/project/layout_builder_styles",
+        "support": {
+            "source": "https://git.drupalcode.org/project/layout_builder_styles"
         }
     },
     {
@@ -5799,6 +6049,9 @@
                     "status": "not-covered",
                     "message": "Project has not opted into security advisory coverage!"
                 }
+            },
+            "patches_applied": {
+                "All users, also from not allowed user roles, showing up in auto complete": "https://www.drupal.org/files/issues/2019-06-16/masquerade_filter-roles_3003796_5.patch"
             }
         },
         "installation-source": "dist",
@@ -5846,19 +6099,81 @@
         }
     },
     {
-        "name": "drupal/menu_block",
-        "version": "1.5.0",
-        "version_normalized": "1.5.0.0",
+        "name": "drupal/media_bulk_upload",
+        "version": "1.0.0-alpha24",
+        "version_normalized": "1.0.0.0-alpha24",
         "source": {
             "type": "git",
-            "url": "https://git.drupalcode.org/project/menu_block.git",
-            "reference": "8.x-1.5"
+            "url": "https://git.drupalcode.org/project/media_bulk_upload.git",
+            "reference": "8.x-1.0-alpha24"
         },
         "dist": {
             "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/menu_block-8.x-1.5.zip",
-            "reference": "8.x-1.5",
-            "shasum": "b3ac3e23e426f702974d88cc8bf93bf2a0b6236b"
+            "url": "https://ftp.drupal.org/files/projects/media_bulk_upload-8.x-1.0-alpha24.zip",
+            "reference": "8.x-1.0-alpha24",
+            "shasum": "e6d87cb8788427c20ada0f899e8376b83bd93f59"
+        },
+        "require": {
+            "drupal/core": "*",
+            "drupal/dropzonejs": "^2.0"
+        },
+        "type": "drupal-module",
+        "extra": {
+            "branch-alias": {
+                "dev-1.x": "1.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-1.0-alpha24",
+                "datestamp": "1549404480",
+                "security-coverage": {
+                    "status": "not-covered",
+                    "message": "Project has not opted into security advisory coverage!"
+                }
+            },
+            "patches_applied": {
+                "Undefined index: file_extensions in...": "https://www.drupal.org/files/issues/2019-05-17/3033271-4.media_bulk_upload.Undefined-index-fileextensions-in-DrupalmediabulkuploadMediaTypeManagergetTargetFieldExtensions.patch"
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "Mirnaxvb",
+                "homepage": "https://www.drupal.org/user/3157031"
+            },
+            {
+                "name": "jefuri",
+                "homepage": "https://www.drupal.org/user/2733365"
+            },
+            {
+                "name": "mycw1991",
+                "homepage": "https://www.drupal.org/user/3523472"
+            }
+        ],
+        "description": "Allows uploading files in bulk and converting them to media entities.",
+        "homepage": "https://www.drupal.org/project/media_bulk_upload",
+        "support": {
+            "source": "git://git.drupal.org/project/media_bulk_upload.git",
+            "issues": "https://www.drupal.org/project/issues/media_bulk_upload"
+        }
+    },
+    {
+        "name": "drupal/media_entity_file_replace",
+        "version": "1.0.0-beta2",
+        "version_normalized": "1.0.0.0-beta2",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupalcode.org/project/media_entity_file_replace.git",
+            "reference": "8.x-1.0-beta2"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://ftp.drupal.org/files/projects/media_entity_file_replace-8.x-1.0-beta2.zip",
+            "reference": "8.x-1.0-beta2",
+            "shasum": "9fb1fb6e585d26f8ccd289400f4c3b0b1ec9e1c8"
         },
         "require": {
             "drupal/core": "*"
@@ -5869,15 +6184,64 @@
                 "dev-1.x": "1.x-dev"
             },
             "drupal": {
-                "version": "8.x-1.5",
-                "datestamp": "1525200184",
+                "version": "8.x-1.0-beta2",
+                "datestamp": "1578875043",
                 "security-coverage": {
-                    "status": "covered",
-                    "message": "Covered by Drupal's security advisory policy"
+                    "status": "not-covered",
+                    "message": "Beta releases are not covered by Drupal security advisories."
                 }
             }
         },
         "installation-source": "dist",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "bkosborne",
+                "homepage": "https://www.drupal.org/user/788032"
+            }
+        ],
+        "description": "Allows content editors to easily replace source files associated with any file-based media entity, preserving the original filename.",
+        "homepage": "https://www.drupal.org/project/media_entity_file_replace",
+        "support": {
+            "source": "https://git.drupalcode.org/project/media_entity_file_replace"
+        }
+    },
+    {
+        "name": "drupal/menu_block",
+        "version": "dev-1.x",
+        "version_normalized": "dev-1.x",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupalcode.org/project/menu_block.git",
+            "reference": "95dbaf64bfa1ed6f63431caa1d9f3ecf0df731e4"
+        },
+        "require": {
+            "drupal/core": "*"
+        },
+        "type": "drupal-module",
+        "extra": {
+            "branch-alias": {
+                "dev-1.x": "1.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-1.5+9-dev",
+                "datestamp": "1583794180",
+                "security-coverage": {
+                    "status": "not-covered",
+                    "message": "Dev releases are not covered by Drupal security advisories."
+                }
+            },
+            "patches_applied": {
+                "Add configuration options for dynamic block titles": "https://www.drupal.org/files/issues/2019-10-06/2809699-87.menu_block-label_configuration.patch",
+                "Region showing up, even when there are no sub menu items": "https://www.drupal.org/files/issues/2018-08-30/menu_block-empty_region-2974691-6.patch",
+                "[PP-1] Add links to menu parent block title": "https://www.drupal.org/files/issues/2019-10-06/2950943-15.menu_block-title_as_link.patch",
+                "Ability show items on same level if active menu level don't have children": "https://www.drupal.org/files/issues/2019-07-02/3037301-fallback-to-parent-2.patch"
+            }
+        },
+        "installation-source": "source",
         "notification-url": "https://packages.drupal.org/8/downloads",
         "license": [
             "GPL-2.0-or-later"
@@ -6199,6 +6563,10 @@
                     "status": "covered",
                     "message": "Covered by Drupal's security advisory policy"
                 }
+            },
+            "patches_applied": {
+                "Integrity constraint violation: 1048 Column 'langcode' cannot be null": "https://www.drupal.org/files/issues/2019-08-10/paragraphs-set_langcode_widgets-290139_updated.patch",
+                "Library items are not displayed when field_layout module is enabled": "https://www.drupal.org/files/issues/2020-02-04/library-items-are-not-displayed-when-field_layout-module-is-enabled-2949978-8.patch"
             }
         },
         "installation-source": "dist",
@@ -7082,6 +7450,55 @@
         "support": {
             "source": "https://git.drupalcode.org/project/smtp",
             "issues": "https://www.drupal.org/project/issues/smtp"
+        }
+    },
+    {
+        "name": "drupal/switch_page_theme",
+        "version": "1.0.0",
+        "version_normalized": "1.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupalcode.org/project/switch_page_theme.git",
+            "reference": "8.x-1.0"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://ftp.drupal.org/files/projects/switch_page_theme-8.x-1.0.zip",
+            "reference": "8.x-1.0",
+            "shasum": "77016580b68cfad9e65991b3d0ed8477a4e5b3aa"
+        },
+        "require": {
+            "drupal/core": "~8.0"
+        },
+        "type": "drupal-module",
+        "extra": {
+            "branch-alias": {
+                "dev-1.x": "1.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-1.0",
+                "datestamp": "1505717644",
+                "security-coverage": {
+                    "status": "covered",
+                    "message": "Covered by Drupal's security advisory policy"
+                }
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "deepali_agarwal",
+                "homepage": "https://www.drupal.org/user/2438242"
+            }
+        ],
+        "description": "Switches active theme on specific pages.",
+        "homepage": "https://www.drupal.org/project/switch_page_theme",
+        "support": {
+            "source": "https://git.drupalcode.org/project/switch_page_theme"
         }
     },
     {
@@ -8184,6 +8601,74 @@
         }
     },
     {
+        "name": "drupal/workbench_email",
+        "version": "1.6.0",
+        "version_normalized": "1.6.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupalcode.org/project/workbench_email.git",
+            "reference": "8.x-1.6"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://ftp.drupal.org/files/projects/workbench_email-8.x-1.6.zip",
+            "reference": "8.x-1.6",
+            "shasum": "e4fe11679eeaf34439dff718e5d83372cb973199"
+        },
+        "require": {
+            "drupal/core": "^8 || ^9"
+        },
+        "require-dev": {
+            "drupal/workbench_moderation": "*"
+        },
+        "type": "drupal-module",
+        "extra": {
+            "branch-alias": {
+                "dev-1.x": "1.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-1.6",
+                "datestamp": "1585615668",
+                "security-coverage": {
+                    "status": "covered",
+                    "message": "Covered by Drupal's security advisory policy"
+                }
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "fenstrat",
+                "homepage": "https://www.drupal.org/user/362649"
+            },
+            {
+                "name": "frosev",
+                "homepage": "https://www.drupal.org/user/195325"
+            },
+            {
+                "name": "larowlan",
+                "homepage": "https://www.drupal.org/user/395439"
+            },
+            {
+                "name": "teknic",
+                "homepage": "https://www.drupal.org/user/367359"
+            },
+            {
+                "name": "unobot",
+                "homepage": "https://www.drupal.org/user/731188"
+            }
+        ],
+        "description": "Send emails to users when workbench transitions occur",
+        "homepage": "https://www.drupal.org/project/workbench_email",
+        "support": {
+            "source": "https://git.drupalcode.org/project/workbench_email"
+        }
+    },
+    {
         "name": "drupal/wysiwyg_template",
         "version": "2.3.0",
         "version_normalized": "2.3.0.0",
@@ -9199,9 +9684,7 @@
         "version_normalized": "14.0.6.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/jackocnr/intl-tel-input/archive/v14.0.6.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://github.com/jackocnr/intl-tel-input/archive/v14.0.6.zip"
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -9346,9 +9829,7 @@
         "version_normalized": "4.0.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/RobinHerbots/Inputmask/archive/4.0.4.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://github.com/RobinHerbots/Inputmask/archive/4.0.4.zip"
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -9359,9 +9840,7 @@
         "version_normalized": "1.1.1.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/gjunge/rateit.js/archive/1.1.1.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://github.com/gjunge/rateit.js/archive/1.1.1.zip"
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -9372,9 +9851,7 @@
         "version_normalized": "4.0.5.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/select2/select2/archive/4.0.5.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://github.com/select2/select2/archive/4.0.5.zip"
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -9385,9 +9862,7 @@
         "version_normalized": "0.8.0.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/ractoon/jQuery-Text-Counter/archive/0.8.0.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://github.com/ractoon/jQuery-Text-Counter/archive/0.8.0.zip"
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -9398,9 +9873,7 @@
         "version_normalized": "1.11.14.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/jonthornton/jquery-timepicker/archive/1.11.14.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://github.com/jonthornton/jquery-timepicker/archive/1.11.14.zip"
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -9656,9 +10129,7 @@
         "version_normalized": "0.7.2.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/liabru/jquery-match-height/archive/0.7.2.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://github.com/liabru/jquery-match-height/archive/0.7.2.zip"
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -9779,9 +10250,7 @@
         "version_normalized": "3.0.6.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/metafizzy/isotope/archive/v3.0.6.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://github.com/metafizzy/isotope/archive/v3.0.6.zip"
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -9890,9 +10359,7 @@
         "version_normalized": "1.4.2.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/oriongunning/gridder/archive/v1.4.2.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://github.com/oriongunning/gridder/archive/v1.4.2.zip"
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -10209,9 +10676,7 @@
         "version_normalized": "1.15.0.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/algolia/places/archive/v1.15.0.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://github.com/algolia/places/archive/v1.15.0.zip"
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -10222,9 +10687,7 @@
         "version_normalized": "1.2.0.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/NigelOToole/progress-tracker/archive/v1.2.0.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://github.com/NigelOToole/progress-tracker/archive/v1.2.0.zip"
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -10505,9 +10968,7 @@
         "version_normalized": "2.3.0.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/szimek/signature_pad/archive/v2.3.0.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://github.com/szimek/signature_pad/archive/v2.3.0.zip"
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -10518,9 +10979,7 @@
         "version_normalized": "1.8.1.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/kenwheeler/slick/archive/v1.8.1.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://github.com/kenwheeler/slick/archive/v1.8.1.zip"
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -12899,9 +13358,7 @@
         "version_normalized": "2.7.1.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/woocommerce/FlexSlider/archive/2.7.1.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://github.com/woocommerce/FlexSlider/archive/2.7.1.zip"
         },
         "type": "drupal-library",
         "installation-source": "dist"

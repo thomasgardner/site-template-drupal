@@ -458,7 +458,7 @@ class Migration extends PluginBase implements MigrationInterface, RequirementsIn
     $missing_migrations = array_diff($this->requirements, array_keys($required_migrations));
     // Check if the dependencies are in good shape.
     foreach ($required_migrations as $migration_id => $required_migration) {
-      if (!$required_migration->allRowsProcessed()) {
+      if ($required_migration->getIdMap()->processedCount() == 0) {
         $missing_migrations[] = $migration_id;
       }
     }

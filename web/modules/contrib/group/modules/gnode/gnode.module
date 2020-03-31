@@ -153,7 +153,7 @@ function gnode_node_grants(AccountInterface $account, $op) {
 
   // Anonymous users get the anonymous grant. See the implementation in the
   // gnode_node_access_records() function as to why that is.
-  if ($account->isAnonymous()) {
+  if ($account->isAnonymous() || $account->hasPermission('access content')) {
     return ['gnode_anonymous' => [GNODE_MASTER_GRANT_ID]];
   }
 

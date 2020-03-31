@@ -58,7 +58,12 @@ class GroupMenuContentListBuilder extends GroupContentListBuilder {
   public function buildRow(EntityInterface $entity) {
     /** @var \Drupal\group\Entity\GroupContentInterface $entity */
     $row['id'] = $entity->id();
-    $row['label']['data'] = $entity->getEntity()->toLink(NULL,'edit-form');
+    $entity_object = $entity->getEntity();
+
+    // Confirm the entity exists
+    if ($entity_object !== NULL) {
+      $row['label']['data'] = $entity->getEntity()->toLink(NULL,'edit-form');
+    }
     $row = $row + parent::buildRow($entity);
     unset($row['entity_type'], $row['plugin']);
     return $row;
@@ -95,20 +100,25 @@ class GroupMenuContentListBuilder extends GroupContentListBuilder {
       $operations[$key]['query'] = $destination;
     }
 
-    // Add operations to edit and delete the actual entity.
-    if ($entity->getEntity()->access('update')) {
-      $operations['edit-entity'] = [
-        'title' => $this->t('Edit menu'),
-        'weight' => 102,
-        'url' => $entity->getEntity()->toUrl(),
-      ];
-    }
-    if ($entity->getEntity()->access('delete')) {
-      $operations['delete-entity'] = [
-        'title' => $this->t('Delete menu'),
-        'weight' => 103,
-        'url' => $entity->getEntity()->toUrl('delete-form'),
-      ];
+    // Confirm the entity exists
+    $entity_object = $entity->getEntity();
+    if ($entity_object !== NULL) {
+      // Add operations to edit and delete the actual entity.
+      if ($entity->getEntity()->access('update')) {
+        $operations['edit-entity'] = [
+          'title' => $this->t('Edit menu'),
+          'weight' => 102,
+          'url' => $entity->getEntity()->toUrl(),
+        ];
+      }
+      if ($entity->getEntity()->access('delete') && $entity->getEntity()->hasLinkTemplate('delete-form')) {
+        $operations['delete-entity'] = [
+          'title' => $this->t('Delete menu'),
+          'weight' => 103,
+          'url' => $entity->getEntity()->toUrl('delete-form'),
+        ];
+      }
+
     }
 
     return $operations;
