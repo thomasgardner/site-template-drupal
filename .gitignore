@@ -4,6 +4,7 @@
 
 # Ignore Drupal's file directory.
 /web/sites/*/files
+/docroot/sites/*/files
 
 # Ignore Pantheon's symbolic link for Drupal's file directory.
 /web/sites/default/files

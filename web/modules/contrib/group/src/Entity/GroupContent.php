@@ -4,8 +4,8 @@ namespace Drupal\group\Entity;
 
 use Drupal\Core\Cache\Cache;
 use Drupal\Core\Entity\ContentEntityBase;
-use Drupal\Core\Entity\ContentEntityInterface;
 use Drupal\Core\Entity\EntityChangedTrait;
+use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Entity\EntityStorageInterface;
 use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\Core\Field\BaseFieldDefinition;
@@ -116,7 +116,7 @@ class GroupContent extends ContentEntityBase implements GroupContentInterface {
   /**
    * {@inheritdoc}
    */
-  public static function loadByEntity(ContentEntityInterface $entity) {
+  public static function loadByEntity(EntityInterface $entity) {
     /** @var \Drupal\group\Entity\Storage\GroupContentStorageInterface $storage */
     $storage = \Drupal::entityTypeManager()->getStorage('group_content');
     return $storage->loadByEntity($entity);
@@ -320,9 +320,13 @@ class GroupContent extends ContentEntityBase implements GroupContentInterface {
 
     // Borrowed this logic from the Comment module.
     // Warning! May change in the future: https://www.drupal.org/node/2346347
+    // The target type is set to a config entity to force a string field
+    // for the entity ID.
+    // @see https://www.drupal.org/node/1757452.
     $fields['entity_id'] = BaseFieldDefinition::create('entity_reference')
       ->setLabel(t('Content'))
       ->setDescription(t('The entity to add to the group.'))
+      ->setSetting('target_type', 'group_type')
       ->setDisplayOptions('form', [
         'type' => 'entity_reference_autocomplete',
         'weight' => 5,
