@@ -24,11 +24,15 @@ settings:
   label: 'Event Calendar'
   provider: menu_block
   label_display: '0'
+  follow: false
+  follow_parent: child
   level: 1
   depth: 0
-  expand: 0
+  expand: false
   parent: 'event-calendar:'
   suggestion: event_calendar
+  label_type: block
+  label_link: 0
 visibility:
   request_path:
     id: request_path
