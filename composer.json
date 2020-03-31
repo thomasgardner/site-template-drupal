@@ -530,6 +530,7 @@
         "drupal/views_ical": "^1.0@alpha",
         "drupal/viewsreference": "^2.0",
         "drupal/webform": "^5.1",
+        "drupal/workbench_email": "^1.6",
         "drupal/wysiwyg_template": "^2.1",
         "drupal/xmlsitemap": "^1.0",
         "drush/drush": "^9.5",
