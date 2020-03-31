@@ -146,7 +146,7 @@ abstract class GroupContentEnablerBase extends PluginBase implements GroupConten
    * {@inheritdoc}
    */
   public function getContentLabel(GroupContentInterface $group_content) {
-    return $group_content->getEntity()->label();
+    return is_object($group_content->getEntity()) ? $group_content->getEntity()->label() : '' ;
   }
 
   /**

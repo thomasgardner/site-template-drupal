@@ -462,6 +462,7 @@
         "drupal/captcha_pack": "^1.0",
         "drupal/ckeditor_media_embed": "^1.3",
         "drupal/ckeditor_templates": "^1.1",
+        "drupal/config_partial_export": "^1.6",
         "drupal/console": "^1.0.2",
         "drupal/core-recommended": "^8.8",
         "drupal/ctools": "^3.0",
@@ -487,6 +488,8 @@
         "drupal/groupmenu": "^1.0@alpha",
         "drupal/gtranslate": "^1.13",
         "drupal/inline_entity_form": "^1.0@RC",
+        "drupal/layout_builder_modal": "^1.0",
+        "drupal/layout_builder_styles": "^1.0",
         "drupal/libraries": "^3.0",
         "drupal/link_attributes": "^1.9",
         "drupal/link_class": "^1.4",
@@ -621,8 +624,23 @@
             }
         },
         "patches": {
+            "drupal/group": {
+                "Reapply patch from https://www.drupal.org/files/issues/2797793-20.patch manually without db update.": "patches/group-groupmenu-patch-manual-rc5-reroll.patch",
+                "Custom patch to address Group errors from menus that were created without being assigned to Groups.": "patches/group-fatal-errors.patch",
+                "Group outsiders grants issue.": "patches/group-outsiders-grants.patch",
+                "Add support for Views Bulk Operations (VBO)": "https://www.drupal.org/files/issues/2018-12-14/group_add-support-for-vbo-2865642-14.patch"
+            },
+            "drupal/groupmenu": {
+                "UndefinedLinkTemplateException": "https://www.drupal.org/files/issues/2880714.patch",
+                "Call to a member function id() on null in /modules/contrib/groupmenu/src/GroupMenuConfigOverrides.php on line 214": "patches/groupmenu-config-override-null-issue.patch",
+                "Custom patch to address Group Menu errors from menus that were created without being assigned to Groups.": "patches/groupmenu-fatal-errors.patch",
+                "Group Menu Block: Active Trail": "patches/groupmenu_activetrail.patch"
+            },
             "drupal/sharethis" : {
                 "Fix: Error: [] operator not supported for strings" : "https://www.drupal.org/files/issues/Error-operator-not-supported-for-strings-2885710-12128018.patch"
+            },
+            "drupal/paragraphs" : {
+                "Integrity constraint violation: 1048 Column 'langcode' cannot be null" : "https://www.drupal.org/files/issues/2019-08-10/paragraphs-set_langcode_widgets-290139_updated.patch"
             }
         }
     }

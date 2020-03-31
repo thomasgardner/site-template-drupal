@@ -148,13 +148,17 @@ class GroupContentListBuilder extends EntityListBuilder {
       $operations[$key]['query'] = $destination;
     }
 
-    // Add an operation to view the actual entity.
-    if ($entity->getEntity()->access('view') && $entity->getEntity()->hasLinkTemplate('canonical')) {
-      $operations['view'] = [
-        'title' => $this->t('View entity'),
-        'weight' => 101,
-        'url' => $entity->getEntity()->toUrl('canonical'),
-      ];
+    // Confirm the entity exists
+    $entity_object = $entity->getEntity();
+    if ($entity_object !== NULL) {
+      // Add an operation to view the actual entity.
+      if ($entity->getEntity()->access('view') && $entity->getEntity()->hasLinkTemplate('canonical')) {
+        $operations['view'] = [
+          'title' => $this->t('View related entity'),
+          'weight' => 101,
+          'url' => $entity->getEntity()->toUrl('canonical'),
+        ];
+      }
     }
 
     return $operations;
