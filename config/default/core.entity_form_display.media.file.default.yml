@@ -28,6 +28,11 @@ content:
     settings:
       include_locked: true
     third_party_settings: {  }
+  replace_file:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   created: true
   moderation_state: true
