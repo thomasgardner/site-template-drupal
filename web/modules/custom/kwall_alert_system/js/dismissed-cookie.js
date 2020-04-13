@@ -99,7 +99,7 @@ function getLevel(className) {
     jQuery(window).on('resize', function() {
         alertsMovetoTop();
     });
-    
+
 })(jQuery, Drupal);
 
 
