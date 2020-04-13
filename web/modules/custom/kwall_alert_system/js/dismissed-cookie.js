@@ -1,3 +1,4 @@
+
 function alertsMovetoTop() {
     var alert_height = jQuery('#kwall-alerts-wrapper').height() + 'px';
     if(jQuery(document).innerWidth() >747) {
@@ -36,13 +37,9 @@ function getLevel(className) {
     return false;
 }
 
-
-
 (function ($, Drupal) {
-
     Drupal.behaviors.kwallAlertSystem = {
         attach: function (context, drupalSettings) {
-
 
             if ($('#kwall-alerts .alert').length > 0) {
                 $('#kwall-alerts .alert').each(function () {
@@ -70,9 +67,6 @@ function getLevel(className) {
                     }
                 });
 
-
-
-
                 if($('body').hasClass('alerts-processed')) {
                     //megamenu fix (remove duplicates after ajax refresh)
                     jQuery('#kwall-alerts').show();
@@ -91,8 +85,6 @@ function getLevel(className) {
                     jQuery('body').addClass('alerts-processed');
                     if($('body').hasClass('alerts-processed')) {
                         jQuery(selector).triggerHandler('RefreshView');
-
-
                     }
                 }
                 jQuery(selector).unbind();
@@ -101,16 +93,13 @@ function getLevel(className) {
                 var alert_height = $(this).parents('.alert').height();
                 var nav_padding = parseInt(jQuery('.region-top-navigation').css('padding-top'));
                 $('.region-top-navigation').css({'padding-top': nav_padding - alert_height + 'px'});
-
             });
-
         }
     });
     jQuery(window).on('resize', function() {
         alertsMovetoTop();
     });
-
-
+    
 })(jQuery, Drupal);
 
 
