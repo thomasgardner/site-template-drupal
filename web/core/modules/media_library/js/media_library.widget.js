@@ -37,6 +37,29 @@
     }
   };
 
+  Drupal.behaviors.MediaLibraryWidgetEditItem = {
+    attach: function attach() {
+      $('.media-library-widget .js-media-library-item a[href]')
+        .once('media-library-edit')
+        .each(function() {
+          var mediaEntity = $(this).closest(
+            '.media[data-drupal-selector]',
+          );
+          var elementSettings = {
+            progress: { type: 'throbber' },
+            dialogType: 'modal',
+            dialog: { width: '80%' },
+            dialogRenderer: null,
+            base: $(this).attr('id'),
+            element: this,
+            url: $(this).attr('href').concat("?selector=").concat(mediaEntity.attr('data-drupal-selector')),
+            event: 'click',
+          };
+          Drupal.ajax(elementSettings);
+        });
+    },
+  };
+
   Drupal.behaviors.MediaLibraryWidgetDisableButton = {
     attach: function attach(context) {
       $('.js-media-library-open-button[data-disabled-focus="true"]', context).once('media-library-disable').each(function () {

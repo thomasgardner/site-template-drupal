@@ -139,7 +139,14 @@ function paragraphs_library_preprocess_paragraph(&$variables) {
       $library_item_render_array = $view_builder->view($library_item);
 
       // This will remove all fields other then field_reusable_paragraph.
-      $variables['content'] = $view_builder->build($library_item_render_array)['paragraphs'];
+      $built = $view_builder->build($library_item_render_array);
+      // In case, if "Field Layout" module provided by Drupal core is enabled.
+      if (isset($built['_field_layout'])) {
+        $variables['content'] = $built['_field_layout']['content']['paragraphs'];
+      }
+      else {
+        $variables['content'] = $built['paragraphs'];
+      }
     }
   }
 }

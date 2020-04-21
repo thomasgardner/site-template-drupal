@@ -63,8 +63,14 @@ class FileAccessControlHandler extends EntityAccessControlHandler {
 
     if ($operation == 'delete' || $operation == 'update') {
       $account = $this->prepareUser($account);
+
+      // Elevated permission to delete any files.
+      if ($operation === 'delete' && $account->hasPermission('delete any files')) {
+        return AccessResult::allowed();
+      }
+
+      // Otherwise, only the file owner can update or delete the file entity.
       $file_uid = $entity->get('uid')->getValue();
-      // Only the file owner can update or delete the file entity.
       if ($account->id() == $file_uid[0]['target_id']) {
         return AccessResult::allowed();
       }

@@ -158,6 +158,13 @@ class AddToCalendar extends FormatterBase {
           $value = $entity->get($field)->view(['label' => 'hidden']);
           $value = strip_tags(render($value));
         }
+
+        // Alter a value of the field using hook_addtocalendar_field_alter()
+        // and/or hook_addtocalendar_field_FIELD_NAME_alter() hook.
+        // @see addtocalendar.api.php
+        \Drupal::moduleHandler()->alter('addtocalendar_field_' . $field_setting['field'], $value, $entity);
+        \Drupal::moduleHandler()->alter('addtocalendar_field', $value, $entity, $field_setting['field']);
+
         break;
     }
     return $value;
