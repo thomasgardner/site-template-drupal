@@ -1,5 +1,18 @@
 <?php
 
+/**
+ *
+ * Implements hook_ajax_render_alter().
+ */
+function kwall_alert_system_ajax_render_alter(array &$data) {
+    foreach ($data as $key => $command) {
+        if ($command['command'] == 'viewsScrollTop') {
+            unset($data[$key]);
+            break;
+        }
+    }
+}
+
 function kwall_alert_system_page_attachments(array &$page) {
   $page['#attached']['library'][] = 'kwall_alert_system/dismissed-cookie';
 }
