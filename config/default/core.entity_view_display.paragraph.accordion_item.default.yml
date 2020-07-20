@@ -5,9 +5,9 @@ dependencies:
   config:
     - field.field.paragraph.accordion_item.field_body_formatted
     - field.field.paragraph.accordion_item.field_title
-    - field.field.paragraph.accordion_item.field_title_2
     - paragraphs.paragraphs_type.accordion_item
   module:
+    - fences
     - text
 id: paragraph.accordion_item.default
 targetEntityType: paragraph
@@ -16,25 +16,31 @@ mode: default
 content:
   field_body_formatted:
     weight: 1
-    label: above
+    label: hidden
     settings: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
     type: text_default
     region: content
   field_title:
     weight: 0
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_title_2:
-    weight: 2
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
     type: string
     region: content
 hidden: {  }

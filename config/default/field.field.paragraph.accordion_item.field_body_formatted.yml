@@ -11,7 +11,7 @@ id: paragraph.accordion_item.field_body_formatted
 field_name: field_body_formatted
 entity_type: paragraph
 bundle: accordion_item
-label: 'Body - formatted'
+label: 'Tab Body'
 description: ''
 required: false
 translatable: true

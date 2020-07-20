@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.field.paragraph.accordion_item.field_body_formatted
     - field.field.paragraph.accordion_item.field_title
-    - field.field.paragraph.accordion_item.field_title_2
     - paragraphs.paragraphs_type.accordion_item
   module:
     - text
@@ -24,14 +23,6 @@ content:
     region: content
   field_title:
     weight: 0
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_title_2:
-    weight: 1
     settings:
       size: 60
       placeholder: ''
