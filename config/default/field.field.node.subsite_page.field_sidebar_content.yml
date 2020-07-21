@@ -1,0 +1,131 @@
+uuid: eae29a81-d858-445e-93a3-2a52c00ca123
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sidebar_content
+    - node.type.subsite_page
+    - paragraphs.paragraphs_type.cta_buttons
+    - paragraphs.paragraphs_type.quick_link
+    - paragraphs.paragraphs_type.quick_link_minimal
+  module:
+    - entity_reference_revisions
+id: node.subsite_page.field_sidebar_content
+field_name: field_sidebar_content
+entity_type: node
+bundle: subsite_page
+label: 'Sidebar Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      quick_link: quick_link
+      cta_buttons: cta_buttons
+      quick_link_minimal: quick_link_minimal
+    target_bundles_drag_drop:
+      2_column_cta:
+        weight: 13
+        enabled: false
+      3_column_cta:
+        weight: 14
+        enabled: false
+      4_column_cta:
+        weight: 15
+        enabled: false
+      column_section:
+        weight: 16
+        enabled: false
+      full_width_image_section:
+        weight: 17
+        enabled: false
+      hero_banner:
+        weight: 18
+        enabled: false
+      hero_slide:
+        weight: 19
+        enabled: false
+      hero_slideshow:
+        weight: 20
+        enabled: false
+      interior_column_section:
+        weight: 21
+        enabled: false
+      interior_slideshow:
+        weight: 22
+        enabled: false
+      interior_slideshow_slide:
+        weight: 23
+        enabled: false
+      quick_link:
+        enabled: true
+        weight: 24
+      accordion:
+        weight: 27
+        enabled: false
+      accordion_item:
+        weight: 28
+        enabled: false
+      adjustable_media_and_content:
+        weight: 29
+        enabled: false
+      flexible_bg_image_block:
+        weight: 31
+        enabled: false
+      flexible_bg_image_blocks:
+        weight: 32
+        enabled: false
+      flexible_cta_block:
+        weight: 33
+        enabled: false
+      cta_buttons:
+        enabled: true
+        weight: 34
+      flexible_cta_blocks:
+        weight: 34
+        enabled: false
+      recent_articles:
+        weight: 43
+        enabled: false
+      quick_link_minimal:
+        enabled: true
+        weight: 44
+      recent_articles_upcoming_events:
+        weight: 44
+        enabled: false
+      upcoming_events:
+        weight: 45
+        enabled: false
+      wysiwyg:
+        weight: 46
+        enabled: false
+      gridder:
+        weight: 47
+        enabled: false
+      gridder_item:
+        weight: 48
+        enabled: false
+      person_carousel:
+        weight: 55
+        enabled: false
+      quicktab_item:
+        weight: 58
+        enabled: false
+      quicktabs:
+        weight: 59
+        enabled: false
+      video_embed:
+        weight: 63
+        enabled: false
+      video_tab_carousel:
+        weight: 64
+        enabled: false
+      video_tab_item:
+        weight: 65
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,62 @@
+uuid: 49761475-ddc9-4ac3-9a4c-3df902ca57dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.subsite_page.body
+    - field.field.node.subsite_page.field_after_content
+    - field.field.node.subsite_page.field_content_bottom
+    - field.field.node.subsite_page.field_hero_content
+    - field.field.node.subsite_page.field_hide_page_title
+    - field.field.node.subsite_page.field_intro
+    - field.field.node.subsite_page.field_meta_tags
+    - field.field.node.subsite_page.field_section_title
+    - field.field.node.subsite_page.field_sidebar_content
+    - node.type.subsite_page
+  module:
+    - entity_reference_revisions
+    - text
+    - user
+id: node.subsite_page.default
+targetEntityType: node
+bundle: subsite_page
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  content_moderation_control:
+    weight: -20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_after_content:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  field_intro:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+hidden:
+  field_content_bottom: true
+  field_hero_content: true
+  field_hide_page_title: true
+  field_meta_tags: true
+  field_section_title: true
+  field_sidebar_content: true
+  langcode: true
+  links: true
+  sharethis: true
