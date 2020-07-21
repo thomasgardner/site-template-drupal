@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3de4ee6c10ecfb84370de5cf466b4997",
+    "content-hash": "c0d22680da30f43ecc6dc1e40df6ff71",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -4621,6 +4621,9 @@
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
+                },
+                "patches_applied": {
+                    "Issue with content moderation showing no method BaseFieldDefinition::createDuplicate": "https://www.drupal.org/files/issues/2020-01-03/3053633-moderation-state-field-giving-create-duplicate-error-9.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -6127,6 +6130,54 @@
             "homepage": "https://www.drupal.org/project/media_entity_file_replace",
             "support": {
                 "source": "https://git.drupalcode.org/project/media_entity_file_replace"
+            }
+        },
+        {
+            "name": "drupal/media_library_edit",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/media_library_edit.git",
+                "reference": "76b887eaeff7051dfe246ff64f1a6853d1c10642"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-alpha1+5-dev",
+                    "datestamp": "1591618054",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                },
+                "patches_applied": {
+                    "Open in modal": "https://www.drupal.org/files/issues/2020-06-25/open-in-modal-3034205-43.patch"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "ahebrank",
+                    "homepage": "https://www.drupal.org/user/3190515"
+                }
+            ],
+            "description": "Add an edit button to the Media Library widget when an item is selected.",
+            "homepage": "https://www.drupal.org/project/media_library_edit",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/media_library_edit",
+                "issues": "https://www.drupal.org/project/issues/media_library_edit"
             }
         },
         {
@@ -13883,6 +13934,7 @@
         "drupal/group": 5,
         "drupal/groupmenu": 15,
         "drupal/inline_entity_form": 5,
+        "drupal/media_library_edit": 20,
         "drupal/menu_block": 20,
         "drupal/name": 20,
         "drupal/sharethis": 10,
