@@ -1,0 +1,19 @@
+uuid: a9c64892-9e75-458b-a8bd-b926115d79f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_office_hours
+    - paragraphs.paragraphs_type.profile_card_details_fields
+id: paragraph.profile_card_details_fields.field_office_hours
+field_name: field_office_hours
+entity_type: paragraph
+bundle: profile_card_details_fields
+label: 'Office Hours'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

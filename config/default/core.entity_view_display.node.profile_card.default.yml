@@ -1,0 +1,82 @@
+uuid: fa23c77d-21de-42f7-b732-9e7fe9f80cd4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.profile_card.body
+    - field.field.node.profile_card.field_details_fields
+    - field.field.node.profile_card.field_media
+    - field.field.node.profile_card.field_profile_category
+    - field.field.node.profile_card.field_profile_type
+    - image.style.profile_card_featured
+    - node.type.profile_card
+  module:
+    - entity_reference_revisions
+    - fences
+    - media
+    - text
+    - user
+id: node.profile_card.default
+targetEntityType: node
+bundle: profile_card
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_details_fields:
+    type: entity_reference_revisions_entity_view
+    weight: 4
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    region: content
+  field_media:
+    weight: 2
+    label: hidden
+    settings:
+      image_style: profile_card_featured
+      image_link: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    type: media_thumbnail
+    region: content
+  field_profile_category:
+    weight: 1
+    label: hidden
+    settings:
+      link: false
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    type: entity_reference_label
+    region: content
+hidden:
+  field_profile_type: true
+  langcode: true
+  links: true
+  sharethis: true

@@ -1,0 +1,21 @@
+uuid: 68c8bb8e-cbc1-4940-8509-c964783f9988
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_research_interests
+field_name: field_research_interests
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

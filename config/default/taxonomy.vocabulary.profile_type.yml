@@ -1,0 +1,8 @@
+uuid: 8a10d7f0-a21b-4432-815b-576bd5adfbaa
+langcode: en
+status: true
+dependencies: {  }
+name: 'Profile Type'
+vid: profile_type
+description: ''
+weight: 0

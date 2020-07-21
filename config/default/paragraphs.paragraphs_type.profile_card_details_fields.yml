@@ -1,0 +1,10 @@
+uuid: baeface4-fc91-473b-ab18-4105413a772a
+langcode: en
+status: true
+dependencies: {  }
+id: profile_card_details_fields
+label: 'Profile Card - Details Fields'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

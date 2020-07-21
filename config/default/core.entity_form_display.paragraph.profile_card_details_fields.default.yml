@@ -1,0 +1,137 @@
+uuid: fc858aa7-01cc-41a5-9dd8-45860b6243cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.profile_card_details_fields.field_additional_email
+    - field.field.paragraph.profile_card_details_fields.field_additional_locations
+    - field.field.paragraph.profile_card_details_fields.field_areas_of_expertise
+    - field.field.paragraph.profile_card_details_fields.field_campus_address
+    - field.field.paragraph.profile_card_details_fields.field_department_college_unit
+    - field.field.paragraph.profile_card_details_fields.field_division
+    - field.field.paragraph.profile_card_details_fields.field_faculty_type
+    - field.field.paragraph.profile_card_details_fields.field_mail_stop
+    - field.field.paragraph.profile_card_details_fields.field_office_hours
+    - field.field.paragraph.profile_card_details_fields.field_other_ucsc_campus_affiliat
+    - field.field.paragraph.profile_card_details_fields.field_phone
+    - field.field.paragraph.profile_card_details_fields.field_research_interests
+    - field.field.paragraph.profile_card_details_fields.field_website
+    - paragraphs.paragraphs_type.profile_card_details_fields
+  module:
+    - link
+    - telephone
+id: paragraph.profile_card_details_fields.default
+targetEntityType: paragraph
+bundle: profile_card_details_fields
+mode: default
+content:
+  field_additional_email:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_additional_locations:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_areas_of_expertise:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_campus_address:
+    weight: 10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_department_college_unit:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_division:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete_tags
+    region: content
+  field_faculty_type:
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete_tags
+    region: content
+  field_mail_stop:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_office_hours:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_other_ucsc_campus_affiliat:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_phone:
+    weight: 0
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_research_interests:
+    weight: 12
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_website:
+    weight: 6
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+hidden:
+  created: true
+  status: true

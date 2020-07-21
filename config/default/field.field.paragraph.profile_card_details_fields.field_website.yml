@@ -1,0 +1,23 @@
+uuid: 9c6302c5-6f67-4ae8-871f-4d577f3f24d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_website
+    - paragraphs.paragraphs_type.profile_card_details_fields
+  module:
+    - link
+id: paragraph.profile_card_details_fields.field_website
+field_name: field_website
+entity_type: paragraph
+bundle: profile_card_details_fields
+label: Website
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 1
+field_type: link
