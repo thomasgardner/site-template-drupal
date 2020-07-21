@@ -12,6 +12,7 @@ class ComposerStaticInitDrupal8
         '023d27dca8066ef29e6739335ea73bad' => __DIR__ . '/..' . '/symfony/polyfill-php70/bootstrap.php',
         'bd9634f2d41831496de0d3dfe4c94881' => __DIR__ . '/..' . '/symfony/polyfill-php56/bootstrap.php',
         '25072dd6e2470089de65ae7bf11d3109' => __DIR__ . '/..' . '/symfony/polyfill-php72/bootstrap.php',
+        'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
@@ -30,7 +31,7 @@ class ComposerStaticInitDrupal8
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         '952683d815ff0a7bf322b93c0be7e4e4' => __DIR__ . '/..' . '/chi-teck/drupal-code-generator/src/bootstrap.php',
         '5a12a5271c58108e0aa33355e6ac54ea' => __DIR__ . '/..' . '/drupal/console-core/src/functions.php',
-        'd511210698f02d87ca48e3972f64323e' => __DIR__ . '/../..' . '/load.environment.php',
+        'a119cf006a2ca97cbb27310351e170dd' => __DIR__ . '/../..' . '/load.environment.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -79,6 +80,7 @@ class ComposerStaticInitDrupal8
         'S' => 
         array (
             'Symfony\\Polyfill\\Util\\' => 22,
+            'Symfony\\Polyfill\\Php80\\' => 23,
             'Symfony\\Polyfill\\Php72\\' => 23,
             'Symfony\\Polyfill\\Php70\\' => 23,
             'Symfony\\Polyfill\\Php56\\' => 23,
@@ -283,6 +285,10 @@ class ComposerStaticInitDrupal8
         'Symfony\\Polyfill\\Util\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-util',
+        ),
+        'Symfony\\Polyfill\\Php80\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-php80',
         ),
         'Symfony\\Polyfill\\Php72\\' => 
         array (
@@ -4993,6 +4999,7 @@ class ComposerStaticInitDrupal8
         'Stecman\\Component\\Symfony\\Console\\BashCompletion\\Completion\\ShellPathCompletion' => __DIR__ . '/..' . '/stecman/symfony-console-completion/src/Completion/ShellPathCompletion.php',
         'Stecman\\Component\\Symfony\\Console\\BashCompletion\\EnvironmentCompletionContext' => __DIR__ . '/..' . '/stecman/symfony-console-completion/src/EnvironmentCompletionContext.php',
         'Stecman\\Component\\Symfony\\Console\\BashCompletion\\HookFactory' => __DIR__ . '/..' . '/stecman/symfony-console-completion/src/HookFactory.php',
+        'Stringable' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Stringable.php',
         'Symfony\\Bridge\\PsrHttpMessage\\Factory\\DiactorosFactory' => __DIR__ . '/..' . '/symfony/psr-http-message-bridge/Factory/DiactorosFactory.php',
         'Symfony\\Bridge\\PsrHttpMessage\\Factory\\HttpFoundationFactory' => __DIR__ . '/..' . '/symfony/psr-http-message-bridge/Factory/HttpFoundationFactory.php',
         'Symfony\\Bridge\\PsrHttpMessage\\Factory\\PsrHttpFactory' => __DIR__ . '/..' . '/symfony/psr-http-message-bridge/Factory/PsrHttpFactory.php',
@@ -6149,6 +6156,7 @@ class ComposerStaticInitDrupal8
         'Symfony\\Polyfill\\Php56\\Php56' => __DIR__ . '/..' . '/symfony/polyfill-php56/Php56.php',
         'Symfony\\Polyfill\\Php70\\Php70' => __DIR__ . '/..' . '/symfony/polyfill-php70/Php70.php',
         'Symfony\\Polyfill\\Php72\\Php72' => __DIR__ . '/..' . '/symfony/polyfill-php72/Php72.php',
+        'Symfony\\Polyfill\\Php80\\Php80' => __DIR__ . '/..' . '/symfony/polyfill-php80/Php80.php',
         'Symfony\\Polyfill\\Util\\Binary' => __DIR__ . '/..' . '/symfony/polyfill-util/Binary.php',
         'Symfony\\Polyfill\\Util\\BinaryNoFuncOverload' => __DIR__ . '/..' . '/symfony/polyfill-util/BinaryNoFuncOverload.php',
         'Symfony\\Polyfill\\Util\\BinaryOnFuncOverload' => __DIR__ . '/..' . '/symfony/polyfill-util/BinaryOnFuncOverload.php',
@@ -6560,6 +6568,8 @@ class ComposerStaticInitDrupal8
         'Twig_Util_DeprecationCollector' => __DIR__ . '/..' . '/twig/twig/lib/Twig/Util/DeprecationCollector.php',
         'Twig_Util_TemplateDirIterator' => __DIR__ . '/..' . '/twig/twig/lib/Twig/Util/TemplateDirIterator.php',
         'TypeError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/TypeError.php',
+        'UnhandledMatchError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/UnhandledMatchError.php',
+        'ValueError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/ValueError.php',
         'Webmozart\\Assert\\Assert' => __DIR__ . '/..' . '/webmozart/assert/src/Assert.php',
         'Webmozart\\PathUtil\\Path' => __DIR__ . '/..' . '/webmozart/path-util/src/Path.php',
         'Webmozart\\PathUtil\\Url' => __DIR__ . '/..' . '/webmozart/path-util/src/Url.php',
@@ -6838,6 +6848,7 @@ class ComposerStaticInitDrupal8
         'cweagans\\Composer\\Patches' => __DIR__ . '/..' . '/cweagans/composer-patches/src/Patches.php',
         'grasmash\\DrupalSecurityWarning\\Composer\\Plugin' => __DIR__ . '/..' . '/grasmash/drupal-security-warning/src/Composer/Plugin.php',
         'lsolesen\\pel\\Pel' => __DIR__ . '/..' . '/lsolesen/pel/src/Pel.php',
+        'lsolesen\\pel\\PelCanonMakerNotes' => __DIR__ . '/..' . '/lsolesen/pel/src/PelCanonMakerNotes.php',
         'lsolesen\\pel\\PelConvert' => __DIR__ . '/..' . '/lsolesen/pel/src/PelConvert.php',
         'lsolesen\\pel\\PelDataWindow' => __DIR__ . '/..' . '/lsolesen/pel/src/PelDataWindow.php',
         'lsolesen\\pel\\PelDataWindowOffsetException' => __DIR__ . '/..' . '/lsolesen/pel/src/PelDataWindowOffsetException.php',
@@ -6872,6 +6883,8 @@ class ComposerStaticInitDrupal8
         'lsolesen\\pel\\PelJpegContent' => __DIR__ . '/..' . '/lsolesen/pel/src/PelJpegContent.php',
         'lsolesen\\pel\\PelJpegInvalidMarkerException' => __DIR__ . '/..' . '/lsolesen/pel/src/PelJpegInvalidMarkerException.php',
         'lsolesen\\pel\\PelJpegMarker' => __DIR__ . '/..' . '/lsolesen/pel/src/PelJpegMarker.php',
+        'lsolesen\\pel\\PelMakerNotes' => __DIR__ . '/..' . '/lsolesen/pel/src/PelMakerNotes.php',
+        'lsolesen\\pel\\PelMakerNotesMalformedException' => __DIR__ . '/..' . '/lsolesen/pel/src/PelMakerNotesMalformedException.php',
         'lsolesen\\pel\\PelOverflowException' => __DIR__ . '/..' . '/lsolesen/pel/src/PelOverflowException.php',
         'lsolesen\\pel\\PelTag' => __DIR__ . '/..' . '/lsolesen/pel/src/PelTag.php',
         'lsolesen\\pel\\PelTiff' => __DIR__ . '/..' . '/lsolesen/pel/src/PelTiff.php',

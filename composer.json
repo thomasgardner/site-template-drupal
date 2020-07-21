@@ -1,14 +1,13 @@
 {
-    "name": "drupal-composer/drupal-project",
-    "description": "Project template for Drupal 8 projects with composer",
+    "name": "drupal/legacy-project",
+    "description": "Project template for Drupal 8 projects with composer following drupal/drupal layout",
     "type": "project",
     "license": "GPL-2.0-or-later",
-    "authors": [
-        {
-            "name": "",
-            "role": ""
-        }
-    ],
+    "homepage": "https://www.drupal.org/project/drupal",
+    "support": {
+        "docs": "https://www.drupal.org/docs/user_guide/en/index.html",
+        "chat": "https://www.drupal.org/node/314178"
+    },
     "repositories": [
         {
             "type": "composer",
@@ -483,7 +482,7 @@
         "drupal/fences": "^2.0@alpha",
         "drupal/field_group": "3.x-dev",
         "drupal/file_browser": "^1.1",
-        "drupal/file_mdm": "^1.1",
+        "drupal/file_mdm": "^2.1",
         "drupal/focal_point": "^1.0",
         "drupal/geolocation": "^1.11",
         "drupal/google_analytics": "^2.3",
@@ -526,7 +525,7 @@
         "drupal/twig_link_attributes": "1.x-dev",
         "drupal/twig_remove_html_comments": "^1.0@alpha",
         "drupal/twig_tweak": "^2.1",
-        "drupal/twig_vardumper": "^1.1",
+        "drupal/twig_vardumper": "2.2",
         "drupal/verf": "^1.0@beta",
         "drupal/video_embed_field": "^2.0",
         "drupal/views_block_area": "^1.0",
@@ -602,6 +601,7 @@
     },
     "extra": {
         "installer-types": [
+            "component",
             "bower-asset",
             "ckeditor-plugin",
             "npm-asset"
@@ -616,6 +616,7 @@
             "web/libraries/{$name}": [
                 "type:drupal-library",
                 "type:bower-asset",
+                "type:component",
                 "type:npm-asset",
                 "enyo/dropzone"
             ],
@@ -625,10 +626,44 @@
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
             "drush/Commands/contrib/{$name}": ["type:drupal-drush"]
         },
+        "drupal-core-project-message": {
+            "include-keys": [
+                "homepage",
+                "support"
+            ],
+            "post-create-project-cmd-message": [
+                "<bg=blue;fg=white>                                                         </>",
+                "<bg=blue;fg=white>  Congratulations, you’ve installed the Drupal codebase  </>",
+                "<bg=blue;fg=white>  from the drupal/legacy-project template!               </>",
+                "<bg=blue;fg=white>                                                         </>",
+                "",
+                "<bg=yellow;fg=black>Next steps</>:",
+                "  * Install the site: https://www.drupal.org/docs/8/install",
+                "  * Read the user guide: https://www.drupal.org/docs/user_guide/en/index.html",
+                "  * Get support: https://www.drupal.org/support",
+                "  * Get involved with the Drupal community:",
+                "      https://www.drupal.org/getting-involved",
+                "  * Remove the plugin that prints this message:",
+                "      composer remove drupal/core-project-message"
+            ]
+        },
+        "merge-plugin": {
+            "include": [
+                "modules/contrib/webform/composer.libraries.json"
+            ]
+        },
         "drupal-scaffold": {
             "initial": {
                 ".editorconfig": "../.editorconfig",
                 ".gitattributes": "../.gitattributes"
+            },
+            "locations": {
+                "web-root": "web/"
+            },
+            "file-mapping": {
+                "[web-root]/.htaccess": {
+                    "mode": "skip"
+                }
             }
         },
         "patches": {
