@@ -6,11 +6,14 @@ dependencies:
     - field.field.node.alert.field_active
     - field.field.node.alert.field_alert_body
     - field.field.node.alert.field_alert_level
+    - field.field.node.alert.field_alert_type
     - field.field.node.alert.field_expiration_date_alert
+    - field.field.node.alert.field_link
     - field.field.node.alert.field_not_dismissable
     - node.type.alert
   module:
     - datetime
+    - link
     - options
     - text
     - user
@@ -43,6 +46,13 @@ content:
     third_party_settings: {  }
     type: list_default
     region: content
+  field_alert_type:
+    weight: 110
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
   field_expiration_date_alert:
     weight: 107
     label: above
@@ -51,6 +61,18 @@ content:
       timezone_override: ''
     third_party_settings: {  }
     type: datetime_default
+    region: content
+  field_link:
+    weight: 109
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
     region: content
   field_not_dismissable:
     weight: 103
@@ -69,9 +91,9 @@ content:
     third_party_settings: {  }
   sharethis:
     weight: 10
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
   langcode: true
   search_api_excerpt: true
