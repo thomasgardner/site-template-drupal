@@ -4776,6 +4776,9 @@
                     "status": "covered",
                     "message": "Covered by Drupal's security advisory policy"
                 }
+            },
+            "patches_applied": {
+                "Issue with content moderation showing no method BaseFieldDefinition::createDuplicate": "https://www.drupal.org/files/issues/2020-01-03/3053633-moderation-state-field-giving-create-duplicate-error-9.patch"
             }
         },
         "installation-source": "dist",

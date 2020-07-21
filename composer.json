@@ -682,6 +682,9 @@
             "drupal/paragraphs" : {
                 "Integrity constraint violation: 1048 Column 'langcode' cannot be null" : "https://www.drupal.org/files/issues/2019-08-10/paragraphs-set_langcode_widgets-290139_updated.patch",
                 "Library items are not displayed when field_layout module is enabled": "https://www.drupal.org/files/issues/2020-02-04/library-items-are-not-displayed-when-field_layout-module-is-enabled-2949978-8.patch"
+            },
+            "drupal/entity_type_clone" : {
+                "Issue with content moderation showing no method BaseFieldDefinition::createDuplicate": "https://www.drupal.org/files/issues/2020-01-03/3053633-moderation-state-field-giving-create-duplicate-error-9.patch"
             }
         }
     }

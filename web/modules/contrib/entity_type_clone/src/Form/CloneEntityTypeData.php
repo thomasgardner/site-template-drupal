@@ -7,6 +7,7 @@ use Drupal\node\Entity\NodeType;
 use Drupal\paragraphs\Entity\ParagraphsType;
 use Drupal\profile\Entity\ProfileType;
 use Symfony\Component\HttpFoundation\RedirectResponse;
+use Drupal\Core\Entity\EntityInterface;
 
 /**
  * Class CloneEntityTypeData.
@@ -27,10 +28,15 @@ class CloneEntityTypeData {
     //Get the source field name.
     $sourceFieldName = $data['field']->getName();
     //Clone the field.
-    $targetFieldConfig = $data['field']->createDuplicate();
-    $targetFieldConfig->set('entity_type', $data['values']['show']['entity_type']);
-    $targetFieldConfig->set('bundle', $data['values']['clone_bundle_machine']);
-    $targetFieldConfig->save();
+    //Only create a duplicate of an entity if the field implements
+    //EntityInterface (as this is not guaranteed e.g. for Content moderation).
+    if ($data['field'] instanceof EntityInterface) {
+      //Clone the field.
+      $targetFieldConfig = $data['field']->createDuplicate();
+      $targetFieldConfig->set('entity_type', $data['values']['show']['entity_type']);
+      $targetFieldConfig->set('bundle', $data['values']['clone_bundle_machine']);
+      $targetFieldConfig->save();
+    }
     //Copy the form display
     EntityTypeCloneController::copyFieldDisplay('form', 'default', $data);
     $config_factory = \Drupal::configFactory();
