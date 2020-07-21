@@ -27,18 +27,18 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 1
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
   content_moderation_control:
-    weight: 2
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
   field_after_content:
     type: entity_reference_revisions_entity_view
-    weight: 4
+    weight: 3
     label: hidden
     settings:
       view_mode: default
@@ -46,17 +46,12 @@ content:
     third_party_settings: {  }
     region: content
   field_intro:
-    weight: 0
+    weight: 1
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
-  links:
-    weight: 3
-    region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
   field_content_bottom: true
   field_hero_content: true
@@ -65,4 +60,5 @@ hidden:
   field_section_title: true
   field_sidebar_content: true
   langcode: true
+  links: true
   sharethis: true
