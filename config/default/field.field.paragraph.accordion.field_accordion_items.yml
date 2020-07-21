@@ -12,7 +12,7 @@ id: paragraph.accordion.field_accordion_items
 field_name: field_accordion_items
 entity_type: paragraph
 bundle: accordion
-label: 'Accordion Items'
+label: 'Accordion Tabs'
 description: ''
 required: false
 translatable: false
@@ -81,5 +81,59 @@ settings:
         enabled: false
       wysiwyg:
         weight: 38
+        enabled: false
+      article_slideshow:
+        weight: 44
+        enabled: false
+      article_slideshow_item:
+        weight: 45
+        enabled: false
+      cta_buttons:
+        weight: 47
+        enabled: false
+      flexible_bg_image_block:
+        weight: 48
+        enabled: false
+      flexible_bg_image_blocks:
+        weight: 49
+        enabled: false
+      flexible_cta_block:
+        weight: 50
+        enabled: false
+      flexible_cta_blocks:
+        weight: 51
+        enabled: false
+      gridder:
+        weight: 53
+        enabled: false
+      gridder_item:
+        weight: 54
+        enabled: false
+      person_carousel:
+        weight: 61
+        enabled: false
+      quick_link_minimal:
+        weight: 63
+        enabled: false
+      quicktab_item:
+        weight: 64
+        enabled: false
+      quicktabs:
+        weight: 65
+        enabled: false
+      quote:
+        weight: 66
+        enabled: false
+      video_embed:
+        weight: 70
+        enabled: false
+      video_tab_carousel:
+        weight: 71
+        enabled: false
+      video_tab_item:
+        weight: 72
+        enabled: false
+      views:
+        weight: 73
         enabled: false
 field_type: entity_reference_revisions
