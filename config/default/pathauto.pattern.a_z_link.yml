@@ -1,0 +1,22 @@
+uuid: c0ac022d-c23e-468d-aa24-9e36c190ace9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: a_z_link
+label: 'A-Z Link'
+type: 'canonical_entities:node'
+pattern: 'links/[node:title]'
+selection_criteria:
+  f12dd4be-2876-4379-a463-97e69eae64fa:
+    id: node_type
+    bundles:
+      a_z_link: a_z_link
+    negate: false
+    context_mapping:
+      node: node
+    uuid: f12dd4be-2876-4379-a463-97e69eae64fa
+selection_logic: and
+weight: -5
+relationships: {  }

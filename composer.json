@@ -452,6 +452,7 @@
         "drupal-composer/drupal-scaffold": "^2.5",
         "drupal/address": "^1.4",
         "drupal/addtocalendar": "^3.1",
+        "drupal/admin_toolbar": "^2.3",
         "drupal/advupdate": "^1.0",
         "drupal/asset_injector": "^2.4",
         "drupal/auto_entitylabel": "^3.0",
