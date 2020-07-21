@@ -1,0 +1,21 @@
+uuid: 2fa09bbf-2cd2-40bd-91c2-81647bcb5e1a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date
+    - node.type.local_article
+  module:
+    - datetime
+id: node.local_article.field_date
+field_name: field_date
+entity_type: node
+bundle: local_article
+label: 'Publish Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

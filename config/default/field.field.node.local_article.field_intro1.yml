@@ -1,0 +1,21 @@
+uuid: 9f3e49aa-252c-4a90-9a12-f51f5f541119
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_intro1
+    - node.type.local_article
+  module:
+    - text
+id: node.local_article.field_intro1
+field_name: field_intro1
+entity_type: node
+bundle: local_article
+label: Intro1
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
