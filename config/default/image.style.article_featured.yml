@@ -1,0 +1,15 @@
+uuid: 50c7997c-abce-4c84-a50b-b74c0b4c69db
+langcode: en
+status: true
+dependencies: {  }
+name: article_featured
+label: 'Article Featured'
+effects:
+  8dde65e4-9410-4101-96e1-0884b177c638:
+    uuid: 8dde65e4-9410-4101-96e1-0884b177c638
+    id: image_scale
+    weight: 1
+    data:
+      width: 1440
+      height: null
+      upscale: false

@@ -3,23 +3,39 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.media.article_featured_image.field_caption
     - field.field.media.article_featured_image.field_media_image_9
-    - image.style.horizontal_styling
+    - image.style.article_featured
     - media.type.article_featured_image
   module:
+    - fences
     - image
 id: media.article_featured_image.default
 targetEntityType: media
 bundle: article_featured_image
 mode: default
 content:
+  field_caption:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
   field_media_image_9:
     weight: 0
     label: hidden
     settings:
-      image_style: horizontal_styling
+      image_style: article_featured
       image_link: ''
-    third_party_settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
     type: image
     region: content
 hidden:

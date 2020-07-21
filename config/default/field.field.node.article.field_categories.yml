@@ -1,29 +1,29 @@
-uuid: 262ff4d7-3de8-4dd7-8fc4-360ed688d8fc
+uuid: 26c399b5-242b-4e03-87eb-b5683ed92ed0
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_article_taxonomies
+    - field.storage.node.field_categories
     - node.type.article
-    - taxonomy.vocabulary.article_topic
-id: node.article.field_article_taxonomies
-field_name: field_article_taxonomies
+    - taxonomy.vocabulary.article_category
+id: node.article.field_categories
+field_name: field_categories
 entity_type: node
 bundle: article
-label: Topics
+label: Categories
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      article_topic: article_topic
+      article_category: article_category
     sort:
       field: name
       direction: asc
-    auto_create: true
-    auto_create_bundle: article_category
+    auto_create: false
+    auto_create_bundle: ''
 field_type: entity_reference

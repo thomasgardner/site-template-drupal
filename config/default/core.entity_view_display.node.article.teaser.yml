@@ -6,12 +6,17 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.article.body
     - field.field.node.article.field_article_taxonomies
+    - field.field.node.article.field_author
+    - field.field.node.article.field_categories
     - field.field.node.article.field_date
     - field.field.node.article.field_featured
+    - field.field.node.article.field_intro1
+    - field.field.node.article.field_intro2
     - field.field.node.article.field_media
     - field.field.node.article.field_meta_tags
     - field.field.node.article.field_migration_id
     - field.field.node.article.field_migration_url
+    - field.field.node.article.field_paragraphs_content
     - field.field.node.article.field_section_title
     - node.type.article
   module:
@@ -47,11 +52,16 @@ content:
     region: content
 hidden:
   field_article_taxonomies: true
+  field_author: true
+  field_categories: true
   field_date: true
   field_featured: true
+  field_intro1: true
+  field_intro2: true
   field_media: true
   field_meta_tags: true
   field_migration_id: true
   field_migration_url: true
+  field_paragraphs_content: true
   field_section_title: true
   langcode: true

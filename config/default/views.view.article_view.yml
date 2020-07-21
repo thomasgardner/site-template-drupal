@@ -2579,7 +2579,7 @@ display:
   block_5:
     display_plugin: block
     id: block_5
-    display_title: 'Related Articles'
+    display_title: 'Related News'
     position: 3
     display_options:
       display_extenders:
@@ -2911,7 +2911,7 @@ display:
         operator: AND
         groups:
           1: AND
-      title: 'Related Articles'
+      title: 'Related News'
       style:
         type: grid
         options:

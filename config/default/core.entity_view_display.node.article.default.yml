@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.field.node.article.body
     - field.field.node.article.field_article_taxonomies
+    - field.field.node.article.field_author
+    - field.field.node.article.field_categories
     - field.field.node.article.field_date
     - field.field.node.article.field_featured
     - field.field.node.article.field_intro1
@@ -17,6 +19,7 @@ dependencies:
     - field.field.node.article.field_section_title
     - node.type.article
   module:
+    - addtocalendar
     - datetime
     - entity_reference_revisions
     - fences
@@ -26,12 +29,9 @@ dependencies:
 third_party_settings:
   field_group:
     group_quote:
-      children:
-        - field_quote_text
-        - field_quote_author
-        - field_quote_details
+      children: {  }
       parent_name: ''
-      weight: 5
+      weight: 8
       format_type: html_element
       format_settings:
         id: ''
@@ -54,7 +54,7 @@ mode: default
 content:
   body:
     type: text_default
-    weight: 6
+    weight: 9
     region: content
     settings: {  }
     third_party_settings:
@@ -73,37 +73,91 @@ content:
     third_party_settings: {  }
   field_article_taxonomies:
     type: entity_reference_label
-    weight: 7
+    weight: 10
     region: content
     label: above
     settings:
       link: true
     third_party_settings: {  }
-  field_date:
-    weight: 8
-    label: above
+  field_author:
+    weight: 1
+    label: hidden
     settings:
-      format_type: medium
-      timezone_override: ''
+      link_to_entity: false
     third_party_settings: {  }
+    type: string
+    region: content
+  field_categories:
+    weight: 0
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_date:
+    weight: 2
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: site_format_1
+    third_party_settings:
+      addtocalendar:
+        addtocalendar_settings:
+          style: '0'
+          display_text: 'Add to Calendar'
+          atc_title:
+            field: token
+            tokenized: Title
+          atc_description:
+            field: token
+            tokenized: Description
+          atc_location:
+            field: token
+            tokenized: Location
+          atc_organizer:
+            field: token
+            tokenized: 'University of California, Santa Cruz'
+          atc_organizer_email:
+            field: token
+            tokenized: info@kwallcompany.com
+          atc_date_end:
+            field: token
+            tokenized: ''
+          atc_privacy: public
+          data_secure: auto
+          data_calendars:
+            iCalendar: 0
+            'Google Calendar': 0
+            Outlook: 0
+            'Outlook Online': 0
+            'Yahoo! Calendar': 0
+        addtocalendar_show: 0
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
     type: datetime_default
     region: content
   field_intro1:
-    weight: 1
+    weight: 4
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_intro2:
-    weight: 2
+    weight: 6
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_media:
-    weight: 3
+    weight: 5
     label: hidden
     settings:
       view_mode: default
@@ -120,7 +174,7 @@ content:
     region: content
   field_paragraphs_content:
     type: entity_reference_revisions_entity_view
-    weight: 4
+    weight: 7
     label: hidden
     settings:
       view_mode: default
@@ -128,7 +182,7 @@ content:
     third_party_settings: {  }
     region: content
   sharethis:
-    weight: 0
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
