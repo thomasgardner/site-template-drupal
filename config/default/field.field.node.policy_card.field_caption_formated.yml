@@ -1,0 +1,21 @@
+uuid: 6590d2db-a335-42d3-be96-666224dd9a92
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_caption_formated
+    - node.type.policy_card
+  module:
+    - text
+id: node.policy_card.field_caption_formated
+field_name: field_caption_formated
+entity_type: node
+bundle: policy_card
+label: Caption
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,21 @@
+uuid: 2af71914-88c2-4743-ac41-53104f0ff675
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date
+    - node.type.policy_card
+  module:
+    - datetime
+id: node.policy_card.field_date
+field_name: field_date
+entity_type: node
+bundle: policy_card
+label: 'Last updated'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime
