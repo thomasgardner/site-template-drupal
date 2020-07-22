@@ -1,9 +1,14 @@
 uuid: ec658589-2ba6-4187-b2fd-4d6e16e20c02
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - crop
+third_party_settings:
+  crop:
+    image_field: _none
 id: course_image
-label: 'Course Image'
+label: 'Zzz - Course Image'
 description: ''
 source: image
 queue_thumbnail_downloads: false

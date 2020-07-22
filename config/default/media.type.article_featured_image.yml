@@ -8,7 +8,7 @@ third_party_settings:
   crop:
     image_field: field_media_image_9
 id: article_featured_image
-label: 'Article Featured Image'
+label: 'Zzz - Article Featured Image'
 description: 'Use <em>Article Featured Image</em> for view page news center thumbnail image and single article featured image'
 source: image
 queue_thumbnail_downloads: false

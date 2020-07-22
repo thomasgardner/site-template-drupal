@@ -8,7 +8,7 @@ third_party_settings:
   crop:
     image_field: field_media_image_10
 id: inline_media
-label: 'Inline Media'
+label: 'Zzz - Inline Media'
 description: ''
 source: image
 queue_thumbnail_downloads: false

@@ -8,7 +8,7 @@ third_party_settings:
   crop:
     image_field: field_media_image_2
 id: hero_slide_image
-label: 'Hero Slide Image'
+label: 'Zzz - Hero Slide Image'
 description: 'Use <em>Hero Slide Image</em> for the single hero slide image or hero video thumbnail'
 source: image
 queue_thumbnail_downloads: false

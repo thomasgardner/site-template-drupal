@@ -1,0 +1,15 @@
+uuid: efc67cae-30f2-49b5-b7b9-55dba8e649f9
+langcode: en
+status: true
+dependencies: {  }
+name: default
+label: 'Default Image Style'
+effects:
+  0320e361-8a6e-4797-9a8b-b4f091f56508:
+    uuid: 0320e361-8a6e-4797-9a8b-b4f091f56508
+    id: image_scale
+    weight: 1
+    data:
+      width: 1440
+      height: null
+      upscale: false

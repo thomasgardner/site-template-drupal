@@ -8,7 +8,7 @@ third_party_settings:
   crop:
     image_field: field_media_image_7
 id: event_teaser_image
-label: 'Event Teaser Image'
+label: 'Zzz - Event Teaser Image'
 description: 'Use <em>Event Teaser Image</em> for view page event center thumbnail image'
 source: image
 queue_thumbnail_downloads: false

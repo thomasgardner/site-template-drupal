@@ -1,9 +1,14 @@
 uuid: c18c84ec-dbb3-4164-beb2-6af708790d73
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - crop
+third_party_settings:
+  crop:
+    image_field: _none
 id: gridder_icon
-label: 'Gridder Icon'
+label: 'Zzz - Gridder Icon'
 description: ''
 source: image
 queue_thumbnail_downloads: false

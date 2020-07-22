@@ -4,8 +4,11 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.media.media_library
+    - field.field.media.file.field_categories
     - field.field.media.file.field_media_file
     - media.type.file
+  module:
+    - file
 _core:
   default_config_hash: RFmywOcuem167havmD4VLgBTO1Swq9hyA-_f5aYTi8c
 id: media.file.media_library
@@ -13,24 +16,32 @@ targetEntityType: media
 bundle: file
 mode: media_library
 content:
-  langcode:
-    type: language_select
-    weight: 2
+  field_categories:
+    type: entity_reference_autocomplete_tags
+    weight: 1
     region: content
     settings:
-      include_locked: true
-    third_party_settings: {  }
-  name:
-    type: string_textfield
-    weight: 0
-    region: content
-    settings:
+      match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_media_file:
+    type: file_generic
+    weight: 0
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  replace_file:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   created: true
-  field_media_file: true
+  langcode: true
+  name: true
   path: true
   status: true
   uid: true

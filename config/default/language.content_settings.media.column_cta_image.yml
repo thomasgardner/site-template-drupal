@@ -1,0 +1,11 @@
+uuid: 9bd941ac-aa8c-469a-92c9-8e1106fac8f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.column_cta_image
+id: media.column_cta_image
+target_entity_type_id: media
+target_bundle: column_cta_image
+default_langcode: site_default
+language_alterable: false

@@ -8,7 +8,7 @@ third_party_settings:
   crop:
     image_field: field_media_image_6
 id: person_profile_image
-label: 'Profile Image'
+label: 'Zzz - Profile Image'
 description: 'Use <em>Profile Image</em> for single person profile image and directory image, organization, etc.'
 source: image
 queue_thumbnail_downloads: false

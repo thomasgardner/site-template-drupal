@@ -8,7 +8,7 @@ third_party_settings:
   crop:
     image_field: field_media_image_8
 id: event_featured_image
-label: 'Event Featured Image'
+label: 'Zzz - Event Featured Image'
 description: 'Use <em>Event Featured Image</em> for single events banner image'
 source: image
 queue_thumbnail_downloads: false

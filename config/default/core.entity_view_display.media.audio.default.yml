@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.media.audio.field_categories
     - field.field.media.audio.field_media_audio_file
     - media.type.audio
   module:
@@ -27,6 +28,7 @@ content:
     region: content
 hidden:
   created: true
+  field_categories: true
   langcode: true
   name: true
   thumbnail: true

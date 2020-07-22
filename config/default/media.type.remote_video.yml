@@ -1,7 +1,12 @@
 uuid: c16e0482-ec18-4ca1-b7c8-8d0036e5f0b4
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - crop
+third_party_settings:
+  crop:
+    image_field: null
 _core:
   default_config_hash: 2r_Yo2tYXnt7PLx1pnlr1JU3iHmnsoWFdzQFs2sUXGk
 id: remote_video
@@ -16,4 +21,5 @@ source_configuration:
     - YouTube
     - Vimeo
   source_field: field_media_oembed_video
-field_map: {  }
+field_map:
+  title: name

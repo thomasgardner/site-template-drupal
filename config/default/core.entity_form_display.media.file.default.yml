@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.media.file.field_categories
     - field.field.media.file.field_media_file
     - media.type.file
   module:
@@ -14,6 +15,16 @@ targetEntityType: media
 bundle: file
 mode: default
 content:
+  field_categories:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete_tags
+    region: content
   field_media_file:
     settings:
       progress_indicator: throbber
@@ -21,20 +32,14 @@ content:
     type: file_generic
     weight: 0
     region: content
-  langcode:
-    type: language_select
-    weight: 2
-    region: content
-    settings:
-      include_locked: true
-    third_party_settings: {  }
   replace_file:
-    weight: 1
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
   created: true
+  langcode: true
   moderation_state: true
   name: true
   path: true

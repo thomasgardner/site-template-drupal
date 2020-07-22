@@ -8,7 +8,7 @@ third_party_settings:
   crop:
     image_field: field_media_image_4
 id: interior_slideshow_slide
-label: 'Interior Slideshow Slide'
+label: 'Zzz - Interior Slideshow Slide'
 description: 'Use <em>Interior Slideshow Slide</em> for body single slide images'
 source: image
 queue_thumbnail_downloads: false

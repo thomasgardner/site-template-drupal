@@ -1,7 +1,12 @@
 uuid: 52f4480f-9e2f-4190-8aed-824e42902907
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - crop
+third_party_settings:
+  crop:
+    image_field: _none
 _core:
   default_config_hash: _Cj9j8iA9MZ3HWv7QEwv1Pdxni0UlWGKnMw3Ou0rlXo
 id: video
@@ -12,4 +17,5 @@ queue_thumbnail_downloads: false
 new_revision: true
 source_configuration:
   source_field: field_media_video_file
-field_map: {  }
+field_map:
+  name: name
