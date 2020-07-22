@@ -9,14 +9,15 @@ label: Articles
 type: 'canonical_entities:node'
 pattern: 'news/[node:title]'
 selection_criteria:
-  42464874-65f1-4589-aa8c-0caab7b493fe:
+  57d404e0-cbac-47bf-9dd0-e4d84e956255:
     id: node_type
     bundles:
       article: article
+      local_article: local_article
     negate: false
     context_mapping:
       node: node
-    uuid: 42464874-65f1-4589-aa8c-0caab7b493fe
+    uuid: 57d404e0-cbac-47bf-9dd0-e4d84e956255
 selection_logic: and
 weight: -7
 relationships: {  }
