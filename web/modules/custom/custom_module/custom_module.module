@@ -1,12 +1,15 @@
 <?php
 
+use Drupal\Core\Datetime\DrupalDateTime;
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Entity\EntityTypeInterface;
-use Drupal\views\ViewExecutable;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\media\Entity\Media;
 use Drupal\node\NodeInterface;
 use Drupal\paragraphs\Entity\Paragraph;
 use Drupal\taxonomy\Entity\Term;
-use \Drupal\Core\Entity\EntityInterface;
-use \Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\views\ViewExecutable;
 
 /**
  * Implements hook_help().
@@ -272,15 +275,15 @@ function custom_module_node_view(array &$build, EntityInterface $entity, EntityV
 
         date_default_timezone_set("UTC");
 
-        //Start time
+        //Start time.
         $start_time = strtotime($entity->get('field_start_date')->value);
-        $start_time = \Drupal\Core\Datetime\DrupalDateTime::createFromTimestamp($start_time);
+        $start_time = DrupalDateTime::createFromTimestamp($start_time);
 
         $start_time = $start_time->format('g:ia');
 
-        //End time
+        //End time.
         $end_time = strtotime($entity->get('field_end_date')->value);
-        $end_time = \Drupal\Core\Datetime\DrupalDateTime::createFromTimestamp($end_time);
+        $end_time = DrupalDateTime::createFromTimestamp($end_time);
 
         $end_time = $end_time->format('g:ia');
 
@@ -302,7 +305,7 @@ function custom_module_node_view(array &$build, EntityInterface $entity, EntityV
  */
 
 // Add Class if we have values in Exposed form
-function custom_module_form_views_exposed_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+function custom_module_form_views_exposed_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   $view = $form_state->getStorage('view');
   if ($view) {
     $inputs = $form_state->getUserInput();
@@ -322,6 +325,22 @@ function custom_module_form_views_exposed_form_alter(&$form, \Drupal\Core\Form\F
     if($view['view']->id() == 'faqs' && $view['view']->current_display == 'default' && $view['view']->ajaxEnabled()) {
       $currPathAlias = \Drupal::service('path.alias_manager')->getAliasByPath('/node/87');
       $form['#action'] = $currPathAlias;
+    }
+  }
+}
+
+/**
+ * Implements hook_entity_presave().
+ */
+function custom_module_entity_presave(EntityInterface $entity) {
+  // For better user experience set a media name the same as image title.
+  if ($entity instanceof Media) {
+    if ($entity->hasField('field_media_image') && !$entity->get('field_media_image')
+        ->isEmpty()) {
+      $image = $entity->get('field_media_image')->getValue()[0];
+      if ($image['title'] != '') {
+        $entity->set('name', $image['title']);
+      }
     }
   }
 }
