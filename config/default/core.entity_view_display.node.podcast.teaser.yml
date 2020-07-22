@@ -19,6 +19,7 @@ dependencies:
     - field.field.node.podcast.field_migration_url
     - field.field.node.podcast.field_paragraphs_content
     - field.field.node.podcast.field_section_title
+    - field.field.node.podcast.field_soundcloud
     - node.type.podcast
   module:
     - text
@@ -61,4 +62,5 @@ hidden:
   field_migration_url: true
   field_paragraphs_content: true
   field_section_title: true
+  field_soundcloud: true
   langcode: true
