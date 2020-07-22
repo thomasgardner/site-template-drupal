@@ -1,0 +1,27 @@
+uuid: 1090bbf6-82ff-4ca3-9e07-42872a56349a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: aliases_for_service_nodes
+label: 'Aliases for service nodes'
+type: 'canonical_entities:node'
+pattern: '[node:content-type]/[node:title]'
+selection_criteria:
+  331aa490-aac6-4aaa-9add-d4301dcaa58a:
+    id: node_type
+    bundles:
+      a_z_link: a_z_link
+      alert: alert
+      location: location
+      person: person
+      profile_card: profile_card
+      program: program
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 331aa490-aac6-4aaa-9add-d4301dcaa58a
+selection_logic: and
+weight: -10
+relationships: {  }
