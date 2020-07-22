@@ -1,4 +1,4 @@
-uuid: 029c7f4a-80f0-437b-b017-c133f45e0ae3
+uuid: 401ae137-85ee-49ba-a02d-e85cba14c387
 langcode: en
 status: true
 dependencies:
@@ -7,10 +7,8 @@ dependencies:
 id: paragraph.field_other_ucsc_campus_affiliat
 field_name: field_other_ucsc_campus_affiliat
 entity_type: paragraph
-type: string
+type: string_long
 settings:
-  max_length: 255
-  is_ascii: false
   case_sensitive: false
 module: core
 locked: false

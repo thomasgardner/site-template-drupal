@@ -1,17 +1,17 @@
-uuid: 9c6302c5-6f67-4ae8-871f-4d577f3f24d8
+uuid: 397d9cf1-4954-4232-9826-cfe678744235
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_website
+    - field.storage.paragraph.field_websites
     - paragraphs.paragraphs_type.profile_card_details_fields
   module:
     - link
-id: paragraph.profile_card_details_fields.field_website
-field_name: field_website
+id: paragraph.profile_card_details_fields.field_websites
+field_name: field_websites
 entity_type: paragraph
 bundle: profile_card_details_fields
-label: Website
+label: Websites
 description: ''
 required: false
 translatable: false

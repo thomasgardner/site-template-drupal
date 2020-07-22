@@ -1,15 +1,16 @@
-uuid: d099fef4-7511-4ba0-b7f2-be3e25820708
+uuid: cfba1743-669f-4a96-b385-4217a624187d
 langcode: en
 status: true
 dependencies:
   module:
+    - link
     - paragraphs
-id: paragraph.field_additional_email
-field_name: field_additional_email
+id: paragraph.field_websites
+field_name: field_websites
 entity_type: paragraph
-type: email
+type: link
 settings: {  }
-module: core
+module: link
 locked: false
 cardinality: -1
 translatable: true

@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.profile_card_details_fields.field__biography_education
     - field.field.paragraph.profile_card_details_fields.field_additional_email
     - field.field.paragraph.profile_card_details_fields.field_additional_locations
     - field.field.paragraph.profile_card_details_fields.field_areas_of_expertise
@@ -15,7 +16,7 @@ dependencies:
     - field.field.paragraph.profile_card_details_fields.field_other_ucsc_campus_affiliat
     - field.field.paragraph.profile_card_details_fields.field_phone
     - field.field.paragraph.profile_card_details_fields.field_research_interests
-    - field.field.paragraph.profile_card_details_fields.field_website
+    - field.field.paragraph.profile_card_details_fields.field_websites
     - paragraphs.paragraphs_type.profile_card_details_fields
   module:
     - fences
@@ -26,6 +27,13 @@ targetEntityType: paragraph
 bundle: profile_card_details_fields
 mode: default
 content:
+  field__biography_education:
+    weight: 13
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
   field_additional_email:
     weight: 3
     label: inline
@@ -112,11 +120,10 @@ content:
     region: content
   field_other_ucsc_campus_affiliat:
     weight: 4
-    label: inline
-    settings:
-      link_to_entity: false
+    label: above
+    settings: {  }
     third_party_settings: {  }
-    type: string
+    type: basic_string
     region: content
   field_phone:
     weight: 0
@@ -134,9 +141,9 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-  field_website:
+  field_websites:
     weight: 6
-    label: inline
+    label: above
     settings:
       trim_length: 80
       url_only: false

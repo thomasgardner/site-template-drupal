@@ -1,16 +1,16 @@
-uuid: 3ab0639e-4d9b-4be4-a9af-80197aaa3862
+uuid: 54057941-ab5c-43ed-b584-2b56bcd9934f
 langcode: en
 status: true
 dependencies:
   module:
-    - link
     - paragraphs
-id: paragraph.field_website
-field_name: field_website
+id: paragraph.field__biography_education
+field_name: field__biography_education
 entity_type: paragraph
-type: link
-settings: {  }
-module: link
+type: string_long
+settings:
+  case_sensitive: false
+module: core
 locked: false
 cardinality: 1
 translatable: true

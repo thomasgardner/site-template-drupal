@@ -1,15 +1,15 @@
-uuid: 6e182889-1a57-48fd-8e7c-4e532072971b
+uuid: dbc314cc-bae5-40e3-8acb-0a6a8e31fa63
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_other_ucsc_campus_affiliat
+    - field.storage.paragraph.field__biography_education
     - paragraphs.paragraphs_type.profile_card_details_fields
-id: paragraph.profile_card_details_fields.field_other_ucsc_campus_affiliat
-field_name: field_other_ucsc_campus_affiliat
+id: paragraph.profile_card_details_fields.field__biography_education
+field_name: field__biography_education
 entity_type: paragraph
 bundle: profile_card_details_fields
-label: 'Other UCSC Campus Affiliation'
+label: ' Biography, Education and Training'
 description: ''
 required: false
 translatable: false
