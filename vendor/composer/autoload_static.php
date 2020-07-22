@@ -162,6 +162,7 @@ class ComposerStaticInitDrupal8
         'F' => 
         array (
             'FontLib\\' => 8,
+            'FileEye\\MimeMap\\' => 16,
         ),
         'E' => 
         array (
@@ -173,6 +174,7 @@ class ComposerStaticInitDrupal8
             'Drush\\Internal\\' => 15,
             'Drush\\' => 6,
             'Drupal\\wysiwyg_template\\' => 24,
+            'Drupal\\sophron\\' => 15,
             'Drupal\\Driver\\' => 14,
             'Drupal\\Core\\' => 12,
             'Drupal\\Console\\Core\\' => 20,
@@ -507,6 +509,10 @@ class ComposerStaticInitDrupal8
         array (
             0 => __DIR__ . '/..' . '/phenx/php-font-lib/src/FontLib',
         ),
+        'FileEye\\MimeMap\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fileeye/mimemap/src',
+        ),
         'Eluceo\\iCal\\' => 
         array (
             0 => __DIR__ . '/..' . '/eluceo/ical/src',
@@ -526,6 +532,10 @@ class ComposerStaticInitDrupal8
         'Drupal\\wysiwyg_template\\' => 
         array (
             0 => __DIR__ . '/../..' . '/web/modules/contrib/wysiwyg_template/src',
+        ),
+        'Drupal\\sophron\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/web/modules/contrib/sophron/src',
         ),
         'Drupal\\Driver\\' => 
         array (
@@ -3507,6 +3517,13 @@ class ComposerStaticInitDrupal8
         'Drupal\\Core\\Validation\\Plugin\\Validation\\Constraint\\UniqueFieldValueValidator' => __DIR__ . '/../..' . '/web/core/lib/Drupal/Core/Validation/Plugin/Validation/Constraint/UniqueFieldValueValidator.php',
         'Drupal\\Core\\Validation\\Plugin\\Validation\\Constraint\\UuidConstraint' => __DIR__ . '/../..' . '/web/core/lib/Drupal/Core/Validation/Plugin/Validation/Constraint/UuidConstraint.php',
         'Drupal\\Core\\Validation\\TranslatorInterface' => __DIR__ . '/../..' . '/web/core/lib/Drupal/Core/Validation/TranslatorInterface.php',
+        'Drupal\\sophron\\CoreExtensionMimeTypeGuesserExtended' => __DIR__ . '/../..' . '/web/modules/contrib/sophron/src/CoreExtensionMimeTypeGuesserExtended.php',
+        'Drupal\\sophron\\EventSubscriber\\SophronEventSubscriber' => __DIR__ . '/../..' . '/web/modules/contrib/sophron/src/EventSubscriber/SophronEventSubscriber.php',
+        'Drupal\\sophron\\Event\\MapEvent' => __DIR__ . '/../..' . '/web/modules/contrib/sophron/src/Event/MapEvent.php',
+        'Drupal\\sophron\\Form\\SettingsForm' => __DIR__ . '/../..' . '/web/modules/contrib/sophron/src/Form/SettingsForm.php',
+        'Drupal\\sophron\\Map\\DrupalMap' => __DIR__ . '/../..' . '/web/modules/contrib/sophron/src/Map/DrupalMap.php',
+        'Drupal\\sophron\\MimeMapManager' => __DIR__ . '/../..' . '/web/modules/contrib/sophron/src/MimeMapManager.php',
+        'Drupal\\sophron\\MimeMapManagerInterface' => __DIR__ . '/../..' . '/web/modules/contrib/sophron/src/MimeMapManagerInterface.php',
         'Drupal\\wysiwyg_template\\Controller\\TemplateController' => __DIR__ . '/../..' . '/web/modules/contrib/wysiwyg_template/src/Controller/TemplateController.php',
         'Drupal\\wysiwyg_template\\Entity\\Template' => __DIR__ . '/../..' . '/web/modules/contrib/wysiwyg_template/src/Entity/Template.php',
         'Drupal\\wysiwyg_template\\Form\\TemplateDeleteForm' => __DIR__ . '/../..' . '/web/modules/contrib/wysiwyg_template/src/Form/TemplateDeleteForm.php',
@@ -3816,6 +3833,20 @@ class ComposerStaticInitDrupal8
         'Eluceo\\iCal\\Util\\ComponentUtil' => __DIR__ . '/..' . '/eluceo/ical/src/Util/ComponentUtil.php',
         'Eluceo\\iCal\\Util\\DateUtil' => __DIR__ . '/..' . '/eluceo/ical/src/Util/DateUtil.php',
         'Error' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/Error.php',
+        'FileEye\\MimeMap\\Command\\UpdateCommand' => __DIR__ . '/..' . '/fileeye/mimemap/src/Command/UpdateCommand.php',
+        'FileEye\\MimeMap\\Extension' => __DIR__ . '/..' . '/fileeye/mimemap/src/Extension.php',
+        'FileEye\\MimeMap\\MalformedTypeException' => __DIR__ . '/..' . '/fileeye/mimemap/src/MalformedTypeException.php',
+        'FileEye\\MimeMap\\MapHandler' => __DIR__ . '/..' . '/fileeye/mimemap/src/MapHandler.php',
+        'FileEye\\MimeMap\\MapUpdater' => __DIR__ . '/..' . '/fileeye/mimemap/src/MapUpdater.php',
+        'FileEye\\MimeMap\\Map\\AbstractMap' => __DIR__ . '/..' . '/fileeye/mimemap/src/Map/AbstractMap.php',
+        'FileEye\\MimeMap\\Map\\BaseMap' => __DIR__ . '/..' . '/fileeye/mimemap/src/Map/BaseMap.php',
+        'FileEye\\MimeMap\\Map\\DefaultMap' => __DIR__ . '/..' . '/fileeye/mimemap/src/Map/DefaultMap.php',
+        'FileEye\\MimeMap\\Map\\EmptyMap' => __DIR__ . '/..' . '/fileeye/mimemap/src/Map/EmptyMap.php',
+        'FileEye\\MimeMap\\MappingException' => __DIR__ . '/..' . '/fileeye/mimemap/src/MappingException.php',
+        'FileEye\\MimeMap\\Type' => __DIR__ . '/..' . '/fileeye/mimemap/src/Type.php',
+        'FileEye\\MimeMap\\TypeParameter' => __DIR__ . '/..' . '/fileeye/mimemap/src/TypeParameter.php',
+        'FileEye\\MimeMap\\TypeParser' => __DIR__ . '/..' . '/fileeye/mimemap/src/TypeParser.php',
+        'FileEye\\MimeMap\\Version' => __DIR__ . '/..' . '/fileeye/mimemap/src/Version.php',
         'FontLib\\AdobeFontMetrics' => __DIR__ . '/..' . '/phenx/php-font-lib/src/FontLib/AdobeFontMetrics.php',
         'FontLib\\Autoloader' => __DIR__ . '/..' . '/phenx/php-font-lib/src/FontLib/Autoloader.php',
         'FontLib\\BinaryStream' => __DIR__ . '/..' . '/phenx/php-font-lib/src/FontLib/BinaryStream.php',
