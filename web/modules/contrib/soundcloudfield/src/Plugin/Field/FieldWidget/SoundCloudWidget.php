@@ -103,7 +103,7 @@ class SoundCloudWidget extends WidgetBase {
   /**
    * Form element validation handler for ...().
    */
-  function validateSoundCloudUriElement(&$element, FormStateInterface $form_state, $form) {
+  public static function validateSoundCloudUriElement(&$element, FormStateInterface $form_state, $form) {
     $input = $element['#value'];
 
   }
