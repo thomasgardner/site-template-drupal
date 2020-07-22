@@ -1,0 +1,64 @@
+uuid: 4d07d6ed-82e9-456a-ad9e-c9609cdd3f9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.podcast.body
+    - field.field.node.podcast.field_article_taxonomies
+    - field.field.node.podcast.field_author
+    - field.field.node.podcast.field_categories
+    - field.field.node.podcast.field_date
+    - field.field.node.podcast.field_featured
+    - field.field.node.podcast.field_intro1
+    - field.field.node.podcast.field_intro2
+    - field.field.node.podcast.field_link
+    - field.field.node.podcast.field_media
+    - field.field.node.podcast.field_meta_tags
+    - field.field.node.podcast.field_migration_id
+    - field.field.node.podcast.field_migration_url
+    - field.field.node.podcast.field_paragraphs_content
+    - field.field.node.podcast.field_section_title
+    - node.type.podcast
+  module:
+    - text
+    - user
+id: node.podcast.teaser
+targetEntityType: node
+bundle: podcast
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    weight: 0
+    region: content
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    label: hidden
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  sharethis:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_article_taxonomies: true
+  field_author: true
+  field_categories: true
+  field_date: true
+  field_featured: true
+  field_intro1: true
+  field_intro2: true
+  field_link: true
+  field_media: true
+  field_meta_tags: true
+  field_migration_id: true
+  field_migration_url: true
+  field_paragraphs_content: true
+  field_section_title: true
+  langcode: true

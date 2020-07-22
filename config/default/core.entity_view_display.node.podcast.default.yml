@@ -1,0 +1,194 @@
+uuid: 9c488dad-e49c-498d-b3fc-8e5632329a15
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.podcast.body
+    - field.field.node.podcast.field_article_taxonomies
+    - field.field.node.podcast.field_author
+    - field.field.node.podcast.field_categories
+    - field.field.node.podcast.field_date
+    - field.field.node.podcast.field_featured
+    - field.field.node.podcast.field_intro1
+    - field.field.node.podcast.field_intro2
+    - field.field.node.podcast.field_link
+    - field.field.node.podcast.field_media
+    - field.field.node.podcast.field_meta_tags
+    - field.field.node.podcast.field_migration_id
+    - field.field.node.podcast.field_migration_url
+    - field.field.node.podcast.field_paragraphs_content
+    - field.field.node.podcast.field_section_title
+    - node.type.podcast
+  module:
+    - addtocalendar
+    - datetime
+    - entity_reference_revisions
+    - fences
+    - link
+    - text
+    - user
+id: node.podcast.default
+targetEntityType: node
+bundle: podcast
+mode: default
+content:
+  body:
+    type: text_default
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: mb-5
+        fences_label_tag: div
+        fences_label_classes: ''
+    label: hidden
+  field_article_taxonomies:
+    type: entity_reference_label
+    weight: 9
+    region: content
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_author:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_categories:
+    weight: 0
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_date:
+    weight: 2
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: site_format_1
+    third_party_settings:
+      addtocalendar:
+        addtocalendar_settings:
+          style: '0'
+          display_text: 'Add to Calendar'
+          atc_title:
+            field: token
+            tokenized: Title
+          atc_description:
+            field: token
+            tokenized: Description
+          atc_location:
+            field: token
+            tokenized: Location
+          atc_organizer:
+            field: token
+            tokenized: 'University of California, Santa Cruz'
+          atc_organizer_email:
+            field: token
+            tokenized: info@kwallcompany.com
+          atc_date_end:
+            field: token
+            tokenized: ''
+          atc_privacy: public
+          data_secure: auto
+          data_calendars:
+            iCalendar: '0'
+            'Google Calendar': '0'
+            Outlook: '0'
+            'Outlook Online': '0'
+            'Yahoo! Calendar': '0'
+        addtocalendar_show: '0'
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    type: datetime_default
+    region: content
+  field_intro1:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_intro2:
+    weight: 6
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_link:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      rel: nofollow
+      target: _blank
+      url_only: false
+      url_plain: false
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    type: link
+    region: content
+  field_media:
+    weight: 5
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: mb-4
+        fences_label_tag: div
+        fences_label_classes: ''
+    type: entity_reference_entity_view
+    region: content
+  field_paragraphs_content:
+    type: entity_reference_revisions_entity_view
+    weight: 7
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  sharethis:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_featured: true
+  field_meta_tags: true
+  field_migration_id: true
+  field_migration_url: true
+  field_section_title: true
+  langcode: true

@@ -1,0 +1,21 @@
+uuid: 98f5565a-6eba-4048-b600-78f47e9edf4d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_intro1
+    - node.type.podcast
+  module:
+    - text
+id: node.podcast.field_intro1
+field_name: field_intro1
+entity_type: node
+bundle: podcast
+label: Intro1
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

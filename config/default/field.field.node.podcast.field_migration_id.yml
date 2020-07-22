@@ -1,0 +1,19 @@
+uuid: cbe90b8a-294c-496c-bcc4-78a0fdb4ac0a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_migration_id
+    - node.type.podcast
+id: node.podcast.field_migration_id
+field_name: field_migration_id
+entity_type: node
+bundle: podcast
+label: 'Migration ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

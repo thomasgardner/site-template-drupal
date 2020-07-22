@@ -1,0 +1,29 @@
+uuid: 1ff4bfc5-ad68-4900-873e-38ca7f4bd5d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_article_taxonomies
+    - node.type.podcast
+    - taxonomy.vocabulary.article_topic
+id: node.podcast.field_article_taxonomies
+field_name: field_article_taxonomies
+entity_type: node
+bundle: podcast
+label: Topics
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      article_topic: article_topic
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: article_category
+field_type: entity_reference
