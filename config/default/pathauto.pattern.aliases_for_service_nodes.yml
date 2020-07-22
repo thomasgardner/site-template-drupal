@@ -9,11 +9,12 @@ label: 'Aliases for service nodes'
 type: 'canonical_entities:node'
 pattern: '[node:content-type]/[node:title]'
 selection_criteria:
-  331aa490-aac6-4aaa-9add-d4301dcaa58a:
+  b4728246-9bbe-4f51-82e7-22c948e7f63d:
     id: node_type
     bundles:
-      a_z_link: a_z_link
       alert: alert
+      a_z_link: a_z_link
+      job_posting_card: job_posting_card
       location: location
       person: person
       profile_card: profile_card
@@ -21,7 +22,7 @@ selection_criteria:
     negate: false
     context_mapping:
       node: node
-    uuid: 331aa490-aac6-4aaa-9add-d4301dcaa58a
+    uuid: b4728246-9bbe-4f51-82e7-22c948e7f63d
 selection_logic: and
 weight: -10
 relationships: {  }

@@ -1,0 +1,34 @@
+uuid: 2fe65792-41f1-47d8-b886-a23d8815bf23
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.job_posting_card.field_date
+    - field.field.node.job_posting_card.field_date_closing
+    - field.field.node.job_posting_card.field_job_category
+    - field.field.node.job_posting_card.field_job_number
+    - node.type.job_posting_card
+  module:
+    - user
+id: node.job_posting_card.teaser
+targetEntityType: node
+bundle: job_posting_card
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  sharethis:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_date: true
+  field_date_closing: true
+  field_job_category: true
+  field_job_number: true
+  langcode: true

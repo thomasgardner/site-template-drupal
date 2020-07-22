@@ -1,0 +1,19 @@
+uuid: 4a0e865f-d15a-4fb0-88c8-b7b8c390e79b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_job_number
+    - node.type.job_posting_card
+id: node.job_posting_card.field_job_number
+field_name: field_job_number
+entity_type: node
+bundle: job_posting_card
+label: 'Job Number'
+description: 'Looks like: <code>JPF00505-18</code>.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

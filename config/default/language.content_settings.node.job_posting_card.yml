@@ -1,0 +1,11 @@
+uuid: 474faef3-8bcb-4b3d-93d8-c8fb8d9ec44b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.job_posting_card
+id: node.job_posting_card
+target_entity_type_id: node
+target_bundle: job_posting_card
+default_langcode: site_default
+language_alterable: false
