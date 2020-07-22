@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_image
-    - media.type.hero_banner_image
+    - media.type.image
     - paragraphs.paragraphs_type.hero_banner
 id: paragraph.hero_banner.field_image
 field_name: field_image
@@ -20,7 +20,7 @@ settings:
   handler: 'default:media'
   handler_settings:
     target_bundles:
-      hero_banner_image: hero_banner_image
+      image: image
     sort:
       field: _none
     auto_create: false

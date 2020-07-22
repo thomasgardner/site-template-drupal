@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_image
-    - media.type.hero_slide_image
+    - media.type.image
     - paragraphs.paragraphs_type.hero_slide
 id: paragraph.hero_slide.field_image
 field_name: field_image
@@ -20,9 +20,9 @@ settings:
   handler: 'default:media'
   handler_settings:
     target_bundles:
-      hero_slide_image: hero_slide_image
+      image: image
     sort:
       field: _none
     auto_create: false
-    auto_create_bundle: ''
+    auto_create_bundle: image
 field_type: entity_reference

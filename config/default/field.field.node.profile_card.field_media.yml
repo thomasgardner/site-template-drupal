@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_media
-    - media.type.person_profile_image
+    - media.type.image
     - node.type.profile_card
 id: node.profile_card.field_media
 field_name: field_media
@@ -20,9 +20,9 @@ settings:
   handler: 'default:media'
   handler_settings:
     target_bundles:
-      person_profile_image: person_profile_image
+      image: image
     sort:
       field: _none
     auto_create: false
-    auto_create_bundle: ''
+    auto_create_bundle: image
 field_type: entity_reference

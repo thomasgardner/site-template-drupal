@@ -12,10 +12,10 @@ dependencies:
     - field.field.paragraph.hero_slide.field_webm
     - paragraphs.paragraphs_type.hero_slide
   module:
-    - entity_browser_entity_form
     - file
-    - inline_entity_form
     - link
+    - media_library
+    - media_library_edit
 id: paragraph.hero_slide.default
 targetEntityType: paragraph
 bundle: hero_slide
@@ -32,20 +32,11 @@ content:
   field_image:
     weight: 0
     settings:
-      form_mode: default
-      label_singular: ''
-      label_plural: ''
-      allow_new: true
-      allow_existing: true
-      match_operator: CONTAINS
-      override_labels: false
-      collapsible: false
-      collapsed: false
-      allow_duplicate: false
+      media_types: {  }
     third_party_settings:
-      entity_browser_entity_form:
-        entity_browser_id: media_entity_browser
-    type: inline_entity_form_complex
+      media_library_edit:
+        show_edit: '1'
+    type: media_library_widget
     region: content
   field_links:
     weight: 6
