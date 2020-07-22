@@ -1,0 +1,51 @@
+uuid: 6d6acd03-a3bd-4387-8580-65d5adc1e415
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.major_card.field_link
+    - field.field.node.major_card.field_media
+    - image.style.major_card
+    - node.type.major_card
+  module:
+    - fences
+    - link
+    - media
+    - user
+id: node.major_card.default
+targetEntityType: node
+bundle: major_card
+mode: default
+content:
+  field_link:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_media:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: major_card
+      image_link: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    type: media_thumbnail
+    region: content
+hidden:
+  langcode: true
+  links: true
+  sharethis: true

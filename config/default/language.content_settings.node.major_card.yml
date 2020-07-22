@@ -1,0 +1,11 @@
+uuid: ce53a662-cd71-46fb-8cb3-29a41ed91fb4
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.major_card
+id: node.major_card
+target_entity_type_id: node
+target_bundle: major_card
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,30 @@
+uuid: fd5f3c5a-4c33-4efa-bd07-6c4df190259b
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.major_card.field_link
+    - field.field.node.major_card.field_media
+    - node.type.major_card
+  module:
+    - user
+id: node.major_card.teaser
+targetEntityType: node
+bundle: major_card
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  sharethis:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_link: true
+  field_media: true
+  langcode: true
