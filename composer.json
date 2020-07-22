@@ -520,6 +520,7 @@
         "drupal/sharethis": "^2.0@beta",
         "drupal/smart_ip": "^3.6",
         "drupal/smtp": "^1.0",
+        "drupal/soundcloudfield": "^1.0@alpha",
         "drupal/switch_page_theme": "^1.0",
         "drupal/tb_megamenu": "1.x-dev",
         "drupal/twig_field_value": "^1.1",
@@ -722,6 +723,10 @@
             },
             "drupal/entity_type_clone" : {
                 "Issue with content moderation showing no method BaseFieldDefinition::createDuplicate": "https://www.drupal.org/files/issues/2020-01-03/3053633-moderation-state-field-giving-create-duplicate-error-9.patch"
+            },
+            "drupal/soundcloudfield" : {
+                "Embed stopped working, update oembed URL to https://": "https://www.drupal.org/files/issues/2019-08-15/soundcloud-oembed_https-3075203-2-D8.patch",
+                "Avoid using curl, use the drupal client instead": "https://www.drupal.org/files/issues/2020-02-10/3111931-4.patch"
             }
         }
     }
