@@ -20,54 +20,52 @@ settings:
             - Bold
             - Italic
         -
+          name: Paste
+          items:
+            - Paste
+            - PasteText
+            - PasteFromWord
+        -
           name: Linking
           items:
             - DrupalLink
             - DrupalUnlink
         -
-          name: Media
-          items:
-            - Blockquote
-            - node
-            - file_browser
-        -
-          name: 'Block Formatting'
-          items:
-            - Format
-        -
-          name: Tools
-          items:
-            - TemplateSelector
-            - Source
-      -
-        -
-          name: 'Font Styling'
-          items:
-            - Styles
-        -
-          name: Align
-          items:
-            - Outdent
-            - Indent
-            - JustifyLeft
-            - JustifyCenter
-            - JustifyRight
-            - JustifyBlock
-        -
-          name: Lists
+          name: List
           items:
             - BulletedList
             - NumberedList
+        -
+          name: Align
+          items:
+            - JustifyLeft
+            - JustifyCenter
+        -
+          name: Media
+          items:
+            - Blockquote
+            - DrupalMediaLibrary
+        -
+          name: Tools
+          items:
+            - Source
   plugins:
+    language:
+      language_list: un
     stylescombo:
       styles: ''
     drupallink:
       linkit_enabled: true
       linkit_profile: default
-    language:
-      language_list: un
     autoembed:
       status: ''
+    video_embed:
+      defaults:
+        children:
+          autoplay: true
+          responsive: true
+          width: '854'
+          height: '480'
 image_upload:
   status: true
   scheme: public

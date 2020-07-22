@@ -1,17 +1,15 @@
 uuid: 09c00843-7e47-4a7b-816a-35025e983a88
 langcode: en
 status: true
-dependencies:
-  module:
-    - focal_point
+dependencies: {  }
 name: inline_media
-label: 'Inline Media (800x600)'
+label: 'Inline Media Large'
 effects:
-  5973c6fd-23f2-4245-93ee-8ce0fd7706d6:
-    uuid: 5973c6fd-23f2-4245-93ee-8ce0fd7706d6
-    id: focal_point_scale_and_crop
-    weight: 1
+  83bf5d15-8bcf-4f9d-b7b1-f468b631dd9d:
+    uuid: 83bf5d15-8bcf-4f9d-b7b1-f468b631dd9d
+    id: image_scale
+    weight: 2
     data:
-      width: 800
-      height: 600
-      crop_type: focal_point
+      width: 996
+      height: null
+      upscale: false

@@ -2,10 +2,18 @@ uuid: 49875412-2055-4398-96a7-e85a45d8759a
 langcode: en
 status: true
 dependencies:
+  config:
+    - core.entity_view_mode.media.inline_content_large
+    - core.entity_view_mode.media.inline_content_medium
+    - core.entity_view_mode.media.inline_content_small
   module:
+    - ckeditor_media_embed
     - editor
     - entity_embed
     - linkit
+    - media
+    - video_embed_wysiwyg
+    - wysiwyg_template_core
 _core:
   default_config_hash: P8ddpAIKtawJDi5SzOwCzVnnNYqONewSTJ6Xn0dW_aQ
 name: 'Basic HTML'
@@ -16,51 +24,105 @@ filters:
     id: filter_html
     provider: filter
     status: true
-    weight: -10
+    weight: -50
     settings:
-      allowed_html: '<em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <p> <br> <span> <img src alt height width data-entity-type data-entity-uuid data-align data-caption> <a href hreflang data-entity-substitution data-entity-type data-entity-uuid title> <drupal-entity data-entity-type data-entity-uuid data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button>'
+      allowed_html: '<a href hreflang target class id name rel title data-*> <em style class> <strong style class> <cite> <blockquote cite> <code> <i class> <ul type class> <ol start type class> <li class> <dl class> <dt class> <dd class> <h2 id class style > <h3 id class style> <h4 id class style> <h5 id class style> <h6 id class style> <s> <sup> <sub> <img src alt title width height class style data-*> <table align border class cellpadding cellspacing dir id style width> <caption> <tbody> <thead> <tfoot> <th abbr align class id colspan rowspan style valign> <td class colspan rowspan style valign> <tr> <hr> <br> <pre> <div id class data-* aria-* style> <p class style> <image style data-*> <label> <iframe width height src class id allowfullscreen data-*> <select class id name style> <option selected value> <button onclick id class name type data-* aria-* style> <span class style> <figure> <figcaption> <input> <u> <small> <script> <style> <drupal-media data-entity-type data-entity-uuid data-view-mode data-caption data-align alt title data-entity-embed-display data-entity-embed-settings data-entity-embed-display-settings data-embed-button data-langcode data-*>'
       filter_html_help: false
       filter_html_nofollow: false
   filter_align:
     id: filter_align
     provider: filter
     status: true
-    weight: 7
+    weight: -47
     settings: {  }
   filter_caption:
     id: filter_caption
     provider: filter
     status: true
-    weight: 8
+    weight: -46
     settings: {  }
   filter_html_image_secure:
     id: filter_html_image_secure
     provider: filter
     status: true
-    weight: 9
+    weight: -48
     settings: {  }
   editor_file_reference:
     id: editor_file_reference
     provider: editor
     status: true
-    weight: 11
+    weight: -44
     settings: {  }
   entity_embed:
     id: entity_embed
     provider: entity_embed
+    status: false
+    weight: -41
+    settings: {  }
+  media_embed:
+    id: media_embed
+    provider: media
     status: true
-    weight: 0
+    weight: -45
+    settings:
+      default_view_mode: inline_content_medium
+      allowed_media_types:
+        audio: audio
+        file: file
+        image: image
+        remote_video: remote_video
+        video: video
+      allowed_view_modes:
+        inline_content_large: inline_content_large
+        inline_content_medium: inline_content_medium
+        inline_content_small: inline_content_small
+  filter_ckeditor_media_embed:
+    id: filter_ckeditor_media_embed
+    provider: ckeditor_media_embed
+    status: false
+    weight: -42
+    settings: {  }
+  filter_html_escape:
+    id: filter_html_escape
+    provider: filter
+    status: false
+    weight: -43
+    settings: {  }
+  filter_url:
+    id: filter_url
+    provider: filter
+    status: false
+    weight: -39
+    settings:
+      filter_url_length: 72
+  filter_htmlcorrector:
+    id: filter_htmlcorrector
+    provider: filter
+    status: true
+    weight: -37
     settings: {  }
   filter_autop:
     id: filter_autop
     provider: filter
-    status: true
-    weight: 0
+    status: false
+    weight: -40
     settings: {  }
   linkit:
     id: linkit
     provider: linkit
     status: true
-    weight: 0
+    weight: -49
     settings:
       title: true
+  video_embed_wysiwyg:
+    id: video_embed_wysiwyg
+    provider: video_embed_wysiwyg
+    status: false
+    weight: -38
+    settings: {  }
+  filter_wysiwyg_cleanup:
+    id: filter_wysiwyg_cleanup
+    provider: wysiwyg_template_core
+    status: false
+    weight: -36
+    settings: {  }
