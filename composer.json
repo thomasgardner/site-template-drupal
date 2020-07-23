@@ -743,6 +743,9 @@
             },
             "drupal/fontawesome": {
                 "Allow to use Brand icons in CKeditor": "https://www.drupal.org/files/issues/2020-05-26/fontawesome-allow-to-use-brand-icons-in-cKeditor-3142962-2.patch"
+            },
+            "drupal/tb_megamenu": {
+                "Missing array keys cause notices": "https://www.drupal.org/files/issues/missing_array_keys-2921195-3.patch"
             }
         }
     }
