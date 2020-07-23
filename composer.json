@@ -510,7 +510,6 @@
         "drupal/media_entity_file_replace": "^1.0",
         "drupal/media_library_edit": "1.x-dev",
         "drupal/menu_block": "1.x-dev",
-        "drupal/menu_link_attributes": "^1.0",
         "drupal/metatag": "^1.7",
         "drupal/module_filter": "^3.1",
         "drupal/name": "1.x-dev",
