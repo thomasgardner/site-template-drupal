@@ -533,7 +533,7 @@
         "drupal/twig_field_value": "^1.1",
         "drupal/twig_link_attributes": "1.x-dev",
         "drupal/twig_remove_html_comments": "^1.0@alpha",
-        "drupal/twig_tweak": "^2.1",
+        "drupal/twig_tweak": "^2.6",
         "drupal/twig_vardumper": "2.2",
         "drupal/verf": "^1.0@beta",
         "drupal/video_embed_field": "^2.0",
@@ -541,6 +541,7 @@
         "drupal/views_bulk_edit": "^2.2",
         "drupal/views_bulk_operations": "^2.4",
         "drupal/views_ical": "^1.0@alpha",
+        "drupal/views_templates": "^1.1",
         "drupal/viewsreference": "^2.0",
         "drupal/webform": "^5.19",
         "drupal/workbench_email": "^1.6",
@@ -635,9 +636,9 @@
             "web/modules/contrib/{$name}": ["type:drupal-module"],
             "web/profiles/contrib/{$name}": ["type:drupal-profile"],
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
-            "web/modules/custom/{$name}": ["type:drupal-module"],
-            "web/themes/custom/{$name}": ["type:drupal-theme"],
-            "drush/Commands/contrib/{$name}": ["type:drupal-drush"]
+            "drush/Commands/contrib/{$name}": ["type:drupal-drush"],
+            "web/modules/custom/{$name}": ["type:drupal-custom-module"],
+            "web/themes/custom/{$name}": ["type:drupal-custom-theme"]
         },
         "drupal-core-project-message": {
             "include-keys": [
