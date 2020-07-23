@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4492c714202a742fc2aedaca54accd35",
+    "content-hash": "55ad1fd33e763c8bc15ac06239f0e087",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -5617,6 +5617,58 @@
             }
         },
         {
+            "name": "drupal/html_title",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/html_title.git",
+                "reference": "8.x-1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/html_title-8.x-1.0.zip",
+                "reference": "8.x-1.0",
+                "shasum": "3730be5a64fe088abc1936ac3c37bf176b832bd4"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0",
+                    "datestamp": "1581672102",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "JeroenT",
+                    "homepage": "https://www.drupal.org/user/2228934"
+                },
+                {
+                    "name": "generalredneck",
+                    "homepage": "https://www.drupal.org/user/368854"
+                }
+            ],
+            "description": "Drupal HTML title module",
+            "homepage": "https://www.drupal.org/project/html_title",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/html_title",
+                "issues": "https://www.drupal.org/project/issues/html_title"
+            }
+        },
+        {
             "name": "drupal/imagemagick",
             "version": "3.1.0",
             "source": {
@@ -7846,6 +7898,9 @@
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
                     }
+                },
+                "patches_applied": {
+                    "Missing array keys cause notices": "https://www.drupal.org/files/issues/missing_array_keys-2921195-3.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",

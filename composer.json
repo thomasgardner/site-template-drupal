@@ -496,6 +496,7 @@
         "drupal/group": "^1.0@RC",
         "drupal/groupmenu": "^1.0@alpha",
         "drupal/gtranslate": "^1.13",
+        "drupal/html_title": "^1.0",
         "drupal/imagemagick": "^3.1",
         "drupal/inline_entity_form": "^1.0@RC",
         "drupal/layout_builder_modal": "^1.0",
