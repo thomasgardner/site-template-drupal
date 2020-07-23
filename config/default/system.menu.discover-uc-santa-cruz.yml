@@ -1,0 +1,8 @@
+uuid: 659220dd-f2c8-455d-9176-32e940227ea9
+langcode: en
+status: true
+dependencies: {  }
+id: discover-uc-santa-cruz
+label: 'Discover UC Santa Cruz'
+description: ''
+locked: false
