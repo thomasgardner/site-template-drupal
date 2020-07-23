@@ -3,6 +3,6 @@ langcode: en
 status: true
 dependencies: {  }
 id: utility-menu
-label: 'Utility Menu'
+label: 'Header Menu - Utility Menu'
 description: ''
 locked: false
