@@ -426,6 +426,10 @@
               "type": "zip"
             }
           }
+        },
+        {
+            "type": "path",
+            "url": "web/modules/custom/custom_module"
         }
     ],
     "require": {
@@ -448,11 +452,11 @@
         "composer/installers": "^1.7",
         "cweagans/composer-patches": "^1.6.5",
         "desandro/imagesloaded": "^3.2",
-        "drupal/address": "^1.4",
+        "drupal/address": "^1.8",
         "drupal/addtocalendar": "^3.1",
         "drupal/admin_toolbar": "^2.3",
         "drupal/advupdate": "^1.0",
-        "drupal/asset_injector": "^2.4",
+        "drupal/asset_injector": "^2.7",
         "drupal/auto_entitylabel": "^3.0",
         "drupal/backup_migrate": "^4.1",
         "drupal/block_class": "^1.0",
@@ -551,6 +555,7 @@
         "jquery.select2": "^4.0.5",
         "jquery.textcounter": "^0.8.0",
         "jquery.timepicker": "^1.11.14",
+        "kwall/custom_module": "*",
         "matchHeight": "^0.7.2",
         "metafizzy/isotope": "^3.0.6",
         "npm-asset/fontawesome-iconpicker": "^3.2",
@@ -630,6 +635,8 @@
             "web/modules/contrib/{$name}": ["type:drupal-module"],
             "web/profiles/contrib/{$name}": ["type:drupal-profile"],
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
+            "web/modules/custom/{$name}": ["type:drupal-module"],
+            "web/themes/custom/{$name}": ["type:drupal-theme"],
             "drush/Commands/contrib/{$name}": ["type:drupal-drush"]
         },
         "drupal-core-project-message": {

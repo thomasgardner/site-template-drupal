@@ -356,33 +356,33 @@
     },
     {
         "name": "commerceguys/addressing",
-        "version": "v1.0.6",
-        "version_normalized": "1.0.6.0",
+        "version": "v1.0.8",
+        "version_normalized": "1.0.8.0",
         "source": {
             "type": "git",
             "url": "https://github.com/commerceguys/addressing.git",
-            "reference": "8aac9af11d38c1abe04a5e4a252d5a6740b2b69a"
+            "reference": "cf202c913c10d85085ab5ed9ec88607e312839ce"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/commerceguys/addressing/zipball/8aac9af11d38c1abe04a5e4a252d5a6740b2b69a",
-            "reference": "8aac9af11d38c1abe04a5e4a252d5a6740b2b69a",
+            "url": "https://api.github.com/repos/commerceguys/addressing/zipball/cf202c913c10d85085ab5ed9ec88607e312839ce",
+            "reference": "cf202c913c10d85085ab5ed9ec88607e312839ce",
             "shasum": ""
         },
         "require": {
             "doctrine/collections": "~1.0",
-            "php": ">=5.5.0"
+            "php": ">=7.0.8"
         },
         "require-dev": {
             "mikey179/vfsstream": "1.*",
-            "phpunit/phpunit": "~4.0",
+            "phpunit/phpunit": "^6.0",
             "squizlabs/php_codesniffer": "2.*",
-            "symfony/validator": ">=3.2"
+            "symfony/validator": "^3.4"
         },
         "suggest": {
             "symfony/validator": "to validate addresses"
         },
-        "time": "2019-10-21T14:31:17+00:00",
+        "time": "2020-05-26T11:04:04+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -2135,34 +2135,31 @@
     },
     {
         "name": "drupal/address",
-        "version": "1.7.0",
-        "version_normalized": "1.7.0.0",
+        "version": "1.8.0",
+        "version_normalized": "1.8.0.0",
         "source": {
             "type": "git",
             "url": "https://git.drupalcode.org/project/address.git",
-            "reference": "8.x-1.7"
+            "reference": "8.x-1.8"
         },
         "dist": {
             "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/address-8.x-1.7.zip",
-            "reference": "8.x-1.7",
-            "shasum": "dab23a510090e59e3e6bc77faa517b523ad048ae"
+            "url": "https://ftp.drupal.org/files/projects/address-8.x-1.8.zip",
+            "reference": "8.x-1.8",
+            "shasum": "ded73be392ba9257fca9289719757928a8826275"
         },
         "require": {
-            "commerceguys/addressing": "^1.0.0",
-            "drupal/core": "^8.6"
+            "commerceguys/addressing": "^1.0.7",
+            "drupal/core": "^8.7.7 || ^9"
         },
         "require-dev": {
             "drupal/token": "^1.0"
         },
         "type": "drupal-module",
         "extra": {
-            "branch-alias": {
-                "dev-1.x": "1.x-dev"
-            },
             "drupal": {
-                "version": "8.x-1.7",
-                "datestamp": "1582913039",
+                "version": "8.x-1.8",
+                "datestamp": "1583988119",
                 "security-coverage": {
                     "status": "covered",
                     "message": "Covered by Drupal's security advisory policy"
@@ -2422,30 +2419,27 @@
     },
     {
         "name": "drupal/asset_injector",
-        "version": "2.6.0",
-        "version_normalized": "2.6.0.0",
+        "version": "2.7.0",
+        "version_normalized": "2.7.0.0",
         "source": {
             "type": "git",
             "url": "https://git.drupalcode.org/project/asset_injector.git",
-            "reference": "8.x-2.6"
+            "reference": "8.x-2.7"
         },
         "dist": {
             "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/asset_injector-8.x-2.6.zip",
-            "reference": "8.x-2.6",
-            "shasum": "e861e46740c264b9313e7a52878e789f11af5ec2"
+            "url": "https://ftp.drupal.org/files/projects/asset_injector-8.x-2.7.zip",
+            "reference": "8.x-2.7",
+            "shasum": "95287280fc513b4d32f6fc81feac9ada0a6f7948"
         },
         "require": {
-            "drupal/core": "^8 || ^9"
+            "drupal/core": "^8.8 || ^9"
         },
         "type": "drupal-module",
         "extra": {
-            "branch-alias": {
-                "dev-2.x": "2.x-dev"
-            },
             "drupal": {
-                "version": "8.x-2.6",
-                "datestamp": "1575588784",
+                "version": "8.x-2.7",
+                "datestamp": "1591636386",
                 "security-coverage": {
                     "status": "covered",
                     "message": "Covered by Drupal's security advisory policy"
@@ -10539,6 +10533,22 @@
         },
         "type": "drupal-library",
         "installation-source": "dist"
+    },
+    {
+        "name": "kwall/custom_module",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "dist": {
+            "type": "path",
+            "url": "web/modules/custom/custom_module",
+            "reference": "49032fd8ff10ff832d973be3adda1f46e1ba435c"
+        },
+        "type": "drupal-custom-module",
+        "installation-source": "dist",
+        "homepage": "https://www.kwallcompany.com",
+        "transport-options": {
+            "relative": true
+        }
     },
     {
         "name": "league/container",
