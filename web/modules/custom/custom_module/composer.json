@@ -1,0 +1,13 @@
+{
+    "name": "kwall/custom_module",
+    "type": "drupal-custom-module",
+    "authors": [],
+    "homepage": "https://www.kwallcompany.com",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "preferred-install": "dist"
+    },
+    "support": {},
+    "require": {}
+}
