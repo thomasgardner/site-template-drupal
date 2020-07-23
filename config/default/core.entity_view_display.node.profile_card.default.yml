@@ -22,17 +22,29 @@ third_party_settings:
     group_expanded:
       children:
         - field_details_fields
+      parent_name: group_accordion
+      weight: 4
+      format_type: accordion_item
+      region: content
+      format_settings:
+        description: ''
+        id: ''
+        classes: ''
+        open: false
+        formatter: closed
+      label: More
+    group_accordion:
+      children:
+        - group_expanded
       parent_name: ''
       weight: 3
-      format_type: details
+      format_type: accordion
       region: content
       format_settings:
         id: ''
         classes: ''
-        description: ''
-        open: false
-        required_fields: false
-      label: More
+        effect: none
+      label: Accordion
 id: node.profile_card.default
 targetEntityType: node
 bundle: profile_card
