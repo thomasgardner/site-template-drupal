@@ -1,6 +1,6 @@
 uuid: 2b10fcd0-3c64-4744-b478-8c9d996ff9e8
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.policy_card.field_category
     - field.field.node.policy_card.field_date
     - field.field.node.policy_card.field_icon
+    - field.field.node.policy_card.field_media
     - node.type.policy_card
   module:
     - text
@@ -41,4 +42,5 @@ hidden:
   field_category: true
   field_date: true
   field_icon: true
+  field_media: true
   langcode: true
