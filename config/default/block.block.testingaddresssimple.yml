@@ -18,7 +18,7 @@ settings:
   id: 'block_content:ee7e490a-483c-4d4e-8c61-e808cc1bc773'
   label: 'Testing Block Title'
   provider: block_content
-  label_display: visible
+  label_display: '0'
   status: true
   info: ''
   view_mode: full
