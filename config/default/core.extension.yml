@@ -111,6 +111,7 @@ module:
   migrate: 0
   migrate_drupal: 0
   module_filter: 0
+  multiline_config: 0
   name: 0
   node: 0
   options: 0
