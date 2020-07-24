@@ -1,0 +1,10 @@
+uuid: dd9b370b-bad9-4eff-90a7-d67f0bf3c86d
+langcode: en
+status: true
+dependencies: {  }
+id: image_gallery_item
+label: 'Image Gallery Item'
+icon_uuid: null
+icon_default: null
+description: 'Used in <em>Image Gallery</em> paragraph.'
+behavior_plugins: {  }

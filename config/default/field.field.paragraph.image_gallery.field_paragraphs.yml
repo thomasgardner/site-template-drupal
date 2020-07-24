@@ -1,0 +1,175 @@
+uuid: 4e9c16f1-ed91-4080-b75f-08252b194711
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraphs
+    - paragraphs.paragraphs_type.image_gallery
+    - paragraphs.paragraphs_type.image_gallery_item
+  module:
+    - entity_reference_revisions
+id: paragraph.image_gallery.field_paragraphs
+field_name: field_paragraphs
+entity_type: paragraph
+bundle: image_gallery
+label: Images
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      image_gallery_item: image_gallery_item
+    target_bundles_drag_drop:
+      2_column_cta:
+        weight: 50
+        enabled: false
+      3_column_cta:
+        weight: 51
+        enabled: false
+      4_column_cta:
+        weight: 52
+        enabled: false
+      accordion:
+        weight: 53
+        enabled: false
+      accordion_item:
+        weight: 54
+        enabled: false
+      adjustable_media_and_content:
+        weight: 55
+        enabled: false
+      article_slideshow:
+        weight: 56
+        enabled: false
+      article_slideshow_item:
+        weight: 57
+        enabled: false
+      button_list:
+        weight: 58
+        enabled: false
+      button_list_item:
+        weight: 59
+        enabled: false
+      column_section:
+        weight: 60
+        enabled: false
+      content_centered:
+        weight: 61
+        enabled: false
+      content_left:
+        weight: 62
+        enabled: false
+      content_quote:
+        weight: 63
+        enabled: false
+      cta_buttons:
+        weight: 64
+        enabled: false
+      flexible_bg_image_block:
+        weight: 65
+        enabled: false
+      flexible_bg_image_blocks:
+        weight: 66
+        enabled: false
+      flexible_cta_block:
+        weight: 67
+        enabled: false
+      flexible_cta_blocks:
+        weight: 68
+        enabled: false
+      full_image:
+        weight: 69
+        enabled: false
+      full_video:
+        weight: 70
+        enabled: false
+      full_width_image_section:
+        weight: 71
+        enabled: false
+      gridder:
+        weight: 72
+        enabled: false
+      gridder_item:
+        weight: 73
+        enabled: false
+      hero_banner:
+        weight: 74
+        enabled: false
+      hero_slide:
+        weight: 75
+        enabled: false
+      hero_slideshow:
+        weight: 76
+        enabled: false
+      image_gallery:
+        weight: 77
+        enabled: false
+      image_gallery_item:
+        enabled: true
+        weight: 78
+      interior_column_section:
+        weight: 79
+        enabled: false
+      interior_slideshow:
+        weight: 80
+        enabled: false
+      interior_slideshow_slide:
+        weight: 81
+        enabled: false
+      person_carousel:
+        weight: 82
+        enabled: false
+      profile_card_details_fields:
+        weight: 83
+        enabled: false
+      quicktabs:
+        weight: 84
+        enabled: false
+      quicktab_item:
+        weight: 85
+        enabled: false
+      quick_link:
+        weight: 86
+        enabled: false
+      quick_link_minimal:
+        weight: 87
+        enabled: false
+      quote:
+        weight: 88
+        enabled: false
+      recent_articles:
+        weight: 89
+        enabled: false
+      recent_articles_upcoming_events:
+        weight: 90
+        enabled: false
+      tabs_horizontal:
+        weight: 91
+        enabled: false
+      tabs_horizontal_item:
+        weight: 92
+        enabled: false
+      upcoming_events:
+        weight: 93
+        enabled: false
+      video_embed:
+        weight: 94
+        enabled: false
+      video_tab_carousel:
+        weight: 95
+        enabled: false
+      video_tab_item:
+        weight: 96
+        enabled: false
+      views:
+        weight: 97
+        enabled: false
+      wysiwyg:
+        weight: 98
+        enabled: false
+field_type: entity_reference_revisions
