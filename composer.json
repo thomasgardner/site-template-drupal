@@ -465,6 +465,7 @@
         "drupal/captcha_pack": "^1.0",
         "drupal/ckeditor_media_embed": "^1.3",
         "drupal/ckeditor_templates": "^1.1",
+        "drupal/color_field": "^2",
         "drupal/config_partial_export": "^1.6",
         "drupal/console": "^1.0.2",
         "drupal/core-composer-scaffold": "^8.8",
