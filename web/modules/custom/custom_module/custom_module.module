@@ -1,5 +1,7 @@
 <?php
 
+use Drupal\block\Entity\Block;
+use Drupal\block_content\BlockContentInterface;
 use Drupal\Core\Datetime\DrupalDateTime;
 use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
 use Drupal\Core\Entity\EntityInterface;
@@ -42,37 +44,34 @@ function custom_module_page_attachments(array &$attachments) {
 /**
  * Implements template_preprocess_block().
  */
-
-use Drupal\Core\Render\Markup;
-
 function custom_module_preprocess_block(&$variables) {
   // Allow to have some HTML for the titles of the blocks.
-  if (isset($variables['content']['#title'])
-    && is_array($variables['content']['#title'])
-    && \Drupal::service('module_handler')->moduleExists('html_title')) {
-    dump($variables['content']['#title']);
-    //    $variables['label'] = \Drupal::service('html_title.filter')
-    //      ->decodeToMarkup($variables['label']['#markup']);
+  if (\Drupal::service('module_handler')->moduleExists('html_title')) {
+    // Case - menu block.
+    if (isset($variables['content']['#menu_block_configuration']['label'])
+      && $variables['content']['#menu_block_configuration']['label'] != '') {
+      $variables['content']['#menu_block_configuration']['label'] = \Drupal::service('html_title.filter')
+        ->decodeToMarkup($variables['content']['#menu_block_configuration']['label']);
+    }
 
-    //    $variables['content']['#title'] = Markup::create($variables['content']['#title']['#markup']);
-    //    $variables['content']['#title']['#allowed_tags'] = ['span'];
-    //    dump($variables['label']);
+    elseif (isset($variables['label'])
+      && is_string($variables['label'])
+      && $variables['label'] != '') {
 
-    $variables['label'] = \Drupal::service('html_title.filter')
-      ->decodeToMarkup($variables['label']['#markup']);
-    $variables['content']['#title'] = \Drupal::service('html_title.filter')
-      ->decodeToMarkup($variables['content']['#title']['#markup']);
-
-    dump($variables);
-
-    //    dump(\Drupal::service('html_title.filter')
-    //      ->getAllowHtmlTags());
-    //
-    //    dump(\Drupal::service('html_title.filter')
-    //      ->decodeToMarkup($variables['label']['#markup']));
-    //    dump(\Drupal::service('html_title.filter')
-    //      ->decodeToText($variables['label']['#markup']));
-
+      $content = $variables['elements']['content'];
+      // Case - Content block.
+      if (isset($content['#block_content'])
+        && $content['#block_content'] instanceof BlockContentInterface) {
+        $variables['label'] = \Drupal::service('html_title.filter')
+          ->decodeToMarkup($content['#block_content']->label());
+      }
+      // Case - Plugin block.
+      else {
+        $block = Block::load($variables['elements']['#id']);
+        $variables['label'] = \Drupal::service('html_title.filter')
+          ->decodeToMarkup($block->label());
+      }
+    }
   }
 }
 
