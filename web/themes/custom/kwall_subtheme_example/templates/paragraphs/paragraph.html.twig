@@ -39,9 +39,7 @@
  */
 #}
 {% set classes = [
-  'hero-banner-img-section',
-  content.field_adjustable_height[0]['#markup'] == 'Short' ? 'banner-short',
-  content.field_adjustable_height[0]['#markup'] == 'Tall' ? 'banner-tall',
+  'paragraph',
   'paragraph--type--' ~ paragraph.bundle|clean_id,
   'paragraph--id--' ~ paragraph.id()|clean_id,
   view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_id,
@@ -49,17 +47,9 @@
 ] %}
 
 {% block paragraph %}
-  {% set image_url = file_url(content.field_image[0]['#media'].field_media_image_1.entity.uri.value) %}
-  <div {{ attributes.addClass(classes) }} data-bg-img="{{ image_url }}"
-                                          style="background-image: url('{{ image_url }}'); background-size:cover;">
-    <div>
-      {% block content %}
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">{{ content|without('field_image', 'field_adjustable_height') }}</div>
-          </div>
-        </div>
-      {% endblock %}
-    </div>
-  </div>
+  <section{{ attributes.addClass(classes) }} aria-label="content row id-{{ paragraph.id() }}">
+    {% block content %}
+      {{ content }}
+    {% endblock %}
+  </section>
 {% endblock paragraph %}
