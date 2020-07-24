@@ -179,6 +179,7 @@ class ComposerStaticInitDrupal8
             'Drupal\\Composer\\Plugin\\Scaffold\\' => 32,
             'Drupal\\Component\\' => 17,
             'DrupalCodeGenerator\\' => 20,
+            'Dotenv\\' => 7,
             'Doctrine\\Common\\Lexer\\' => 22,
             'Doctrine\\Common\\Inflector\\' => 26,
             'Doctrine\\Common\\Cache\\' => 22,
@@ -559,6 +560,10 @@ class ComposerStaticInitDrupal8
         'DrupalCodeGenerator\\' => 
         array (
             0 => __DIR__ . '/..' . '/chi-teck/drupal-code-generator/src',
+        ),
+        'Dotenv\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/vlucas/phpdotenv/src',
         ),
         'Doctrine\\Common\\Lexer\\' => 
         array (
@@ -1292,6 +1297,15 @@ class ComposerStaticInitDrupal8
         'Doctrine\\Common\\Util\\Debug' => __DIR__ . '/..' . '/doctrine/common/lib/Doctrine/Common/Util/Debug.php',
         'Doctrine\\Common\\Util\\Inflector' => __DIR__ . '/..' . '/doctrine/common/lib/Doctrine/Common/Util/Inflector.php',
         'Doctrine\\Common\\Version' => __DIR__ . '/..' . '/doctrine/common/lib/Doctrine/Common/Version.php',
+        'Dotenv\\Dotenv' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Dotenv.php',
+        'Dotenv\\Exception\\ExceptionInterface' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Exception/ExceptionInterface.php',
+        'Dotenv\\Exception\\InvalidCallbackException' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Exception/InvalidCallbackException.php',
+        'Dotenv\\Exception\\InvalidFileException' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Exception/InvalidFileException.php',
+        'Dotenv\\Exception\\InvalidPathException' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Exception/InvalidPathException.php',
+        'Dotenv\\Exception\\ValidationException' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Exception/ValidationException.php',
+        'Dotenv\\Loader' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Loader.php',
+        'Dotenv\\Parser' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Parser.php',
+        'Dotenv\\Validator' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Validator.php',
         'Drupal' => __DIR__ . '/../..' . '/web/core/lib/Drupal.php',
         'DrupalCodeGenerator\\ApplicationFactory' => __DIR__ . '/..' . '/chi-teck/drupal-code-generator/src/ApplicationFactory.php',
         'DrupalCodeGenerator\\Asset' => __DIR__ . '/..' . '/chi-teck/drupal-code-generator/src/Asset.php',

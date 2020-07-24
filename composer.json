@@ -568,6 +568,7 @@
         "signature_pad": "^2.3.0",
         "slick": "^1.8.1",
         "topfloor/composer-cleanup-vcs-dirs": "^1.0",
+        "vlucas/phpdotenv": "^2.4",
         "wikimedia/composer-merge-plugin": "^1.4",
         "woocommerce/flexslider": "^2.7.1",
         "zaporylie/composer-drupal-optimizations": "^1.1"
