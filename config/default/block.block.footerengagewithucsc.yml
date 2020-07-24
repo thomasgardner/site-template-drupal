@@ -1,26 +1,22 @@
-uuid: b4e2bb18-86c8-4bd4-97c0-56b47c984ef2
+uuid: ed442772-993a-455b-8f4f-0fc5c712cc46
 langcode: en
 status: true
 dependencies:
   config:
-    - system.menu.footer
+    - system.menu.footer---engage-with-ucsc
   module:
-    - block_class
     - menu_block
   theme:
     - kwall_subtheme_example
-third_party_settings:
-  block_class:
-    classes: menu-inline
-id: kwall_subtheme_example_footer
+id: footerengagewithucsc
 theme: kwall_subtheme_example
 region: footer
-weight: -23
+weight: -19
 provider: null
-plugin: 'menu_block:footer'
+plugin: 'menu_block:footer---engage-with-ucsc'
 settings:
-  id: 'menu_block:footer'
-  label: 'Discover <span>UC Santa Cruz</span>'
+  id: 'menu_block:footer---engage-with-ucsc'
+  label: 'Engage <span>with UCSC</span>'
   provider: menu_block
   label_display: visible
   follow: false
@@ -28,8 +24,8 @@ settings:
   level: 1
   depth: 0
   expand: false
-  parent: 'footer:'
-  suggestion: footer
+  parent: 'footer---engage-with-ucsc:'
+  suggestion: footer___engage_with_ucsc
   label_type: block
   label_link: 0
 visibility: {  }

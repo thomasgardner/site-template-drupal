@@ -1,0 +1,25 @@
+uuid: 54803dac-4457-4323-9cf7-ed946d771a79
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:address:a65f1daf-db5f-4781-b59f-84e5ca8241b0'
+  module:
+    - block_content
+  theme:
+    - kwall_subtheme_example
+id: testingaddressadvanced
+theme: kwall_subtheme_example
+region: footer
+weight: -21
+provider: null
+plugin: 'block_content:a65f1daf-db5f-4781-b59f-84e5ca8241b0'
+settings:
+  id: 'block_content:a65f1daf-db5f-4781-b59f-84e5ca8241b0'
+  label: 'HISTORY DEPARTMENT | HUMANITIES DIVISION'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
