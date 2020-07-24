@@ -53,17 +53,18 @@ function custom_module_preprocess_block(&$variables) {
       $variables['content']['#menu_block_configuration']['label'] = \Drupal::service('html_title.filter')
         ->decodeToMarkup($variables['content']['#menu_block_configuration']['label']);
     }
-
     elseif (isset($variables['label'])
       && is_string($variables['label'])
       && $variables['label'] != '') {
-
       $content = $variables['elements']['content'];
       // Case - Content block.
       if (isset($content['#block_content'])
         && $content['#block_content'] instanceof BlockContentInterface) {
-        $variables['label'] = \Drupal::service('html_title.filter')
-          ->decodeToMarkup($content['#block_content']->label());
+        $block = Block::load($variables['elements']['#id']);
+        if ($block->label() != '[current-page:title]') {
+          $variables['label'] = \Drupal::service('html_title.filter')
+            ->decodeToMarkup($block->label());
+        }
       }
       // Case - Plugin block.
       else {
