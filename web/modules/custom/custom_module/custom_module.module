@@ -13,13 +13,6 @@ use Drupal\views\ViewExecutable;
 
 /**
  * Implements hook_help().
- *
- * Displays help and module information.
- *
- * @param path
- *   Which path of the site we're using to display help
- * @param arg
- *   Array that holds the current path as returned from arg() function
  */
 function custom_module_help($path, $arg) {
   switch ($path) {
@@ -46,6 +39,42 @@ function custom_module_page_attachments(array &$attachments) {
   $attachments['#attached']['library'][] = 'custom_module/advance-link';
 }
 
+/**
+ * Implements template_preprocess_block().
+ */
+
+use Drupal\Core\Render\Markup;
+
+function custom_module_preprocess_block(&$variables) {
+  // Allow to have some HTML for the titles of the blocks.
+  if (isset($variables['content']['#title'])
+    && is_array($variables['content']['#title'])
+    && \Drupal::service('module_handler')->moduleExists('html_title')) {
+    dump($variables['content']['#title']);
+    //    $variables['label'] = \Drupal::service('html_title.filter')
+    //      ->decodeToMarkup($variables['label']['#markup']);
+
+    //    $variables['content']['#title'] = Markup::create($variables['content']['#title']['#markup']);
+    //    $variables['content']['#title']['#allowed_tags'] = ['span'];
+    //    dump($variables['label']);
+
+    $variables['label'] = \Drupal::service('html_title.filter')
+      ->decodeToMarkup($variables['label']['#markup']);
+    $variables['content']['#title'] = \Drupal::service('html_title.filter')
+      ->decodeToMarkup($variables['content']['#title']['#markup']);
+
+    dump($variables);
+
+    //    dump(\Drupal::service('html_title.filter')
+    //      ->getAllowHtmlTags());
+    //
+    //    dump(\Drupal::service('html_title.filter')
+    //      ->decodeToMarkup($variables['label']['#markup']));
+    //    dump(\Drupal::service('html_title.filter')
+    //      ->decodeToText($variables['label']['#markup']));
+
+  }
+}
 
 /**
  * Implements hook_entity_bundle_field_info_alter().
@@ -322,8 +351,9 @@ function custom_module_form_views_exposed_form_alter(&$form, FormStateInterface 
       }
     }
     // Check if View Ajax Enabled then make sure its reload current page
-    if($view['view']->id() == 'faqs' && $view['view']->current_display == 'default' && $view['view']->ajaxEnabled()) {
-      $currPathAlias = \Drupal::service('path.alias_manager')->getAliasByPath('/node/87');
+    if ($view['view']->id() == 'faqs' && $view['view']->current_display == 'default' && $view['view']->ajaxEnabled()) {
+      $currPathAlias = \Drupal::service('path.alias_manager')
+        ->getAliasByPath('/node/87');
       $form['#action'] = $currPathAlias;
     }
   }
