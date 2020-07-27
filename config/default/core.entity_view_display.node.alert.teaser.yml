@@ -10,7 +10,6 @@ dependencies:
     - field.field.node.alert.field_alert_type
     - field.field.node.alert.field_expiration_date_alert
     - field.field.node.alert.field_link
-    - field.field.node.alert.field_not_dismissable
     - node.type.alert
   module:
     - user
@@ -36,6 +35,5 @@ hidden:
   field_alert_type: true
   field_expiration_date_alert: true
   field_link: true
-  field_not_dismissable: true
   langcode: true
   search_api_excerpt: true

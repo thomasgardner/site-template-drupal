@@ -12,17 +12,14 @@ type: list_string
 settings:
   allowed_values:
     -
-      value: info
-      label: Info
-    -
-      value: success
-      label: Success
-    -
       value: warning
       label: Warning
     -
-      value: danger
-      label: Danger
+      value: emergency
+      label: Emergency
+    -
+      value: notice
+      label: Notice
   allowed_values_function: ''
 module: options
 locked: false

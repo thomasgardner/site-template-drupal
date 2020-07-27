@@ -1,8 +1,9 @@
-uuid: a86a1cc2-2e03-47e8-8172-4babcc08d49a
+uuid: 76d70708-daee-406e-aef1-6b327acd7c50
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.short
     - field.field.node.alert.field_active
     - field.field.node.alert.field_alert_body
     - field.field.node.alert.field_alert_level
@@ -14,14 +15,19 @@ dependencies:
     - addtocalendar
     - datetime
     - fences
+    - layout_builder
     - link
     - options
     - text
     - user
-id: node.alert.default
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: node.alert.short
 targetEntityType: node
 bundle: alert
-mode: default
+mode: short
 content:
   field_active:
     weight: 0
