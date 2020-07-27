@@ -433,6 +433,7 @@
         }
     ],
     "require": {
+        "bower-asset/owl-carousel2": "^2.3",
         "ckeditor-plugin/autoembed": "^4.11",
         "ckeditor-plugin/autolink": "^4.11",
         "ckeditor-plugin/embed": "^4.11",
