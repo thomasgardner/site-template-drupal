@@ -157,6 +157,26 @@
         ]
     },
     {
+        "name": "bower-asset/jquery-simple-color",
+        "version": "v1.2.2",
+        "version_normalized": "1.2.2.0",
+        "source": {
+            "type": "git",
+            "url": "git@github.com:recurser/jquery-simple-color.git",
+            "reference": "ebe0b2c0db639584e81499bd29d6619abb9a2599"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/recurser/jquery-simple-color/zipball/ebe0b2c0db639584e81499bd29d6619abb9a2599",
+            "reference": "ebe0b2c0db639584e81499bd29d6619abb9a2599"
+        },
+        "type": "bower-asset",
+        "installation-source": "dist",
+        "license": [
+            "MIT"
+        ]
+    },
+    {
         "name": "bower-asset/owl-carousel2",
         "version": "2.3.4",
         "version_normalized": "2.3.4.0",
@@ -172,6 +192,26 @@
         },
         "require": {
             "bower-asset/jquery": ">=1.8.3"
+        },
+        "type": "bower-asset",
+        "installation-source": "dist"
+    },
+    {
+        "name": "bower-asset/spectrum",
+        "version": "1.8.1",
+        "version_normalized": "1.8.1.0",
+        "source": {
+            "type": "git",
+            "url": "git@github.com:bgrins/spectrum.git",
+            "reference": "9aa028de7e8039c41ac792485a928edb97d4ac40"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/bgrins/spectrum/zipball/9aa028de7e8039c41ac792485a928edb97d4ac40",
+            "reference": "9aa028de7e8039c41ac792485a928edb97d4ac40"
+        },
+        "require": {
+            "bower-asset/jquery": ">=1.7.2"
         },
         "type": "bower-asset",
         "installation-source": "dist"
