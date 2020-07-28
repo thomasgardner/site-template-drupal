@@ -5,8 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_hero_content
     - node.type.page
-    - paragraphs.paragraphs_type.hero_banner
-    - paragraphs.paragraphs_type.hero_slideshow
+    - paragraphs.paragraphs_type.header_banner
   module:
     - entity_reference_revisions
 id: node.page.field_hero_content
@@ -24,8 +23,7 @@ settings:
   handler_settings:
     negate: 0
     target_bundles:
-      hero_banner: hero_banner
-      hero_slideshow: hero_slideshow
+      header_banner: header_banner
     target_bundles_drag_drop:
       2_column_cta:
         weight: 13
@@ -43,14 +41,14 @@ settings:
         weight: 17
         enabled: false
       hero_banner:
-        enabled: true
         weight: 18
+        enabled: false
       hero_slide:
         weight: 19
         enabled: false
       hero_slideshow:
-        enabled: true
         weight: 20
+        enabled: false
       interior_column_section:
         weight: 21
         enabled: false
@@ -62,5 +60,134 @@ settings:
         enabled: false
       quick_link:
         weight: 24
+        enabled: false
+      accordion:
+        weight: 59
+        enabled: false
+      accordion_item:
+        weight: 60
+        enabled: false
+      adjustable_media_and_content:
+        weight: 61
+        enabled: false
+      article_slideshow:
+        weight: 62
+        enabled: false
+      article_slideshow_item:
+        weight: 63
+        enabled: false
+      button_list:
+        weight: 64
+        enabled: false
+      button_list_item:
+        weight: 65
+        enabled: false
+      content_centered:
+        weight: 67
+        enabled: false
+      content_left:
+        weight: 68
+        enabled: false
+      content_quote:
+        weight: 69
+        enabled: false
+      content_with_media:
+        weight: 70
+        enabled: false
+      cta_buttons:
+        weight: 71
+        enabled: false
+      flexible_bg_image_block:
+        weight: 72
+        enabled: false
+      flexible_bg_image_blocks:
+        weight: 73
+        enabled: false
+      flexible_cta_block:
+        weight: 74
+        enabled: false
+      flexible_cta_blocks:
+        weight: 75
+        enabled: false
+      full_image:
+        weight: 76
+        enabled: false
+      full_video:
+        weight: 77
+        enabled: false
+      gridder:
+        weight: 79
+        enabled: false
+      gridder_item:
+        weight: 80
+        enabled: false
+      grid_content_centered:
+        weight: 81
+        enabled: false
+      grid_content_centered_item:
+        weight: 82
+        enabled: false
+      grid_content_left:
+        weight: 83
+        enabled: false
+      grid_content_left_item:
+        weight: 84
+        enabled: false
+      header_banner:
+        enabled: true
+        weight: 85
+      image_gallery:
+        weight: 89
+        enabled: false
+      image_gallery_item:
+        weight: 90
+        enabled: false
+      person_carousel:
+        weight: 94
+        enabled: false
+      profile_card_details_fields:
+        weight: 95
+        enabled: false
+      quicktabs:
+        weight: 96
+        enabled: false
+      quicktab_item:
+        weight: 97
+        enabled: false
+      quick_link_minimal:
+        weight: 99
+        enabled: false
+      quote:
+        weight: 100
+        enabled: false
+      recent_articles:
+        weight: 101
+        enabled: false
+      recent_articles_upcoming_events:
+        weight: 102
+        enabled: false
+      tabs_horizontal:
+        weight: 103
+        enabled: false
+      tabs_horizontal_item:
+        weight: 104
+        enabled: false
+      upcoming_events:
+        weight: 105
+        enabled: false
+      video_embed:
+        weight: 106
+        enabled: false
+      video_tab_carousel:
+        weight: 107
+        enabled: false
+      video_tab_item:
+        weight: 108
+        enabled: false
+      views:
+        weight: 109
+        enabled: false
+      wysiwyg:
+        weight: 110
         enabled: false
 field_type: entity_reference_revisions

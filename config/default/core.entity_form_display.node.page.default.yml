@@ -23,21 +23,9 @@ dependencies:
     - text
 third_party_settings:
   field_group:
-    group_hero_content:
-      children:
-        - field_hero_content
-      parent_name: ''
-      weight: 0
-      format_type: details
-      format_settings:
-        id: ''
-        classes: ''
-        open: false
-        required_fields: true
-      label: 'Hero Content'
-      region: content
     group_main_content:
       children:
+        - field_hero_content
         - title
         - field_hide_page_title
         - field_lead_txt
@@ -133,10 +121,10 @@ content:
     settings:
       title: 'Hero Image'
       title_plural: 'Hero Images'
-      edit_mode: preview
+      edit_mode: closed
       add_mode: dropdown
       form_display_mode: default
-      default_paragraph_type: _none
+      default_paragraph_type: header_banner
     third_party_settings: {  }
     region: content
   field_hide_page_title:

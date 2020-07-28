@@ -1,0 +1,15 @@
+uuid: 8d550748-3bb3-467d-810f-197a53800ecd
+langcode: en
+status: true
+dependencies: {  }
+name: header_banner
+label: 'Header Banner'
+effects:
+  0c16a557-ad50-4b2e-b086-76096165d94a:
+    uuid: 0c16a557-ad50-4b2e-b086-76096165d94a
+    id: image_scale
+    weight: 1
+    data:
+      width: 1440
+      height: null
+      upscale: false

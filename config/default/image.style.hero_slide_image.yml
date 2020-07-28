@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 name: hero_slide_image
-label: 'Hero Slide Image (1242x700)'
+label: 'Zzz - Hero Slide Image (1242x700)'
 effects:
   9c12b09a-1e84-45e2-808e-411a54ededd3:
     uuid: 9c12b09a-1e84-45e2-808e-411a54ededd3

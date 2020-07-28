@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 name: interior_slideshow_slide
-label: 'Interior Slideshow Slide (854x480)'
+label: 'Zzz - Interior Slideshow Slide (854x480)'
 effects:
   a82a7357-0665-435c-af96-732341e27954:
     uuid: a82a7357-0665-435c-af96-732341e27954
