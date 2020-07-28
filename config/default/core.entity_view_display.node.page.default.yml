@@ -27,7 +27,7 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 3
+    weight: 2
     region: content
     settings: {  }
     third_party_settings:
@@ -45,7 +45,7 @@ content:
     third_party_settings: {  }
   field_after_content:
     type: entity_reference_revisions_entity_view
-    weight: 4
+    weight: 3
     label: hidden
     settings:
       view_mode: default
@@ -59,17 +59,8 @@ content:
         fences_label_tag: none
         fences_label_classes: ''
     region: content
-  field_hero_content:
-    type: entity_reference_revisions_entity_view
-    weight: 1
-    region: content
-    label: hidden
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
   field_lead_txt:
-    weight: 2
+    weight: 1
     label: hidden
     settings: {  }
     third_party_settings:
@@ -84,6 +75,7 @@ content:
     region: content
 hidden:
   field_content_bottom: true
+  field_hero_content: true
   field_hide_page_title: true
   field_meta_tags: true
   field_sidebar_content: true
