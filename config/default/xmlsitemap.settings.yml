@@ -15,3 +15,4 @@ disable_cron_regeneration: false
 i18n_selection_mode: simple
 _core:
   default_config_hash: 3my4yxTczVKbcKZ8ss1fyyilU1wC19kLZd_IPRbxuyU
+metatag_exclude_noindex: false
