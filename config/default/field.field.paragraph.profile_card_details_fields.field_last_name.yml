@@ -1,23 +1,19 @@
-uuid: 397d9cf1-4954-4232-9826-cfe678744235
+uuid: 4ed55640-cd67-4c55-bd95-75496f74da6e
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_websites
+    - field.storage.paragraph.field_last_name
     - paragraphs.paragraphs_type.profile_card_details_fields
-  module:
-    - link
-id: paragraph.profile_card_details_fields.field_websites
-field_name: field_websites
+id: paragraph.profile_card_details_fields.field_last_name
+field_name: field_last_name
 entity_type: paragraph
 bundle: profile_card_details_fields
-label: Websites
+label: 'Last Name'
 description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
-settings:
-  link_type: 16
-  title: 1
-field_type: link
+settings: {  }
+field_type: string

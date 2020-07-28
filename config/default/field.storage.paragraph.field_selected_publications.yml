@@ -1,11 +1,11 @@
-uuid: 68c8bb8e-cbc1-4940-8509-c964783f9988
+uuid: ccd676fe-7d95-4787-ad2a-263d1a749458
 langcode: en
 status: true
 dependencies:
   module:
     - paragraphs
-id: paragraph.field_research_interests
-field_name: field_research_interests
+id: paragraph.field_selected_publications
+field_name: field_selected_publications
 entity_type: paragraph
 type: string
 settings:

@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 id: profile_card_details_fields
-label: 'Profile Card - Details Fields'
+label: 'Profile Details'
 icon_uuid: null
 icon_default: null
 description: ''

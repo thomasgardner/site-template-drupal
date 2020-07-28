@@ -4,19 +4,31 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.profile_card_details_fields.field__biography_education
+    - field.field.paragraph.profile_card_details_fields.field_academic_title
     - field.field.paragraph.profile_card_details_fields.field_additional_email
     - field.field.paragraph.profile_card_details_fields.field_additional_locations
     - field.field.paragraph.profile_card_details_fields.field_areas_of_expertise
+    - field.field.paragraph.profile_card_details_fields.field_areas_of_expertise_txt
     - field.field.paragraph.profile_card_details_fields.field_campus_address
     - field.field.paragraph.profile_card_details_fields.field_department_college_unit
     - field.field.paragraph.profile_card_details_fields.field_division
+    - field.field.paragraph.profile_card_details_fields.field_division_txt
+    - field.field.paragraph.profile_card_details_fields.field_email
     - field.field.paragraph.profile_card_details_fields.field_faculty_type
+    - field.field.paragraph.profile_card_details_fields.field_faculty_type_txt
+    - field.field.paragraph.profile_card_details_fields.field_first_name
+    - field.field.paragraph.profile_card_details_fields.field_job_title
+    - field.field.paragraph.profile_card_details_fields.field_last_name
+    - field.field.paragraph.profile_card_details_fields.field_links
     - field.field.paragraph.profile_card_details_fields.field_mail_stop
     - field.field.paragraph.profile_card_details_fields.field_office_hours
     - field.field.paragraph.profile_card_details_fields.field_other_ucsc_campus_affiliat
     - field.field.paragraph.profile_card_details_fields.field_phone
     - field.field.paragraph.profile_card_details_fields.field_research_interests
-    - field.field.paragraph.profile_card_details_fields.field_websites
+    - field.field.paragraph.profile_card_details_fields.field_research_interests_txt
+    - field.field.paragraph.profile_card_details_fields.field_selected_publications
+    - field.field.paragraph.profile_card_details_fields.field_selected_publications_txt
+    - field.field.paragraph.profile_card_details_fields.field_websites_txt
     - paragraphs.paragraphs_type.profile_card_details_fields
   module:
     - link
@@ -27,46 +39,14 @@ bundle: profile_card_details_fields
 mode: default
 content:
   field__biography_education:
-    weight: 13
+    weight: 19
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
     region: content
-  field_additional_email:
-    weight: 3
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: email_default
-    region: content
-  field_additional_locations:
-    weight: 7
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_areas_of_expertise:
-    weight: 11
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_campus_address:
-    weight: 10
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_department_college_unit:
+  field_academic_title:
     weight: 2
     settings:
       size: 60
@@ -74,35 +54,61 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_division:
-    weight: 1
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete_tags
-    region: content
-  field_faculty_type:
-    weight: 5
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete_tags
-    region: content
-  field_mail_stop:
-    weight: 9
+  field_additional_email:
+    weight: 6
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: email_default
     region: content
-  field_office_hours:
+  field_additional_locations:
+    weight: 15
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_areas_of_expertise:
+    weight: 20
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_areas_of_expertise_txt:
+    weight: 21
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_campus_address:
+    weight: 18
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_department_college_unit:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_division:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_division_txt:
     weight: 8
     settings:
       size: 60
@@ -110,22 +116,21 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_other_ucsc_campus_affiliat:
-    weight: 4
+  field_email:
+    weight: 5
     settings:
-      rows: 5
+      size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
+    type: email_default
     region: content
-  field_phone:
-    weight: 0
-    settings:
-      placeholder: ''
+  field_faculty_type:
+    weight: 11
+    settings: {  }
     third_party_settings: {  }
-    type: telephone_default
+    type: options_select
     region: content
-  field_research_interests:
+  field_faculty_type_txt:
     weight: 12
     settings:
       size: 60
@@ -133,13 +138,108 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_websites:
-    weight: 6
+  field_first_name:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_job_title:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_last_name:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_links:
+    weight: 13
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+    region: content
+  field_mail_stop:
+    weight: 17
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_office_hours:
+    weight: 16
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_other_ucsc_campus_affiliat:
+    weight: 10
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_phone:
+    weight: 4
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_research_interests:
+    weight: 22
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_research_interests_txt:
+    weight: 23
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_selected_publications:
+    weight: 24
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_selected_publications_txt:
+    weight: 25
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_websites_txt:
+    weight: 14
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
     region: content
 hidden:
   created: true

@@ -1,15 +1,15 @@
-uuid: 20ad8523-8f64-4864-943d-bfd41a5b3d8e
+uuid: 70402f5a-56ce-4aa1-a6d1-09228842fd8d
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_mail_stop
+    - field.storage.paragraph.field_academic_title
     - paragraphs.paragraphs_type.profile_card_details_fields
-id: paragraph.profile_card_details_fields.field_mail_stop
-field_name: field_mail_stop
+id: paragraph.profile_card_details_fields.field_academic_title
+field_name: field_academic_title
 entity_type: paragraph
 bundle: profile_card_details_fields
-label: 'Mail Stop'
+label: 'Academic Title'
 description: ''
 required: false
 translatable: false

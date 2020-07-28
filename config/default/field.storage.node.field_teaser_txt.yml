@@ -1,16 +1,14 @@
-uuid: 51912f34-096d-4c21-a026-38899b0ebc2e
+uuid: a784dd01-2d44-48fa-afea-b289c5c2d479
 langcode: en
 status: true
 dependencies:
   module:
-    - paragraphs
-id: paragraph.field_mail_stop
-field_name: field_mail_stop
-entity_type: paragraph
-type: string
+    - node
+id: node.field_teaser_txt
+field_name: field_teaser_txt
+entity_type: node
+type: string_long
 settings:
-  max_length: 255
-  is_ascii: false
   case_sensitive: false
 module: core
 locked: false

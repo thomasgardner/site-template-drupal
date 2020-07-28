@@ -1,15 +1,15 @@
-uuid: 20ad8523-8f64-4864-943d-bfd41a5b3d8e
+uuid: b6ed9f61-3810-4724-b62e-0d999112ff30
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_mail_stop
+    - field.storage.paragraph.field_job_title
     - paragraphs.paragraphs_type.profile_card_details_fields
-id: paragraph.profile_card_details_fields.field_mail_stop
-field_name: field_mail_stop
+id: paragraph.profile_card_details_fields.field_job_title
+field_name: field_job_title
 entity_type: paragraph
 bundle: profile_card_details_fields
-label: 'Mail Stop'
+label: 'Job Title'
 description: ''
 required: false
 translatable: false

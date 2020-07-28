@@ -1,17 +1,14 @@
-uuid: 51912f34-096d-4c21-a026-38899b0ebc2e
+uuid: 3b1c11e1-4dc5-45d1-acfb-0415530c57d1
 langcode: en
 status: true
 dependencies:
   module:
     - paragraphs
-id: paragraph.field_mail_stop
-field_name: field_mail_stop
+id: paragraph.field_email
+field_name: field_email
 entity_type: paragraph
-type: string
-settings:
-  max_length: 255
-  is_ascii: false
-  case_sensitive: false
+type: email
+settings: {  }
 module: core
 locked: false
 cardinality: 1

@@ -1,15 +1,15 @@
-uuid: 20ad8523-8f64-4864-943d-bfd41a5b3d8e
+uuid: ceb8d4c3-5d5a-4223-b942-69d877ec1e49
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_mail_stop
+    - field.storage.paragraph.field_division_txt
     - paragraphs.paragraphs_type.profile_card_details_fields
-id: paragraph.profile_card_details_fields.field_mail_stop
-field_name: field_mail_stop
+id: paragraph.profile_card_details_fields.field_division_txt
+field_name: field_division_txt
 entity_type: paragraph
 bundle: profile_card_details_fields
-label: 'Mail Stop'
+label: Division
 description: ''
 required: false
 translatable: false
