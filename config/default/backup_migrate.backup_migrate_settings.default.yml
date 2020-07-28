@@ -6,7 +6,7 @@ id: default
 label: Default
 config:
   namer:
-    filename: d8-template
+    filename: ucsc
     timestamp: 1
     timestamp_format: Y-m-d\TH-i-s
   compressor:

@@ -5,18 +5,6 @@ dependencies:
   config:
     - field.storage.node.field_content_bottom
     - node.type.page
-    - paragraphs.paragraphs_type.accordion
-    - paragraphs.paragraphs_type.adjustable_media_and_content
-    - paragraphs.paragraphs_type.column_section
-    - paragraphs.paragraphs_type.flexible_bg_image_blocks
-    - paragraphs.paragraphs_type.flexible_cta_blocks
-    - paragraphs.paragraphs_type.full_width_image_section
-    - paragraphs.paragraphs_type.gridder
-    - paragraphs.paragraphs_type.interior_slideshow
-    - paragraphs.paragraphs_type.person_carousel
-    - paragraphs.paragraphs_type.quicktabs
-    - paragraphs.paragraphs_type.recent_articles_upcoming_events
-    - paragraphs.paragraphs_type.video_tab_carousel
     - paragraphs.paragraphs_type.wysiwyg
   module:
     - entity_reference_revisions
@@ -24,7 +12,7 @@ id: node.page.field_content_bottom
 field_name: field_content_bottom
 entity_type: node
 bundle: page
-label: 'Content Bottom'
+label: 'Full-Width Content'
 description: ''
 required: false
 translatable: false
@@ -35,19 +23,7 @@ settings:
   handler_settings:
     negate: 0
     target_bundles:
-      column_section: column_section
-      full_width_image_section: full_width_image_section
-      interior_slideshow: interior_slideshow
-      adjustable_media_and_content: adjustable_media_and_content
-      accordion: accordion
       wysiwyg: wysiwyg
-      flexible_cta_blocks: flexible_cta_blocks
-      recent_articles_upcoming_events: recent_articles_upcoming_events
-      flexible_bg_image_blocks: flexible_bg_image_blocks
-      gridder: gridder
-      person_carousel: person_carousel
-      quicktabs: quicktabs
-      video_tab_carousel: video_tab_carousel
     target_bundles_drag_drop:
       3_column_cta:
         weight: 3
@@ -62,14 +38,14 @@ settings:
         weight: 8
         enabled: false
       column_section:
-        enabled: true
         weight: 9
+        enabled: false
       full_width_image_section:
-        enabled: true
         weight: 14
+        enabled: false
       interior_slideshow:
-        enabled: true
         weight: 16
+        enabled: false
       interior_slideshow_slide:
         weight: 17
         enabled: false
@@ -80,14 +56,14 @@ settings:
         weight: 20
         enabled: false
       adjustable_media_and_content:
-        enabled: true
         weight: 21
+        enabled: false
       hero_slideshow:
         weight: 22
         enabled: false
       accordion:
-        enabled: true
         weight: 23
+        enabled: false
       interior_column_section:
         weight: 23
         enabled: false
@@ -104,23 +80,23 @@ settings:
         weight: 29
         enabled: false
       flexible_cta_blocks:
-        enabled: true
         weight: 30
+        enabled: false
       recent_articles_upcoming_events:
-        enabled: true
         weight: 30
-      flexible_bg_image_block:
-        weight: 31
         enabled: false
       upcoming_events:
         weight: 31
         enabled: false
+      flexible_bg_image_block:
+        weight: 31
+        enabled: false
       flexible_bg_image_blocks:
-        enabled: true
         weight: 32
+        enabled: false
       gridder:
-        enabled: true
         weight: 43
+        enabled: false
       gridder_item:
         weight: 44
         enabled: false
@@ -128,21 +104,87 @@ settings:
         weight: 45
         enabled: false
       person_carousel:
-        enabled: true
         weight: 45
+        enabled: false
       video_embed:
         weight: 49
         enabled: false
-      quicktabs:
-        enabled: true
-        weight: 54
       video_tab_carousel:
-        enabled: true
         weight: 54
+        enabled: false
+      quicktabs:
+        weight: 54
+        enabled: false
       video_tab_item:
         weight: 55
         enabled: false
       quicktab_item:
         weight: 55
+        enabled: false
+      article_slideshow:
+        weight: 61
+        enabled: false
+      article_slideshow_item:
+        weight: 62
+        enabled: false
+      button_list:
+        weight: 63
+        enabled: false
+      button_list_item:
+        weight: 64
+        enabled: false
+      content_centered:
+        weight: 66
+        enabled: false
+      content_left:
+        weight: 67
+        enabled: false
+      content_quote:
+        weight: 68
+        enabled: false
+      content_with_media:
+        weight: 69
+        enabled: false
+      cta_buttons:
+        weight: 70
+        enabled: false
+      full_image:
+        weight: 75
+        enabled: false
+      full_video:
+        weight: 76
+        enabled: false
+      grid_content_centered:
+        weight: 78
+        enabled: false
+      grid_content_centered_item:
+        weight: 79
+        enabled: false
+      grid_content_left:
+        weight: 80
+        enabled: false
+      grid_content_left_item:
+        weight: 81
+        enabled: false
+      image_gallery:
+        weight: 87
+        enabled: false
+      image_gallery_item:
+        weight: 88
+        enabled: false
+      profile_card_details_fields:
+        weight: 93
+        enabled: false
+      quote:
+        weight: 98
+        enabled: false
+      tabs_horizontal:
+        weight: 101
+        enabled: false
+      tabs_horizontal_item:
+        weight: 102
+        enabled: false
+      views:
+        weight: 107
         enabled: false
 field_type: entity_reference_revisions

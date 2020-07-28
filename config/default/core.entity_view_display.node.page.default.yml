@@ -8,13 +8,13 @@ dependencies:
     - field.field.node.page.field_content_bottom
     - field.field.node.page.field_hero_content
     - field.field.node.page.field_hide_page_title
-    - field.field.node.page.field_intro
+    - field.field.node.page.field_lead_txt
     - field.field.node.page.field_meta_tags
-    - field.field.node.page.field_section_title
     - field.field.node.page.field_sidebar_content
     - node.type.page
   module:
     - entity_reference_revisions
+    - fences
     - text
     - user
 _core:
@@ -30,7 +30,14 @@ content:
     weight: 2
     region: content
     settings: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
   content_moderation_control:
     weight: 0
     region: content
@@ -43,13 +50,27 @@ content:
     settings:
       view_mode: default
       link: ''
-    third_party_settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
     region: content
-  field_intro:
+  field_lead_txt:
     weight: 1
     label: hidden
     settings: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
     type: basic_string
     region: content
 hidden:
@@ -57,7 +78,6 @@ hidden:
   field_hero_content: true
   field_hide_page_title: true
   field_meta_tags: true
-  field_section_title: true
   field_sidebar_content: true
   langcode: true
   links: true
