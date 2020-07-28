@@ -1,22 +1,21 @@
-uuid: 085f1aa2-2be5-4edf-8119-cba2e41836ce
+uuid: 3c07c3cb-71fc-4d48-b9dc-3e5db9d51e81
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_hero_content
-    - node.type.page
+    - field.storage.paragraph.field_paragraphs
     - paragraphs.paragraphs_type.feature_slideshow
-    - paragraphs.paragraphs_type.header_banner
+    - paragraphs.paragraphs_type.feature_slideshow_item
   module:
     - entity_reference_revisions
-id: node.page.field_hero_content
-field_name: field_hero_content
-entity_type: node
-bundle: page
-label: 'Hero Content'
+id: paragraph.feature_slideshow.field_paragraphs
+field_name: field_paragraphs
+entity_type: paragraph
+bundle: feature_slideshow
+label: Slides
 description: ''
-required: false
-translatable: false
+required: true
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
@@ -24,178 +23,177 @@ settings:
   handler_settings:
     negate: 0
     target_bundles:
-      feature_slideshow: feature_slideshow
-      header_banner: header_banner
+      feature_slideshow_item: feature_slideshow_item
     target_bundles_drag_drop:
       2_column_cta:
-        weight: 13
+        weight: 58
         enabled: false
       3_column_cta:
-        weight: 14
-        enabled: false
-      4_column_cta:
-        weight: 15
-        enabled: false
-      column_section:
-        weight: 16
-        enabled: false
-      full_width_image_section:
-        weight: 17
-        enabled: false
-      hero_banner:
-        weight: 18
-        enabled: false
-      hero_slide:
-        weight: 19
-        enabled: false
-      hero_slideshow:
-        weight: 20
-        enabled: false
-      interior_column_section:
-        weight: 21
-        enabled: false
-      interior_slideshow:
-        weight: 22
-        enabled: false
-      interior_slideshow_slide:
-        weight: 23
-        enabled: false
-      quick_link:
-        weight: 24
-        enabled: false
-      accordion:
         weight: 59
         enabled: false
-      accordion_item:
+      4_column_cta:
         weight: 60
         enabled: false
-      adjustable_media_and_content:
+      accordion:
         weight: 61
         enabled: false
-      article_slideshow:
+      accordion_item:
         weight: 62
         enabled: false
-      article_slideshow_item:
+      adjustable_media_and_content:
         weight: 63
         enabled: false
-      button_list:
+      article_slideshow:
         weight: 64
         enabled: false
-      button_list_item:
+      article_slideshow_item:
         weight: 65
         enabled: false
-      content_centered:
+      button_list:
+        weight: 66
+        enabled: false
+      button_list_item:
         weight: 67
         enabled: false
-      content_left:
+      column_section:
         weight: 68
         enabled: false
-      content_quote:
+      content_centered:
         weight: 69
         enabled: false
-      content_with_media:
+      content_left:
         weight: 70
         enabled: false
-      cta_buttons:
+      content_quote:
         weight: 71
         enabled: false
-      flexible_bg_image_block:
+      content_with_media:
         weight: 72
         enabled: false
-      flexible_bg_image_blocks:
+      cta_buttons:
         weight: 73
         enabled: false
       feature_slideshow:
-        enabled: true
         weight: 74
-      flexible_cta_block:
-        weight: 74
-        enabled: false
-      flexible_cta_blocks:
-        weight: 75
         enabled: false
       feature_slideshow_item:
+        enabled: true
         weight: 75
-        enabled: false
-      full_image:
+      flexible_bg_image_block:
         weight: 76
         enabled: false
-      full_video:
+      flexible_bg_image_blocks:
         weight: 77
         enabled: false
-      gridder:
+      flexible_cta_block:
+        weight: 78
+        enabled: false
+      flexible_cta_blocks:
         weight: 79
         enabled: false
-      gridder_item:
+      full_image:
         weight: 80
         enabled: false
-      grid_content_centered:
+      full_video:
         weight: 81
         enabled: false
-      grid_content_centered_item:
+      full_width_image_section:
         weight: 82
         enabled: false
-      grid_content_left:
+      gridder:
         weight: 83
         enabled: false
-      grid_content_left_item:
+      gridder_item:
         weight: 84
         enabled: false
-      header_banner:
-        enabled: true
+      grid_content_centered:
         weight: 85
-      image_gallery:
+        enabled: false
+      grid_content_centered_item:
+        weight: 86
+        enabled: false
+      grid_content_left:
+        weight: 87
+        enabled: false
+      grid_content_left_item:
+        weight: 88
+        enabled: false
+      header_banner:
         weight: 89
         enabled: false
-      image_gallery_item:
+      hero_banner:
         weight: 90
         enabled: false
-      person_carousel:
+      hero_slide:
+        weight: 91
+        enabled: false
+      hero_slideshow:
+        weight: 92
+        enabled: false
+      image_gallery:
+        weight: 93
+        enabled: false
+      image_gallery_item:
         weight: 94
         enabled: false
-      profile_card_details_fields:
+      interior_column_section:
         weight: 95
         enabled: false
-      quicktabs:
+      interior_slideshow:
         weight: 96
         enabled: false
-      quicktab_item:
+      interior_slideshow_slide:
         weight: 97
         enabled: false
-      quick_link_minimal:
+      person_carousel:
+        weight: 98
+        enabled: false
+      profile_card_details_fields:
         weight: 99
         enabled: false
-      quote:
+      quicktabs:
         weight: 100
         enabled: false
-      recent_articles:
+      quicktab_item:
         weight: 101
         enabled: false
-      recent_articles_upcoming_events:
+      quick_link:
         weight: 102
         enabled: false
-      tabs_horizontal:
+      quick_link_minimal:
         weight: 103
         enabled: false
-      tabs_horizontal_item:
+      quote:
         weight: 104
         enabled: false
-      upcoming_events:
+      recent_articles:
         weight: 105
         enabled: false
-      video_embed:
+      recent_articles_upcoming_events:
         weight: 106
         enabled: false
-      video_tab_carousel:
+      tabs_horizontal:
         weight: 107
         enabled: false
-      video_tab_item:
+      tabs_horizontal_item:
         weight: 108
         enabled: false
-      views:
+      upcoming_events:
         weight: 109
         enabled: false
-      wysiwyg:
+      video_embed:
         weight: 110
+        enabled: false
+      video_tab_carousel:
+        weight: 111
+        enabled: false
+      video_tab_item:
+        weight: 112
+        enabled: false
+      views:
+        weight: 113
+        enabled: false
+      wysiwyg:
+        weight: 114
         enabled: false
 field_type: entity_reference_revisions
