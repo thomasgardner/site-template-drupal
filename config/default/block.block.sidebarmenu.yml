@@ -44,6 +44,22 @@ visibility:
       node: '@node.node_route_context:node'
   request_path:
     id: request_path
-    pages: "<front>\r\n/node/11\r\n/news\r\n/events\r\n/events/month\r\n/events/month/*\r\n/events/year\r\n/events/year/*\r\n/events/week\r\n/events/week/*\r\n/search\r\n/news/*\r\n/user\r\n/user/*\r\n/users\r\n/users/*"
+    pages: |
+      <front>
+      /node/11
+      /news
+      /events
+      /events/month
+      /events/month/*
+      /events/year
+      /events/year/*
+      /events/week
+      /events/week/*
+      /search
+      /news/*
+      /user
+      /user/*
+      /users
+      /users/*
     negate: true
     context_mapping: {  }

@@ -6,7 +6,24 @@ id: two_column_content
 label: 'Two column content'
 description: 'Use to provide 2 columns of content'
 body:
-  value: "<div class=\"row\">\r\n<div class=\"col-sm-6\">\r\n<ul>\r\n\t<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>\r\n\t<li>Quisque ultrices massa nec diam fringilla, quis posuere tellus commodo.</li>\r\n\t<li>Maecenas eget metus consectetur, luctus odio eu, laoreet justo.</li>\r\n</ul>\r\n</div>\r\n\r\n<div class=\"col-sm-6\">\r\n<ol>\r\n\t<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>\r\n\t<li>Quisque ultrices massa nec diam fringilla, quis posuere tellus commodo.</li>\r\n\t<li>Maecenas eget metus consectetur, luctus odio eu, laoreet justo.</li>\r\n</ol>\r\n</div>\r\n</div>\r\n"
+  value: |
+    <div class="row">
+    <div class="col-sm-6">
+    <ul>
+    	<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+    	<li>Quisque ultrices massa nec diam fringilla, quis posuere tellus commodo.</li>
+    	<li>Maecenas eget metus consectetur, luctus odio eu, laoreet justo.</li>
+    </ul>
+    </div>
+    
+    <div class="col-sm-6">
+    <ol>
+    	<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+    	<li>Quisque ultrices massa nec diam fringilla, quis posuere tellus commodo.</li>
+    	<li>Maecenas eget metus consectetur, luctus odio eu, laoreet justo.</li>
+    </ol>
+    </div>
+    </div>
   format: full_html
 weight: null
 node_types: {  }

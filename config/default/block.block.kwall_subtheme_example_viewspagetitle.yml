@@ -30,6 +30,9 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "/events\r\n/news\r\n/user*"
+    pages: |
+      /events
+      /news
+      /user*
     negate: false
     context_mapping: {  }

@@ -30,6 +30,33 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "/directory\r\n/directory/a\r\n/directory/b\r\n/directory/c\r\n/directory/d\r\n/directory/e\r\n/directory/f\r\n/directory/g\r\n/directory/h\r\n/directory/i\r\n/directory/j\r\n/directory/k\r\n/directory/l\r\n/directory/m\r\n/directory/n\r\n/directory/o\r\n/directory/p\r\n/directory/q\r\n/directory/r\r\n/directory/s\r\n/directory/t\r\n/directory/u\r\n/directory/v\r\n/directory/w\r\n/directory/x\r\n/directory/y\r\n/directory/z"
+    pages: |
+      /directory
+      /directory/a
+      /directory/b
+      /directory/c
+      /directory/d
+      /directory/e
+      /directory/f
+      /directory/g
+      /directory/h
+      /directory/i
+      /directory/j
+      /directory/k
+      /directory/l
+      /directory/m
+      /directory/n
+      /directory/o
+      /directory/p
+      /directory/q
+      /directory/r
+      /directory/s
+      /directory/t
+      /directory/u
+      /directory/v
+      /directory/w
+      /directory/x
+      /directory/y
+      /directory/z
     negate: false
     context_mapping: {  }

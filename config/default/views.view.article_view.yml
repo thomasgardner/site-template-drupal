@@ -329,7 +329,25 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"post-wrap\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-md-8\">\r\n      <div class=\"content-wrap\">\r\n        <div class=\"post-title\">{{ title }}</div>\r\n        <div class=\"post-date\">{{ created }}</div>\r\n        <div class=\"post-body\">{{ body }}</div>\r\n        <div class=\"post-link\"><a href=\"{{ view_node }}\" class=\"read-more-link\">read more <i class=\"fa fa-arrow-right\" aria-hidden=\"true\"></i></a></div>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col-md-4\">\r\n      <div class=\"post-img\"><a href=\"{{ view_node }}\">{{ field_media_image_9 }}</a></div>\r\n    </div>\r\n\r\n  </div>\r\n</div>"
+            text: |
+              <div class="post-wrap">
+                <div class="row">
+              
+                  <div class="col-md-8">
+                    <div class="content-wrap">
+                      <div class="post-title">{{ title }}</div>
+                      <div class="post-date">{{ created }}</div>
+                      <div class="post-body">{{ body }}</div>
+                      <div class="post-link"><a href="{{ view_node }}" class="read-more-link">read more <i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
+                    </div>
+                  </div>
+              
+                  <div class="col-md-4">
+                    <div class="post-img"><a href="{{ view_node }}">{{ field_media_image_9 }}</a></div>
+                  </div>
+              
+                </div>
+              </div>
             make_link: false
             path: ''
             absolute: false
@@ -362,7 +380,19 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: "<div class=\"post-wrap\">\r\n  <div class=\"row\">\r\n    <div class=\"col-md-12\">\r\n      <div class=\"content-wrap\">\r\n        <div class=\"post-title\">{{ title }}</div>\r\n        <div class=\"post-date\">{{ created }}</div>\r\n        <div class=\"post-body\">{{ body }}</div>\r\n        <div class=\"post-link\"><a href=\"{{ view_node }}\" class=\"read-more-link\">read more <i class=\"fa fa-arrow-right\" aria-hidden=\"true\"></i></a></div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>"
+          empty: |
+            <div class="post-wrap">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="content-wrap">
+                    <div class="post-title">{{ title }}</div>
+                    <div class="post-date">{{ created }}</div>
+                    <div class="post-body">{{ body }}</div>
+                    <div class="post-link"><a href="{{ view_node }}" class="read-more-link">read more <i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -833,7 +863,15 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"featured-post-wrap\" data-featured-article=\"{{ field_media_image_9 }}\">\r\n  <a href=\"{{ view_node }}\" class=\"post-wrap-link\"></a>\r\n  <div class=\"content-wrap\">\r\n    <div class=\"post-body\">{{ body }}</div>\r\n     <div class=\"post-date\">{{ created }}</div>\r\n    <div class=\"post-link\"><a href=\"{{ view_node }}\" class=\"read-more-link\">read more <i class=\"fa fa-angle-right\"></i></a></div>\r\n  </div>\r\n</div>"
+            text: |
+              <div class="featured-post-wrap" data-featured-article="{{ field_media_image_9 }}">
+                <a href="{{ view_node }}" class="post-wrap-link"></a>
+                <div class="content-wrap">
+                  <div class="post-body">{{ body }}</div>
+                   <div class="post-date">{{ created }}</div>
+                  <div class="post-link"><a href="{{ view_node }}" class="read-more-link">read more <i class="fa fa-angle-right"></i></a></div>
+                </div>
+              </div>
             make_link: false
             path: ''
             absolute: false
@@ -866,7 +904,16 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: "<div class=\"featured-post-wrap\" data-featured-article=\"https://via.placeholder.com/600x400\">\r\n  <a href=\"{{ view_node }}\" class=\"post-wrap-link\"></a>\r\n  <div class=\"content-wrap\">\r\n    <div class=\"post-title\">{{ title }}</div>\r\n    <div class=\"post-date\">{{ created }}</div>\r\n    <div class=\"post-body\">{{ body }}</div>\r\n    <div class=\"post-link\"><a href=\"{{ view_node }}\" class=\"read-more-link\">read more <i class=\"fa fa-arrow-right\" aria-hidden=\"true\"></i></a></div>\r\n  </div>\r\n</div>"
+          empty: |
+            <div class="featured-post-wrap" data-featured-article="https://via.placeholder.com/600x400">
+              <a href="{{ view_node }}" class="post-wrap-link"></a>
+              <div class="content-wrap">
+                <div class="post-title">{{ title }}</div>
+                <div class="post-date">{{ created }}</div>
+                <div class="post-body">{{ body }}</div>
+                <div class="post-link"><a href="{{ view_node }}" class="read-more-link">read more <i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
+              </div>
+            </div>
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -1243,7 +1290,17 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"featured-post-wrap\"  data-featured-article=\"{{ field_media_image_9 }}\">\r\n      <div class=\"content-wrap\">\r\n        <div class=\"post-title\">{{ title }}</div>       \r\n        <div class=\"post-date\">{{ created }}</div>\r\n        <div class=\"post-link\"><a href=\"{{ view_node }}\" class=\"read-more-link\">read more <i class=\"fa fa-angle-right\"></i></a></div>\r\n      </div>\r\n\r\n    \r\n\r\n</div>"
+            text: |
+              <div class="featured-post-wrap"  data-featured-article="{{ field_media_image_9 }}">
+                    <div class="content-wrap">
+                      <div class="post-title">{{ title }}</div>       
+                      <div class="post-date">{{ created }}</div>
+                      <div class="post-link"><a href="{{ view_node }}" class="read-more-link">read more <i class="fa fa-angle-right"></i></a></div>
+                    </div>
+              
+                  
+              
+              </div>
             make_link: false
             path: ''
             absolute: false
@@ -1276,7 +1333,19 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: "<div class=\"featured-post-wrap\">\r\n  <div class=\"row\">\r\n    <div class=\"col-md-12\">\r\n      <div class=\"content-wrap\">\r\n        <div class=\"post-title\">{{ title }}</div>\r\n        <div class=\"post-body\">{{ body }}</div>\r\n        <div class=\"post-date\">{{ created }}</div>\r\n        <div class=\"post-link\"><a href=\"{{ view_node }}\" class=\"read-more-link\">read more <i class=\"fa fa-angle-right\"></i></a></div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>"
+          empty: |
+            <div class="featured-post-wrap">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="content-wrap">
+                    <div class="post-title">{{ title }}</div>
+                    <div class="post-body">{{ body }}</div>
+                    <div class="post-date">{{ created }}</div>
+                    <div class="post-link"><a href="{{ view_node }}" class="read-more-link">read more <i class="fa fa-angle-right"></i></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -1617,7 +1686,18 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"post-wrap\">\r\n  <div class=\"row\">\r\n    <div class=\"col-md-12\">\r\n      <div class=\"content-wrap\">\r\n        <div class=\"post-title\">{{ title }}</div>\r\n        <div class=\"post-date\">{{ created }}</div>\r\n        <div class=\"post-link\"><a href=\"{{ view_node }}\" class=\"read-more-link\">read more</a></div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>"
+            text: |
+              <div class="post-wrap">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="content-wrap">
+                      <div class="post-title">{{ title }}</div>
+                      <div class="post-date">{{ created }}</div>
+                      <div class="post-link"><a href="{{ view_node }}" class="read-more-link">read more</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             make_link: false
             path: ''
             absolute: false
@@ -2021,7 +2101,20 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"post-wrap\">\r\n  <div class=\"row\">\r\n    <div class=\"col-md-12\">\r\n      <div class=\"post-img\"><a href=\"{{ view_node }}\">{{ field_media_image_9 }}</a></div>\r\n      <div class=\"content-wrap\">\r\n        <div class=\"post-title\">{{ title }}</div>\r\n        <div class=\"post-date\">{{ created }}</div>\r\n        <div class=\"post-body\">{{ body }}</div>\r\n        <div class=\"post-link\"><a href=\"{{ view_node }}\" class=\"read-more-link\">read more</a></div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>"
+            text: |
+              <div class="post-wrap">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="post-img"><a href="{{ view_node }}">{{ field_media_image_9 }}</a></div>
+                    <div class="content-wrap">
+                      <div class="post-title">{{ title }}</div>
+                      <div class="post-date">{{ created }}</div>
+                      <div class="post-body">{{ body }}</div>
+                      <div class="post-link"><a href="{{ view_node }}" class="read-more-link">read more</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             make_link: false
             path: ''
             absolute: false
@@ -2054,7 +2147,19 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: "<div class=\"post-wrap\">\r\n  <div class=\"row\">\r\n    <div class=\"col-md-12\">\r\n      <div class=\"content-wrap\">\r\n        <div class=\"post-title\">{{ title }}</div>\r\n        <div class=\"post-date\">{{ created }}</div>\r\n        <div class=\"post-body\">{{ body }}</div>\r\n        <div class=\"post-link\"><a href=\"{{ view_node }}\" class=\"read-more-link\">read more</a></div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>"
+          empty: |
+            <div class="post-wrap">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="content-wrap">
+                    <div class="post-title">{{ title }}</div>
+                    <div class="post-date">{{ created }}</div>
+                    <div class="post-body">{{ body }}</div>
+                    <div class="post-link"><a href="{{ view_node }}" class="read-more-link">read more</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -2487,7 +2592,25 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"featured-post-wrap\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-lg-7 col-md-12\">\r\n      <div class=\"post-img\"><a href=\"{{ view_node }}\">{{ field_media_image_9 }}</a></div>\r\n    </div>\r\n\r\n    <div class=\"col-lg-5 col-md-12\">\r\n      <div class=\"content-wrap\">\r\n        <div class=\"post-title\">{{ title }}</div>\r\n        <div class=\"post-date\">{{ created }}</div>\r\n        <div class=\"post-body\">{{ body }}</div>\r\n        <div class=\"post-link\"><a href=\"{{ view_node }}\" class=\"read-more-link\">Learn More</a></div>\r\n      </div>\r\n    </div>\r\n\r\n  </div>\r\n</div>"
+            text: |
+              <div class="featured-post-wrap">
+                <div class="row">
+              
+                  <div class="col-lg-7 col-md-12">
+                    <div class="post-img"><a href="{{ view_node }}">{{ field_media_image_9 }}</a></div>
+                  </div>
+              
+                  <div class="col-lg-5 col-md-12">
+                    <div class="content-wrap">
+                      <div class="post-title">{{ title }}</div>
+                      <div class="post-date">{{ created }}</div>
+                      <div class="post-body">{{ body }}</div>
+                      <div class="post-link"><a href="{{ view_node }}" class="read-more-link">Learn More</a></div>
+                    </div>
+                  </div>
+              
+                </div>
+              </div>
             make_link: false
             path: ''
             absolute: false
@@ -2520,7 +2643,19 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: "<div class=\"featured-post-wrap\">\r\n  <div class=\"row\">\r\n    <div class=\"col-md-12\">\r\n      <div class=\"content-wrap\">\r\n        <div class=\"post-title\">{{ title }}</div>\r\n        <div class=\"post-date\">{{ created }}</div>\r\n        <div class=\"post-body\">{{ body }}</div>\r\n        <div class=\"post-link\"><a href=\"{{ view_node }}\" class=\"read-more-link\">Learn More</a></div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>"
+          empty: |
+            <div class="featured-post-wrap">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="content-wrap">
+                    <div class="post-title">{{ title }}</div>
+                    <div class="post-date">{{ created }}</div>
+                    <div class="post-body">{{ body }}</div>
+                    <div class="post-link"><a href="{{ view_node }}" class="read-more-link">Learn More</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -2550,7 +2685,15 @@ display:
           admin_label: ''
           empty: false
           tokenize: false
-          content: "    <div class=\"controls\">\r\n      <div class=\"custom-controls-container\">\r\n        <div class=\"pause fa fa-pause\"></div>\r\n        <div class=\"play fa fa-play d-none\"></div>\r\n      </div>\r\n      <a href=\"#\" class=\"flex-prev fa fa-chevron-left\"></a>\r\n      <a href=\"#\" class=\"flex-next fa fa-chevron-right\"></a>\r\n    </div>\r\n"
+          content: |2
+                <div class="controls">
+                  <div class="custom-controls-container">
+                    <div class="pause fa fa-pause"></div>
+                    <div class="play fa fa-play d-none"></div>
+                  </div>
+                  <a href="#" class="flex-prev fa fa-chevron-left"></a>
+                  <a href="#" class="flex-next fa fa-chevron-right"></a>
+                </div>
           plugin_id: text_custom
       header:
         area:
@@ -3364,7 +3507,25 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"post-wrap\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-md-8\">\r\n      <div class=\"content-wrap\">\r\n        <div class=\"post-title\">{{ title }}</div>\r\n        <div class=\"post-date\">{{ created }}</div>\r\n        <div class=\"post-body\">{{ body }}</div>\r\n        <div class=\"post-link\"><a href=\"{{ view_node }}\" class=\"read-more-link\">read more</a></div>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col-md-4\">\r\n      <div class=\"post-img\"><a href=\"{{ view_node }}\">{{ field_media_image_9 }}</a></div>\r\n    </div>\r\n\r\n  </div>\r\n</div>"
+            text: |
+              <div class="post-wrap">
+                <div class="row">
+              
+                  <div class="col-md-8">
+                    <div class="content-wrap">
+                      <div class="post-title">{{ title }}</div>
+                      <div class="post-date">{{ created }}</div>
+                      <div class="post-body">{{ body }}</div>
+                      <div class="post-link"><a href="{{ view_node }}" class="read-more-link">read more</a></div>
+                    </div>
+                  </div>
+              
+                  <div class="col-md-4">
+                    <div class="post-img"><a href="{{ view_node }}">{{ field_media_image_9 }}</a></div>
+                  </div>
+              
+                </div>
+              </div>
             make_link: false
             path: ''
             absolute: false
@@ -3397,7 +3558,19 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: "<div class=\"post-wrap\">\r\n  <div class=\"row\">\r\n    <div class=\"col-md-12\">\r\n      <div class=\"content-wrap\">\r\n        <div class=\"post-title\">{{ title }}</div>\r\n        <div class=\"post-date\">{{ created }}</div>\r\n        <div class=\"post-body\">{{ body }}</div>\r\n        <div class=\"post-link\"><a href=\"{{ view_node }}\" class=\"read-more-link\">read more </a></div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>"
+          empty: |
+            <div class="post-wrap">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="content-wrap">
+                    <div class="post-title">{{ title }}</div>
+                    <div class="post-date">{{ created }}</div>
+                    <div class="post-body">{{ body }}</div>
+                    <div class="post-link"><a href="{{ view_node }}" class="read-more-link">read more </a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true

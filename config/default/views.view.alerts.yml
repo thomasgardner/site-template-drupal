@@ -142,7 +142,14 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"alert-level alert-level-{{ field_alert_level|lower }}\">\r\n<div class=\"container alert-content kwall-site-alert{{ nid }} not-dismissible-{{ field_not_dismissable_1|lower }} \">\r\n<!--<span class=\"alert-icon fa fa-exclamation-circle\" aria-hidden=\"true\"></span>-->\r\n<div class=\"alert-body\">{{ field_alert_body }}</div>\r\n{{ field_not_dismissable }}\r\n</div>\r\n</div>"
+            text: |
+              <div class="alert-level alert-level-{{ field_alert_level|lower }}">
+              <div class="container alert-content kwall-site-alert{{ nid }} not-dismissible-{{ field_not_dismissable_1|lower }} ">
+              <!--<span class="alert-icon fa fa-exclamation-circle" aria-hidden="true"></span>-->
+              <div class="alert-body">{{ field_alert_body }}</div>
+              {{ field_not_dismissable }}
+              </div>
+              </div>
             make_link: false
             path: ''
             absolute: false

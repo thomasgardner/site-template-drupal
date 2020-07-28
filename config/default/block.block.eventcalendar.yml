@@ -36,6 +36,14 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "/events/year\r\n/events/year/*\r\n/events/month\r\n/events/month/*\r\n/events/week\r\n/events/week/*\r\n/events/day\r\n/events/day/*"
+    pages: |
+      /events/year
+      /events/year/*
+      /events/month
+      /events/month/*
+      /events/week
+      /events/week/*
+      /events/day
+      /events/day/*
     negate: false
     context_mapping: {  }

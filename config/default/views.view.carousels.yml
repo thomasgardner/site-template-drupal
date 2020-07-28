@@ -199,7 +199,9 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"full-name\"><a href=\"{{ view_node }}\">{{ field_name__given }} {{ field_name__family }}</a></div>\r\n<div class=\"credentials\">{{ field_name__credentials }}</div>"
+            text: |
+              <div class="full-name"><a href="{{ view_node }}">{{ field_name__given }} {{ field_name__family }}</a></div>
+              <div class="credentials">{{ field_name__credentials }}</div>
             make_link: false
             path: ''
             absolute: false
@@ -548,7 +550,9 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"full-name\">{{ field_name__given }} {{ field_name__family }}</div>\r\n<div class=\"credentials\">{{ field_name__credentials }}</div>"
+            text: |
+              <div class="full-name">{{ field_name__given }} {{ field_name__family }}</div>
+              <div class="credentials">{{ field_name__credentials }}</div>
             make_link: false
             path: ''
             absolute: false

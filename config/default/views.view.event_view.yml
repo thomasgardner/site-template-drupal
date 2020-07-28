@@ -340,7 +340,11 @@ display:
           exclude: true
           alter:
             alter_text: true
-            text: "<div class=\"event-date-wrap\">\r\n<div class=\"date-day\">{{ field_start_date_1 }}</div>\r\n<div class=\"date-month\">{{ field_start_date_2 }}</div>\r\n</div>"
+            text: |
+              <div class="event-date-wrap">
+              <div class="date-day">{{ field_start_date_1 }}</div>
+              <div class="date-month">{{ field_start_date_2 }}</div>
+              </div>
             make_link: false
             path: ''
             absolute: false
@@ -469,7 +473,28 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"featured-event-wrap\">\r\n  <div class=\"row no-gutters\">\r\n\r\n    <div class=\"col-sm-4\">\r\n      <div class=\"image-wrap\">\r\n        <div class=\"date-wrap\">\r\n          <div class=\"date\">{{ field_start_date_2 }}</div>\r\n        </div>\r\n        {{ field_media_image_7 }}\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col-sm-8\">\r\n      <div class=\"content-wrap\">\r\n        <div class=\"time\">{{ field_all_day_event }}</div>\r\n        <div class=\"title\">{{ title }}</div>\r\n      </div>\r\n    </div>\r\n\r\n  </div>\r\n</div>"
+            text: |
+              <div class="featured-event-wrap">
+                <div class="row no-gutters">
+              
+                  <div class="col-sm-4">
+                    <div class="image-wrap">
+                      <div class="date-wrap">
+                        <div class="date">{{ field_start_date_2 }}</div>
+                      </div>
+                      {{ field_media_image_7 }}
+                    </div>
+                  </div>
+              
+                  <div class="col-sm-8">
+                    <div class="content-wrap">
+                      <div class="time">{{ field_all_day_event }}</div>
+                      <div class="title">{{ title }}</div>
+                    </div>
+                  </div>
+              
+                </div>
+              </div>
             make_link: false
             path: ''
             absolute: false
@@ -502,7 +527,21 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: "<div class=\"featured-event-wrap\">\r\n  <div class=\"row no-gutters\">\r\n\r\n    <div class=\"col-sm-12\">\r\n      <div class=\"date-wrap\">\r\n        <div class=\"date\">{{ field_start_date_2 }}</div>\r\n      </div>\r\n      <div class=\"content-wrap\">\r\n        <div class=\"time\">{{ field_all_day_event }}</div>\r\n      <div class=\"title\">{{ title }}</div>\r\n    </div>\r\n\r\n  </div>\r\n</div>"
+          empty: |
+            <div class="featured-event-wrap">
+              <div class="row no-gutters">
+            
+                <div class="col-sm-12">
+                  <div class="date-wrap">
+                    <div class="date">{{ field_start_date_2 }}</div>
+                  </div>
+                  <div class="content-wrap">
+                    <div class="time">{{ field_all_day_event }}</div>
+                  <div class="title">{{ title }}</div>
+                </div>
+            
+              </div>
+            </div>
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -1090,7 +1129,11 @@ display:
           exclude: true
           alter:
             alter_text: true
-            text: "<div class=\"event-date-wrap\">\r\n<div class=\"date-day\">{{ field_start_date_1 }}</div>\r\n<div class=\"date-month\">{{ field_start_date_2 }}</div>\r\n</div>"
+            text: |
+              <div class="event-date-wrap">
+              <div class="date-day">{{ field_start_date_1 }}</div>
+              <div class="date-month">{{ field_start_date_2 }}</div>
+              </div>
             make_link: false
             path: ''
             absolute: false
@@ -1335,7 +1378,19 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"date-wrap\">\r\n  <div class=\"date\">{{ field_start_date_2 }}</div>\r\n</div>\r\n\r\n<div class=\"featured-event-wrap\" data-featured-event=\"{{ field_media_image_7 }}\">\r\n  <div class=\"content-wrap\">\r\n\r\n    <div class=\"featured-title\">{{ title }}</div>\r\n    <div class=\"featured-time\">{{ field_all_day_event }}</div>\r\n{{ view_node }}\r\n  </div>\r\n</div>"
+            text: |
+              <div class="date-wrap">
+                <div class="date">{{ field_start_date_2 }}</div>
+              </div>
+              
+              <div class="featured-event-wrap" data-featured-event="{{ field_media_image_7 }}">
+                <div class="content-wrap">
+              
+                  <div class="featured-title">{{ title }}</div>
+                  <div class="featured-time">{{ field_all_day_event }}</div>
+              {{ view_node }}
+                </div>
+              </div>
             make_link: false
             path: ''
             absolute: false
@@ -1368,7 +1423,25 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: "<div class=\"featured-event-wrap\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-sm-12\">\r\n\r\n      <div class=\"date-wrap\">\r\n        <div class=\"date\">{{ field_start_date_2 }}</div>\r\n      </div>\r\n\r\n      <div class=\"content-wrap\">\r\n        <div class=\"featured-time\">{{ field_all_day_event }}</div>\r\n        <div class=\"featured-title\">{{ title }}</div>\r\n{{ view_node }}      </div>\r\n\r\n    </div>\r\n\r\n  </div>\r\n</div>"
+          empty: |
+            <div class="featured-event-wrap">
+              <div class="row">
+            
+                <div class="col-sm-12">
+            
+                  <div class="date-wrap">
+                    <div class="date">{{ field_start_date_2 }}</div>
+                  </div>
+            
+                  <div class="content-wrap">
+                    <div class="featured-time">{{ field_all_day_event }}</div>
+                    <div class="featured-title">{{ title }}</div>
+            {{ view_node }}      </div>
+            
+                </div>
+            
+              </div>
+            </div>
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -2028,7 +2101,11 @@ display:
           exclude: true
           alter:
             alter_text: true
-            text: "<div class=\"event-date-wrap\">\r\n<div class=\"date-day\">{{ field_start_date_1 }}</div>\r\n<div class=\"date-month\">{{ field_start_date_2 }}</div>\r\n</div>"
+            text: |
+              <div class="event-date-wrap">
+              <div class="date-day">{{ field_start_date_1 }}</div>
+              <div class="date-month">{{ field_start_date_2 }}</div>
+              </div>
             make_link: false
             path: ''
             absolute: false
@@ -2337,7 +2414,27 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"event-wrap\">\r\n  <div class=\"row\">\r\n    <div class=\"col-sm-8\">\r\n      <div class=\"date-wrap\">\r\n        <div class=\"date\">{{ field_start_date_2 }}</div>\r\n      </div>\r\n      <div class=\"content-wrap\">\r\n        <div class=\"title\">{{ title }}</div>\r\n        <div class=\"time\">{{ field_start_date_4 }}</div>\r\n        <div class=\"body\">{{ body }}</div>\r\n         {{ view_node }}   \r\n      </div>\r\n    </div>\r\n    <div class=\"col-sm-4\">\r\n      <div class=\"image-wrap\">\r\n        <div class=\"event-image\">{{ field_media_image_7 }}</div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>"
+            text: |
+              <div class="event-wrap">
+                <div class="row">
+                  <div class="col-sm-8">
+                    <div class="date-wrap">
+                      <div class="date">{{ field_start_date_2 }}</div>
+                    </div>
+                    <div class="content-wrap">
+                      <div class="title">{{ title }}</div>
+                      <div class="time">{{ field_start_date_4 }}</div>
+                      <div class="body">{{ body }}</div>
+                       {{ view_node }}   
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="image-wrap">
+                      <div class="event-image">{{ field_media_image_7 }}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             make_link: false
             path: ''
             absolute: false
@@ -2370,7 +2467,22 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: "<div class=\"event-wrap\">\r\n  <div class=\"row\">\r\n    <div class=\"col-sm-12\">\r\n      <div class=\"date-wrap\">\r\n        <div class=\"date\">{{ field_start_date_2 }}</div>\r\n      </div>\r\n      <div class=\"content-wrap\">\r\n        <div class=\"title\">{{ title }}</div>\r\n        <div class=\"time\">{{ field_start_date_4 }}</div>\r\n        <div class=\"body\">{{ body }}</div>\r\n        {{ view_node }}        \r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>"
+          empty: |
+            <div class="event-wrap">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="date-wrap">
+                    <div class="date">{{ field_start_date_2 }}</div>
+                  </div>
+                  <div class="content-wrap">
+                    <div class="title">{{ title }}</div>
+                    <div class="time">{{ field_start_date_4 }}</div>
+                    <div class="body">{{ body }}</div>
+                    {{ view_node }}        
+                  </div>
+                </div>
+              </div>
+            </div>
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -2700,7 +2812,11 @@ display:
           exclude: true
           alter:
             alter_text: true
-            text: "<div class=\"event-date-wrap\">\r\n<div class=\"date-day\">{{ field_start_date_1 }}</div>\r\n<div class=\"date-month\">{{ field_start_date_2 }}</div>\r\n</div>"
+            text: |
+              <div class="event-date-wrap">
+              <div class="date-day">{{ field_start_date_1 }}</div>
+              <div class="date-month">{{ field_start_date_2 }}</div>
+              </div>
             make_link: false
             path: ''
             absolute: false
@@ -2829,7 +2945,19 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"event-wrap\">\r\n\r\n  <div class=\"date-wrap\">\r\n    <div class=\"date\">{{ field_start_date_2 }}</div>\r\n  </div>\r\n\r\n  <div class=\"content-wrap\">\r\n    <div class=\"title\">{{ title }}</div>\r\n<div class=\"time\">{{ field_all_day_event }}</div>\r\n  </div>\r\n\r\n</div>"
+            text: |
+              <div class="event-wrap">
+              
+                <div class="date-wrap">
+                  <div class="date">{{ field_start_date_2 }}</div>
+                </div>
+              
+                <div class="content-wrap">
+                  <div class="title">{{ title }}</div>
+              <div class="time">{{ field_all_day_event }}</div>
+                </div>
+              
+              </div>
             make_link: false
             path: ''
             absolute: false
@@ -3159,7 +3287,11 @@ display:
           exclude: true
           alter:
             alter_text: true
-            text: "<div class=\"event-date-wrap\">\r\n<div class=\"date-day\">{{ field_start_date_1 }}</div>\r\n<div class=\"date-month\">{{ field_start_date_2 }}</div>\r\n</div>"
+            text: |
+              <div class="event-date-wrap">
+              <div class="date-day">{{ field_start_date_1 }}</div>
+              <div class="date-month">{{ field_start_date_2 }}</div>
+              </div>
             make_link: false
             path: ''
             absolute: false
@@ -3288,7 +3420,19 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"event-wrap\">\r\n\r\n  <div class=\"date-wrap\">\r\n    <div class=\"date\">{{ field_start_date_2 }}</div>\r\n  </div>\r\n\r\n  <div class=\"content-wrap\">\r\n    <div class=\"title\">{{ title }}</div>\r\n    <div class=\"time\">{{ field_all_day_event }}</div>\r\n  </div>\r\n\r\n</div>"
+            text: |
+              <div class="event-wrap">
+              
+                <div class="date-wrap">
+                  <div class="date">{{ field_start_date_2 }}</div>
+                </div>
+              
+                <div class="content-wrap">
+                  <div class="title">{{ title }}</div>
+                  <div class="time">{{ field_all_day_event }}</div>
+                </div>
+              
+              </div>
             make_link: false
             path: ''
             absolute: false
@@ -3746,7 +3890,11 @@ display:
           exclude: true
           alter:
             alter_text: true
-            text: "<div class=\"event-date-wrap\">\r\n<div class=\"date-day\">{{ field_start_date_1 }}</div>\r\n<div class=\"date-month\">{{ field_start_date_2 }}</div>\r\n</div>"
+            text: |
+              <div class="event-date-wrap">
+              <div class="date-day">{{ field_start_date_1 }}</div>
+              <div class="date-month">{{ field_start_date_2 }}</div>
+              </div>
             make_link: false
             path: ''
             absolute: false
@@ -3991,7 +4139,22 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"featured-event-wrap\">\r\n  <div class=\"no-gutters\">\r\n      <div class=\"image-wrap\">\r\n        <div class=\"date-wrap\">\r\n          <div class=\"date\">{{ field_start_date_2 }}</div>\r\n        </div>\r\n        {{ field_media_image_7 }}\r\n      </div>\r\n      <div class=\"content-wrap\">\r\n        <div class=\"title\">{{ title }}</div>\r\n        <div class=\"time\">{{ field_all_day_event }}</div>\r\n        <div class=\"link\"><a href=\"{{ view_node }}\" class=\"read-more-link\">read more <i class=\"fa fa-angle-right\"></i></a></div>\r\n      </div>\r\n  </div>\r\n</div>"
+            text: |
+              <div class="featured-event-wrap">
+                <div class="no-gutters">
+                    <div class="image-wrap">
+                      <div class="date-wrap">
+                        <div class="date">{{ field_start_date_2 }}</div>
+                      </div>
+                      {{ field_media_image_7 }}
+                    </div>
+                    <div class="content-wrap">
+                      <div class="title">{{ title }}</div>
+                      <div class="time">{{ field_all_day_event }}</div>
+                      <div class="link"><a href="{{ view_node }}" class="read-more-link">read more <i class="fa fa-angle-right"></i></a></div>
+                    </div>
+                </div>
+              </div>
             make_link: false
             path: ''
             absolute: false
@@ -4024,7 +4187,22 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: "<div class=\"featured-event-wrap\">\r\n  <div class=\"no-gutters\">\r\n\r\n    <div class=\"col-sm-12\">\r\n      <div class=\"date-wrap\">\r\n        <div class=\"date\">{{ field_start_date_2 }}</div>\r\n      </div>\r\n      <div class=\"content-wrap\">\r\n  <div class=\"title\">{{ title }}</div>\r\n        <div class=\"time\">{{ field_all_day_event }}</div>\r\n               <div class=\"link\"><a href=\"{{ view_node }}\" class=\"read-more-link\">read more <i class=\"fa fa-angle-right\"></i></a></div>\r\n    </div>\r\n\r\n  </div>\r\n</div>"
+          empty: |
+            <div class="featured-event-wrap">
+              <div class="no-gutters">
+            
+                <div class="col-sm-12">
+                  <div class="date-wrap">
+                    <div class="date">{{ field_start_date_2 }}</div>
+                  </div>
+                  <div class="content-wrap">
+              <div class="title">{{ title }}</div>
+                    <div class="time">{{ field_all_day_event }}</div>
+                           <div class="link"><a href="{{ view_node }}" class="read-more-link">read more <i class="fa fa-angle-right"></i></a></div>
+                </div>
+            
+              </div>
+            </div>
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -4219,7 +4397,15 @@ display:
           admin_label: ''
           empty: false
           tokenize: false
-          content: "    <div class=\"controls\">\r\n      <div class=\"custom-controls-container\">\r\n        <div class=\"pause fa fa-pause\"></div>\r\n        <div class=\"play fa fa-play d-none\"></div>\r\n      </div>\r\n      <a href=\"#\" class=\"flex-prev fa fa-chevron-left\"></a>\r\n      <a href=\"#\" class=\"flex-next fa fa-chevron-right\"></a>\r\n    </div>\r\n"
+          content: |2
+                <div class="controls">
+                  <div class="custom-controls-container">
+                    <div class="pause fa fa-pause"></div>
+                    <div class="play fa fa-play d-none"></div>
+                  </div>
+                  <a href="#" class="flex-prev fa fa-chevron-left"></a>
+                  <a href="#" class="flex-next fa fa-chevron-right"></a>
+                </div>
           plugin_id: text_custom
       fields:
         title:
@@ -4552,7 +4738,11 @@ display:
           exclude: true
           alter:
             alter_text: true
-            text: "<div class=\"event-date-wrap\">\r\n<div class=\"date-day\">{{ field_start_date_1 }}</div>\r\n<div class=\"date-month\">{{ field_start_date_2 }}</div>\r\n</div>"
+            text: |
+              <div class="event-date-wrap">
+              <div class="date-day">{{ field_start_date_1 }}</div>
+              <div class="date-month">{{ field_start_date_2 }}</div>
+              </div>
             make_link: false
             path: ''
             absolute: false
@@ -4797,7 +4987,33 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"featured-event-wrap\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-lg-7 col-md-12\">\r\n      <div class=\"image-wrap\">\r\n        <a href=\"{{ view_node }}\">{{ field_media_image_7 }}</a>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col-lg-5 col-md-12\">\r\n      <div class=\"content-wrap\">\r\n<div class=\"featured-top\">\r\n      <div class=\"date-wrap\">\r\n           <div class=\"date\">{{ field_start_date_2 }}</div>\r\n        </div>\r\n        <div class=\"featured-title\">{{ title }}</div>\r\n  </div>\r\n        <div class=\"featured-time\">{{ field_all_day_event }}</div>\r\n        <div class=\"featured-body\">{{ body }}</div>\r\n        <div class=\"featured-link\"><a href=\"{{ view_node }}\" class=\"read-more-link\">read more</a></div>\r\n\r\n      </div>\r\n    </div>\r\n\r\n  </div>\r\n</div>"
+            text: |
+              <div class="featured-event-wrap">
+                <div class="row">
+              
+                  <div class="col-lg-7 col-md-12">
+                    <div class="image-wrap">
+                      <a href="{{ view_node }}">{{ field_media_image_7 }}</a>
+                    </div>
+                  </div>
+              
+                  <div class="col-lg-5 col-md-12">
+                    <div class="content-wrap">
+              <div class="featured-top">
+                    <div class="date-wrap">
+                         <div class="date">{{ field_start_date_2 }}</div>
+                      </div>
+                      <div class="featured-title">{{ title }}</div>
+                </div>
+                      <div class="featured-time">{{ field_all_day_event }}</div>
+                      <div class="featured-body">{{ body }}</div>
+                      <div class="featured-link"><a href="{{ view_node }}" class="read-more-link">read more</a></div>
+              
+                    </div>
+                  </div>
+              
+                </div>
+              </div>
             make_link: false
             path: ''
             absolute: false
@@ -4830,7 +5046,27 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: "<div class=\"featured-event-wrap\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-sm-12\">\r\n\r\n      <div class=\"date-wrap\">\r\n        <div class=\"date\">{{ field_start_date_2 }}</div>\r\n      </div>\r\n\r\n      <div class=\"content-wrap\">\r\n        <div class=\"featured-time\">{{ field_all_day_event }}</div>\r\n        <div class=\"featured-title\">{{ title }}</div>\r\n        <div class=\"featured-body\">{{ body }}</div>\r\n        <div class=\"featured-link\"><a href=\"{{ view_node }}\" class=\"read-more-link\">read more</a></div>\r\n      </div>\r\n\r\n    </div>\r\n\r\n  </div>\r\n</div>"
+          empty: |
+            <div class="featured-event-wrap">
+              <div class="row">
+            
+                <div class="col-sm-12">
+            
+                  <div class="date-wrap">
+                    <div class="date">{{ field_start_date_2 }}</div>
+                  </div>
+            
+                  <div class="content-wrap">
+                    <div class="featured-time">{{ field_all_day_event }}</div>
+                    <div class="featured-title">{{ title }}</div>
+                    <div class="featured-body">{{ body }}</div>
+                    <div class="featured-link"><a href="{{ view_node }}" class="read-more-link">read more</a></div>
+                  </div>
+            
+                </div>
+            
+              </div>
+            </div>
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -5187,7 +5423,11 @@ display:
           exclude: true
           alter:
             alter_text: true
-            text: "<div class=\"event-date-wrap\">\r\n<div class=\"date-day\">{{ field_start_date_1 }}</div>\r\n<div class=\"date-month\">{{ field_start_date_2 }}</div>\r\n</div>"
+            text: |
+              <div class="event-date-wrap">
+              <div class="date-day">{{ field_start_date_1 }}</div>
+              <div class="date-month">{{ field_start_date_2 }}</div>
+              </div>
             make_link: false
             path: ''
             absolute: false
@@ -5496,7 +5736,27 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"event-wrap\">\r\n  <div class=\"row\">\r\n    <div class=\"col-sm-8\">\r\n      <div class=\"date-wrap\">\r\n        <div class=\"date\">{{ field_start_date_2 }}</div>\r\n      </div>\r\n      <div class=\"content-wrap\">\r\n        <div class=\"title\">{{ title }}</div>\r\n        <div class=\"time\">{{ field_start_date_3 }}</div>\r\n        <div class=\"body\">{{ body }}</div>\r\n        {{ view_node }} \r\n      </div>\r\n    </div>\r\n    <div class=\"col-sm-4\">\r\n      <div class=\"image-wrap\">\r\n        <div class=\"event-image\">{{ field_media_image_8 }}</div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>"
+            text: |
+              <div class="event-wrap">
+                <div class="row">
+                  <div class="col-sm-8">
+                    <div class="date-wrap">
+                      <div class="date">{{ field_start_date_2 }}</div>
+                    </div>
+                    <div class="content-wrap">
+                      <div class="title">{{ title }}</div>
+                      <div class="time">{{ field_start_date_3 }}</div>
+                      <div class="body">{{ body }}</div>
+                      {{ view_node }} 
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="image-wrap">
+                      <div class="event-image">{{ field_media_image_8 }}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             make_link: false
             path: ''
             absolute: false
@@ -5529,7 +5789,22 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: "<div class=\"event-wrap\">\r\n  <div class=\"row\">\r\n    <div class=\"col-sm-12\">\r\n      <div class=\"date-wrap\">\r\n        <div class=\"date\">{{ field_start_date_2 }}</div>\r\n      </div>\r\n      <div class=\"content-wrap\">\r\n        <div class=\"title\">{{ title }}</div>\r\n        <div class=\"time\">{{ field_start_date_3 }}</div>\r\n        <div class=\"body\">{{ body }}</div>\r\n        {{ view_node }}    \r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>"
+          empty: |
+            <div class="event-wrap">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="date-wrap">
+                    <div class="date">{{ field_start_date_2 }}</div>
+                  </div>
+                  <div class="content-wrap">
+                    <div class="title">{{ title }}</div>
+                    <div class="time">{{ field_start_date_3 }}</div>
+                    <div class="body">{{ body }}</div>
+                    {{ view_node }}    
+                  </div>
+                </div>
+              </div>
+            </div>
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true

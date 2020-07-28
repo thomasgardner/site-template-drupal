@@ -315,7 +315,9 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<p>{{ field_address__address_line1 }}</ br>\r\n{{ field_address__locality }}, {{ field_address__administrative_area }} {{ field_address__postal_code }}</p>"
+            text: |
+              <p>{{ field_address__address_line1 }}</ br>
+              {{ field_address__locality }}, {{ field_address__administrative_area }} {{ field_address__postal_code }}</p>
             make_link: false
             path: ''
             absolute: false
@@ -440,7 +442,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<a href=\"{{ view_node }}\" class=\"orange-text\">Learn More <i class=\"fa fa-arrow-right\"></i></a>\r\n"
+            text: '<a href="{{ view_node }}" class="orange-text">Learn More <i class="fa fa-arrow-right"></i></a>'
             make_link: false
             path: ''
             absolute: false
@@ -827,7 +829,9 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<p>{{ field_address__address_line1 }}</ br>\r\n{{ field_address__locality }}, {{ field_address__administrative_area }} {{ field_address__postal_code }}</p>"
+            text: |
+              <p>{{ field_address__address_line1 }}</ br>
+              {{ field_address__locality }}, {{ field_address__administrative_area }} {{ field_address__postal_code }}</p>
             make_link: false
             path: ''
             absolute: false
@@ -952,7 +956,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<a href=\"{{ view_node }}\" class=\"orange-text read-more-link\">Learn More</a>\r\n"
+            text: '<a href="{{ view_node }}" class="orange-text read-more-link">Learn More</a>'
             make_link: false
             path: ''
             absolute: false

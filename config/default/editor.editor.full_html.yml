@@ -67,7 +67,13 @@ settings:
     language:
       language_list: un
     stylescombo:
-      styles: "blockquote|blockquote\npre|pre\ncode|code\nsmall|small\nimg.img-responsive|Img Responsive\ndiv.inline|Inline\n"
+      styles: |
+        blockquote|blockquote
+        pre|pre
+        code|code
+        small|small
+        img.img-responsive|Img Responsive
+        div.inline|Inline
     drupallink:
       linkit_enabled: true
       linkit_profile: default

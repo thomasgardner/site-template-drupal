@@ -339,7 +339,13 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<a href=\"{{ view_node }}\">\r\n  <div class=\"course-content\">\r\n    <div class=\"icon-wrap\">{{ term_node_tid_1 }}</div>\r\n    <div class=\"course-title\">{{ title }}</div>\r\n  </div>\r\n</a>"
+            text: |
+              <a href="{{ view_node }}">
+                <div class="course-content">
+                  <div class="icon-wrap">{{ term_node_tid_1 }}</div>
+                  <div class="course-title">{{ title }}</div>
+                </div>
+              </a>
             make_link: false
             path: ''
             absolute: false
@@ -990,7 +996,19 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<a href=\"{{ view_node }}\" class=\"course\">\r\n  <div class=\"course-content\">\r\n    <div class=\"course-media\">\r\n       {{ field_course_image }} \r\n       {{ field_program_type }}\r\n     </div>\r\n     <div class=\"course-description\">\r\n        <div class=\"course-type\">{{ field_course_type }}</div>\r\n        <h5 class=\"course-title\">{{ title }}</h5>\r\n      </div>\r\n  </div>\r\n</a>"
+            text: |
+              <a href="{{ view_node }}" class="course">
+                <div class="course-content">
+                  <div class="course-media">
+                     {{ field_course_image }} 
+                     {{ field_program_type }}
+                   </div>
+                   <div class="course-description">
+                      <div class="course-type">{{ field_course_type }}</div>
+                      <h5 class="course-title">{{ title }}</h5>
+                    </div>
+                </div>
+              </a>
             make_link: false
             path: ''
             absolute: false
@@ -1576,7 +1594,19 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<a href=\"{{ view_node }}\" class=\"course\">\r\n  <div class=\"course-content\">\r\n    <div class=\"course-media\">\r\n       {{ field_course_image }} \r\n       {{ field_program_type }}\r\n     </div>\r\n     <div class=\"course-description\">\r\n        <div class=\"course-type\">{{ field_course_type }}</div>\r\n        <h5 class=\"course-title\">{{ title }}</h5>\r\n      </div>\r\n  </div>\r\n</a>"
+            text: |
+              <a href="{{ view_node }}" class="course">
+                <div class="course-content">
+                  <div class="course-media">
+                     {{ field_course_image }} 
+                     {{ field_program_type }}
+                   </div>
+                   <div class="course-description">
+                      <div class="course-type">{{ field_course_type }}</div>
+                      <h5 class="course-title">{{ title }}</h5>
+                    </div>
+                </div>
+              </a>
             make_link: false
             path: ''
             absolute: false
@@ -2163,7 +2193,19 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<a href=\"{{ view_node }}\" class=\"course\">\r\n  <div class=\"course-content\">\r\n    <div class=\"course-media\">\r\n       {{ field_course_image }} \r\n       {{ field_program_type }}\r\n     </div>\r\n     <div class=\"course-description\">\r\n        <div class=\"course-type\">{{ field_course_type }}</div>\r\n        <h5 class=\"course-title\">{{ title }}</h5>\r\n      </div>\r\n  </div>\r\n</a>"
+            text: |
+              <a href="{{ view_node }}" class="course">
+                <div class="course-content">
+                  <div class="course-media">
+                     {{ field_course_image }} 
+                     {{ field_program_type }}
+                   </div>
+                   <div class="course-description">
+                      <div class="course-type">{{ field_course_type }}</div>
+                      <h5 class="course-title">{{ title }}</h5>
+                    </div>
+                </div>
+              </a>
             make_link: false
             path: ''
             absolute: false
@@ -2750,7 +2792,19 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<a href=\"{{ view_node }}\" class=\"course\">\r\n  <div class=\"course-content\">\r\n    <div class=\"course-media\">\r\n       {{ field_course_image }} \r\n       {{ field_program_type }}\r\n     </div>\r\n     <div class=\"course-description\">\r\n        <div class=\"course-type\">{{ field_course_type }}</div>\r\n        <h5 class=\"course-title\">{{ title }}</h5>\r\n      </div>\r\n  </div>\r\n</a>"
+            text: |
+              <a href="{{ view_node }}" class="course">
+                <div class="course-content">
+                  <div class="course-media">
+                     {{ field_course_image }} 
+                     {{ field_program_type }}
+                   </div>
+                   <div class="course-description">
+                      <div class="course-type">{{ field_course_type }}</div>
+                      <h5 class="course-title">{{ title }}</h5>
+                    </div>
+                </div>
+              </a>
             make_link: false
             path: ''
             absolute: false
