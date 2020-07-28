@@ -1,0 +1,175 @@
+uuid: 83c4c6a1-f352-436b-bc08-df567c7afe65
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.feature_image.field_caption
+    - field.field.paragraph.feature_image.field_category
+    - field.field.paragraph.feature_image.field_feature_image_display_mode
+    - field.field.paragraph.feature_image.field_link
+    - field.field.paragraph.feature_image.field_media
+    - field.field.paragraph.feature_image.field_title
+    - field.field.paragraph.feature_image.field_topic_date
+    - field.field.paragraph.feature_image.field_topic_title
+    - field.field.paragraph.feature_image.field_topic_title_advanced
+    - paragraphs.paragraphs_type.feature_image
+  module:
+    - addtocalendar
+    - datetime
+    - fences
+    - field_group
+    - link
+    - options
+third_party_settings:
+  field_group:
+    group_text_wrapper:
+      children:
+        - field_category
+        - field_title
+        - field_link
+        - field_topic_title
+        - field_topic_title_advanced
+        - field_topic_date
+        - field_caption
+      parent_name: ''
+      weight: 2
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Text Wrapper'
+id: paragraph.feature_image.default
+targetEntityType: paragraph
+bundle: feature_image
+mode: default
+content:
+  field_caption:
+    weight: 9
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_category:
+    weight: 3
+    label: hidden
+    settings:
+      link: false
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    type: entity_reference_label
+    region: content
+  field_feature_image_display_mode:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_link:
+    weight: 5
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_media:
+    weight: 1
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_title:
+    weight: 4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_topic_date:
+    weight: 8
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: site_format_1
+    third_party_settings:
+      addtocalendar:
+        addtocalendar_settings:
+          style: '0'
+          display_text: 'Add to Calendar'
+          atc_title:
+            field: token
+            tokenized: Title
+          atc_description:
+            field: token
+            tokenized: Description
+          atc_location:
+            field: token
+            tokenized: Location
+          atc_organizer:
+            field: token
+            tokenized: 'University of California, Santa Cruz'
+          atc_organizer_email:
+            field: token
+            tokenized: info@kwallcompany.com
+          atc_date_end:
+            field: token
+            tokenized: ''
+          atc_privacy: public
+          data_secure: auto
+          data_calendars:
+            iCalendar: 0
+            'Google Calendar': 0
+            Outlook: 0
+            'Outlook Online': 0
+            'Yahoo! Calendar': 0
+        addtocalendar_show: 0
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    type: datetime_default
+    region: content
+  field_topic_title:
+    weight: 6
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_topic_title_advanced:
+    weight: 7
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

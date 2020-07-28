@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_hero_content
     - node.type.page
+    - paragraphs.paragraphs_type.feature_image
     - paragraphs.paragraphs_type.feature_slideshow
     - paragraphs.paragraphs_type.header_banner
   module:
@@ -25,6 +26,7 @@ settings:
     negate: 0
     target_bundles:
       feature_slideshow: feature_slideshow
+      feature_image: feature_image
       header_banner: header_banner
     target_bundles_drag_drop:
       2_column_cta:
@@ -117,6 +119,9 @@ settings:
       feature_slideshow_item:
         weight: 75
         enabled: false
+      feature_image:
+        enabled: true
+        weight: 75
       full_image:
         weight: 76
         enabled: false
