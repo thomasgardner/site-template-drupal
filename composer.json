@@ -751,6 +751,9 @@
             },
             "drupal/tb_megamenu": {
                 "Missing array keys cause notices": "https://www.drupal.org/files/issues/missing_array_keys-2921195-3.patch"
+            },
+            "drupal/color_field": {
+                "Color Boxes - can't change colors": "https://www.drupal.org/files/issues/2020-07-02/3156520-4.patch"
             }
         }
     }

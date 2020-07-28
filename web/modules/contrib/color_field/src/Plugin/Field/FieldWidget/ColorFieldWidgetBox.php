@@ -67,7 +67,7 @@ class ColorFieldWidgetBox extends ColorFieldWidgetBase {
         if (!empty($colors)) {
           $colors .= ',';
         }
-        $colors .= strtolower($color[0]);
+        $colors .= strtoupper($color[0]);
       }
     }
     $form_state->setValue($element['#parents'], $colors);
@@ -82,7 +82,7 @@ class ColorFieldWidgetBox extends ColorFieldWidgetBase {
     $default_colors = $this->getSetting('default_colors');
 
     if (!empty($default_colors)) {
-      preg_match_all("/#[0-9A-F]{6}/", $default_colors, $default_colors, PREG_SET_ORDER);
+      preg_match_all("/#[0-9a-fA-F]{6}/", $default_colors, $default_colors, PREG_SET_ORDER);
       foreach ($default_colors as $color) {
         $colors = $color[0];
         $summary[] = $colors;
@@ -121,7 +121,7 @@ class ColorFieldWidgetBox extends ColorFieldWidgetBase {
       'required' => $this->fieldDefinition->isRequired(),
     ];
     $default_colors = $this->getSetting('default_colors');
-    preg_match_all("/#[0-9A-F]{6}/", $default_colors, $default_colors, PREG_SET_ORDER);
+    preg_match_all("/#[0-9a-fA-F]{6}/", $default_colors, $default_colors, PREG_SET_ORDER);
     foreach ($default_colors as $color) {
       $settings[$element['#uid']]['palette'][] = $color[0];
     }
