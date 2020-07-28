@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d3f9fa0fd2791657da644698b71ba4ff",
+    "content-hash": "589e71a8abc9ccf0186575a3064bb879",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3169,6 +3169,9 @@
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
+                },
+                "patches_applied": {
+                    "Color Boxes - can't change colors": "https://www.drupal.org/files/issues/2020-07-02/3156520-4.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -3517,16 +3520,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "8.8.2",
+            "version": "8.8.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "f997857003276c2ae6d27db30f0eab9c7dd10e62"
+                "reference": "c067109fcdf86184a7c75081fd8f1d81e4e23f56"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/f997857003276c2ae6d27db30f0eab9c7dd10e62",
-                "reference": "f997857003276c2ae6d27db30f0eab9c7dd10e62",
+                "url": "https://api.github.com/repos/drupal/core/zipball/c067109fcdf86184a7c75081fd8f1d81e4e23f56",
+                "reference": "c067109fcdf86184a7c75081fd8f1d81e4e23f56",
                 "shasum": ""
             },
             "require": {
@@ -3559,7 +3562,7 @@
                 "symfony/console": "~3.4.0",
                 "symfony/dependency-injection": "~3.4.26",
                 "symfony/event-dispatcher": "~3.4.0",
-                "symfony/http-foundation": "~3.4.27",
+                "symfony/http-foundation": "~3.4.35",
                 "symfony/http-kernel": "~3.4.14",
                 "symfony/polyfill-iconv": "^1.0",
                 "symfony/process": "~3.4.0",
@@ -3730,7 +3733,7 @@
                     "Content Edit page jumps when media library item is placed": "https://www.drupal.org/files/issues/2019-11-04/3073023-4.patch",
                     "Default theme favicon for administration theme": "https://www.drupal.org/files/issues/2019-12-14/default-theme-favicon-for-administration-theme-2981434-7.patch",
                     "Allow to alter aggregator items before rendering": "https://www.drupal.org/files/issues/2020-01-16/hook_aggregator_item_variables_alter-3106825-2.patch",
-                    "Allow symfony/event-dispatcher 4+ to be installed in Drupal 8": "https://www.drupal.org/files/issues/2019-09-17/2876675-48.Fix-symfony-version-requirements-for-symfonyeventdispatcher.patch"
+                    "Allow symfony/event-dispatcher 4+ to be installed in Drupal 8": "https://www.drupal.org/files/issues/2020-06-10/2876675-80.Fix-symfony-version-requirements-for-symfonyeventdispatcher.patch"
                 }
             },
             "autoload": {
@@ -3754,7 +3757,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2020-02-01T19:51:15+00:00"
+            "time": "2020-06-17T17:58:48+00:00"
         },
         {
             "name": "drupal/core-composer-scaffold",
@@ -3805,21 +3808,20 @@
         },
         {
             "name": "drupal/core-recommended",
-            "version": "8.8.2",
+            "version": "8.8.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-recommended.git",
-                "reference": "67ed5b68da2784ead5a55330c6c0fde6bb3cb9f3"
+                "reference": "69f4e74170c35f2069baafbbb5b7717fe5ddbb66"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/67ed5b68da2784ead5a55330c6c0fde6bb3cb9f3",
-                "reference": "67ed5b68da2784ead5a55330c6c0fde6bb3cb9f3",
+                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/69f4e74170c35f2069baafbbb5b7717fe5ddbb66",
+                "reference": "69f4e74170c35f2069baafbbb5b7717fe5ddbb66",
                 "shasum": ""
             },
             "require": {
                 "asm89/stack-cors": "1.2.0",
-                "composer/installers": "v1.7.0",
                 "composer/semver": "1.5.0",
                 "doctrine/annotations": "v1.4.0",
                 "doctrine/cache": "v1.6.2",
@@ -3827,7 +3829,7 @@
                 "doctrine/common": "v2.7.3",
                 "doctrine/inflector": "v1.2.0",
                 "doctrine/lexer": "1.0.2",
-                "drupal/core": "8.8.2",
+                "drupal/core": "8.8.8",
                 "easyrdf/easyrdf": "0.9.1",
                 "egulias/email-validator": "2.1.11",
                 "guzzlehttp/guzzle": "6.3.3",
@@ -3881,7 +3883,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Locked core dependencies; require this project INSTEAD OF drupal/core.",
-            "time": "2020-02-01T19:51:15+00:00"
+            "time": "2020-06-17T17:58:48+00:00"
         },
         {
             "name": "drupal/core-vendor-hardening",

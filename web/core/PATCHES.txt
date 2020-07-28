@@ -34,6 +34,6 @@ Source: https://www.drupal.org/files/issues/2020-01-16/hook_aggregator_item_vari
 
 
 Allow symfony/event-dispatcher 4+ to be installed in Drupal 8
-Source: https://www.drupal.org/files/issues/2019-09-17/2876675-48.Fix-symfony-version-requirements-for-symfonyeventdispatcher.patch
+Source: https://www.drupal.org/files/issues/2020-06-10/2876675-80.Fix-symfony-version-requirements-for-symfonyeventdispatcher.patch
 
 

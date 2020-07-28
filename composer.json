@@ -695,7 +695,7 @@
                 "Content Edit page jumps when media library item is placed": "https://www.drupal.org/files/issues/2019-11-04/3073023-4.patch",
                 "Default theme favicon for administration theme": "https://www.drupal.org/files/issues/2019-12-14/default-theme-favicon-for-administration-theme-2981434-7.patch",
                 "Allow to alter aggregator items before rendering": "https://www.drupal.org/files/issues/2020-01-16/hook_aggregator_item_variables_alter-3106825-2.patch",
-                "Allow symfony/event-dispatcher 4+ to be installed in Drupal 8": "https://www.drupal.org/files/issues/2019-09-17/2876675-48.Fix-symfony-version-requirements-for-symfonyeventdispatcher.patch"
+                "Allow symfony/event-dispatcher 4+ to be installed in Drupal 8": "https://www.drupal.org/files/issues/2020-06-10/2876675-80.Fix-symfony-version-requirements-for-symfonyeventdispatcher.patch"
             },
             "drupal/address": {
                 "The locality.name data is missed in PlainFormater": "https://www.drupal.org/files/issues/locality-name-data-missed-plainformater-2881391-1.patch"
