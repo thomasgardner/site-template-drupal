@@ -9,12 +9,7 @@ dependencies:
     - media.type.remote_video
   module:
     - fences
-    - layout_builder
     - media
-third_party_settings:
-  layout_builder:
-    allow_custom: false
-    enabled: false
 _core:
   default_config_hash: gUaDZKMQD3lmLKWPn727X3JHVdKJ525g4EJCCcDVAqk
 id: media.remote_video.inline_content_large
