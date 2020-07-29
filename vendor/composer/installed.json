@@ -7258,6 +7258,9 @@
                     "status": "covered",
                     "message": "Covered by Drupal's security advisory policy"
                 }
+            },
+            "patches_applied": {
+                "Multiline doesn't work with Config Split": "https://www.drupal.org/files/issues/2020-01-21/3056560-2.patch"
             }
         },
         "installation-source": "dist",

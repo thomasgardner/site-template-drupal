@@ -756,6 +756,9 @@
             },
             "drupal/color_field": {
                 "Color Boxes - can't change colors": "https://www.drupal.org/files/issues/2020-07-02/3156520-4.patch"
+            },
+            "drupal/multiline_config": {
+                "Multiline doesn't work with Config Split": "https://www.drupal.org/files/issues/2020-01-21/3056560-2.patch"
             }
         }
     }
