@@ -556,6 +556,7 @@
         "drupal/workbench_email": "^1.6",
         "drupal/wysiwyg_template": "^2.1",
         "drupal/xmlsitemap": "^1.0",
+        "drupal/zurb_foundation": "~6.0",
         "drush/drush": "^10.3",
         "enyo/dropzone": "^5.5",
         "grasmash/drupal-security-warning": "^1.1",
