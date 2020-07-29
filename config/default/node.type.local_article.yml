@@ -26,7 +26,7 @@ third_party_settings:
     default_template: ''
 _core:
   default_config_hash: AeW1SEDgb1OTQACAWGhzvMknMYAJlcZu0jljfeU3oso
-name: 'Local News Article'
+name: 'x. Local News Article'
 type: local_article
 description: 'Use <em>articles</em> for time-sensitive content like news, press releases or blog posts.'
 help: ''

@@ -1,0 +1,19 @@
+uuid: 1dbb372f-42d0-4858-b5eb-db95ecdf52d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_subtitle_long_txt
+    - node.type.article
+id: node.article.field_subtitle_long_txt
+field_name: field_subtitle_long_txt
+entity_type: node
+bundle: article
+label: 'Subtitle Text'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

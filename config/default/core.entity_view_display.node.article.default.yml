@@ -4,24 +4,19 @@ status: true
 dependencies:
   config:
     - field.field.node.article.body
-    - field.field.node.article.field_article_taxonomies
     - field.field.node.article.field_author
     - field.field.node.article.field_categories
     - field.field.node.article.field_date
     - field.field.node.article.field_featured
-    - field.field.node.article.field_intro1
-    - field.field.node.article.field_intro2
     - field.field.node.article.field_media
     - field.field.node.article.field_meta_tags
-    - field.field.node.article.field_migration_id
-    - field.field.node.article.field_migration_url
-    - field.field.node.article.field_paragraphs_content
-    - field.field.node.article.field_section_title
+    - field.field.node.article.field_subtitle_long_txt
+    - field.field.node.article.field_teaser_txt
+    - field.field.node.article.field_topics
     - node.type.article
   module:
     - addtocalendar
     - datetime
-    - entity_reference_revisions
     - fences
     - text
     - user
@@ -50,14 +45,6 @@ content:
     weight: 0
     region: content
     settings: {  }
-    third_party_settings: {  }
-  field_article_taxonomies:
-    type: entity_reference_label
-    weight: 10
-    region: content
-    label: inline
-    settings:
-      link: true
     third_party_settings: {  }
   field_author:
     weight: 1
@@ -122,20 +109,6 @@ content:
         fences_label_classes: ''
     type: datetime_default
     region: content
-  field_intro1:
-    weight: 4
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
-  field_intro2:
-    weight: 6
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
   field_media:
     weight: 5
     label: hidden
@@ -152,14 +125,27 @@ content:
         fences_label_classes: ''
     type: entity_reference_entity_view
     region: content
-  field_paragraphs_content:
-    type: entity_reference_revisions_entity_view
-    weight: 7
+  field_subtitle_long_txt:
+    weight: 13
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_teaser_txt:
+    weight: 11
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_topics:
+    weight: 12
     label: hidden
     settings:
-      view_mode: default
-      link: ''
+      link: true
     third_party_settings: {  }
+    type: entity_reference_label
     region: content
   sharethis:
     weight: 3
@@ -169,8 +155,5 @@ content:
 hidden:
   field_featured: true
   field_meta_tags: true
-  field_migration_id: true
-  field_migration_url: true
-  field_section_title: true
   langcode: true
   links: true
