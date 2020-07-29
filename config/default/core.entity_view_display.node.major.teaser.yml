@@ -1,0 +1,30 @@
+uuid: 8c4da4f9-3557-4e05-9e31-59f2d064cc74
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.major.field_link
+    - field.field.node.major.field_media
+    - node.type.major
+  module:
+    - user
+id: node.major.teaser
+targetEntityType: node
+bundle: major
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  sharethis:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_link: true
+  field_media: true
+  langcode: true

@@ -1,0 +1,64 @@
+uuid: c24c1f10-f217-4da5-a96f-0de2988ed3fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.major.field_link
+    - field.field.node.major.field_media
+    - node.type.major
+  module:
+    - fences
+    - link
+    - user
+id: node.major.default
+targetEntityType: node
+bundle: major
+mode: default
+content:
+  field_link:
+    weight: 102
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: link
+    region: content
+  field_media:
+    weight: 101
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: entity_reference_entity_view
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  sharethis:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true
