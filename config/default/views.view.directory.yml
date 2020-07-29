@@ -149,9 +149,7 @@ display:
           exclude: true
           alter:
             alter_text: true
-            text: |
-              <div class="full-name"><a href="{{ view_node }}">{{ field_name__given }} {{ field_name__family }}</a></div>
-              <div class="credentials">{{ field_name__credentials }}</div>
+            text: "<div class=\"full-name\"><a href=\"{{ view_node }}\">{{ field_name__given }} {{ field_name__family }}</a></div>\n<div class=\"credentials\">{{ field_name__credentials }}</div>\n"
             make_link: false
             path: ''
             absolute: false
@@ -346,16 +344,7 @@ display:
           exclude: true
           alter:
             alter_text: true
-            text: |2
-                {% set tel = field_telephone_number %}
-                
-                {% set firstSeg = field_telephone_number|slice(0, 3) %}
-                {% set secondSeg = field_telephone_number|slice(3, 3) %}
-                {% set thirdSeg = field_telephone_number|slice(6, 4) %}
-                
-                {% set formattedString = '('~ firstSeg ~ ') ' ~ secondSeg ~ '-' ~ thirdSeg %}
-                
-              </i><span class="fa fa-phone"></span> <a href="tel:{{ field_phone_1 }}">{{ formattedString }}</a>
+            text: "  {% set tel = field_telephone_number %}\n  \n  {% set firstSeg = field_telephone_number|slice(0, 3) %}\n  {% set secondSeg = field_telephone_number|slice(3, 3) %}\n  {% set thirdSeg = field_telephone_number|slice(6, 4) %}\n  \n  {% set formattedString = '('~ firstSeg ~ ') ' ~ secondSeg ~ '-' ~ thirdSeg %}\n  \n</i><span class=\"fa fa-phone\"></span> <a href=\"tel:{{ field_phone_1 }}\">{{ formattedString }}</a>\n"
             make_link: false
             path: ''
             absolute: false
@@ -418,25 +407,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: |
-              <div class="profile-wrap">
-                <div class="row no-gutters">
-              
-                  <div class="col-sm-4">
-                    <div class="profile-img"><a href="{{ view_node }}">{{ field_media }}</a></div>
-                  </div>
-              
-                  <div class="col-sm-8">
-                    <div class="content-wrap">
-                      <div class="profile-title">{{ field_name }}</div>
-                     <div class="profile-department">{{ field_department2 }}</div>
-                      <div class="profile-email">{{ field_email }}</div>
-                      <div class="profile-telephone">{{ field_telephone_number }}</div>
-                    </div>
-                  </div>
-              
-                </div>
-              </div>
+            text: "<div class=\"profile-wrap\">\n  <div class=\"row no-gutters\">\n\n    <div class=\"col-sm-4\">\n      <div class=\"profile-img\"><a href=\"{{ view_node }}\">{{ field_media }}</a></div>\n    </div>\n\n    <div class=\"col-sm-8\">\n      <div class=\"content-wrap\">\n        <div class=\"profile-title\">{{ field_name }}</div>\n       <div class=\"profile-department\">{{ field_department2 }}</div>\n        <div class=\"profile-email\">{{ field_email }}</div>\n        <div class=\"profile-telephone\">{{ field_telephone_number }}</div>\n      </div>\n    </div>\n\n  </div>\n</div>\n"
             make_link: false
             path: ''
             absolute: false
@@ -469,25 +440,7 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: 'img-fluid both'
           element_default_classes: true
-          empty: |
-            <div class="profile-wrap">
-              <div class="row no-gutters">
-            
-                <div class="col-sm-4">
-                  <div class="profile-img"><a href="{{ view_node }}"><img class="img-fluid" src="http://via.placeholder.com/175x225" /></a></div>
-                </div>
-            
-                <div class="col-sm-8">
-                  <div class="content-wrap">
-                    <div class="profile-title">{{ field_name }}</div>
-                   <div class="profile-department">{{ field_department2 }}</div>
-                    <div class="profile-email">{{ field_email }}</div>
-                    <div class="profile-telephone">{{ field_telephone_number }}</div>
-                  </div>
-                </div>
-            
-              </div>
-            </div>
+          empty: "<div class=\"profile-wrap\">\n  <div class=\"row no-gutters\">\n\n    <div class=\"col-sm-4\">\n      <div class=\"profile-img\"><a href=\"{{ view_node }}\"><img class=\"img-fluid\" src=\"http://via.placeholder.com/175x225\" /></a></div>\n    </div>\n\n    <div class=\"col-sm-8\">\n      <div class=\"content-wrap\">\n        <div class=\"profile-title\">{{ field_name }}</div>\n       <div class=\"profile-department\">{{ field_department2 }}</div>\n        <div class=\"profile-email\">{{ field_email }}</div>\n        <div class=\"profile-telephone\">{{ field_telephone_number }}</div>\n      </div>\n    </div>\n\n  </div>\n</div>\n"
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -699,9 +652,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: |
-              <div class="full-name"><a href="{{ view_node }}">{{ field_name__given }} {{ field_name__family }}</a></div>
-              <div class="credentials">{{ field_name__credentials }}</div>
+            text: "<div class=\"full-name\"><a href=\"{{ view_node }}\">{{ field_name__given }} {{ field_name__family }}</a></div>\n<div class=\"credentials\">{{ field_name__credentials }}</div>\n"
             make_link: false
             path: ''
             absolute: false

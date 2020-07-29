@@ -315,9 +315,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: |
-              <p>{{ field_address__address_line1 }}</ br>
-              {{ field_address__locality }}, {{ field_address__administrative_area }} {{ field_address__postal_code }}</p>
+            text: "<p>{{ field_address__address_line1 }}</ br>\n{{ field_address__locality }}, {{ field_address__administrative_area }} {{ field_address__postal_code }}</p>\n"
             make_link: false
             path: ''
             absolute: false
@@ -829,9 +827,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: |
-              <p>{{ field_address__address_line1 }}</ br>
-              {{ field_address__locality }}, {{ field_address__administrative_area }} {{ field_address__postal_code }}</p>
+            text: "<p>{{ field_address__address_line1 }}</ br>\n{{ field_address__locality }}, {{ field_address__administrative_area }} {{ field_address__postal_code }}</p>\n"
             make_link: false
             path: ''
             absolute: false

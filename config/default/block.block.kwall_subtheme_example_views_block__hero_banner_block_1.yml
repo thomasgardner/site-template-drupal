@@ -26,8 +26,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: |
-      /events/*
-      /news/*
+    pages: "/events/*\n/news/*\n"
     negate: true
     context_mapping: {  }

@@ -6,14 +6,7 @@ id: section_title
 label: 'Section Title'
 description: 'Centered heading and intro text with offset'
 body:
-  value: |
-    <div class="row">
-    <div class="col-md-8 offset-md-2 text-center">
-    <h1>Finibus Bonorum et Malorum</h1>
-    
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-    </div>
+  value: "<div class=\"row\">\n<div class=\"col-md-8 offset-md-2 text-center\">\n<h1>Finibus Bonorum et Malorum</h1>\n\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>\n</div>\n</div>\n"
   format: full_html
 weight: null
 node_types: {  }

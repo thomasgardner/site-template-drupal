@@ -22,12 +22,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: |
-      /academics
-      /academics/graduate
-      /academics/undergraduate
-      /academics/certificate
-      /user
-      /user/*
+    pages: "/academics\n/academics/graduate\n/academics/undergraduate\n/academics/certificate\n/user\n/user/*\n"
     negate: true
     context_mapping: {  }
