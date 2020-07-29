@@ -4,28 +4,47 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.program.body
+    - field.field.node.program.field_alumni_focus_long_txt
+    - field.field.node.program.field_awards_long_txt
+    - field.field.node.program.field_caption_formatted
+    - field.field.node.program.field_careers
+    - field.field.node.program.field_department_ref
+    - field.field.node.program.field_eap_long_txt
+    - field.field.node.program.field_facilities_txt
+    - field.field.node.program.field_first_year_long_txt
+    - field.field.node.program.field_general_catalog_long_txt
+    - field.field.node.program.field_more_long_txt
+    - field.field.node.program.field_opportunities_long_txt
+    - field.field.node.program.field_transfers_long_txt
     - node.type.program
   module:
-    - text
     - user
 id: node.program.teaser
 targetEntityType: node
 bundle: program
 mode: teaser
 content:
-  body:
-    label: hidden
-    type: text_summary_or_trimmed
-    weight: 101
-    settings:
-      trim_length: 600
-    third_party_settings: {  }
-    region: content
   links:
     weight: 100
     settings: {  }
     third_party_settings: {  }
     region: content
+  sharethis:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
 hidden:
+  field_alumni_focus_long_txt: true
+  field_awards_long_txt: true
+  field_caption_formatted: true
+  field_careers: true
+  field_department_ref: true
+  field_eap_long_txt: true
+  field_facilities_txt: true
+  field_first_year_long_txt: true
+  field_general_catalog_long_txt: true
+  field_more_long_txt: true
+  field_opportunities_long_txt: true
+  field_transfers_long_txt: true
   langcode: true

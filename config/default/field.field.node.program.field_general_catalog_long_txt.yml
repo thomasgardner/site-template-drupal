@@ -1,0 +1,19 @@
+uuid: 39cad15e-ab27-4000-930d-b131e73bd7fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_general_catalog_long_txt
+    - node.type.program
+id: node.program.field_general_catalog_long_txt
+field_name: field_general_catalog_long_txt
+entity_type: node
+bundle: program
+label: 'General Catalog Information'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

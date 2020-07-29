@@ -1,0 +1,19 @@
+uuid: 516b1f3c-6d99-40c5-8f18-15601a51b636
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_facilities_txt
+    - node.type.program
+id: node.program.field_facilities_txt
+field_name: field_facilities_txt
+entity_type: node
+bundle: program
+label: Facilities
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long
