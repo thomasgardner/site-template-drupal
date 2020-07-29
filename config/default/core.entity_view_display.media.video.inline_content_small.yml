@@ -10,11 +10,6 @@ dependencies:
   module:
     - fences
     - file
-    - layout_builder
-third_party_settings:
-  layout_builder:
-    allow_custom: false
-    enabled: false
 _core:
   default_config_hash: dQR0mYK5NNg27OigHrxZrHSsnwewnNZcPJKjKIO0cpA
 id: media.video.inline_content_small
