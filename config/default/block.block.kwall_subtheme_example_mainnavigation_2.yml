@@ -37,23 +37,7 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: |
-      <front>
-      /node/11
-      /news
-      /events
-      /events/month
-      /events/month/*
-      /events/year
-      /events/year/*
-      /events/week
-      /events/week/*
-      /search
-      /news/*
-      /user
-      /user/*
-      /users
-      /users/*
+    pages: "<front>\n/node/11\n/news\n/events\n/events/month\n/events/month/*\n/events/year\n/events/year/*\n/events/week\n/events/week/*\n/search\n/news/*\n/user\n/user/*\n/users\n/users/*\n"
     negate: true
     context_mapping: {  }
   'entity_bundle:node':

@@ -214,16 +214,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: |
-              <div class="hero-banner-img-section {{ field_adjustable_height }}" data-bg-img="{{ field_media_image_1 }}">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-md-12">
-                      <div class="field--name-field-title">Section Title</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            text: "<div class=\"hero-banner-img-section {{ field_adjustable_height }}\" data-bg-img=\"{{ field_media_image_1 }}\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"field--name-field-title\">Section Title</div>\n      </div>\n    </div>\n  </div>\n</div>\n"
             make_link: false
             path: ''
             absolute: false
@@ -347,16 +338,7 @@ display:
           admin_label: ''
           empty: true
           tokenize: true
-          content: |
-            <div class="hero-banner-img-section banner-short" data-bg-img="https://designshack.net/wp-content/uploads/lorem-picsum.jpg">
-              <div class="container">
-                <div class="row">
-                  <div class="col-md-12">
-                    <div class="field--name-field-title">{{ title }}</div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          content: "<div class=\"hero-banner-img-section banner-short\" data-bg-img=\"https://designshack.net/wp-content/uploads/lorem-picsum.jpg\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"field--name-field-title\">{{ title }}</div>\n      </div>\n    </div>\n  </div>\n</div>\n"
           plugin_id: text_custom
       relationships:
         field_hero_content:
@@ -541,14 +523,7 @@ display:
           exclude: true
           alter:
             alter_text: true
-            text: |
-              <div class="container">
-                 <div class="row">
-                  <div class="col-md-12">
-                    <div class="field--name-field-title">{{ field_section_title }}</div>
-                  </div>
-                </div>
-              </div>
+            text: "<div class=\"container\">\n   <div class=\"row\">\n    <div class=\"col-md-12\">\n      <div class=\"field--name-field-title\">{{ field_section_title }}</div>\n    </div>\n  </div>\n</div>\n"
             make_link: false
             path: ''
             absolute: false
@@ -676,10 +651,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: |
-              <div class="hero-banner-img-section {{ field_adjustable_height }}" data-bg-img="{{ field_media_image_1 }}">
-                {{ field_section_title }}
-              </div>
+            text: "<div class=\"hero-banner-img-section {{ field_adjustable_height }}\" data-bg-img=\"{{ field_media_image_1 }}\">\n  {{ field_section_title }}\n</div>\n"
             make_link: false
             path: ''
             absolute: false
@@ -712,10 +684,7 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: |
-            <div class="hero-banner-img-section banner-short" data-bg-img="https://designshack.net/wp-content/uploads/lorem-picsum.jpg">
-              {{ field_section_title }}
-            </div>
+          empty: "<div class=\"hero-banner-img-section banner-short\" data-bg-img=\"https://designshack.net/wp-content/uploads/lorem-picsum.jpg\">\n  {{ field_section_title }}\n</div>\n"
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -1274,25 +1243,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: |
-              <div class="hero-slide-wrap">
-                <div class="hero-media-wrap">
-                  {{ field_mp4 }} {{ field_webm }}
-                  <div class="hero-img">{{ field_media_image_2 }}</div>
-                </div>
-                <div class="hero-content-wrap"> 
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-md-12">
-                        {{ field_title }}
-                        {{ field_subtitle }}
-                        {{ field_body_unformatted }}
-                        {{ field_links }}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            text: "<div class=\"hero-slide-wrap\">\n  <div class=\"hero-media-wrap\">\n    {{ field_mp4 }} {{ field_webm }}\n    <div class=\"hero-img\">{{ field_media_image_2 }}</div>\n  </div>\n  <div class=\"hero-content-wrap\"> \n    <div class=\"container\">\n      <div class=\"row\">\n        <div class=\"col-md-12\">\n          {{ field_title }}\n          {{ field_subtitle }}\n          {{ field_body_unformatted }}\n          {{ field_links }}\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
             make_link: false
             path: ''
             absolute: false
@@ -1447,15 +1398,7 @@ display:
           admin_label: ''
           empty: false
           tokenize: true
-          content: |2
-                <div class="controls" data-autoplay="{{ field_boolean|render|striptags|trim }}">
-                  <div class="custom-controls-container">
-                    <div class="pause fa fa-pause"></div>
-                    <div class="play fa fa-play d-none"></div>
-                  </div>
-                  <a href="#" class="flex-prev fa fa-chevron-left"></a>
-                  <a href="#" class="flex-next fa fa-chevron-right"></a>
-                </div>
+          content: "    <div class=\"controls\" data-autoplay=\"{{ field_boolean|render|striptags|trim }}\">\n      <div class=\"custom-controls-container\">\n        <div class=\"pause fa fa-pause\"></div>\n        <div class=\"play fa fa-play d-none\"></div>\n      </div>\n      <a href=\"#\" class=\"flex-prev fa fa-chevron-left\"></a>\n      <a href=\"#\" class=\"flex-next fa fa-chevron-right\"></a>\n    </div>\n"
           plugin_id: text_custom
     cache_metadata:
       max-age: -1

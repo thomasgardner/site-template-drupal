@@ -22,39 +22,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: |
-      /events
-      /news
-      /academics
-      /academics/graduate
-      /academics/undergraduate
-      /academics/certificate
-      /directory
-      /directory/a
-      /directory/b
-      /directory/c
-      /directory/d
-      /directory/e
-      /directory/f
-      /directory/g
-      /directory/h
-      /directory/i
-      /directory/j
-      /directory/k
-      /directory/l
-      /directory/m
-      /directory/n
-      /directory/o
-      /directory/p
-      /directory/q
-      /directory/r
-      /directory/s
-      /directory/t
-      /directory/u
-      /directory/v
-      /directory/w
-      /directory/x
-      /directory/y
-      /directory/z
+    pages: "/events\n/news\n/academics\n/academics/graduate\n/academics/undergraduate\n/academics/certificate\n/directory\n/directory/a\n/directory/b\n/directory/c\n/directory/d\n/directory/e\n/directory/f\n/directory/g\n/directory/h\n/directory/i\n/directory/j\n/directory/k\n/directory/l\n/directory/m\n/directory/n\n/directory/o\n/directory/p\n/directory/q\n/directory/r\n/directory/s\n/directory/t\n/directory/u\n/directory/v\n/directory/w\n/directory/x\n/directory/y\n/directory/z\n"
     negate: true
     context_mapping: {  }

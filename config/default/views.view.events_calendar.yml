@@ -1538,11 +1538,7 @@ display:
           exclude: true
           alter:
             alter_text: true
-            text: |
-              <div class="date-wrap">
-              <div class="date">{{ field_start_date }}</div>
-              <div class="date-month">{{ field_start_date_1 }} {{ field_end_date }}</div>
-              </div>
+            text: "<div class=\"date-wrap\">\n<div class=\"date\">{{ field_start_date }}</div>\n<div class=\"date-month\">{{ field_start_date_1 }} {{ field_end_date }}</div>\n</div>\n"
             make_link: false
             path: ''
             absolute: false
@@ -1721,13 +1717,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: |
-              <div class="event-popup" data-id="{{ nid }}">
-              <div class="date">{{ field_start_date_1 }}</div>
-              {{ field_address }}
-              <div class="content">{{ title }}</div>
-              <div class="more-link">{{ view_node }}</div>
-              </div>
+            text: "<div class=\"event-popup\" data-id=\"{{ nid }}\">\n<div class=\"date\">{{ field_start_date_1 }}</div>\n{{ field_address }}\n<div class=\"content\">{{ title }}</div>\n<div class=\"more-link\">{{ view_node }}</div>\n</div>\n"
             make_link: false
             path: ''
             absolute: false
