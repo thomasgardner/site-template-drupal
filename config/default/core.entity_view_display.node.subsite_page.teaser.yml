@@ -5,14 +5,10 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.subsite_page.body
-    - field.field.node.subsite_page.field_after_content
     - field.field.node.subsite_page.field_content_bottom
     - field.field.node.subsite_page.field_hero_content
     - field.field.node.subsite_page.field_hide_page_title
-    - field.field.node.subsite_page.field_intro
     - field.field.node.subsite_page.field_meta_tags
-    - field.field.node.subsite_page.field_section_title
-    - field.field.node.subsite_page.field_sidebar_content
     - node.type.subsite_page
   module:
     - text
@@ -30,6 +26,11 @@ content:
     settings:
       trim_length: 600
     third_party_settings: {  }
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   links:
     weight: 100
     settings: {  }
@@ -41,12 +42,8 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
-  field_after_content: true
   field_content_bottom: true
   field_hero_content: true
   field_hide_page_title: true
-  field_intro: true
   field_meta_tags: true
-  field_section_title: true
-  field_sidebar_content: true
   langcode: true

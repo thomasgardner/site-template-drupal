@@ -4,15 +4,12 @@ status: true
 dependencies:
   config:
     - field.field.node.subsite_page.body
-    - field.field.node.subsite_page.field_after_content
     - field.field.node.subsite_page.field_content_bottom
     - field.field.node.subsite_page.field_hero_content
     - field.field.node.subsite_page.field_hide_page_title
-    - field.field.node.subsite_page.field_intro
     - field.field.node.subsite_page.field_meta_tags
-    - field.field.node.subsite_page.field_section_title
-    - field.field.node.subsite_page.field_sidebar_content
     - node.type.subsite_page
+    - workflows.workflow.editorial
   module:
     - content_moderation
     - field_group
@@ -40,10 +37,7 @@ third_party_settings:
       children:
         - title
         - field_hide_page_title
-        - field_section_title
-        - field_intro
         - body
-        - field_after_content
       parent_name: ''
       weight: 1
       format_type: details
@@ -61,24 +55,12 @@ third_party_settings:
       weight: 3
       format_type: details
       format_settings:
+        description: ''
+        required_fields: true
         id: ''
         classes: ''
         open: false
-        required_fields: true
-      label: 'Content Bottom'
-      region: content
-    group_sidebar_content:
-      children:
-        - field_sidebar_content
-      parent_name: ''
-      weight: 2
-      format_type: details
-      format_settings:
-        id: ''
-        classes: ''
-        open: false
-        required_fields: true
-      label: 'Sidebar Content'
+      label: 'Full-Width Content'
       region: content
 id: node.subsite_page.default
 targetEntityType: node
@@ -101,18 +83,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_after_content:
-    type: entity_reference_paragraphs
-    weight: 7
-    settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: closed
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: _none
-    third_party_settings: {  }
-    region: content
   field_content_bottom:
     type: entity_reference_paragraphs
     weight: 10
@@ -144,39 +114,11 @@ content:
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
-  field_intro:
-    weight: 5
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_meta_tags:
     weight: 15
     settings: {  }
     third_party_settings: {  }
     type: metatag_firehose
-    region: content
-  field_section_title:
-    weight: 4
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_sidebar_content:
-    type: entity_reference_paragraphs
-    weight: 11
-    settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: closed
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: _none
-    third_party_settings: {  }
     region: content
   langcode:
     type: language_select

@@ -6,7 +6,6 @@ dependencies:
     - field.storage.node.field_hero_content
     - node.type.subsite_page
     - paragraphs.paragraphs_type.hero_banner
-    - paragraphs.paragraphs_type.hero_slideshow
   module:
     - entity_reference_revisions
 id: node.subsite_page.field_hero_content
@@ -25,7 +24,6 @@ settings:
     negate: 0
     target_bundles:
       hero_banner: hero_banner
-      hero_slideshow: hero_slideshow
     target_bundles_drag_drop:
       2_column_cta:
         weight: 13
@@ -49,8 +47,8 @@ settings:
         weight: 19
         enabled: false
       hero_slideshow:
-        enabled: true
         weight: 20
+        enabled: false
       interior_column_section:
         weight: 21
         enabled: false
@@ -62,5 +60,143 @@ settings:
         enabled: false
       quick_link:
         weight: 24
+        enabled: false
+      accordion:
+        weight: 62
+        enabled: false
+      accordion_item:
+        weight: 63
+        enabled: false
+      adjustable_media_and_content:
+        weight: 64
+        enabled: false
+      article_slideshow:
+        weight: 65
+        enabled: false
+      article_slideshow_item:
+        weight: 66
+        enabled: false
+      button_list:
+        weight: 67
+        enabled: false
+      button_list_item:
+        weight: 68
+        enabled: false
+      content_centered:
+        weight: 70
+        enabled: false
+      content_left:
+        weight: 71
+        enabled: false
+      content_quote:
+        weight: 72
+        enabled: false
+      content_with_media:
+        weight: 73
+        enabled: false
+      cta_buttons:
+        weight: 74
+        enabled: false
+      feature_image:
+        weight: 75
+        enabled: false
+      feature_slideshow:
+        weight: 76
+        enabled: false
+      feature_slideshow_item:
+        weight: 77
+        enabled: false
+      flexible_bg_image_block:
+        weight: 78
+        enabled: false
+      flexible_bg_image_blocks:
+        weight: 79
+        enabled: false
+      flexible_cta_block:
+        weight: 80
+        enabled: false
+      flexible_cta_blocks:
+        weight: 81
+        enabled: false
+      full_image:
+        weight: 82
+        enabled: false
+      full_video:
+        weight: 83
+        enabled: false
+      gridder:
+        weight: 85
+        enabled: false
+      gridder_item:
+        weight: 86
+        enabled: false
+      grid_content_centered:
+        weight: 87
+        enabled: false
+      grid_content_centered_item:
+        weight: 88
+        enabled: false
+      grid_content_left:
+        weight: 89
+        enabled: false
+      grid_content_left_item:
+        weight: 90
+        enabled: false
+      header_banner:
+        weight: 91
+        enabled: false
+      image_gallery:
+        weight: 95
+        enabled: false
+      image_gallery_item:
+        weight: 96
+        enabled: false
+      person_carousel:
+        weight: 100
+        enabled: false
+      profile_card_details_fields:
+        weight: 101
+        enabled: false
+      quicktabs:
+        weight: 102
+        enabled: false
+      quicktab_item:
+        weight: 103
+        enabled: false
+      quick_link_minimal:
+        weight: 105
+        enabled: false
+      quote:
+        weight: 106
+        enabled: false
+      recent_articles:
+        weight: 107
+        enabled: false
+      recent_articles_upcoming_events:
+        weight: 108
+        enabled: false
+      tabs_horizontal:
+        weight: 109
+        enabled: false
+      tabs_horizontal_item:
+        weight: 110
+        enabled: false
+      upcoming_events:
+        weight: 111
+        enabled: false
+      video_embed:
+        weight: 112
+        enabled: false
+      video_tab_carousel:
+        weight: 113
+        enabled: false
+      video_tab_item:
+        weight: 114
+        enabled: false
+      views:
+        weight: 115
+        enabled: false
+      wysiwyg:
+        weight: 116
         enabled: false
 field_type: entity_reference_revisions
