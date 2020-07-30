@@ -1,0 +1,31 @@
+uuid: c1052ff4-b319-4e14-8c1c-f12373296242
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer---engage-with-ucsc
+  module:
+    - menu_block
+  theme:
+    - santa_cruz_subsite
+id: santa_cruz_subsite_footerengagewithucsc
+theme: santa_cruz_subsite
+region: header
+weight: -19
+provider: null
+plugin: 'menu_block:footer---engage-with-ucsc'
+settings:
+  id: 'menu_block:footer---engage-with-ucsc'
+  label: 'Engage <span>with UCSC</span>'
+  provider: menu_block
+  label_display: visible
+  follow: false
+  follow_parent: child
+  level: 1
+  depth: 0
+  expand: false
+  parent: 'footer---engage-with-ucsc:'
+  suggestion: footer___engage_with_ucsc
+  label_type: block
+  label_link: 0
+visibility: {  }

@@ -1,0 +1,30 @@
+uuid: 8bb5b045-f17c-42bf-aad9-f0ba034225ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.event_view
+  module:
+    - system
+    - views
+  theme:
+    - santa_cruz_subsite
+id: santa_cruz_subsite_views_block__event_view_block_4
+theme: santa_cruz_subsite
+region: header
+weight: -9
+provider: null
+plugin: 'views_block:event_view-block_4'
+settings:
+  id: 'views_block:event_view-block_4'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /events
+    negate: false
+    context_mapping: {  }

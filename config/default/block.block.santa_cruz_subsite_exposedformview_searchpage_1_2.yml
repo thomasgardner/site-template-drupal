@@ -1,0 +1,27 @@
+uuid: df768fba-f830-41f1-bb94-e0f211c07b18
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.view_search
+  module:
+    - block_class
+    - views
+  theme:
+    - santa_cruz_subsite
+third_party_settings:
+  block_class:
+    classes: search-menu-block
+id: santa_cruz_subsite_exposedformview_searchpage_1_2
+theme: santa_cruz_subsite
+region: header
+weight: -15
+provider: null
+plugin: 'views_exposed_filter_block:view_search-page_1'
+settings:
+  id: 'views_exposed_filter_block:view_search-page_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility: {  }

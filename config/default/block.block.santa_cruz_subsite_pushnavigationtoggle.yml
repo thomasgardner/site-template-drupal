@@ -1,0 +1,29 @@
+uuid: e91fc378-b9dc-4f3d-9706-3f43386e2fd4
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.push-navigation-toggle
+  module:
+    - block_class
+    - system
+  theme:
+    - santa_cruz_subsite
+third_party_settings:
+  block_class:
+    classes: push-nav-menu
+id: santa_cruz_subsite_pushnavigationtoggle
+theme: santa_cruz_subsite
+region: header
+weight: -14
+provider: null
+plugin: 'system_menu_block:push-navigation-toggle'
+settings:
+  id: 'system_menu_block:push-navigation-toggle'
+  label: 'Push Navigation Toggle'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

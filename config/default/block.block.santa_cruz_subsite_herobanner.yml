@@ -1,0 +1,31 @@
+uuid: bc89c5c3-ee34-44a7-b1e0-ed577a0c5172
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:hero_banner:b56d4ada-e26a-47b0-8bab-4014260b9a41'
+  module:
+    - block_content
+    - system
+  theme:
+    - santa_cruz_subsite
+id: santa_cruz_subsite_herobanner
+theme: santa_cruz_subsite
+region: header
+weight: 0
+provider: null
+plugin: 'block_content:b56d4ada-e26a-47b0-8bab-4014260b9a41'
+settings:
+  id: 'block_content:b56d4ada-e26a-47b0-8bab-4014260b9a41'
+  label: 'Hero banner events'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: "/events/month\n/events/year\n/events/day\n/events/week\n"
+    negate: false
+    context_mapping: {  }
