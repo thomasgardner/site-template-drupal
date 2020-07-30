@@ -1,0 +1,30 @@
+uuid: 7e050dca-6399-44e9-a5af-fd6a9d77fe82
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.article_view
+  module:
+    - system
+    - views
+  theme:
+    - santa_cruz
+id: santa_cruz_views_block__article_view_block_4
+theme: santa_cruz
+region: header
+weight: -11
+provider: null
+plugin: 'views_block:article_view-block_4'
+settings:
+  id: 'views_block:article_view-block_4'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: "/news\n/news?*\n"
+    negate: false
+    context_mapping: {  }

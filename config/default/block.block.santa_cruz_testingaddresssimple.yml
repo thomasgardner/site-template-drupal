@@ -1,0 +1,25 @@
+uuid: b63479d9-c11b-4778-912d-07f0bac9deec
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:address_simple:ee7e490a-483c-4d4e-8c61-e808cc1bc773'
+  module:
+    - block_content
+  theme:
+    - santa_cruz
+id: santa_cruz_testingaddresssimple
+theme: santa_cruz
+region: header
+weight: -20
+provider: null
+plugin: 'block_content:ee7e490a-483c-4d4e-8c61-e808cc1bc773'
+settings:
+  id: 'block_content:ee7e490a-483c-4d4e-8c61-e808cc1bc773'
+  label: 'Testing Block Title'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

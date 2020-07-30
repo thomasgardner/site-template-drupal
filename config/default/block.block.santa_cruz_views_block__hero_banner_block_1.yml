@@ -1,0 +1,31 @@
+uuid: 184e2d90-533f-47f6-927e-4284b2634e45
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.hero_banner
+  module:
+    - system
+    - views
+  theme:
+    - santa_cruz
+id: santa_cruz_views_block__hero_banner_block_1
+theme: santa_cruz
+region: header
+weight: -12
+provider: null
+plugin: 'views_block:hero_banner-block_1'
+settings:
+  id: 'views_block:hero_banner-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: "/events/*\n/news/*\n"
+    negate: true
+    context_mapping: {  }

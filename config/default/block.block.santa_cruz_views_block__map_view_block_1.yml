@@ -1,0 +1,30 @@
+uuid: 401ed02b-1423-47cd-abd7-c318c15496f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.map_view
+  module:
+    - system
+    - views
+  theme:
+    - santa_cruz
+id: santa_cruz_views_block__map_view_block_1
+theme: santa_cruz
+region: content
+weight: -9
+provider: null
+plugin: 'views_block:map_view-block_1'
+settings:
+  id: 'views_block:map_view-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /node/11
+    negate: false
+    context_mapping: {  }

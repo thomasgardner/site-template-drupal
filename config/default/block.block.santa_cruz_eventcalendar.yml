@@ -1,0 +1,41 @@
+uuid: 476e75f4-e008-42bb-aa2a-6f4f23bbada8
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.event-calendar
+  module:
+    - block_class
+    - menu_block
+    - system
+  theme:
+    - santa_cruz
+third_party_settings:
+  block_class:
+    classes: mb-event-calendar
+id: santa_cruz_eventcalendar
+theme: santa_cruz
+region: content
+weight: -18
+provider: null
+plugin: 'menu_block:event-calendar'
+settings:
+  id: 'menu_block:event-calendar'
+  label: 'Event Calendar'
+  provider: menu_block
+  label_display: '0'
+  follow: false
+  follow_parent: child
+  level: 1
+  depth: 0
+  expand: false
+  parent: 'event-calendar:'
+  suggestion: event_calendar
+  label_type: block
+  label_link: 0
+visibility:
+  request_path:
+    id: request_path
+    pages: "/events/year\n/events/year/*\n/events/month\n/events/month/*\n/events/week\n/events/week/*\n/events/day\n/events/day/*\n"
+    negate: false
+    context_mapping: {  }

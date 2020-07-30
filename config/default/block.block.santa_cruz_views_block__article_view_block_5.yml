@@ -1,0 +1,33 @@
+uuid: 8b0645dd-d60a-4025-ac63-871cebdef6a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.article_view
+  module:
+    - node
+    - views
+  theme:
+    - santa_cruz
+id: santa_cruz_views_block__article_view_block_5
+theme: santa_cruz
+region: header
+weight: -18
+provider: null
+plugin: 'views_block:article_view-block_5'
+settings:
+  id: 'views_block:article_view-block_5'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      article: article
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

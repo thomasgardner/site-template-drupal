@@ -1,0 +1,49 @@
+uuid: 4b15cde7-380f-4771-9b31-6bfb6c20d810
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - block_class
+    - ctools
+    - menu_block
+    - system
+  theme:
+    - santa_cruz
+third_party_settings:
+  block_class:
+    classes: sidebar-menu-block
+id: santa_cruz_mainnavigation_2
+theme: santa_cruz
+region: header
+weight: -20
+provider: null
+plugin: 'menu_block:main'
+settings:
+  id: 'menu_block:main'
+  label: 'Main navigation'
+  provider: menu_block
+  label_display: '0'
+  follow: false
+  follow_parent: child
+  level: 1
+  depth: 0
+  expand: true
+  parent: 'main:'
+  suggestion: sidebar_menu
+  label_type: block
+  label_link: 0
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\n/node/11\n/news\n/events\n/events/month\n/events/month/*\n/events/year\n/events/year/*\n/events/week\n/events/week/*\n/search\n/news/*\n/user\n/user/*\n/users\n/users/*\n"
+    negate: true
+    context_mapping: {  }
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      layout_builder: layout_builder
+    negate: true
+    context_mapping:
+      node: '@node.node_route_context:node'

@@ -1,0 +1,35 @@
+uuid: 56b475c9-0bc8-4700-b8ee-ea8d59628e04
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:8ec0639a-c6e3-4d2f-914a-304636924e19'
+  module:
+    - block_class
+    - block_content
+    - system
+  theme:
+    - santa_cruz
+third_party_settings:
+  block_class:
+    classes: 'cb-event-view-toggle d-none d-lg-block'
+id: santa_cruz_eventviewtogglemenu_2
+theme: santa_cruz
+region: content
+weight: -17
+provider: null
+plugin: 'block_content:8ec0639a-c6e3-4d2f-914a-304636924e19'
+settings:
+  id: 'block_content:8ec0639a-c6e3-4d2f-914a-304636924e19'
+  label: 'Event: View Toggle Menu'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /dgfsdgfsfdsf
+    negate: false
+    context_mapping: {  }

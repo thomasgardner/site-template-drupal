@@ -1,0 +1,31 @@
+uuid: 5934a083-06c2-49c0-9e89-02ed82e0dccf
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:hero_banner:942fbff4-327e-42b6-8db6-1dd99b261af0'
+  module:
+    - block_content
+    - system
+  theme:
+    - santa_cruz
+id: santa_cruz_herobanneracademics
+theme: santa_cruz
+region: header
+weight: 0
+provider: null
+plugin: 'block_content:942fbff4-327e-42b6-8db6-1dd99b261af0'
+settings:
+  id: 'block_content:942fbff4-327e-42b6-8db6-1dd99b261af0'
+  label: 'Hero banner Academics'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: "/academics\n/academics/graduate\n/academics/undergraduate\n/academics/certificate\n"
+    negate: false
+    context_mapping: {  }
