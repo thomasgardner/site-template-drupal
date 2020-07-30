@@ -3,26 +3,17 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.document.body
     - field.field.node.document.field_media
     - field.field.node.document.field_teaser_subtitle
     - field.field.node.document.field_teaser_txt
     - node.type.document
   module:
-    - text
     - user
 id: node.document.default
 targetEntityType: node
 bundle: document
 mode: default
 content:
-  body:
-    label: hidden
-    type: text_default
-    weight: 2
-    settings: {  }
-    third_party_settings: {  }
-    region: content
   field_media:
     weight: 1
     label: hidden
