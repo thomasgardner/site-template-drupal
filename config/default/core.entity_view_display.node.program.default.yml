@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.program.field_awards_long_txt
     - field.field.node.program.field_caption_formatted
     - field.field.node.program.field_careers
+    - field.field.node.program.field_degrees
     - field.field.node.program.field_department_ref
     - field.field.node.program.field_eap_long_txt
     - field.field.node.program.field_facilities_txt
@@ -69,6 +70,21 @@ content:
     region: content
   field_careers:
     weight: 107
+    label: hidden
+    settings:
+      link: true
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: entity_reference_label
+    region: content
+  field_degrees:
+    weight: 118
     label: hidden
     settings:
       link: true

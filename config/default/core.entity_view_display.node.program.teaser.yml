@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.program.field_awards_long_txt
     - field.field.node.program.field_caption_formatted
     - field.field.node.program.field_careers
+    - field.field.node.program.field_degrees
     - field.field.node.program.field_department_ref
     - field.field.node.program.field_eap_long_txt
     - field.field.node.program.field_facilities_txt
@@ -39,6 +40,7 @@ hidden:
   field_awards_long_txt: true
   field_caption_formatted: true
   field_careers: true
+  field_degrees: true
   field_department_ref: true
   field_eap_long_txt: true
   field_facilities_txt: true

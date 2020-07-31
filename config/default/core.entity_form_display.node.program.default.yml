@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.program.field_awards_long_txt
     - field.field.node.program.field_caption_formatted
     - field.field.node.program.field_careers
+    - field.field.node.program.field_degrees
     - field.field.node.program.field_department_ref
     - field.field.node.program.field_eap_long_txt
     - field.field.node.program.field_facilities_txt
@@ -28,6 +29,7 @@ third_party_settings:
       children:
         - field_department_ref
         - field_careers
+        - field_degrees
       parent_name: ''
       weight: 23
       format_type: details
@@ -99,6 +101,12 @@ content:
     region: content
   field_careers:
     weight: 15
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_degrees:
+    weight: 16
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
