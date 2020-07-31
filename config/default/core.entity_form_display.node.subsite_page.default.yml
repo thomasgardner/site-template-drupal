@@ -6,7 +6,6 @@ dependencies:
     - field.field.node.subsite_page.body
     - field.field.node.subsite_page.field_content_bottom
     - field.field.node.subsite_page.field_hero_content
-    - field.field.node.subsite_page.field_hide_page_title
     - field.field.node.subsite_page.field_meta_tags
     - node.type.subsite_page
     - workflows.workflow.editorial
@@ -106,13 +105,6 @@ content:
       form_display_mode: default
       default_paragraph_type: _none
     third_party_settings: {  }
-    region: content
-  field_hide_page_title:
-    weight: 3
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
     region: content
   field_meta_tags:
     weight: 15

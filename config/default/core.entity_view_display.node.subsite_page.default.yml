@@ -6,7 +6,6 @@ dependencies:
     - field.field.node.subsite_page.body
     - field.field.node.subsite_page.field_content_bottom
     - field.field.node.subsite_page.field_hero_content
-    - field.field.node.subsite_page.field_hide_page_title
     - field.field.node.subsite_page.field_meta_tags
     - node.type.subsite_page
   module:
@@ -40,7 +39,6 @@ content:
 hidden:
   field_content_bottom: true
   field_hero_content: true
-  field_hide_page_title: true
   field_meta_tags: true
   langcode: true
   links: true
