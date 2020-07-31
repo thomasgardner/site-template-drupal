@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.node.article.body
+    - field.field.node.article.field_audiences
     - field.field.node.article.field_author
     - field.field.node.article.field_categories
+    - field.field.node.article.field_colleges_departments
     - field.field.node.article.field_date
     - field.field.node.article.field_featured
     - field.field.node.article.field_media
@@ -46,6 +48,21 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_audiences:
+    weight: 15
+    label: hidden
+    settings:
+      link: true
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: entity_reference_label
+    region: content
   field_author:
     weight: 1
     label: hidden
@@ -60,6 +77,21 @@ content:
     settings:
       link: true
     third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_colleges_departments:
+    weight: 14
+    label: hidden
+    settings:
+      link: true
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
     type: entity_reference_label
     region: content
   field_date:

@@ -5,8 +5,10 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.article.body
+    - field.field.node.article.field_audiences
     - field.field.node.article.field_author
     - field.field.node.article.field_categories
+    - field.field.node.article.field_colleges_departments
     - field.field.node.article.field_date
     - field.field.node.article.field_featured
     - field.field.node.article.field_media
@@ -47,8 +49,10 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_audiences: true
   field_author: true
   field_categories: true
+  field_colleges_departments: true
   field_date: true
   field_featured: true
   field_media: true
