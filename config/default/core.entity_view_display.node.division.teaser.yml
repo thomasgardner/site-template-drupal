@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.division.body
     - field.field.node.division.field_address
+    - field.field.node.division.field_departments
     - field.field.node.division.field_email
     - field.field.node.division.field_link
     - field.field.node.division.field_location_txt
@@ -40,6 +41,7 @@ content:
     region: content
 hidden:
   field_address: true
+  field_departments: true
   field_email: true
   field_link: true
   field_location_txt: true
