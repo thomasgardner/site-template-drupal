@@ -1,0 +1,19 @@
+uuid: 47e8c603-2fb9-442e-83bd-74ea59de10ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_area_of_expertise_long_txt
+    - node.type.profile
+id: node.profile.field_area_of_expertise_long_txt
+field_name: field_area_of_expertise_long_txt
+entity_type: node
+bundle: profile
+label: 'Areas of Expertise'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

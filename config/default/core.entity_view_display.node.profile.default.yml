@@ -4,17 +4,45 @@ status: true
 dependencies:
   config:
     - field.field.node.profile.body
+    - field.field.node.profile.field_academic_title
+    - field.field.node.profile.field_address_txt
+    - field.field.node.profile.field_area_of_expertise_long_txt
+    - field.field.node.profile.field_areas_of_expertise_txt
+    - field.field.node.profile.field_bio_ed_training_long_txt
+    - field.field.node.profile.field_campus_aff_long_txt
+    - field.field.node.profile.field_dept_college_unit_txt
     - field.field.node.profile.field_details_fields
+    - field.field.node.profile.field_division
+    - field.field.node.profile.field_division_txt
+    - field.field.node.profile.field_email_address
+    - field.field.node.profile.field_emails
+    - field.field.node.profile.field_faculty_type
+    - field.field.node.profile.field_faculty_type_txt
+    - field.field.node.profile.field_first_name
+    - field.field.node.profile.field_job_title_txt
+    - field.field.node.profile.field_last_name
+    - field.field.node.profile.field_links
+    - field.field.node.profile.field_locations_txt
+    - field.field.node.profile.field_mail_stop_txt
     - field.field.node.profile.field_media
+    - field.field.node.profile.field_office_hour_txt
+    - field.field.node.profile.field_office_hours_txt
+    - field.field.node.profile.field_phone
     - field.field.node.profile.field_profile_category
     - field.field.node.profile.field_profile_type
+    - field.field.node.profile.field_publications_long_txt
+    - field.field.node.profile.field_publications_txt
+    - field.field.node.profile.field_research_interests_lng_txt
+    - field.field.node.profile.field_research_interests_txt
     - field.field.node.profile.field_teaser_txt
+    - field.field.node.profile.field_websites_long_txt
     - image.style.profile_card_featured
     - node.type.profile
   module:
     - entity_reference_revisions
     - fences
     - field_group
+    - link
     - media
     - text
     - user
@@ -64,6 +92,59 @@ content:
         fences_label_tag: none
         fences_label_classes: ''
     region: content
+  field_academic_title:
+    weight: 11
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_address_txt:
+    weight: 17
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_area_of_expertise_long_txt:
+    weight: 14
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_areas_of_expertise_txt:
+    weight: 15
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_bio_ed_training_long_txt:
+    weight: 16
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_campus_aff_long_txt:
+    weight: 30
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_dept_college_unit_txt:
+    weight: 18
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   field_details_fields:
     weight: 3
     label: hidden
@@ -80,6 +161,104 @@ content:
         fences_label_classes: ''
     type: entity_reference_revisions_entity_view
     region: content
+  field_division:
+    weight: 19
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_division_txt:
+    weight: 20
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_email_address:
+    weight: 38
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_emails:
+    weight: 12
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_faculty_type:
+    weight: 22
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_faculty_type_txt:
+    weight: 23
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_first_name:
+    weight: 24
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_job_title_txt:
+    weight: 26
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_last_name:
+    weight: 25
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_links:
+    weight: 36
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_locations_txt:
+    weight: 13
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_mail_stop_txt:
+    weight: 27
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   field_media:
     weight: 4
     label: hidden
@@ -95,6 +274,29 @@ content:
         fences_label_tag: none
         fences_label_classes: ''
     type: media_thumbnail
+    region: content
+  field_office_hour_txt:
+    weight: 28
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_office_hours_txt:
+    weight: 29
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_phone:
+    weight: 31
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
     region: content
   field_profile_category:
     weight: 5
@@ -127,6 +329,43 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: none
         fences_label_classes: ''
+  field_publications_long_txt:
+    weight: 35
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_publications_txt:
+    weight: 34
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_research_interests_lng_txt:
+    weight: 33
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_research_interests_txt:
+    weight: 32
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_websites_long_txt:
+    weight: 37
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
   links:
     weight: 0
     region: content

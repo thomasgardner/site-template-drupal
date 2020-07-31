@@ -1,0 +1,19 @@
+uuid: 1846441e-a24a-4482-83ca-15471f9456a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_campus_aff_long_txt
+    - node.type.profile
+id: node.profile.field_campus_aff_long_txt
+field_name: field_campus_aff_long_txt
+entity_type: node
+bundle: profile
+label: "Other UCSC Campus Affiliation\t"
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

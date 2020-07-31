@@ -1,0 +1,19 @@
+uuid: 03892888-30c2-4174-ba0e-50da7245cee4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_emails
+    - node.type.profile
+id: node.profile.field_emails
+field_name: field_emails
+entity_type: node
+bundle: profile
+label: 'Additional Emails'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

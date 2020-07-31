@@ -1,0 +1,19 @@
+uuid: 1bb51850-8ded-45c7-9d31-ed6131cac2a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_faculty_type_txt
+    - node.type.profile
+id: node.profile.field_faculty_type_txt
+field_name: field_faculty_type_txt
+entity_type: node
+bundle: profile
+label: 'Faculty Type'
+description: 'ex. "Regular Faculty"'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

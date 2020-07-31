@@ -12,7 +12,7 @@ id: node.profile.field_details_fields
 field_name: field_details_fields
 entity_type: node
 bundle: profile
-label: 'Profile Details'
+label: 'x. Profile Details'
 description: ''
 required: false
 translatable: true
