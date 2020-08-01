@@ -22,7 +22,7 @@ id: node.page.field_content_bottom
 field_name: field_content_bottom
 entity_type: node
 bundle: page
-label: 'Full-Width Content'
+label: 'Page Bottom Paragraphs'
 description: ''
 required: false
 translatable: false

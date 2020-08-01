@@ -35,7 +35,6 @@ third_party_settings:
     group_main_content:
       children:
         - title
-        - field_hide_page_title
         - body
       parent_name: ''
       weight: 1
@@ -59,7 +58,7 @@ third_party_settings:
         id: ''
         classes: ''
         open: false
-      label: 'Full-Width Content'
+      label: 'Page Bottom Content'
       region: content
 id: node.subsite_page.default
 targetEntityType: node

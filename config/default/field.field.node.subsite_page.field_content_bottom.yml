@@ -12,7 +12,7 @@ id: node.subsite_page.field_content_bottom
 field_name: field_content_bottom
 entity_type: node
 bundle: subsite_page
-label: 'Full-Width Paragraphs'
+label: 'Page Bottom Paragraphs'
 description: ''
 required: false
 translatable: false
