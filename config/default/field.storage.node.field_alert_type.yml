@@ -12,11 +12,17 @@ type: list_string
 settings:
   allowed_values:
     -
+      value: large
+      label: 'Homepage Alert (Large)'
+    -
+      value: small
+      label: 'Global Alert (Small)'
+    -
       value: low
-      label: Low
+      label: 'Low (Deprecated)'
     -
       value: high
-      label: High
+      label: 'High (Deprecated)'
   allowed_values_function: ''
 module: options
 locked: false
