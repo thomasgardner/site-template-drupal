@@ -10,12 +10,12 @@ dependencies:
     - field.field.node.podcast.field_date
     - field.field.node.podcast.field_embed_txt
     - field.field.node.podcast.field_featured
-    - field.field.node.podcast.field_lead_txt
+    - field.field.node.podcast.field_lead_formatted
     - field.field.node.podcast.field_link
     - field.field.node.podcast.field_media
     - field.field.node.podcast.field_meta_tags
     - field.field.node.podcast.field_soundcloud
-    - field.field.node.podcast.field_subtitle_long_txt
+    - field.field.node.podcast.field_subtitle_formatted
     - node.type.podcast
   module:
     - addtocalendar
@@ -139,12 +139,19 @@ content:
         fences_label_classes: ''
     type: basic_string
     region: content
-  field_lead_txt:
-    weight: 5
-    label: above
+  field_lead_formatted:
+    weight: 12
+    label: hidden
     settings: {  }
-    third_party_settings: {  }
-    type: basic_string
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: text_default
     region: content
   field_media:
     weight: 4
@@ -162,12 +169,19 @@ content:
         fences_label_classes: ''
     type: entity_reference_entity_view
     region: content
-  field_subtitle_long_txt:
-    weight: 1
-    label: above
+  field_subtitle_formatted:
+    weight: 11
+    label: hidden
     settings: {  }
-    third_party_settings: {  }
-    type: basic_string
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: text_default
     region: content
   links:
     weight: 8

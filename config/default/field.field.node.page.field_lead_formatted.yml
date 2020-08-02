@@ -1,12 +1,14 @@
-uuid: 5c35c124-6b40-4dbe-915b-782f645f6145
+uuid: 1f9b754d-4c73-4e88-a985-7caaab97c889
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_lead_txt
+    - field.storage.node.field_lead_formatted
     - node.type.page
-id: node.page.field_lead_txt
-field_name: field_lead_txt
+  module:
+    - text
+id: node.page.field_lead_formatted
+field_name: field_lead_formatted
 entity_type: node
 bundle: page
 label: 'Lead Text'
@@ -16,4 +18,4 @@ translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: string_long
+field_type: text_long
