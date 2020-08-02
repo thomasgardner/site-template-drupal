@@ -1,0 +1,19 @@
+uuid: 05d2b270-e545-4e16-af39-f7b38e14c2c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_more_long_txt
+    - node.type.major
+id: node.major.field_more_long_txt
+field_name: field_more_long_txt
+entity_type: node
+bundle: major
+label: 'More Information'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

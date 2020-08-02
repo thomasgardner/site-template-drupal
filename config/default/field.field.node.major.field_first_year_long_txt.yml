@@ -1,0 +1,19 @@
+uuid: cbc30a25-c0df-4e8d-834b-24d01aa21ff9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_first_year_long_txt
+    - node.type.major
+id: node.major.field_first_year_long_txt
+field_name: field_first_year_long_txt
+entity_type: node
+bundle: major
+label: 'Information for First-Year Students'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,19 @@
+uuid: d3a1bf6e-52f7-4102-b199-95d0b1b3d58f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_transfers_long_txt
+    - node.type.major
+id: node.major.field_transfers_long_txt
+field_name: field_transfers_long_txt
+entity_type: node
+bundle: major
+label: 'Information for Transfers'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long
