@@ -1,12 +1,12 @@
-uuid: e997ff48-f642-43a6-8a44-727985170010
+uuid: bba73217-48d9-46ac-8f20-34c22dca7f1b
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_phone_long_txt
+    - field.storage.node.field_phone_numbers_txt
     - node.type.division
-id: node.division.field_phone_long_txt
-field_name: field_phone_long_txt
+id: node.division.field_phone_numbers_txt
+field_name: field_phone_numbers_txt
 entity_type: node
 bundle: division
 label: 'Phone Numbers'
@@ -16,4 +16,4 @@ translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: string_long
+field_type: string
