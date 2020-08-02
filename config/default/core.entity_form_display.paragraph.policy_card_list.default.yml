@@ -1,0 +1,16 @@
+uuid: 038947f8-ac56-4b65-8202-b85629f2e9af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.policy_card_list.field_view_reference
+    - paragraphs.paragraphs_type.policy_card_list
+id: paragraph.policy_card_list.default
+targetEntityType: paragraph
+bundle: policy_card_list
+mode: default
+content: {  }
+hidden:
+  created: true
+  field_view_reference: true
+  status: true
