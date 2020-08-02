@@ -22,6 +22,7 @@ dependencies:
     - paragraphs.paragraphs_type.podcast_card_list
     - paragraphs.paragraphs_type.policy_card
     - paragraphs.paragraphs_type.policy_card_list
+    - paragraphs.paragraphs_type.related_links_list
     - paragraphs.paragraphs_type.step_grid
     - paragraphs.paragraphs_type.tabs_horizontal
     - paragraphs.paragraphs_type.wysiwyg
@@ -59,6 +60,7 @@ settings:
       podcast_card_list: podcast_card_list
       policy_card: policy_card
       policy_card_list: policy_card_list
+      related_links_list: related_links_list
       step_grid: step_grid
       tabs_horizontal: tabs_horizontal
       wysiwyg: wysiwyg
@@ -252,19 +254,22 @@ settings:
       policy_card_list:
         enabled: true
         weight: 65
-      step:
+      related_links_list:
+        enabled: true
         weight: 66
+      step:
+        weight: 67
         enabled: false
       step_grid:
         enabled: true
-        weight: 67
+        weight: 68
       tabs_horizontal:
         enabled: true
-        weight: 68
-      views:
         weight: 69
+      views:
+        weight: 70
         enabled: false
       wysiwyg:
         enabled: true
-        weight: 70
+        weight: 71
 field_type: entity_reference_revisions
