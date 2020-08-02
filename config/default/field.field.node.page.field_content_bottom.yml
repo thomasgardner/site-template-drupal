@@ -6,6 +6,7 @@ dependencies:
     - field.storage.node.field_content_bottom
     - node.type.page
     - paragraphs.paragraphs_type.article_card
+    - paragraphs.paragraphs_type.article_card_list
     - paragraphs.paragraphs_type.button_list
     - paragraphs.paragraphs_type.content_centered
     - paragraphs.paragraphs_type.content_left
@@ -44,6 +45,7 @@ settings:
       grid_content_centered: grid_content_centered
       grid_content_left: grid_content_left
       article_card: article_card
+      article_card_list: article_card_list
       tabs_horizontal: tabs_horizontal
       wysiwyg: wysiwyg
     target_bundles_drag_drop:
@@ -215,13 +217,16 @@ settings:
       article_card:
         enabled: true
         weight: 58
-      tabs_horizontal:
+      article_card_list:
         enabled: true
         weight: 59
-      views:
+      tabs_horizontal:
+        enabled: true
         weight: 60
+      views:
+        weight: 61
         enabled: false
       wysiwyg:
         enabled: true
-        weight: 61
+        weight: 62
 field_type: entity_reference_revisions
