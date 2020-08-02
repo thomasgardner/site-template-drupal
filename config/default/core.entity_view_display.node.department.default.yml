@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.department.field_address
     - field.field.node.department.field_link
     - field.field.node.department.field_location_txt
-    - field.field.node.department.field_phone_long_txt
     - field.field.node.department.field_phone_numbers_txt
     - node.type.department
   module:
@@ -53,13 +52,6 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-    region: content
-  field_phone_long_txt:
-    weight: 103
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: basic_string
     region: content
   field_phone_numbers_txt:
     weight: 104
