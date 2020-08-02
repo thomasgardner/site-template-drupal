@@ -1,0 +1,16 @@
+uuid: 1e0d13e1-f173-4b29-a9cc-3b3ce7588227
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.major_card_list.field_view_reference
+    - paragraphs.paragraphs_type.major_card_list
+id: paragraph.major_card_list.default
+targetEntityType: paragraph
+bundle: major_card_list
+mode: default
+content: {  }
+hidden:
+  created: true
+  field_view_reference: true
+  status: true

@@ -1,0 +1,10 @@
+uuid: 6745e82a-5547-4d30-ae05-747c8c44ce6d
+langcode: en
+status: true
+dependencies: {  }
+id: major_card_list
+label: 'Major Card List'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,9 +1,9 @@
-uuid: 8c4da4f9-3557-4e05-9e31-59f2d064cc74
+uuid: 03565b57-e428-48ce-9234-84206d0905a7
 langcode: en
-status: false
+status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.grid_card
     - field.field.node.major.field_alumni_focus_long_txt
     - field.field.node.major.field_awards_long_txt
     - field.field.node.major.field_caption_formatted
@@ -20,22 +20,54 @@ dependencies:
     - field.field.node.major.field_transfers_long_txt
     - node.type.major
   module:
+    - fences
+    - link
     - user
-id: node.major.teaser
+id: node.major.grid_card
 targetEntityType: node
 bundle: major
-mode: teaser
+mode: grid_card
 content:
+  field_link:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: link
+    region: content
+  field_media:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: entity_reference_entity_view
+    region: content
   links:
-    weight: 100
+    weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
-  sharethis:
-    weight: 10
-    settings: {  }
-    third_party_settings: {  }
-    region: content
 hidden:
   field_alumni_focus_long_txt: true
   field_awards_long_txt: true
@@ -46,9 +78,8 @@ hidden:
   field_facilities_txt: true
   field_first_year_long_txt: true
   field_general_catalog_long_txt: true
-  field_link: true
-  field_media: true
   field_more_long_txt: true
   field_opportunities_long_txt: true
   field_transfers_long_txt: true
   langcode: true
+  sharethis: true

@@ -16,6 +16,8 @@ dependencies:
     - paragraphs.paragraphs_type.full_video
     - paragraphs.paragraphs_type.grid_content_centered
     - paragraphs.paragraphs_type.grid_content_left
+    - paragraphs.paragraphs_type.major_card
+    - paragraphs.paragraphs_type.major_card_list
     - paragraphs.paragraphs_type.podcast_card
     - paragraphs.paragraphs_type.podcast_card_list
     - paragraphs.paragraphs_type.tabs_horizontal
@@ -46,6 +48,8 @@ settings:
       full_video: full_video
       grid_content_centered: grid_content_centered
       grid_content_left: grid_content_left
+      major_card: major_card
+      major_card_list: major_card_list
       article_card: article_card
       article_card_list: article_card_list
       podcast_card: podcast_card
@@ -218,25 +222,31 @@ settings:
       grid_content_left:
         enabled: true
         weight: 57
-      article_card:
+      major_card:
         enabled: true
         weight: 58
-      article_card_list:
+      major_card_list:
         enabled: true
         weight: 59
-      podcast_card:
+      article_card:
         enabled: true
         weight: 60
-      podcast_card_list:
+      article_card_list:
         enabled: true
         weight: 61
-      tabs_horizontal:
+      podcast_card:
         enabled: true
         weight: 62
-      views:
+      podcast_card_list:
+        enabled: true
         weight: 63
+      tabs_horizontal:
+        enabled: true
+        weight: 64
+      views:
+        weight: 65
         enabled: false
       wysiwyg:
         enabled: true
-        weight: 64
+        weight: 66
 field_type: entity_reference_revisions

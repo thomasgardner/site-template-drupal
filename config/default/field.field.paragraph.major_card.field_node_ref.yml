@@ -1,0 +1,28 @@
+uuid: fe8d7a3b-2b49-4b10-a894-ee476105695c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_node_ref
+    - node.type.major
+    - paragraphs.paragraphs_type.major_card
+id: paragraph.major_card.field_node_ref
+field_name: field_node_ref
+entity_type: paragraph
+bundle: major_card
+label: 'Major Node'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      major: major
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
