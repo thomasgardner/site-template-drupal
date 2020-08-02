@@ -10,9 +10,9 @@ id: node.profile.field_profile_category
 field_name: field_profile_category
 entity_type: node
 bundle: profile
-label: 'Profile Category'
+label: 'x. Profile Category'
 description: ''
-required: true
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''

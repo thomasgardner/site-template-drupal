@@ -6,16 +6,12 @@ dependencies:
     - field.field.node.profile.body
     - field.field.node.profile.field_academic_title
     - field.field.node.profile.field_address_txt
-    - field.field.node.profile.field_area_of_expertise_long_txt
     - field.field.node.profile.field_areas_of_expertise_txt
     - field.field.node.profile.field_bio_ed_training_long_txt
     - field.field.node.profile.field_campus_aff_long_txt
     - field.field.node.profile.field_dept_college_unit_txt
-    - field.field.node.profile.field_details_fields
-    - field.field.node.profile.field_division
     - field.field.node.profile.field_division_txt
-    - field.field.node.profile.field_email_address
-    - field.field.node.profile.field_emails
+    - field.field.node.profile.field_email_addresses
     - field.field.node.profile.field_faculty_type
     - field.field.node.profile.field_faculty_type_txt
     - field.field.node.profile.field_first_name
@@ -25,23 +21,21 @@ dependencies:
     - field.field.node.profile.field_locations_txt
     - field.field.node.profile.field_mail_stop_txt
     - field.field.node.profile.field_media
-    - field.field.node.profile.field_office_hour_txt
     - field.field.node.profile.field_office_hours_txt
     - field.field.node.profile.field_phone
     - field.field.node.profile.field_profile_category
     - field.field.node.profile.field_profile_type
-    - field.field.node.profile.field_publications_long_txt
     - field.field.node.profile.field_publications_txt
     - field.field.node.profile.field_research_interests_lng_txt
-    - field.field.node.profile.field_research_interests_txt
+    - field.field.node.profile.field_teaser_image
     - field.field.node.profile.field_teaser_txt
-    - field.field.node.profile.field_websites_long_txt
     - node.type.profile
   module:
     - content_moderation
     - field_group
     - link
     - media_library
+    - media_library_edit
     - path
     - scheduler
     - telephone
@@ -49,11 +43,10 @@ third_party_settings:
   field_group:
     group_categorization:
       children:
-        - field_profile_category
         - field_faculty_type_txt
         - field_faculty_type
       parent_name: ''
-      weight: 17
+      weight: 15
       format_type: details
       region: content
       format_settings:
@@ -70,7 +63,7 @@ third_party_settings:
         - field_academic_title
         - field_job_title_txt
       parent_name: ''
-      weight: 14
+      weight: 12
       format_type: details
       region: content
       format_settings:
@@ -82,16 +75,14 @@ third_party_settings:
       label: 'Profile Details'
     group_contact_info:
       children:
-        - field_email_address
-        - field_emails
+        - field_email_addresses
         - field_phone
-        - field_office_hour_txt
         - field_office_hours_txt
         - field_address_txt
         - field_locations_txt
         - field_mail_stop_txt
       parent_name: ''
-      weight: 16
+      weight: 14
       format_type: details
       region: content
       format_settings:
@@ -103,21 +94,16 @@ third_party_settings:
       label: 'Contact Info'
     group_information:
       children:
-        - field_area_of_expertise_long_txt
         - field_areas_of_expertise_txt
         - field_bio_ed_training_long_txt
         - field_dept_college_unit_txt
         - field_division_txt
-        - field_division
         - field_campus_aff_long_txt
-        - field_research_interests_txt
         - field_research_interests_lng_txt
         - field_publications_txt
-        - field_publications_long_txt
-        - field_websites_long_txt
         - field_links
       parent_name: ''
-      weight: 18
+      weight: 16
       format_type: details
       region: content
       format_settings:
@@ -127,6 +113,21 @@ third_party_settings:
         open: true
         required_fields: true
       label: 'More Information'
+    group_teaser_content:
+      children:
+        - field_teaser_txt
+        - field_teaser_image
+      parent_name: ''
+      weight: 17
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Teaser Content'
 id: node.profile.default
 targetEntityType: node
 bundle: profile
@@ -134,12 +135,12 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 4
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
   field_academic_title:
-    weight: 22
+    weight: 23
     settings:
       size: 60
       placeholder: ''
@@ -147,20 +148,12 @@ content:
     type: string_textfield
     region: content
   field_address_txt:
-    weight: 20
+    weight: 18
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-    region: content
-  field_area_of_expertise_long_txt:
-    weight: 30
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textarea
     region: content
   field_areas_of_expertise_txt:
     weight: 31
@@ -179,7 +172,7 @@ content:
     type: string_textarea
     region: content
   field_campus_aff_long_txt:
-    weight: 36
+    weight: 35
     settings:
       rows: 5
       placeholder: ''
@@ -194,12 +187,6 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_division:
-    weight: 35
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
   field_division_txt:
     weight: 34
     settings:
@@ -208,16 +195,8 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_email_address:
+  field_email_addresses:
     weight: 15
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: email_default
-    region: content
-  field_emails:
-    weight: 16
     settings:
       size: 60
       placeholder: ''
@@ -247,7 +226,7 @@ content:
     type: string_textfield
     region: content
   field_job_title_txt:
-    weight: 23
+    weight: 24
     settings:
       size: 60
       placeholder: ''
@@ -263,7 +242,7 @@ content:
     type: string_textfield
     region: content
   field_links:
-    weight: 42
+    weight: 39
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -271,37 +250,6 @@ content:
     type: link_default
     region: content
   field_locations_txt:
-    weight: 21
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_mail_stop_txt:
-    weight: 22
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_media:
-    weight: 15
-    settings:
-      media_types: {  }
-    third_party_settings: {  }
-    type: media_library_widget
-    region: content
-  field_office_hour_txt:
-    weight: 18
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_office_hours_txt:
     weight: 19
     settings:
       size: 60
@@ -309,35 +257,38 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_phone:
+  field_mail_stop_txt:
+    weight: 21
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_media:
+    weight: 13
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    type: media_library_widget
+    region: content
+  field_office_hours_txt:
     weight: 17
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_phone:
+    weight: 16
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: telephone_default
     region: content
-  field_profile_category:
-    weight: 13
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
-  field_profile_type:
-    weight: 1
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
-  field_publications_long_txt:
-    weight: 40
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_publications_txt:
-    weight: 39
+    weight: 38
     settings:
       size: 60
       placeholder: ''
@@ -345,20 +296,21 @@ content:
     type: string_textfield
     region: content
   field_research_interests_lng_txt:
-    weight: 38
+    weight: 37
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
     region: content
-  field_research_interests_txt:
-    weight: 37
+  field_teaser_image:
+    weight: 20
     settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
+      media_types: {  }
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
+    type: media_library_widget
     region: content
   field_teaser_txt:
     weight: 19
@@ -368,30 +320,22 @@ content:
     third_party_settings: {  }
     type: string_textarea
     region: content
-  field_websites_long_txt:
-    weight: 41
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textarea
-    region: content
   langcode:
     type: language_select
-    weight: 2
+    weight: 1
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 11
+    weight: 10
     settings: {  }
     region: content
     third_party_settings: {  }
   path:
     type: path
-    weight: 9
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -399,12 +343,12 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 5
+    weight: 4
     region: content
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 7
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -412,14 +356,14 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 12
+    weight: 11
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 6
+    weight: 5
     region: content
     third_party_settings: {  }
   title:
@@ -432,7 +376,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 3
+    weight: 2
     settings:
       match_operator: CONTAINS
       size: 60
@@ -442,15 +386,16 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 8
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
   url_redirects:
-    weight: 10
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
   body: true
-  field_details_fields: true
+  field_profile_category: true
+  field_profile_type: true

@@ -10,7 +10,7 @@ field_name: field_mail_stop_txt
 entity_type: node
 bundle: profile
 label: 'Mail Stop'
-description: ''
+description: 'ex. "SOE2"'
 required: false
 translatable: false
 default_value: {  }

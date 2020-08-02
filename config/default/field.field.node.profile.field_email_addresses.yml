@@ -1,15 +1,15 @@
-uuid: 03892888-30c2-4174-ba0e-50da7245cee4
+uuid: 835d63d5-b12a-477c-acc8-0fabe9061353
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_emails
+    - field.storage.node.field_email_addresses
     - node.type.profile
-id: node.profile.field_emails
-field_name: field_emails
+id: node.profile.field_email_addresses
+field_name: field_email_addresses
 entity_type: node
 bundle: profile
-label: 'Additional Emails'
+label: 'Email Addresses'
 description: ''
 required: false
 translatable: false

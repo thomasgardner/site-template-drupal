@@ -1,26 +1,26 @@
-uuid: b9debed5-d722-4412-b52a-36e3817466aa
+uuid: 759a5fa8-3694-4d39-8662-13b82f6f4286
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_division
-    - node.type.division
+    - field.storage.node.field_teaser_image
+    - media.type.image
     - node.type.profile
-id: node.profile.field_division
-field_name: field_division
+id: node.profile.field_teaser_image
+field_name: field_teaser_image
 entity_type: node
 bundle: profile
-label: Division
+label: 'Teaser Image'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:node'
+  handler: 'default:media'
   handler_settings:
     target_bundles:
-      division: division
+      image: image
     sort:
       field: _none
     auto_create: false

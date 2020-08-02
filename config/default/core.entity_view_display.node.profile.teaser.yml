@@ -7,16 +7,12 @@ dependencies:
     - field.field.node.profile.body
     - field.field.node.profile.field_academic_title
     - field.field.node.profile.field_address_txt
-    - field.field.node.profile.field_area_of_expertise_long_txt
     - field.field.node.profile.field_areas_of_expertise_txt
     - field.field.node.profile.field_bio_ed_training_long_txt
     - field.field.node.profile.field_campus_aff_long_txt
     - field.field.node.profile.field_dept_college_unit_txt
-    - field.field.node.profile.field_details_fields
-    - field.field.node.profile.field_division
     - field.field.node.profile.field_division_txt
-    - field.field.node.profile.field_email_address
-    - field.field.node.profile.field_emails
+    - field.field.node.profile.field_email_addresses
     - field.field.node.profile.field_faculty_type
     - field.field.node.profile.field_faculty_type_txt
     - field.field.node.profile.field_first_name
@@ -26,17 +22,14 @@ dependencies:
     - field.field.node.profile.field_locations_txt
     - field.field.node.profile.field_mail_stop_txt
     - field.field.node.profile.field_media
-    - field.field.node.profile.field_office_hour_txt
     - field.field.node.profile.field_office_hours_txt
     - field.field.node.profile.field_phone
     - field.field.node.profile.field_profile_category
     - field.field.node.profile.field_profile_type
-    - field.field.node.profile.field_publications_long_txt
     - field.field.node.profile.field_publications_txt
     - field.field.node.profile.field_research_interests_lng_txt
-    - field.field.node.profile.field_research_interests_txt
+    - field.field.node.profile.field_teaser_image
     - field.field.node.profile.field_teaser_txt
-    - field.field.node.profile.field_websites_long_txt
     - node.type.profile
   module:
     - text
@@ -67,16 +60,12 @@ content:
 hidden:
   field_academic_title: true
   field_address_txt: true
-  field_area_of_expertise_long_txt: true
   field_areas_of_expertise_txt: true
   field_bio_ed_training_long_txt: true
   field_campus_aff_long_txt: true
   field_dept_college_unit_txt: true
-  field_details_fields: true
-  field_division: true
   field_division_txt: true
-  field_email_address: true
-  field_emails: true
+  field_email_addresses: true
   field_faculty_type: true
   field_faculty_type_txt: true
   field_first_name: true
@@ -86,15 +75,12 @@ hidden:
   field_locations_txt: true
   field_mail_stop_txt: true
   field_media: true
-  field_office_hour_txt: true
   field_office_hours_txt: true
   field_phone: true
   field_profile_category: true
   field_profile_type: true
-  field_publications_long_txt: true
   field_publications_txt: true
   field_research_interests_lng_txt: true
-  field_research_interests_txt: true
+  field_teaser_image: true
   field_teaser_txt: true
-  field_websites_long_txt: true
   langcode: true
