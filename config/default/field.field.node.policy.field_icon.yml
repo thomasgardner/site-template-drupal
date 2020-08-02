@@ -11,9 +11,9 @@ id: node.policy.field_icon
 field_name: field_icon
 entity_type: node
 bundle: policy
-label: 'Font Awesome Icon'
+label: 'x. Font Awesome Icon'
 description: ''
-required: true
+required: false
 translatable: true
 default_value:
   -
