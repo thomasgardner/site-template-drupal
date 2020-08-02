@@ -11,9 +11,9 @@ id: node.podcast.field_soundcloud
 field_name: field_soundcloud
 entity_type: node
 bundle: podcast
-label: SoundCloud
+label: 'x. SoundCloud'
 description: 'Use the "Share" link.'
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''

@@ -6,8 +6,10 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.podcast.body
     - field.field.node.podcast.field_author
+    - field.field.node.podcast.field_author_link
     - field.field.node.podcast.field_categories
     - field.field.node.podcast.field_date
+    - field.field.node.podcast.field_embed_txt
     - field.field.node.podcast.field_featured
     - field.field.node.podcast.field_lead_txt
     - field.field.node.podcast.field_link
@@ -44,8 +46,10 @@ content:
     region: content
 hidden:
   field_author: true
+  field_author_link: true
   field_categories: true
   field_date: true
+  field_embed_txt: true
   field_featured: true
   field_lead_txt: true
   field_link: true

@@ -5,8 +5,10 @@ dependencies:
   config:
     - field.field.node.podcast.body
     - field.field.node.podcast.field_author
+    - field.field.node.podcast.field_author_link
     - field.field.node.podcast.field_categories
     - field.field.node.podcast.field_date
+    - field.field.node.podcast.field_embed_txt
     - field.field.node.podcast.field_featured
     - field.field.node.podcast.field_lead_txt
     - field.field.node.podcast.field_link
@@ -20,7 +22,6 @@ dependencies:
     - datetime
     - fences
     - link
-    - soundcloudfield
     - text
     - user
 id: node.podcast.default
@@ -30,7 +31,7 @@ mode: default
 content:
   body:
     type: text_default
-    weight: 8
+    weight: 6
     region: content
     settings: {  }
     third_party_settings:
@@ -49,6 +50,25 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_author_link:
+    weight: 9
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: link
     region: content
   field_categories:
     weight: 0
@@ -105,34 +125,29 @@ content:
         fences_label_classes: ''
     type: datetime_default
     region: content
+  field_embed_txt:
+    weight: 10
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: basic_string
+    region: content
   field_lead_txt:
-    weight: 7
+    weight: 5
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
-  field_link:
-    weight: 4
-    label: hidden
-    settings:
-      trim_length: 80
-      rel: nofollow
-      target: _blank
-      url_only: false
-      url_plain: false
-    third_party_settings:
-      fences:
-        fences_field_tag: div
-        fences_field_classes: ''
-        fences_field_item_tag: div
-        fences_field_item_classes: ''
-        fences_label_tag: div
-        fences_label_classes: ''
-    type: link
-    region: content
   field_media:
-    weight: 6
+    weight: 4
     label: hidden
     settings:
       view_mode: default
@@ -147,31 +162,6 @@ content:
         fences_label_classes: ''
     type: entity_reference_entity_view
     region: content
-  field_soundcloud:
-    weight: 5
-    label: hidden
-    settings:
-      soundcloud_player_type: classic
-      soundcloud_player_width: '100'
-      soundcloud_player_height: '148'
-      soundcloud_player_height_sets: '450'
-      soundcloud_player_visual_height: '450'
-      soundcloud_player_color: fefefe
-      soundcloud_player_hiderelated: '1'
-      soundcloud_player_showartwork: '1'
-      soundcloud_player_autoplay: 0
-      soundcloud_player_showcomments: 0
-      soundcloud_player_showplaycount: 0
-    third_party_settings:
-      fences:
-        fences_field_tag: div
-        fences_field_classes: ''
-        fences_field_item_tag: div
-        fences_field_item_classes: ''
-        fences_label_tag: div
-        fences_label_classes: ''
-    type: soundcloud_default
-    region: content
   field_subtitle_long_txt:
     weight: 1
     label: above
@@ -180,16 +170,18 @@ content:
     type: basic_string
     region: content
   links:
-    weight: 11
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
   sharethis:
-    weight: 10
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
   field_featured: true
+  field_link: true
   field_meta_tags: true
+  field_soundcloud: true
   langcode: true
