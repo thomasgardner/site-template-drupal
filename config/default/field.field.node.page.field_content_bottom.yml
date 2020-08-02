@@ -20,6 +20,7 @@ dependencies:
     - paragraphs.paragraphs_type.major_card_list
     - paragraphs.paragraphs_type.podcast_card
     - paragraphs.paragraphs_type.podcast_card_list
+    - paragraphs.paragraphs_type.policy_card
     - paragraphs.paragraphs_type.tabs_horizontal
     - paragraphs.paragraphs_type.wysiwyg
   module:
@@ -54,6 +55,7 @@ settings:
       article_card_list: article_card_list
       podcast_card: podcast_card
       podcast_card_list: podcast_card_list
+      policy_card: policy_card
       tabs_horizontal: tabs_horizontal
       wysiwyg: wysiwyg
     target_bundles_drag_drop:
@@ -240,13 +242,16 @@ settings:
       podcast_card_list:
         enabled: true
         weight: 63
-      tabs_horizontal:
+      policy_card:
         enabled: true
         weight: 64
-      views:
+      tabs_horizontal:
+        enabled: true
         weight: 65
+      views:
+        weight: 66
         enabled: false
       wysiwyg:
         enabled: true
-        weight: 66
+        weight: 67
 field_type: entity_reference_revisions
