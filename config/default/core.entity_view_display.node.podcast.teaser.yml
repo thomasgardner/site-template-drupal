@@ -1,6 +1,6 @@
 uuid: 4d07d6ed-82e9-456a-ad9e-c9609cdd3f9c
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
@@ -17,6 +17,7 @@ dependencies:
     - field.field.node.podcast.field_meta_tags
     - field.field.node.podcast.field_soundcloud
     - field.field.node.podcast.field_subtitle_formatted
+    - field.field.node.podcast.field_teaser_txt
     - node.type.podcast
   module:
     - text
@@ -57,4 +58,5 @@ hidden:
   field_meta_tags: true
   field_soundcloud: true
   field_subtitle_formatted: true
+  field_teaser_txt: true
   langcode: true

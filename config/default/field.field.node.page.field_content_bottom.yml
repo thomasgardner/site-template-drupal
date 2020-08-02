@@ -16,6 +16,7 @@ dependencies:
     - paragraphs.paragraphs_type.full_video
     - paragraphs.paragraphs_type.grid_content_centered
     - paragraphs.paragraphs_type.grid_content_left
+    - paragraphs.paragraphs_type.podcast_card
     - paragraphs.paragraphs_type.tabs_horizontal
     - paragraphs.paragraphs_type.wysiwyg
   module:
@@ -46,6 +47,7 @@ settings:
       grid_content_left: grid_content_left
       article_card: article_card
       article_card_list: article_card_list
+      podcast_card: podcast_card
       tabs_horizontal: tabs_horizontal
       wysiwyg: wysiwyg
     target_bundles_drag_drop:
@@ -220,13 +222,16 @@ settings:
       article_card_list:
         enabled: true
         weight: 59
-      tabs_horizontal:
+      podcast_card:
         enabled: true
         weight: 60
-      views:
+      tabs_horizontal:
+        enabled: true
         weight: 61
+      views:
+        weight: 62
         enabled: false
       wysiwyg:
         enabled: true
-        weight: 62
+        weight: 63
 field_type: entity_reference_revisions
