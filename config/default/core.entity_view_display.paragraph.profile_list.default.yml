@@ -1,0 +1,39 @@
+uuid: 97d64467-eae5-4395-90d2-f9bb1a46d4ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.profile_list.field_view_reference
+    - paragraphs.paragraphs_type.profile_list
+  module:
+    - fences
+    - viewsreference
+id: paragraph.profile_list.default
+targetEntityType: paragraph
+bundle: profile_list
+mode: default
+content:
+  field_view_reference:
+    weight: 0
+    label: hidden
+    settings:
+      plugin_types:
+        default: default
+        block: block
+        page: 0
+        attachment: 0
+        rest_export: 0
+        entity_browser: 0
+        feed: 0
+        embed: 0
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: viewsreference_formatter
+    region: content
+hidden: {  }
