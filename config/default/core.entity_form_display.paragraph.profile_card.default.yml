@@ -1,0 +1,25 @@
+uuid: d9a55721-3f6f-4e86-a9b7-a427898dca8b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.profile_card.field_node_ref
+    - paragraphs.paragraphs_type.profile_card
+id: paragraph.profile_card.default
+targetEntityType: paragraph
+bundle: profile_card
+mode: default
+content:
+  field_node_ref:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true
