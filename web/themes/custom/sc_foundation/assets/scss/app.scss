@@ -1,0 +1,18 @@
+//@import "node_modules/normalize-scss/sass/normalize/import-now";
+@import 'settings';
+@import 'foundation';
+
+$flex: true;
+@include foundation-everything($flex);
+
+@import "global/variables";
+@import "global/base-reset";
+@import "global/variables";
+@import "global/base-fonts";
+@import "global/mixin-utility";
+@import "global/mixin-typography";
+@import "global/mixin-buttons";
+@import "base/base-typography";
+@import "base/base-lists";
+@import "global/base-grid";
+@import "base/base-buttons";
