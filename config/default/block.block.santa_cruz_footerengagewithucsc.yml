@@ -10,8 +10,8 @@ dependencies:
     - santa_cruz
 id: santa_cruz_footerengagewithucsc
 theme: santa_cruz
-region: header
-weight: -6
+region: footer_middle
+weight: -7
 provider: null
 plugin: 'menu_block:footer---engage-with-ucsc'
 settings:

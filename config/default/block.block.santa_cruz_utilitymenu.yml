@@ -11,11 +11,11 @@ dependencies:
     - santa_cruz
 third_party_settings:
   block_class:
-    classes: utility-nav-block
+    classes: global-menu
 id: santa_cruz_utilitymenu
 theme: santa_cruz
 region: header
-weight: -4
+weight: -9
 provider: null
 plugin: 'menu_block:utility-menu'
 settings:

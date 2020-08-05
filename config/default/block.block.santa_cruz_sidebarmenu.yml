@@ -1,6 +1,6 @@
 uuid: f21e4649-8484-4802-8fc1-252b5f86e7dc
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.sidebar-menu
@@ -16,8 +16,8 @@ third_party_settings:
     classes: sidebar-menu-block
 id: santa_cruz_sidebarmenu
 theme: santa_cruz
-region: sidebar_left
-weight: -22
+region: sidebar_first
+weight: -8
 provider: null
 plugin: 'menu_block:sidebar-menu'
 settings:

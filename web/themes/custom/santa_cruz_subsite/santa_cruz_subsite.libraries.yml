@@ -1,0 +1,7 @@
+global:
+  version: VERSION
+  css:
+    base:
+      css/santa_cruz_subsite.css: {}
+  js:
+    js/santa_cruz_subsite.js: {}

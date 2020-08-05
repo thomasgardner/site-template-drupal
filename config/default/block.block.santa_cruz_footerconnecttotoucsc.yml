@@ -10,8 +10,8 @@ dependencies:
     - santa_cruz
 id: santa_cruz_footerconnecttotoucsc
 theme: santa_cruz
-region: header
-weight: -10
+region: footer_middle
+weight: -8
 provider: null
 plugin: 'menu_block:footer---connect-to-to-ucsc'
 settings:
