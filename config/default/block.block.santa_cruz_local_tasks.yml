@@ -1,15 +1,15 @@
-uuid: 83a338b8-f979-41f4-a639-389237b2ab6c
+uuid: 4fecb0fb-c397-4f2a-b939-080063e9d22c
 langcode: en
 status: true
 dependencies:
   theme:
     - santa_cruz
 _core:
-  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+  default_config_hash: ESYMyEtJWIpA1zdPm3_ZghkGppH4KLd18_1R9Yc7DEg
 id: santa_cruz_local_tasks
 theme: santa_cruz
 region: content
-weight: -19
+weight: -40
 provider: null
 plugin: local_tasks_block
 settings:

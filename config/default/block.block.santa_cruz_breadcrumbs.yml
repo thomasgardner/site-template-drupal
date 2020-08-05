@@ -1,4 +1,4 @@
-uuid: 9dced07d-4228-4982-9c5e-6a893322a207
+uuid: b4b26fd6-005a-43d5-8b60-a2f05113ea50
 langcode: en
 status: true
 dependencies:
@@ -7,11 +7,11 @@ dependencies:
   theme:
     - santa_cruz
 _core:
-  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+  default_config_hash: F9razTMNH9dD3hmzkpIPTFwJeYqb-XBSgYMGRdB0I68
 id: santa_cruz_breadcrumbs
 theme: santa_cruz
-region: content
-weight: -16
+region: header
+weight: -3
 provider: null
 plugin: system_breadcrumb_block
 settings:
@@ -19,9 +19,4 @@ settings:
   label: Breadcrumbs
   provider: system
   label_display: '0'
-visibility:
-  request_path:
-    id: request_path
-    pages: "/academics\n/academics/graduate\n/academics/undergraduate\n/academics/certificate\n/user\n/user/*\n"
-    negate: true
-    context_mapping: {  }
+visibility: {  }

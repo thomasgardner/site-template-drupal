@@ -1,42 +1,31 @@
 name: Santa Cruz
-description: "Custom sub-theme, inherits from the Foundation base theme read <a href=\"http://foundation.zurb.com/docs/index.php\">framework documentation</a>"
-core: 8.x
-core_version_requirement: ^8 || ^9
 type: theme
+description: Santa Cruz zurb theme.
+screenshot: screenshot.png
+core_version_requirement: ^8 || ^9
+core: 8.x
+
 base theme: zurb_foundation
 
-# Image appears on admin/appearance
-# screenshot: images/screenshot.jpg
-
-# Uncomment these lines and change "santa_cruz" to your theme name if you
-# need to add custom CSS or JS
 libraries:
- - santa_cruz/global
+  - santa_cruz/global
 
-# Regions are output in the page.html.twig
+libraries-override:
+  zurb_foundation/global: false
 
 regions:
-  header: Header
-  meta_header: 'Meta header'
-  help: Help
-  page_top: 'Page top'
-  page_bottom: 'Page bottom'
-  highlighted: Highlighted
-  content: Content
-  sidebar_first: 'Left sidebar'
-  sidebar_second: 'Right sidebar'
-  footer_first: 'Footer first column'
-  footer_middle: 'Footer middle column'
-  footer_last: 'Footer last column'
-  left_off_canvas: 'Left off canvas'
-  right_off_canvas: 'Right off canvas'
-regions_hidden:
-  page_top: 'Page top'
-  page_bottom: 'Page bottom'
-
-# Hidden regions
-# regions_hidden[]: Page top
-# regions_hidden[]: Page bottom
+  alerts: 'Alerts'
+  header: 'Header'
+  hero: 'Hero'
+  content_top: 'Content Top'
+  content: 'Content'
+  sidebar_left: 'Sidebar left'
+  sidebar_right: 'Sidebar right'
+  content_bottom: 'Content Bottom'
+  footer_top: 'Footer Top'
+  footer: 'Footer'
+  footer_bottom: 'Footer Bottom'
+  footer_copyright: 'Copyright'
 
 features:
   - slogan

@@ -181,11 +181,8 @@ theme:
   stable: 0
   classy: 0
   seven: 0
-  kwall: 0
-  kwall_subtheme_example: 0
   zurb_foundation: 0
   santa_cruz: 0
-  santa_cruz_subsite: 0
 profile: standard
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc

@@ -1,0 +1,13 @@
+//@import "node_modules/normalize-scss/sass/normalize/import-now";
+@import 'settings';
+@import 'foundation';
+@import "motion-ui";
+
+$flex: true;
+@include foundation-everything($flex);
+
+@import "global/variables";
+@import "tools/prototyping";
+@import "fonts/fontawesome";
+@import "fonts/solid";
+@import "components";

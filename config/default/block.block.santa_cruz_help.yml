@@ -1,4 +1,4 @@
-uuid: 21dcae5b-298c-435b-b297-bbcdbe65e544
+uuid: df6df3f1-b68c-4422-8843-d1f6be817cd6
 langcode: en
 status: true
 dependencies:
@@ -7,11 +7,11 @@ dependencies:
   theme:
     - santa_cruz
 _core:
-  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+  default_config_hash: C56E_bDHzcxDMshZXwecI-cVknewe__rAwYeLmla_wM
 id: santa_cruz_help
 theme: santa_cruz
 region: content
-weight: -13
+weight: -30
 provider: null
 plugin: help_block
 settings:

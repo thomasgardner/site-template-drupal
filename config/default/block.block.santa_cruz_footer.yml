@@ -1,35 +1,27 @@
-uuid: 425cf47d-9208-488d-809e-e776eca0d40a
+uuid: 6a250cf5-6a76-4589-804a-3743d5bba825
 langcode: en
 status: true
 dependencies:
   config:
     - system.menu.footer
   module:
-    - block_class
-    - menu_block
+    - system
   theme:
     - santa_cruz
-third_party_settings:
-  block_class:
-    classes: menu-inline
+_core:
+  default_config_hash: Xx6wRMs8VX0_djh4L2KXPUzC-k-yHkYRYHpaK5x7HyA
 id: santa_cruz_footer
 theme: santa_cruz
-region: header
-weight: -23
+region: alerts
+weight: -6
 provider: null
-plugin: 'menu_block:footer'
+plugin: 'system_menu_block:footer'
 settings:
-  id: 'menu_block:footer'
-  label: 'Discover <span>UC Santa Cruz</span>'
-  provider: menu_block
-  label_display: visible
-  follow: false
-  follow_parent: child
+  id: 'system_menu_block:footer'
+  label: 'Footer menu'
+  provider: system
+  label_display: '0'
   level: 1
   depth: 0
-  expand: false
-  parent: 'footer:'
-  suggestion: footer
-  label_type: block
-  label_link: 0
+  expand_all_items: false
 visibility: {  }

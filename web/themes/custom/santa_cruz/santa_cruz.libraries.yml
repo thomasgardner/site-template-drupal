@@ -1,7 +1,15 @@
 global:
   version: VERSION
   css:
-    base:
-      css/santa_cruz.css: {}
+    theme:
+      css/app.css: {}
   js:
-    js/santa_cruz.js: {}
+    js/scripts.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/jquery.once
+
+theme:
+  js:
+    js/theme.behaviour.js: {}

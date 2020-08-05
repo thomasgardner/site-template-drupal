@@ -1,21 +1,17 @@
-uuid: 7fe408a4-c09e-4e14-b4c1-6af739b61f25
+uuid: 20a3c0a0-b5b3-4fde-8a1f-1c284dc91a2b
 langcode: en
 status: true
 dependencies:
   module:
-    - block_class
     - system
   theme:
     - santa_cruz
-third_party_settings:
-  block_class:
-    classes: company-brand
 _core:
-  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+  default_config_hash: hXaAu73YeChkBnJ_uWW_ehlhZVTiu-nIMOAEU2mXsGk
 id: santa_cruz_branding
 theme: santa_cruz
 region: header
-weight: -22
+weight: -6
 provider: null
 plugin: system_branding_block
 settings:
@@ -24,6 +20,6 @@ settings:
   provider: system
   label_display: '0'
   use_site_logo: true
-  use_site_name: false
-  use_site_slogan: false
+  use_site_name: true
+  use_site_slogan: true
 visibility: {  }

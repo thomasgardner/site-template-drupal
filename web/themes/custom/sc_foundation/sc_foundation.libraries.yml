@@ -1,8 +1,0 @@
-global-styling:
-  css:
-    theme:
-      css/app.css: {}
-
-js-scripts:
-  js:
-    js/scripts.js: {}

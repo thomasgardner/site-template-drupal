@@ -1,48 +1,11 @@
 <?php
-
 /**
  * @file
- * Add your custom theme override functions here.
+ * Theme hooks for Radix.
  */
 
-/**
- * Implements hook_preprocess_block().
- */
-function santa_cruz_preprocess_block(&$variables) {
-}
-
-/**
- * Implements template_preprocess_field().
- */
-function santa_cruz_preprocess_field(&$variables, $hook) {
-}
-
-/**
- * Implements template_preprocess_html().
- *
- * Adds additional classes.
- */
-function santa_cruz_preprocess_html(&$variables) {
-}
-
-/**
- * Implements template_preprocess_node.
- *
- * Add template suggestions and classes.
- */
-function santa_cruz_preprocess_node(&$variables) {
-}
-
-/**
- * Implements template_preprocess_page.
- *
- * Add convenience variables and template suggestions.
- */
-function santa_cruz_preprocess_page(&$variables) {
-}
-
-/**
- * Implements template_preprocess_views_view().
- */
-function santa_cruz_preprocess_views_view(&$variables) {
+// Include all files from the includes directory.
+$includes_path = dirname(__FILE__) . '/includes/*.inc';
+foreach (glob($includes_path) as $filename) {
+  require_once dirname(__FILE__) . '/includes/' . basename($filename);
 }

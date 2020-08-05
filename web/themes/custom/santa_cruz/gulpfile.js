@@ -24,7 +24,7 @@ options.rootPath = {
 
 options.theme = {
   root       : options.rootPath.theme,
-  scss       : options.rootPath.theme + 'scss/',
+  scss       : options.rootPath.theme + 'assets/scss/',
   css        : options.rootPath.theme + 'css/'
 };
 
@@ -32,19 +32,12 @@ options.theme = {
 options.scss = {
   importer: importOnce,
   outputStyle: 'compressed',
-  lintIgnore: ['scss/_settings.scss', 'scss/base/_drupal.scss'],
+  lintIgnore: 'assets/scss/_settings.scss',
   includePaths: [
     options.rootPath.project + 'node_modules/foundation-sites/scss',
+    options.rootPath.project + 'node_modules/font-awesome/scss',
     options.rootPath.project + 'node_modules/motion-ui/src'
   ],
-};
-
-// Define which browsers to add vendor prefixes for.
-options.autoprefixer = {
-  browsers: [
-    'last 2 versions',
-    'ie >= 9'
-  ]
 };
 
 // If config.js exists, load that config and overriding the options object.
@@ -61,26 +54,16 @@ var scssFiles = [
 ];
 
 // The default task.
-gulp.task('default', ['build']);
+// gulp.task('default', ['build']);
 
-// Build everything.
-gulp.task('build', ['sass', 'drush:cc', 'lint']);
 
-// Default watch task.
-// @todo needs to add a javascript watch task.
-gulp.task('watch', ['watch:css']);
-
-// Watch for changes for scss files and rebuild.
-gulp.task('watch:css', ['sass', 'drush:cc', 'lint:sass'], function () {
-  return gulp.watch(options.theme.scss + '**/*.scss', options.gulpWatchOptions, ['sass', 'drush:cc', 'lint:sass']);
-});
 
 // Lint Sass and JavaScript.
 // @todo needs to add a javascript lint task.
-gulp.task('lint', ['lint:sass']);
+// gulp.task('lint', ['lint:sass']);
 
 // Build CSS for development environment.
-gulp.task('sass', ['clean:css'], function () {
+gulp.task('sass', function () {
   return gulp.src(scssFiles)
     .pipe($.sourcemaps.init())
     // Allow the options object to override the defaults for the task.
@@ -104,28 +87,9 @@ gulp.task('clean:css', function () {
   ], {force: true});
 });
 
-// Defines a task that triggers a Drush cache clear (css-js), you need to edit
-// config.js to be able to use this task.
-gulp.task('drush:cc', function () {
-  if (!options.drush.enabled) {
-    return;
-  }
-
-  return gulp.src('', {read: false})
-    .pipe($.shell([
-      options.drush.alias.css_js
-    ]));
-});
-
-// Lint Sass.
-gulp.task('lint:sass', function () {
-  return gulp.src(options.theme.scss + '**/*.scss')
-    // use gulp-cached to check only modified files.
-    .pipe($.sassLint({
-      files: {
-        include: $.cached('scsslint'),
-        ignore: options.scss.lintIgnore
-      }
-    }))
-    .pipe($.sassLint.format());
-});
+// Build everything.
+gulp.task('default',
+  gulp.series('clean:css',
+    gulp.parallel('sass')
+  )
+);
