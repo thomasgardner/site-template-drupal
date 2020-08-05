@@ -1,4 +1,4 @@
-uuid: f91d5d67-f817-48ee-9655-34de56811bf8
+uuid: b81bafcb-f2ea-46a9-8772-007aec3c8a7b
 langcode: en
 status: true
 dependencies:
@@ -6,16 +6,16 @@ dependencies:
     - block_class
     - system
   theme:
-    - santa_cruz
+    - santa_cruz_subsite
 third_party_settings:
   block_class:
     classes: search-title
 _core:
   default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
-id: santa_cruz_page_title
-theme: santa_cruz
+id: santa_cruz_subsite_page_title
+theme: santa_cruz_subsite
 region: content
-weight: -6
+weight: -14
 provider: null
 plugin: page_title_block
 settings:

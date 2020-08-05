@@ -1,0 +1,25 @@
+uuid: ba08734c-a6d8-4517-9afa-d72358460c9b
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:address:a65f1daf-db5f-4781-b59f-84e5ca8241b0'
+  module:
+    - block_content
+  theme:
+    - santa_cruz_subsite
+id: santa_cruz_subsite_testingaddressadvanced
+theme: santa_cruz_subsite
+region: header
+weight: -21
+provider: null
+plugin: 'block_content:a65f1daf-db5f-4781-b59f-84e5ca8241b0'
+settings:
+  id: 'block_content:a65f1daf-db5f-4781-b59f-84e5ca8241b0'
+  label: 'History Department | Humanities Division'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

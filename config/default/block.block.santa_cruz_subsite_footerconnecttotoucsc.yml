@@ -1,0 +1,31 @@
+uuid: c5dce1e1-e74f-4236-93ed-afbab2723488
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer---connect-to-to-ucsc
+  module:
+    - menu_block
+  theme:
+    - santa_cruz_subsite
+id: santa_cruz_subsite_footerconnecttotoucsc
+theme: santa_cruz_subsite
+region: header
+weight: -22
+provider: null
+plugin: 'menu_block:footer---connect-to-to-ucsc'
+settings:
+  id: 'menu_block:footer---connect-to-to-ucsc'
+  label: 'Connect <span>to UCSC</span>'
+  provider: menu_block
+  label_display: visible
+  follow: false
+  follow_parent: child
+  level: 1
+  depth: 0
+  expand: false
+  parent: 'footer---connect-to-to-ucsc:'
+  suggestion: footer___connect_to_to_ucsc
+  label_type: block
+  label_link: 0
+visibility: {  }
