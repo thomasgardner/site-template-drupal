@@ -44,7 +44,7 @@
  */
 #}
 <div id="page">
-  {% if page.header or page.gateway_header %}
+  {% if page.header or page.gateway_header or page.mobile_header %}
     <div data-sticky-container>
       <div id="page-header" role="navigation" class="page-header sticky" aria-expanded="false" aria-label="Page header"
            data-anchor="main-content" data-sticky data-margin-top='0'>
@@ -62,6 +62,9 @@
             </div>
           </div>
         {% endif %}
+        <div class="mobile-menu">
+          {% include '@santa_cruz/includes/static/mobile-menu.html.twig' %}
+        </div>
       </div>
     </div>
   {% endif %}
@@ -92,28 +95,24 @@
       {{ page.sidebar_second }}
     </div>
   {% endif %}
+  {% if page.content_bottom %}
+    <div class="component-wrapper">
+      {{ page.content_bottom }}
+    </div>
+  {% endif %}
   <div class="site-footer">
     <div class="grid-container large">
       {% if page.footer_first %}
         <div class="gateway-footer">
-          {{ page.footer_first }}
+            {{ page.footer_first }}
         </div>
       {% endif %}
       <div class="global-footer">
         {% if page.footer_middle %}
-          <div class="grid-x grid-margin-x grid-padding-x large-padding-collapse large-margin-collapse">
-            {{ page.footer_middle }}
-          </div>
+          {{ page.footer_middle }}
         {% endif %}
         {% if page.footer_last %}
-          <div class="grid-x grid-margin-x text-center mt-25">
-            {{ page.footer_last }}
-            {% if page.footer_copyright %}
-              <div class="nav-global cell">
-                {{ page.footer_copyright }}
-              </div>
-            {% endif %}
-          </div>
+          {{ page.footer_last }}
         {% endif %}
       </div>
     </div>

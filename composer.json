@@ -459,6 +459,7 @@
         "drupal/addtocalendar": "^3.1",
         "drupal/admin_toolbar": "^2.3",
         "drupal/advupdate": "^1.0",
+        "drupal/ala": "^1.5",
         "drupal/asset_injector": "^2.7",
         "drupal/auto_entitylabel": "^3.0",
         "drupal/backup_migrate": "^4.1",

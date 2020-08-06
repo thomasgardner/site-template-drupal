@@ -5,9 +5,13 @@ dependencies:
   config:
     - system.menu.footer---connect-to-to-ucsc
   module:
+    - block_class
     - menu_block
   theme:
     - santa_cruz
+third_party_settings:
+  block_class:
+    classes: 'cell large-4 nav-social'
 id: santa_cruz_footerconnecttotoucsc
 theme: santa_cruz
 region: footer_middle
@@ -25,7 +29,7 @@ settings:
   depth: 0
   expand: false
   parent: 'footer---connect-to-to-ucsc:'
-  suggestion: footer___connect_to_to_ucsc
+  suggestion: layout_footer
   label_type: block
   label_link: 0
 visibility: {  }

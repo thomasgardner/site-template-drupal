@@ -5,13 +5,17 @@ dependencies:
   content:
     - 'block_content:basic:f9654f63-c34c-42c2-94f1-38393f0d550f'
   module:
+    - block_class
     - block_content
   theme:
     - santa_cruz
+third_party_settings:
+  block_class:
+    classes: 'nav-global cell'
 id: copyright
 theme: santa_cruz
-region: footer_copyright
-weight: 0
+region: footer_last
+weight: -9
 provider: null
 plugin: 'block_content:f9654f63-c34c-42c2-94f1-38393f0d550f'
 settings:
