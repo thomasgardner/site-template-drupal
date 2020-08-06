@@ -1,17 +1,17 @@
-uuid: e4daea94-6dab-4cc7-8282-7ecf8ded20e4
+uuid: 16c44066-c1e3-4d63-a1eb-53ed009c42fc
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_links
+    - field.storage.paragraph.field_link_2
     - paragraphs.paragraphs_type.header_banner
   module:
     - link
-id: paragraph.header_banner.field_links
-field_name: field_links
+id: paragraph.header_banner.field_link_2
+field_name: field_link_2
 entity_type: paragraph
 bundle: header_banner
-label: Links
+label: 'Sub Header Link'
 description: ''
 required: false
 translatable: true

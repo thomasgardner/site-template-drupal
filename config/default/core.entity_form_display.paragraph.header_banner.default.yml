@@ -5,7 +5,8 @@ dependencies:
   config:
     - field.field.paragraph.header_banner.field_caption
     - field.field.paragraph.header_banner.field_head_title
-    - field.field.paragraph.header_banner.field_links
+    - field.field.paragraph.header_banner.field_link
+    - field.field.paragraph.header_banner.field_link_2
     - field.field.paragraph.header_banner.field_media
     - field.field.paragraph.header_banner.field_media_position
     - field.field.paragraph.header_banner.field_overlay_color
@@ -22,7 +23,7 @@ bundle: header_banner
 mode: default
 content:
   field_caption:
-    weight: 3
+    weight: 4
     settings:
       rows: 5
       placeholder: ''
@@ -30,15 +31,23 @@ content:
     type: string_textarea
     region: content
   field_head_title:
-    weight: 0
+    weight: 1
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_links:
-    weight: 4
+  field_link:
+    weight: 0
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_link_2:
+    weight: 5
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -47,32 +56,32 @@ content:
     region: content
   field_media:
     type: media_library_widget
-    weight: 2
+    weight: 3
     settings:
       media_types: {  }
     third_party_settings: {  }
     region: content
   field_media_position:
-    weight: 6
-    settings: {  }
-    third_party_settings: {  }
-    type: options_buttons
-    region: content
-  field_overlay_color:
-    weight: 5
-    settings:
-      default_colors: '#000000,#003C6C,#FDC702,#00FFFF'
-    third_party_settings: {  }
-    type: color_field_widget_box
-    region: content
-  field_theme_color:
     weight: 7
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
     region: content
+  field_overlay_color:
+    weight: 6
+    settings:
+      default_colors: '#FDC702,#003C6C,#006AAD,#007988,#546D1A,#13A5DB,#F29813'
+    third_party_settings: {  }
+    type: color_field_widget_box
+    region: content
+  field_theme_color:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
   field_title:
-    weight: 1
+    weight: 2
     settings:
       size: 60
       placeholder: ''
