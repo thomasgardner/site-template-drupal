@@ -7,45 +7,34 @@ dependencies:
     - field.field.paragraph.button_list_item.field_link
     - paragraphs.paragraphs_type.button_list_item
   module:
+    - ala
     - fences
-    - link
-    - options
 id: paragraph.button_list_item.default
 targetEntityType: paragraph
 bundle: button_list_item
 mode: default
 content:
-  field_button_list_color:
-    weight: 1
-    label: hidden
-    settings: {  }
-    third_party_settings:
-      fences:
-        fences_field_tag: none
-        fences_field_classes: ''
-        fences_field_item_tag: none
-        fences_field_item_classes: ''
-        fences_label_tag: none
-        fences_label_classes: ''
-    type: list_default
-    region: content
   field_link:
     weight: 0
     label: hidden
     settings:
-      trim_length: null
+      trim_length: ''
+      ala_link_view_class: element
+      ala_link_view_icon: inside
+      ala_link_view_roles: hide
       url_only: false
       url_plain: false
-      rel: '0'
-      target: '0'
+      rel: 0
+      target: 0
     third_party_settings:
       fences:
         fences_field_tag: none
-        fences_field_classes: ''
+        fences_field_classes: '[paragraph:field_button_list_color:value]'
         fences_field_item_tag: none
         fences_field_item_classes: ''
         fences_label_tag: none
         fences_label_classes: ''
-    type: link
+    type: ala
     region: content
-hidden: {  }
+hidden:
+  field_button_list_color: true
