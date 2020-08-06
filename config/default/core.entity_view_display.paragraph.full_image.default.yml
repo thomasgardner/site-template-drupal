@@ -10,16 +10,78 @@ dependencies:
     - field.field.paragraph.full_image.field_title
     - paragraphs.paragraphs_type.full_image
   module:
+    - ala
     - fences
-    - link
+    - field_group
+    - media
     - text
+third_party_settings:
+  field_group:
+    group_viewport:
+      children:
+        - group_caption
+        - group_container
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: 'hero-viewport inner-page'
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Viewport
+    group_caption:
+      children:
+        - field_subtitle
+        - field_body_formatted
+        - field_link
+      parent_name: group_viewport
+      weight: 6
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: 'hero-caption wow'
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Caption
+    group_container:
+      children:
+        - field_title
+        - field_image
+      parent_name: group_viewport
+      weight: 7
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: hero-container
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Container
 id: paragraph.full_image.default
 targetEntityType: paragraph
 bundle: full_image
 mode: default
 content:
   field_body_formatted:
-    weight: 3
+    weight: 4
     label: hidden
     settings: {  }
     third_party_settings:
@@ -33,23 +95,23 @@ content:
     type: text_default
     region: content
   field_image:
-    weight: 0
+    weight: 3
     label: hidden
     settings:
-      view_mode: default
-      link: false
+      image_style: ''
+      image_link: ''
     third_party_settings:
       fences:
-        fences_field_tag: none
-        fences_field_classes: ''
+        fences_field_tag: div
+        fences_field_classes: hero
         fences_field_item_tag: none
         fences_field_item_classes: ''
         fences_label_tag: none
         fences_label_classes: ''
-    type: entity_reference_entity_view
+    type: media_thumbnail
     region: content
   field_link:
-    weight: 4
+    weight: 5
     label: hidden
     settings:
       trim_length: null
@@ -57,6 +119,9 @@ content:
       url_plain: false
       rel: '0'
       target: '0'
+      ala_link_view_class: element
+      ala_link_view_icon: inside
+      ala_link_view_roles: hide
     third_party_settings:
       fences:
         fences_field_tag: none
@@ -65,17 +130,17 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: none
         fences_label_classes: ''
-    type: link
+    type: ala
     region: content
   field_subtitle:
-    weight: 2
+    weight: 3
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings:
       fences:
-        fences_field_tag: none
-        fences_field_classes: ''
+        fences_field_tag: h3
+        fences_field_classes: secondary-blue-text
         fences_field_item_tag: none
         fences_field_item_classes: ''
         fences_label_tag: none
@@ -83,16 +148,16 @@ content:
     type: string
     region: content
   field_title:
-    weight: 1
+    weight: 2
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings:
       fences:
-        fences_field_tag: none
-        fences_field_classes: ''
-        fences_field_item_tag: none
-        fences_field_item_classes: ''
+        fences_field_tag: div
+        fences_field_classes: 'header-wrapper content-centered'
+        fences_field_item_tag: h1
+        fences_field_item_classes: white-text
         fences_label_tag: none
         fences_label_classes: ''
     type: string

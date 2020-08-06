@@ -10,7 +10,7 @@ dependencies:
     - field.field.paragraph.full_image.field_title
     - paragraphs.paragraphs_type.full_image
   module:
-    - link
+    - ala
     - media_library
     - media_library_edit
     - text
@@ -41,8 +41,12 @@ content:
     settings:
       placeholder_url: ''
       placeholder_title: ''
+      ala_link_class_settings: global
+      ala_link_class: ''
+      ala_link_icon: 0
+      ala_link_roles: 0
     third_party_settings: {  }
-    type: link_default
+    type: ala_field_widget
     region: content
   field_subtitle:
     weight: 2
