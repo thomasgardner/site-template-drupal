@@ -9,15 +9,148 @@ dependencies:
     - field.field.paragraph.content_quote.field_link
     - paragraphs.paragraphs_type.content_quote
   module:
+    - ala
     - fences
-    - link
+    - field_group
+    - media
+third_party_settings:
+  field_group:
+    group_content_wrapper:
+      children:
+        - group_grid
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: 'quote wave-pattern blue'
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Content Wrapper'
+    group_grid:
+      children:
+        - group_inner_wrapper
+      parent_name: group_content_wrapper
+      weight: 20
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: 'grid-container large'
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Grid
+    group_inner_wrapper:
+      children:
+        - group_media
+        - group_content
+      parent_name: group_grid
+      weight: 20
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: inner
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Inner wrapper'
+    group_media:
+      children:
+        - field_image
+      parent_name: group_inner_wrapper
+      weight: 20
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: media
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Media
+    group_content:
+      children:
+        - group_blockquote
+        - field_link
+      parent_name: group_inner_wrapper
+      weight: 21
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: content
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Content
+    group_blockquote:
+      children:
+        - field_body_unformatted
+        - group_cite
+      parent_name: group_content
+      weight: 20
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        element: blockquote
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Blockquote
+    group_cite:
+      children:
+        - field_author
+      parent_name: group_blockquote
+      weight: 22
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        element: cite
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Cite
 id: paragraph.content_quote.default
 targetEntityType: paragraph
 bundle: content_quote
 mode: default
 content:
   field_author:
-    weight: 2
+    weight: 22
     label: hidden
     settings:
       link_to_entity: false
@@ -32,7 +165,7 @@ content:
     type: string
     region: content
   field_body_unformatted:
-    weight: 1
+    weight: 21
     label: hidden
     settings: {  }
     third_party_settings:
@@ -46,11 +179,11 @@ content:
     type: basic_string
     region: content
   field_image:
-    weight: 0
+    weight: 21
     label: hidden
     settings:
-      view_mode: default
-      link: false
+      image_style: ''
+      image_link: ''
     third_party_settings:
       fences:
         fences_field_tag: none
@@ -59,10 +192,10 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: none
         fences_label_classes: ''
-    type: entity_reference_entity_view
+    type: media_thumbnail
     region: content
   field_link:
-    weight: 3
+    weight: 23
     label: hidden
     settings:
       trim_length: null
@@ -70,6 +203,9 @@ content:
       url_plain: false
       rel: '0'
       target: '0'
+      ala_link_view_class: element
+      ala_link_view_icon: inside
+      ala_link_view_roles: hide
     third_party_settings:
       fences:
         fences_field_tag: none
@@ -78,6 +214,6 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: none
         fences_label_classes: ''
-    type: link
+    type: ala
     region: content
 hidden: {  }
