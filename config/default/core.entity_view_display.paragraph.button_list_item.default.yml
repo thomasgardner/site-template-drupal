@@ -7,7 +7,7 @@ dependencies:
     - field.field.paragraph.button_list_item.field_link
     - paragraphs.paragraphs_type.button_list_item
   module:
-    - ala
+    - custom_module
     - fences
 id: paragraph.button_list_item.default
 targetEntityType: paragraph
@@ -34,7 +34,7 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: none
         fences_label_classes: ''
-    type: ala
+    type: html_link
     region: content
 hidden:
   field_button_list_color: true
