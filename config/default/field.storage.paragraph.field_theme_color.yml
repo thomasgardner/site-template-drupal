@@ -17,6 +17,9 @@ settings:
     -
       value: alternative
       label: Alternative
+    -
+      value: black
+      label: Black
   allowed_values_function: ''
 module: options
 locked: false

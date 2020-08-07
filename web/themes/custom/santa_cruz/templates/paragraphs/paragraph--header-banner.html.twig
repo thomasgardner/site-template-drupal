@@ -39,14 +39,24 @@
  */
 #}
 
+{% set is_imabe_banner = false %}
+{% set is_video_banner = false %}
+{% if content.field_media[0]['#media'].field_media_image is not null %}
+  {% set is_imabe_banner = true %}
+  {% set image_url = file_url(content.field_media[0]['#media'].field_media_image.entity.uri.value|image_style('header_banner')) %}
+  {% set image_title = content.field_media[0]['#media'].field_media_image[0].title %}
+  {% set image_alt = content.field_media[0]['#media'].field_media_image[0].alt %}
+{% endif %}
+{% if content.field_media[0]['#media'].field_media_video_file is not null %}
+  {% set is_video_banner = true %}
+  {% set video_url = file_url(content.field_media[0]['#media'].field_media_video_file.entity.uri.value) %}
+{% endif %}
+
 {% set overlay_color = content.field_overlay_color[0]['#markup']|replace({'#': ''}) %}
 {% set media_position = content.field_media_position[0]['#markup'] %}
 {% set theme_color = content.field_theme_color[0]['#markup'] %}
-{% set image_url = file_url(content.field_media[0]['#media'].field_media_image.entity.uri.value|image_style('header_banner')) %}
-{% set image_title = content.field_media[0]['#media'].field_media_image[0].title %}
-{% set image_alt = content.field_media[0]['#media'].field_media_image[0].alt %}
 
-{# Allowed colours: #fdc702,#003C6C,#006aad,#007988,#546d1a,#13a5db,#f29813. #}
+{# Allowed colours: #fdc702,#003c6c,#006aad,#007988,#546d1a,#13a5db,#f29813. #}
 {% if overlay_color == 'fdc702' %}
   {% set overlay_color = 'yellow' %}
 {% elseif overlay_color == '003c6c' %}
@@ -78,8 +88,10 @@
   {% set theme_color = 'basic' %}
 {% elseif theme_color == 'Alternative' %}
   {% set theme_color = 'alternative' %}
+{% elseif theme_color == 'Black' %}
+  {% set theme_color = 'black' %}
 {% else %}
-  {% set theme_color = 'unknow' %}
+  {% set theme_color = 'black' %}
 {% endif %}
 
 {% set classes = [
@@ -105,13 +117,33 @@
   ] %}
 {% endif %}
 
+{% if theme_color == 'black' %}
+  {% set hero_header_classes = [
+    'hero-header'
+  ] %}
+{% endif %}
+
 {% block paragraph %}
   <section{{ attributes.addClass(classes) }} aria-label="content row">
     {% block content %}
       <div class="hero-container">
         <div id="hero" class="hero hero-text-{{ text_position }}">
           <div class="gradient-overlay"></div>
-          <img src="{{ image_url }}" title="{{ image_title }}" alt="{{ image_alt }}">
+          {% if is_imabe_banner == true %}
+            <img src="{{ image_url }}" title="{{ image_title }}" alt="{{ image_alt }}">
+          {% endif %}
+          {% if is_video_banner == true %}
+            <div class="hero-video">
+              <div class="hero-video-container">
+                <div id="muteYouTubeVideoPlayer">
+                  <video autoplay="autoplay" muted="muted" width="100%" height="750">
+                    <source src="{{ video_url }}" type="video/mp4">
+                    {{ 'Your browser does not support the video tag.'|t }}
+                  </video>
+                </div>
+              </div>
+            </div>
+          {% endif %}
           {% if content.field_link|field_value is not empty
             and content.field_link_2|field_value is empty
             and content.field_links|field_value is empty %}

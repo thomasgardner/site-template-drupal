@@ -12,7 +12,7 @@ field_name: field_theme_color
 entity_type: paragraph
 bundle: header_banner
 label: 'Theme Color'
-description: '<strong>Basic</strong>: with yellow title;<strong>Alternative</strong>: with white title.'
+description: '<strong>Basic</strong>: with yellow title; <strong>Alternative</strong>: with white title; <strong>Black</strong>: force black title.'
 required: true
 translatable: false
 default_value:
