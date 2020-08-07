@@ -49,7 +49,7 @@
 {# Allowed colours: #fdc702,#003C6C,#006aad,#007988,#546d1a,#13a5db,#f29813. #}
 {% if overlay_color == 'fdc702' %}
   {% set overlay_color = 'yellow' %}
-{% elseif overlay_color == '003C6C' %}
+{% elseif overlay_color == '003c6c' %}
   {% set overlay_color = 'blue' %}
 {% elseif overlay_color == '006aad' %}
   {% set overlay_color = 'secondary-blue' %}
@@ -92,25 +92,50 @@
   overlay_color
 ] %}
 
+{% set hero_header_attributes = create_attribute() %}
+{% set hero_header_classes = [
+  'hero-header',
+  theme_color == 'basic' ? 'yellow-text'
+] %}
+
+{% if overlay_color == 'yellow' or overlay_color == 'orange' %}
+  {% set hero_header_classes = [
+    'hero-header',
+    'blue-text'
+  ] %}
+{% endif %}
+
 {% block paragraph %}
-  <section{{ attributes.addClass(classes).addClass() }} aria-label="content row id-{{ paragraph.id() }}">
+  <section{{ attributes.addClass(classes) }} aria-label="content row">
     {% block content %}
       <div class="hero-container">
         <div id="hero" class="hero hero-text-{{ text_position }}">
           <div class="gradient-overlay"></div>
-          <img src="{{ image_url }}" title="{{ image_title }} alt={{ image_alt }}"/>
+          <img src="{{ image_url }}" title="{{ image_title }}" alt="{{ image_alt }}">
+          {% if content.field_link|field_value is not empty
+            and content.field_link_2|field_value is empty
+            and content.field_links|field_value is empty %}
           <a href="{{ content.field_link[0]['#url'] }}" class="hero-link"
              target="{{ content.field_link[0]['#url'].isExternal() ? '_blank' : '' }}">
+            {% endif %}
             <div class="angle transparent wow"></div>
             <div class="hero-text">
-              <div class="category">{{ content.field_head_title }}</div>
-              <h1
-                class="hero-header{% if theme_color == 'basic' %} yellow-text{% endif %}">{{ content.field_title }}</h1>
+              <div class="category">{{ content.field_head_title[0]['#context'].value }}</div>
+              <h1 {{ hero_header_attributes.addClass(hero_header_classes) }}>{{ content.field_title[0]['#context'].value }}</h1>
               <p class="hero-body">{{ content.field_caption[0]['#context'].value }}</p>
-              <h4 class="subhead"><a href="{{ content.field_link_2[0]['#url'] }}"
-                                     class="yellow-text">{{ content.field_link_2[0]['#title'] }}</a></h4>
+              {% if content.field_link_2|field_value is not empty %}
+                <h4 class="subhead"><a href="{{ content.field_link_2[0]['#url'] }}"
+                                       class="yellow-text">{{ content.field_link_2[0]['#title'] }}</a></h4>
+              {% endif %}
+              {% if content.field_links|field_value is not empty %}
+                {{ content.field_links }}
+              {% endif %}
             </div>
+            {% if content.field_link|field_value is not empty
+              and content.field_link_2|field_value is empty
+              and content.field_links|field_value is empty %}
           </a>
+          {% endif %}
         </div>
       </div>
     {% endblock %}

@@ -144,6 +144,7 @@ module:
   token: 0
   toolbar: 0
   tour: 0
+  twig_field_value: 0
   twig_link_attributes: 0
   twig_remove_html_comments: 0
   twig_tweak: 0

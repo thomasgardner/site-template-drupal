@@ -12,8 +12,8 @@ field_name: field_link
 entity_type: paragraph
 bundle: header_banner
 label: 'Banner Link'
-description: ''
-required: true
+description: 'In case, if the "Sub Header Link" or "Banner Link" is not empty, the value of "Banner Link" will be ignored.'
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''

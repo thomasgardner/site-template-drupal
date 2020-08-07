@@ -7,6 +7,7 @@ dependencies:
     - field.field.paragraph.header_banner.field_head_title
     - field.field.paragraph.header_banner.field_link
     - field.field.paragraph.header_banner.field_link_2
+    - field.field.paragraph.header_banner.field_links
     - field.field.paragraph.header_banner.field_media
     - field.field.paragraph.header_banner.field_media_position
     - field.field.paragraph.header_banner.field_overlay_color
@@ -24,14 +25,14 @@ bundle: header_banner
 mode: default
 content:
   field_caption:
-    weight: 7
+    weight: 9
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_head_title:
-    weight: 3
+    weight: 5
     label: hidden
     settings:
       link_to_entity: false
@@ -51,7 +52,7 @@ content:
     type: link
     region: content
   field_link_2:
-    weight: 8
+    weight: 1
     label: hidden
     settings:
       trim_length: 80
@@ -62,9 +63,28 @@ content:
     third_party_settings: {  }
     type: link
     region: content
+  field_links:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: link
+    region: content
   field_media:
     type: entity_reference_entity_view
-    weight: 5
+    weight: 7
     label: hidden
     settings:
       view_mode: header_banner
@@ -79,14 +99,14 @@ content:
         fences_label_classes: ''
     region: content
   field_media_position:
-    weight: 2
+    weight: 4
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_overlay_color:
-    weight: 1
+    weight: 3
     label: hidden
     settings:
       opacity: '1'
@@ -95,14 +115,14 @@ content:
     type: color_field_formatter_text
     region: content
   field_theme_color:
-    weight: 4
+    weight: 6
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_title:
-    weight: 6
+    weight: 8
     label: hidden
     settings:
       link_to_entity: false
