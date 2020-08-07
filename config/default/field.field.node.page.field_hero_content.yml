@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_hero_content
     - node.type.page
+    - paragraphs.paragraphs_type.feature_slideshow
     - paragraphs.paragraphs_type.header_banner
   module:
     - entity_reference_revisions
@@ -23,6 +24,7 @@ settings:
   handler_settings:
     negate: 0
     target_bundles:
+      feature_slideshow: feature_slideshow
       header_banner: header_banner
     target_bundles_drag_drop:
       2_column_cta:
@@ -103,12 +105,12 @@ settings:
       flexible_bg_image_blocks:
         weight: 73
         enabled: false
-      feature_slideshow:
-        weight: 74
-        enabled: false
       flexible_cta_block:
         weight: 74
         enabled: false
+      feature_slideshow:
+        enabled: true
+        weight: 74
       flexible_cta_blocks:
         weight: 75
         enabled: false
@@ -127,8 +129,14 @@ settings:
       gridder:
         weight: 79
         enabled: false
+      article_card:
+        weight: 80
+        enabled: false
       gridder_item:
         weight: 80
+        enabled: false
+      article_card_list:
+        weight: 81
         enabled: false
       grid_content_centered:
         weight: 81
@@ -198,5 +206,44 @@ settings:
         enabled: false
       wysiwyg:
         weight: 110
+        enabled: false
+      major_card:
+        weight: 117
+        enabled: false
+      major_card_list:
+        weight: 118
+        enabled: false
+      podcast_card:
+        weight: 120
+        enabled: false
+      podcast_card_list:
+        weight: 121
+        enabled: false
+      policy_card:
+        weight: 122
+        enabled: false
+      policy_card_list:
+        weight: 123
+        enabled: false
+      profile_card:
+        weight: 124
+        enabled: false
+      profile_card__fullwidth:
+        weight: 125
+        enabled: false
+      profile_list:
+        weight: 127
+        enabled: false
+      related_links_list:
+        weight: 135
+        enabled: false
+      ribbon_image:
+        weight: 136
+        enabled: false
+      step:
+        weight: 137
+        enabled: false
+      step_grid:
+        weight: 138
         enabled: false
 field_type: entity_reference_revisions

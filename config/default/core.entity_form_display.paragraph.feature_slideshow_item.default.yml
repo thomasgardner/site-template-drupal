@@ -9,7 +9,7 @@ dependencies:
     - field.field.paragraph.feature_slideshow_item.field_title
     - paragraphs.paragraphs_type.feature_slideshow_item
   module:
-    - link
+    - link_class
     - media_library
     - media_library_edit
 id: paragraph.feature_slideshow_item.default
@@ -30,8 +30,11 @@ content:
     settings:
       placeholder_url: ''
       placeholder_title: ''
+      link_class_mode: select_class
+      link_class_force: ''
+      link_class_select: "button primary large|Button Primary Large\r\nbutton secondary large|Button Secondary  Large"
     third_party_settings: {  }
-    type: link_default
+    type: link_class_field_widget
     region: content
   field_media:
     weight: 1

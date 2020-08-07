@@ -13,3 +13,12 @@ global:
 theme:
   js:
     js/theme.behaviour.js: {}
+
+owl_carousel2:
+  js:
+    /libraries/owl-carousel2/dist/owl.carousel.min.js:
+      minified: true
+  css:
+    component:
+      /libraries/owl-carousel2/dist/assets/owl.carousel.min.css:
+        minified: true
