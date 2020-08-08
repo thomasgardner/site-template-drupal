@@ -27,18 +27,20 @@
     attach: function (context, settings) {
       var $context = $(context);
 
-      $context.find('.owl-carousel', context).owlCarousel({
-        autoHeight: true,
-        nav: true,
-        dots: false,
-        responsive: {
-          0: {
-            items: 1
-          },
-          900: {
-            items: 2
+      $context.find('.owl-carousel').once('featureSlideshow').each(function () {
+        $(this).owlCarousel({
+          autoHeight: true,
+          nav: true,
+          dots: false,
+          responsive: {
+            0: {
+              items: 1
+            },
+            900: {
+              items: 2
+            }
           }
-        }
+        });
       });
     }
   };
