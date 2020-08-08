@@ -12,7 +12,7 @@ field_name: field_feature_image_display_mode
 entity_type: paragraph
 bundle: feature_image
 label: 'Feature Image Display Mode'
-description: ''
+description: 'Depends on "Display Mode" some fields can be visible or hidden.'
 required: true
 translatable: false
 default_value:
