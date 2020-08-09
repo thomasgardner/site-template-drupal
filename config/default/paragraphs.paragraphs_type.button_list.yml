@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 id: button_list
-label: 'Button List'
+label: 'Button Row'
 icon_uuid: null
 icon_default: null
 description: ''
