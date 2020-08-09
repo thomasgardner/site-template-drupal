@@ -378,7 +378,7 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          type: textfield
+          type: select
           limit: true
           vid: media_category
           hierarchy: false
@@ -515,6 +515,7 @@ display:
         - 'config:core.entity_view_display.media.event_teaser_image.default'
         - 'config:core.entity_view_display.media.event_teaser_image.media_library'
         - 'config:core.entity_view_display.media.file.default'
+        - 'config:core.entity_view_display.media.file.icon'
         - 'config:core.entity_view_display.media.file.media_library'
         - 'config:core.entity_view_display.media.flexible_bg_image_block.default'
         - 'config:core.entity_view_display.media.flexible_bg_image_block.media_library'
@@ -527,6 +528,10 @@ display:
         - 'config:core.entity_view_display.media.hero_slide_image.default'
         - 'config:core.entity_view_display.media.hero_slide_image.media_library'
         - 'config:core.entity_view_display.media.image.default'
+        - 'config:core.entity_view_display.media.image.header_banner'
+        - 'config:core.entity_view_display.media.image.inline_content_large'
+        - 'config:core.entity_view_display.media.image.inline_content_medium'
+        - 'config:core.entity_view_display.media.image.inline_content_small'
         - 'config:core.entity_view_display.media.image.media_library'
         - 'config:core.entity_view_display.media.inline_media.default'
         - 'config:core.entity_view_display.media.inline_media.media_library'
@@ -535,8 +540,16 @@ display:
         - 'config:core.entity_view_display.media.person_profile_image.default'
         - 'config:core.entity_view_display.media.person_profile_image.media_library'
         - 'config:core.entity_view_display.media.remote_video.default'
+        - 'config:core.entity_view_display.media.remote_video.header_banner'
+        - 'config:core.entity_view_display.media.remote_video.inline_content_large'
+        - 'config:core.entity_view_display.media.remote_video.inline_content_medium'
+        - 'config:core.entity_view_display.media.remote_video.inline_content_small'
         - 'config:core.entity_view_display.media.remote_video.media_library'
         - 'config:core.entity_view_display.media.video.default'
+        - 'config:core.entity_view_display.media.video.header_banner'
+        - 'config:core.entity_view_display.media.video.inline_content_large'
+        - 'config:core.entity_view_display.media.video.inline_content_medium'
+        - 'config:core.entity_view_display.media.video.inline_content_small'
         - 'config:core.entity_view_display.media.video.media_library'
   page:
     display_plugin: page
@@ -850,6 +863,7 @@ display:
         - 'config:core.entity_view_display.media.event_teaser_image.default'
         - 'config:core.entity_view_display.media.event_teaser_image.media_library'
         - 'config:core.entity_view_display.media.file.default'
+        - 'config:core.entity_view_display.media.file.icon'
         - 'config:core.entity_view_display.media.file.media_library'
         - 'config:core.entity_view_display.media.flexible_bg_image_block.default'
         - 'config:core.entity_view_display.media.flexible_bg_image_block.media_library'
@@ -862,6 +876,10 @@ display:
         - 'config:core.entity_view_display.media.hero_slide_image.default'
         - 'config:core.entity_view_display.media.hero_slide_image.media_library'
         - 'config:core.entity_view_display.media.image.default'
+        - 'config:core.entity_view_display.media.image.header_banner'
+        - 'config:core.entity_view_display.media.image.inline_content_large'
+        - 'config:core.entity_view_display.media.image.inline_content_medium'
+        - 'config:core.entity_view_display.media.image.inline_content_small'
         - 'config:core.entity_view_display.media.image.media_library'
         - 'config:core.entity_view_display.media.inline_media.default'
         - 'config:core.entity_view_display.media.inline_media.media_library'
@@ -870,8 +888,16 @@ display:
         - 'config:core.entity_view_display.media.person_profile_image.default'
         - 'config:core.entity_view_display.media.person_profile_image.media_library'
         - 'config:core.entity_view_display.media.remote_video.default'
+        - 'config:core.entity_view_display.media.remote_video.header_banner'
+        - 'config:core.entity_view_display.media.remote_video.inline_content_large'
+        - 'config:core.entity_view_display.media.remote_video.inline_content_medium'
+        - 'config:core.entity_view_display.media.remote_video.inline_content_small'
         - 'config:core.entity_view_display.media.remote_video.media_library'
         - 'config:core.entity_view_display.media.video.default'
+        - 'config:core.entity_view_display.media.video.header_banner'
+        - 'config:core.entity_view_display.media.video.inline_content_large'
+        - 'config:core.entity_view_display.media.video.inline_content_medium'
+        - 'config:core.entity_view_display.media.video.inline_content_small'
         - 'config:core.entity_view_display.media.video.media_library'
   widget:
     display_plugin: page
@@ -1127,7 +1153,7 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          type: textfield
+          type: select
           limit: true
           vid: media_category
           hierarchy: false
@@ -1223,6 +1249,7 @@ display:
         - 'config:core.entity_view_display.media.event_teaser_image.default'
         - 'config:core.entity_view_display.media.event_teaser_image.media_library'
         - 'config:core.entity_view_display.media.file.default'
+        - 'config:core.entity_view_display.media.file.icon'
         - 'config:core.entity_view_display.media.file.media_library'
         - 'config:core.entity_view_display.media.flexible_bg_image_block.default'
         - 'config:core.entity_view_display.media.flexible_bg_image_block.media_library'
@@ -1235,6 +1262,10 @@ display:
         - 'config:core.entity_view_display.media.hero_slide_image.default'
         - 'config:core.entity_view_display.media.hero_slide_image.media_library'
         - 'config:core.entity_view_display.media.image.default'
+        - 'config:core.entity_view_display.media.image.header_banner'
+        - 'config:core.entity_view_display.media.image.inline_content_large'
+        - 'config:core.entity_view_display.media.image.inline_content_medium'
+        - 'config:core.entity_view_display.media.image.inline_content_small'
         - 'config:core.entity_view_display.media.image.media_library'
         - 'config:core.entity_view_display.media.inline_media.default'
         - 'config:core.entity_view_display.media.inline_media.media_library'
@@ -1243,8 +1274,16 @@ display:
         - 'config:core.entity_view_display.media.person_profile_image.default'
         - 'config:core.entity_view_display.media.person_profile_image.media_library'
         - 'config:core.entity_view_display.media.remote_video.default'
+        - 'config:core.entity_view_display.media.remote_video.header_banner'
+        - 'config:core.entity_view_display.media.remote_video.inline_content_large'
+        - 'config:core.entity_view_display.media.remote_video.inline_content_medium'
+        - 'config:core.entity_view_display.media.remote_video.inline_content_small'
         - 'config:core.entity_view_display.media.remote_video.media_library'
         - 'config:core.entity_view_display.media.video.default'
+        - 'config:core.entity_view_display.media.video.header_banner'
+        - 'config:core.entity_view_display.media.video.inline_content_large'
+        - 'config:core.entity_view_display.media.video.inline_content_medium'
+        - 'config:core.entity_view_display.media.video.inline_content_small'
         - 'config:core.entity_view_display.media.video.media_library'
   widget_table:
     display_plugin: page
