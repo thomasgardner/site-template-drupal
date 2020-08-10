@@ -25,7 +25,7 @@ third_party_settings:
     unpublish_revision: false
   wysiwyg_template:
     default_template: ''
-name: Profile
+name: 'x. Profile'
 type: profile
 description: ''
 help: ''
