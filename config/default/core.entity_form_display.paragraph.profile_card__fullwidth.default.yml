@@ -3,22 +3,62 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.profile_card__fullwidth.field_node_ref
+    - field.field.paragraph.profile_card__fullwidth.field_body_formatted
+    - field.field.paragraph.profile_card__fullwidth.field_image
+    - field.field.paragraph.profile_card__fullwidth.field_link
+    - field.field.paragraph.profile_card__fullwidth.field_pre_title
+    - field.field.paragraph.profile_card__fullwidth.field_title
     - paragraphs.paragraphs_type.profile_card__fullwidth
+  module:
+    - link
+    - media_library
+    - media_library_edit
+    - text
 id: paragraph.profile_card__fullwidth.default
 targetEntityType: paragraph
 bundle: profile_card__fullwidth
 mode: default
 content:
-  field_node_ref:
+  field_body_formatted:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_image:
+    weight: 3
+    settings:
+      media_types: {  }
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
+    type: media_library_widget
+    region: content
+  field_link:
+    weight: 4
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_pre_title:
     weight: 0
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: string_textfield
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
 hidden:
   created: true
