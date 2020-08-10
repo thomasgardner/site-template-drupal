@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.paragraph.header_banner.field_caption
     - field.field.paragraph.header_banner.field_head_title
+    - field.field.paragraph.header_banner.field_image
     - field.field.paragraph.header_banner.field_link
     - field.field.paragraph.header_banner.field_link_2
     - field.field.paragraph.header_banner.field_links
@@ -25,7 +26,7 @@ bundle: header_banner
 mode: default
 content:
   field_caption:
-    weight: 9
+    weight: 10
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -38,6 +39,22 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_image:
+    weight: 8
+    label: hidden
+    settings:
+      view_mode: header_banner
+      link: false
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    type: entity_reference_entity_view
     region: content
   field_link:
     weight: 0
@@ -122,7 +139,7 @@ content:
     type: list_default
     region: content
   field_title:
-    weight: 8
+    weight: 9
     label: hidden
     settings:
       link_to_entity: false

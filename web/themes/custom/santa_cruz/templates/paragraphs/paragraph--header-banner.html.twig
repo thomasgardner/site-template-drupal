@@ -1,16 +1,26 @@
 {% set is_imabe_banner = false %}
-{% set is_video_banner = false %}
+{% set is_local_video_banner = false %}
+{% set is_remote_video_banner = false %}
 {% if content.field_media[0]['#media'].field_media_image is not null %}
   {% set is_imabe_banner = true %}
   {% set image_url = file_url(content.field_media[0]['#media'].field_media_image.entity.uri.value|image_style('header_banner')) %}
   {% set image_title = content.field_media[0]['#media'].field_media_image[0].title %}
   {% set image_alt = content.field_media[0]['#media'].field_media_image[0].alt %}
 {% endif %}
+{% if content.field_image[0]['#media'].field_media_image is not null %}
+  {% set backup_image_url = file_url(content.field_image[0]['#media'].field_media_image.entity.uri.value|image_style('header_banner')) %}
+  {% set backup_image_title = content.field_image[0]['#media'].field_media_image[0].title %}
+  {% set backup_image_alt = content.field_image[0]['#media'].field_media_image[0].alt %}
+{% endif %}
 {% if content.field_media[0]['#media'].field_media_video_file is not null %}
-  {% set is_video_banner = true %}
+  {% set is_local_video_banner = true %}
   {% set video_url = file_url(content.field_media[0]['#media'].field_media_video_file.entity.uri.value) %}
 {% endif %}
-
+{% if content.field_media[0]['#media'].field_media_oembed_video.value is not null %}
+  {% set is_remote_video_banner = true %}
+  {% set video_url = file_url(content.field_media[0]['#media'].field_media_oembed_video.value|replace({'watch?v=': 'embed/'})) %}
+  {% set domain = url('<front>')['#markup']|trim('/') %}
+{% endif %}
 {% set overlay_color = content.field_overlay_color[0]['#markup']|replace({'#': ''}) %}
 {% set media_position = content.field_media_position[0]['#markup'] %}
 {% set theme_color = content.field_theme_color[0]['#markup'] %}
@@ -91,17 +101,23 @@
           {% if is_imabe_banner == true %}
             <img src="{{ image_url }}" title="{{ image_title }}" alt="{{ image_alt }}">
           {% endif %}
-          {% if is_video_banner == true %}
+          {% if is_local_video_banner == true or is_remote_video_banner == true %}
             <div class="hero-video">
               <div class="hero-video-container">
-                <div id="muteYouTubeVideoPlayer">
+                {% if is_local_video_banner == true %}
                   <video autoplay="autoplay" muted="muted" width="100%" height="750">
                     <source src="{{ video_url }}" type="video/mp4">
                     {{ 'Your browser does not support the video tag.'|t }}
                   </video>
-                </div>
+                {% else %}
+                  <iframe id="muteYouTubeVideoPlayer" frameborder="0" allowfullscreen="1"
+                          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                          title="YouTube video player" width="640" height="360"
+                          src="{{ video_url }}?autoplay=1&amp;controls=0&amp;showinfo=0&amp;modestbranding=1&amp;loop=1&amp;fs=0&amp;cc_load_policy=0&amp;iv_load_policy=3&amp;autohide=0&amp;rel=0&amp;enablejsapi=1&amp;origin={{ domain|url_encode }}&amp;widgetid=1&amp;mute=1"></iframe>
+                {% endif %}
               </div>
             </div>
+            <img style="position: relative; top: 50%; margin-top: -10%" src="{{ backup_image_url }}" alt="{{ backup_image_alt }}" title="{{ backup_image_title }}">
           {% endif %}
           {% if content.field_link|field_value is not empty
             and content.field_link_2|field_value is empty
