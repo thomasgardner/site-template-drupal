@@ -3,29 +3,22 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.profile_list.field_view_reference
+    - field.field.paragraph.profile_list.field_paragraphs
     - paragraphs.paragraphs_type.profile_list
   module:
+    - entity_reference_revisions
     - fences
-    - viewsreference
 id: paragraph.profile_list.default
 targetEntityType: paragraph
 bundle: profile_list
 mode: default
 content:
-  field_view_reference:
+  field_paragraphs:
     weight: 0
     label: hidden
     settings:
-      plugin_types:
-        default: default
-        block: block
-        page: 0
-        attachment: 0
-        rest_export: 0
-        entity_browser: 0
-        feed: 0
-        embed: 0
+      view_mode: default
+      link: ''
     third_party_settings:
       fences:
         fences_field_tag: none
@@ -34,6 +27,6 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: none
         fences_label_classes: ''
-    type: viewsreference_formatter
+    type: entity_reference_revisions_entity_view
     region: content
 hidden: {  }

@@ -3,24 +3,26 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.profile_list.field_view_reference
+    - field.field.paragraph.profile_list.field_paragraphs
     - paragraphs.paragraphs_type.profile_list
   module:
-    - viewsreference
+    - paragraphs
 id: paragraph.profile_list.default
 targetEntityType: paragraph
 bundle: profile_list
 mode: default
 content:
-  field_view_reference:
+  field_paragraphs:
     weight: 0
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+      title: 'Profile Card'
+      title_plural: 'Profile Cards'
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: profile_card
     third_party_settings: {  }
-    type: viewsreference_autocomplete
+    type: entity_reference_paragraphs
     region: content
 hidden:
   created: true
