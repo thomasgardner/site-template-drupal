@@ -11,7 +11,7 @@
 ] %}
 
 {% block paragraph %}
-  <section{{ attributes.addClass(classes) }} aria-label="content row" style="max-width: 500px">
+  <section{{ attributes.addClass(classes) }} aria-label="content row">
     {% block content %}
       {% if content.field_link|field_value is not empty %}
         <a href="{{ content.field_link[0]['#url'] }}"
