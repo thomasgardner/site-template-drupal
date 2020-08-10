@@ -4,6 +4,7 @@ global:
     theme:
       css/app.css: {}
   js:
+    js/app/app.js: {}
     js/scripts.js: {}
   dependencies:
     - core/drupal

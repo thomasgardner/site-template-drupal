@@ -6,7 +6,6 @@
 (function ($, Drupal, drupalSettings) {
 
   'use strict';
-
   /**
    * Use for short things.
    *

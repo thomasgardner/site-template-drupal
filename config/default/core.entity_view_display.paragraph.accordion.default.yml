@@ -25,23 +25,13 @@ content:
       link: ''
     third_party_settings:
       fences:
-        fences_field_tag: none
-        fences_field_classes: ''
+        fences_field_tag: ul
+        fences_field_classes: accordion
         fences_field_item_tag: none
         fences_field_item_classes: ''
-        fences_label_tag: none
-        fences_label_classes: ''
+        fences_label_tag: li
+        fences_label_classes: accordion-item
     region: content
-  field_boolean:
-    type: boolean
-    weight: 2
-    region: content
-    label: hidden
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
   field_title:
     weight: 0
     label: hidden
@@ -49,8 +39,8 @@ content:
       link_to_entity: false
     third_party_settings:
       fences:
-        fences_field_tag: none
-        fences_field_classes: ''
+        fences_field_tag: div
+        fences_field_classes: docs-heading
         fences_field_item_tag: none
         fences_field_item_classes: ''
         fences_label_tag: none
@@ -58,4 +48,5 @@ content:
     type: string
     region: content
 hidden:
+  field_boolean: true
   field_toggle_all: true
