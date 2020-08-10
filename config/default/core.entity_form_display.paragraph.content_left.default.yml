@@ -9,7 +9,7 @@ dependencies:
     - field.field.paragraph.content_left.field_title
     - paragraphs.paragraphs_type.content_left
   module:
-    - ala
+    - link
     - text
 id: paragraph.content_left.default
 targetEntityType: paragraph
@@ -29,12 +29,8 @@ content:
     settings:
       placeholder_url: ''
       placeholder_title: ''
-      ala_link_class_settings: global
-      ala_link_class: ''
-      ala_link_icon: 0
-      ala_link_roles: 0
     third_party_settings: {  }
-    type: ala_field_widget
+    type: link_default
     region: content
   field_pre_title:
     weight: 0
