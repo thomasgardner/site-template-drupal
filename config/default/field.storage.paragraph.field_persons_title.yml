@@ -1,0 +1,21 @@
+uuid: e151cfd8-7a2d-404e-8709-f0999f8c7842
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_persons_title
+field_name: field_persons_title
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
