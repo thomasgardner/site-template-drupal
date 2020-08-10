@@ -1,22 +1,22 @@
-uuid: f39f7222-48bd-42f6-b1a3-f0d6e17b39ec
+uuid: 48667043-79e1-441d-9ce2-7a36f7e864d9
 langcode: en
-status: false
+status: true
 dependencies:
   module:
     - ctools_block
   theme:
     - santa_cruz
-id: santa_cruz_sidebarcontent
+id: sidebarcontent
 theme: santa_cruz
-region: content
-weight: -8
+region: sidebar_second
+weight: 0
 provider: null
 plugin: 'entity_field:node:field_sidebar_content'
 settings:
   id: 'entity_field:node:field_sidebar_content'
-  label: Quicklinks
+  label: 'Sidebar Content'
   provider: ctools_block
-  label_display: visible
+  label_display: '0'
   formatter:
     label: hidden
     type: entity_reference_revisions_entity_view

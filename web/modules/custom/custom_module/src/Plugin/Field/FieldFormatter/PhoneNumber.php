@@ -24,7 +24,7 @@ class PhoneNumber extends LinkFormatter {
    */
   public function settingsSummary() {
     $summary = [];
-    $summary[] = $this->t('Displays Phone Number in (555)555.5555');
+    $summary[] = $this->t('Displays Phone Number in (555) 555-5555.');
     return $summary;
   }
 
@@ -37,13 +37,14 @@ class PhoneNumber extends LinkFormatter {
 
     foreach ($items as $delta => $item) {
       if ($item->value) {
-        if(strlen($item->value) == 9) {
-          preg_match('/^(\d{3})(\d{3})(\d{3})$/', $item->value, $matches);
-          if($matches && count($matches) == 4) {
-            $phNum = '(' . $matches[1] . ') ' . $matches[2] . '-' .$matches[3];
+        if (strlen($item->value) == 10) {
+          preg_match('/^(\d{3})(\d{3})(\d{4})$/', $item->value, $matches);
+          if ($matches && count($matches) == 4) {
+            $phNum = '(' . $matches[1] . ') ' . $matches[2] . '-' . $matches[3];
             $element[$delta] = ['#markup' => $phNum];
           }
-        }else {
+        }
+        else {
           $element[$delta] = ['#markup' => $item->value];
         }
       }
@@ -51,4 +52,5 @@ class PhoneNumber extends LinkFormatter {
 
     return $element;
   }
+
 }
