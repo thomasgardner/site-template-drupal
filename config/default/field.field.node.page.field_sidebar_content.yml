@@ -6,6 +6,7 @@ dependencies:
     - field.storage.node.field_sidebar_content
     - node.type.page
     - paragraphs.paragraphs_type.cta_buttons
+    - paragraphs.paragraphs_type.profile_card
     - paragraphs.paragraphs_type.quick_link
     - paragraphs.paragraphs_type.quick_link_minimal
     - paragraphs.paragraphs_type.sidebar_button
@@ -30,6 +31,7 @@ settings:
       quick_link: quick_link
       cta_buttons: cta_buttons
       quick_link_minimal: quick_link_minimal
+      profile_card: profile_card
       sidebar_content_block: sidebar_content_block
       sidebar_button: sidebar_button
     target_bundles_drag_drop:
@@ -217,8 +219,8 @@ settings:
         weight: 124
         enabled: false
       profile_card:
+        enabled: true
         weight: 125
-        enabled: false
       profile_card_details_fields:
         weight: 126
         enabled: false

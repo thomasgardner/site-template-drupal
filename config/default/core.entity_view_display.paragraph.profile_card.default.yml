@@ -8,10 +8,12 @@ dependencies:
     - field.field.paragraph.profile_card.field_link
     - field.field.paragraph.profile_card.field_subtitle
     - field.field.paragraph.profile_card.field_title
+    - image.style.sidebar_profile
     - paragraphs.paragraphs_type.profile_card
   module:
     - fences
     - link
+    - media
 id: paragraph.profile_card.default
 targetEntityType: paragraph
 bundle: profile_card
@@ -35,8 +37,8 @@ content:
     weight: 4
     label: hidden
     settings:
-      view_mode: default
-      link: false
+      image_style: sidebar_profile
+      image_link: ''
     third_party_settings:
       fences:
         fences_field_tag: none
@@ -45,7 +47,7 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: none
         fences_label_classes: ''
-    type: entity_reference_entity_view
+    type: media_thumbnail
     region: content
   field_link:
     weight: 5
