@@ -9,7 +9,7 @@ dependencies:
     - field.field.paragraph.content_quote.field_link
     - paragraphs.paragraphs_type.content_quote
   module:
-    - ala
+    - custom_module
     - fences
     - field_group
     - media
@@ -203,9 +203,6 @@ content:
       url_plain: false
       rel: '0'
       target: '0'
-      ala_link_view_class: element
-      ala_link_view_icon: inside
-      ala_link_view_roles: hide
     third_party_settings:
       fences:
         fences_field_tag: none
@@ -214,6 +211,6 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: none
         fences_label_classes: ''
-    type: ala
+    type: ucsc_buttons_link
     region: content
 hidden: {  }
