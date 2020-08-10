@@ -3,22 +3,51 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.profile_card.field_node_ref
+    - field.field.paragraph.profile_card.field_email
+    - field.field.paragraph.profile_card.field_image
+    - field.field.paragraph.profile_card.field_subtitle
+    - field.field.paragraph.profile_card.field_title
     - paragraphs.paragraphs_type.profile_card
+  module:
+    - media_library
+    - media_library_edit
 id: paragraph.profile_card.default
 targetEntityType: paragraph
 bundle: profile_card
 mode: default
 content:
-  field_node_ref:
-    weight: 0
+  field_email:
+    weight: 2
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: email_default
+    region: content
+  field_image:
+    weight: 3
+    settings:
+      media_types: {  }
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
+    type: media_library_widget
+    region: content
+  field_subtitle:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
 hidden:
   created: true
