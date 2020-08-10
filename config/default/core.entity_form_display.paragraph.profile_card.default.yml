@@ -5,10 +5,12 @@ dependencies:
   config:
     - field.field.paragraph.profile_card.field_email
     - field.field.paragraph.profile_card.field_image
+    - field.field.paragraph.profile_card.field_link
     - field.field.paragraph.profile_card.field_subtitle
     - field.field.paragraph.profile_card.field_title
     - paragraphs.paragraphs_type.profile_card
   module:
+    - link
     - media_library
     - media_library_edit
 id: paragraph.profile_card.default
@@ -32,6 +34,14 @@ content:
       media_library_edit:
         show_edit: '1'
     type: media_library_widget
+    region: content
+  field_link:
+    weight: 4
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
     region: content
   field_subtitle:
     weight: 1
