@@ -6,5 +6,5 @@ id: sidebar_content_block_department
 label: 'Sidebar Content Block - Department Heads'
 icon_uuid: null
 icon_default: null
-description: ''
+description: 'Used in <i>Sidebar Content Block</i> paragraph.'
 behavior_plugins: {  }

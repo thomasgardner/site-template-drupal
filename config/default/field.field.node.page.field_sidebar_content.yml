@@ -8,6 +8,7 @@ dependencies:
     - paragraphs.paragraphs_type.cta_buttons
     - paragraphs.paragraphs_type.quick_link
     - paragraphs.paragraphs_type.quick_link_minimal
+    - paragraphs.paragraphs_type.sidebar_button
     - paragraphs.paragraphs_type.sidebar_content_block
   module:
     - entity_reference_revisions
@@ -30,6 +31,7 @@ settings:
       cta_buttons: cta_buttons
       quick_link_minimal: quick_link_minimal
       sidebar_content_block: sidebar_content_block
+      sidebar_button: sidebar_button
     target_bundles_drag_drop:
       2_column_cta:
         weight: 13
@@ -94,12 +96,12 @@ settings:
       recent_articles:
         weight: 43
         enabled: false
-      recent_articles_upcoming_events:
-        weight: 44
-        enabled: false
       quick_link_minimal:
         enabled: true
         weight: 44
+      recent_articles_upcoming_events:
+        weight: 44
+        enabled: false
       upcoming_events:
         weight: 45
         enabled: false
@@ -244,10 +246,16 @@ settings:
       step_grid:
         weight: 140
         enabled: false
+      sidebar_button:
+        enabled: true
+        weight: 140
       tabs_horizontal:
         weight: 141
         enabled: false
       tabs_horizontal_item:
+        weight: 142
+        enabled: false
+      sidebar_content_block_department:
         weight: 142
         enabled: false
       views:

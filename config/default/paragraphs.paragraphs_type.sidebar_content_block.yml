@@ -6,5 +6,5 @@ id: sidebar_content_block
 label: 'Sidebar Content Block'
 icon_uuid: null
 icon_default: null
-description: ''
+description: 'Modular sidebar with different contact info, links, locations and hours.'
 behavior_plugins: {  }
