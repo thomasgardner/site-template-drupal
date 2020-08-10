@@ -10,7 +10,7 @@ dependencies:
     - field.field.paragraph.full_image.field_title
     - paragraphs.paragraphs_type.full_image
   module:
-    - ala
+    - custom_module
     - fences
     - field_group
     - media
@@ -111,26 +111,16 @@ content:
     type: media_thumbnail
     region: content
   field_link:
-    weight: 5
-    label: hidden
+    weight: 8
+    label: above
     settings:
-      trim_length: null
+      trim_length: 80
       url_only: false
       url_plain: false
-      rel: '0'
-      target: '0'
-      ala_link_view_class: element
-      ala_link_view_icon: inside
-      ala_link_view_roles: hide
-    third_party_settings:
-      fences:
-        fences_field_tag: none
-        fences_field_classes: ''
-        fences_field_item_tag: none
-        fences_field_item_classes: ''
-        fences_label_tag: none
-        fences_label_classes: ''
-    type: ala
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: ucsc_buttons_link
     region: content
   field_subtitle:
     weight: 3
