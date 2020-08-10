@@ -35,14 +35,14 @@ bundle: sidebar_content_block
 mode: default
 content:
   field_address:
-    weight: 12
+    weight: 13
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: address_plain
     region: content
   field_day_time_range:
-    weight: 4
+    weight: 6
     label: hidden
     settings:
       link_to_entity: false
@@ -50,7 +50,7 @@ content:
     type: string
     region: content
   field_department:
-    weight: 16
+    weight: 12
     label: hidden
     settings:
       link: false
@@ -65,7 +65,7 @@ content:
     type: entity_reference_label
     region: content
   field_division_link:
-    weight: 13
+    weight: 15
     label: hidden
     settings:
       trim_length: 80
@@ -77,21 +77,6 @@ content:
     type: link
     region: content
   field_division_title:
-    weight: 17
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_email:
-    weight: 15
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: email_mailto
-    region: content
-  field_email_title:
     weight: 14
     label: hidden
     settings:
@@ -99,8 +84,23 @@ content:
     third_party_settings: {  }
     type: string
     region: content
+  field_email:
+    weight: 17
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: email_mailto
+    region: content
+  field_email_title:
+    weight: 16
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   field_faxes:
-    weight: 6
+    weight: 10
     label: hidden
     settings:
       trim_length: '80'
@@ -112,7 +112,7 @@ content:
     type: phone_number_formatter
     region: content
   field_faxes_title:
-    weight: 10
+    weight: 9
     label: hidden
     settings:
       link_to_entity: false
@@ -120,7 +120,7 @@ content:
     type: string
     region: content
   field_link:
-    weight: 3
+    weight: 4
     label: hidden
     settings:
       trim_length: 80
@@ -132,7 +132,7 @@ content:
     type: link
     region: content
   field_location_text:
-    weight: 2
+    weight: 3
     label: hidden
     settings:
       link_to_entity: false
@@ -140,7 +140,7 @@ content:
     type: string
     region: content
   field_location_title:
-    weight: 7
+    weight: 2
     label: hidden
     settings:
       link_to_entity: false
@@ -156,7 +156,7 @@ content:
     type: string
     region: content
   field_office_hours_title:
-    weight: 8
+    weight: 5
     label: hidden
     settings:
       link_to_entity: false
@@ -184,11 +184,18 @@ content:
     label: hidden
     settings:
       link_to_entity: false
-    third_party_settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: h5
+        fences_field_classes: blue-text
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
     type: string
     region: content
   field_phones:
-    weight: 5
+    weight: 8
     label: hidden
     settings:
       trim_length: '80'
@@ -200,7 +207,7 @@ content:
     type: phone_number_formatter
     region: content
   field_phones_title:
-    weight: 9
+    weight: 7
     label: hidden
     settings:
       link_to_entity: false

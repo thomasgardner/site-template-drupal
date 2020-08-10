@@ -1,0 +1,137 @@
+{% set classes = [
+  'paragraph',
+  'paragraph--type--' ~ paragraph.bundle|clean_id,
+  'paragraph--id--' ~ paragraph.id()|clean_id,
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_id,
+  not paragraph.isPublished() ? 'paragraph--unpublished'
+] %}
+
+{% block paragraph %}
+  <section{{ attributes.addClass(classes) }} aria-label="content row">
+    {% block content %}
+
+      {% if content.field_persons_title|field_value is not empty
+        or content.field_paragraphs|field_value is not empty %}
+        <div class="section">
+          {% if content.field_persons_title|field_value is not empty %}
+            <h5 class="blue-text">{{ content.field_persons_title[0]['#context'].value }}:</h5>
+          {% endif %}
+          {% if content.field_paragraphs|field_value is not empty %}
+            {{ content.field_paragraphs }}
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% if content.field_location_title|field_value is not empty
+        or content.field_location_text|field_value is not empty %}
+        <div class="section">
+          {% if content.field_location_title|field_value is not empty %}
+            <h5 class="blue-text">{{ content.field_location_title[0]['#context'].value }}:</h5>
+          {% endif %}
+          {% if content.field_location_text|field_value is not empty %}
+            <div
+              class="field-wrapper text-content field field--name-location-text field--type-link field--label-hidden field__items">
+              {{ content.field_location_text[0]['#context'].value }}
+              {% if content.field_link|field_value is not empty %}
+                <a href="{{ content.field_link[0]['#url'] }}"
+                   class="btn-link">{{ 'map'|t }} <i class="fas fa-map"></i></a>
+              {% endif %}
+            </div>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% if content.field_office_hours_title|field_value is not empty
+        or content.field_day_time_range|field_value is not empty %}
+        <div class="section">
+          {% if content.field_office_hours_title|field_value is not empty %}
+            <h5 class="blue-text">{{ content.field_office_hours_title[0]['#context'].value }}:</h5>
+          {% endif %}
+
+          {% if content.field_day_time_range|field_value is not empty %}
+            {{ content.field_day_time_range }}
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% if content.field_phones_title|field_value is not empty
+        or content.field_phones|field_value is not empty %}
+        <div class="section">
+          {% if content.field_phones_title|field_value is not empty %}
+            <h5 class="blue-text">{{ content.field_phones_title[0]['#context'].value }}:</h5>
+          {% endif %}
+
+          {% if content.field_phones|field_value is not empty %}
+            {{ content.field_phones }}
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% if content.field_faxes_title|field_value is not empty
+        or content.field_faxes|field_value is not empty %}
+        <div class="section">
+          {% if content.field_faxes_title|field_value is not empty %}
+            <h5 class="blue-text">{{ content.field_faxes_title[0]['#context'].value }}:</h5>
+          {% endif %}
+
+          {% if content.field_faxes|field_value is not empty %}
+            {{ content.field_faxes }}
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% if content.field_mailing_address_title|field_value is not empty
+        or content.field_department|field_value is not empty
+        or content.field_address|field_value is not empty %}
+        <div class="section">
+          {% if content.field_mailing_address_title|field_value is not empty %}
+            <h5 class="blue-text">{{ content.field_mailing_address_title[0]['#context'].value }}:</h5>
+          {% endif %}
+
+          {% if content.field_department|field_value is not empty %}
+            {{ content.field_department }}
+          {% endif %}
+
+          {% if content.field_address|field_value is not empty %}
+            {{ content.field_address }}
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% if content.field_division_title|field_value is not empty
+        or content.field_division_link|field_value is not empty %}
+        <div class="section">
+          {% if content.field_division_title|field_value is not empty %}
+            <h5 class="blue-text">{{ content.field_division_title[0]['#context'].value }}:</h5>
+          {% endif %}
+
+          {% if content.field_division_link|field_value is not empty %}
+            <a href="{{ content.field_division_link[0]['#url'] }}"
+               class="btn-link">{{ content.field_division_link[0]['#title'] }}</a>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% if content.field_email_title|field_value is not empty
+        or content.field_email|field_value is not empty %}
+        <div class="section">
+          {% if content.field_email_title|field_value is not empty %}
+            <h5 class="blue-text">{{ content.field_email_title[0]['#context'].value }}:</h5>
+          {% endif %}
+
+          {% if content.field_email|field_value is not empty %}
+            <a href="{{ content.field_email[0]['#url'] }}"
+               class="btn-link">{{ content.field_email[0]['#title'] }}</a>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% if content.field_other_information|field_value is not empty %}
+        <div class="section">
+          {{ content.field_other_information }}
+        </div>
+      {% endif %}
+
+    {% endblock %}
+  </section>
+{% endblock paragraph %}
