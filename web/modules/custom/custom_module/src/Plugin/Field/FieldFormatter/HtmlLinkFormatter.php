@@ -28,6 +28,11 @@ class HtmlLinkFormatter extends AdvanceLinkFormatter {
 
     foreach ($elements as &$element) {
       $element['#title'] = Markup::create($element['#title']);
+
+      if (array_key_exists('class', $element['#options']) &&
+        empty($element['#options']['class'])) {
+        $element['#options']['attributes']['class'] = ['button', 'black'];
+      }
     }
 
     return $elements;
