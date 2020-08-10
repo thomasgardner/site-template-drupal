@@ -7,25 +7,26 @@ dependencies:
     - field.field.paragraph.button_list_item.field_link
     - paragraphs.paragraphs_type.button_list_item
   module:
-    - ala
+    - link
 id: paragraph.button_list_item.default
 targetEntityType: paragraph
 bundle: button_list_item
 mode: default
 content:
+  field_button_list_color:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_link:
     weight: 0
     settings:
       placeholder_url: ''
       placeholder_title: ''
-      ala_link_class_settings: custom
-      ala_link_class: "button black|Black\r\nbutton green|Green\r\nbutton magenta|Magenta\r\nbutton orange|Orange"
-      ala_link_icon: 0
-      ala_link_roles: 0
     third_party_settings: {  }
-    type: ala_field_widget
+    type: link_default
     region: content
 hidden:
   created: true
-  field_button_list_color: true
   status: true

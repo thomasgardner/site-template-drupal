@@ -18,14 +18,11 @@ content:
     weight: 0
     label: hidden
     settings:
-      trim_length: ''
-      ala_link_view_class: element
-      ala_link_view_icon: inside
-      ala_link_view_roles: hide
+      trim_length: null
       url_only: false
       url_plain: false
-      rel: 0
-      target: 0
+      rel: '0'
+      target: '0'
     third_party_settings:
       fences:
         fences_field_tag: none
@@ -34,7 +31,7 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: none
         fences_label_classes: ''
-    type: html_link
+    type: color_buttons_link
     region: content
 hidden:
   field_button_list_color: true
