@@ -5,9 +5,12 @@ dependencies:
   config:
     - field.field.paragraph.step.field_caption
     - field.field.paragraph.step.field_image
+    - field.field.paragraph.step.field_link
+    - field.field.paragraph.step.field_title
     - paragraphs.paragraphs_type.step
   module:
     - fences
+    - link
 id: paragraph.step.default
 targetEntityType: paragraph
 bundle: step
@@ -31,7 +34,8 @@ content:
     weight: 0
     label: hidden
     settings:
-      link: true
+      view_mode: default
+      link: false
     third_party_settings:
       fences:
         fences_field_tag: none
@@ -40,6 +44,40 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: none
         fences_label_classes: ''
-    type: entity_reference_label
+    type: entity_reference_entity_view
+    region: content
+  field_link:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: link
+    region: content
+  field_title:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: string
     region: content
 hidden: {  }
