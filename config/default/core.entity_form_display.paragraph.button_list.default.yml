@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.button_list.field_paragraphs
+    - field.field.paragraph.button_list.field_paragraphs__max_4
     - paragraphs.paragraphs_type.button_list
   module:
     - paragraphs
@@ -12,9 +12,9 @@ targetEntityType: paragraph
 bundle: button_list
 mode: default
 content:
-  field_paragraphs:
+  field_paragraphs__max_4:
     type: entity_reference_paragraphs
-    weight: 1
+    weight: 0
     settings:
       title: Button
       title_plural: Buttons
