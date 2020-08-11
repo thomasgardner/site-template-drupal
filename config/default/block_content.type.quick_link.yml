@@ -3,6 +3,6 @@ langcode: en
 status: true
 dependencies: {  }
 id: quick_link
-label: 'Quick Links'
+label: 'Zzz - Quick Links'
 revision: 1
 description: 'Use <em>Quick Links</em> for section based quick links.'
