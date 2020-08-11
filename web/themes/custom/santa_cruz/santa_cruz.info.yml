@@ -17,6 +17,8 @@ regions:
   alerts: 'Alerts'
   header: 'Header'
   gateway_header: 'Gateway Header'
+  subsite_header: 'Subsite Header'
+  subsite_brand_name: 'Subsite Brand Name'
   hero: 'Hero'
   content_top: 'Content Top'
   content: 'Content'
