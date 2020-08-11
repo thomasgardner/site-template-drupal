@@ -19,6 +19,7 @@ regions:
   gateway_header: 'Gateway Header'
   subsite_header: 'Subsite Header'
   subsite_brand_name: 'Subsite Brand Name'
+  page_utilities: 'Page Utilities'
   hero: 'Hero'
   content_top: 'Content Top'
   content: 'Content'

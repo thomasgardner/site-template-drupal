@@ -10,8 +10,8 @@ _core:
   default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
 id: santa_cruz_breadcrumbs
 theme: santa_cruz
-region: content
-weight: -10
+region: page_utilities
+weight: -13
 provider: null
 plugin: system_breadcrumb_block
 settings:

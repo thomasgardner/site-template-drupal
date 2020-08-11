@@ -9,7 +9,7 @@ _core:
 id: santa_cruz_local_tasks
 theme: santa_cruz
 region: content
-weight: -7
+weight: -11
 provider: null
 plugin: local_tasks_block
 settings:
