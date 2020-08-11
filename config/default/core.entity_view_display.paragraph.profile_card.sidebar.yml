@@ -1,8 +1,9 @@
-uuid: 27510c6a-cf48-49bf-9614-7fe78ab1811f
+uuid: 0e04fe6f-d0c3-454c-af78-4b23ea0b9652
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.paragraph.sidebar
     - field.field.paragraph.profile_card.field_email
     - field.field.paragraph.profile_card.field_image
     - field.field.paragraph.profile_card.field_link
@@ -14,10 +15,10 @@ dependencies:
     - fences
     - link
     - media
-id: paragraph.profile_card.default
+id: paragraph.profile_card.sidebar
 targetEntityType: paragraph
 bundle: profile_card
-mode: default
+mode: sidebar
 content:
   field_email:
     weight: 3

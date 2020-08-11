@@ -1,0 +1,21 @@
+uuid: 3f19cbdb-2923-4cdb-98f0-dac8b621b8c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_phones_title
+    - paragraphs.paragraphs_type.sidebar_content_block
+id: paragraph.sidebar_content_block.field_phones_title
+field_name: field_phones_title
+entity_type: paragraph
+bundle: sidebar_content_block
+label: 'Phones Title'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: Phone
+default_value_callback: ''
+settings: {  }
+field_type: string

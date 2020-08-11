@@ -24,39 +24,34 @@
  *   - country: The country.
  *     - country.code: Country code.
  *     - country.name: Country name.
- *   - address: An object that implements \Drupal\address\AddressInterface
- *     representing the address to be rendered. Only public methods can be used.
- *   - view_mode: View mode of the entity being rendered that this address field
- *     is attached to. For example, "teaser" or "full".
  *
  * if a subdivision (dependent_locality, locality, administrative_area) was
  * entered, the array will always have a code. If it's a predefined subdivision,
- * it will also have a name. The code is always preferred.
+ * it will also have a name. The code is always prefered.
  *
  * @ingroup themeable
  */
 #}
 <p class="address" translate="no">
   {% if given_name or family_name %}
-    {{ given_name }} {{ family_name }}
+    {{ given_name }} {{ family_name }},
   {% endif %}
   {% if organization %}
-    {{ organization }}
+    {{ organization }},
   {% endif %}
   {% if address_line1 %}
-    {{ address_line1 }}
+    {{ address_line1 }}{% if address_line2 or locality.name or dependent_locality.code or locality.code or postal_code or administrative_area.code %},{% endif %}
   {% endif %}
   {% if address_line2 %}
-    {{ address_line2 }}
+    {{ address_line2 }}{% if locality.name or dependent_locality.code or locality.code or postal_code or administrative_area.code %},{% endif %}
   {% endif %}
   {% if locality.name %}
-    {{ locality.name }}
+    {{ locality.name }}{% if dependent_locality.code or locality.code or postal_code or administrative_area.code %},{% endif %}
   {% endif %}
   {% if dependent_locality.code %}
-    {{ dependent_locality.code }}
+    {{ dependent_locality.code }},
   {% endif %}
   {% if locality.code or postal_code or administrative_area.code %}
     {{ locality.code }} {{ postal_code }} {{ administrative_area.code }}
   {% endif %}
-  {{ country.name }}
 </p>

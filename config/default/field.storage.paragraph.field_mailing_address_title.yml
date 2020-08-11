@@ -1,0 +1,21 @@
+uuid: 1ecef12d-5f13-4fd8-8e11-c71d18973516
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_mailing_address_title
+field_name: field_mailing_address_title
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

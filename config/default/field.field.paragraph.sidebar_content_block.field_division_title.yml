@@ -1,0 +1,21 @@
+uuid: 1f849ee1-d0e0-49aa-8fb4-42f5c80f5348
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_division_title
+    - paragraphs.paragraphs_type.sidebar_content_block
+id: paragraph.sidebar_content_block.field_division_title
+field_name: field_division_title
+entity_type: paragraph
+bundle: sidebar_content_block
+label: 'Division Title'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: Division
+default_value_callback: ''
+settings: {  }
+field_type: string
