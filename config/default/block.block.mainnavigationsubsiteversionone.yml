@@ -24,9 +24,9 @@ settings:
   follow_parent: child
   level: 1
   depth: 0
-  expand: false
+  expand: true
   parent: 'main-navigation-subsite-version1:'
-  suggestion: main_navigation_subsite_version1
+  suggestion: dropdown
   label_type: block
   label_link: 0
 visibility:
