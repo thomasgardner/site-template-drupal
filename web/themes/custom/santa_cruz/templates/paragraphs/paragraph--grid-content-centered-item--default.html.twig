@@ -22,7 +22,8 @@
   {% endif %}
 
   {# Opening head tag. #}
-  <{{ content.field_heading_level|field_value }} class="title">
+  <{{ content.field_heading_level|field_value }}
+  class="{% if content.field_heading_level|field_value == "h2" %} title {% else %} underline {% endif %}">
   {% if content.field_title|field_value is not empty %}
 
     {# Link head tag if exist. #}
@@ -40,7 +41,7 @@
 </{{ content.field_heading_level|field_value }}>
 
 {% if content.field_body_unformatted|field_value is not empty %}
-  {{ content.field_body_unformatted|field_value }}
+  <p>{{ content.field_body_unformatted|field_value }}</p>
 {% endif %}
 
 {# As values are not more than 2 so put them static here. #}
@@ -48,8 +49,10 @@
   <p>
     <a class="button primary"
        href="{{ content.field_links__max_2[0]['#url'] }}">{{ content.field_links__max_2[0]['#title'] }}</a>
-    <a class="button primary"
-       href="{{ content.field_links__max_2[1]['#url'] }}">{{ content.field_links__max_2[1]['#title'] }}</a>
+    {% if content.field_links__max_2[1]['#title'] %}
+      <a class="button primary"
+         href="{{ content.field_links__max_2[1]['#url'] }}">{{ content.field_links__max_2[1]['#title'] }}</a>
+    {% endif %}
   </p>
 {% endif %}
 
