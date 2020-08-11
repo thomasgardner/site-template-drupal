@@ -9,7 +9,7 @@ dependencies:
 id: santa_cruz_sidebarcontent
 theme: santa_cruz
 region: content
-weight: -8
+weight: -7
 provider: null
 plugin: 'entity_field:node:field_sidebar_content'
 settings:

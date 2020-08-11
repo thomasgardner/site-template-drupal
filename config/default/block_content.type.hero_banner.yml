@@ -3,6 +3,6 @@ langcode: en
 status: true
 dependencies: {  }
 id: hero_banner
-label: 'Hero banner'
+label: 'Zzz - Hero banner'
 revision: 1
 description: 'Hero banner for certain pages'
