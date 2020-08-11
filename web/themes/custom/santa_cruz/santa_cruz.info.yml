@@ -18,6 +18,8 @@ regions:
   header: 'Header'
   gateway_header: 'Gateway Header'
   subsite_header: 'Subsite Header'
+  subsite_header_filter_featured: 'Subsite Header Fileter Featured'
+  subsite_header_filter_normal: 'Subsite Header Fileter Normal'
   subsite_brand_name: 'Subsite Brand Name'
   page_utilities: 'Page Utilities'
   hero: 'Hero'

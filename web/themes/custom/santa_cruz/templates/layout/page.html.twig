@@ -65,7 +65,7 @@
         <div class="mobile-menu">
           {% include '@santa_cruz/includes/static/mobile-menu.html.twig' %}
         </div>
-        {% if page.subsite_header or page.subsite_brand_name %}
+        {% if page.subsite_header or page.subsite_brand_name or page.subsite_header_filter_featured or page.subsite_header_filter_normal %}
           <div class="subsite-header">
             <div class="grid-container large show-for-large">
               <div class="grid-x grid-margin-x align-bottom">
@@ -91,17 +91,40 @@
                 </div>
               </div>
             </div>
+            {% if page.subsite_header_filter_featured or page.subsite_header_filter_normal %}
+              <div class="filter-box full-width" id="filter-form" data-toggler data-animate="fade-in fade-out">
+                <div class="grid-container">
+                  <a href="javascript:void(0)" class="close-modal" data-toggle="filter-form">
+                    <i class="fas fa-close"></i>
+                  </a>
+                  <div class="grid-x grid-margin-x">
+                    {% if page.subsite_header_filter_featured %}
+                      {{ page.subsite_header_filter_featured }}
+                    {% endif %}
+                    {% if page.subsite_header_filter_normal %}
+                      <div class="large-9 cell">
+                        <div class="grid-container">
+                          <div class="grid-x grid-margin-x">
+                            {{ page.subsite_header_filter_normal }}
+                          </div>
+                        </div>
+                      </div>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+            {% endif %}
           </div>
         {% endif %}
       </div>
     </div>
   {% endif %}
   {% if page.page_utilities %}
-  <div class="page-utilities">
-    <div class="grid-container large">
-    {{ page.page_utilities }}
+    <div class="page-utilities">
+      <div class="grid-container large">
+        {{ page.page_utilities }}
+      </div>
     </div>
-  </div>
   {% endif %}
   {% if page.hero %}
     {{ page.hero }}
