@@ -57,10 +57,6 @@
             <h2 class="underline">{{ content.field_title }}</h2>
           {% endif %}
 
-          {% if field__media_position_rawvalue == "right" %}
-            <h5 style="font-weight: 500">Ten Colleges = One University</h5>
-          {% endif %}
-
           {% if content.field_body_formatted|field_value is not empty %}
             {{ content.field_body_formatted }}
           {% endif %}
