@@ -38,7 +38,14 @@ content:
     weight: 13
     label: hidden
     settings: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
     type: address_plain
     region: content
   field_day_time_range:
@@ -46,7 +53,14 @@ content:
     label: hidden
     settings:
       link_to_entity: false
-    third_party_settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: p
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
     type: string
     region: content
   field_department:
@@ -56,11 +70,11 @@ content:
       link: false
     third_party_settings:
       fences:
-        fences_field_tag: div
+        fences_field_tag: none
         fences_field_classes: ''
-        fences_field_item_tag: div
+        fences_field_item_tag: none
         fences_field_item_classes: ''
-        fences_label_tag: div
+        fences_label_tag: none
         fences_label_classes: ''
     type: entity_reference_label
     region: content
@@ -106,9 +120,16 @@ content:
       trim_length: '80'
       url_only: ''
       url_plain: ''
-      rel: ''
-      target: ''
-    third_party_settings: {  }
+      rel: 0
+      target: 0
+    third_party_settings:
+      fences:
+        fences_field_tag: p
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
     type: phone_number_formatter
     region: content
   field_faxes_title:
@@ -167,7 +188,14 @@ content:
     weight: 18
     label: hidden
     settings: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: p
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
     type: basic_string
     region: content
   field_paragraphs:
@@ -201,9 +229,16 @@ content:
       trim_length: '80'
       url_only: ''
       url_plain: ''
-      rel: ''
-      target: ''
-    third_party_settings: {  }
+      rel: 0
+      target: 0
+    third_party_settings:
+      fences:
+        fences_field_tag: p
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
     type: phone_number_formatter
     region: content
   field_phones_title:

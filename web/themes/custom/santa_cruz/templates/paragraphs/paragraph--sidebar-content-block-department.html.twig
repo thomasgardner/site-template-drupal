@@ -7,20 +7,20 @@
 ] %}
 
 {% block paragraph %}
-  <section{{ attributes.addClass(classes) }} aria-label="content row">
+  <p{{ attributes.addClass(classes) }} aria-label="content row">
     {% block content %}
 
       {% if content.field_person_link|field_value is not empty %}
         <a href="{{ content.field_person_link[0]['#url'] }}"
-           class="btn-link">{{ content.field_person_link[0]['#title'] }}</a>
+           class="btn-link">{{ content.field_person_link[0]['#title'] }}</a><br/>
       {% endif %}
 
       {% if content.field_body_unformatted|field_value is not empty %}
-        {{ content.field_body_unformatted }}
+        {{ content.field_body_unformatted|render|striptags('<br>')|raw }}<br/>
       {% endif %}
 
       {% if content.field_phones|field_value is not empty %}
-        {{ content.field_phones }}
+        {{ content.field_phones }}<br/>
       {% endif %}
 
       {% if content.field_email|field_value is not empty %}
@@ -30,5 +30,5 @@
 
       {{ content|without('field_person_link', 'field_body_unformatted', 'field_phones', 'field_email') }}
     {% endblock %}
-  </section>
+  </p>
 {% endblock paragraph %}

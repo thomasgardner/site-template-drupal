@@ -10,6 +10,7 @@ dependencies:
     - paragraphs.paragraphs_type.sidebar_content_block_department
   module:
     - custom_module
+    - fences
     - link
 id: paragraph.sidebar_content_block_department.default
 targetEntityType: paragraph
@@ -20,7 +21,14 @@ content:
     weight: 1
     label: hidden
     settings: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
     type: basic_string
     region: content
   field_email:
@@ -49,9 +57,16 @@ content:
       trim_length: '80'
       url_only: ''
       url_plain: ''
-      rel: ''
-      target: ''
-    third_party_settings: {  }
+      rel: 0
+      target: 0
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
     type: phone_number_formatter
     region: content
 hidden: {  }
