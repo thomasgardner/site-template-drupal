@@ -11,36 +11,25 @@
         </figure>
       </p>
     {% endif %}
-
-    {#  {% else %}#}
-    {#    <p>#}
-    {#      #}{#      {{ dump(content.field_font_awesome_icon) }}#}
-    {#      <figure class="img-center">#}
-    {#        <i class="fas {{ content.field_font_awesome_icon[0]['#icons'][0]['#name'] }} fa-6x"></i>#}
-    {#      </figure>#}
-    {#    </p>#}
   {% endif %}
 
   {# Opening head tag. #}
-  {#  <{{ content.field_heading_level|field_value }}#}
-  {#  class="{% if content.field_heading_level|field_value == "h2" %} title {% else %} underline {% endif %}">#}
-  <h4 class="underline">
-    {% if content.field_title|field_value is not empty %}
+  {% if content.field_title|field_value is not empty %}
+    <h4 class="underline">
 
       {# Link head tag if exist. #}
       {% if content.field_link|field_value is not empty %}
-        <a href="{{ content.field_link[0]['#url'] }}">
-      {% endif %}
+      <a href="{{ content.field_link[0]['#url'] }}">
+        {% endif %}
 
-      {{ content.field_title }}
+        {{ content.field_title }}
 
-      {% if content.field_link|field_value is not empty %}
-        </a>
+        {% if content.field_link|field_value is not empty %}
+      </a>
       {% endif %}
-    {% endif %}
-    {# Closing head tag. #}
-  </h4>
-  {#</{{ content.field_heading_level|field_value }}>#}
+    </h4>
+  {% endif %}
+  {# Closing head tag. #}
 
   {% if content.field_body_unformatted|field_value is not empty %}
     <p>{{ content.field_body_unformatted|field_value }}</p>
@@ -49,10 +38,11 @@
   {# As values are not more than 2 so put them static here. #}
   {% if content.field_links__max_2[0]['#title'] or content.field_links__max_2[1]['#title'] %}
     <p>
-      <a class="button primary"
+      {% set btn_class = content.field_cta_style|field_value %}
+      <a class="{{ field_cta_style__class }}"
          href="{{ content.field_links__max_2[0]['#url'] }}">{{ content.field_links__max_2[0]['#title'] }}</a>
       {% if content.field_links__max_2[1]['#title'] %}
-        <a class="button primary"
+        <a class="{{ field_cta_style__class }}"
            href="{{ content.field_links__max_2[1]['#url'] }}">{{ content.field_links__max_2[1]['#title'] }}</a>
       {% endif %}
     </p>
