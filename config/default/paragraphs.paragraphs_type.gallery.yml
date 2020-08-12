@@ -1,9 +1,9 @@
-uuid: 2c044980-cc9d-4958-b7f8-76883571a9e4
+uuid: bbd5ba53-1937-413e-a0f7-99dc6e0b6504
 langcode: en
 status: true
 dependencies: {  }
-id: image_gallery
-label: 'x. Image Gallery'
+id: gallery
+label: 'Image Gallery'
 icon_uuid: null
 icon_default: null
 description: ''

@@ -15,6 +15,7 @@ dependencies:
     - paragraphs.paragraphs_type.content_with_media
     - paragraphs.paragraphs_type.full_image
     - paragraphs.paragraphs_type.full_video
+    - paragraphs.paragraphs_type.gallery
     - paragraphs.paragraphs_type.grid_content_centered
     - paragraphs.paragraphs_type.grid_content_left
     - paragraphs.paragraphs_type.major_card
@@ -58,6 +59,7 @@ settings:
       full_video: full_video
       grid_content_centered: grid_content_centered
       grid_content_left: grid_content_left
+      gallery: gallery
       major_card: major_card
       major_card_list: major_card_list
       article_card: article_card
@@ -189,109 +191,121 @@ settings:
       grid_content_left_item:
         weight: 40
         enabled: false
-      image_gallery:
+      header_banner:
         weight: 41
         enabled: false
-      image_gallery_item:
+      profile_card_details_fields:
         weight: 42
         enabled: false
-      header_banner:
+      quote:
         weight: 43
         enabled: false
-      profile_card_details_fields:
-        weight: 44
-        enabled: false
-      quote:
-        weight: 45
-        enabled: false
       tabs_horizontal_item:
-        weight: 46
+        weight: 44
         enabled: false
       accordion:
         enabled: true
-        weight: 47
+        weight: 45
       accordion_item:
-        weight: 48
+        weight: 46
         enabled: false
       button_list:
         enabled: true
-        weight: 49
+        weight: 47
       content_centered:
         enabled: true
-        weight: 50
+        weight: 48
       content_left:
         enabled: true
-        weight: 51
+        weight: 49
       content_quote:
         enabled: true
-        weight: 52
+        weight: 50
       content_with_media:
         enabled: true
-        weight: 53
+        weight: 51
       full_image:
         enabled: true
-        weight: 54
+        weight: 52
       full_video:
         enabled: true
-        weight: 55
+        weight: 53
       grid_content_centered:
         enabled: true
-        weight: 56
+        weight: 54
       grid_content_left:
         enabled: true
+        weight: 55
+      gallery:
+        enabled: true
+        weight: 56
+      image_gallery:
         weight: 57
+        enabled: false
+      image_gallery_item:
+        weight: 58
+        enabled: false
       major_card:
         enabled: true
-        weight: 58
+        weight: 59
       major_card_list:
         enabled: true
-        weight: 59
+        weight: 60
       article_card:
         enabled: true
-        weight: 60
+        weight: 61
       article_card_list:
         enabled: true
-        weight: 61
+        weight: 62
       podcast_card:
         enabled: true
-        weight: 62
+        weight: 63
       podcast_card_list:
         enabled: true
-        weight: 63
+        weight: 64
       policy_card:
         enabled: true
-        weight: 64
+        weight: 65
       policy_card_list:
         enabled: true
-        weight: 65
+        weight: 66
       profile_card:
         enabled: true
-        weight: 66
+        weight: 67
       profile_card__fullwidth:
         enabled: true
-        weight: 67
+        weight: 68
       profile_list:
         enabled: true
-        weight: 68
+        weight: 69
       related_links_list:
         enabled: true
-        weight: 69
+        weight: 70
       ribbon_image:
         enabled: true
-        weight: 70
-      step:
         weight: 71
+      step:
+        weight: 72
         enabled: false
       step_grid:
         enabled: true
-        weight: 72
+        weight: 73
       tabs_horizontal:
         enabled: true
-        weight: 73
-      views:
         weight: 74
+      views:
+        weight: 75
         enabled: false
       wysiwyg:
         enabled: true
-        weight: 75
+        weight: 76
+      sidebar_button:
+        weight: 77
+        enabled: false
+      sidebar_content_block:
+        weight: 78
+        enabled: false
+      sidebar_content_block_department:
+        weight: 79
+        enabled: false
 field_type: entity_reference_revisions

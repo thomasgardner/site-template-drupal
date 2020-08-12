@@ -1,0 +1,45 @@
+uuid: 670a94ad-ea12-422a-86ab-3a72f809f6a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.gallery.field_images
+    - image.style.medium
+    - node.type.gallery
+  module:
+    - fences
+    - media
+    - user
+id: node.gallery.default
+targetEntityType: node
+bundle: gallery
+mode: default
+content:
+  field_images:
+    type: media_thumbnail
+    weight: 101
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  sharethis:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true
