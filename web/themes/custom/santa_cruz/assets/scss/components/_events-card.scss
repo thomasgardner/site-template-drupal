@@ -13,7 +13,7 @@
     h2, h3, h4, p, div {
         color: $primary-gray;
     }
-
+    
 
     &:hover {
         h2, h3, h4 { color: $primary-blue; }
@@ -25,7 +25,7 @@
 
         .date {
             @include xy-cell(12, true, 0);
-
+            
             @include breakpoint(large) {
                 margin-bottom: 0;
                 font-size: .75rem;
@@ -43,7 +43,7 @@
             .month {
                 display: inline;
                 font-size: 1.5rem;
-
+               
                 @include breakpoint(xlarge) {
                     font-size: 1.8em;
                     margin-bottom: 0.9rem;
@@ -68,7 +68,7 @@
         .inner {
             @include xy-cell(auto, true, 0);
             @include xy-grid;
-
+    
             .image {
                @include xy-cell(12, true, 0);
                 max-height: 155px;
@@ -87,28 +87,28 @@
                     max-height: 250px;
                 }
 
-
+                
             }
-
+    
             .card-content {
-                @include xy-cell(12);
-
+                @include xy-cell(12);   
+    
                 @include breakpoint(large){
                     @include xy-cell(9);
                 }
 
                 .header {
                     margin-bottom: 15px;
-
+                    
                     @include breakpoint(large){
                         margin-bottom: .3rem;
                     }
                 }
             }
-
+    
             .time {
                 margin-bottom: .5rem;
-            }
+            } 
         }
 
         .event-description {
@@ -116,7 +116,7 @@
             @include breakpoint(large) {
                 display: block;
             }
-        }
+        } 
     }
 
     &.split-column {
@@ -140,13 +140,13 @@
         flex-direction: row;
         margin-bottom: 1rem;
         margin-right: 0;
-
+    
         .events-card-content {
             order: 2;
             padding: 0 1rem;
         }
 
-    }
+    }    
 
 }
 
@@ -196,17 +196,17 @@
 
             .time {
                 margin-bottom: .5rem;
-            }
+            } 
         }
     }
-
+    
 }
 
 .event-list-block {
     @include xy-grid-layout(1, '.events-card');
     @include xy-grid-collapse('.events-card', $gutter-type:margin);
     margin-bottom: 1rem;
-
+   
     .events-card {
         width: 100%;
         padding-bottom: 0;
@@ -215,7 +215,7 @@
         .events-card-content {
             @include xy-grid;
             @include xy-grid-collapse('.inner', $gutter-type:margin);
-
+    
             .date {
                 @include xy-cell(12);
                 margin-left: 0;
@@ -249,5 +249,5 @@
         .image, .event-description  {
             display: none;
         }
-    }
+    } 
 }

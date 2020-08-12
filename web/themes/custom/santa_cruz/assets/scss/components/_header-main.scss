@@ -316,7 +316,7 @@
         float: right;
     }
 
-    .menu {
+    .menu:not(.contextual-links) {
         margin: 12px 0 0;
 
         li {

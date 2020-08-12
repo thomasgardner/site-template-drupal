@@ -40,7 +40,13 @@
     "vinyl-named": "^1.1.0",
     "webpack": "^4.44.1",
     "webpack-stream": "^5.2.1",
-    "what-input": "^4.1.0"
+    "what-input": "^4.1.0",
+    "@types/imagesloaded": "^4.1.1",
+    "@types/masonry-layout": "^4.2.1",
+    "masonry-layout": "^4.2.2",
+    "owl.carousel": "^2.3.4",
+    "wow": "0.0.6",
+    "wow.js": "^1.2.2"
   },
   "browserslist": [
     "last 2 versions",
