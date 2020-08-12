@@ -16,8 +16,8 @@ content:
     weight: 0
     label: hidden
     settings:
-      link: true
-      view_mode: default
+      view_mode: grid_card
+      link: false
     third_party_settings:
       fences:
         fences_field_tag: none
