@@ -119,15 +119,15 @@
       </div>
     </div>
   {% endif %}
+  {% if page.hero %}
+    {{ page.hero }}
+  {% endif %}
   {% if page.page_utilities %}
     <div class="page-utilities">
       <div class="grid-container large">
         {{ page.page_utilities }}
       </div>
     </div>
-  {% endif %}
-  {% if page.hero %}
-    {{ page.hero }}
   {% endif %}
   {% if page.grid %}
     <div class="grid-container large">
@@ -140,15 +140,39 @@
     </div>
   {% endif %}
   <div class="page-content pb-0 {{ main_grid }}" id="main-content" role="main">
-    <section>
-      {{ page.content }}
+    <section class="content">
+      {% if page.sidebar_first and page.sidebar_second %}
+        {% set layout = 'layout-three-column' %}
+      {% elseif page.sidebar_first or page.sidebar_second %}
+        {% set layout = 'layout-two-column' %}
+      {% else %}
+        {% set layout = 'layout-one-column' %}
+      {% endif %}
+      <div class="{{ layout}} large">
+        <div class="wrap">
+          <div class="inner">
+            {% if page.sidebar_first %}
+              <div class="column-support">
+                <div class="content-block">
+                  {{ page.sidebar_first }}
+                </div>
+              </div>
+            {% endif %}
+            <div class="column-main">
+              {{ page.content }}
+            </div>
+            {% if page.sidebar_second %}
+            <div class="column-support">
+              <div class="content-block">
+                {{ page.sidebar_second }}
+              </div>
+            </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
     </section>
   </div>
-  {% if page.sidebar_second %}
-    <div id="sidebar-second" class="{{ sidebar_sec_grid }} columns sidebar">
-      {{ page.sidebar_second }}
-    </div>
-  {% endif %}
   {% if page.content_bottom %}
     <div class="component-wrapper">
       {{ page.content_bottom }}
