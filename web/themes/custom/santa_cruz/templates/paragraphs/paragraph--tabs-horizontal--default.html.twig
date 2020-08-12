@@ -45,13 +45,13 @@
   view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_id,
   not paragraph.isPublished() ? 'paragraph--unpublished'
 ] %}
-
+{% set tab_id = 'tabs--' ~ paragraph.id()|clean_id %}
 {% block paragraph %}
   <section{{ attributes.addClass(classes) }} aria-label="content row">
     {% block content %}
       <div class="">
         <ul class="tabs" data-responsive-accordion-tabs="tabs small-accordion xlarge-tabs"
-            data-allow-all-closed="true" id="example-tabs">
+            data-allow-all-closed="true" id="{{ tab_id }}">
           {% for tab_info in field__tab_hori_array %}
             <li class="tabs-title" data-accordion-item>
               <a href="#panel{{ loop.index }}">{{ tab_info.title }}</a>
@@ -60,10 +60,11 @@
         </ul>
       </div>
 
-      <div class="tabs-content" data-tabs-content="example-tabs">
+      <div class="tabs-content" data-tabs-content="{{ tab_id }}">
 
         {% for tab_info in field__tab_hori_array %}
           <div class="tabs-panel" id="panel{{ loop.index }}">
+            <h3>{{ tab_info.title|render|striptags }}</h3>
             {{ tab_info.body|raw }}
           </div>
         {% endfor %}
