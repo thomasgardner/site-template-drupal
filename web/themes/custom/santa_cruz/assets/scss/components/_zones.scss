@@ -3,7 +3,7 @@
     position: relative;
     max-width: 52em;
     clear: both;
-    
+
     @include breakpoint(large){
         max-width: 64em;
     }
@@ -19,12 +19,12 @@
             max-width: 85em;
             padding: 0 3rem;
         }
-        
+
         @include breakpoint(xxxlarge){
             max-width: 90em;
             padding: 0;
         }
-    }  
+    }
 
 }
 
@@ -33,16 +33,16 @@
     background-color: rgba(255, 255, 255, 1);
     border-top: 1px solid lighten($primary-gray, 70%);
     border-bottom: 1px solid lighten($primary-gray, 70%);
-   
+
     @include show-for(large);
 
     .breadcrumbs {
         margin-bottom: 0;
-        
+
         a:hover {
             text-decoration: none;
         }
-        
+
         li {
             color: $primary-gray;
             font-weight: bold;
@@ -68,11 +68,11 @@
 .page-content, #page-content {
     position: relative;
     padding: 1rem .5rem;
-    
+
     @include breakpoint(large){
         padding: 4rem 0;
     }
-   
+
 }
 
 .sidebar {
@@ -92,24 +92,24 @@
 }
 
 .wave-pattern {
-        
+
     &.blue {
-        @include breakpoint(large){ background-image: url('../../assets/img/build-resources/wave-pattern-blue.png'); }
+        @include breakpoint(large){ background-image: url('../assets/img/build-resources/wave-pattern-blue.png'); }
         &.opaque {
             background-color: #daebf5;
         }
     }
 
     &.gray {
-        @include breakpoint(large){ background-image: url('../../assets/img/build-resources/wave-pattern-blue.png'); }
-       
+        @include breakpoint(large){ background-image: url('../assets/img/build-resources/wave-pattern-blue.png'); }
+
         &.opaque {
             background-color: lighten($primary-gray, 55%);
         }
     }
 
     &.turquiose {
-        @include breakpoint(large){ background-image: url('../../assets/img/build-resources/wave-pattern-turquiose.png'); }
+        @include breakpoint(large){ background-image: url('../assets/img/build-resources/wave-pattern-turquiose.png'); }
 
         &.opaque {
             background-color: lighten($secondary-turquiose, 50%);
@@ -117,7 +117,7 @@
     }
 
     &.green {
-        @include breakpoint(large){ background-image: url('../../assets/img/build-resources/wave-pattern-green.png'); }
+        @include breakpoint(large){ background-image: url('../assets/img/build-resources/wave-pattern-green.png'); }
 
         &.opaque {
             background-color: lighten($secondary-green, 45%);
@@ -125,7 +125,7 @@
     }
 
     &.red {
-        @include breakpoint(large){ background-image: url('../../assets/img/build-resources/wave-pattern-red.png'); }
+        @include breakpoint(large){ background-image: url('../assets/img/build-resources/wave-pattern-red.png'); }
 
         &.opaque {
             background-color: lighten($secondary-pink, 50%);
@@ -137,7 +137,7 @@
         background-position: top left;
         background-repeat: repeat-x;
     }
-    
+
 }
 
 .closing-blocks {
@@ -149,8 +149,8 @@
         max-height: 350px;
         min-width: calc(100% - 2.5rem);
         background: #f2b41e;
-    
-        img { 
+
+        img {
             min-height: 100%;
             width: auto;
             height: auto;
@@ -168,7 +168,7 @@
             width: auto;
             height: auto;
         }
-        
+
     }
 }
 
