@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_node_ref
-    - node.type.profile
+    - node.type.policy
     - paragraphs.paragraphs_type.policy_card
 id: paragraph.policy_card.field_node_ref
 field_name: field_node_ref
@@ -20,7 +20,7 @@ settings:
   handler: 'default:node'
   handler_settings:
     target_bundles:
-      profile: profile
+      policy: policy
     sort:
       field: _none
     auto_create: false
