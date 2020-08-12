@@ -33,3 +33,10 @@ function santa_cruz_preprocess_region(&$variables) {
       break;
   }
 }
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function santa_cruz_preprocess_page_title(&$variables) {
+  $variables['title_attributes']['class'] = ['underline'];
+}
