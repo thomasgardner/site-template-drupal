@@ -11,7 +11,7 @@ id: paragraph.sidebar_content_block.field_faxes
 field_name: field_faxes
 entity_type: paragraph
 bundle: sidebar_content_block
-label: Faxes
+label: 'Fax Numbers'
 description: ''
 required: false
 translatable: false

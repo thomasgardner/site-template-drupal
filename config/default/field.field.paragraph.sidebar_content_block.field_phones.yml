@@ -11,7 +11,7 @@ id: paragraph.sidebar_content_block.field_phones
 field_name: field_phones
 entity_type: paragraph
 bundle: sidebar_content_block
-label: Phones
+label: 'Phone Numbers'
 description: ''
 required: false
 translatable: false
