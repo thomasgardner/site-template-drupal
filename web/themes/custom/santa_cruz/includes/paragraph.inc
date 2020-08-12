@@ -44,3 +44,18 @@ function santa_cruz_preprocess_paragraph__content_with_media(&$variables)
     }
   }
 }
+
+
+function santa_cruz_preprocess_paragraph__grid_content_left_item(&$variables)
+{
+  $paragraph = $variables['paragraph'];
+  if ($paragraph instanceof Paragraph) {
+    if ($paragraph->hasField('field_cta_style') && !$paragraph->field_cta_style->isEmpty()) {
+      $variables['field_cta_style__class'] = 'button primary';
+      if ($paragraph->get('field_cta_style')->first()->getValue()['value'] == "btn-link") {
+        $variables['field_cta_style__class'] = 'btn-link';
+      }
+    }
+  }
+}
+
