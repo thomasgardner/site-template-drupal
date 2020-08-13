@@ -8,23 +8,82 @@ dependencies:
     - field.field.paragraph.ribbon_image.field_title
     - paragraphs.paragraphs_type.ribbon_image
   module:
+    - custom_module
     - fences
-    - link
+    - field_group
+third_party_settings:
+  field_group:
+    group_ribbon:
+      children:
+        - group_figure
+        - group_figcaption
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: 'ribbon show-for-large'
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Ribbon
+    group_figure:
+      children:
+        - field_image
+      parent_name: group_ribbon
+      weight: 4
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        element: figure
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Figure
+    group_figcaption:
+      children:
+        - field_title
+        - field_link
+      parent_name: group_ribbon
+      weight: 5
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        element: figcaption
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Figcaption
 id: paragraph.ribbon_image.default
 targetEntityType: paragraph
 bundle: ribbon_image
 mode: default
 content:
   field_image:
-    weight: 0
+    weight: 1
     label: hidden
     settings:
       view_mode: default
       link: false
     third_party_settings:
       fences:
-        fences_field_tag: none
-        fences_field_classes: ''
+        fences_field_tag: div
+        fences_field_classes: img-mask
         fences_field_item_tag: none
         fences_field_item_classes: ''
         fences_label_tag: none
@@ -32,7 +91,7 @@ content:
     type: entity_reference_entity_view
     region: content
   field_link:
-    weight: 2
+    weight: 3
     label: hidden
     settings:
       trim_length: null
@@ -48,16 +107,16 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: none
         fences_label_classes: ''
-    type: link
+    type: ucsc_buttons_link
     region: content
   field_title:
-    weight: 1
+    weight: 2
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings:
       fences:
-        fences_field_tag: none
+        fences_field_tag: h2
         fences_field_classes: ''
         fences_field_item_tag: none
         fences_field_item_classes: ''
