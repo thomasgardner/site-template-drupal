@@ -1,0 +1,37 @@
+uuid: 4a4e249d-31b5-4b9b-b045-b68f60dd14f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.newscenter---filter-2
+  module:
+    - menu_block
+    - system
+  theme:
+    - santa_cruz
+id: newscenterfilter2
+theme: santa_cruz
+region: subsite_header_filter_normal
+weight: 0
+provider: null
+plugin: 'menu_block:newscenter---filter-2'
+settings:
+  id: 'menu_block:newscenter---filter-2'
+  label: 'Newscenter - Filter #2'
+  provider: menu_block
+  label_display: '0'
+  follow: false
+  follow_parent: child
+  level: 1
+  depth: 0
+  expand: false
+  parent: 'newscenter---filter-2:'
+  suggestion: newscenter___filter_2
+  label_type: block
+  label_link: 0
+visibility:
+  request_path:
+    id: request_path
+    pages: /testing-global-nav-and-menus-template-news-home
+    negate: false
+    context_mapping: {  }
