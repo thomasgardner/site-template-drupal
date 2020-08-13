@@ -16,10 +16,9 @@ dependencies:
     - paragraphs.paragraphs_type.full_image
     - paragraphs.paragraphs_type.full_video
     - paragraphs.paragraphs_type.gallery
+    - paragraphs.paragraphs_type.generic_card
     - paragraphs.paragraphs_type.grid_content_centered
     - paragraphs.paragraphs_type.grid_content_left
-    - paragraphs.paragraphs_type.major_card
-    - paragraphs.paragraphs_type.major_card_list
     - paragraphs.paragraphs_type.podcast_card
     - paragraphs.paragraphs_type.podcast_card_list
     - paragraphs.paragraphs_type.policy_card
@@ -58,11 +57,10 @@ settings:
       content_with_media: content_with_media
       full_image: full_image
       full_video: full_video
+      generic_card: generic_card
       grid_content_centered: grid_content_centered
       grid_content_left: grid_content_left
       gallery: gallery
-      major_card: major_card
-      major_card_list: major_card_list
       article_card: article_card
       article_card_list: article_card_list
       podcast_card: podcast_card
@@ -232,85 +230,88 @@ settings:
       full_video:
         enabled: true
         weight: 53
-      grid_content_centered:
+      generic_card:
         enabled: true
         weight: 54
-      grid_content_left:
+      grid_content_centered:
         enabled: true
         weight: 55
-      gallery:
+      grid_content_left:
         enabled: true
         weight: 56
-      image_gallery:
+      gallery:
+        enabled: true
         weight: 57
-        enabled: false
-      image_gallery_item:
+      image_gallery:
         weight: 58
         enabled: false
-      major_card:
-        enabled: true
+      image_gallery_item:
         weight: 59
-      major_card_list:
-        enabled: true
+        enabled: false
+      major_card:
         weight: 60
+        enabled: false
+      major_card_list:
+        weight: 61
+        enabled: false
       article_card:
         enabled: true
-        weight: 61
+        weight: 62
       article_card_list:
         enabled: true
-        weight: 62
+        weight: 63
       podcast_card:
         enabled: true
-        weight: 63
+        weight: 64
       podcast_card_list:
         enabled: true
-        weight: 64
+        weight: 65
       policy_card:
         enabled: true
-        weight: 65
+        weight: 66
       policy_card_list:
         enabled: true
-        weight: 66
+        weight: 67
       profile_card:
         enabled: true
-        weight: 67
+        weight: 68
       profile_card__fullwidth:
         enabled: true
-        weight: 68
+        weight: 69
       profile_list:
         enabled: true
-        weight: 69
+        weight: 70
       related_links_list:
         enabled: true
-        weight: 70
+        weight: 71
       ribbon_image:
         enabled: true
-        weight: 71
-      step:
         weight: 72
+      step:
+        weight: 73
         enabled: false
       step_grid:
         enabled: true
-        weight: 73
+        weight: 74
       tabs_horizontal:
         enabled: true
-        weight: 74
+        weight: 75
       teaser_card_list:
         enabled: true
-        weight: 75
-      views:
         weight: 76
+      views:
+        weight: 77
         enabled: false
       wysiwyg:
         enabled: true
-        weight: 77
-      sidebar_button:
         weight: 78
-        enabled: false
-      sidebar_content_block:
+      sidebar_button:
         weight: 79
         enabled: false
-      sidebar_content_block_department:
+      sidebar_content_block:
         weight: 80
+        enabled: false
+      sidebar_content_block_department:
+        weight: 81
         enabled: false
 field_type: entity_reference_revisions
