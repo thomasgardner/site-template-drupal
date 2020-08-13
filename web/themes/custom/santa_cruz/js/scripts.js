@@ -44,5 +44,19 @@
     }
   };
 
+  /**
+   * Subsite Navigation.
+   *
+   * @type {{attach: Drupal.behaviors.subSiteNavigation.attach}}
+   */
+  Drupal.behaviors.subSiteNavigation = {
+    attach: function (context, settings) {
+      var $context = $(context);
+
+      $context.find('.sub-menu-toggle').once('addToggleAtr').each(function () {
+        $(this).data('toggle', 'filter-form').attr('aria-controls', 'filter-form');
+      });
+    }
+  };
 
 })(jQuery, Drupal, drupalSettings);

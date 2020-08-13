@@ -1,0 +1,31 @@
+uuid: 523dc7a0-b8c5-4376-8661-ec52b3cf277a
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.newscenter---featured
+  module:
+    - menu_block
+  theme:
+    - santa_cruz
+id: newscenterfeatured
+theme: santa_cruz
+region: subsite_header_filter_featured
+weight: 0
+provider: null
+plugin: 'menu_block:newscenter---featured'
+settings:
+  id: 'menu_block:newscenter---featured'
+  label: 'Newscenter - Featured'
+  provider: menu_block
+  label_display: '0'
+  follow: false
+  follow_parent: child
+  level: 1
+  depth: 0
+  expand: false
+  parent: 'newscenter---featured:'
+  suggestion: newscenter___featured
+  label_type: block
+  label_link: 0
+visibility: {  }
