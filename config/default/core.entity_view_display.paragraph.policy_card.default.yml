@@ -16,7 +16,8 @@ content:
     weight: 0
     label: hidden
     settings:
-      link: true
+      view_mode: fullwidth_paragraph
+      link: false
     third_party_settings:
       fences:
         fences_field_tag: none
@@ -25,6 +26,6 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: none
         fences_label_classes: ''
-    type: entity_reference_label
+    type: entity_reference_entity_view
     region: content
 hidden: {  }
