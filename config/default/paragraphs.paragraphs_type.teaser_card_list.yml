@@ -1,9 +1,9 @@
-uuid: 3c084f38-fec4-47fe-81f0-692857c201c9
+uuid: d2525f8a-d237-4cc5-9756-8eab33926175
 langcode: en
 status: true
 dependencies: {  }
-id: major_card
-label: 'x. Major Card'
+id: teaser_card_list
+label: 'Teaser Card List'
 icon_uuid: null
 icon_default: null
 description: ''

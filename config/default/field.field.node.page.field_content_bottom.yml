@@ -31,6 +31,7 @@ dependencies:
     - paragraphs.paragraphs_type.ribbon_image
     - paragraphs.paragraphs_type.step_grid
     - paragraphs.paragraphs_type.tabs_horizontal
+    - paragraphs.paragraphs_type.teaser_card_list
     - paragraphs.paragraphs_type.wysiwyg
   module:
     - entity_reference_revisions
@@ -75,6 +76,7 @@ settings:
       ribbon_image: ribbon_image
       step_grid: step_grid
       tabs_horizontal: tabs_horizontal
+      teaser_card_list: teaser_card_list
       wysiwyg: wysiwyg
     target_bundles_drag_drop:
       3_column_cta:
@@ -293,19 +295,22 @@ settings:
       tabs_horizontal:
         enabled: true
         weight: 74
-      views:
+      teaser_card_list:
+        enabled: true
         weight: 75
+      views:
+        weight: 76
         enabled: false
       wysiwyg:
         enabled: true
-        weight: 76
-      sidebar_button:
         weight: 77
-        enabled: false
-      sidebar_content_block:
+      sidebar_button:
         weight: 78
         enabled: false
-      sidebar_content_block_department:
+      sidebar_content_block:
         weight: 79
+        enabled: false
+      sidebar_content_block_department:
+        weight: 80
         enabled: false
 field_type: entity_reference_revisions
