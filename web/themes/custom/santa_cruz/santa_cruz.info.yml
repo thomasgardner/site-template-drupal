@@ -23,6 +23,7 @@ regions:
   subsite_header_filter_featured: 'Subsite Header Fileter Featured'
   subsite_header_filter_normal: 'Subsite Header Fileter Normal'
   subsite_brand: 'Subsite Brand or Title'
+  subsite_brand_mobile: 'Subsite Brand or Title - Mobile Variant'
   page_utilities: 'Page Utilities'
   hero: 'Hero'
   content_top: 'Content Top'

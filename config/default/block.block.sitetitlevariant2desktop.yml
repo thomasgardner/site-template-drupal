@@ -1,21 +1,22 @@
-uuid: cd54ff41-2e50-46ed-a6e4-39cb37a9519c
+uuid: e7a9cbf9-393a-4b95-b31a-fc11a803edda
 langcode: en
 status: true
 dependencies:
   module:
+    - custom_module
     - system
   theme:
     - santa_cruz
-id: pagetitle
+id: sitetitlevariant2desktop
 theme: santa_cruz
 region: subsite_brand
-weight: -15
+weight: 0
 provider: null
-plugin: page_title_block
+plugin: custom_module_site_title_variant_two_desktop
 settings:
-  id: page_title_block
-  label: 'Page title'
-  provider: core
+  id: custom_module_site_title_variant_two_desktop
+  label: 'Site Title - Variant #2 Desktop'
+  provider: custom_module
   label_display: '0'
 visibility:
   request_path:

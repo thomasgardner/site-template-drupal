@@ -1,30 +1,30 @@
 {% if page.subsite_header %}
   <div class="subsite-header">
     <div class="grid-container large show-for-large">
-      <div class="grid-x grid-margin-x align-bottom">
-        <div class="cell large-3">
-          <h1>
-            <div class="subsite-brand-container">
-              {# TODO: Add custom logo here. #}
-            </div>
-          </h1>
-          {% if page.subsite_header %}
-            {{ page.subsite_brand_name }}
-          {% endif %}
-        </div>
-        <div class="cell large-auto show-for-xlarge">
-          <div class="subsite-menu" id="site-menu">
-            {{ page.subsite_header }}
+      <div class="grid-x grid-margin-x">
+        {% if page.subsite_brand %}
+          <div class="cell xxlarge-5 xlarge-12">
+            {{ page.subsite_brand }}
           </div>
-        </div>
-        <div class="cell large-auto hide-for-xlarge">
-          <div class="subsite-menu" id="site-menu">
-            {{ page.subsite_header }}
+        {% endif %}
+        {% if page.subsite_header %}
+          <div class="cell xxlarge-7 xlarge-12">
+            <div class="subsite-menu" id="site-menu">
+              {{ page.subsite_header }}
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+    {% if page.subsite_brand %}
+      <div class="grid-container large hide-for-large">
+        <div class="grid-x grid-margin-x grid-collapse">
+          <div class="cell">
+            {{ page.subsite_brand_mobile }}
           </div>
         </div>
       </div>
-    </div>
-    {% include '@santa_cruz/includes/static/newscenter-filter.html.twig' %}
+    {% endif %}
   </div>
 {% endif %}
 

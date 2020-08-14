@@ -32,6 +32,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: /testing-global-nav-and-menus-template-news-home
+    pages: /newscenter
     negate: false
     context_mapping: {  }

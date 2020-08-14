@@ -1,0 +1,26 @@
+uuid: 0dcbe675-989c-4926-87ad-172d9d88c9bf
+langcode: en
+status: true
+dependencies:
+  module:
+    - custom_module
+    - system
+  theme:
+    - santa_cruz
+id: sitetitlevariant1desktop
+theme: santa_cruz
+region: subsite_brand
+weight: 0
+provider: null
+plugin: custom_module_site_title_variant_one_desktop
+settings:
+  id: custom_module_site_title_variant_one_desktop
+  label: 'Site Title - Variant #1 Desktop'
+  provider: custom_module
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: /newscenter
+    negate: false
+    context_mapping: {  }

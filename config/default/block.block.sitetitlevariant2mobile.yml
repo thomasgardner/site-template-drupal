@@ -1,0 +1,26 @@
+uuid: 6c0f0a02-e630-4359-a665-cea24275438d
+langcode: en
+status: true
+dependencies:
+  module:
+    - custom_module
+    - system
+  theme:
+    - santa_cruz
+id: sitetitlevariant2mobile
+theme: santa_cruz
+region: subsite_brand_mobile
+weight: 0
+provider: null
+plugin: custom_module_site_title_variant_two_mobile
+settings:
+  id: custom_module_site_title_variant_two_mobile
+  label: 'Site Title - Variant #2 Mobile'
+  provider: custom_module
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: /history-department
+    negate: false
+    context_mapping: {  }
