@@ -11,8 +11,8 @@ dependencies:
     - santa_cruz
 id: mainnavigationsubsiteversionone
 theme: santa_cruz
-region: subsite_header
-weight: -12
+region: subsite_header_align_bottom
+weight: -14
 provider: null
 plugin: 'menu_block:main-navigation-subsite-version1'
 settings:

@@ -10,7 +10,7 @@ use Drupal\block\Entity\Block;
 /**
  * Implements hook_preprocess_HOOK().
  */
-//function pacificsource_preprocess_block(&$variables)
+//function santa_cruz_preprocess_block(&$variables)
 //{
 //
 //}
@@ -18,14 +18,20 @@ use Drupal\block\Entity\Block;
 /**
  * Implements hook_theme_suggestions_HOOK_alter().
  */
-function pacificsource_theme_suggestions_block_alter(array &$suggestions, array &$variables)
-{
-  $block = $variables['elements'];
-  if (isset($block['#id'])) {
-    $region = Block::load($block['#id'])->getRegion();
-
-    foreach ($suggestions as $suggestion) {
-      $suggestions[] = $suggestion . '__' . $region;
+function santa_cruz_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+  if (!empty($variables['elements']['#id'])) {
+    $block = Block::load($variables['elements']['#id']);
+    $region = $block->getRegion();
+    $suggestions[] = 'block__' . $region;
+    $suggestions[] = 'block__' . $region . '__' . $variables['elements']['#id'];
+  }
+  /* Use this 'else if' only if you are using page_manager module and want to know which region is the block. */
+  else {
+    if (isset($variables['elements']['#configuration']['region'])) {
+      $exposed_plugin_id = explode(':', $variables['elements']['#plugin_id']);
+      $suggestions[] = 'block__page_' . $variables['elements']['#configuration']['region'] . '__' . end($exposed_plugin_id);
     }
   }
+
+  return $suggestions;
 }

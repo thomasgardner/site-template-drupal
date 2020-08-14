@@ -51,10 +51,15 @@
    */
   Drupal.behaviors.subSiteNavigation = {
     attach: function (context, settings) {
-      var $context = $(context);
+      var $context = $(context),
+        $subMenuToggleLinks = $context.find('a.sub-menu-toggle');
 
-      $context.find('.sub-menu-toggle').once('addToggleAtr').each(function () {
-        $(this).data('toggle', 'filter-form').attr('aria-controls', 'filter-form');
+      $subMenuToggleLinks.on('click', function (event) {
+        event.preventDefault();
+      });
+
+      $subMenuToggleLinks.once('addToggleAttributes').each(function () {
+        $(this).attr({'data-toggle': 'filter-form', 'aria-controls': 'filter-form'}).wrapInner('<strong></strong>');
       });
     }
   };

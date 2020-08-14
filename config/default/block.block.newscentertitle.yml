@@ -1,0 +1,31 @@
+uuid: ef560bb7-9dfb-47c0-9843-f7e8e8e457f1
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:a744582d-e6af-4c8e-9a61-24195d77fff4'
+  module:
+    - block_content
+    - system
+  theme:
+    - santa_cruz
+id: newscentertitle
+theme: santa_cruz
+region: subsite_brand
+weight: 0
+provider: null
+plugin: 'block_content:a744582d-e6af-4c8e-9a61-24195d77fff4'
+settings:
+  id: 'block_content:a744582d-e6af-4c8e-9a61-24195d77fff4'
+  label: 'Newscenter title'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /testing-global-nav-and-menus-template-news-home
+    negate: false
+    context_mapping: {  }

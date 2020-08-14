@@ -26,7 +26,7 @@ settings:
   depth: 0
   expand: false
   parent: 'newscenter---filter-1:'
-  suggestion: newscenter___filter_1
+  suggestion: list
   label_type: block
   label_link: 0
 visibility:

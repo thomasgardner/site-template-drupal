@@ -1,0 +1,45 @@
+{% if page.subsite_header %}
+  <div class="subsite-header">
+    <div class="grid-container large show-for-large">
+      <div class="grid-x grid-margin-x align-bottom">
+        <div class="cell large-3">
+          <h1>
+            <div class="subsite-brand-container">
+              {# TODO: Add custom logo here. #}
+            </div>
+          </h1>
+          {% if page.subsite_header %}
+            {{ page.subsite_brand_name }}
+          {% endif %}
+        </div>
+        <div class="cell large-auto show-for-xlarge">
+          <div class="subsite-menu" id="site-menu">
+            {{ page.subsite_header }}
+          </div>
+        </div>
+        <div class="cell large-auto hide-for-xlarge">
+          <div class="subsite-menu" id="site-menu">
+            {{ page.subsite_header }}
+          </div>
+        </div>
+      </div>
+    </div>
+    {% include '@santa_cruz/includes/static/newscenter-filter.html.twig' %}
+  </div>
+{% endif %}
+
+{% if page.subsite_header_collapse %}
+  <div class="subsite-header">
+    <div class="subsite-header">
+      <div class="grid-container large">
+        <div class="grid-x large-padding-collapse large-margin-collapse">
+          {% if page.subsite_brand %}
+            {{ page.subsite_brand }}
+          {% endif %}
+          {{ page.subsite_header_collapse }}
+        </div>
+      </div>
+      {% include '@santa_cruz/includes/static/newscenter-filter.html.twig' %}
+    </div>
+  </div>
+{% endif %}

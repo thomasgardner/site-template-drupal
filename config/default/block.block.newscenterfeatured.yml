@@ -6,6 +6,7 @@ dependencies:
     - system.menu.newscenter---featured
   module:
     - menu_block
+    - system
   theme:
     - santa_cruz
 id: newscenterfeatured
@@ -25,7 +26,12 @@ settings:
   depth: 0
   expand: false
   parent: 'newscenter---featured:'
-  suggestion: newscenter___featured
+  suggestion: list_featured
   label_type: block
   label_link: 0
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: /testing-global-nav-and-menus-template-news-home
+    negate: false
+    context_mapping: {  }
