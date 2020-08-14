@@ -554,7 +554,7 @@
         "drupal/views_bulk_operations": "^2.4",
         "drupal/views_ical": "^1.0@alpha",
         "drupal/views_templates": "^1.1",
-        "drupal/viewsreference": "^2.0",
+        "drupal/viewsreference": "2.0-beta2",
         "drupal/webform": "^5.19",
         "drupal/workbench_email": "^1.6",
         "drupal/wysiwyg_template": "^2.1",
