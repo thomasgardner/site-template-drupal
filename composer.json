@@ -479,7 +479,7 @@
         "drupal/ctools": "^3.0",
         "drupal/date_popup": "^1.0",
         "drupal/devel": "^2.0",
-        "drupal/devel_entity_updates": "^1.0",
+        "drupal/devel_entity_updates": "^3.0",
         "drupal/dropzonejs": "^2.0",
         "drupal/easy_breadcrumb": "^1.13",
         "drupal/editor_advanced_link": "^1.6",
