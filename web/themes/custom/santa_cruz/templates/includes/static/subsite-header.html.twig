@@ -43,3 +43,31 @@
     </div>
   </div>
 {% endif %}
+
+{% if page.subsite_header_align_bottom %}
+  <div class="subsite-header">
+    <div class="grid-container large show-for-large">
+      <div class="grid-x grid-margin-x align-bottom">
+        {% if page.subsite_brand %}
+          <div class="cell large-3">
+            {{ page.subsite_brand }}
+          </div>
+        {% endif %}
+        {% if page.subsite_header_align_bottom %}
+          <div class="cell large-auto show-for-xlarge">
+            <div class="subsite-menu" id="site-menu">
+              {{ page.subsite_header_align_bottom }}
+            </div>
+          </div>
+        {% endif %}
+        {% if page.subsite_header_align_bottom_mobile %}
+          <div class="cell large-auto hide-for-xlarge">
+            <div class="subsite-menu" id="site-menu">
+              {{ page.subsite_header_align_bottom_mobile }}
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endif %}

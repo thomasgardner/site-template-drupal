@@ -1,0 +1,26 @@
+uuid: 3163f2ad-9773-4a56-9a96-6eccd811be46
+langcode: en
+status: true
+dependencies:
+  module:
+    - custom_module
+    - system
+  theme:
+    - santa_cruz
+id: sitetitlevariant3desktop
+theme: santa_cruz
+region: subsite_brand
+weight: 0
+provider: null
+plugin: custom_module_site_title_variant_three_desktop
+settings:
+  id: custom_module_site_title_variant_three_desktop
+  label: 'Site Title - Variant #3 Desktop'
+  provider: custom_module
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: /testing-global-nav-and-menus-template-home-subsite
+    negate: false
+    context_mapping: {  }
