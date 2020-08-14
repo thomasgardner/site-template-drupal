@@ -670,6 +670,10 @@ class ComposerStaticInitDrupal8
         ),
         'D' => 
         array (
+            'Drupal\\Composer' => 
+            array (
+                0 => __DIR__ . '/..' . '/drupal/drupal-library-installer-plugin/src',
+            ),
             'Doctrine\\Common\\Collections\\' => 
             array (
                 0 => __DIR__ . '/..' . '/doctrine/collections/lib',
@@ -1583,6 +1587,8 @@ class ComposerStaticInitDrupal8
         'Drupal\\Component\\Uuid\\Uuid' => __DIR__ . '/../..' . '/web/core/lib/Drupal/Component/Uuid/Uuid.php',
         'Drupal\\Component\\Uuid\\UuidInterface' => __DIR__ . '/../..' . '/web/core/lib/Drupal/Component/Uuid/UuidInterface.php',
         'Drupal\\Component\\Version\\Constraint' => __DIR__ . '/../..' . '/web/core/lib/Drupal/Component/Version/Constraint.php',
+        'Drupal\\Composer\\DrupalLibraryInstaller' => __DIR__ . '/..' . '/drupal/drupal-library-installer-plugin/src/Drupal/Composer/DrupalLibraryInstaller.php',
+        'Drupal\\Composer\\DrupalLibraryInstallerPlugin' => __DIR__ . '/..' . '/drupal/drupal-library-installer-plugin/src/Drupal/Composer/DrupalLibraryInstallerPlugin.php',
         'Drupal\\Composer\\Plugin\\Scaffold\\AllowedPackages' => __DIR__ . '/..' . '/drupal/core-composer-scaffold/AllowedPackages.php',
         'Drupal\\Composer\\Plugin\\Scaffold\\CommandProvider' => __DIR__ . '/..' . '/drupal/core-composer-scaffold/CommandProvider.php',
         'Drupal\\Composer\\Plugin\\Scaffold\\ComposerScaffoldCommand' => __DIR__ . '/..' . '/drupal/core-composer-scaffold/ComposerScaffoldCommand.php',

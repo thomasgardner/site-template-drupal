@@ -142,7 +142,7 @@
         "version_normalized": "3.5.1.0",
         "source": {
             "type": "git",
-            "url": "git@github.com:jquery/jquery-dist.git",
+            "url": "https://github.com/jquery/jquery-dist.git",
             "reference": "4c0e4becb8263bb5b3e6dadc448d8e7305ef8215"
         },
         "dist": {
@@ -2347,6 +2347,91 @@
             "parser",
             "php"
         ]
+    },
+    {
+        "name": "drupal/ace_editor",
+        "version": "1.2.0",
+        "version_normalized": "1.2.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupalcode.org/project/ace_editor.git",
+            "reference": "8.x-1.2"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://ftp.drupal.org/files/projects/ace_editor-8.x-1.2.zip",
+            "reference": "8.x-1.2",
+            "shasum": "63d9ef7ed5edd6114426578e07f183f30f324556"
+        },
+        "require": {
+            "composer/installers": "~1.0",
+            "drupal/core": "^8.8 || ^9",
+            "drupal/drupal-library-installer-plugin": "^0.3",
+            "npm-asset/ace-builds": "~1.0",
+            "oomphinc/composer-installers-extender": "^1.1"
+        },
+        "type": "drupal-module",
+        "extra": {
+            "drupal": {
+                "version": "8.x-1.2",
+                "datestamp": "1591112684",
+                "security-coverage": {
+                    "status": "covered",
+                    "message": "Covered by Drupal's security advisory policy"
+                }
+            },
+            "installer-types": [
+                "bower-asset",
+                "npm-asset"
+            ],
+            "installer-paths": {
+                "libraries/ace": [
+                    "npm-asset/ace-builds"
+                ]
+            },
+            "drupal-libraries": {
+                "libraries": [
+                    {
+                        "name": "ace",
+                        "package": "npm-asset/ace-builds"
+                    }
+                ]
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "Growiel",
+                "homepage": "https://www.drupal.org/user/2490940"
+            },
+            {
+                "name": "interdruper",
+                "homepage": "https://www.drupal.org/user/2437374"
+            },
+            {
+                "name": "kiritoly",
+                "homepage": "https://www.drupal.org/user/3222840"
+            },
+            {
+                "name": "nylin",
+                "homepage": "https://www.drupal.org/user/816040"
+            }
+        ],
+        "description": "Ace is an embeddable code editor providing syntax highlighting and much more. See https://ace.c9.io/.",
+        "homepage": "https://www.drupal.org/project/ace_editor",
+        "keywords": [
+            "ACE",
+            "Drupal",
+            "Editor"
+        ],
+        "support": {
+            "source": "http://cgit.drupalcode.org/ace_editor",
+            "issues": "https://www.drupal.org/project/issues/ace_editor"
+        }
     },
     {
         "name": "drupal/address",
@@ -4630,6 +4715,43 @@
         "support": {
             "source": "https://git.drupalcode.org/project/dropzonejs"
         }
+    },
+    {
+        "name": "drupal/drupal-library-installer-plugin",
+        "version": "0.3",
+        "version_normalized": "0.3.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/promet/drupal-libraries-installer-plugin.git",
+            "reference": "6d4eb744a1f244dfc290976104ecf522466a768b"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/promet/drupal-libraries-installer-plugin/zipball/6d4eb744a1f244dfc290976104ecf522466a768b",
+            "reference": "6d4eb744a1f244dfc290976104ecf522466a768b",
+            "shasum": ""
+        },
+        "require": {
+            "composer-plugin-api": "^1.0"
+        },
+        "time": "2015-12-04T21:39:03+00:00",
+        "type": "composer-plugin",
+        "extra": {
+            "class": "Drupal\\Composer\\DrupalLibraryInstallerPlugin"
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Drupal\\Composer": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "authors": [
+            {
+                "name": "Allan Chappell",
+                "email": "generalredneck@gmail.com"
+            }
+        ]
     },
     {
         "name": "drupal/easy_breadcrumb",
@@ -12084,6 +12206,20 @@
         "keywords": [
             "parser",
             "php"
+        ]
+    },
+    {
+        "name": "npm-asset/ace-builds",
+        "version": "1.4.12",
+        "version_normalized": "1.4.12.0",
+        "dist": {
+            "type": "tar",
+            "url": "https://registry.npmjs.org/ace-builds/-/ace-builds-1.4.12.tgz"
+        },
+        "type": "npm-asset",
+        "installation-source": "dist",
+        "license": [
+            "BSD-3-Clause"
         ]
     },
     {

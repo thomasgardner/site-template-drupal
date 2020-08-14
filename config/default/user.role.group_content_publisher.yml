@@ -7,4 +7,5 @@ label: 'Group Content Publisher'
 weight: -2
 is_admin: null
 permissions:
+  - 'use text format code'
   - 'use text format full_html'

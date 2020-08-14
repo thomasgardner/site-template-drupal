@@ -1,0 +1,23 @@
+uuid: 307f5ad8-1296-4171-9ae9-8771fb494611
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.code
+  module:
+    - ace_editor
+format: code
+editor: ace_editor
+settings:
+  fieldset:
+    theme: chrome
+    syntax: html
+    height: 300px
+    width: 100%
+    font_size: 12pt
+    line_numbers: 1
+    print_margins: 1
+    show_invisibles: 1
+    use_wrap_mode: 1
+    auto_complete: 1
+image_upload: {  }

@@ -7,4 +7,5 @@ label: 'Content Publisher'
 weight: -3
 is_admin: null
 permissions:
+  - 'use text format code'
   - 'use text format full_html'

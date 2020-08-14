@@ -881,6 +881,8 @@ return array(
     'Drupal\\Component\\Uuid\\Uuid' => $baseDir . '/web/core/lib/Drupal/Component/Uuid/Uuid.php',
     'Drupal\\Component\\Uuid\\UuidInterface' => $baseDir . '/web/core/lib/Drupal/Component/Uuid/UuidInterface.php',
     'Drupal\\Component\\Version\\Constraint' => $baseDir . '/web/core/lib/Drupal/Component/Version/Constraint.php',
+    'Drupal\\Composer\\DrupalLibraryInstaller' => $vendorDir . '/drupal/drupal-library-installer-plugin/src/Drupal/Composer/DrupalLibraryInstaller.php',
+    'Drupal\\Composer\\DrupalLibraryInstallerPlugin' => $vendorDir . '/drupal/drupal-library-installer-plugin/src/Drupal/Composer/DrupalLibraryInstallerPlugin.php',
     'Drupal\\Composer\\Plugin\\Scaffold\\AllowedPackages' => $vendorDir . '/drupal/core-composer-scaffold/AllowedPackages.php',
     'Drupal\\Composer\\Plugin\\Scaffold\\CommandProvider' => $vendorDir . '/drupal/core-composer-scaffold/CommandProvider.php',
     'Drupal\\Composer\\Plugin\\Scaffold\\ComposerScaffoldCommand' => $vendorDir . '/drupal/core-composer-scaffold/ComposerScaffoldCommand.php',
