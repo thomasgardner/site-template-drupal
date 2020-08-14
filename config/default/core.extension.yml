@@ -37,7 +37,6 @@ module:
   date_popup: 0
   datetime: 0
   dblog: 0
-  devel: 0
   devel_entity_updates: 0
   dropzonejs: 0
   dropzonejs_eb_widget: 0
@@ -162,7 +161,6 @@ module:
   views_templates: 0
   views_ui: 0
   viewsreference: 0
-  webform: 0
   webform_access: 0
   webform_node: 0
   webform_scheduled_email: 0

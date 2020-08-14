@@ -1,0 +1,25 @@
+uuid: cd54ff41-2e50-46ed-a6e4-39cb37a9519c
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - santa_cruz
+id: pagetitle
+theme: santa_cruz
+region: subsite_brand
+weight: -15
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: /history-department
+    negate: false
+    context_mapping: {  }

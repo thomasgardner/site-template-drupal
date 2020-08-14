@@ -1,9 +1,9 @@
-uuid: ef560bb7-9dfb-47c0-9843-f7e8e8e457f1
+uuid: 456b60f5-5a88-465d-9679-79588e7433cc
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:a744582d-e6af-4c8e-9a61-24195d77fff4'
+    - 'block_content:basic:c6bbbd17-855f-40b2-9351-a120e98cc14b'
   module:
     - block_content
     - system
@@ -12,12 +12,12 @@ dependencies:
 id: newscentertitle
 theme: santa_cruz
 region: subsite_brand
-weight: 0
+weight: -14
 provider: null
-plugin: 'block_content:a744582d-e6af-4c8e-9a61-24195d77fff4'
+plugin: 'block_content:c6bbbd17-855f-40b2-9351-a120e98cc14b'
 settings:
-  id: 'block_content:a744582d-e6af-4c8e-9a61-24195d77fff4'
-  label: 'Newscenter title'
+  id: 'block_content:c6bbbd17-855f-40b2-9351-a120e98cc14b'
+  label: 'Newscenter Title'
   provider: block_content
   label_display: '0'
   status: true
