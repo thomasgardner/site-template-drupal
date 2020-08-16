@@ -1,9 +1,9 @@
-uuid: 36a8346e-076c-434c-95a9-88f1289148b1
+uuid: fb32a025-ceef-43f0-af23-da9af4653709
 langcode: en
 status: true
 dependencies: {  }
-id: related_links_list
-label: 'Related Links List'
+id: related_links_list__view
+label: 'Related Links List (Taxonomy)'
 icon_uuid: null
 icon_default: null
 description: ''

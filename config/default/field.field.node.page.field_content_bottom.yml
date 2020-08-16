@@ -28,6 +28,7 @@ dependencies:
     - paragraphs.paragraphs_type.profile_card__fullwidth
     - paragraphs.paragraphs_type.profile_list
     - paragraphs.paragraphs_type.related_links_list
+    - paragraphs.paragraphs_type.related_links_list__view
     - paragraphs.paragraphs_type.ribbon_image
     - paragraphs.paragraphs_type.step_grid
     - paragraphs.paragraphs_type.tabs_horizontal
@@ -73,6 +74,7 @@ settings:
       profile_card__fullwidth: profile_card__fullwidth
       profile_list: profile_list
       related_links_list: related_links_list
+      related_links_list__view: related_links_list__view
       ribbon_image: ribbon_image
       step_grid: step_grid
       tabs_horizontal: tabs_horizontal
@@ -289,34 +291,37 @@ settings:
       related_links_list:
         enabled: true
         weight: 72
-      ribbon_image:
+      related_links_list__view:
         enabled: true
         weight: 73
-      step:
+      ribbon_image:
+        enabled: true
         weight: 74
+      step:
+        weight: 75
         enabled: false
       step_grid:
         enabled: true
-        weight: 75
+        weight: 76
       tabs_horizontal:
         enabled: true
-        weight: 76
+        weight: 77
       teaser_card_list:
         enabled: true
-        weight: 77
-      views:
         weight: 78
+      views:
+        weight: 79
         enabled: false
       wysiwyg:
         enabled: true
-        weight: 79
-      sidebar_button:
         weight: 80
-        enabled: false
-      sidebar_content_block:
+      sidebar_button:
         weight: 81
         enabled: false
-      sidebar_content_block_department:
+      sidebar_content_block:
         weight: 82
+        enabled: false
+      sidebar_content_block_department:
+        weight: 83
         enabled: false
 field_type: entity_reference_revisions
