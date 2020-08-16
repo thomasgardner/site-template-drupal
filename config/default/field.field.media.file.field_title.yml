@@ -1,0 +1,19 @@
+uuid: 7f3b16db-000d-4e31-bea6-e6e4a281f0c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_title
+    - media.type.file
+id: media.file.field_title
+field_name: field_title
+entity_type: media
+bundle: file
+label: 'Document Title'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

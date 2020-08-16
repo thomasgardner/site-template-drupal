@@ -3,8 +3,10 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.media.file.field_caption
     - field.field.media.file.field_categories
     - field.field.media.file.field_media_file
+    - field.field.media.file.field_title
     - media.type.file
   module:
     - file
@@ -15,6 +17,13 @@ targetEntityType: media
 bundle: file
 mode: default
 content:
+  field_caption:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
   field_media_file:
     label: visually_hidden
     settings:
@@ -22,6 +31,14 @@ content:
     third_party_settings: {  }
     type: file_default
     weight: 0
+    region: content
+  field_title:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
 hidden:
   created: true

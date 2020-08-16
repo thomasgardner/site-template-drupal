@@ -1,0 +1,85 @@
+uuid: 323919d8-a608-410b-8c3d-6627600312a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.grid_card
+    - field.field.media.file.field_caption
+    - field.field.media.file.field_categories
+    - field.field.media.file.field_media_file
+    - field.field.media.file.field_title
+    - media.type.file
+  module:
+    - fences
+    - file
+_core:
+  default_config_hash: 9s0lWIanCnW5Xrrkmedxohs9F0yk4LO8ZcmVQ9xyuu4
+id: media.file.grid_card
+targetEntityType: media
+bundle: file
+mode: grid_card
+content:
+  field_caption:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: basic_string
+    region: content
+  field_categories:
+    type: entity_reference_label
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+  field_media_file:
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: file_url_plain
+    weight: 2
+    region: content
+  field_title:
+    type: string
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+hidden:
+  created: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

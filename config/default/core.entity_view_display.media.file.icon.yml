@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.icon
+    - field.field.media.file.field_caption
     - field.field.media.file.field_categories
     - field.field.media.file.field_media_file
+    - field.field.media.file.field_title
     - media.type.file
   module:
     - fences
@@ -34,7 +36,9 @@ content:
     region: content
 hidden:
   created: true
+  field_caption: true
   field_categories: true
+  field_title: true
   langcode: true
   name: true
   thumbnail: true
