@@ -9,6 +9,7 @@ base theme: zurb_foundation
 
 libraries:
   - santa_cruz/global
+  - santa_cruz/owl_carousel2
 
 libraries-override:
   zurb_foundation/global: false

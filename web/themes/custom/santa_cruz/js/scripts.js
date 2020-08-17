@@ -22,27 +22,77 @@
    *
    * @type {{attach: Drupal.behaviors.featureSlideshow.attach}}
    */
-  Drupal.behaviors.featureSlideshow = {
+  // Drupal.behaviors.featureSlideshow = {
+  //   attach: function (context, settings) {
+  //     var $context = $(context);
+  //
+  //     $context.find('.owl-carousel').once('featureSlideshow').each(function () {
+  //       $(this).owlCarousel({
+  //         autoHeight: true,
+  //         nav: true,
+  //         dots: false,
+  //         responsive: {
+  //           0: {
+  //             items: 1
+  //           },
+  //           900: {
+  //             items: 3
+  //           }
+  //         }
+  //       });
+  //     });
+  //   }
+  // };
+
+  Drupal.behaviors.profileOwl = {
     attach: function (context, settings) {
       var $context = $(context);
-
-      $context.find('.owl-carousel').once('featureSlideshow').each(function () {
+      // .profile-list, .fact-timeline, .job-posting-card-list
+      $context.find('.profile-list.owl-carousel').once('profileOwl').each(function () {
         $(this).owlCarousel({
-          autoHeight: true,
+          margin: 30,
           nav: true,
           dots: false,
-          responsive: {
-            0: {
-              items: 1
+          items: 3,
+          loop: true,
+          responsive:{
+            0:{
+              items:1
             },
-            900: {
-              items: 2
-            }
+            640:{
+              items:2
+            },
+            1024:{
+              items:3,
+              autoWidth: false,
+            },
           }
         });
       });
     }
   };
+
+
+
+  // $(".image-gallery-carousel").owlCarousel({
+  //   margin: 6,
+  //   autoHeight:true,
+  //   dots: false,
+  //   nav: true,
+  //   responsive:{
+  //     0:{
+  //       items:1
+  //     },
+  //     640:{
+  //       items:2
+  //     },
+  //     1024:{
+  //       autoWidth:true,
+  //       autoHeight:false
+  //     },
+  //   }
+  // });
+
 
   /**
    * Subsite Navigation.
