@@ -2,11 +2,16 @@
 
 use Drupal\block\Entity\Block;
 use Drupal\block_content\BlockContentInterface;
+use Drupal\Core\Access\AccessResult;
+use Drupal\Core\Block\BlockPluginInterface;
+use Drupal\Core\Cache\CacheableMetadata;
 use Drupal\Core\Datetime\DrupalDateTime;
 use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Session\AccountInterface;
+use Drupal\Core\Site\Settings;
 use Drupal\media\Entity\Media;
 use Drupal\node\NodeInterface;
 use Drupal\paragraphs\Entity\Paragraph;
@@ -74,6 +79,50 @@ function custom_module_preprocess_block(&$variables) {
       }
     }
   }
+}
+
+/**
+ * Implements hook_block_view_BASE_BLOCK_ID_alter().
+ */
+function custom_module_block_view_system_branding_block_alter(array &$build, BlockPluginInterface $block) {
+  $build['#pre_render'][] = 'custom_module_block_view_pre_render';
+}
+
+/**
+ * #pre_render callback: Sets color preset logo.
+ */
+function custom_module_block_view_pre_render(array $build) {
+  // Force a sub site logo for debugging by adding /?force-subsite to a request.
+  // Or always add $settings['is_subsite'] = TRUE; for each sub site.
+  if (Settings::get('is_subsite', FALSE) === TRUE) {
+    $theme_key = \Drupal::theme()->getActiveTheme()->getName();
+    $config = \Drupal::config($theme_key);
+
+    CacheableMetadata::createFromRenderArray($build)
+      ->addCacheableDependency($config)
+      ->applyTo($build);
+
+    if (isset($build['content']['site_logo']) && $build['content']['site_logo'] && preg_match('!' . $theme_key . '/logo.svg$!', $build['content']['site_logo']['#uri'])) {
+      $build['content']['site_logo']['#uri'] = str_replace('logo.svg', 'logo-reverse.svg', $build['content']['site_logo']['#uri']);
+    }
+  }
+
+  return $build;
+}
+
+/**
+ * Implements hook_block_access().
+ */
+function custom_module_block_access(Block $block, $operation, AccountInterface $account) {
+  // Hide a sub site "Site branding" block for main website.
+  if ($operation == 'view'
+    && $block->getPluginId() == 'system_branding_block'
+    && $block->id() == 'sitebranding') {
+    return AccessResult::forbiddenIf(Settings::get('is_subsite', FALSE) === FALSE)
+      ->addCacheableDependency($block);
+  }
+
+  return AccessResult::neutral();
 }
 
 /**

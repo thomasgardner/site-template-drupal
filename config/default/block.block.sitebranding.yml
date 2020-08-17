@@ -1,4 +1,4 @@
-uuid: 7fe408a4-c09e-4e14-b4c1-6af739b61f25
+uuid: 9418a8d5-2f5b-4f1d-a315-592202fd55f9
 langcode: en
 status: true
 dependencies:
@@ -9,18 +9,16 @@ dependencies:
     - santa_cruz
 third_party_settings:
   block_class:
-    classes: 'site-logo content'
-_core:
-  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
-id: santa_cruz_branding
+    classes: 'site-logo global'
+id: sitebranding
 theme: santa_cruz
-region: gateway_header
-weight: -9
+region: header
+weight: 0
 provider: null
 plugin: system_branding_block
 settings:
   id: system_branding_block
-  label: 'Site branding global'
+  label: 'Site branding subsite'
   provider: system
   label_display: '0'
   use_site_logo: true

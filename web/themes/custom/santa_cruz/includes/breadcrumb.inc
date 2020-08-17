@@ -10,6 +10,6 @@ use Drupal\Core\Url;
 /**
  * Implements hook_preprocess_breadcrumb().
  */
-//function pacificsource_preprocess_breadcrumb(&$variables) {
+//function santa_cruz_preprocess_breadcrumb(&$variables) {
 //
 //}

@@ -8,6 +8,6 @@
 /**
  * Implements hook_preprocess_HOOK().
  */
-//function pacificsource_preprocess_html(&$variables) {
+//function santa_cruz_preprocess_html(&$variables) {
 //
 //}

@@ -17,12 +17,6 @@ settings:
     -
       value: small
       label: 'Global Alert (Small)'
-    -
-      value: low
-      label: 'Low (Deprecated)'
-    -
-      value: high
-      label: 'High (Deprecated)'
   allowed_values_function: ''
 module: options
 locked: false

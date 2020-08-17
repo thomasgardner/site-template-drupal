@@ -44,6 +44,10 @@
  */
 #}
 <div id="page">
+  {% if page.alert_low %}
+    {{ page.alert_low }}
+  {% endif %}
+
   {% if page.header or page.gateway_header or page.mobile_header or page.subsite_header or page.subsite_brand_name %}
     <div data-sticky-container>
       <div id="page-header" role="navigation" class="page-header sticky" aria-expanded="false" aria-label="Page header"
@@ -55,7 +59,7 @@
             </div>
           </div>
         {% endif %}
-        {% if page.gateway_header %}
+        {% if page.gateway_header and page.is_subsite is null %}
           <div class="gateway-header">
             <div class="grid-container large">
               {{ page.gateway_header }}
@@ -65,10 +69,17 @@
         <div class="mobile-menu">
           {% include '@santa_cruz/includes/static/mobile-menu.html.twig' %}
         </div>
-        {% include '@santa_cruz/includes/static/subsite-header.html.twig' %}
+        {% if page.is_subsite %}
+          {% include '@santa_cruz/includes/static/subsite-header.html.twig' %}
+        {% endif %}
       </div>
     </div>
   {% endif %}
+
+  {% if page.alert_high %}
+    {{ page.alert_high }}
+  {% endif %}
+
   {% if page.hero %}
     {{ page.hero }}
   {% endif %}
@@ -90,6 +101,7 @@
       {{ page.sidebar_first }}
     </div>
   {% endif %}
+
   <div class="page-content pb-0 {{ main_grid }}" id="main-content" role="main">
     <section class="content">
       {% if page.sidebar_first and page.sidebar_second %}
