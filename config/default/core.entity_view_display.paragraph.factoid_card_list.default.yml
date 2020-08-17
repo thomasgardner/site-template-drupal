@@ -1,0 +1,32 @@
+uuid: c0c5aa4c-e909-42cc-87bc-c34c1f6f0ebb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.factoid_card_list.field_paragraphs
+    - paragraphs.paragraphs_type.factoid_card_list
+  module:
+    - entity_reference_revisions
+    - fences
+id: paragraph.factoid_card_list.default
+targetEntityType: paragraph
+bundle: factoid_card_list
+mode: default
+content:
+  field_paragraphs:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: entity_reference_revisions_entity_view
+    region: content
+hidden: {  }
