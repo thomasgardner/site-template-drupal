@@ -12,6 +12,7 @@ dependencies:
   module:
     - fences
     - link
+    - media
     - text
 id: paragraph.profile_card__fullwidth.default
 targetEntityType: paragraph
@@ -36,8 +37,8 @@ content:
     weight: 4
     label: hidden
     settings:
-      view_mode: default
-      link: false
+      image_style: ''
+      image_link: ''
     third_party_settings:
       fences:
         fences_field_tag: none
@@ -46,7 +47,7 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: none
         fences_label_classes: ''
-    type: entity_reference_entity_view
+    type: media_thumbnail
     region: content
   field_link:
     weight: 3

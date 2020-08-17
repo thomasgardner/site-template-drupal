@@ -13,24 +13,26 @@
 {% block paragraph %}
   <section{{ attributes.addClass(classes) }} aria-label="content row">
     {% block content %}
-      {% if content.field_link|field_value is not empty %}
+      <div style="max-width: 500px">
+        {% if content.field_link|field_value is not empty %}
         <a href="{{ content.field_link[0]['#url'] }}"
-        class="profile"
-        target="{{ content.field_link[0]['#url'].isExternal() ? '_blank' : '' }}">
-      {% endif %}
-      <div class="image">
-        <img src="{{ image_url }}" title="{{ image_title }}" alt="{{ image_alt }}">
-      </div>
-      <div class="profile-info">
-        <h4 class="underline tighten">{{ content.field_title[0]['#context'].value }}</h4>
-        <div class="tags">
-          <p>{{ content.field_subtitle[0]['#context'].value }}</p>
-          <p class="btn-link"><i class="fas fa-envelope"></i> {{ content.field_email[0]['#context'].value }}</p>
-        </div>
-      </div>
-      {% if content.field_link|field_value is not empty %}
+           class="profile"
+           target="{{ content.field_link[0]['#url'].isExternal() ? '_blank' : '' }}">
+          {% endif %}
+          <div class="image">
+            <img src="{{ image_url }}" title="{{ image_title }}" alt="{{ image_alt }}">
+          </div>
+          <div class="profile-info">
+            <h4 class="underline tighten">{{ content.field_title[0]['#context'].value }}</h4>
+            <div class="tags">
+              <p>{{ content.field_subtitle[0]['#context'].value }}</p>
+              <p class="btn-link"><i class="fas fa-envelope"></i> {{ content.field_email[0]['#context'].value }}</p>
+            </div>
+          </div>
+          {% if content.field_link|field_value is not empty %}
         </a>
-      {% endif %}
+        {% endif %}
+      </div>
     {% endblock %}
   </section>
 {% endblock paragraph %}
