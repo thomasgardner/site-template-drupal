@@ -22,6 +22,7 @@ dependencies:
     - paragraphs.paragraphs_type.generic_card_list
     - paragraphs.paragraphs_type.grid_content_centered
     - paragraphs.paragraphs_type.grid_content_left
+    - paragraphs.paragraphs_type.historical_timeline
     - paragraphs.paragraphs_type.podcast_card
     - paragraphs.paragraphs_type.podcast_card_list
     - paragraphs.paragraphs_type.policy_card
@@ -67,6 +68,7 @@ settings:
       generic_card_list: generic_card_list
       grid_content_centered: grid_content_centered
       grid_content_left: grid_content_left
+      historical_timeline: historical_timeline
       gallery: gallery
       article_card: article_card
       article_card_list: article_card_list
@@ -259,82 +261,88 @@ settings:
       grid_content_left:
         enabled: true
         weight: 60
+      historical_fact_card:
+        weight: 61
+        enabled: false
+      historical_timeline:
+        enabled: true
+        weight: 62
       gallery:
         enabled: true
-        weight: 61
-      image_gallery:
-        weight: 62
-        enabled: false
-      image_gallery_item:
         weight: 63
-        enabled: false
-      major_card:
+      image_gallery:
         weight: 64
         enabled: false
-      major_card_list:
+      image_gallery_item:
         weight: 65
+        enabled: false
+      major_card:
+        weight: 66
+        enabled: false
+      major_card_list:
+        weight: 67
         enabled: false
       article_card:
         enabled: true
-        weight: 66
+        weight: 68
       article_card_list:
         enabled: true
-        weight: 67
+        weight: 69
       podcast_card:
         enabled: true
-        weight: 68
+        weight: 70
       podcast_card_list:
         enabled: true
-        weight: 69
+        weight: 71
       policy_card:
         enabled: true
-        weight: 70
+        weight: 72
       policy_card_list:
         enabled: true
-        weight: 71
+        weight: 73
       profile_card:
         enabled: true
-        weight: 72
+        weight: 74
       profile_card__fullwidth:
         enabled: true
-        weight: 73
+        weight: 75
       profile_list:
         enabled: true
-        weight: 74
+        weight: 76
       related_links_list:
         enabled: true
-        weight: 75
+        weight: 77
       related_links_list__view:
         enabled: true
-        weight: 76
+        weight: 78
       ribbon_image:
         enabled: true
-        weight: 77
+        weight: 79
       step:
-        weight: 78
+        weight: 80
         enabled: false
       step_grid:
         enabled: true
-        weight: 79
+        weight: 81
       tabs_horizontal:
         enabled: true
-        weight: 80
+        weight: 82
       teaser_card_list:
         enabled: true
-        weight: 81
+        weight: 83
       views:
-        weight: 82
+        weight: 84
         enabled: false
       wysiwyg:
         enabled: true
-        weight: 83
+        weight: 85
       sidebar_button:
-        weight: 84
+        weight: 86
         enabled: false
       sidebar_content_block:
-        weight: 85
+        weight: 87
         enabled: false
       sidebar_content_block_department:
-        weight: 86
+        weight: 88
         enabled: false
 field_type: entity_reference_revisions
