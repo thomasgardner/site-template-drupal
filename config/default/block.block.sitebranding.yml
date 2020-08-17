@@ -9,7 +9,7 @@ dependencies:
     - santa_cruz
 third_party_settings:
   block_class:
-    classes: 'site-logo content'
+    classes: 'site-logo global'
 id: sitebranding
 theme: santa_cruz
 region: header
