@@ -59,8 +59,28 @@
       });
 
       $subMenuToggleLinks.once('addToggleAttributes').each(function () {
-        $(this).attr({'data-toggle': 'filter-form', 'aria-controls': 'filter-form'}).wrapInner('<strong></strong>');
+        $(this).attr({
+          'data-toggle': 'filter-form',
+          'aria-controls': 'filter-form'
+        }).wrapInner('<strong></strong>');
       });
+    }
+  };
+
+  /**
+   * Step By Step Grid paragraph.
+   *
+   * @type {{attach: Drupal.behaviors.stepByStepGridParagraph.attach}}
+   */
+  Drupal.behaviors.stepByStepGridParagraph = {
+    attach: function (context, settings) {
+      var $context = $(context),
+        $steps = $context.find('.paragraph--type--step-grid .step');
+
+      $steps.once('stepByStepGridParagraph').each(function (index) {
+        $(this).find('.unit').text(index + 1);
+      });
+
     }
   };
 
