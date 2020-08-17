@@ -1,0 +1,31 @@
+{% if content.field_image[0] %}
+  {% set image_url = file_url(content.field_image[0]['#media'].field_media_image.entity.uri.value) %}
+  {% set image_alt = content.field_image[0]['#media'].field_media_image.alt %}
+{% endif %}
+
+<a class="step" href="{{ content.field_link[0]['#url'] }}">
+  <div class="step-container">
+    <div class="unit-container">
+      <div class="step-text">Step</div>
+      <div class="unit">{{ delta }}</div>
+    </div>
+
+    <div class="inner">
+      {% if image_url %}
+        <div class="image">
+          <img src="{{ image_url }}" alt="{{ image_alt }}">
+        </div>
+      {% endif %}
+      <div class="step-content">
+        {% if content.field_title|field_value is not empty %}
+          <h4 class="header underline">{{ content.field_title }}</h4>
+        {% endif %}
+        <p class="event-description">
+          {% if content.field_caption|field_value is not empty %}
+            {{ content.field_caption|field_value }}
+          {% endif %}
+        </p>
+      </div>
+    </div>
+  </div>
+</a>

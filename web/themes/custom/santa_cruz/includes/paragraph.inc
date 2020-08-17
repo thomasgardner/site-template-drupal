@@ -59,3 +59,15 @@ function santa_cruz_preprocess_paragraph__grid_content_left_item(&$variables)
   }
 }
 
+/**
+ * Implements hook_preprocess_HOOK() for "paragraph".
+ */
+function santa_cruz_preprocess_paragraph__step(&$variables) {
+  $variables['delta'] = NULL;
+  foreach ($variables['paragraph']->getParentEntity()->field_paragraphs->getValue() as $delta => $item) {
+    if ($item['target_id'] === $variables['paragraph']->id()) {
+      $variables['delta'] = $delta + 1;
+      break;
+    }
+  }
+}
