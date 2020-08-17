@@ -131,3 +131,18 @@ if (file_exists($local_settings)) {
  * modifying settings.php.
  */
 $settings['install_profile'] = 'standard';
+
+/**
+ * Force a sub site header/footer elements for debugging by adding
+ * /?force-subsite to a request. Or always add $settings['is_subsite'] = TRUE;
+ * for each sub site.
+ */
+$settings['is_subsite'] = FALSE;
+if (isset($_GET['force-subsite'])) {
+  $settings['is_subsite'] = TRUE;
+}
+
+/**
+ * Uncomment this string for all subsites.
+ */
+//$settings['is_subsite'] = TRUE;

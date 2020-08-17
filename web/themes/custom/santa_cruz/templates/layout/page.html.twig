@@ -59,7 +59,7 @@
             </div>
           </div>
         {% endif %}
-        {% if page.gateway_header %}
+        {% if page.gateway_header and page.is_subsite is null %}
           <div class="gateway-header">
             <div class="grid-container large">
               {{ page.gateway_header }}

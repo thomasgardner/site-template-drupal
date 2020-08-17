@@ -8,6 +8,6 @@
 /**
  * Implements template_preprocess_NODE().
  */
-function pacificsource_preprocess_node(&$variables) {
+function santa_cruz_preprocess_node(&$variables) {
 
 }
