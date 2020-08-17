@@ -14,7 +14,8 @@ libraries-override:
   zurb_foundation/global: false
 
 regions:
-  alerts: 'Alerts'
+  alert_high: 'Alert High'
+  alert_low: 'Alert Low'
   header: 'Header'
   gateway_header: 'Gateway Header'
   subsite_header: 'Subsite Header - Default'

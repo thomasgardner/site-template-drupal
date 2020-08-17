@@ -44,6 +44,10 @@
  */
 #}
 <div id="page">
+  {% if page.alert_low %}
+    {{ page.alert_low }}
+  {% endif %}
+
   {% if page.header or page.gateway_header or page.mobile_header or page.subsite_header or page.subsite_brand_name %}
     <div data-sticky-container>
       <div id="page-header" role="navigation" class="page-header sticky" aria-expanded="false" aria-label="Page header"
@@ -69,6 +73,11 @@
       </div>
     </div>
   {% endif %}
+
+  {% if page.alert_high %}
+    {{ page.alert_high }}
+  {% endif %}
+
   {% if page.hero %}
     {{ page.hero }}
   {% endif %}
@@ -90,6 +99,7 @@
       {{ page.sidebar_first }}
     </div>
   {% endif %}
+
   <div class="page-content pb-0 {{ main_grid }}" id="main-content" role="main">
     <section class="content">
       {% if page.sidebar_first and page.sidebar_second %}
