@@ -117,7 +117,7 @@ function custom_module_block_access(Block $block, $operation, AccountInterface $
   // Hide a sub site "Site branding" block for main website.
   if ($operation == 'view'
     && $block->getPluginId() == 'system_branding_block'
-    && $block->id() == 'santa_cruz_branding') {
+    && $block->id() == 'sitebranding') {
     return AccessResult::forbiddenIf(Settings::get('is_subsite', FALSE) === FALSE)
       ->addCacheableDependency($block);
   }
