@@ -69,7 +69,9 @@
         <div class="mobile-menu">
           {% include '@santa_cruz/includes/static/mobile-menu.html.twig' %}
         </div>
-        {% include '@santa_cruz/includes/static/subsite-header.html.twig' %}
+        {% if page.is_subsite %}
+          {% include '@santa_cruz/includes/static/subsite-header.html.twig' %}
+        {% endif %}
       </div>
     </div>
   {% endif %}
