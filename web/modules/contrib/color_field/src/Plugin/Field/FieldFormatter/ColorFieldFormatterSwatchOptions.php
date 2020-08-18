@@ -6,6 +6,7 @@ use Drupal\color_field\Plugin\Field\FieldType\ColorFieldType;
 use Drupal\Component\Utility\Html;
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\color_field\ColorHex;
+use Drupal\Core\Template\Attribute;
 
 /**
  * Plugin implementation of the color_field swatch formatter.
@@ -43,7 +44,15 @@ class ColorFieldFormatterSwatchOptions extends ColorFieldFormatterSwatch {
         '#height' => is_numeric($settings['height']) ? "{$settings['height']}px" : $settings['height'],
         '#width' => is_numeric($settings['width']) ? "{$settings['width']}px" : $settings['width'],
         '#color' => $this->viewValue($item),
+        '#attributes' => new Attribute([
+          'class' => [
+            "color_field__swatch--{$settings['shape']}",
+          ],
+        ]),
       ];
+      if ($settings['data_attribute']) {
+        $elements[$delta]['#attributes']['data-color'] = $hex;
+      }
     }
 
     return $elements;
