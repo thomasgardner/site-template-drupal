@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'zaporylie\\ComposerDrupalOptimizations\\' => array($vendorDir . '/zaporylie/composer-drupal-optimizations/src'),
+    'phpGPX\\' => array($vendorDir . '/sibyx/phpgpx/src/phpGPX'),
     'lsolesen\\pel\\' => array($vendorDir . '/lsolesen/pel/src'),
     'grasmash\\DrupalSecurityWarning\\' => array($vendorDir . '/grasmash/drupal-security-warning/src'),
     'cweagans\\Composer\\' => array($vendorDir . '/cweagans/composer-patches/src'),
@@ -55,8 +56,10 @@ return array(
     'Symfony\\Bridge\\PsrHttpMessage\\' => array($vendorDir . '/symfony/psr-http-message-bridge'),
     'Stecman\\Component\\Symfony\\Console\\BashCompletion\\' => array($vendorDir . '/stecman/symfony-console-completion/src'),
     'Solarium\\' => array($vendorDir . '/solarium/solarium/src'),
+    'Shapefile\\' => array($vendorDir . '/gasparesganga/php-shapefile/src/Shapefile'),
     'SelfUpdate\\' => array($vendorDir . '/consolidation/self-update/src'),
     'Robo\\' => array($vendorDir . '/consolidation/robo/src'),
+    'ReCaptcha\\' => array($vendorDir . '/google/recaptcha/src/ReCaptcha'),
     'Psy\\' => array($vendorDir . '/psy/psysh/src'),
     'Psr\\Log\\' => array($vendorDir . '/psr/log/Psr/Log'),
     'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-message/src'),
