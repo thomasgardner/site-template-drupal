@@ -54,14 +54,17 @@ content:
     region: content
     label: hidden
     settings:
-      set_marker: '1'
+      set_marker: true
       title: ''
       info_text: ''
-      google_map_settings:
+      use_overridden_map_settings: false
+      common_map: false
+      map_provider_id: google_maps
+      map_provider_settings:
         height: 400px
         width: 100%
         type: ROADMAP
-        zoom: '10'
+        zoom: 10
         maxZoom: 18
         minZoom: 0
         mapTypeControl: 1
@@ -74,12 +77,10 @@ content:
         info_auto_display: 1
         marker_icon_path: ''
         disableAutoPan: 1
-        rotateControl: 0
+        rotateControl: false
         fullscreenControl: 0
         preferScrollingToZooming: 0
         disableDoubleClickZoom: 0
-      use_overridden_map_settings: 0
-      common_map: ''
     third_party_settings:
       fences:
         fences_field_tag: div
@@ -102,6 +103,11 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  sharethis:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
 hidden:
   field_meta_tags: true
   field_section_title: true
