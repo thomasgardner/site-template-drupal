@@ -9,11 +9,7 @@ Custom patch to address Group errors from menus that were created without being 
 Source: patches/group-fatal-errors.patch
 
 
-Group outsiders grants issue.
-Source: patches/group-outsiders-grants.patch
-
-
-Add support for Views Bulk Operations (VBO)
-Source: https://www.drupal.org/files/issues/2018-12-14/group_add-support-for-vbo-2865642-14.patch
+Add support for Bulk Content to Group
+Source: https://www.drupal.org/files/issues/2019-12-13/group_add-support-for-vbo-2865642-22.patch
 
 

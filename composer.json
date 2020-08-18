@@ -503,8 +503,8 @@
         "drupal/fontawesome_menu_icons": "^1.8",
         "drupal/geolocation": "^1.11",
         "drupal/google_analytics": "^3.1",
-        "drupal/group": "^1.0@RC",
-        "drupal/groupmenu": "^1.0@alpha",
+        "drupal/group": "^1.2",
+        "drupal/groupmenu": "^1.0@beta",
         "drupal/gtranslate": "^1.13",
         "drupal/html_title": "^1.0",
         "drupal/imagemagick": "^3.1",
@@ -717,8 +717,7 @@
             "drupal/group": {
                 "Reapply patch from https://www.drupal.org/files/issues/2797793-20.patch manually without db update.": "patches/group-groupmenu-patch-manual-rc5-reroll.patch",
                 "Custom patch to address Group errors from menus that were created without being assigned to Groups.": "patches/group-fatal-errors.patch",
-                "Group outsiders grants issue.": "patches/group-outsiders-grants.patch",
-                "Add support for Views Bulk Operations (VBO)": "https://www.drupal.org/files/issues/2018-12-14/group_add-support-for-vbo-2865642-14.patch"
+                "Add support for Bulk Content to Group": "https://www.drupal.org/files/issues/2019-12-13/group_add-support-for-vbo-2865642-22.patch"
             },
             "drupal/groupmenu": {
                 "UndefinedLinkTemplateException": "https://www.drupal.org/files/issues/2880714.patch",
