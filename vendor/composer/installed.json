@@ -3173,34 +3173,34 @@
     },
     {
         "name": "drupal/captcha",
-        "version": "1.0.0",
-        "version_normalized": "1.0.0.0",
+        "version": "1.1.0",
+        "version_normalized": "1.1.0.0",
         "source": {
             "type": "git",
             "url": "https://git.drupalcode.org/project/captcha.git",
-            "reference": "8.x-1.0"
+            "reference": "8.x-1.1"
         },
         "dist": {
             "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/captcha-8.x-1.0.zip",
-            "reference": "8.x-1.0",
-            "shasum": "1707c67b97a17d701a194e6da86ad9b21631915b"
+            "url": "https://ftp.drupal.org/files/projects/captcha-8.x-1.1.zip",
+            "reference": "8.x-1.1",
+            "shasum": "2eaf6f00ea256652c09f785b26dc933cc5b3dd26"
         },
         "require": {
-            "drupal/core": "*"
+            "drupal/core": "^8.8 || ^9"
         },
         "type": "drupal-module",
         "extra": {
-            "branch-alias": {
-                "dev-1.x": "1.x-dev"
-            },
             "drupal": {
-                "version": "8.x-1.0",
-                "datestamp": "1582292983",
+                "version": "8.x-1.1",
+                "datestamp": "1591160977",
                 "security-coverage": {
                     "status": "covered",
                     "message": "Covered by Drupal's security advisory policy"
                 }
+            },
+            "branch-alias": {
+                "dev-8.x-1.x": "1.x-dev"
             }
         },
         "installation-source": "dist",
@@ -3216,6 +3216,10 @@
             {
                 "name": "elachlan",
                 "homepage": "https://www.drupal.org/user/1021502"
+            },
+            {
+                "name": "japerry",
+                "homepage": "https://www.drupal.org/user/45640"
             },
             {
                 "name": "naveenvalecha",
@@ -3237,7 +3241,8 @@
         "description": "The CAPTCHA module provides this feature to virtually any user facing web form on a Drupal site.",
         "homepage": "https://www.drupal.org/project/captcha",
         "support": {
-            "source": "https://git.drupalcode.org/project/captcha"
+            "source": "https://git.drupalcode.org/project/captcha",
+            "issues": "https://www.drupal.org/project/issues/captcha"
         }
     },
     {
@@ -4208,30 +4213,27 @@
     },
     {
         "name": "drupal/crop",
-        "version": "2.0.0",
-        "version_normalized": "2.0.0.0",
+        "version": "2.1.0",
+        "version_normalized": "2.1.0.0",
         "source": {
             "type": "git",
             "url": "https://git.drupalcode.org/project/crop.git",
-            "reference": "8.x-2.0"
+            "reference": "8.x-2.1"
         },
         "dist": {
             "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/crop-8.x-2.0.zip",
-            "reference": "8.x-2.0",
-            "shasum": "7e948d35f5d8c0a24515d3b7e37391da4d0b19d8"
+            "url": "https://ftp.drupal.org/files/projects/crop-8.x-2.1.zip",
+            "reference": "8.x-2.1",
+            "shasum": "c03541907d59874ca8a81f574258f6c0de8cbdc8"
         },
         "require": {
-            "drupal/core": "^8.7.7 || ^9"
+            "drupal/core": "^8.8 || ^9"
         },
         "type": "drupal-module",
         "extra": {
-            "branch-alias": {
-                "dev-2.x": "2.x-dev"
-            },
             "drupal": {
-                "version": "8.x-2.0",
-                "datestamp": "1578492183",
+                "version": "8.x-2.1",
+                "datestamp": "1585251827",
                 "security-coverage": {
                     "status": "covered",
                     "message": "Covered by Drupal's security advisory policy"
@@ -5836,21 +5838,21 @@
     },
     {
         "name": "drupal/focal_point",
-        "version": "1.2.0",
-        "version_normalized": "1.2.0.0",
+        "version": "1.4.0",
+        "version_normalized": "1.4.0.0",
         "source": {
             "type": "git",
             "url": "https://git.drupalcode.org/project/focal_point.git",
-            "reference": "8.x-1.2"
+            "reference": "8.x-1.4"
         },
         "dist": {
             "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/focal_point-8.x-1.2.zip",
-            "reference": "8.x-1.2",
-            "shasum": "b274a5f4484ce99dece492dc7ae7149b34982244"
+            "url": "https://ftp.drupal.org/files/projects/focal_point-8.x-1.4.zip",
+            "reference": "8.x-1.4",
+            "shasum": "8e377f61d0f590f7f89663ea3e841e56a3c14f5c"
         },
         "require": {
-            "drupal/core": "*",
+            "drupal/core": "^8 || ^9",
             "drupal/crop": "*"
         },
         "require-dev": {
@@ -5858,12 +5860,9 @@
         },
         "type": "drupal-module",
         "extra": {
-            "branch-alias": {
-                "dev-1.x": "1.x-dev"
-            },
             "drupal": {
-                "version": "8.x-1.2",
-                "datestamp": "1569333485",
+                "version": "8.x-1.4",
+                "datestamp": "1586396577",
                 "security-coverage": {
                     "status": "covered",
                     "message": "Covered by Drupal's security advisory policy"
