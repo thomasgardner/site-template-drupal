@@ -23,10 +23,11 @@ class AssignToGroup extends ViewsBulkOperationsActionBase {
    * {@inheritdoc}
    */
   public function execute(NodeInterface $node = NULL) {
-    if ($node === NULL || empty($this->context['arguments'])) {
+    $params = $this->context['redirect_url']->getRouteParameters();
+    if ($node === NULL || !in_array('group', array_keys($params))) {
       return;
     }
-    $group_id = $this->context['arguments'][0];
+    $group_id = $this->context['redirect_url']->getRouteParameters()['group'];
     /** @var Group $group */
     $group = \Drupal::entityTypeManager()
       ->getStorage('group')
@@ -68,7 +69,7 @@ class AssignToGroup extends ViewsBulkOperationsActionBase {
    */
   public function access($object, AccountInterface $account = NULL, $return_as_object = FALSE) {
     $current_user = \Drupal::currentUser();
-    $group_id = $this->context['arguments'][0];
+    $group_id = $this->context['redirect_url']->getRouteParameters()['group'];
     /** @var Group $group */
     $group = \Drupal::entityTypeManager()
       ->getStorage('group')

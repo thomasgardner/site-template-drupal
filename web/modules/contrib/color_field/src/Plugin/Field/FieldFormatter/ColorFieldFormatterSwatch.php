@@ -7,6 +7,7 @@ use Drupal\Core\Field\FormatterBase;
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\color_field\ColorHex;
+use Drupal\Core\Template\Attribute;
 
 /**
  * Plugin implementation of the color_field swatch formatter.
@@ -31,6 +32,7 @@ class ColorFieldFormatterSwatch extends FormatterBase {
       'width' => 50,
       'height' => 50,
       'opacity' => TRUE,
+      'data_attribute' => FALSE,
     ] + parent::defaultSettings();
   }
 
@@ -54,7 +56,7 @@ class ColorFieldFormatterSwatch extends FormatterBase {
       '#title' => $this->t('Width'),
       '#default_value' => $this->getSetting('width'),
       '#min' => 1,
-      $this->t('Defaults to pixels (px) if a number is entered, otherwise, you can enter any unit (ie %, em, vw)')
+      '#description' => $this->t('Defaults to pixels (px) if a number is entered, otherwise, you can enter any unit (ie %, em, vw)'),
     ];
     $elements['height'] = [
       '#type' => 'textfield',
@@ -71,6 +73,13 @@ class ColorFieldFormatterSwatch extends FormatterBase {
         '#default_value' => $this->getSetting('opacity'),
       ];
     }
+
+    $elements['data_attribute'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Use HTML5 data attribute'),
+      '#description' => $this->t('Render a data-color HTML 5 data attribute to allow css selectors based on color'),
+      '#default_value' => $this->getSetting('data_attribute'),
+    ];
 
     return $elements;
   }
@@ -119,6 +128,10 @@ class ColorFieldFormatterSwatch extends FormatterBase {
       $summary[] = $this->t('Display with opacity.');
     }
 
+    if ($settings['data_attribute']) {
+      $summary[] = $this->t('Use HTML5 data attribute.');
+    }
+
     return $summary;
   }
 
@@ -139,7 +152,17 @@ class ColorFieldFormatterSwatch extends FormatterBase {
         '#shape' => $settings['shape'],
         '#width' => is_numeric($settings['width']) ? "{$settings['width']}px" : $settings['width'],
         '#height' => is_numeric($settings['height']) ? "{$settings['height']}px" : $settings['height'],
+        '#attributes' => new Attribute([
+          'class' => [
+            'color_field__swatch',
+            "color_field__swatch--{$settings['shape']}",
+          ],
+        ]),
       ];
+      if ($settings['data_attribute']) {
+        $color = new ColorHex($item->color, $item->opacity);
+        $elements[$delta]['#attributes']['data-color'] = $color->toString(FALSE);
+      }
     }
 
     return $elements;

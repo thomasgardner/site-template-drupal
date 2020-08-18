@@ -39,6 +39,10 @@ class ComposerStaticInitDrupal8
         array (
             'zaporylie\\ComposerDrupalOptimizations\\' => 38,
         ),
+        'p' => 
+        array (
+            'phpGPX\\' => 7,
+        ),
         'l' => 
         array (
             'lsolesen\\pel\\' => 13,
@@ -110,11 +114,13 @@ class ComposerStaticInitDrupal8
             'Symfony\\Bridge\\PsrHttpMessage\\' => 30,
             'Stecman\\Component\\Symfony\\Console\\BashCompletion\\' => 49,
             'Solarium\\' => 9,
+            'Shapefile\\' => 10,
             'SelfUpdate\\' => 11,
         ),
         'R' => 
         array (
             'Robo\\' => 5,
+            'ReCaptcha\\' => 10,
         ),
         'P' => 
         array (
@@ -211,6 +217,10 @@ class ComposerStaticInitDrupal8
         'zaporylie\\ComposerDrupalOptimizations\\' => 
         array (
             0 => __DIR__ . '/..' . '/zaporylie/composer-drupal-optimizations/src',
+        ),
+        'phpGPX\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX',
         ),
         'lsolesen\\pel\\' => 
         array (
@@ -404,6 +414,10 @@ class ComposerStaticInitDrupal8
         array (
             0 => __DIR__ . '/..' . '/solarium/solarium/src',
         ),
+        'Shapefile\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/gasparesganga/php-shapefile/src/Shapefile',
+        ),
         'SelfUpdate\\' => 
         array (
             0 => __DIR__ . '/..' . '/consolidation/self-update/src',
@@ -411,6 +425,10 @@ class ComposerStaticInitDrupal8
         'Robo\\' => 
         array (
             0 => __DIR__ . '/..' . '/consolidation/robo/src',
+        ),
+        'ReCaptcha\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha',
         ),
         'Psy\\' => 
         array (
@@ -4551,6 +4569,15 @@ class ComposerStaticInitDrupal8
         'Psy\\VersionUpdater\\GitHubChecker' => __DIR__ . '/..' . '/psy/psysh/src/VersionUpdater/GitHubChecker.php',
         'Psy\\VersionUpdater\\IntervalChecker' => __DIR__ . '/..' . '/psy/psysh/src/VersionUpdater/IntervalChecker.php',
         'Psy\\VersionUpdater\\NoopChecker' => __DIR__ . '/..' . '/psy/psysh/src/VersionUpdater/NoopChecker.php',
+        'ReCaptcha\\ReCaptcha' => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha/ReCaptcha.php',
+        'ReCaptcha\\RequestMethod' => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha/RequestMethod.php',
+        'ReCaptcha\\RequestMethod\\Curl' => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha/RequestMethod/Curl.php',
+        'ReCaptcha\\RequestMethod\\CurlPost' => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha/RequestMethod/CurlPost.php',
+        'ReCaptcha\\RequestMethod\\Post' => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha/RequestMethod/Post.php',
+        'ReCaptcha\\RequestMethod\\Socket' => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha/RequestMethod/Socket.php',
+        'ReCaptcha\\RequestMethod\\SocketPost' => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha/RequestMethod/SocketPost.php',
+        'ReCaptcha\\RequestParameters' => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha/RequestParameters.php',
+        'ReCaptcha\\Response' => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha/Response.php',
         'Robo\\Application' => __DIR__ . '/..' . '/consolidation/robo/src/Application.php',
         'Robo\\ClassDiscovery\\AbstractClassDiscovery' => __DIR__ . '/..' . '/consolidation/robo/src/ClassDiscovery/AbstractClassDiscovery.php',
         'Robo\\ClassDiscovery\\ClassDiscoveryInterface' => __DIR__ . '/..' . '/consolidation/robo/src/ClassDiscovery/ClassDiscoveryInterface.php',
@@ -4725,6 +4752,19 @@ class ComposerStaticInitDrupal8
         'Robo\\Tasks' => __DIR__ . '/..' . '/consolidation/robo/src/Tasks.php',
         'SelfUpdate\\SelfUpdateCommand' => __DIR__ . '/..' . '/consolidation/self-update/src/SelfUpdateCommand.php',
         'SessionUpdateTimestampHandlerInterface' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/SessionUpdateTimestampHandlerInterface.php',
+        'Shapefile\\Geometry\\Geometry' => __DIR__ . '/..' . '/gasparesganga/php-shapefile/src/Shapefile/Geometry/Geometry.php',
+        'Shapefile\\Geometry\\GeometryCollection' => __DIR__ . '/..' . '/gasparesganga/php-shapefile/src/Shapefile/Geometry/GeometryCollection.php',
+        'Shapefile\\Geometry\\Linestring' => __DIR__ . '/..' . '/gasparesganga/php-shapefile/src/Shapefile/Geometry/Linestring.php',
+        'Shapefile\\Geometry\\MultiLinestring' => __DIR__ . '/..' . '/gasparesganga/php-shapefile/src/Shapefile/Geometry/MultiLinestring.php',
+        'Shapefile\\Geometry\\MultiPoint' => __DIR__ . '/..' . '/gasparesganga/php-shapefile/src/Shapefile/Geometry/MultiPoint.php',
+        'Shapefile\\Geometry\\MultiPolygon' => __DIR__ . '/..' . '/gasparesganga/php-shapefile/src/Shapefile/Geometry/MultiPolygon.php',
+        'Shapefile\\Geometry\\Point' => __DIR__ . '/..' . '/gasparesganga/php-shapefile/src/Shapefile/Geometry/Point.php',
+        'Shapefile\\Geometry\\Polygon' => __DIR__ . '/..' . '/gasparesganga/php-shapefile/src/Shapefile/Geometry/Polygon.php',
+        'Shapefile\\Shapefile' => __DIR__ . '/..' . '/gasparesganga/php-shapefile/src/Shapefile/Shapefile.php',
+        'Shapefile\\ShapefileAutoloader' => __DIR__ . '/..' . '/gasparesganga/php-shapefile/src/Shapefile/ShapefileAutoloader.php',
+        'Shapefile\\ShapefileException' => __DIR__ . '/..' . '/gasparesganga/php-shapefile/src/Shapefile/ShapefileException.php',
+        'Shapefile\\ShapefileReader' => __DIR__ . '/..' . '/gasparesganga/php-shapefile/src/Shapefile/ShapefileReader.php',
+        'Shapefile\\ShapefileWriter' => __DIR__ . '/..' . '/gasparesganga/php-shapefile/src/Shapefile/ShapefileWriter.php',
         'Solarium\\Client' => __DIR__ . '/..' . '/solarium/solarium/src/Client.php',
         'Solarium\\Component\\AbstractComponent' => __DIR__ . '/..' . '/solarium/solarium/src/Component/AbstractComponent.php',
         'Solarium\\Component\\ComponentAwareQueryInterface' => __DIR__ . '/..' . '/solarium/solarium/src/Component/ComponentAwareQueryInterface.php',
@@ -5041,6 +5081,7 @@ class ComposerStaticInitDrupal8
         'Solarium\\Support\\DataFixtures\\FixtureLoader' => __DIR__ . '/..' . '/solarium/solarium/src/Support/DataFixtures/FixtureLoader.php',
         'Solarium\\Support\\DataFixtures\\Loader' => __DIR__ . '/..' . '/solarium/solarium/src/Support/DataFixtures/Loader.php',
         'Solarium\\Support\\DataFixtures\\Purger' => __DIR__ . '/..' . '/solarium/solarium/src/Support/DataFixtures/Purger.php',
+        'Spoons\\ScriptHandler' => __DIR__ . '/../..' . '/web/modules/contrib/devel/.spoons/ScriptHandler.php',
         'Stack\\Builder' => __DIR__ . '/..' . '/stack/builder/src/Stack/Builder.php',
         'Stack\\StackedHttpKernel' => __DIR__ . '/..' . '/stack/builder/src/Stack/StackedHttpKernel.php',
         'Stecman\\Component\\Symfony\\Console\\BashCompletion\\Completion' => __DIR__ . '/..' . '/stecman/symfony-console-completion/src/Completion.php',
@@ -6917,6 +6958,41 @@ class ComposerStaticInitDrupal8
         'lsolesen\\pel\\PelTiff' => __DIR__ . '/..' . '/lsolesen/pel/src/PelTiff.php',
         'lsolesen\\pel\\PelUnexpectedFormatException' => __DIR__ . '/..' . '/lsolesen/pel/src/PelUnexpectedFormatException.php',
         'lsolesen\\pel\\PelWrongComponentCountException' => __DIR__ . '/..' . '/lsolesen/pel/src/PelWrongComponentCountException.php',
+        'phpGPX\\Helpers\\DateTimeHelper' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Helpers/DateTimeHelper.php',
+        'phpGPX\\Helpers\\GeoHelper' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Helpers/GeoHelper.php',
+        'phpGPX\\Helpers\\SerializationHelper' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Helpers/SerializationHelper.php',
+        'phpGPX\\Models\\Bounds' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Models/Bounds.php',
+        'phpGPX\\Models\\Collection' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Models/Collection.php',
+        'phpGPX\\Models\\Copyright' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Models/Copyright.php',
+        'phpGPX\\Models\\Email' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Models/Email.php',
+        'phpGPX\\Models\\Extensions' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Models/Extensions.php',
+        'phpGPX\\Models\\Extensions\\AbstractExtension' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Models/Extensions/AbstractExtension.php',
+        'phpGPX\\Models\\Extensions\\TrackPointExtension' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Models/Extensions/TrackPointExtension.php',
+        'phpGPX\\Models\\GpxFile' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Models/GpxFile.php',
+        'phpGPX\\Models\\Link' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Models/Link.php',
+        'phpGPX\\Models\\Metadata' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Models/Metadata.php',
+        'phpGPX\\Models\\Person' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Models/Person.php',
+        'phpGPX\\Models\\Point' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Models/Point.php',
+        'phpGPX\\Models\\Route' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Models/Route.php',
+        'phpGPX\\Models\\Segment' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Models/Segment.php',
+        'phpGPX\\Models\\Stats' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Models/Stats.php',
+        'phpGPX\\Models\\StatsCalculator' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Models/StatsCalculator.php',
+        'phpGPX\\Models\\Summarizable' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Models/Summarizable.php',
+        'phpGPX\\Models\\Track' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Models/Track.php',
+        'phpGPX\\Parsers\\BoundsParser' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Parsers/BoundsParser.php',
+        'phpGPX\\Parsers\\CopyrightParser' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Parsers/CopyrightParser.php',
+        'phpGPX\\Parsers\\EmailParser' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Parsers/EmailParser.php',
+        'phpGPX\\Parsers\\ExtensionParser' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Parsers/ExtensionParser.php',
+        'phpGPX\\Parsers\\Extensions\\TrackPointExtensionParser' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Parsers/Extensions/TrackPointExtensionParser.php',
+        'phpGPX\\Parsers\\LinkParser' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Parsers/LinkParser.php',
+        'phpGPX\\Parsers\\MetadataParser' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Parsers/MetadataParser.php',
+        'phpGPX\\Parsers\\PersonParser' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Parsers/PersonParser.php',
+        'phpGPX\\Parsers\\PointParser' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Parsers/PointParser.php',
+        'phpGPX\\Parsers\\RouteParser' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Parsers/RouteParser.php',
+        'phpGPX\\Parsers\\SegmentParser' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Parsers/SegmentParser.php',
+        'phpGPX\\Parsers\\TrackParser' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Parsers/TrackParser.php',
+        'phpGPX\\Parsers\\WaypointParser' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Parsers/WaypointParser.php',
+        'phpGPX\\phpGPX' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/phpGPX.php',
         'zaporylie\\ComposerDrupalOptimizations\\Cache' => __DIR__ . '/..' . '/zaporylie/composer-drupal-optimizations/src/Cache.php',
         'zaporylie\\ComposerDrupalOptimizations\\Plugin' => __DIR__ . '/..' . '/zaporylie/composer-drupal-optimizations/src/Plugin.php',
         'zaporylie\\ComposerDrupalOptimizations\\TruncatedComposerRepository' => __DIR__ . '/..' . '/zaporylie/composer-drupal-optimizations/src/TruncatedComposerRepository.php',
