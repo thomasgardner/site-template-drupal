@@ -423,3 +423,37 @@ function custom_module_entity_presave(EntityInterface $entity) {
     }
   }
 }
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function custom_module_preprocess_paragraph(&$variables) {
+  if (isset($variables['paragraph'])
+    && $variables['paragraph']->getType() == 'from_library'
+    && $variables['paragraph']->hasField('field_reusable_paragraph')
+    && $variables['paragraph']->field_reusable_paragraph->entity) {
+
+    $library_item = $variables['paragraph']->field_reusable_paragraph->entity;
+
+    // Only replace the content if access is allowed to the library. Access
+    // cacheability metadata is already returned by the original widget in case
+    // access is not allowed.
+    if ($library_item->access('view')) {
+      $view_builder = \Drupal::entityTypeManager()
+        ->getViewBuilder('paragraphs_library_item');
+      $library_item_render_array = $view_builder->view($library_item, $variables['elements']['field_reusable_paragraph'][0]['#view_mode']);
+
+      // This will remove all fields other then field_reusable_paragraph.
+      $build = $view_builder->build($library_item_render_array);
+
+      // In case, if the deprecated "Field Layout" module provided by Drupal core is enabled.
+      if (isset($build['_field_layout'])) {
+        $build = $build['_field_layout']['content'];
+      }
+
+      if (!empty($build['paragraphs'])) {
+        $variables['content'] = $build['paragraphs'];
+      }
+    }
+  }
+}
