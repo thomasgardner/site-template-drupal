@@ -16,6 +16,7 @@ dependencies:
     - field.field.node.podcast.field_meta_tags
     - field.field.node.podcast.field_soundcloud
     - field.field.node.podcast.field_subtitle_formatted
+    - field.field.node.podcast.field_teaser_image
     - field.field.node.podcast.field_teaser_txt
     - node.type.podcast
   module:
@@ -199,5 +200,6 @@ hidden:
   field_link: true
   field_meta_tags: true
   field_soundcloud: true
+  field_teaser_image: true
   field_teaser_txt: true
   langcode: true
