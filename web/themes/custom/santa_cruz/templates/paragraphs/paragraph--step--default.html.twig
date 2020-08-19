@@ -1,6 +1,7 @@
 {% if content.field_image[0] %}
-  {% set image_url = file_url(content.field_image[0]['#media'].field_media_image.entity.uri.value) %}
-  {% set image_alt = content.field_image[0]['#media'].field_media_image.alt %}
+  {% set image_url = file_url(content.field_image[0]['#item'].entity.uri.value|image_style('step_by_step')) %}
+  {% set image_title = content.field_image[0]['#item'].title %}
+  {% set image_alt = content.field_image[0]['#item'].alt %}
 {% endif %}
 
 <a class="step" href="{{ content.field_link[0]['#url'] }}">
@@ -13,7 +14,7 @@
     <div class="inner">
       {% if image_url %}
         <div class="image">
-          <img src="{{ image_url }}" alt="{{ image_alt }}">
+          <img src="{{ image_url }}" alt="{{ image_alt }}" title="{{ image_title }}">
         </div>
       {% endif %}
       <div class="step-content">

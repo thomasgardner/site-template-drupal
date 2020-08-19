@@ -7,7 +7,7 @@ dependencies:
     - field.field.paragraph.feature_slideshow_item.field_links
     - field.field.paragraph.feature_slideshow_item.field_media
     - field.field.paragraph.feature_slideshow_item.field_title
-    - image.style.default
+    - image.style.feature_slideshow
     - paragraphs.paragraphs_type.feature_slideshow_item
   module:
     - fences
@@ -48,7 +48,7 @@ content:
     weight: 0
     label: hidden
     settings:
-      image_style: default
+      image_style: feature_slideshow
       image_link: ''
     third_party_settings:
       fences:

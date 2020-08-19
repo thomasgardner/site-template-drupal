@@ -9,7 +9,7 @@ dependencies:
     - field.field.paragraph.profile_card.field_link
     - field.field.paragraph.profile_card.field_subtitle
     - field.field.paragraph.profile_card.field_title
-    - image.style.sidebar_profile
+    - image.style.profile_card_single
     - paragraphs.paragraphs_type.profile_card
   module:
     - fences
@@ -38,7 +38,7 @@ content:
     weight: 4
     label: hidden
     settings:
-      image_style: sidebar_profile
+      image_style: profile_card_single
       image_link: ''
     third_party_settings:
       fences:

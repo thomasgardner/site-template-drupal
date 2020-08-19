@@ -5,7 +5,7 @@ dependencies:
   module:
     - focal_point
 name: horizontal_styling
-label: 'Horizontal Styling (600x400)'
+label: 'Zzz - Horizontal Styling (600x400)'
 effects:
   25923e24-b20e-4ab5-b96b-e5d5fb618f2e:
     uuid: 25923e24-b20e-4ab5-b96b-e5d5fb618f2e

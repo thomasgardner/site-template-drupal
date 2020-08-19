@@ -1,9 +1,5 @@
 {% set display_mode = content.field_feature_image_display_mode[0]['#markup'] %}
 
-{% set image_url = file_url(content.field_media[0]['#media'].field_media_image.entity.uri.value|image_style('header_banner')) %}
-{% set image_title = content.field_media[0]['#media'].field_media_image[0].title %}
-{% set image_alt = content.field_media[0]['#media'].field_media_image[0].alt %}
-
 {% set classes = [
   'paragraph',
   'paragraph--type--' ~ paragraph.bundle|clean_id,
@@ -20,6 +16,11 @@
   <section{{ attributes.addClass(classes) }} aria-label="content row">
     {% block content %}
       {% if display_mode == 'Split alignment' %}
+
+        {% set image_url = file_url(content.field_media[0]['#item'].entity.uri.value|image_style('feature_image')) %}
+        {% set image_title = content.field_media[0]['#item'].title %}
+        {% set image_alt = content.field_media[0]['#item'].alt %}
+
         <div class="grid-container large">
           <div class="hero-container">
             <div id="hero" class="hero hero-text-left">
@@ -45,6 +46,11 @@
           </div>
         </div>
       {% else %}
+
+        {% set image_url = file_url(content.field_media[0]['#item'].entity.uri.value|image_style('feature_image_alternate')) %}
+        {% set image_title = content.field_media[0]['#item'].title %}
+        {% set image_alt = content.field_media[0]['#item'].alt %}
+
         <div class="hero-container">
           <div id="hero" class="hero hero-text-right">
             <div class="angle"></div>

@@ -1,0 +1,15 @@
+uuid: e5c6dea6-89be-43fa-b43b-7475887982f2
+langcode: en
+status: true
+dependencies: {  }
+name: generic_card
+label: 'Generic Card'
+effects:
+  52ca6b48-f556-436a-86cb-cf8995b0764c:
+    uuid: 52ca6b48-f556-436a-86cb-cf8995b0764c
+    id: image_scale
+    weight: 2
+    data:
+      width: 1440
+      height: null
+      upscale: false

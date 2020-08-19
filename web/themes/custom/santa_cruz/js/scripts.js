@@ -45,6 +45,7 @@
   };
 
   /**
+   * Profile Owl.
    *
    * @type {{attach: Drupal.behaviors.profileOwl.attach}}
    */
