@@ -22,28 +22,32 @@
    *
    * @type {{attach: Drupal.behaviors.featureSlideshow.attach}}
    */
-  // Drupal.behaviors.featureSlideshow = {
-  //   attach: function (context, settings) {
-  //     var $context = $(context);
-  //
-  //     $context.find('.owl-carousel').once('featureSlideshow').each(function () {
-  //       $(this).owlCarousel({
-  //         autoHeight: true,
-  //         nav: true,
-  //         dots: false,
-  //         responsive: {
-  //           0: {
-  //             items: 1
-  //           },
-  //           900: {
-  //             items: 3
-  //           }
-  //         }
-  //       });
-  //     });
-  //   }
-  // };
+  Drupal.behaviors.featureSlideshow = {
+    attach: function (context, settings) {
+      var $context = $(context);
 
+      $context.find('.featured-slideshow.owl-carousel').once('featureSlideshow').each(function () {
+        $(this).owlCarousel({
+          autoHeight: true,
+          nav: true,
+          dots: false,
+          responsive: {
+            0: {
+              items: 1
+            },
+            900: {
+              items: 3
+            }
+          }
+        });
+      });
+    }
+  };
+
+  /**
+   *
+   * @type {{attach: Drupal.behaviors.profileOwl.attach}}
+   */
   Drupal.behaviors.profileOwl = {
     attach: function (context, settings) {
       var $context = $(context);
@@ -55,24 +59,22 @@
           dots: false,
           items: 3,
           loop: true,
-          responsive:{
-            0:{
-              items:1
+          responsive: {
+            0: {
+              items: 1
             },
-            640:{
-              items:2
+            640: {
+              items: 2
             },
-            1024:{
-              items:3,
-              autoWidth: false,
-            },
+            1024: {
+              items: 3,
+              autoWidth: false
+            }
           }
         });
       });
     }
   };
-
-
 
   // $(".image-gallery-carousel").owlCarousel({
   //   margin: 6,
@@ -109,7 +111,10 @@
       });
 
       $subMenuToggleLinks.once('addToggleAttributes').each(function () {
-        $(this).attr({'data-toggle': 'filter-form', 'aria-controls': 'filter-form'}).wrapInner('<strong></strong>');
+        $(this).attr({
+          'data-toggle': 'filter-form',
+          'aria-controls': 'filter-form'
+        }).wrapInner('<strong></strong>');
       });
     }
   };
