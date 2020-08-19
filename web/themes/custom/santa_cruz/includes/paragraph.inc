@@ -140,14 +140,23 @@ function santa_cruz_preprocess_paragraph__factoid_card(&$variables) {
     ->getValue();
   foreach ($neighbors as $delta => $item) {
     if ($item['target_id'] === $variables['paragraph']->id()) {
-      $delta_altered = $delta + 1;
       $variables['color'] = 'green';
 
-      if ($delta_altered % 3 == 0) {
-        $variables['color'] = 'blue';
-      }
-      elseif ($delta_altered % 2 == 0) {
-        $variables['color'] = 'pink';
+      switch ($delta) {
+        case 1:
+          $variables['color'] = 'pink';
+
+          break;
+
+        case 2:
+          $variables['color'] = 'blue';
+
+          break;
+
+        case 3:
+          $variables['color'] = 'secondary-blue';
+
+          break;
       }
 
       break;
