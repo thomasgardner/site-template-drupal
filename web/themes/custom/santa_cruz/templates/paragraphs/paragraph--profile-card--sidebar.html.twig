@@ -19,9 +19,11 @@
       class="profile sidebar"
       target="{{ content.field_link[0]['#url'].isExternal() ? '_blank' : '' }}">
     {% endif %}
-    <div class="image">
-      <img src="{{ image_url }}" title="{{ image_title }}" alt="{{ image_alt }}">
-    </div>
+    {% if image_url %}
+      <div class="image">
+        <img src="{{ image_url }}" title="{{ image_title }}" alt="{{ image_alt }}">
+      </div>
+    {% endif %}
     <div class="profile-info">
       <h4 class="underline tighten">{{ content.field_title[0]['#context'].value }}</h4>
       <p>{{ content.field_subtitle[0]['#context'].value }}</p>

@@ -71,9 +71,11 @@
   {% if content.field_teaser_image[0] %}
     {% set image_url = file_url(content.field_teaser_image[0]['#media'].field_media_image.entity.uri.value) %}
     {% set image_alt = content.field_teaser_image[0]['#media'].field_media_image.alt %}
+    {% set image_title = content.field_teaser_image[0]['#media'].field_media_image.title %}
+
     {% if image_url %}
       <div class="image">
-        <img alt="{{ image_alt }}" src="{{ image_url }}">
+        <img alt="{{ image_alt }}" title="{{ image_title }}" src="{{ image_url }}">
       </div>
     {% endif %}
   {% endif %}
