@@ -6,11 +6,13 @@ dependencies:
     - field.field.paragraph.ribbon_image.field_image
     - field.field.paragraph.ribbon_image.field_link
     - field.field.paragraph.ribbon_image.field_title
+    - image.style.ribbon
     - paragraphs.paragraphs_type.ribbon_image
   module:
     - custom_module
     - fences
     - field_group
+    - media
 third_party_settings:
   field_group:
     group_ribbon:
@@ -78,8 +80,8 @@ content:
     weight: 1
     label: hidden
     settings:
-      view_mode: default
-      link: false
+      image_style: ribbon
+      image_link: ''
     third_party_settings:
       fences:
         fences_field_tag: div
@@ -88,7 +90,7 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: none
         fences_label_classes: ''
-    type: entity_reference_entity_view
+    type: media_thumbnail
     region: content
   field_link:
     weight: 3

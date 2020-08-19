@@ -8,6 +8,7 @@ dependencies:
     - field.field.paragraph.profile_card__fullwidth.field_link
     - field.field.paragraph.profile_card__fullwidth.field_pre_title
     - field.field.paragraph.profile_card__fullwidth.field_title
+    - image.style.profile_card_featured
     - paragraphs.paragraphs_type.profile_card__fullwidth
   module:
     - fences
@@ -37,7 +38,7 @@ content:
     weight: 4
     label: hidden
     settings:
-      image_style: ''
+      image_style: profile_card_featured
       image_link: ''
     third_party_settings:
       fences:

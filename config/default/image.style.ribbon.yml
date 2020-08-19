@@ -1,0 +1,15 @@
+uuid: d8b2d8f8-be0d-4919-8d97-393f197e4bce
+langcode: en
+status: true
+dependencies: {  }
+name: ribbon
+label: Ribbon
+effects:
+  285e0f8b-9c4a-4ebe-bddb-2fd8d488df61:
+    uuid: 285e0f8b-9c4a-4ebe-bddb-2fd8d488df61
+    id: image_scale
+    weight: 1
+    data:
+      width: 1440
+      height: null
+      upscale: false

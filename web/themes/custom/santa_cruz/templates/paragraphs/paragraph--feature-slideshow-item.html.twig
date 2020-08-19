@@ -7,7 +7,7 @@
   'featured-slide'
 ] %}
 
-{% set image_url = file_url(content.field_media[0]['#item'].entity.uri.value|image_style('header_banner')) %}
+{% set image_url = file_url(content.field_media[0]['#item'].entity.uri.value|image_style('feature_slideshow')) %}
 
 {% block paragraph %}
   {% block content %}

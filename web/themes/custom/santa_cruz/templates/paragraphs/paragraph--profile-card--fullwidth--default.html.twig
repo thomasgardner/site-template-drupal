@@ -1,4 +1,4 @@
-{% set image_url = file_url(content.field_image[0]['#item'].entity.uri.value) %}
+{% set image_url = file_url(content.field_image[0]['#item'].entity.uri.value|image_style('profile_card_featured')) %}
 {% set image_title = content.field_image[0]['#item'].title %}
 {% set image_alt = content.field_image[0]['#item'].alt %}
 

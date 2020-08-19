@@ -1,0 +1,15 @@
+uuid: 922108dc-2a41-4b2f-801a-b2393bfc5241
+langcode: en
+status: true
+dependencies: {  }
+name: feature_image_alternate
+label: 'Feature Image Alternate'
+effects:
+  ed4a36f4-063e-4d6b-9def-ed27a41f74d6:
+    uuid: ed4a36f4-063e-4d6b-9def-ed27a41f74d6
+    id: image_scale
+    weight: 2
+    data:
+      width: 1440
+      height: null
+      upscale: false

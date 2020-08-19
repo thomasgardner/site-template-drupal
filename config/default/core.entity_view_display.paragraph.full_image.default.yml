@@ -8,6 +8,7 @@ dependencies:
     - field.field.paragraph.full_image.field_link
     - field.field.paragraph.full_image.field_subtitle
     - field.field.paragraph.full_image.field_title
+    - image.style.full_width
     - paragraphs.paragraphs_type.full_image
   module:
     - custom_module
@@ -98,7 +99,7 @@ content:
     weight: 3
     label: hidden
     settings:
-      image_style: ''
+      image_style: full_width
       image_link: ''
     third_party_settings:
       fences:

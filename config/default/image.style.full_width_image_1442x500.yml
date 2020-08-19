@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 name: full_width_image_1442x500
-label: 'Full width image (1442x500)'
+label: 'Zzz - Full width Image (1442x500)'
 effects:
   addce1ee-64c9-4052-ad03-06dcaabea8ad:
     uuid: addce1ee-64c9-4052-ad03-06dcaabea8ad

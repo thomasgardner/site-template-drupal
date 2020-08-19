@@ -22,28 +22,32 @@
    *
    * @type {{attach: Drupal.behaviors.featureSlideshow.attach}}
    */
-  // Drupal.behaviors.featureSlideshow = {
-  //   attach: function (context, settings) {
-  //     var $context = $(context);
-  //
-  //     $context.find('.owl-carousel').once('featureSlideshow').each(function () {
-  //       $(this).owlCarousel({
-  //         autoHeight: true,
-  //         nav: true,
-  //         dots: false,
-  //         responsive: {
-  //           0: {
-  //             items: 1
-  //           },
-  //           900: {
-  //             items: 3
-  //           }
-  //         }
-  //       });
-  //     });
-  //   }
-  // };
+  Drupal.behaviors.featureSlideshow = {
+    attach: function (context, settings) {
+      var $context = $(context);
 
+      $context.find('.featured-slideshow.owl-carousel.owl-carousel').once('featureSlideshow').each(function () {
+        $(this).owlCarousel({
+          autoHeight: true,
+          nav: true,
+          dots: false,
+          responsive: {
+            0: {
+              items: 1
+            },
+            900: {
+              items: 3
+            }
+          }
+        });
+      });
+    }
+  };
+
+  /**
+   * Profile Owl.
+   * @type {{attach: Drupal.behaviors.profileOwl.attach}}
+   */
   Drupal.behaviors.profileOwl = {
     attach: function (context, settings) {
       var $context = $(context);
@@ -64,14 +68,19 @@
             },
             1024: {
               items: 3,
-              autoWidth: false,
-            },
+              autoWidth: false
+            }
           }
         });
       });
     }
   };
 
+  /**
+   * Gallery Owl.
+   *
+   * @type {{attach: Drupal.behaviors.galleryOwl.attach}}
+   */
   Drupal.behaviors.galleryOwl = {
     attach: function (context, settings) {
       var $context = $(context);
@@ -92,7 +101,7 @@
             1024: {
               autoWidth: true,
               autoHeight: false
-            },
+            }
           }
         });
       });
@@ -122,7 +131,10 @@
       });
 
       $subMenuToggleLinks.once('addToggleAttributes').each(function () {
-        $(this).attr({'data-toggle': 'filter-form', 'aria-controls': 'filter-form'}).wrapInner('<strong></strong>');
+        $(this).attr({
+          'data-toggle': 'filter-form',
+          'aria-controls': 'filter-form'
+        }).wrapInner('<strong></strong>');
       });
     }
   };

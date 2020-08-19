@@ -10,10 +10,12 @@ dependencies:
     - field.field.paragraph.full_width_image_section.field_parallax_speed
     - field.field.paragraph.full_width_image_section.field_subtitle
     - field.field.paragraph.full_width_image_section.field_title
+    - image.style.full_width
     - paragraphs.paragraphs_type.full_width_image_section
   module:
     - custom_module
     - fences
+    - media
     - options
 id: paragraph.full_width_image_section.default
 targetEntityType: paragraph
@@ -41,10 +43,17 @@ content:
     weight: 2
     label: hidden
     settings:
-      link: true
-      view_mode: default
-    third_party_settings: {  }
-    type: entity_reference_entity_view
+      image_style: full_width
+      image_link: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    type: media_thumbnail
     region: content
   field_links:
     weight: 6
