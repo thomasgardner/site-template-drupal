@@ -55,15 +55,15 @@
           dots: false,
           items: 3,
           loop: true,
-          responsive:{
-            0:{
-              items:1
+          responsive: {
+            0: {
+              items: 1
             },
-            640:{
-              items:2
+            640: {
+              items: 2
             },
-            1024:{
-              items:3,
+            1024: {
+              items: 3,
               autoWidth: false,
             },
           }
@@ -72,27 +72,40 @@
     }
   };
 
-
-
-  // $(".image-gallery-carousel").owlCarousel({
-  //   margin: 6,
-  //   autoHeight:true,
-  //   dots: false,
-  //   nav: true,
-  //   responsive:{
-  //     0:{
-  //       items:1
-  //     },
-  //     640:{
-  //       items:2
-  //     },
-  //     1024:{
-  //       autoWidth:true,
-  //       autoHeight:false
-  //     },
-  //   }
-  // });
-
+  Drupal.behaviors.galleryOwl = {
+    attach: function (context, settings) {
+      var $context = $(context);
+      // .profile-list, .fact-timeline, .job-posting-card-list
+      $context.find('.image-gallery-carousel.owl-carousel').once('galleryOwlf').each(function () {
+        $(this).owlCarousel({
+          margin: 6,
+          autoHeight: true,
+          dots: false,
+          nav: true,
+          responsive: {
+            0: {
+              items: 1
+            },
+            640: {
+              items: 2
+            },
+            1024: {
+              autoWidth: true,
+              autoHeight: false
+            },
+          }
+        });
+      });
+      $context.find('#lightgallery').once('lightgal').each(function () {
+        $(this).lightGallery({
+          selector: '.lightgallery-item',
+          showThumbByDefault: false,
+          thumbnail: false,
+          mode: 'lg-zoom-out' //https://sachinchoolur.github.io/lightGallery/docs/api.html#lightgallery-core
+        });
+      });
+    }
+  };
 
   /**
    * Subsite Navigation.

@@ -23,3 +23,13 @@ owl_carousel2:
     component:
       /libraries/owl-carousel2/dist/assets/owl.carousel.min.css:
         minified: true
+
+lightgallery:
+  js:
+    /libraries/lightGallery/dist/js/lightgallery-all.min.js:
+      minified: true
+  css:
+    component:
+      /libraries/lightGallery/dist/css/lightgallery.min.css:
+        minified: true
+

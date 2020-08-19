@@ -62,12 +62,56 @@ function santa_cruz_preprocess_paragraph__grid_content_left_item(&$variables)
 /**
  * Implements hook_preprocess_HOOK() for "paragraph".
  */
-function santa_cruz_preprocess_paragraph__step(&$variables) {
+function santa_cruz_preprocess_paragraph__step(&$variables)
+{
   $variables['delta'] = NULL;
   foreach ($variables['paragraph']->getParentEntity()->field_paragraphs->getValue() as $delta => $item) {
     if ($item['target_id'] === $variables['paragraph']->id()) {
       $variables['delta'] = $delta + 1;
       break;
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for "paragraph".
+ */
+function santa_cruz_preprocess_paragraph__gallery(&$variables)
+{
+  $paragraph = $variables['paragraph'];
+  if ($paragraph instanceof Paragraph) {
+    if ($paragraph->hasField('field_node_ref') && !$paragraph->field_node_ref->isEmpty()) {
+      $img_ref_obj = $paragraph->referencedEntities()[1]->referencedEntities();
+      $img_ref_url_arr = array();
+      $group_cou = 1;
+      $image_cou = 1;
+      $mode_cou = 1;
+      foreach ($img_ref_obj as $media_obj) {
+        if ($media_obj->getEntityTypeId() == "media") {
+          $uri = $media_obj->get('field_media_image')->entity->getFileUri(); // It is for image media.
+          if ($group_cou % 3 == 1) {
+            $img_ref_url_arr[$group_cou]['image'][$image_cou] = file_create_url($uri); // Here you will get URL of uploaded image.
+            if ($mode_cou == 1) {
+              $img_ref_url_arr[$group_cou]['class'] = 'featured';
+              $mode_cou = 2;
+            } else {
+              $img_ref_url_arr[$group_cou]['class'] = 'portrait';
+              $mode_cou = 1;
+            }
+            $group_cou++;
+          } else {
+            $img_ref_url_arr[$group_cou]['image'][$image_cou] = file_create_url($uri); // Here you will get URL of uploaded image.
+            $img_ref_url_arr[$group_cou]['class'] = 'landscape';
+            if ($image_cou == 2) {
+              $image_cou = 1;
+              $group_cou++;
+            } else {
+              $image_cou++;
+            }
+          }
+        }
+      }
+      $variables['img_ref_url_arr'] = $img_ref_url_arr;
     }
   }
 }
