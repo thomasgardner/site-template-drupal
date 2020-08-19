@@ -26,7 +26,7 @@
     attach: function (context, settings) {
       var $context = $(context);
 
-      $context.find('.featured-slideshow.owl-carousel.owl-carousel').once('featureSlideshow').each(function () {
+      $context.find('.featured-slideshow.owl-carousel').once('featureSlideshow').each(function () {
         $(this).owlCarousel({
           autoHeight: true,
           nav: true,
@@ -111,6 +111,32 @@
           showThumbByDefault: false,
           thumbnail: false
           //https://sachinchoolur.github.io/lightGallery/docs/api.html#lightgallery-core
+        });
+      });
+    }
+  };
+
+  /**
+   * "Job Posting Card" Carousel.
+   * @type {{attach: Drupal.behaviors.jobPostingCardOwl.attach}}
+   */
+  Drupal.behaviors.jobPostingCardOwl = {
+    attach: function (context, settings) {
+      var $context = $(context);
+
+      $context.find('.job-posting-card-list.owl-carousel').once('jobPostingCardOwl').each(function () {
+        $(this).owlCarousel({
+          autoHeight: true,
+          nav: true,
+          dots: false,
+          responsive: {
+            0: {
+              items: 1
+            },
+            900: {
+              items: 3
+            }
+          }
         });
       });
     }

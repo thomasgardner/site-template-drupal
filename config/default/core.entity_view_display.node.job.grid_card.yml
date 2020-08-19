@@ -147,10 +147,18 @@ content:
         fences_label_classes: ''
     type: string
     region: content
+  field_media:
+    type: entity_reference_entity_view
+    weight: 4
+    region: content
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
 hidden:
   field_closing_txt: true
   field_job_type: true
-  field_media: true
   field_rank_txt: true
   langcode: true
   links: true
