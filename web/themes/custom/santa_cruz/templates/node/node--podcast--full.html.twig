@@ -104,7 +104,7 @@
           <div class="profile-info">
             <!-- <div class="profile-prefix">By </div> -->
             <div class="profile-name">
-              <a class="btn-link" href="javascript:void(0)" aria-label="">{{ content.field_author }}</a>
+              <a class="btn-link" href="{{ content.field_author_link[0]['#url'] }}" aria-label="">{{ content.field_author }}</a>
             </div>
             <div class="profile-date">{{ node.changedtime|date("F j, Y") }}</div>
           </div>
