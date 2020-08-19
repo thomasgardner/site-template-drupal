@@ -100,8 +100,8 @@
         $(this).lightGallery({
           selector: '.lightgallery-item',
           showThumbByDefault: false,
-          thumbnail: false,
-          mode: 'lg-zoom-out' //https://sachinchoolur.github.io/lightGallery/docs/api.html#lightgallery-core
+          thumbnail: false
+          //https://sachinchoolur.github.io/lightGallery/docs/api.html#lightgallery-core
         });
       });
     }
