@@ -5,54 +5,64 @@
  * Theme and preprocess functions for paragraphs.
  */
 
-use Drupal\node\NodeInterface;
 use Drupal\paragraphs\Entity\Paragraph;
-use Drupal\taxonomy\Entity\Term;
-use Drupal\node\Entity\Node;
-
 
 /**
  * Implements hook_preprocess_HOOK().
  */
-function santa_cruz_preprocess_paragraph__tabs_horizontal(&$variables)
-{
+function santa_cruz_preprocess_paragraph__tabs_horizontal(&$variables) {
   $paragraph = $variables['paragraph'];
   if ($paragraph instanceof Paragraph) {
     $acc = $paragraph->get('field_paragraphs');
     $count = $acc->count();
-    $tab_hor = array();
+    $tab_hor = [];
     for ($i = 0; $i < $count; $i++) {
       $para_tab = $variables['content']['field_paragraphs'][$i]['#paragraph'];
-      $tab_hor[$i]['title'] = $para_tab->get('field_title')->first()->getValue()['value'];
-      $tab_hor[$i]['body'] = $para_tab->get('field_body_formatted')->first()->getValue()['value'];
+      $tab_hor[$i]['title'] = $para_tab->get('field_title')
+        ->first()
+        ->getValue()['value'];
+      $tab_hor[$i]['body'] = $para_tab->get('field_body_formatted')
+        ->first()
+        ->getValue()['value'];
     }
 
     $variables['field__tab_hori_array'] = $tab_hor;
   }
 }
 
-function santa_cruz_preprocess_paragraph__content_with_media(&$variables)
-{
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function santa_cruz_preprocess_paragraph__content_with_media(&$variables) {
   $paragraph = $variables['paragraph'];
   if ($paragraph instanceof Paragraph) {
-    if ($paragraph->hasField('field_media_position') && !$paragraph->field_media_position->isEmpty()) {
-      $variables['field__media_position_rawvalue'] = $paragraph->get('field_media_position')->first()->getValue()['value'];
+    if ($paragraph->hasField('field_media_position')
+      && !$paragraph->get('field_media_position')->isEmpty()) {
+      $variables['field__media_position_rawvalue'] = $paragraph->get('field_media_position')
+        ->first()
+        ->getValue()['value'];
       $variables['field__media_position_class'] = 'left wave-pattern haltered blue';
-      if ($paragraph->get('field_media_position')->first()->getValue()['value'] == "left") {
+      if ($paragraph->get('field_media_position')
+          ->first()
+          ->getValue()['value'] == "left") {
         $variables['field__media_position_class'] = 'right';
       }
     }
   }
 }
 
-
-function santa_cruz_preprocess_paragraph__grid_content_left_item(&$variables)
-{
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function santa_cruz_preprocess_paragraph__grid_content_left_item(&$variables) {
   $paragraph = $variables['paragraph'];
   if ($paragraph instanceof Paragraph) {
-    if ($paragraph->hasField('field_cta_style') && !$paragraph->field_cta_style->isEmpty()) {
+    if ($paragraph->hasField('field_cta_style')
+      && !$paragraph->get('field_cta_style')->isEmpty()) {
       $variables['field_cta_style__class'] = 'button primary';
-      if ($paragraph->get('field_cta_style')->first()->getValue()['value'] == "btn-link") {
+      if ($paragraph->get('field_cta_style')
+          ->first()
+          ->getValue()['value'] == "btn-link") {
         $variables['field_cta_style__class'] = 'btn-link';
       }
     }
@@ -60,12 +70,13 @@ function santa_cruz_preprocess_paragraph__grid_content_left_item(&$variables)
 }
 
 /**
- * Implements hook_preprocess_HOOK() for "paragraph".
+ * Implements hook_preprocess_HOOK().
  */
-function santa_cruz_preprocess_paragraph__step(&$variables)
-{
+function santa_cruz_preprocess_paragraph__step(&$variables) {
   $variables['delta'] = NULL;
-  foreach ($variables['paragraph']->getParentEntity()->field_paragraphs->getValue() as $delta => $item) {
+  foreach ($variables['paragraph']->getParentEntity()
+             ->get('field_paragraphs')
+             ->getValue() as $delta => $item) {
     if ($item['target_id'] === $variables['paragraph']->id()) {
       $variables['delta'] = $delta + 1;
       break;
@@ -74,15 +85,15 @@ function santa_cruz_preprocess_paragraph__step(&$variables)
 }
 
 /**
- * Implements hook_preprocess_HOOK() for "paragraph".
+ * Implements hook_preprocess_HOOK().
  */
-function santa_cruz_preprocess_paragraph__gallery(&$variables)
-{
+function santa_cruz_preprocess_paragraph__gallery(&$variables) {
   $paragraph = $variables['paragraph'];
   if ($paragraph instanceof Paragraph) {
-    if ($paragraph->hasField('field_node_ref') && !$paragraph->field_node_ref->isEmpty()) {
+    if ($paragraph->hasField('field_node_ref')
+      && !$paragraph->get('field_node_ref')->isEmpty()) {
       $img_ref_obj = $paragraph->referencedEntities()[1]->referencedEntities();
-      $img_ref_url_arr = array();
+      $img_ref_url_arr = [];
       $group_cou = 1;
       $image_cou = 1;
       $mode_cou = 1;
@@ -94,24 +105,52 @@ function santa_cruz_preprocess_paragraph__gallery(&$variables)
             if ($mode_cou == 1) {
               $img_ref_url_arr[$group_cou]['class'] = 'featured';
               $mode_cou = 2;
-            } else {
+            }
+            else {
               $img_ref_url_arr[$group_cou]['class'] = 'portrait';
               $mode_cou = 1;
             }
             $group_cou++;
-          } else {
+          }
+          else {
             $img_ref_url_arr[$group_cou]['image'][$image_cou] = file_create_url($uri); // Here you will get URL of uploaded image.
             $img_ref_url_arr[$group_cou]['class'] = 'landscape';
             if ($image_cou == 2) {
               $image_cou = 1;
               $group_cou++;
-            } else {
+            }
+            else {
               $image_cou++;
             }
           }
         }
       }
       $variables['img_ref_url_arr'] = $img_ref_url_arr;
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function santa_cruz_preprocess_paragraph__factoid_card(&$variables) {
+  $variables['delta'] = NULL;
+  $neighbors = $variables['paragraph']->getParentEntity()
+    ->get('field_paragraphs')
+    ->getValue();
+  foreach ($neighbors as $delta => $item) {
+    if ($item['target_id'] === $variables['paragraph']->id()) {
+      $delta_altered = $delta + 1;
+      $variables['color'] = 'green';
+
+      if ($delta_altered % 3 == 0) {
+        $variables['color'] = 'blue';
+      }
+      elseif ($delta_altered % 2 == 0) {
+        $variables['color'] = 'pink';
+      }
+
+      break;
     }
   }
 }
