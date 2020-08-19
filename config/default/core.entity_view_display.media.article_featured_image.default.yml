@@ -5,7 +5,7 @@ dependencies:
   config:
     - field.field.media.article_featured_image.field_caption
     - field.field.media.article_featured_image.field_media_image_9
-    - image.style.article_featured
+    - image.style.full_width
     - media.type.article_featured_image
   module:
     - fences
@@ -26,7 +26,7 @@ content:
     weight: 0
     label: hidden
     settings:
-      image_style: article_featured
+      image_style: full_width
       image_link: ''
     third_party_settings:
       fences:

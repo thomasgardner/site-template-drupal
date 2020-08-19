@@ -7,7 +7,7 @@ dependencies:
     - field.field.paragraph.generic_card.field_image
     - field.field.paragraph.generic_card.field_link
     - field.field.paragraph.generic_card.field_title
-    - image.style.generic_card
+    - image.style.full_width
     - paragraphs.paragraphs_type.generic_card
   module:
     - fences
@@ -36,7 +36,7 @@ content:
     weight: 1
     label: hidden
     settings:
-      image_style: generic_card
+      image_style: full_width
       image_link: ''
     third_party_settings:
       fences:

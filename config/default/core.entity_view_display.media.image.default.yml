@@ -6,7 +6,7 @@ dependencies:
     - field.field.media.image.field_caption
     - field.field.media.image.field_categories
     - field.field.media.image.field_media_image
-    - image.style.default
+    - image.style.full_width
     - media.type.image
   module:
     - fences
@@ -35,7 +35,7 @@ content:
   field_media_image:
     label: visually_hidden
     settings:
-      image_style: default
+      image_style: full_width
       image_link: ''
     third_party_settings:
       fences:

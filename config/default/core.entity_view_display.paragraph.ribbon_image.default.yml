@@ -6,7 +6,7 @@ dependencies:
     - field.field.paragraph.ribbon_image.field_image
     - field.field.paragraph.ribbon_image.field_link
     - field.field.paragraph.ribbon_image.field_title
-    - image.style.ribbon
+    - image.style.full_width
     - paragraphs.paragraphs_type.ribbon_image
   module:
     - custom_module
@@ -80,7 +80,7 @@ content:
     weight: 1
     label: hidden
     settings:
-      image_style: ribbon
+      image_style: full_width
       image_link: ''
     third_party_settings:
       fences:

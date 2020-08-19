@@ -47,7 +47,7 @@
         </div>
       {% else %}
 
-        {% set image_url = file_url(content.field_media[0]['#item'].entity.uri.value|image_style('feature_image_alternate')) %}
+        {% set image_url = file_url(content.field_media[0]['#item'].entity.uri.value|image_style('full_width')) %}
         {% set image_title = content.field_media[0]['#item'].title %}
         {% set image_alt = content.field_media[0]['#item'].alt %}
 

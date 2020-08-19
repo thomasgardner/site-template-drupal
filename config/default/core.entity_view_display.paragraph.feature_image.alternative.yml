@@ -13,7 +13,7 @@ dependencies:
     - field.field.paragraph.feature_image.field_topic_date
     - field.field.paragraph.feature_image.field_topic_title
     - field.field.paragraph.feature_image.field_topic_title_advanced
-    - image.style.feature_image_alternate
+    - image.style.full_width
     - paragraphs.paragraphs_type.feature_image
   module:
     - addtocalendar
@@ -72,7 +72,7 @@ content:
     weight: 1
     label: hidden
     settings:
-      image_style: feature_image_alternate
+      image_style: full_width
       image_link: ''
     third_party_settings:
       fences:

@@ -1,12 +1,11 @@
 uuid: 82b7dc3e-7ee7-4c10-a2d9-e04f32b700c1
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - field.storage.media.field_media_image_9
     - field.storage.node.body
     - field.storage.node.field_media
-    - image.style.hero_slide_image
     - image.style.horizontal_styling
     - image.style.image_style_350x200
     - image.style.medium
@@ -14,6 +13,7 @@ dependencies:
     - node.type.article
     - taxonomy.vocabulary.article_category
   module:
+    - html_title
     - image
     - media
     - node
@@ -2476,70 +2476,6 @@ display:
           absolute: false
           entity_type: node
           plugin_id: entity_link
-        field_media_image_9:
-          id: field_media_image_9
-          table: media__field_media_image_9
-          field: field_media_image_9
-          relationship: field_media
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: true
-            text: "<div class=\"featured-post-wrap\">\n  <div class=\"row\">\n\n    <div class=\"col-lg-7 col-md-12\">\n      <div class=\"post-img\"><a href=\"{{ view_node }}\">{{ field_media_image_9 }}</a></div>\n    </div>\n\n    <div class=\"col-lg-5 col-md-12\">\n      <div class=\"content-wrap\">\n        <div class=\"post-title\">{{ title }}</div>\n        <div class=\"post-date\">{{ created }}</div>\n        <div class=\"post-body\">{{ body }}</div>\n        <div class=\"post-link\"><a href=\"{{ view_node }}\" class=\"read-more-link\">Learn More</a></div>\n      </div>\n    </div>\n\n  </div>\n</div>\n"
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: "<div class=\"featured-post-wrap\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <div class=\"content-wrap\">\n        <div class=\"post-title\">{{ title }}</div>\n        <div class=\"post-date\">{{ created }}</div>\n        <div class=\"post-body\">{{ body }}</div>\n        <div class=\"post-link\"><a href=\"{{ view_node }}\" class=\"read-more-link\">Learn More</a></div>\n      </div>\n    </div>\n  </div>\n</div>\n"
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: image
-          settings:
-            image_style: hero_slide_image
-            image_link: ''
-          group_column: ''
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
       footer:
         area_text_custom:
           id: area_text_custom
@@ -2574,7 +2510,6 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.media.field_media_image_9'
         - 'config:field.storage.node.body'
   block_5:
     display_plugin: block

@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 name: full_width
-label: 'Full Width'
+label: 'Scale Full Width'
 effects:
   d9c7be64-9a87-4479-85bd-260e58fe3e3c:
     uuid: d9c7be64-9a87-4479-85bd-260e58fe3e3c
