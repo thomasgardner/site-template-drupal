@@ -26,7 +26,7 @@
     attach: function (context, settings) {
       var $context = $(context);
 
-      $context.find('.featured-slideshow.owl-carousel').once('featureSlideshow').each(function () {
+      $context.find('.featured-slideshow.owl-carousel.owl-carousel').once('featureSlideshow').each(function () {
         $(this).owlCarousel({
           autoHeight: true,
           nav: true,
@@ -46,7 +46,6 @@
 
   /**
    * Profile Owl.
-   *
    * @type {{attach: Drupal.behaviors.profileOwl.attach}}
    */
   Drupal.behaviors.profileOwl = {
@@ -77,25 +76,45 @@
     }
   };
 
-  // $(".image-gallery-carousel").owlCarousel({
-  //   margin: 6,
-  //   autoHeight:true,
-  //   dots: false,
-  //   nav: true,
-  //   responsive:{
-  //     0:{
-  //       items:1
-  //     },
-  //     640:{
-  //       items:2
-  //     },
-  //     1024:{
-  //       autoWidth:true,
-  //       autoHeight:false
-  //     },
-  //   }
-  // });
-
+  /**
+   * Gallery Owl.
+   *
+   * @type {{attach: Drupal.behaviors.galleryOwl.attach}}
+   */
+  Drupal.behaviors.galleryOwl = {
+    attach: function (context, settings) {
+      var $context = $(context);
+      // .profile-list, .fact-timeline, .job-posting-card-list
+      $context.find('.image-gallery-carousel.owl-carousel').once('galleryOwlf').each(function () {
+        $(this).owlCarousel({
+          margin: 6,
+          autoHeight: true,
+          dots: false,
+          nav: true,
+          responsive: {
+            0: {
+              items: 1
+            },
+            640: {
+              items: 2
+            },
+            1024: {
+              autoWidth: true,
+              autoHeight: false
+            }
+          }
+        });
+      });
+      $context.find('#lightgallery').once('lightgal').each(function () {
+        $(this).lightGallery({
+          selector: '.lightgallery-item',
+          showThumbByDefault: false,
+          thumbnail: false
+          //https://sachinchoolur.github.io/lightGallery/docs/api.html#lightgallery-core
+        });
+      });
+    }
+  };
 
   /**
    * Subsite Navigation.
