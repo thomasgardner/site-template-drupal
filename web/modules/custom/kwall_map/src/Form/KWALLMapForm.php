@@ -8,6 +8,9 @@ use Drupal\Core\Render\Element;
 use Drupal\file\Entity\File;
 use Drupal\image\Entity\ImageStyle;
 
+/**
+ *
+ */
 class KWALLMapForm extends ConfigFormBase {
 
   /**
@@ -176,7 +179,7 @@ class KWALLMapForm extends ConfigFormBase {
   /**
    * Handles switching the available regions based on the selected count.
    */
-  function promptCallback(array &$form, FormStateInterface $form_state) {
+  public function promptCallback(array &$form, FormStateInterface $form_state) {
     return $form['replace_textfield_container'];
   }
 

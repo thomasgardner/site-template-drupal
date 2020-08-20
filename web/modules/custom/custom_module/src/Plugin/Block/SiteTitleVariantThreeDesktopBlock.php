@@ -6,7 +6,6 @@ use Drupal\Core\Access\AccessResult;
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
-use Drupal\Core\Url;
 use Drupal\node\NodeInterface;
 
 /**
@@ -45,7 +44,8 @@ class SiteTitleVariantThreeDesktopBlock extends BlockBase {
   public function build() {
     $node = \Drupal::routeMatch()->getParameter('node');
 
-    $subTitle = 'Engineering Division'; // TODO: make empty value by default.
+    // TODO: make empty value by default.
+    $subTitle = 'Engineering Division';
 
     if ($node instanceof NodeInterface) {
       // TODO: Find division title in any way.

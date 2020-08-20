@@ -18,7 +18,6 @@ use Drupal\link\Plugin\Field\FieldFormatter\LinkFormatter;
  */
 class PhoneNumber extends LinkFormatter {
 
-
   /**
    * {@inheritdoc}
    */
@@ -27,7 +26,6 @@ class PhoneNumber extends LinkFormatter {
     $summary[] = $this->t('Displays Phone Number in (555) 555-5555.');
     return $summary;
   }
-
 
   /**
    * {@inheritdoc}

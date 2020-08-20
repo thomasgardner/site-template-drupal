@@ -4,8 +4,9 @@
  * @file
  * Custom theme hooks.
  */
+
 /**
- * Implements template_preprocess_region
+ * Implements template_preprocess_region.
  *
  * @param $variables
  */
@@ -23,6 +24,7 @@ function santa_cruz_preprocess_region(&$variables) {
         'large-margin-collapse',
       ];
       break;
+
     case 'footer_last':
       $variables['attributes']['class'] = [
         'grid-x',

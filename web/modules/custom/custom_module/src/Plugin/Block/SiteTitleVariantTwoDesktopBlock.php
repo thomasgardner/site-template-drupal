@@ -6,7 +6,6 @@ use Drupal\Core\Access\AccessResult;
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
-use Drupal\Core\Url;
 use Drupal\node\NodeInterface;
 
 /**
@@ -47,7 +46,8 @@ class SiteTitleVariantTwoDesktopBlock extends BlockBase {
 
     if ($node instanceof NodeInterface) {
       $title = $node->getTitle();
-      $subTitle = 'Humanities Division'; // TODO: make empty value by default.
+      // TODO: make empty value by default.
+      $subTitle = 'Humanities Division';
 
       // TODO: Find subtitle or division in any way.
       //  Also need to find a link...

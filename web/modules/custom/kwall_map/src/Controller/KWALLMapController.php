@@ -2,14 +2,12 @@
 
 namespace Drupal\cdu_map\Controller;
 
-use Drupal\Core\Url;
-
 // Change following https://www.drupal.org/node/2457593
 // See https://www.drupal.org/node/2549395 for deprecate methods information
-// use Drupal\Component\Utility\SafeMarkup;
+// use Drupal\Component\Utility\SafeMarkup;.
 use Drupal\Component\Utility\Html;
 
-// use Html instead SAfeMarkup
+// Use Html instead SAfeMarkup.
 
 /**
  * Controller routines for Lorem ipsum pages.
@@ -34,7 +32,7 @@ class KWALLMapController {
     $page_title = $config->get('kwall_map.page_title');
     $source_text = $config->get('kwall_map.source_text');
 
-    //$element['#title'] = SafeMarkup::checkPlain($page_title);
+    // $element['#title'] = SafeMarkup::checkPlain($page_title);
     $element['#title'] = Html::escape($page_title);
 
     // Theme function.

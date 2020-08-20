@@ -99,9 +99,11 @@ function santa_cruz_preprocess_paragraph__gallery(&$variables) {
       $mode_cou = 1;
       foreach ($img_ref_obj as $media_obj) {
         if ($media_obj->getEntityTypeId() == "media") {
-          $uri = $media_obj->get('field_media_image')->entity->getFileUri(); // It is for image media.
+          // It is for image media.
+          $uri = $media_obj->get('field_media_image')->entity->getFileUri();
           if ($group_cou % 3 == 1) {
-            $img_ref_url_arr[$group_cou]['image'][$image_cou] = file_create_url($uri); // Here you will get URL of uploaded image.
+            // Here you will get URL of uploaded image.
+            $img_ref_url_arr[$group_cou]['image'][$image_cou] = file_create_url($uri);
             if ($mode_cou == 1) {
               $img_ref_url_arr[$group_cou]['class'] = 'featured';
               $mode_cou = 2;
@@ -113,7 +115,8 @@ function santa_cruz_preprocess_paragraph__gallery(&$variables) {
             $group_cou++;
           }
           else {
-            $img_ref_url_arr[$group_cou]['image'][$image_cou] = file_create_url($uri); // Here you will get URL of uploaded image.
+            // Here you will get URL of uploaded image.
+            $img_ref_url_arr[$group_cou]['image'][$image_cou] = file_create_url($uri);
             $img_ref_url_arr[$group_cou]['class'] = 'landscape';
             if ($image_cou == 2) {
               $image_cou = 1;
