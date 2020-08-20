@@ -5,12 +5,12 @@ dependencies:
   config:
     - field.field.paragraph.historical_fact_card.field_caption
     - field.field.paragraph.historical_fact_card.field_image
+    - field.field.paragraph.historical_fact_card.field_link
     - field.field.paragraph.historical_fact_card.field_title
-    - image.style.historical_fact_card
     - paragraphs.paragraphs_type.historical_fact_card
   module:
     - fences
-    - media
+    - link
 id: paragraph.historical_fact_card.default
 targetEntityType: paragraph
 bundle: historical_fact_card
@@ -34,8 +34,8 @@ content:
     weight: 0
     label: hidden
     settings:
-      image_style: historical_fact_card
-      image_link: ''
+      view_mode: grid_card
+      link: false
     third_party_settings:
       fences:
         fences_field_tag: none
@@ -44,7 +44,19 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: none
         fences_label_classes: ''
-    type: media_thumbnail
+    type: entity_reference_entity_view
+    region: content
+  field_link:
+    weight: 4
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
     region: content
   field_title:
     weight: 2

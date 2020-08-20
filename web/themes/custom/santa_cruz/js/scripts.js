@@ -143,6 +143,38 @@
   };
 
   /**
+   * "Historical Timeline" Carousel.
+   *
+   * @type {{attach: Drupal.behaviors.historicalTimelineOwl.attach}}
+   */
+  Drupal.behaviors.historicalTimelineOwl = {
+    attach: function (context, settings) {
+      var $context = $(context);
+      $context.find('.fact-timeline.owl-carousel').once('historicalTimelineOwl').each(function () {
+        $(this).owlCarousel({
+          margin: 30,
+          nav: true,
+          dots: false,
+          items: 3,
+          loop: true,
+          responsive: {
+            0: {
+              items: 1
+            },
+            640: {
+              items: 2
+            },
+            1024: {
+              items: 3,
+              autoWidth: false
+            }
+          }
+        });
+      });
+    }
+  };
+
+  /**
    * Subsite Navigation.
    *
    * @type {{attach: Drupal.behaviors.subSiteNavigation.attach}}

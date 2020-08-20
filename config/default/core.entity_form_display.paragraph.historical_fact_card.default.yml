@@ -5,9 +5,11 @@ dependencies:
   config:
     - field.field.paragraph.historical_fact_card.field_caption
     - field.field.paragraph.historical_fact_card.field_image
+    - field.field.paragraph.historical_fact_card.field_link
     - field.field.paragraph.historical_fact_card.field_title
     - paragraphs.paragraphs_type.historical_fact_card
   module:
+    - link
     - media_library
     - media_library_edit
 id: paragraph.historical_fact_card.default
@@ -32,8 +34,16 @@ content:
         show_edit: '1'
     type: media_library_widget
     region: content
-  field_title:
+  field_link:
     weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_title:
+    weight: 1
     settings:
       size: 60
       placeholder: ''
