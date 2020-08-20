@@ -25,9 +25,6 @@
           </div>
           <h5>Share this story:</h5>
           {#          {{>social-sharing type='top && right'}}#}
-          <a class="button primary" href="{{ content.field_author_link[0]['#url'] }}">
-            <i class="fa fa-soundcloud fa-1x"></i> Listen on Soundcloud
-          </a>
         </div>
       </div>
     </div>
@@ -44,7 +41,11 @@
         </div>
         <figcaption>
           <div class="caption-title"></div>
-          <div class="caption-desc"></div>
+          <div class="caption-desc">
+            {% if content.field_media[0]['#media'].field_caption %}
+              <p>{{ content.field_media[0]['#media'].field_caption.value }}</p>
+            {% endif %}
+          </div>
         </figcaption>
       </figure>
     {% endif %}
