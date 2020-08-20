@@ -1,17 +1,17 @@
-uuid: 7f3b16db-000d-4e31-bea6-e6e4a281f0c1
+uuid: 4471ce3f-d563-4ad4-bfee-4b2c19bff103
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.media.field_title
+    - field.storage.media.field_subheader
     - media.type.file
-id: media.file.field_title
-field_name: field_title
+id: media.file.field_subheader
+field_name: field_subheader
 entity_type: media
 bundle: file
-label: 'Document Title'
+label: Subheader
 description: ''
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''

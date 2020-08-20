@@ -7,7 +7,7 @@ dependencies:
     - field.field.media.file.field_caption
     - field.field.media.file.field_categories
     - field.field.media.file.field_media_file
-    - field.field.media.file.field_title
+    - field.field.media.file.field_subheader
     - media.type.file
   module:
     - fences
@@ -20,7 +20,7 @@ bundle: file
 mode: grid_card
 content:
   field_caption:
-    weight: 3
+    weight: 4
     label: hidden
     settings: {  }
     third_party_settings:
@@ -33,21 +33,6 @@ content:
         fences_label_classes: ''
     type: basic_string
     region: content
-  field_categories:
-    type: entity_reference_label
-    weight: 0
-    region: content
-    label: hidden
-    settings:
-      link: false
-    third_party_settings:
-      fences:
-        fences_field_tag: none
-        fences_field_classes: ''
-        fences_field_item_tag: none
-        fences_field_item_classes: ''
-        fences_label_tag: none
-        fences_label_classes: ''
   field_media_file:
     label: hidden
     settings: {  }
@@ -60,26 +45,27 @@ content:
         fences_label_tag: none
         fences_label_classes: ''
     type: file_url_plain
-    weight: 2
+    weight: 3
     region: content
-  field_title:
+  field_subheader:
+    type: string
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  name:
     type: string
     weight: 1
     region: content
     label: hidden
     settings:
       link_to_entity: false
-    third_party_settings:
-      fences:
-        fences_field_tag: none
-        fences_field_classes: ''
-        fences_field_item_tag: none
-        fences_field_item_classes: ''
-        fences_label_tag: none
-        fences_label_classes: ''
+    third_party_settings: {  }
 hidden:
   created: true
+  field_categories: true
   langcode: true
-  name: true
   thumbnail: true
   uid: true

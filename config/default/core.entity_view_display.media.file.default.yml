@@ -6,7 +6,7 @@ dependencies:
     - field.field.media.file.field_caption
     - field.field.media.file.field_categories
     - field.field.media.file.field_media_file
-    - field.field.media.file.field_title
+    - field.field.media.file.field_subheader
     - media.type.file
   module:
     - file
@@ -18,8 +18,8 @@ bundle: file
 mode: default
 content:
   field_caption:
-    weight: 1
-    label: above
+    weight: 4
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: basic_string
@@ -32,18 +32,25 @@ content:
     type: file_default
     weight: 0
     region: content
-  field_title:
-    weight: 2
-    label: above
+  field_subheader:
+    weight: 3
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
+  name:
+    type: string
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
 hidden:
   created: true
   field_categories: true
   langcode: true
-  name: true
   thumbnail: true
   uid: true

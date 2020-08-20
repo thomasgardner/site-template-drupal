@@ -7,7 +7,7 @@ dependencies:
     - field.field.media.file.field_caption
     - field.field.media.file.field_categories
     - field.field.media.file.field_media_file
-    - field.field.media.file.field_title
+    - field.field.media.file.field_subheader
     - media.type.file
   module:
     - fences
@@ -38,7 +38,7 @@ hidden:
   created: true
   field_caption: true
   field_categories: true
-  field_title: true
+  field_subheader: true
   langcode: true
   name: true
   thumbnail: true
