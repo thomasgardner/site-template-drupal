@@ -18,6 +18,6 @@
   {% if content %}
     <span class="subheader">{{ content.field_subheader[0]['#context'].value }}</span>
     <h5><a href="{{ file_url }}" target="_blank" download="{{ file_name }}">{{ content.name[0]['#context'].value }}</a></h5>
-    {{ content|without('field_subheader', 'field_media_file') }}
+    {{ content|without('name', 'field_subheader', 'field_media_file') }}
   {% endif %}
 </div>
