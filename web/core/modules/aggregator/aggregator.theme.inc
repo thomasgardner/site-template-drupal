@@ -44,10 +44,6 @@ function template_preprocess_aggregator_item(&$variables) {
   if (!$skip_custom_preprocessing || !$item->getFieldDefinition('title')->isDisplayConfigurable('view')) {
     $variables['title'] = $item->label();
   }
-
-  // Allow to alter $variables by using hook_aggregator_item_variables_alter().
-  // Can be helpful for example if we want to apply a custom format for "Post date".
-  \Drupal::moduleHandler()->alter('aggregator_item_variables', $variables);
 }
 
 /**

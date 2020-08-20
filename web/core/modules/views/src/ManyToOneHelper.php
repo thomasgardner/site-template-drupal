@@ -163,8 +163,8 @@ class ManyToOneHelper {
           // when we know we can.
           $join = $this->getJoin();
           $group = isset($this->handler->options['group']) ? $this->handler->options['group'] : FALSE;
-          if (isset($join) && ($group === FALSE || $this->handler->query->where[$group]['type'] == 'AND')) {
-           $join->type = 'INNER';
+          if (isset($join) && ($group === FALSE || ($this->handler->query->where[$group]['type'] == 'AND' && $this->handler->options['plugin_id'] != 'taxonomy_index_tid'))) {
+            $join->type = 'INNER';
           }
 
           $this->handler->tableAlias = $this->handler->query->ensureTable($this->handler->table, $this->handler->relationship, $join);

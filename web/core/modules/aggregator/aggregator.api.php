@@ -53,19 +53,5 @@ function hook_aggregator_processor_info_alter(array &$info) {
 }
 
 /**
- * Perform alterations on the available items.
- *
- * @param array[] $variables
- *   Array of variables
- */
-function hook_aggregator_item_variables_alter(array &$variables) {
-  if (empty($variables['some_variable'])) {
-    return;
-  }
-
-  $variables['some_variable'] = 'bar';
-}
-
-/**
  * @} End of "addtogroup hooks".
  */

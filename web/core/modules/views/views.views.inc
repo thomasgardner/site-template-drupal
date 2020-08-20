@@ -604,6 +604,7 @@ function views_field_default_views_data(FieldStorageConfigInterface $field_stora
           $filter = 'boolean';
         }
         break;
+
       case 'blob':
         // It does not make sense to sort by blob.
         $allow_sort = FALSE;
@@ -807,6 +808,13 @@ function core_field_views_data(FieldStorageConfigInterface $field_storage) {
       'base field' => $target_entity_type->getKey('id'),
       'relationship field' => $field_name . '_target_id',
     ];
+
+    // Render filters as select lists.
+    foreach ($table_data as $table_field_name => $table_field_data) {
+      if (isset($table_field_data['filter']) && $table_field_name != 'delta') {
+        $data[$table_name][$table_field_name]['filter']['id'] = 'entity_reference';
+      }
+    }
 
     // Provide a reverse relationship for the entity type that is referenced by
     // the field.

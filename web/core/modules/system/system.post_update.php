@@ -101,7 +101,7 @@ function system_post_update_fix_jquery_extend() {
 /**
  * Clear the library cache and ensure aggregate files are regenerated.
  */
-function system_post_update_fix_jquery_htmlprefilter() {
+function system_post_update_fix_jquery_form_ajaxsubmit() {
   // Empty post-update hook.
 }
 
