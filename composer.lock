@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "91352b715d53a89665760342840b2d64",
+    "content-hash": "3802269744f9b54a34d08480bd498a8c",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2558,29 +2558,26 @@
         },
         {
             "name": "drupal/advupdate",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/advupdate.git",
-                "reference": "8.x-1.0"
+                "reference": "8.x-1.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/advupdate-8.x-1.0.zip",
-                "reference": "8.x-1.0",
-                "shasum": "786646cd3bebebdeebba10674a1b33e6442e7146"
+                "url": "https://ftp.drupal.org/files/projects/advupdate-8.x-1.1.zip",
+                "reference": "8.x-1.1",
+                "shasum": "4d7401d44b5615c971a9378ecdb0b5aa8b47848d"
             },
             "require": {
-                "drupal/core": "*"
+                "drupal/core": "^8 || ^9"
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
                 "drupal": {
-                    "version": "8.x-1.0",
-                    "datestamp": "1520169184",
+                    "version": "8.x-1.1",
+                    "datestamp": "1596183044",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2610,54 +2607,6 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/advupdate",
                 "issues": "https://drupal.org/project/issues/advupdate"
-            }
-        },
-        {
-            "name": "drupal/ala",
-            "version": "1.5.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/ala.git",
-                "reference": "8.x-1.5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/ala-8.x-1.5.zip",
-                "reference": "8.x-1.5",
-                "shasum": "2e7d9609f40f0e5f6bbabb1e1fa9b10be4a06bd5"
-            },
-            "require": {
-                "drupal/core": "^8"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-1.5",
-                    "datestamp": "1579251145",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Project has not opted into security advisory coverage!"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "iaconba",
-                    "homepage": "https://www.drupal.org/user/3314043"
-                },
-                {
-                    "name": "kushan4157",
-                    "homepage": "https://www.drupal.org/user/3619158"
-                }
-            ],
-            "description": "Provide a widget for Link field type which permits to choose class, target, icon and user role.",
-            "homepage": "https://www.drupal.org/project/ala",
-            "support": {
-                "source": "https://git.drupalcode.org/project/ala"
             }
         },
         {
@@ -6414,131 +6363,6 @@
             }
         },
         {
-            "name": "drupal/layout_builder_modal",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/layout_builder_modal.git",
-                "reference": "8.x-1.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/layout_builder_modal-8.x-1.0.zip",
-                "reference": "8.x-1.0",
-                "shasum": "d8680bd1cc203600db91545d2ee9eba4220f506f"
-            },
-            "require": {
-                "drupal/core": "^8.7.0"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.0",
-                    "datestamp": "1579042983",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "John Svensson",
-                    "homepage": "https://www.drupal.org/u/johndevman",
-                    "email": "john@kodamera.se",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "Emil Johnsson",
-                    "homepage": "https://www.drupal.org/u/johnzzon",
-                    "email": "emil@kodamera.se",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "Henrik Larsson",
-                    "homepage": "https://www.drupal.org/u/henriklarsson",
-                    "email": "henrik@kodamera.se",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "twfahey",
-                    "homepage": "https://www.drupal.org/user/3403722"
-                }
-            ],
-            "description": "Open blocks in a modal in the Layout Builder UI.",
-            "homepage": "https://www.drupal.org/project/layout_builder_modal",
-            "support": {
-                "source": "http://cgit.drupalcode.org/layout_builder_modal",
-                "issues": "https://www.drupal.org/project/issues/layout_builder_modal"
-            }
-        },
-        {
-            "name": "drupal/layout_builder_styles",
-            "version": "1.0.0-beta2",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/layout_builder_styles.git",
-                "reference": "8.x-1.0-beta2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/layout_builder_styles-8.x-1.0-beta2.zip",
-                "reference": "8.x-1.0-beta2",
-                "shasum": "ec1a42c756b26f2da2349290eecc155ed1963287"
-            },
-            "require": {
-                "drupal/core": "^8.7.7 || ^9"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.0-beta2",
-                    "datestamp": "1585270882",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Beta releases are not covered by Drupal security advisories."
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "bkosborne",
-                    "homepage": "https://www.drupal.org/user/788032"
-                },
-                {
-                    "name": "mark_fullmer",
-                    "homepage": "https://www.drupal.org/user/2612816"
-                },
-                {
-                    "name": "phenaproxima",
-                    "homepage": "https://www.drupal.org/user/205645"
-                },
-                {
-                    "name": "twfahey",
-                    "homepage": "https://www.drupal.org/user/3403722"
-                }
-            ],
-            "description": "Apply styles to blocks in Layout Builder.",
-            "homepage": "https://www.drupal.org/project/layout_builder_styles",
-            "support": {
-                "source": "https://git.drupalcode.org/project/layout_builder_styles"
-            }
-        },
-        {
             "name": "drupal/libraries",
             "version": "3.0.0-alpha1",
             "source": {
@@ -8321,38 +8145,42 @@
         },
         {
             "name": "drupal/smtp",
-            "version": "1.0.0-beta6",
+            "version": "1.0.0-rc4",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/smtp.git",
-                "reference": "8.x-1.0-beta6"
+                "reference": "8.x-1.0-rc4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/smtp-8.x-1.0-beta6.zip",
-                "reference": "8.x-1.0-beta6",
-                "shasum": "f793114fb24964a1936e7cf797f91330a0a55b99"
+                "url": "https://ftp.drupal.org/files/projects/smtp-8.x-1.0-rc4.zip",
+                "reference": "8.x-1.0-rc4",
+                "shasum": "2879396e26bb356b1d17646c324d455eda3044af"
             },
             "require": {
-                "drupal/core": "~8.0"
+                "drupal/core": "^8.7.7 || ^9",
+                "phpmailer/phpmailer": "^6.1.5"
+            },
+            "suggest": {
+                "drupal/mailsystem": "Allows using SMTP alongside other mail modules."
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
                 "drupal": {
-                    "version": "8.x-1.0-beta6",
-                    "datestamp": "1571689090",
+                    "version": "8.x-1.0-rc4",
+                    "datestamp": "1595628445",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Beta releases are not covered by Drupal security advisories."
+                        "message": "RC releases are not covered by Drupal security advisories."
                     }
+                },
+                "branch-alias": {
+                    "dev-8.x-1.x": "1.x-dev"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0"
+                "GPL-2.0-or-later"
             ],
             "authors": [
                 {
@@ -9018,17 +8846,17 @@
         },
         {
             "name": "drupal/upgrade_status",
-            "version": "2.6.0",
+            "version": "2.9.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/upgrade_status.git",
-                "reference": "8.x-2.6"
+                "reference": "8.x-2.9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/upgrade_status-8.x-2.6.zip",
-                "reference": "8.x-2.6",
-                "shasum": "b88d6c1f8c42ee5e67afa7214731163a027c0b45"
+                "url": "https://ftp.drupal.org/files/projects/upgrade_status-8.x-2.9.zip",
+                "reference": "8.x-2.9",
+                "shasum": "3751062ba6192cbed94c3c970fa3adbe308fb450"
             },
             "require": {
                 "drupal/core": "^8.7.7 || ^9",
@@ -9041,8 +8869,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.6",
-                    "datestamp": "1588952387",
+                    "version": "8.x-2.9",
+                    "datestamp": "1592678651",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -9423,58 +9251,6 @@
                 "source": "https://git.drupalcode.org/project/views_bulk_operations/-/tree/8.x-3.x",
                 "issues": "https://www.drupal.org/project/issues/views_bulk_operations?version=8.x",
                 "docs": "https://www.drupal.org/docs/8/modules/views-bulk-operations-vbo"
-            }
-        },
-        {
-            "name": "drupal/views_ical",
-            "version": "1.0.0-alpha4",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/views_ical.git",
-                "reference": "8.x-1.0-alpha4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/views_ical-8.x-1.0-alpha4.zip",
-                "reference": "8.x-1.0-alpha4",
-                "shasum": "0dc8ab357c196dde2eea5cb970316e1ff882fb17"
-            },
-            "require": {
-                "drupal/core": "*",
-                "eluceo/ical": "^0.15"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.0-alpha4",
-                    "datestamp": "1571420284",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Project has not opted into security advisory coverage!"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "bburg",
-                    "homepage": "https://www.drupal.org/user/1867900"
-                },
-                {
-                    "name": "mukhsim",
-                    "homepage": "https://www.drupal.org/user/63885"
-                }
-            ],
-            "description": "Provides an iCal Views style plugin.",
-            "homepage": "https://www.drupal.org/project/views_ical",
-            "support": {
-                "source": "https://git.drupalcode.org/project/views_ical"
             }
         },
         {
@@ -10323,57 +10099,6 @@
                 "validator"
             ],
             "time": "2020-02-13T22:36:52+00:00"
-        },
-        {
-            "name": "eluceo/ical",
-            "version": "0.15.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/markuspoerschke/iCal.git",
-                "reference": "bdd24747587f6f9b10770a7b873a13e273f85f39"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/markuspoerschke/iCal/zipball/bdd24747587f6f9b10770a7b873a13e273f85f39",
-                "reference": "bdd24747587f6f9b10770a7b873a13e273f85f39",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^6.0"
-            },
-            "suggest": {
-                "ext-mbstring": "Massive performance enhancement of line folding"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Eluceo\\iCal\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Markus Poerschke",
-                    "email": "markus@eluceo.de",
-                    "role": "Developer"
-                }
-            ],
-            "description": "The eluceo/iCal package offers a abstraction layer for creating iCalendars. You can easily create iCal files by using PHP object instead of typing your *.ics file by hand. The output will follow RFC 5545 as best as possible.",
-            "homepage": "https://github.com/markuspoerschke/iCal",
-            "keywords": [
-                "calendar",
-                "iCalendar",
-                "ical",
-                "ics",
-                "php calendar"
-            ],
-            "time": "2019-08-06T20:33:43+00:00"
         },
         {
             "name": "enyo/dropzone",
@@ -12585,6 +12310,74 @@
             "description": "A library to read, parse, export and make subsets of different types of font files.",
             "homepage": "https://github.com/PhenX/php-font-lib",
             "time": "2020-03-08T15:31:32+00:00"
+        },
+        {
+            "name": "phpmailer/phpmailer",
+            "version": "v6.1.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PHPMailer/PHPMailer.git",
+                "reference": "2c2370ba3df7034f9eb7b8f387c97b52b2ba5ad0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/2c2370ba3df7034f9eb7b8f387c97b52b2ba5ad0",
+                "reference": "2c2370ba3df7034f9eb7b8f387c97b52b2ba5ad0",
+                "shasum": ""
+            },
+            "require": {
+                "ext-ctype": "*",
+                "ext-filter": "*",
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "doctrine/annotations": "^1.2",
+                "friendsofphp/php-cs-fixer": "^2.2",
+                "phpunit/phpunit": "^4.8 || ^5.7"
+            },
+            "suggest": {
+                "ext-mbstring": "Needed to send email in multibyte encoding charset",
+                "hayageek/oauth2-yahoo": "Needed for Yahoo XOAUTH2 authentication",
+                "league/oauth2-google": "Needed for Google XOAUTH2 authentication",
+                "psr/log": "For optional PSR-3 debug logging",
+                "stevenmaguire/oauth2-microsoft": "Needed for Microsoft XOAUTH2 authentication",
+                "symfony/polyfill-mbstring": "To support UTF-8 if the Mbstring PHP extension is not enabled (^1.2)"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PHPMailer\\PHPMailer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-2.1-only"
+            ],
+            "authors": [
+                {
+                    "name": "Marcus Bointon",
+                    "email": "phpmailer@synchromedia.co.uk"
+                },
+                {
+                    "name": "Jim Jagielski",
+                    "email": "jimjag@gmail.com"
+                },
+                {
+                    "name": "Andy Prevost",
+                    "email": "codeworxtech@users.sourceforge.net"
+                },
+                {
+                    "name": "Brent R. Matzelle"
+                }
+            ],
+            "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
+            "funding": [
+                {
+                    "url": "https://github.com/synchro",
+                    "type": "github"
+                }
+            ],
+            "time": "2020-07-14T18:50:27+00:00"
         },
         {
             "name": "phpstan/phpstan",
@@ -15986,12 +15779,12 @@
         "drupal/name": 20,
         "drupal/owlcarousel": 20,
         "drupal/sharethis": 10,
+        "drupal/smtp": 5,
         "drupal/soundcloudfield": 15,
         "drupal/tb_megamenu": 20,
         "drupal/twig_link_attributes": 20,
         "drupal/twig_remove_html_comments": 15,
-        "drupal/verf": 10,
-        "drupal/views_ical": 15
+        "drupal/verf": 10
     },
     "prefer-stable": true,
     "prefer-lowest": false,

@@ -2,7 +2,6 @@
 
 namespace Drupal\upgrade_status\Form;
 
-use Drupal\Component\Datetime\TimeInterface;
 use Drupal\Component\Serialization\Json;
 use Drupal\Core\Extension\Extension;
 use Drupal\Core\Extension\ModuleHandler;
@@ -12,7 +11,7 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\KeyValueStore\KeyValueExpirableFactory;
 use Drupal\Core\Render\RendererInterface;
 use Drupal\Core\Routing\RedirectDestination;
-use Drupal\Core\State\State;
+use Drupal\Core\State\StateInterface;
 use Drupal\Core\Url;
 use Drupal\upgrade_status\DeprecationAnalyzer;
 use Drupal\upgrade_status\ProjectCollector;
@@ -77,7 +76,7 @@ class UpgradeStatusForm extends FormBase {
   /**
    * The state service.
    *
-   * @var \Drupal\Core\State\State
+   * @var \Drupal\Core\State\StateInterface
    */
   protected $state;
 
@@ -130,7 +129,7 @@ class UpgradeStatusForm extends FormBase {
    *   The module handler.
    * @param \Drupal\upgrade_status\DeprecationAnalyzer $deprecation_analyzer
    *   The deprecation analyzer.
-   * @param \Drupal\Core\State\State $state
+   * @param \Drupal\Core\State\StateInterface $state
    *   The state service.
    * @param \Drupal\Core\Datetime\DateFormatter $date_formatter
    *   The date formatter.
@@ -145,7 +144,7 @@ class UpgradeStatusForm extends FormBase {
     LoggerInterface $logger,
     ModuleHandler $module_handler,
     DeprecationAnalyzer $deprecation_analyzer,
-    State $state,
+    StateInterface $state,
     DateFormatter $date_formatter,
     RedirectDestination $destination
   ) {
@@ -263,14 +262,14 @@ class UpgradeStatusForm extends FormBase {
     ];
     $form['drupal_upgrade_status_form']['action']['export'] = [
       '#type' => 'submit',
-      '#value' => $this->t('Export as HTML'),
+      '#value' => $this->t('Export selected as HTML'),
       '#weight' => 5,
       '#submit' => [[$this, 'exportReportHTML']],
       '#disabled' => !$analyzerReady,
     ];
     $form['drupal_upgrade_status_form']['action']['export_ascii'] = [
       '#type' => 'submit',
-      '#value' => $this->t('Export as ASCII'),
+      '#value' => $this->t('Export selected as text'),
       '#weight' => 6,
       '#submit' => [[$this, 'exportReportASCII']],
       '#disabled' => !$analyzerReady,
@@ -322,7 +321,7 @@ class UpgradeStatusForm extends FormBase {
       $scan_result = \Drupal::service('keyvalue')->get('upgrade_status_scan_results')->get($name);
       $info = $extension->info;
       $label = $info['name'] . (!empty($info['version']) ? ' ' . $info['version'] : '');
-      $state = $extension->status === 0 ? 'uninstalled' : 'installed';
+      $state = empty($extension->status) ? 'uninstalled' : 'installed';
 
       $update_cell = [
         'class' => 'update-info',
@@ -815,6 +814,9 @@ class UpgradeStatusForm extends FormBase {
       ];
       batch_set($batch);
     }
+    else {
+      $this->messenger()->addError('No projects selected to scan.');
+    }
   }
 
   /**
@@ -873,6 +875,11 @@ class UpgradeStatusForm extends FormBase {
           }
         }
       }
+    }
+
+    if (empty($extensions)) {
+      $this->messenger()->addError('No projects selected to export.');
+      return;
     }
 
     $build = [

@@ -132,8 +132,6 @@ module:
   serialization: 0
   sharethis: 0
   shortcut: 0
-  smart_ip: 0
-  smart_ip_maxmind_geoip2_bin_db: 0
   sophron: 0
   soundcloudfield: 0
   switch_page_theme: 0
@@ -147,7 +145,6 @@ module:
   tour: 0
   twig_field_value: 0
   twig_link_attributes: 0
-  twig_remove_html_comments: 0
   twig_tweak: 0
   twig_vardumper: 0
   typed_data: 0

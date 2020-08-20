@@ -21,7 +21,7 @@ final class DeprecationAnalyzer {
    *
    * @var string
    */
-  const CORE_MINOR_OLDEST_SUPPORTED = '8.7';
+  const CORE_MINOR_OLDEST_SUPPORTED = '8.8';
 
   /**
    * Upgrade status scan result storage.
@@ -116,7 +116,7 @@ final class DeprecationAnalyzer {
 
   /**
    * Whether the analyzer environment is initialized.
-   * 
+   *
    * @var bool
    */
   protected $environmentInitialized = FALSE;
@@ -163,8 +163,8 @@ final class DeprecationAnalyzer {
 
   /**
    * Initialize the external environment.
-   * 
-   * @throws \Exception 
+   *
+   * @throws \Exception
    *   In case initialization failed. The analyzer will not work in this case.
    */
   public function initEnvironment() {
@@ -260,7 +260,7 @@ final class DeprecationAnalyzer {
     catch (\Exception $e) {
       // Should not get here as integrations are expected to invoke
       // initEnvironment() first by itself to ensure the environment
-      // is going to work when needed (and inform users about any 
+      // is going to work when needed (and inform users about any
       // issues). That said, if they did not do that and there was
       // no issue with the environment, then they are lucky.
       return;
@@ -320,36 +320,46 @@ final class DeprecationAnalyzer {
     // Assume this project is Drupal 9 ready unless proven otherwise.
     $result['data']['totals']['upgrade_status_split']['declared_ready'] = TRUE;
 
-    // Manually add on info file incompatibility to results. Not using
-    // $extension->info because that is cached in the extension cache.
-    try {
-      $info = Yaml::decode(file_get_contents($extension->getPathname())) ?: [];
-      if (!isset($info['core_version_requirement'])) {
-        $result['data']['files'][$extension->getPathname()]['messages'][] = [
-          'message' => 'Add <code>core_version_requirement: ^8 || ^9</code> to ' . $extension->getFilename() . ' to designate that the module is compatible with Drupal 9. See https://drupal.org/node/3070687.',
+    $info_files = $this->getSubExtensionInfoFiles($project_dir);
+    foreach ($info_files as $info_file) {
+      try {
+        // Manually add on info file incompatibility to results. Reding
+        // .info.yml files directly, not from extension discovery because that
+        // is cached.
+        $info = Yaml::decode(file_get_contents($info_file)) ?: [];
+        if (!empty($info['package']) && $info['package'] == 'Testing' && !strpos($info_file, '/upgrade_status_test')) {
+          // If this info file was for a testing project other than our own
+          // testing projects, ignore it.
+          continue;
+        }
+        $error_path = str_replace(DRUPAL_ROOT . '/', '', $info_file);
+        if (!isset($info['core_version_requirement'])) {
+          $result['data']['files'][$error_path]['messages'][] = [
+            'message' => "Add core_version_requirement: ^8 || ^9 to designate that the module is compatible with Drupal 9. See https://drupal.org/node/3070687.",
+            'line' => 0,
+          ];
+          $result['data']['totals']['errors']++;
+          $result['data']['totals']['file_errors']++;
+          $result['data']['totals']['upgrade_status_split']['declared_ready'] = FALSE;
+        }
+        elseif (!Semver::satisfies('9.0.0', $info['core_version_requirement'])) {
+          $result['data']['files'][$error_path]['messages'][] = [
+            'message' => "Value of core_version_requirement: {$info['core_version_requirement']} is not compatible with Drupal 9.0.0. See https://drupal.org/node/3070687.",
+            'line' => 0,
+          ];
+          $result['data']['totals']['errors']++;
+          $result['data']['totals']['file_errors']++;
+          $result['data']['totals']['upgrade_status_split']['declared_ready'] = FALSE;
+        }
+      } catch (InvalidDataTypeException $e) {
+        $result['data']['files'][$error_path]['messages'][] = [
+          'message' => 'Parse error. ' . $e->getMessage(),
           'line' => 0,
         ];
         $result['data']['totals']['errors']++;
         $result['data']['totals']['file_errors']++;
         $result['data']['totals']['upgrade_status_split']['declared_ready'] = FALSE;
       }
-      elseif (!Semver::satisfies('9.0.0', $info['core_version_requirement'])) {
-        $result['data']['files'][$extension->getPathname()]['messages'][] = [
-          'message' => "The current value  <code>core_version_requirement: {$info['core_version_requirement']}</code> in {$extension->getFilename()} is not compatible with Drupal 9.0.0. See https://drupal.org/node/3070687.",
-          'line' => 0,
-        ];
-        $result['data']['totals']['errors']++;
-        $result['data']['totals']['file_errors']++;
-        $result['data']['totals']['upgrade_status_split']['declared_ready'] = FALSE;
-      }
-    } catch (InvalidDataTypeException $e) {
-      $result['data']['files'][$extension->getPathname()]['messages'][] = [
-        'message' => 'Parse error. ' . $e->getMessage(),
-        'line' => 0,
-      ];
-      $result['data']['totals']['errors']++;
-      $result['data']['totals']['file_errors']++;
-      $result['data']['totals']['upgrade_status_split']['declared_ready'] = FALSE;
     }
 
     // Manually add on composer.json file incompatibility to results.
@@ -567,6 +577,7 @@ final class DeprecationAnalyzer {
     // Hardcoded lo-fi implementation for now. This should be the same as in
     // https://git.drupalcode.org/project/deprecation_status/-/blob/script/stats.php
     $rector_covered = [
+      // 0.3.3
       'Call to deprecated function drupal_set_message(). Deprecated in drupal:8.5.0 and is removed from drupal:9.0.0. Use Drupal\Core\Messenger\MessengerInterface::addMessage() instead.',
       'Call to deprecated method entityManager() of class Drupal. Deprecated in drupal:8.0.0 and is removed from drupal:9.0.0. Use Drupal::entityTypeManager() instead in most cases. If the needed method is not on \Drupal\Core\Entity\EntityTypeManagerInterface, see the deprecated \Drupal\Core\Entity\EntityManager to find the correct interface or service.',
       'Call to deprecated method entityManager() of class Drupal\Core\Controller\ControllerBase. Deprecated in drupal:8.0.0 and is removed from drupal:9.0.0. Most of the time static::entityTypeManager() is supposed to be used instead.',
@@ -574,10 +585,12 @@ final class DeprecationAnalyzer {
       'Call to deprecated function db_select(). Deprecated in drupal:8.0.0 and is removed from drupal:9.0.0. Instead, get a database connection injected into your service from the container and call select() on it. For example,',
       'Call to deprecated function db_query(). Deprecated in drupal:8.0.0 and is removed from drupal:9.0.0. Instead, get a database connection injected into your service from the container and call query() on it. For example,',
       'Call to deprecated function file_prepare_directory(). Deprecated in drupal:8.7.0 and is removed from drupal:9.0.0. Use Drupal\Core\File\FileSystemInterface::prepareDirectory().',
-      'Call to deprecated method getMock() of class Drupal\Tests\UnitTestCase. Deprecated in drupal:8.5.0 and is removed from drupal:9.0.0. Use Drupal\Tests\PhpunitCompatibilityTrait::createMock() instead.',
-      'Call to deprecated method getMock() of class Drupal\Tests\UnitTestCase. Deprecated in drupal:8.5.0 and is removed from drupal:9.0.0. Use Drupal\Tests\PhpunitCompatibilityTrait::createMock() instead.',
+      'Call to deprecated method getMock() of class Drupal\Tests\BrowserTestBase. Deprecated in drupal:8.5.0 and is removed from drupal:9.0.0. Use Drupal\Tests\PhpunitCompatibilityTrait::createMock() instead.',
+      'Call to deprecated method getMock() of class Drupal\KernelTests\KernelTestBase. Deprecated in drupal:8.5.0 and is removed from drupal:9.0.0. Use Drupal\Tests\PhpunitCompatibilityTrait::createMock() instead.',
       'Call to deprecated method getMock() of class Drupal\Tests\UnitTestCase. Deprecated in drupal:8.5.0 and is removed from drupal:9.0.0. Use Drupal\Tests\PhpunitCompatibilityTrait::createMock() instead.',
       'Call to deprecated method url() of class Drupal. Deprecated in drupal:8.0.0 and is removed from drupal:9.0.0. Instead create a \Drupal\Core\Url object directly, for example using Url::fromRoute().',
+
+      // 0.4.0
       'Call to deprecated function format_date(). Deprecated in drupal:8.0.0 and is removed from drupal:9.0.0. Use Drupal::service(\'date.formatter\')->format().',
       'Call to deprecated method strtolower() of class Drupal\Component\Utility\Unicode. Deprecated in drupal:8.6.0 and is removed from drupal:9.0.0. Use mb_strtolower() instead.',
       'Call to deprecated constant FILE_CREATE_DIRECTORY: Deprecated in drupal:8.7.0 and is removed from drupal:9.0.0. Use Drupal\Core\File\FileSystemInterface::CREATE_DIRECTORY.',
@@ -585,14 +598,79 @@ final class DeprecationAnalyzer {
       'Call to deprecated method l() of class Drupal. Deprecated in drupal:8.0.0 and is removed from drupal:9.0.0. Use Drupal\Core\Link::fromTextAndUrl() instead.',
       'Call to deprecated function drupal_render(). Deprecated in drupal:8.0.0 and is removed from drupal:9.0.0. Use the',
       'Call to deprecated function drupal_render_root(). Deprecated in drupal:8.0.0 and is removed from drupal:9.0.0. Use Drupal\Core\Render\RendererInterface::renderRoot() instead.',
+
+      // 0.5.0
       'Call to deprecated function file_unmanaged_save_data(). Deprecated in drupal:8.7.0 and is removed from drupal:9.0.0. Use Drupal\Core\File\FileSystemInterface::saveData().',
+
+      // 0.5.1
       'Call to deprecated constant FILE_MODIFY_PERMISSIONS: Deprecated in drupal:8.7.0 and is removed from drupal:9.0.0. Use Drupal\Core\File\FileSystemInterface::MODIFY_PERMISSIONS.',
-      'Call to deprecated constant FILE_CREATE_DIRECTORY: Deprecated in drupal:8.7.0 and is removed from drupal:9.0.0. Use Drupal\Core\File\FileSystemInterface::CREATE_DIRECTORY.',
       'Call to deprecated function db_delete(). Deprecated in drupal:8.0.0 and is removed from drupal:9.0.0. Instead, get a database connection injected into your service from the container and call delete() on it. For example,',
-      'Call to deprecated function entity_get_form_display(). Deprecated in drupal:8.8.0 and is removed from drupal:9.0.0. Use Drupal::service(\'entity_display.repository\')->getFormDisplay().',
-      'Call to deprecated function entity_get_display(). Deprecated in drupal:8.8.0 and is removed from drupal:9.0.0. Use Drupal::service(\'entity_display.repository\')->getViewDisplay().',
+
+      // 0.5.2
+      'Call to deprecated function entity_get_form_display(). Deprecated in drupal:8.8.0 and is removed from drupal:9.0.0. Use EntityDisplayRepositoryInterface::getFormDisplay() instead.',
+      'Call to deprecated function entity_get_display(). Deprecated in drupal:8.8.0 and is removed from drupal:9.0.0. Use EntityDisplayRepositoryInterface::getViewDisplay() instead.',
+      'Call to deprecated const REQUEST_TIME. Deprecated in drupal:8.3.0 and is removed from drupal:10.0.0. Use Drupal::time()->getRequestTime().',
+      'Call to deprecated method urlInfo() of class Drupal\Core\Entity\EntityInterface. Deprecated in drupal:8.0.0 and is removed from drupal:9.0.0. Use Drupal\Core\Entity\EntityInterface::toUrl() instead.',
+      'Call to deprecated function file_scan_directory(). Deprecated in drupal:8.8.0 and is removed from drupal:9.0.0. Use Drupal\Core\File\FileSystemInterface::scanDirectory() instead.',
+      'Call to deprecated function file_default_scheme(). Deprecated in drupal:8.8.0 and is removed from drupal:9.0.0. Use Drupal::config(\'system.file\')->get(\'default_scheme\') instead.',
+      'Call to deprecated function db_update(). Deprecated in drupal:8.0.0 and is removed from drupal:9.0.0. Instead, get a database connection injected into your service from the container and call update() on it. For example,',
+
+      // 0.5.3
+      'Call to deprecated method strtolower() of class Drupal\Component\Utility\Unicode. Deprecated in drupal:8.6.0 and is removed from drupal:9.0.0. Use mb_strtolower() instead.',
+      'Call to deprecated method strlen() of class Drupal\Component\Utility\Unicode. Deprecated in drupal:8.6.0 and is removed from drupal:9.0.0. Use mb_strlen() instead.',
+      'Call to deprecated method link() of class Drupal\Core\Entity\EntityInterface. Deprecated in drupal:8.0.0 and is removed from drupal:9.0.0. Use Drupal\Core\EntityInterface::toLink()->toString() instead.',
+      'Call to deprecated function entity_load(). Deprecated in drupal:8.0.0 and is removed from drupal:9.0.0. Use the entity type storage\'s load() method.',
+      'Call to deprecated function node_load(). Deprecated in drupal:8.0.0 and is removed from drupal:9.0.0. Use Drupal\node\Entity\Node::load().',
+      'Call to deprecated function file_load(). Deprecated in drupal:8.0.0 and is removed from drupal:9.0.0. Use Drupal\file\Entity\File::load().',
+      'Call to deprecated function user_load(). Deprecated in drupal:8.0.0 and is removed from drupal:9.0.0. Use Drupal\user\Entity\User::load().',
+      'Call to deprecated function file_directory_temp(). Deprecated in drupal:8.8.0 and is removed from drupal:9.0.0. Use Drupal\Core\File\FileSystemInterface::getTempDirectory() instead.',
+      'Call to deprecated function file_directory_os_temp(). Deprecated in drupal:8.3.0 and is removed from drupal:9.0.0. Use Drupal\Component\FileSystem\FileSystem::getOsTemporaryDirectory().',
+      'Call to deprecated function drupal_realpath(). Deprecated in drupal:8.0.0 and is removed from drupal:9.0.0. Use Drupal\Core\File\FileSystem::realpath().',
+      'Call to deprecated function file_uri_target(). Deprecated in drupal:8.8.0 and is removed from drupal:9.0.0. Use Drupal\Core\StreamWrapper\StreamWrapperManagerInterface::getTarget() instead.',
+
+      // 0.5.4
+      'Call to deprecated method format() of class Drupal\Component\Utility\SafeMarkup. Deprecated in drupal:8.0.0 and is removed from drupal:9.0.0. Use Drupal\Component\Render\FormattableMarkup.',
+      'Call to deprecated constant FILE_EXISTS_RENAME: Deprecated in drupal:8.7.0 and is removed from drupal:9.0.0. Use Drupal\Core\File\FileSystemInterface::EXISTS_RENAME.',
+      // Covered below with the pattern.
+      //'Call to deprecated method l() of class [redacted]. Deprecated in drupal:8.0.0 and is removed from drupal:9.0.0. Use Drupal\Core\Link::fromTextAndUrl() instead.',
+      'Call to deprecated function entity_create(). Deprecated in drupal:8.0.0 and is removed from drupal:9.0.0. Use The method overriding Entity::create() for the entity type, e.g. \Drupal\node\Entity\Node::create() if the entity type is known. If the entity type is variable, use the entity storage\'s create() method to construct a new entity:',
+
+      // 0.5.5
+      // No new rules
+
+      // 0.5.6
+      'Call to deprecated constant DATETIME_STORAGE_TIMEZONE: Deprecated in drupal:8.5.0 and is removed from drupal:9.0.0. Use Drupal\datetime\Plugin\Field\FieldType\DateTimeItemInterface::STORAGE_TIMEZONE instead.',
+      'Call to deprecated constant DATETIME_DATETIME_STORAGE_FORMAT: Deprecated in drupal:8.5.0 and is removed from drupal:9.0.0. Use Drupal\datetime\Plugin\Field\FieldType\DateTimeItemInterface::DATETIME_STORAGE_FORMAT instead.',
+      'Call to deprecated constant DATETIME_DATE_STORAGE_FORMAT: Deprecated in drupal:8.5.0 and is removed from drupal:9.0.0. Use Drupal\datetime\Plugin\Field\FieldType\DateTimeItemInterface::DATE_STORAGE_FORMAT instead.',
     ];
-    return in_array($string, $rector_covered);
+    return
+      in_array($string, $rector_covered) ||
+      strpos($string, 'Call to deprecated method l() of class Drupal') === 0;
+  }
+
+  /**
+   * Finds all .info.yml files for non-test extensions under a path.
+   *
+   * @param string $path
+   *   Base path to find all info.yml files in.
+   *
+   * @return array
+   *   A list of paths to .info.yml files found under the base path.
+   */
+  private function getSubExtensionInfoFiles(string $path) {
+    $files = [];
+    foreach(glob($path . '/*.info.yml') as $file) {
+      // Make sure the filename matches rules for an extension. There may be
+      // info.yml files in shipped configuration which would have more parts.
+      $parts = explode('.', basename($file));
+      if (count($parts) == 3) {
+        $files[] = $file;
+      }
+    }
+    foreach (glob($path . '/*', GLOB_ONLYDIR|GLOB_NOSORT) as $dir) {
+      $files = array_merge($files, $this->getSubExtensionInfoFiles($dir));
+    }
+    return $files;
   }
 
 }

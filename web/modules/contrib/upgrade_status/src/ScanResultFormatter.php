@@ -196,7 +196,7 @@ class ScanResultFormatter {
         $formatted_error = preg_replace('!deprecated function ([^(]+)\(\)!', 'deprecated function <a target="_blank" href="' . $api_link . '\1">\1()</a>', $error['message']);
 
         // Replace deprecated class links.
-        if (preg_match('!class (Drupal\\\\.+)\.( |$)!', $formatted_error, $found)) {
+        if (preg_match('!class (Drupal\\\\\S+)\.( |$)!', $formatted_error, $found)) {
           if (preg_match('!Drupal\\\\([a-z_0-9A-Z]+)\\\\(.+)$!', $found[1], $namespace)) {
 
             $path_parts = explode('\\', $namespace[2]);
@@ -226,6 +226,9 @@ class ScanResultFormatter {
 
         // Make drupal.org documentation links clickable.
         $formatted_error = preg_replace('!See (https://drupal.org(.\S+)).$!', 'See <a href="\1">\1<a>.', $formatted_error);
+
+        // Format core_version_requirement message.
+        $formatted_error = preg_replace('!(core_version_requirement: .+) (to designate|is not)!', '<code>\1</code> \2', $formatted_error);
 
         $category = 'uncategorized';
         if (!empty($error['upgrade_status_category'])) {
@@ -361,7 +364,7 @@ class ScanResultFormatter {
 
     $build['export_ascii'] = [
       '#type' => 'link',
-      '#title' => $this->t('Export as ASCII'),
+      '#title' => $this->t('Export as text'),
       '#name' => 'export_ascii',
       '#url' => Url::fromRoute(
         'upgrade_status.export',

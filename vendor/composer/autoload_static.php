@@ -137,6 +137,7 @@ class ComposerStaticInitDrupal8
             'Psr\\Container\\' => 14,
             'PhpParser\\' => 10,
             'PHPStan\\' => 8,
+            'PHPMailer\\PHPMailer\\' => 20,
         ),
         'O' => 
         array (
@@ -179,7 +180,6 @@ class ComposerStaticInitDrupal8
         ),
         'E' => 
         array (
-            'Eluceo\\iCal\\' => 12,
             'Egulias\\EmailValidator\\' => 23,
         ),
         'D' => 
@@ -455,6 +455,10 @@ class ComposerStaticInitDrupal8
             0 => __DIR__ . '/..' . '/mglaman/phpstan-drupal/src',
             1 => __DIR__ . '/..' . '/phpstan/phpstan-deprecation-rules/src',
         ),
+        'PHPMailer\\PHPMailer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
+        ),
         'OomphInc\\ComposerInstallersExtender\\' => 
         array (
             0 => __DIR__ . '/..' . '/oomphinc/composer-installers-extender/src',
@@ -538,10 +542,6 @@ class ComposerStaticInitDrupal8
         'FileEye\\MimeMap\\' => 
         array (
             0 => __DIR__ . '/..' . '/fileeye/mimemap/src',
-        ),
-        'Eluceo\\iCal\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/eluceo/ical/src',
         ),
         'Egulias\\EmailValidator\\' => 
         array (
@@ -3874,28 +3874,6 @@ class ComposerStaticInitDrupal8
         'Egulias\\EmailValidator\\Warning\\QuotedString' => __DIR__ . '/..' . '/egulias/email-validator/EmailValidator/Warning/QuotedString.php',
         'Egulias\\EmailValidator\\Warning\\TLD' => __DIR__ . '/..' . '/egulias/email-validator/EmailValidator/Warning/TLD.php',
         'Egulias\\EmailValidator\\Warning\\Warning' => __DIR__ . '/..' . '/egulias/email-validator/EmailValidator/Warning/Warning.php',
-        'Eluceo\\iCal\\Component' => __DIR__ . '/..' . '/eluceo/ical/src/Component.php',
-        'Eluceo\\iCal\\Component\\Alarm' => __DIR__ . '/..' . '/eluceo/ical/src/Component/Alarm.php',
-        'Eluceo\\iCal\\Component\\Calendar' => __DIR__ . '/..' . '/eluceo/ical/src/Component/Calendar.php',
-        'Eluceo\\iCal\\Component\\Event' => __DIR__ . '/..' . '/eluceo/ical/src/Component/Event.php',
-        'Eluceo\\iCal\\Component\\Timezone' => __DIR__ . '/..' . '/eluceo/ical/src/Component/Timezone.php',
-        'Eluceo\\iCal\\Component\\TimezoneRule' => __DIR__ . '/..' . '/eluceo/ical/src/Component/TimezoneRule.php',
-        'Eluceo\\iCal\\ParameterBag' => __DIR__ . '/..' . '/eluceo/ical/src/ParameterBag.php',
-        'Eluceo\\iCal\\Property' => __DIR__ . '/..' . '/eluceo/ical/src/Property.php',
-        'Eluceo\\iCal\\PropertyBag' => __DIR__ . '/..' . '/eluceo/ical/src/PropertyBag.php',
-        'Eluceo\\iCal\\Property\\ArrayValue' => __DIR__ . '/..' . '/eluceo/ical/src/Property/ArrayValue.php',
-        'Eluceo\\iCal\\Property\\DateTimeProperty' => __DIR__ . '/..' . '/eluceo/ical/src/Property/DateTimeProperty.php',
-        'Eluceo\\iCal\\Property\\DateTimesProperty' => __DIR__ . '/..' . '/eluceo/ical/src/Property/DateTimesProperty.php',
-        'Eluceo\\iCal\\Property\\Event\\Attendees' => __DIR__ . '/..' . '/eluceo/ical/src/Property/Event/Attendees.php',
-        'Eluceo\\iCal\\Property\\Event\\Geo' => __DIR__ . '/..' . '/eluceo/ical/src/Property/Event/Geo.php',
-        'Eluceo\\iCal\\Property\\Event\\Organizer' => __DIR__ . '/..' . '/eluceo/ical/src/Property/Event/Organizer.php',
-        'Eluceo\\iCal\\Property\\Event\\RecurrenceId' => __DIR__ . '/..' . '/eluceo/ical/src/Property/Event/RecurrenceId.php',
-        'Eluceo\\iCal\\Property\\Event\\RecurrenceRule' => __DIR__ . '/..' . '/eluceo/ical/src/Property/Event/RecurrenceRule.php',
-        'Eluceo\\iCal\\Property\\RawStringValue' => __DIR__ . '/..' . '/eluceo/ical/src/Property/RawStringValue.php',
-        'Eluceo\\iCal\\Property\\StringValue' => __DIR__ . '/..' . '/eluceo/ical/src/Property/StringValue.php',
-        'Eluceo\\iCal\\Property\\ValueInterface' => __DIR__ . '/..' . '/eluceo/ical/src/Property/ValueInterface.php',
-        'Eluceo\\iCal\\Util\\ComponentUtil' => __DIR__ . '/..' . '/eluceo/ical/src/Util/ComponentUtil.php',
-        'Eluceo\\iCal\\Util\\DateUtil' => __DIR__ . '/..' . '/eluceo/ical/src/Util/DateUtil.php',
         'Error' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/Error.php',
         'FileEye\\MimeMap\\Command\\UpdateCommand' => __DIR__ . '/..' . '/fileeye/mimemap/src/Command/UpdateCommand.php',
         'FileEye\\MimeMap\\Extension' => __DIR__ . '/..' . '/fileeye/mimemap/src/Extension.php',
@@ -4378,6 +4356,11 @@ class ComposerStaticInitDrupal8
         'PEAR_Error' => __DIR__ . '/..' . '/pear/pear-core-minimal/src/PEAR.php',
         'PEAR_ErrorStack' => __DIR__ . '/..' . '/pear/pear-core-minimal/src/PEAR/ErrorStack.php',
         'PEAR_Exception' => __DIR__ . '/..' . '/pear/pear_exception/PEAR/Exception.php',
+        'PHPMailer\\PHPMailer\\Exception' => __DIR__ . '/..' . '/phpmailer/phpmailer/src/Exception.php',
+        'PHPMailer\\PHPMailer\\OAuth' => __DIR__ . '/..' . '/phpmailer/phpmailer/src/OAuth.php',
+        'PHPMailer\\PHPMailer\\PHPMailer' => __DIR__ . '/..' . '/phpmailer/phpmailer/src/PHPMailer.php',
+        'PHPMailer\\PHPMailer\\POP3' => __DIR__ . '/..' . '/phpmailer/phpmailer/src/POP3.php',
+        'PHPMailer\\PHPMailer\\SMTP' => __DIR__ . '/..' . '/phpmailer/phpmailer/src/SMTP.php',
         'PHPStan\\Drupal\\DrupalAutoloader' => __DIR__ . '/..' . '/mglaman/phpstan-drupal/src/Drupal/DrupalAutoloader.php',
         'PHPStan\\Drupal\\DrupalServiceDefinition' => __DIR__ . '/..' . '/mglaman/phpstan-drupal/src/Drupal/DrupalServiceDefinition.php',
         'PHPStan\\Drupal\\Extension' => __DIR__ . '/..' . '/mglaman/phpstan-drupal/src/Drupal/Extension.php',
