@@ -32,4 +32,3 @@ lightgallery:
     component:
       /libraries/lightGallery/dist/css/lightgallery.min.css:
         minified: true
-

@@ -1,10 +1,19 @@
 <?php
 
-use Drupal\paragraphs\Entity\Paragraph;
-use \Drupal\paragraphs\ParagraphInterface;
-use \Drupal\media\Entity\Media;
+/**
+ * @file
+ */
 
-// Hex to rgb color convert
+use Drupal\file\FileInterface;
+use Drupal\file\Entity\File;
+use Drupal\media\MediaInterface;
+use Drupal\paragraphs\Entity\Paragraph;
+use Drupal\paragraphs\ParagraphInterface;
+use Drupal\media\Entity\Media;
+
+/**
+ * Hex to rgb color convert.
+ */
 function hex2rgb($colour, $op = 1) {
   if ($colour[0] == '#') {
     $colour = substr($colour, 1);
@@ -33,7 +42,7 @@ function hex2rgb($colour, $op = 1) {
 }
 
 /**
- * Get Youtube Embed URL instead of Short or Watch URL
+ * Get Youtube Embed URL instead of Short or Watch URL.
  *
  * @param $url
  *
@@ -52,32 +61,35 @@ function getYoutubeEmbedUrl($url) {
 }
 
 /**
- * Get vimoe embed url
+ * Get vimoe embed url.
  *
  * @param $url
  *
  * @return string
  */
-function getVimeoEmbedUrl($url){
+function getVimeoEmbedUrl($url) {
   $regs = [];
   if (preg_match('%^https?:\/\/(?:www\.|player\.)?vimeo.com\/(?:channels\/(?:\w+\/)?|groups\/([^\/]*)\/videos\/|album\/(\d+)\/video\/|video\/|)(\d+)(?:$|\/|\?)(?:[?]?.*)$%im', $url, $regs)) {
-    if($regs[3]){
+    if ($regs[3]) {
       return "https://player.vimeo.com/video/{$regs[3]}";
     }
   }
   return $url;
 }
 
-function getMediaImage($media_target_id){
-  if($media_target_id){
+/**
+ *
+ */
+function getMediaImage($media_target_id) {
+  if ($media_target_id) {
     $media = Media::load($media_target_id);
-    if($media instanceof \Drupal\media\MediaInterface && $media->hasField('field_media_image') && $file_id = $media->get('field_media_image')->target_id){
-      $file = \Drupal\file\Entity\File::load($file_id);
-      if($file instanceof \Drupal\file\FileInterface){
+    if ($media instanceof MediaInterface && $media->hasField('field_media_image') && $file_id = $media->get('field_media_image')->target_id) {
+      $file = File::load($file_id);
+      if ($file instanceof FileInterface) {
         return [
           'type' => 'image',
           'url' => file_create_url($file->getFileUri()),
-          'alt' => $media->get('field_media_image')->alt
+          'alt' => $media->get('field_media_image')->alt,
         ];
       }
     }
@@ -85,49 +97,56 @@ function getMediaImage($media_target_id){
   return FALSE;
 }
 
-function getBackground($custom_bg_para_id){
-  if($custom_bg_para_id){
+/**
+ *
+ */
+function getBackground($custom_bg_para_id) {
+  if ($custom_bg_para_id) {
 
-    // Switch between id and paragraph
-    if($custom_bg_para_id instanceof ParagraphInterface){
+    // Switch between id and paragraph.
+    if ($custom_bg_para_id instanceof ParagraphInterface) {
       $paragraph = $custom_bg_para_id;
-    } else {
+    }
+    else {
       $paragraph = Paragraph::load($custom_bg_para_id);
     }
 
-    if($paragraph instanceof ParagraphInterface &&
+    if ($paragraph instanceof ParagraphInterface &&
       $paragraph->hasField('field_image') &&
       $media_target_id = $paragraph->get('field_image')->target_id
-    ){
+    ) {
       return getMediaImage($media_target_id);
-    } elseif ($paragraph instanceof ParagraphInterface &&
+    }
+    elseif ($paragraph instanceof ParagraphInterface &&
       $paragraph->hasField('field_video_embed_url') &&
-      $video_url = $paragraph->get('field_video_embed_url')->value){
-        if (strpos($video_url, 'youtube') > 0) {
-          return [
-            'type' => 'video',
-            'url' => getYoutubeEmbedUrl($video_url)
-          ];
-        }
-        elseif (strpos($video_url, 'vimeo') > 0) {
-          return  [
-            'type' => 'video',
-            'url' => getVimeoEmbedUrl($video_url)
-          ];
-        }
-        else {
-          return $video_url;
-        }
+      $video_url = $paragraph->get('field_video_embed_url')->value) {
+      if (strpos($video_url, 'youtube') > 0) {
+        return [
+          'type' => 'video',
+          'url' => getYoutubeEmbedUrl($video_url),
+        ];
+      }
+      elseif (strpos($video_url, 'vimeo') > 0) {
+        return [
+          'type' => 'video',
+          'url' => getVimeoEmbedUrl($video_url),
+        ];
+      }
+      else {
+        return $video_url;
+      }
     }
   }
   return FALSE;
 }
 
-
-function getMediaImages($media_ids = []){
-  if(!empty($media_ids) && is_array($media_ids)){
+/**
+ *
+ */
+function getMediaImages($media_ids = []) {
+  if (!empty($media_ids) && is_array($media_ids)) {
     $media = [];
-    foreach ($media_ids as $media_id){
+    foreach ($media_ids as $media_id) {
       $media[] = getMediaImage($media_id['target_id']);
     }
     return empty($media) ? FALSE : $media;
