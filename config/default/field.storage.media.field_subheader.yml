@@ -1,11 +1,11 @@
-uuid: f0b5762d-5dd1-4b6f-8edd-9b6ce96e04e6
+uuid: 30e3b5df-e767-4e2a-b05d-b2de0d34b5be
 langcode: en
 status: true
 dependencies:
   module:
     - media
-id: media.field_title
-field_name: field_title
+id: media.field_subheader
+field_name: field_subheader
 entity_type: media
 type: string
 settings:

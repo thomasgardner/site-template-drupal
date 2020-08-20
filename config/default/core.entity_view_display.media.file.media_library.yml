@@ -7,7 +7,7 @@ dependencies:
     - field.field.media.file.field_caption
     - field.field.media.file.field_categories
     - field.field.media.file.field_media_file
-    - field.field.media.file.field_title
+    - field.field.media.file.field_subheader
     - image.style.thumbnail
     - media.type.file
   module:
@@ -33,7 +33,7 @@ hidden:
   field_caption: true
   field_categories: true
   field_media_file: true
-  field_title: true
+  field_subheader: true
   langcode: true
   name: true
   uid: true
