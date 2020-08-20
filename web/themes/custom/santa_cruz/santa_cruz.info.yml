@@ -46,3 +46,6 @@ features:
   - favicon
   - comment_user_picture
   - node_user_picture
+
+ckeditor_stylesheets:
+  - css/app.css
