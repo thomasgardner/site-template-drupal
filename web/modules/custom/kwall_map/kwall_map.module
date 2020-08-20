@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * @file
+ */
+
 use Drupal\Core\Routing\RouteMatchInterface;
 
 /**
@@ -28,7 +32,6 @@ phrases and it\'ll do the rest.</p>
   }
 }
 
-
 /**
  * Implements hook_theme().
  */
@@ -44,7 +47,9 @@ function kwall_map_theme($existing, $type, $theme, $path) {
   return $variables;
 }
 
-
+/**
+ *
+ */
 function kwall_map_page_attachments(array &$variables) {
   $config = \Drupal::config('kwall_map.settings');
   $count = $config->get('num_campuses');

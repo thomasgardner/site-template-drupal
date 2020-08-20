@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * @file
+ */
+
 use Drupal\block\Entity\Block;
 use Drupal\block_content\BlockContentInterface;
 use Drupal\Core\Access\AccessResult;
@@ -25,19 +29,16 @@ function custom_module_help($path, $arg) {
   switch ($path) {
     case "help.page.custom_module":
       return '' . t("Nothing to show for now.") . '';
-
-      break;
   }
 }
 
 /**
  * Implements hook__page_attachments()
  */
-
 function custom_module_page_attachments(array &$attachments) {
   // Get current route.
   $route = \Drupal::routeMatch()->getRouteName();
-  // check route set in custom_module.routing.yml file
+  // Check route set in custom_module.routing.yml file.
   if ($route == 'custom_module.content') {
     $attachments['#attached']['library'][] = 'custom_module/global-styling';
     $attachments['#attached']['library'][] = 'custom_module/global-scripts';
@@ -134,7 +135,6 @@ function custom_module_entity_bundle_field_info_alter(&$fields, EntityTypeInterf
   }
 }
 
-
 /**
  * Implements hook_preprocess_views_view_field.
  */
@@ -157,13 +157,11 @@ function kwall_preprocess_views_view_field(&$vars) {
   }
 }
 
-
 /**
  * Implements hook_views_pre_view().
  */
 function custom_module_views_pre_view(ViewExecutable $view, $display_id, array &$args) {
   // Apply custom arguments to the views.
-
   // View display in column content paragraph.
   if ($view->id() == 'article_view' && $display_id == 'block_2') {
     $node = \Drupal::routeMatch()->getParameter('node');
@@ -201,7 +199,6 @@ function custom_module_views_pre_view(ViewExecutable $view, $display_id, array &
       }
     }
   }
-
 
   if ($view->id() == 'article_view' && $display_id == 'block_3') {
     $node = \Drupal::routeMatch()->getParameter('node');
@@ -302,6 +299,9 @@ WHERE ((paragraphs_item_field_data.id = '" . $pid . "')) AND ((paragraphs_item_f
   return $cat;
 }
 
+/**
+ *
+ */
 function custom_module_entity_extra_field_info() {
   $extra_field = [];
 
@@ -322,6 +322,9 @@ function custom_module_entity_extra_field_info() {
 
 }
 
+/**
+ *
+ */
 function custom_module_node_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
   if ($view_mode == 'full' && $entity->getType() == 'event') {
     if ($display->getComponent('extra_date_field')) {
@@ -353,18 +356,17 @@ function custom_module_node_view(array &$build, EntityInterface $entity, EntityV
 
         date_default_timezone_set("UTC");
 
-        //Start time.
+        // Start time.
         $start_time = strtotime($entity->get('field_start_date')->value);
         $start_time = DrupalDateTime::createFromTimestamp($start_time);
 
         $start_time = $start_time->format('g:ia');
 
-        //End time.
+        // End time.
         $end_time = strtotime($entity->get('field_end_date')->value);
         $end_time = DrupalDateTime::createFromTimestamp($end_time);
 
         $end_time = $end_time->format('g:ia');
-
 
         $build['event_time'] = [
           '#type' => 'markup',
@@ -382,7 +384,9 @@ function custom_module_node_view(array &$build, EntityInterface $entity, EntityV
  * implement hook_form_formid_alter
  */
 
-// Add Class if we have values in Exposed form
+/**
+ * Add Class if we have values in Exposed form.
+ */
 function custom_module_form_views_exposed_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   $view = $form_state->getStorage('view');
   if ($view) {
@@ -399,7 +403,7 @@ function custom_module_form_views_exposed_form_alter(&$form, FormStateInterface 
         $form['#attributes']['class'][] = 'form-values-exist';
       }
     }
-    // Check if View Ajax Enabled then make sure its reload current page
+    // Check if View Ajax Enabled then make sure its reload current page.
     if ($view['view']->id() == 'faqs' && $view['view']->current_display == 'default' && $view['view']->ajaxEnabled()) {
       $currPathAlias = \Drupal::service('path.alias_manager')
         ->getAliasByPath('/node/87');
@@ -415,7 +419,7 @@ function custom_module_entity_presave(EntityInterface $entity) {
   // For better user experience set a media name the same as image title.
   if ($entity instanceof Media) {
     if ($entity->hasField('field_media_image') && !$entity->get('field_media_image')
-        ->isEmpty()) {
+      ->isEmpty()) {
       $image = $entity->get('field_media_image')->getValue()[0];
       if ($image['title'] != '') {
         $entity->set('name', $image['title']);

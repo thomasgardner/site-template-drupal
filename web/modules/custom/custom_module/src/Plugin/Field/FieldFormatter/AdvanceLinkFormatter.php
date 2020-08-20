@@ -57,5 +57,5 @@ class AdvanceLinkFormatter extends LinkFormatter {
     }
     return $element;
   }
-}
 
+}

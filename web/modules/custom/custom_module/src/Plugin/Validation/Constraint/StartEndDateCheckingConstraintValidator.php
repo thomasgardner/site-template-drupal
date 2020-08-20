@@ -26,7 +26,6 @@ class StartEndDateCheckingConstraintValidator extends ConstraintValidator {
     $start_date = new DrupalDateTime($start_date);
     $end_date = new DrupalDateTime($end_date);
 
-
     if ($start_date > $end_date) {
       $this->context->addViolation($constraint->message);
 

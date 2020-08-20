@@ -2,7 +2,6 @@
 
 namespace Drupal\custom_module\Plugin\Field\FieldFormatter;
 
-use Drupal\Core\Entity\ContentEntityInterface;
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Render\Markup;
 use Drupal\link\Plugin\Field\FieldFormatter\LinkFormatter;

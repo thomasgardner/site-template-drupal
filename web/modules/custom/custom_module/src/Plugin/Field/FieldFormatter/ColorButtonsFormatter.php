@@ -35,7 +35,7 @@ class ColorButtonsFormatter extends LinkFormatter {
       if ($entity instanceof ContentEntityInterface &&
         $entity->hasField('field_button_list_color') &&
         !$entity->get('field_button_list_color')->isEmpty()) {
-        // Get color
+        // Get color.
         $color = $entity->get('field_button_list_color')->value;
         $element['#options']['attributes']['class'] = ['button', $color];
       }

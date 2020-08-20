@@ -4,6 +4,9 @@ namespace Drupal\custom_module\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
 
+/**
+ *
+ */
 class CustomModuleSettings extends ControllerBase {
 
   /**
