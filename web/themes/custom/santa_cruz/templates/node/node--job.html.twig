@@ -1,12 +1,11 @@
-{% set file_url = file_url(content.field_media['#object'].field_media_file.entity.uri.value) %}
-{% set file_name = content.field_media['#object'].field_media_file.entity.filename.value %}
+{% set file_url = file_url(content.field_media[0]['#media'].field_media_file.entity.uri.value) %}
+{% set file_name = content.field_media[0]['#media'].field_media_file.entity.filename.value %}
 
 <div class="job-posting-card">
-  {% if content.field_job_category|field_value is not empty %}
-    <a href="{{ content.field_job_category[0]['#url'] }}"
-         class="category btn-link">{{ content.field_job_category[0]['#title'] }}</a>
-  {% endif %}
   <a id="node-{{ node.id }}" href="{{ file_url }}" download="{{ file_name }}" target="_blank">
+    {% if content.field_job_category|field_value is not empty %}
+      <div class="category btn-link">{{ content.field_job_category[0]['#title'] }}</div>
+    {% endif %}
     <h4 class="underline">{{ label[0]['#context'].value }}</h4>
     <div class="specs">
       {% if content.field_date|field_value is not empty
