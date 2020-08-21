@@ -1,0 +1,105 @@
+<div class="page-content" id="main-content">
+  <div class="grid-container large">
+    <div class="grid-x grid-margin-x">
+      <div class="cell large-12">
+        <div class="category">
+          <a class="btn-link" href="{{ content.field_categories[0]['#url'] }}"
+             aria-label="">{{ content.field_categories[0]['#title'] }}</a>
+        </div>
+      </div>
+      <div class="cell xlarge-8">
+        <h1>{{ label }}</h1>
+        {% if content.field_subtitle_formatted|field_value is not empty %}
+          <div class="lead">{{ content.field_subtitle_formatted|field_value }}</div>
+        {% endif %}
+      </div>
+      <div class="cell xlarge-4">
+        <div class="sidebar">
+          <div class="profile-info">
+            <!-- <div class="profile-prefix">By </div> -->
+            <div class="profile-name">
+              <a class="btn-link" href="{{ content.field_author_link[0]['#url'] }}"
+                 aria-label="">{{ content.field_author }}</a>
+            </div>
+            <div class="profile-date">{{ node.changedtime|date("F j, Y") }}</div>
+          </div>
+          <h5>Share this story:</h5>
+          {#          {{>social-sharing type='top && right'}}#}
+        </div>
+      </div>
+    </div>
+    <br/>
+  </div>
+  <div class="grid-container large">
+    {% if content.field_media[0]['#media'].field_media_image is not null %}
+      {% set image_url = file_url(content.field_media[0]['#media'].field_media_image.entity.uri.value) %}
+      {% set image_title = content.field_media[0]['#media'].field_media_image[0].title %}
+      {% set image_alt = content.field_media[0]['#media'].field_media_image[0].alt %}
+      <figure class="img-full">
+        <div class="image">
+          <img alt="{{ image_alt }}" src="{{ image_url }}">
+        </div>
+        <figcaption>
+          <div class="caption-title"></div>
+          <div class="caption-desc">
+            {% if content.field_media[0]['#media'].field_caption %}
+              <p>{{ content.field_media[0]['#media'].field_caption.value }}</p>
+            {% endif %}
+          </div>
+        </figcaption>
+      </figure>
+    {% endif %}
+  </div>
+
+  <div class="grid-container">
+    <div class="grid-x grid-margin-x">
+      <div class="cell">
+        {{ content.body }}
+      </div>
+    </div>
+    {#    {{>social-sharing type='bottom'}}#}
+  </div>
+
+
+  {#  <section class="heading">#}
+  {#    <h2 class="underline">Related Podcasts</h2>#}
+  {#  </section>#}
+
+  {#  <div class="grid-container large">#}
+  {#    <div class="news-card-list">#}
+  {#      <a class="news-card" href="javascript:void(0)" aria-label="">#}
+  {#        <div class="image">#}
+  {#          <img src="{{ root }}assets/img/content/news-image-1.jpeg">#}
+  {#        </div>#}
+  {#        <div class="news-card-content">#}
+  {#          <div class="category btn-link">Arts &amp; Sciences</div>#}
+  {#          <h4 class="underline isolated">Guillermo Gómez-Peña returns to UCSC to perform his latest solo work:#}
+  {#            "The Most (un) Documented Mexican Artist"</h4>#}
+  {#        </div>#}
+  {#      </a>#}
+
+  {#      <a class="news-card" href="javascript:void(0)" aria-label="">#}
+  {#        <div class="image">#}
+  {#          <img src="{{ root }}assets/img/content/news-image-2.jpeg">#}
+  {#        </div>#}
+  {#        <div class="news-card-content">#}
+  {#          <div class="category btn-link">Arts &amp; Sciences</div>#}
+  {#          <h4 class="underline isolated">UCSC to bring art/science LASER series downtown for special evening#}
+  {#            at Rio Theater</h4>#}
+
+  {#        </div>#}
+  {#      </a>#}
+
+  {#      <a class="news-card" href="javascript:void(0)" aria-label="">#}
+  {#        <div class="image">#}
+  {#          <img src="{{ root }}assets/img/content/news-image-3.jpeg">#}
+  {#        </div>#}
+  {#        <div class="news-card-content">#}
+  {#          <div class="category btn-link">Humanities</div>#}
+  {#          <h4 class="underline isolated">Borderbus: A community conversation about migration, art, and social#}
+  {#            justice</h4>#}
+  {#        </div>#}
+  {#      </a>#}
+  {#    </div>#}
+  {#  </div>#}
+</div>

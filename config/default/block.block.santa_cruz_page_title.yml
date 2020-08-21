@@ -33,6 +33,7 @@ visibility:
   'entity_bundle:node':
     id: 'entity_bundle:node'
     bundles:
+      article: article
       podcast: podcast
     negate: true
     context_mapping:

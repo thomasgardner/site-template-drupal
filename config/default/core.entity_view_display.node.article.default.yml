@@ -23,6 +23,8 @@ dependencies:
     - addtocalendar
     - datetime
     - fences
+    - link
+    - text
     - user
 _core:
   default_config_hash: ChmU3AVqDKU32A_fyChG0W9dTRKmVBR58B6OClCLvZI
@@ -31,13 +33,40 @@ targetEntityType: node
 bundle: article
 mode: default
 content:
+  body:
+    type: text_default
+    weight: 4
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
   content_moderation_control:
     weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_categories:
+  field_author:
+    type: string
     weight: 1
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_author_link:
+    type: link
+    weight: 5
+    region: content
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+  field_categories:
+    weight: 0
     label: hidden
     settings:
       link: true
@@ -98,47 +127,30 @@ content:
         fences_label_classes: ''
     type: datetime_default
     region: content
-  field_teaser_image:
+  field_media:
     type: entity_reference_entity_view
-    weight: 0
+    weight: 3
+    region: content
     label: hidden
     settings:
+      link: true
       view_mode: default
-      link: false
-    third_party_settings:
-      fences:
-        fences_field_tag: none
-        fences_field_classes: ''
-        fences_field_item_tag: none
-        fences_field_item_classes: ''
-        fences_label_tag: none
-        fences_label_classes: ''
+    third_party_settings: {  }
+  field_subtitle_formatted:
+    type: text_default
+    weight: 6
     region: content
-  field_teaser_txt:
-    weight: 3
     label: hidden
     settings: {  }
-    third_party_settings:
-      fences:
-        fences_field_tag: none
-        fences_field_classes: ''
-        fences_field_item_tag: none
-        fences_field_item_classes: ''
-        fences_label_tag: none
-        fences_label_classes: ''
-    type: basic_string
-    region: content
+    third_party_settings: {  }
 hidden:
-  body: true
   field_after_content: true
   field_audiences: true
-  field_author: true
-  field_author_link: true
   field_colleges_departments: true
   field_featured: true
-  field_media: true
   field_meta_tags: true
-  field_subtitle_formatted: true
+  field_teaser_image: true
+  field_teaser_txt: true
   field_topics: true
   langcode: true
   links: true
