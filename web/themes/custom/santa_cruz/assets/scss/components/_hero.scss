@@ -111,7 +111,7 @@
                 }
             }
         }
-    
+
         .angle {
             background: $secondary-seagreen !important;
         }
@@ -127,7 +127,7 @@
     &.green {
         .hero-container {
             .hero {
-                
+
                 &.hero-text-left {
                     .gradient-overlay {
                         background: linear-gradient(to right, rgba(darken($secondary-green, 20%),1) 0%, rgba(darken($secondary-green, 20%),1) 75%, rgba(darken($secondary-green, 20%),0) 100%);
@@ -139,7 +139,7 @@
                         background: linear-gradient(to left, rgba(darken($secondary-green, 20%),1) 0%,rgba(darken($secondary-green, 20%),1) 75%,rgba(darken($secondary-green, 20%),0) 100%);
                     }
                 }
-                    
+
             }
         }
 
@@ -188,13 +188,13 @@
             .hero{
                 &.hero-text-left {
                     .gradient-overlay {
-                        background: linear-gradient(to left, rgba(242, 152, 19, 1) 0%,rgba(242, 152, 19,1) 75%,rgba(242, 152, 19,0) 100%);
+                        background: linear-gradient(to right, rgba(242, 152, 19, 1) 0%,rgba(242, 152, 19,1) 75%,rgba(242, 152, 19,0) 100%);
                     }
                 }
 
                 &.hero-text-right {
                     .gradient-overlay {
-                        background: linear-gradient(to right, rgba(242, 152, 19, 1) 0%,rgba(242, 152, 19,1) 75%,rgba(242, 152, 19,0) 100%);
+                        background: linear-gradient(to left, rgba(242, 152, 19, 1) 0%,rgba(242, 152, 19,1) 75%,rgba(242, 152, 19,0) 100%);
                     }
                 }
             }
@@ -231,7 +231,7 @@
         left: 0;
         font-size: .6rem !important;
         bottom: auto;
-        
+
     }
 
     h1 {
@@ -267,7 +267,7 @@
                 font-size: 3.2rem;
                 line-height: 1.2;
             }
-        }  
+        }
     }
 
     &.inner-page-standard {
@@ -277,7 +277,7 @@
 
         .grid-container{
             padding: 0;
-            
+
             @include breakpoint(large){
                 padding: inherit;
             }
@@ -287,7 +287,7 @@
             background: transparent;
             max-height: 1200px;
             color: $primary-gray;
-            
+
             .hero {
                 @include breakpoint(xlarge) {
                     width: 55%;
@@ -306,11 +306,11 @@
             .hero-text {
                 padding: 20px 25px 0;
                 left: 0;
-                
+
                 h1 {
                     font-size: 1.5rem;
                     margin-bottom: 0;
-            
+
                     @include breakpoint(xlarge){
                         font-size: 2rem;
                     }
@@ -318,7 +318,7 @@
                     @include breakpoint(xxlarge){
                         font-size: 2.4rem;
                     }
-            
+
                     @include breakpoint(xxxlarge){
                         font-size: 3.2rem;
                         line-height: 1.1;
@@ -329,22 +329,22 @@
 
         .hero-text {
             background: transparent;
-            
+
             &.flush {
                 h1, p, a, a::after {
                     color: white;
-                    
+
                     @include breakpoint(xlarge) {
                         color: $primary-gray;
                     }
                 }
-    
+
                 &::after {
                     display: none;
                 }
             }
 
-            h1 { 
+            h1 {
                 color: #fff;
                 @include breakpoint(xlarge) {
                     color: $primary-blue;
@@ -367,10 +367,10 @@
                     color: white;
                     @include breakpoint(xlarge) {
                         color: $primary-blue;
-                    } 
+                    }
                 }
             }
-    
+
         }
 
         .button-list {
@@ -387,7 +387,7 @@
     }
 
     &.inner-page {
-        
+
         .header-wrapper {
             position: absolute;
             width: 100%;
@@ -407,7 +407,7 @@
                     background: $secondary-turquiose;
                     width: 70%;
                     display: block;
-                    margin: 10px auto;   
+                    margin: 10px auto;
                 }
             }
         }
@@ -431,7 +431,7 @@
         }
 
         .hero-caption {
-            background: rgba($white, .9); 
+            background: rgba($white, .9);
             color: $primary-gray;
             width: 60%;
             bottom: 170px;
@@ -459,14 +459,14 @@
         .hero-text-left {
 
             .hero-text {
-                left: 0; 
+                left: 0;
             }
 
             .angle {
                 width: 43%;
                 left: -47px;
                 height: 400px;
-        
+
             }
         }
 
@@ -475,7 +475,7 @@
                 @include breakpoint(xlarge){
                     right: 50px;
                 }
-            } 
+            }
             .hero-video {
                 left: 0;
             }
@@ -495,19 +495,19 @@
                 @include breakpoint(xlarge) {
                     width: 68% !important;
                 }
-            }            
-            
+            }
+
             .hero {
                 background: $primary-blue;
-                
-                img { 
+
+                img {
                     @include breakpoint(xlarge) {
                         min-width: 60%;
                         width: 75%;
                     }
                 }
 
-                
+
 
             }
         }
@@ -533,7 +533,7 @@
         }
 
         .hero-text { transition: all 600ms ease-in-out; }
-        
+
         &:hover {
             .angle {
                 transform: skewX(-10deg) translateX(1%);
@@ -581,7 +581,7 @@
     }
 
     @include breakpoint(xxxxlarge){
-        max-height: 750px; 
+        max-height: 750px;
     }
 
 }
@@ -607,7 +607,7 @@
     .angle {
         background: $primary-blue;
         overflow: hidden;
-        &.transparent { opacity: .8; } 
+        &.transparent { opacity: .8; }
 
         .inner-angle {
             background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.05) 100%);
@@ -630,11 +630,11 @@
             transform: skewX(-10deg);
             /* @include mui-animation(fade, slide($direction: left, $amount: 10%));
             animation-duration: 2s; */
-            left: 55%; 
+            left: 55%;
         }
     }
 
-    &.hero-text-left {      
+    &.hero-text-left {
         .gradient-overlay {
            left: -12%;
         }
@@ -660,7 +660,7 @@
         .hero-text {
             @include breakpoint(xlarge) {
                 left: 5%;
-                right: inherit;  
+                right: inherit;
             }
 
             &.flush {
@@ -669,14 +669,14 @@
                 }
             }
         }
-    
+
     }
 
     img {
         width: 100%;
         margin-bottom: 0;
         position: relative;
-        
+
         .cut {
             top: 50%;
             margin-top: -50%;
@@ -686,7 +686,7 @@
             min-width: 100%;
             max-width: none;
         }
-        
+
         @include breakpoint(xlarge) {
             transform: scale(1);
             opacity: 1;
@@ -705,13 +705,13 @@
     display: flex;
     right: 0;
     width: 100%;
-    height: auto; 
+    height: auto;
     font-size: 0.8rem;
     z-index: 2;
     @include flex-order(2);
     color: white;
 
-    h1 { 
+    h1 {
         margin-bottom: 0;
     }
 
@@ -723,7 +723,7 @@
         padding: 60px 0 40px;
         width: 36%;
         height: 100%;
-        bottom: 0; 
+        bottom: 0;
         font-size: 1.2rem;
     }
 
@@ -742,7 +742,7 @@
         @include breakpoint(xlarge) {
             display: none;
         }
-        
+
     }
-    
+
 }
