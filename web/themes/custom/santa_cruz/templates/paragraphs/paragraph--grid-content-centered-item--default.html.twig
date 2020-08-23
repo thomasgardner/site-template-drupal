@@ -23,9 +23,9 @@
 
   {# Opening head tag. #}
   <{{ content.field_heading_level|field_value }}
-  class="{% if content.field_heading_level|field_value == "h2" %} title {% else %} underline {% endif %}">
+  class="{% if content.field_heading_level|field_value == "h2" %} title {% elseif content.field_body_unformatted|field_value %} underline {% endif %}
+  ">
   {% if content.field_title|field_value is not empty %}
-
     {# Link head tag if exist. #}
     {% if content.field_link|field_value is not empty %}
       <a href="{{ content.field_link[0]['#url'] }}">
