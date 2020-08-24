@@ -1,14 +1,14 @@
-uuid: fd543e03-e95e-4dab-b077-7961aef6afb2
+uuid: 33b6d0af-bae9-42fc-9338-86160811f70c
 langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.social_block
+    - block_content.type.site_specific_title_or_logo
     - field.storage.block_content.field_title
-id: block_content.social_block.field_title
+id: block_content.site_specific_title_or_logo.field_title
 field_name: field_title
 entity_type: block_content
-bundle: social_block
+bundle: site_specific_title_or_logo
 label: Title
 description: ''
 required: false

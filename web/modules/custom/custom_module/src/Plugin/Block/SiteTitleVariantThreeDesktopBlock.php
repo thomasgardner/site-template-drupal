@@ -2,11 +2,14 @@
 
 namespace Drupal\custom_module\Plugin\Block;
 
+use Drupal\block_content\BlockContentInterface;
+use Drupal\block_content\Entity\BlockContent;
 use Drupal\Core\Access\AccessResult;
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
-use Drupal\node\NodeInterface;
+use Drupal\Core\Url;
+// use Drupal\node\NodeInterface;
 
 /**
  * Provides the block for displaying Site Title in the header.
@@ -23,6 +26,11 @@ use Drupal\node\NodeInterface;
 class SiteTitleVariantThreeDesktopBlock extends BlockBase {
 
   use StringTranslationTrait;
+
+  /**
+   * Subsite Logo or Title block ID.
+   */
+  const SUBSITE_LOGO_BLOCK_ID = 16;
 
   /**
    * {@inheritdoc}
@@ -42,35 +50,72 @@ class SiteTitleVariantThreeDesktopBlock extends BlockBase {
    * {@inheritdoc}
    */
   public function build() {
-    $node = \Drupal::routeMatch()->getParameter('node');
+    $block = BlockContent::load(self::SUBSITE_LOGO_BLOCK_ID);
 
-    // TODO: make empty value by default.
-    $subTitle = 'Engineering Division';
+    $linkTitle = '';
+    $linkUrl = '';
+    $logoUrl = '';
+    $logoAlt = '';
+    $logoTitle = '';
+    //    $subSiteTitle = '';
+    $markup = '';
 
-    if ($node instanceof NodeInterface) {
-      // TODO: Find division title in any way.
-      //  Also need to find a link...
-      //  Find logo.
-      if ($node->hasField('field_subtitle')
-        && !$node->get('field_subtitle')->isEmpty()) {
-        $subTitle = $node->get('field_subtitle')->getString();
+    if ($block instanceof BlockContentInterface) {
+      if ($block->hasField('field_link') && !$block->get('field_link')
+          ->isEmpty()) {
+        $link = $block->get('field_link')->first()->getValue();
+        $linkTitle = $link['title'];
+        $linkUrl = Url::fromUri($link['uri'])->toString();
+      }
+      if ($block->hasField('field_media') && !$block->get('field_media')
+          ->isEmpty()) {
+        $media = $block->get('field_media')
+          ->first()
+          ->get('entity')
+          ->getTarget()
+          ->getValue()
+          ->get('field_media_image')
+          ->first();
+
+        $file = $media->get('entity')
+          ->getTarget()
+          ->getValue()
+          ->getFileUri();
+
+        $logoUrl = Url::fromUri(file_create_url($file))->toString();
+        $logoAlt = $media->alt;
+        $logoTitle = $media->title;
       }
 
-      $markup = '<h1><div class="subsite-brand-container">
-                    <img class="subsite-brand" src="http://www.creative-preview.com/styleguide/dist/assets/img/content/baskin-logo-normal.png" alt="Custom Logo Example">
-                </div></h1><a class="div" href="javascript:void(0)">' . $subTitle . '</a>';
-
-      return [
-        '#type' => 'markup',
-        '#title' => $subTitle,
-        '#markup' => $markup,
-        '#cache' => [
-          'contexts' => ['url', 'languages'],
-          'tags' => ['node:' . $node->id()],
-        ],
-      ];
-
+      //      if ($block->hasField('field_title') && !$block->get('field_title')
+      //          ->isEmpty()) {
+      //        $subSiteTitle = $block->get('field_title')->getString();
+      //      }
     }
+
+    $markup = '<h1><div class="subsite-brand-container">';
+
+    if ($logoUrl !== '') {
+      $markup .= '<img class="subsite-brand" src="' . $logoUrl . '" title="' . $logoTitle . '" alt="' . $logoAlt . '">';
+    }
+
+    $markup .= '</div></h1>';
+
+    if ($linkTitle !== '') {
+      $markup .= '<a class="div" href="' . $linkUrl . '">' . $linkTitle . '</a>';
+    }
+
+    // $node = \Drupal::routeMatch()->getParameter('node');
+
+    return [
+      '#type' => 'markup',
+      '#title' => $linkTitle,
+      '#markup' => $markup,
+      '#cache' => [
+        'contexts' => ['url', 'languages'],
+        // 'tags' => ['node:' . $node->id()],
+      ],
+    ];
   }
 
 }
