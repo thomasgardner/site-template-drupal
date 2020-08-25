@@ -40,7 +40,12 @@ class FilterAlign extends FilterBase {
           $node->setAttribute('class', implode(' ', $classes));
         }
       }
-      $result->setProcessedText(Html::serialize($dom));
+      $result->setProcessedText(Html::serialize($dom))
+        ->addAttachments([
+          'library' => [
+            'filter/align',
+          ],
+        ]);
     }
 
     return $result;

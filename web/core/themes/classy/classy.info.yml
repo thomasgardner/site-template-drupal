@@ -30,5 +30,8 @@ libraries-extend:
   media_library/widget:
     - classy/media_library
 
+libraries-override:
+  filter/align: classy/align
+
 ckeditor_stylesheets:
   - css/components/media-embed-error.css

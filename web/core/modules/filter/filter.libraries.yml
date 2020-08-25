@@ -31,3 +31,9 @@ caption:
   css:
     component:
       css/filter.caption.css: {}
+
+align:
+  version: VERSION
+  css:
+    component:
+      css/filter.align.css: {}

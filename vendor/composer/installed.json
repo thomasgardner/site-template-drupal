@@ -4019,7 +4019,9 @@
                 "Content Edit page jumps when media library item is placed": "https://www.drupal.org/files/issues/2019-11-04/3073023-4.patch",
                 "Default theme favicon for administration theme": "https://www.drupal.org/files/issues/2019-12-14/default-theme-favicon-for-administration-theme-2981434-7.patch",
                 "[D8] Chrome 83 cancels jquery.form ajax requests over https": "https://www.drupal.org/files/issues/2020-05-27/3138421-75.patch",
-                "Add Views EntityReference filter to be available for all entity reference fields": "https://www.drupal.org/files/issues/2020-05-23/drupal-generalize-taxonomyindextid-filter-2429699-325.patch"
+                "Add Views EntityReference filter to be available for all entity reference fields": "https://www.drupal.org/files/issues/2020-05-23/drupal-generalize-taxonomyindextid-filter-2429699-325.patch",
+                "[regression] Restore styling for embedded media edit button in Seven theme": "https://www.drupal.org/files/issues/2020-02-25/3092795-22.patch",
+                "Constrain the width of aligned images, media, blockquotes etc to a max of 75%": "https://www.drupal.org/files/issues/2019-10-10/3078287-104.patch"
             }
         },
         "installation-source": "dist",

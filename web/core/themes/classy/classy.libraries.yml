@@ -26,6 +26,12 @@ base:
       css/components/textarea.css: { weight: -10 }
       css/components/ui-dialog.css: { weight: -10 }
 
+align:
+  version: VERSION
+  css:
+    component:
+      css/components/filter.align.css: {}
+
 book-navigation:
   version: VERSION
   css:
