@@ -49,6 +49,7 @@
 {% block paragraph %}
   <section{{ attributes.addClass(classes) }} aria-label="content row">
     {% block content %}
+{#      {{ dump(content) }}#}
       <div class="component-wrapper">
         <div class="hero-viewport inner-page">
           <div class="hero-caption wow">
@@ -63,7 +64,13 @@
             <div id="hero" class="hero">
               <div class="hero-video">
                 <div class="hero-video-container">
-                  <div id="muteYouTubeVideoPlayer"></div>
+                  {% set video_url = file_url(content.field_video_mp4[0]['#media'].field_media_video_file.entity.uri.value) %}
+                  <video controls autoplay>
+                    <source src="{{ video_url }}">
+                  </video>
+{#                  <iframe src="{{ video_url }}" autoplay="1" loop="1" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen>#}
+{#                  </iframe>#}
+{#                  <div id="muteYouTubeVideoPlayer"></div>#}
                 </div>
               </div>
               {% set image_url = file_url(content.field_image[0]['#media'].field_media_image.entity.uri.value) %}

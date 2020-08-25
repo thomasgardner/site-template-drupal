@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.full_video.field_body_formatted
+    - field.field.paragraph.full_video.field_image
     - field.field.paragraph.full_video.field_link
     - field.field.paragraph.full_video.field_subtitle
     - field.field.paragraph.full_video.field_title
@@ -20,7 +21,7 @@ bundle: full_video
 mode: default
 content:
   field_body_formatted:
-    weight: 4
+    weight: 5
     label: hidden
     settings: {  }
     third_party_settings:
@@ -33,8 +34,24 @@ content:
         fences_label_classes: ''
     type: text_default
     region: content
+  field_image:
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: entity_reference_entity_view
+    region: content
   field_link:
-    weight: 5
+    weight: 6
     label: hidden
     settings:
       trim_length: null
@@ -53,7 +70,7 @@ content:
     type: link
     region: content
   field_subtitle:
-    weight: 3
+    weight: 4
     label: hidden
     settings:
       link_to_entity: false
@@ -68,7 +85,7 @@ content:
     type: string
     region: content
   field_title:
-    weight: 2
+    weight: 3
     label: hidden
     settings:
       link_to_entity: false
