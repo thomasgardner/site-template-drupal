@@ -42,6 +42,10 @@ class SiteTitleVariantTwoMobileBlock extends BlockBase {
    * {@inheritdoc}
    */
   public function build() {
+
+
+
+
     $node = \Drupal::routeMatch()->getParameter('node');
 
     if ($node instanceof NodeInterface) {

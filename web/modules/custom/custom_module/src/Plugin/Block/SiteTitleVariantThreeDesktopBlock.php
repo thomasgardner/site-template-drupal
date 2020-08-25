@@ -9,7 +9,7 @@ use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Drupal\Core\Url;
-// use Drupal\node\NodeInterface;
+use Drupal\Core\Cache\Cache;
 
 /**
  * Provides the block for displaying Site Title in the header.
@@ -57,8 +57,7 @@ class SiteTitleVariantThreeDesktopBlock extends BlockBase {
     $logoUrl = '';
     $logoAlt = '';
     $logoTitle = '';
-    //    $subSiteTitle = '';
-    $markup = '';
+    // $subSiteTitle = '';
 
     if ($block instanceof BlockContentInterface) {
       if ($block->hasField('field_link') && !$block->get('field_link')
@@ -105,17 +104,30 @@ class SiteTitleVariantThreeDesktopBlock extends BlockBase {
       $markup .= '<a class="div" href="' . $linkUrl . '">' . $linkTitle . '</a>';
     }
 
-    // $node = \Drupal::routeMatch()->getParameter('node');
-
     return [
       '#type' => 'markup',
       '#title' => $linkTitle,
       '#markup' => $markup,
-      '#cache' => [
-        'contexts' => ['url', 'languages'],
-        // 'tags' => ['node:' . $node->id()],
-      ],
     ];
+  }
+
+  public function getCacheTags() {
+    // With this when your node change your block will rebuild.
+    if ($node = \Drupal::routeMatch()->getParameter('node')) {
+      // If there is node add its cachetag.
+      return Cache::mergeTags(parent::getCacheTags(), ['node:' . $node->id()]);
+    }
+    else {
+      // Return default tags instead.
+      return parent::getCacheTags();
+    }
+  }
+
+  public function getCacheContexts() {
+    // If you depends on \Drupal::routeMatch()
+    // you must set context of this block with 'route' context tag.
+    // Every new route this block will rebuild.
+    return Cache::mergeContexts(parent::getCacheContexts(), ['route']);
   }
 
 }
