@@ -8,22 +8,21 @@ use Drupal\Core\Access\AccessResult;
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
-use Drupal\Core\Url;
 use Drupal\Core\Cache\Cache;
 
 /**
  * Provides the block for displaying Site Title in the header.
  *
  * @Block(
- *   id = "custom_module_site_title_variant_three_desktop",
- *   admin_label = @Translation("Site Title - Variant #3 Desktop"),
+ *   id = "custom_module_subsite_logo_mobile",
+ *   admin_label = @Translation("Subsite Logo or Title - For Mobile"),
  *   category = @Translation("SITE Custom Block"),
  *   forms = {
  *     "settings_tray" = FALSE,
  *   },
  * )
  */
-class SiteTitleVariantThreeDesktopBlock extends BlockBase {
+class SubSiteLogoTitleMobileBlock extends BlockBase {
 
   use StringTranslationTrait;
 
@@ -50,58 +49,45 @@ class SiteTitleVariantThreeDesktopBlock extends BlockBase {
    * {@inheritdoc}
    */
   public function build() {
+
     $block = BlockContent::load(self::SUBSITE_LOGO_BLOCK_ID);
 
     $linkTitle = '';
-    $linkUrl = '';
-    $logoUrl = '';
-    $logoAlt = '';
-    $logoTitle = '';
-    // $subSiteTitle = '';
+    $subSiteTitle = '';
 
     if ($block instanceof BlockContentInterface) {
-      if ($block->hasField('field_link') && !$block->get('field_link')
-          ->isEmpty()) {
+      if ($block->hasField('field_link')
+        && !$block->get('field_link')->isEmpty()) {
         $link = $block->get('field_link')->first()->getValue();
         $linkTitle = $link['title'];
-        $linkUrl = Url::fromUri($link['uri'])->toString();
-      }
-      if ($block->hasField('field_media') && !$block->get('field_media')
-          ->isEmpty()) {
-        $media = $block->get('field_media')
-          ->first()
-          ->get('entity')
-          ->getTarget()
-          ->getValue()
-          ->get('field_media_image')
-          ->first();
-
-        $file = $media->get('entity')
-          ->getTarget()
-          ->getValue()
-          ->getFileUri();
-
-        $logoUrl = Url::fromUri(file_create_url($file))->toString();
-        $logoAlt = $media->alt;
-        $logoTitle = $media->title;
       }
 
-      //      if ($block->hasField('field_title') && !$block->get('field_title')
-      //          ->isEmpty()) {
-      //        $subSiteTitle = $block->get('field_title')->getString();
-      //      }
+      if ($block->hasField('field_title')
+        && !$block->get('field_title')->isEmpty()) {
+        $subSiteTitle = $block->get('field_title')->getString();
+      }
     }
 
-    $markup = '<h1><div class="subsite-brand-container">';
+    $markup = '';
 
-    if ($logoUrl !== '') {
-      $markup .= '<img class="subsite-brand" src="' . $logoUrl . '" title="' . $logoTitle . '" alt="' . $logoAlt . '">';
+    if ($subSiteTitle !== '' && $linkTitle !== '') {
+      $markup .= '<p>';
     }
 
-    $markup .= '</div></h1>';
+    if ($subSiteTitle !== '') {
+      $markup .= $subSiteTitle;
+    }
+
+    if ($subSiteTitle !== '' && $linkTitle !== '') {
+      $markup .= ' - ';
+    }
 
     if ($linkTitle !== '') {
-      $markup .= '<a class="div" href="' . $linkUrl . '">' . $linkTitle . '</a>';
+      $markup .= $linkTitle;
+    }
+
+    if ($subSiteTitle !== '' && $linkTitle !== '') {
+      $markup .= '</p>';
     }
 
     return [
@@ -111,6 +97,9 @@ class SiteTitleVariantThreeDesktopBlock extends BlockBase {
     ];
   }
 
+  /**
+   * {@inheritdoc}
+   */
   public function getCacheTags() {
     // With this when your node change your block will rebuild.
     if ($node = \Drupal::routeMatch()->getParameter('node')) {
@@ -123,6 +112,9 @@ class SiteTitleVariantThreeDesktopBlock extends BlockBase {
     }
   }
 
+  /**
+   * {@inheritdoc}
+   */
   public function getCacheContexts() {
     // If you depends on \Drupal::routeMatch()
     // you must set context of this block with 'route' context tag.
