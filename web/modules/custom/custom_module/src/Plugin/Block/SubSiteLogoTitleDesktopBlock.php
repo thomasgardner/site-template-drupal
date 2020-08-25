@@ -60,15 +60,7 @@ class SubSiteLogoTitleDesktopBlock extends BlockBase {
     $logoTitle = '';
     $subSiteTitle = '';
 
-
     if ($block instanceof BlockContentInterface) {
-      if ($block->hasField('field_title')
-        && !$block->get('field_title')->isEmpty()
-        && $block->hasField('field_media')
-        && $block->get('field_media')->isEmpty()) {
-        $subSiteTitle = $block->get('field_title')->getString();
-      }
-
       if ($block->hasField('field_title')
         && $block->get('field_title')->isEmpty()
         && $block->hasField('field_link')
