@@ -64,13 +64,13 @@ settings:
             - Source
             - Maximize
   plugins:
-    language:
-      language_list: un
-    stylescombo:
-      styles: "blockquote|blockquote\npre|pre\ncode|code\nsmall|small\nimg.img-responsive|Img Responsive\ndiv.inline|Inline\n"
     drupallink:
       linkit_enabled: true
       linkit_profile: default
+    language:
+      language_list: un
+    stylescombo:
+      styles: "blockquote|blockquote\r\npre|pre\r\ncode|code\r\nsmall|small\r\nimg.img-responsive|Img Responsive\r\ndiv.inline|Inline\r\n"
     autoembed:
       status: embed
     video_embed:
