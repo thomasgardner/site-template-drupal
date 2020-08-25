@@ -13,6 +13,11 @@ use Drupal\media\Entity\Media;
 
 /**
  * Hex to rgb color convert.
+ *
+ * @param $colour
+ * @param int $op
+ *
+ * @return false|string
  */
 function hex2rgb($colour, $op = 1) {
   if ($colour[0] == '#') {
@@ -38,6 +43,7 @@ function hex2rgb($colour, $op = 1) {
   $r = hexdec($r);
   $g = hexdec($g);
   $b = hexdec($b);
+
   return implode(',', [$r, $g, $b, $op]);
 }
 
@@ -46,7 +52,7 @@ function hex2rgb($colour, $op = 1) {
  *
  * @param $url
  *
- * @return string
+ * @return string|null
  */
 function getYoutubeEmbedUrl($url) {
   $shortUrlRegex = '/youtu.be\/([a-zA-Z0-9_-]+)\??/i';
@@ -57,11 +63,16 @@ function getYoutubeEmbedUrl($url) {
   if (preg_match($shortUrlRegex, $url, $matches)) {
     $youtube_id = $matches[count($matches) - 1];
   }
-  return 'https://www.youtube.com/embed/' . $youtube_id;
+
+  if (isset($youtube_id)) {
+    return 'https://www.youtube.com/embed/' . $youtube_id;
+  }
+
+  return NULL;
 }
 
 /**
- * Get vimoe embed url.
+ * Get vimeo embed url.
  *
  * @param $url
  *
@@ -74,11 +85,16 @@ function getVimeoEmbedUrl($url) {
       return "https://player.vimeo.com/video/{$regs[3]}";
     }
   }
+
   return $url;
 }
 
 /**
+ * Get a media image by ID.
  *
+ * @param $media_target_id
+ *
+ * @return array|false
  */
 function getMediaImage($media_target_id) {
   if ($media_target_id) {
@@ -94,11 +110,16 @@ function getMediaImage($media_target_id) {
       }
     }
   }
+
   return FALSE;
 }
 
 /**
+ * Get background image or video from a paragraph.
  *
+ * @param $custom_bg_para_id
+ *
+ * @return array|false
  */
 function getBackground($custom_bg_para_id) {
   if ($custom_bg_para_id) {
@@ -137,11 +158,16 @@ function getBackground($custom_bg_para_id) {
       }
     }
   }
+
   return FALSE;
 }
 
 /**
+ * Get Media Images.
  *
+ * @param array $media_ids
+ *
+ * @return array|false
  */
 function getMediaImages($media_ids = []) {
   if (!empty($media_ids) && is_array($media_ids)) {
@@ -151,5 +177,6 @@ function getMediaImages($media_ids = []) {
     }
     return empty($media) ? FALSE : $media;
   }
+
   return FALSE;
 }
