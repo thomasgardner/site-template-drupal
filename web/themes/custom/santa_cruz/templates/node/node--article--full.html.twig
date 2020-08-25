@@ -37,7 +37,7 @@
       {% set image_alt = content.field_media[0]['#media'].field_media_image[0].alt %}
       <figure class="img-full">
         <div class="image">
-          <img alt="{{ image_alt }}" src="{{ image_url }}">
+          <img alt="{{ image_alt }}" title="{{ image_title }}" src="{{ image_url }}">
         </div>
         <figcaption>
           <div class="caption-title"></div>

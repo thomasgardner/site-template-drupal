@@ -6,7 +6,9 @@ dependencies:
     - core.entity_view_mode.media.inline_content_large
     - core.entity_view_mode.media.inline_content_medium
     - core.entity_view_mode.media.inline_content_small
+    - core.entity_view_mode.media.original
   module:
+    - ace_editor
     - ckeditor_media_embed
     - editor
     - entity_embed
@@ -65,7 +67,7 @@ filters:
     status: true
     weight: -45
     settings:
-      default_view_mode: inline_content_medium
+      default_view_mode: original
       allowed_media_types:
         audio: audio
         file: file
@@ -76,6 +78,7 @@ filters:
         inline_content_large: inline_content_large
         inline_content_medium: inline_content_medium
         inline_content_small: inline_content_small
+        original: original
   filter_ckeditor_media_embed:
     id: filter_ckeditor_media_embed
     provider: ckeditor_media_embed
@@ -126,3 +129,18 @@ filters:
     status: false
     weight: -36
     settings: {  }
+  ace_filter:
+    id: ace_filter
+    provider: ace_editor
+    status: false
+    weight: 0
+    settings:
+      theme: cobalt
+      syntax: html
+      height: 500px
+      width: 700px
+      font_size: 12pt
+      line_numbers: '1'
+      print_margins: '1'
+      show_invisibles: '0'
+      use_wrap_mode: '1'

@@ -188,6 +188,41 @@ class CKEditorIntegrationTest extends WebDriverTestBase {
   }
 
   /**
+   * Tests that filter.align.css is added to the CKEditor.
+   */
+  public function testFilterAlignIntegration() {
+    $assert_session = $this->assertSession();
+
+    // Disable the align filter.
+    $this->filterFormat->setFilterConfig('filter_align', [
+      'status' => FALSE,
+    ]);
+    $this->filterFormat->save();
+
+    $this->drupalGet('node/add/page');
+    $this->waitForEditor();
+    $this->assignNameToCkeditorIframe();
+    $this->getSession()->switchToIFrame('ckeditor');
+    // Without FilterAlign enabled, filter.align.css shouldn't be there.
+    // @see ckeditor_ckeditor_css_alter().
+    $assert_session->responseNotContains('/core/modules/filter/css/filter.align.css');
+
+    // Enable the align filter again.
+    $this->filterFormat->setFilterConfig('filter_align', [
+      'status' => TRUE,
+    ]);
+    $this->filterFormat->save();
+
+    $this->drupalGet('node/add/page');
+    $this->waitForEditor();
+    $this->assignNameToCkeditorIframe();
+    $this->getSession()->switchToIFrame('ckeditor');
+    // With FilterAlign enabled, filter.align.css should be there.
+    // @see ckeditor_ckeditor_css_alter().
+    $assert_session->responseContains('/core/modules/filter/css/filter.align.css');
+  }
+
+  /**
    * Tests if CKEditor is properly styled inside an off-canvas dialog.
    */
   public function testOffCanvasStyles() {

@@ -117,6 +117,10 @@ libraries-override:
     css:
       component:
         css/filter.caption.css: css/filter/filter.caption.css
+  filter/align:
+    css:
+      component:
+        css/filter.align.css: css/filter/filter.align.css
 
   image/admin:
     css:
