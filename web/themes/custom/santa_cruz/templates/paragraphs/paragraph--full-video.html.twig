@@ -65,7 +65,7 @@
               <div class="hero-video">
                 <div class="hero-video-container">
                   {% set video_url = file_url(content.field_video_mp4[0]['#media'].field_media_video_file.entity.uri.value) %}
-                  <video controls autoplay muted class="full-video">
+                  <video controls autoplay muted loop class="full-video">
                     <source src="{{ video_url }}">
                   </video>
 {#                  <iframe src="{{ video_url }}" autoplay="1" loop="1" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen>#}
