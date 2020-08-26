@@ -9,12 +9,27 @@ dependencies:
     - paragraphs.paragraphs_type.teaser_card_list
   module:
     - fences
-    - viewsreference
 id: paragraph.teaser_card_list.default
 targetEntityType: paragraph
 bundle: teaser_card_list
 mode: default
 content:
+  field_node_refs:
+    type: entity_reference_entity_view
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      view_mode: list_item
+      link: false
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
   field_title:
     weight: 0
     label: hidden
@@ -30,28 +45,5 @@ content:
         fences_label_classes: ''
     type: string
     region: content
-  field_view_reference:
-    weight: 1
-    label: hidden
-    settings:
-      plugin_types:
-        default: default
-        attachment: 0
-        page: 0
-        block: 0
-        rest_export: 0
-        entity_browser: 0
-        feed: 0
-        embed: 0
-    third_party_settings:
-      fences:
-        fences_field_tag: none
-        fences_field_classes: ''
-        fences_field_item_tag: none
-        fences_field_item_classes: ''
-        fences_label_tag: none
-        fences_label_classes: ''
-    type: viewsreference_formatter
-    region: content
 hidden:
-  field_node_refs: true
+  field_view_reference: true
