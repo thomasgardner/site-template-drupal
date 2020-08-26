@@ -495,7 +495,7 @@
         "drupal/feeds": "3.x-dev",
         "drupal/feeds_tamper": "2.x-dev",
         "drupal/fences": "^2.0@RC",
-        "drupal/field_group": "3.x-dev",
+        "drupal/field_group": "^3.1",
         "drupal/file_browser": "^1.1",
         "drupal/file_mdm": "^2.1",
         "drupal/focal_point": "^1.4",
