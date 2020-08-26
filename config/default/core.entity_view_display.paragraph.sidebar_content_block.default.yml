@@ -7,21 +7,13 @@ dependencies:
     - field.field.paragraph.sidebar_content_block.field_day_time_range
     - field.field.paragraph.sidebar_content_block.field_department
     - field.field.paragraph.sidebar_content_block.field_division_link
-    - field.field.paragraph.sidebar_content_block.field_division_title
     - field.field.paragraph.sidebar_content_block.field_email
-    - field.field.paragraph.sidebar_content_block.field_email_title
     - field.field.paragraph.sidebar_content_block.field_faxes
-    - field.field.paragraph.sidebar_content_block.field_faxes_title
     - field.field.paragraph.sidebar_content_block.field_link
     - field.field.paragraph.sidebar_content_block.field_location_text
-    - field.field.paragraph.sidebar_content_block.field_location_title
-    - field.field.paragraph.sidebar_content_block.field_mailing_address_title
-    - field.field.paragraph.sidebar_content_block.field_office_hours_title
     - field.field.paragraph.sidebar_content_block.field_other_information
     - field.field.paragraph.sidebar_content_block.field_paragraphs
-    - field.field.paragraph.sidebar_content_block.field_persons_title
     - field.field.paragraph.sidebar_content_block.field_phones
-    - field.field.paragraph.sidebar_content_block.field_phones_title
     - paragraphs.paragraphs_type.sidebar_content_block
   module:
     - address
@@ -90,28 +82,12 @@ content:
     third_party_settings: {  }
     type: link
     region: content
-  field_division_title:
-    weight: 14
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
   field_email:
     weight: 17
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: email_mailto
-    region: content
-  field_email_title:
-    weight: 16
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
     region: content
   field_faxes:
     weight: 10
@@ -132,14 +108,6 @@ content:
         fences_label_classes: ''
     type: phone_number_formatter
     region: content
-  field_faxes_title:
-    weight: 9
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
   field_link:
     weight: 4
     label: hidden
@@ -154,30 +122,6 @@ content:
     region: content
   field_location_text:
     weight: 3
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_location_title:
-    weight: 2
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_mailing_address_title:
-    weight: 11
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_office_hours_title:
-    weight: 5
     label: hidden
     settings:
       link_to_entity: false
@@ -207,21 +151,6 @@ content:
     third_party_settings: {  }
     type: entity_reference_revisions_entity_view
     region: content
-  field_persons_title:
-    weight: 0
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings:
-      fences:
-        fences_field_tag: h5
-        fences_field_classes: blue-text
-        fences_field_item_tag: div
-        fences_field_item_classes: ''
-        fences_label_tag: div
-        fences_label_classes: ''
-    type: string
-    region: content
   field_phones:
     weight: 8
     label: hidden
@@ -240,13 +169,5 @@ content:
         fences_label_tag: none
         fences_label_classes: ''
     type: phone_number_formatter
-    region: content
-  field_phones_title:
-    weight: 7
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
     region: content
 hidden: {  }
