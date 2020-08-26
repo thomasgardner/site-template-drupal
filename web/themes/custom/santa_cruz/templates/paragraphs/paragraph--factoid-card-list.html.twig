@@ -4,13 +4,16 @@
   'paragraph--id--' ~ paragraph.id()|clean_id,
   view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_id,
   not paragraph.isPublished() ? 'paragraph--unpublished',
+  'component-wrapper',
   'factoid-card-list'
 ] %}
 
 {% block paragraph %}
   <section{{ attributes.addClass(classes) }} aria-label="content row">
-    {% block content %}
-      {{ content }}
-    {% endblock %}
+    <div class="factoid-card-list">
+      {% block content %}
+        {{ content }}
+      {% endblock %}
+    </div>
   </section>
 {% endblock paragraph %}
