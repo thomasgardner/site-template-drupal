@@ -1,0 +1,13 @@
+/**
+Override hero scss
+ */
+.paragraph--type--full-image, .paragraph--type--full-video{
+  margin-bottom: 150px;
+  .hero-viewport{
+    position: relative;
+    .hero-caption{
+      bottom: -170px;
+    }
+  }
+}
+
