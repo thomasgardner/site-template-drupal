@@ -9,7 +9,7 @@ id: paragraph.sidebar_content_block.field_location_text
 field_name: field_location_text
 entity_type: paragraph
 bundle: sidebar_content_block
-label: Text
+label: 'Location Text'
 description: 'Division, Room & College.'
 required: false
 translatable: false
