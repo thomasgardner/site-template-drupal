@@ -61,12 +61,19 @@
 
 .job-posting-card-list {
 
+  //&.owl-carousel {
+  //  .job-posting-card {
+  //    margin-bottom: .6rem;
+  //    @include xy-cell(12);
+  //  }
+  //}
+
   &.list {
     .job-posting-card {
       margin-bottom: .6rem;
       @include xy-cell(12);
 
-      //.category { display: none; }
+      .category { display: none; }
 
       h4 {
         font-size: 1.25rem;
@@ -93,12 +100,16 @@
   @include xy-grid;
 
   .job-posting-card {
-    @include xy-cell(4);
+    //@include xy-cell(4);
 
     margin-bottom: 1.5rem;
 
     @include breakpoint(large) {
-      @include xy-cell(4);
+      //@include xy-cell(4);
+    }
+
+    .category {
+      display: none !important;
     }
 
   }

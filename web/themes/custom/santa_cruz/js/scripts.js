@@ -124,18 +124,45 @@
     attach: function (context, settings) {
       var $context = $(context);
 
-      $context.find('.job-posting-card-list.owl-carousel').once('jobPostingCardOwl').each(function () {
+      $context.find('.job-posting-card-list.job-card.owl-carousel').once('jobPostingCardOwl').each(function () {
         $(this).owlCarousel({
-          autoHeight: true,
+          margin: 30,
           nav: true,
           dots: false,
-          responsive: {
-            0: {
-              items: 1
+          items: 3,
+          loop: true,
+          responsive:{
+            0:{
+              items:1,
             },
-            900: {
-              items: 3
-            }
+            640:{
+              items:2,
+            },
+            1024:{
+              items:3,
+              autoWidth: false,
+            },
+          }
+        });
+      });
+
+      $context.find('.job-posting-card-list.list.owl-carousel').once('jobPostingCardOwl').each(function () {
+        $(this).owlCarousel({
+          margin: 30,
+          nav: true,
+          dots: false,
+          items: 3,
+          loop: true,
+          responsive:{
+            0:{
+              items:1,
+            },
+            640:{
+              items:1,
+            },
+            1024:{
+              items:1,
+            },
           }
         });
       });
