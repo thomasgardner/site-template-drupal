@@ -10,7 +10,6 @@
   <section{{ attributes.addClass(classes) }} aria-label="content row">
     {% block content %}
 
-      <div class="grid-container large">
         <div class="content">
 
           {% if content.field_title|field_value is not empty %}
@@ -27,7 +26,6 @@
             </div>
           {% endif %}
         </div>
-      </div>
     {% endblock %}
   </section>
 {% endblock paragraph %}
