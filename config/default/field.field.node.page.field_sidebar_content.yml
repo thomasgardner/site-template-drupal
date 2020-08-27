@@ -6,6 +6,7 @@ dependencies:
     - field.storage.node.field_sidebar_content
     - node.type.page
     - paragraphs.paragraphs_type.cta_buttons
+    - paragraphs.paragraphs_type.job_posting_list
     - paragraphs.paragraphs_type.profile_card
     - paragraphs.paragraphs_type.quick_link
     - paragraphs.paragraphs_type.quick_link_minimal
@@ -34,6 +35,7 @@ settings:
       profile_card: profile_card
       sidebar_content_block: sidebar_content_block
       sidebar_button: sidebar_button
+      job_posting_list: job_posting_list
     target_bundles_drag_drop:
       2_column_cta:
         weight: 13
@@ -44,33 +46,6 @@ settings:
       4_column_cta:
         weight: 15
         enabled: false
-      column_section:
-        weight: 16
-        enabled: false
-      full_width_image_section:
-        weight: 17
-        enabled: false
-      hero_banner:
-        weight: 18
-        enabled: false
-      hero_slide:
-        weight: 19
-        enabled: false
-      hero_slideshow:
-        weight: 20
-        enabled: false
-      interior_column_section:
-        weight: 21
-        enabled: false
-      interior_slideshow:
-        weight: 22
-        enabled: false
-      interior_slideshow_slide:
-        weight: 23
-        enabled: false
-      quick_link:
-        enabled: true
-        weight: 24
       accordion:
         weight: 27
         enabled: false
@@ -79,60 +54,6 @@ settings:
         enabled: false
       adjustable_media_and_content:
         weight: 29
-        enabled: false
-      flexible_bg_image_block:
-        weight: 31
-        enabled: false
-      flexible_bg_image_blocks:
-        weight: 32
-        enabled: false
-      flexible_cta_block:
-        weight: 33
-        enabled: false
-      flexible_cta_blocks:
-        weight: 34
-        enabled: false
-      cta_buttons:
-        enabled: true
-        weight: 34
-      recent_articles:
-        weight: 43
-        enabled: false
-      quick_link_minimal:
-        enabled: true
-        weight: 44
-      recent_articles_upcoming_events:
-        weight: 44
-        enabled: false
-      upcoming_events:
-        weight: 45
-        enabled: false
-      wysiwyg:
-        weight: 46
-        enabled: false
-      gridder:
-        weight: 47
-        enabled: false
-      gridder_item:
-        weight: 48
-        enabled: false
-      person_carousel:
-        weight: 55
-        enabled: false
-      quicktab_item:
-        weight: 58
-        enabled: false
-      quicktabs:
-        weight: 59
-        enabled: false
-      video_embed:
-        weight: 63
-        enabled: false
-      video_tab_carousel:
-        weight: 64
-        enabled: false
-      video_tab_item:
-        weight: 65
         enabled: false
       article_card:
         weight: 81
@@ -152,6 +73,9 @@ settings:
       button_list_item:
         weight: 86
         enabled: false
+      column_section:
+        weight: 16
+        enabled: false
       content_centered:
         weight: 88
         enabled: false
@@ -164,6 +88,21 @@ settings:
       content_with_media:
         weight: 91
         enabled: false
+      cta_buttons:
+        enabled: true
+        weight: 34
+      document_card_list:
+        weight: 108
+        enabled: false
+      embed:
+        weight: 109
+        enabled: false
+      factoid_card:
+        weight: 110
+        enabled: false
+      factoid_card_list:
+        weight: 111
+        enabled: false
       feature_image:
         weight: 93
         enabled: false
@@ -173,11 +112,35 @@ settings:
       feature_slideshow_item:
         weight: 95
         enabled: false
+      flexible_bg_image_block:
+        weight: 31
+        enabled: false
+      flexible_bg_image_blocks:
+        weight: 32
+        enabled: false
+      flexible_cta_block:
+        weight: 33
+        enabled: false
+      flexible_cta_blocks:
+        weight: 34
+        enabled: false
       full_image:
         weight: 100
         enabled: false
       full_video:
         weight: 101
+        enabled: false
+      full_width_image_section:
+        weight: 17
+        enabled: false
+      gallery:
+        weight: 122
+        enabled: false
+      generic_card:
+        weight: 123
+        enabled: false
+      generic_card_list:
+        weight: 124
         enabled: false
       grid_content_centered:
         weight: 105
@@ -191,8 +154,29 @@ settings:
       grid_content_left_item:
         weight: 108
         enabled: false
+      gridder:
+        weight: 47
+        enabled: false
+      gridder_item:
+        weight: 48
+        enabled: false
       header_banner:
         weight: 109
+        enabled: false
+      hero_banner:
+        weight: 18
+        enabled: false
+      hero_slide:
+        weight: 19
+        enabled: false
+      hero_slideshow:
+        weight: 20
+        enabled: false
+      historical_fact_card:
+        weight: 135
+        enabled: false
+      historical_timeline:
+        weight: 136
         enabled: false
       image_gallery:
         weight: 113
@@ -200,11 +184,29 @@ settings:
       image_gallery_item:
         weight: 114
         enabled: false
+      interior_column_section:
+        weight: 21
+        enabled: false
+      interior_slideshow:
+        weight: 22
+        enabled: false
+      interior_slideshow_slide:
+        weight: 23
+        enabled: false
+      job_posting_card_list:
+        weight: 142
+        enabled: false
+      job_posting_list:
+        enabled: true
+        weight: 143
       major_card:
         weight: 118
         enabled: false
       major_card_list:
         weight: 119
+        enabled: false
+      person_carousel:
+        weight: 55
         enabled: false
       podcast_card:
         weight: 121
@@ -221,46 +223,85 @@ settings:
       profile_card:
         enabled: true
         weight: 125
-      profile_card_details_fields:
-        weight: 126
-        enabled: false
       profile_card__fullwidth:
         weight: 127
+        enabled: false
+      profile_card_details_fields:
+        weight: 126
         enabled: false
       profile_list:
         weight: 128
         enabled: false
+      quick_link:
+        enabled: true
+        weight: 24
+      quick_link_minimal:
+        enabled: true
+        weight: 44
+      quicktab_item:
+        weight: 58
+        enabled: false
+      quicktabs:
+        weight: 59
+        enabled: false
       quote:
         weight: 133
+        enabled: false
+      recent_articles:
+        weight: 43
+        enabled: false
+      recent_articles_upcoming_events:
+        weight: 44
         enabled: false
       related_links_list:
         weight: 136
         enabled: false
+      related_links_list__view:
+        weight: 163
+        enabled: false
       ribbon_image:
         weight: 137
         enabled: false
+      sidebar_button:
+        enabled: true
+        weight: 140
       sidebar_content_block:
         enabled: true
         weight: 138
+      sidebar_content_block_department:
+        weight: 142
+        enabled: false
       step:
         weight: 139
         enabled: false
       step_grid:
         weight: 140
         enabled: false
-      sidebar_button:
-        enabled: true
-        weight: 140
       tabs_horizontal:
         weight: 141
         enabled: false
       tabs_horizontal_item:
         weight: 142
         enabled: false
-      sidebar_content_block_department:
-        weight: 142
+      teaser_card_list:
+        weight: 172
+        enabled: false
+      upcoming_events:
+        weight: 45
+        enabled: false
+      video_embed:
+        weight: 63
+        enabled: false
+      video_tab_carousel:
+        weight: 64
+        enabled: false
+      video_tab_item:
+        weight: 65
         enabled: false
       views:
         weight: 147
+        enabled: false
+      wysiwyg:
+        weight: 46
         enabled: false
 field_type: entity_reference_revisions
