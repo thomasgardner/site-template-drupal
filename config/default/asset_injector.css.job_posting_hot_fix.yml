@@ -1,12 +1,1 @@
-uuid: 7c72efa0-6908-4555-a922-42fd26e51fbf
-langcode: en
-status: true
-dependencies: {  }
-id: job_posting_hot_fix
-label: 'Job Posting Hot Fix'
-code: ".job-posting-card .category {\n  display: block !important;\n}\n\n.job-posting-card a {\n    display: block;\n    text-decoration: none;\n    color: #2b2b2b;\n    transition: color 1s;\n}\n"
-conditions_require_all: true
-conditions: {  }
-contexts: {  }
-media: all
-preprocess: true
+{  }
