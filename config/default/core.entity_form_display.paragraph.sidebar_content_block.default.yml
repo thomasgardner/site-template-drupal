@@ -11,6 +11,7 @@ dependencies:
     - field.field.paragraph.sidebar_content_block.field_faxes
     - field.field.paragraph.sidebar_content_block.field_link
     - field.field.paragraph.sidebar_content_block.field_location_text
+    - field.field.paragraph.sidebar_content_block.field_mailing_address_text
     - field.field.paragraph.sidebar_content_block.field_other_information
     - field.field.paragraph.sidebar_content_block.field_paragraphs
     - field.field.paragraph.sidebar_content_block.field_phones
@@ -79,6 +80,7 @@ third_party_settings:
     group_mailing_address:
       children:
         - field_department
+        - field_mailing_address_text
         - field_address
       parent_name: ''
       weight: 6
@@ -135,7 +137,7 @@ bundle: sidebar_content_block
 mode: default
 content:
   field_address:
-    weight: 7
+    weight: 8
     settings: {  }
     third_party_settings: {  }
     type: address_default
@@ -196,6 +198,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_mailing_address_text:
+    weight: 7
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
     region: content
   field_other_information:
     weight: 9
