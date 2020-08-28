@@ -20,3 +20,16 @@ Override hero scss
 .align-right{
   text-align: right;
 }
+
+.image-style--original{
+  max-width: 100%;
+}
+.image-style--inline-media{
+  max-width: 75%;
+}
+.image-style--inline-media-medium{
+max-width: 50%;
+}
+.image-style--inline-media-small{
+  max-width: 25%;
+}
