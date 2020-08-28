@@ -17,6 +17,7 @@ dependencies:
     - field.field.node.major.field_media
     - field.field.node.major.field_more_long_txt
     - field.field.node.major.field_opportunities_long_txt
+    - field.field.node.major.field_sidebar_content
     - field.field.node.major.field_transfers_long_txt
     - node.type.major
   module:
@@ -80,6 +81,7 @@ hidden:
   field_general_catalog_long_txt: true
   field_more_long_txt: true
   field_opportunities_long_txt: true
+  field_sidebar_content: true
   field_transfers_long_txt: true
   langcode: true
   sharethis: true
