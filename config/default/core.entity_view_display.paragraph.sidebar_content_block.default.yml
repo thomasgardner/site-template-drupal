@@ -11,6 +11,7 @@ dependencies:
     - field.field.paragraph.sidebar_content_block.field_faxes
     - field.field.paragraph.sidebar_content_block.field_link
     - field.field.paragraph.sidebar_content_block.field_location_text
+    - field.field.paragraph.sidebar_content_block.field_mailing_address_text
     - field.field.paragraph.sidebar_content_block.field_other_information
     - field.field.paragraph.sidebar_content_block.field_paragraphs
     - field.field.paragraph.sidebar_content_block.field_phones
@@ -27,7 +28,7 @@ bundle: sidebar_content_block
 mode: default
 content:
   field_address:
-    weight: 13
+    weight: 8
     label: hidden
     settings: {  }
     third_party_settings:
@@ -41,7 +42,7 @@ content:
     type: address_plain
     region: content
   field_day_time_range:
-    weight: 6
+    weight: 3
     label: hidden
     settings:
       link_to_entity: false
@@ -56,7 +57,7 @@ content:
     type: string
     region: content
   field_department:
-    weight: 12
+    weight: 6
     label: hidden
     settings:
       link: false
@@ -71,7 +72,7 @@ content:
     type: entity_reference_label
     region: content
   field_division_link:
-    weight: 15
+    weight: 9
     label: hidden
     settings:
       trim_length: 80
@@ -83,14 +84,14 @@ content:
     type: link
     region: content
   field_email:
-    weight: 17
+    weight: 10
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: email_mailto
     region: content
   field_faxes:
-    weight: 10
+    weight: 5
     label: hidden
     settings:
       trim_length: '80'
@@ -109,7 +110,7 @@ content:
     type: phone_number_formatter
     region: content
   field_link:
-    weight: 4
+    weight: 2
     label: hidden
     settings:
       trim_length: 80
@@ -121,15 +122,22 @@ content:
     type: link
     region: content
   field_location_text:
-    weight: 3
+    weight: 1
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
+  field_mailing_address_text:
+    weight: 7
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
   field_other_information:
-    weight: 18
+    weight: 11
     label: hidden
     settings: {  }
     third_party_settings:
@@ -143,7 +151,7 @@ content:
     type: basic_string
     region: content
   field_paragraphs:
-    weight: 1
+    weight: 0
     label: hidden
     settings:
       view_mode: default
@@ -152,7 +160,7 @@ content:
     type: entity_reference_revisions_entity_view
     region: content
   field_phones:
-    weight: 8
+    weight: 4
     label: hidden
     settings:
       trim_length: '80'

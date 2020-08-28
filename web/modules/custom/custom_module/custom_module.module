@@ -14,13 +14,16 @@ use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Link;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Site\Settings;
+use Drupal\Core\Url;
 use Drupal\media\Entity\Media;
 use Drupal\node\NodeInterface;
 use Drupal\paragraphs\Entity\Paragraph;
 use Drupal\taxonomy\Entity\Term;
 use Drupal\views\ViewExecutable;
+use Drupal\node\Entity\Node;
 
 /**
  * Implements hook_help().
@@ -248,6 +251,49 @@ function custom_module_views_pre_view(ViewExecutable $view, $display_id, array &
     }
   }
 
+  // Add "View All Department News" link depends from "Academic Tag".
+  if ($view->id() == 'news_card_grid' && $view->current_display == 'attachment_1') {
+    $node = \Drupal::routeMatch()->getParameter('node');
+    // FIXME: Delete temporary code ASAP.
+    $node = Node::load(51);
+    if ($node instanceof NodeInterface
+      && $node->hasField('field_colleges_departments')
+      && !$node->get('field_colleges_departments')->isEmpty()) {
+      $tid = $node->get('field_colleges_departments')
+        ->first()->getString();
+      // FIXME: we need update the link ASAP,
+      //  not clear for now which path we should use.
+      $url = Url::fromUserInput('/news',
+        [
+          'query' => [
+            'department' => $tid,
+          ],
+          'attributes' => [
+            'class' => [
+              'btn-link right',
+            ],
+          ],
+        ]
+      );
+      $link = Link::fromTextAndUrl(t('More Social Sciences News'), $url);
+      $content = $link->toString();
+
+      $options = [
+        'id' => 'area_text_custom',
+        'table' => 'views',
+        'field' => 'area_text_custom',
+        'relationship' => 'none',
+        'group_type' => 'none',
+        'admin_label' => '',
+        'empty' => TRUE,
+        'tokenize' => FALSE,
+        'content' => $content,
+        'plugin_id' => 'text_custom',
+      ];
+      $view->setHandler('attachment_1', 'footer', 'area_text_custom', $options);
+    }
+  }
+
 }
 
 /**
@@ -419,7 +465,7 @@ function custom_module_entity_presave(EntityInterface $entity) {
   // For better user experience set a media name the same as image title.
   if ($entity instanceof Media) {
     if ($entity->hasField('field_media_image') && !$entity->get('field_media_image')
-      ->isEmpty()) {
+        ->isEmpty()) {
       $image = $entity->get('field_media_image')->getValue()[0];
       if ($image['title'] != '') {
         $entity->set('name', $image['title']);
@@ -460,4 +506,67 @@ function custom_module_preprocess_paragraph(&$variables) {
       }
     }
   }
+}
+
+/**
+ * Helper for getting nodes uses by the term.
+ *
+ * @param $term_id
+ *
+ * @return mixed
+ */
+function _cm_get_nodes_by_term($term_id) {
+  $query = \Drupal::database()->select('taxonomy_index', 'ti');
+  $query->fields('ti', ['nid']);
+  $query->condition('ti.tid', $term_id);
+  $nodes = $query->execute()->fetchAssoc();
+  return $nodes;
+}
+
+/**
+ * Helper for getting nodes uses by the field value.
+ *
+ * @param string $field_name_1
+ * @param string $value_1
+ * @param string $field_name_2
+ * @param string $value_2
+ * @param string $entity_type
+ * @param string $entity_bundle
+ *
+ * @return int|void
+ * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
+ * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
+ */
+function _cm_check_content_field_uses($field_name_1 = '', $value_1 = '', $field_name_2 = '', $value_2 = '', $entity_type = 'node', $entity_bundle = '') {
+  $params = [
+    'status' => 1,
+  ];
+
+  if ($entity_bundle != '') {
+    $params['type'] = $entity_bundle;
+  }
+
+  $field_definitions = \Drupal::service('entity_field.manager')
+    ->getFieldDefinitions($entity_type, $entity_bundle);
+
+  // Check if the fields are exists in the $entity_type.
+  if ($field_name_1 != '' && $value_1 != '') {
+    if (array_key_exists($field_name_1, $field_definitions)) {
+      // And add the value of the field as a parameter.
+      $params[$field_name_1] = $value_1;
+    }
+  }
+  if ($field_name_2 != '' && $value_2 != '') {
+    if (array_key_exists($field_name_2, $field_definitions)) {
+      // And add the value of the field as a parameter.
+      $params[$field_name_2] = $value_2;
+    }
+  }
+
+  // Load the entities by the parameters.
+  $nodes = \Drupal::entityTypeManager()
+    ->getStorage($entity_type)
+    ->loadByProperties($params);
+
+  return count($nodes);
 }

@@ -4,7 +4,9 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
+    - field.field.node.page.field_above_content
     - field.field.node.page.field_after_content
+    - field.field.node.page.field_body_paragraphs
     - field.field.node.page.field_content_bottom
     - field.field.node.page.field_hero_content
     - field.field.node.page.field_lead_formatted
@@ -31,6 +33,7 @@ third_party_settings:
         - title
         - field_lead_formatted
         - body
+        - field_body_paragraphs
       parent_name: ''
       weight: 1
       format_type: details
@@ -45,7 +48,7 @@ third_party_settings:
       children:
         - field_content_bottom
       parent_name: ''
-      weight: 3
+      weight: 5
       format_type: details
       format_settings:
         description: ''
@@ -59,7 +62,7 @@ third_party_settings:
       children:
         - field_sidebar_content
       parent_name: ''
-      weight: 2
+      weight: 4
       format_type: details
       format_settings:
         id: ''
@@ -87,7 +90,7 @@ third_party_settings:
         - field_teaser_image
         - field_teaser_txt
       parent_name: ''
-      weight: 4
+      weight: 6
       format_type: details
       region: content
       format_settings:
@@ -97,6 +100,21 @@ third_party_settings:
         open: false
         required_fields: true
       label: 'Teaser Content'
+    group_above_content:
+      children:
+        - field_above_content
+      parent_name: ''
+      weight: 3
+      format_type: details
+      region: content
+      format_settings:
+        description: ''
+        formatter: closed
+        required_fields: true
+        id: ''
+        classes: ''
+        open: false
+      label: 'Above Content'
 _core:
   default_config_hash: sb0qCkzU_8mNq29NehYAU8jCBXWPLeX0UN8sYFVGVcw
 id: node.page.default
@@ -106,7 +124,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 11
+    weight: 10
     region: content
     settings:
       rows: 9
@@ -116,10 +134,34 @@ content:
     third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 7
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_above_content:
+    type: entity_reference_paragraphs
+    weight: 11
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    region: content
+  field_body_paragraphs:
+    type: entity_reference_paragraphs
+    weight: 11
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    region: content
   field_content_bottom:
     type: entity_reference_paragraphs
     weight: 10
@@ -145,7 +187,7 @@ content:
     third_party_settings: {  }
     region: content
   field_lead_formatted:
-    weight: 10
+    weight: 9
     settings:
       rows: 5
       placeholder: ''
@@ -153,8 +195,9 @@ content:
     type: text_textarea
     region: content
   field_meta_tags:
-    weight: 16
-    settings: {  }
+    weight: 18
+    settings:
+      sidebar: true
     third_party_settings: {  }
     type: metatag_firehose
     region: content
@@ -180,7 +223,7 @@ content:
     type: media_library_widget
     region: content
   field_teaser_txt:
-    weight: 18
+    weight: 19
     settings:
       rows: 5
       placeholder: ''
@@ -189,20 +232,20 @@ content:
     region: content
   langcode:
     type: language_select
-    weight: 5
+    weight: 7
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 11
+    weight: 13
     settings: {  }
     region: content
     third_party_settings: {  }
   path:
     type: path
-    weight: 10
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -210,12 +253,12 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 8
+    weight: 10
     region: content
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 13
+    weight: 15
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -223,14 +266,14 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 12
+    weight: 14
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 9
+    weight: 11
     region: content
     third_party_settings: {  }
   title:
@@ -243,7 +286,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 6
+    weight: 8
     region: content
     settings:
       match_operator: CONTAINS
@@ -253,12 +296,12 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 14
+    weight: 16
     region: content
     settings: {  }
     third_party_settings: {  }
   url_redirects:
-    weight: 15
+    weight: 17
     region: content
     settings: {  }
     third_party_settings: {  }

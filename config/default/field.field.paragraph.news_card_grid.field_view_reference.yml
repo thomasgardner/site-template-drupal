@@ -1,0 +1,82 @@
+uuid: 0197bea1-13a0-42a1-8de6-00705fe18aae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_view_reference
+    - paragraphs.paragraphs_type.news_card_grid
+    - views.view.news_card_grid
+  module:
+    - viewsreference
+id: paragraph.news_card_grid.field_view_reference
+field_name: field_view_reference
+entity_type: paragraph
+bundle: news_card_grid
+label: 'View Reference'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    display_id: block_1
+    data: 'a:5:{s:8:"argument";N;s:5:"limit";N;s:6:"offset";N;s:5:"pager";N;s:5:"title";N;}'
+    target_uuid: 9754f24a-29a8-4130-85de-a234ad747b7a
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: 0
+  plugin_types:
+    block: block
+    default: 0
+    attachment: 0
+    page: 0
+    rest_export: 0
+    entity_browser: 0
+    feed: 0
+    embed: 0
+  preselect_views:
+    news_card_grid: news_card_grid
+    alerts: 0
+    a_z_list: 0
+    block_content: 0
+    carousels: 0
+    content: 0
+    content_recent: 0
+    directory: 0
+    events_calendar: 0
+    feeds_feed: 0
+    files: 0
+    file_entity_browser: 0
+    frontpage: 0
+    group_members: 0
+    group_nodes: 0
+    locations: 0
+    major_card_list: 0
+    map_view: 0
+    media: 0
+    media_entity_browser: 0
+    media_library: 0
+    moderated_content: 0
+    podcast_card_list: 0
+    policy_card_list: 0
+    redirect: 0
+    related_content_grid: 0
+    related_links_list: 0
+    scheduler_scheduled_content: 0
+    taxonomy_term: 0
+    teaser_card_list: 0
+    user_admin_people: 0
+    view_search: 0
+    watchdog: 0
+    webform_submissions: 0
+    who_s_new: 0
+    who_s_online: 0
+  enabled_settings:
+    argument: argument
+    limit: 0
+    offset: 0
+    pager: 0
+    title: 0
+field_type: viewsreference

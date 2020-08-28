@@ -91,13 +91,19 @@
       </div>
     </div>
   {% endif %}
-  {% if page.grid %}
+  {% if page.helper %}
     <div class="grid-container large">
-      {{ page.grid }}
+      {{ page.helper }}
+    </div>
+  {% endif %}
+
+  {% if page.above_content %}
+    <div class="grid-container large">
+      {{ page.above_content }}
     </div>
   {% endif %}
   {% if page.sidebar_first %}
-    <div id="sidebar-first" class="{{ sidebar_first_grid }} columns sidebar ">
+    <div id="sidebar-first" class="{{ sidebar_first_grid }} columns sidebar">
       {{ page.sidebar_first }}
     </div>
   {% endif %}

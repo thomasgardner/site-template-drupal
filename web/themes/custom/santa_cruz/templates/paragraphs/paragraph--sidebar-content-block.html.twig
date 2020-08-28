@@ -52,12 +52,17 @@
       {% endif %}
 
       {% if content.field_department|field_value is not empty
-        or content.field_address|field_value is not empty %}
+        or content.field_address|field_value is not empty
+        or content.field_mailing_address_text|field_value is not empty %}
         <div class="section">
           <h5 class="blue-text">{{ "Mailing Address"|t }}:</h5>
           <p>
             {% if content.field_department|field_value is not empty %}
-              {{ content.field_department|render|striptags('<br>') }}<br/>
+              {{ content.field_department[0]['#plain_text'] }}<br/>
+            {% endif %}
+
+            {% if content.field_mailing_address_text|field_value is not empty %}
+              {{ content.field_mailing_address_text[0]['#context'].value|nl2br }}
             {% endif %}
 
             {% if content.field_address|field_value is not empty %}

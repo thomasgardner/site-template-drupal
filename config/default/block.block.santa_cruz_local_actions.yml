@@ -9,7 +9,7 @@ _core:
 id: santa_cruz_local_actions
 theme: santa_cruz
 region: content
-weight: -9
+weight: -17
 provider: null
 plugin: local_actions_block
 settings:

@@ -1,0 +1,24 @@
+uuid: d6d998f9-6ec8-4d15-977f-2a5212fb1b13
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.news_card_grid.field_view_reference
+    - paragraphs.paragraphs_type.news_card_grid
+  module:
+    - viewsreference
+id: paragraph.news_card_grid.default
+targetEntityType: paragraph
+bundle: news_card_grid
+mode: default
+content:
+  field_view_reference:
+    weight: 0
+    label: hidden
+    settings:
+      plugin_types:
+        - block
+    third_party_settings: {  }
+    type: viewsreference_formatter
+    region: content
+hidden: {  }
