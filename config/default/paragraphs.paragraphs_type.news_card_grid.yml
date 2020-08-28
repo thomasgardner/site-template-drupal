@@ -1,0 +1,10 @@
+uuid: 15e2f71a-92a6-46ad-ba5d-461f3e0792ea
+langcode: en
+status: true
+dependencies: {  }
+id: news_card_grid
+label: 'News Card Grid'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

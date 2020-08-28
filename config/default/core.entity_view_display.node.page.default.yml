@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.page.body
     - field.field.node.page.field_above_content
     - field.field.node.page.field_after_content
+    - field.field.node.page.field_body_paragraphs
     - field.field.node.page.field_content_bottom
     - field.field.node.page.field_hero_content
     - field.field.node.page.field_lead_formatted
@@ -15,6 +16,7 @@ dependencies:
     - field.field.node.page.field_teaser_txt
     - node.type.page
   module:
+    - entity_reference_revisions
     - fences
     - text
     - user
@@ -44,6 +46,15 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_body_paragraphs:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
   field_lead_formatted:
     weight: 1
     label: hidden
