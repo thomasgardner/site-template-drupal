@@ -24,7 +24,6 @@ dependencies:
     - paragraphs.paragraphs_type.grid_content_left
     - paragraphs.paragraphs_type.historical_timeline
     - paragraphs.paragraphs_type.job_posting_card_list
-    - paragraphs.paragraphs_type.job_posting_list
     - paragraphs.paragraphs_type.podcast_card
     - paragraphs.paragraphs_type.podcast_card_list
     - paragraphs.paragraphs_type.policy_card
@@ -73,7 +72,6 @@ settings:
       embed: embed
       gallery: gallery
       job_posting_card_list: job_posting_card_list
-      job_posting_list: job_posting_list
       article_card: article_card
       article_card_list: article_card_list
       podcast_card: podcast_card
@@ -251,8 +249,8 @@ settings:
         enabled: true
         weight: 67
       job_posting_list:
-        enabled: true
         weight: 68
+        enabled: false
       major_card:
         weight: 69
         enabled: false
