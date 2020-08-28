@@ -569,19 +569,19 @@
     a { text-decoration: none;}
 
     @include breakpoint(xlarge){
-        max-height: 420px;
+        min-height: 420px;
     }
 
     @include breakpoint(xxlarge){
-        max-height: 500px;
+        min-height: 500px;
     }
 
     @include breakpoint(xxxlarge){
-        max-height: 770px;
+        min-height: 770px;
     }
 
     @include breakpoint(xxxxlarge){
-        max-height: 750px;
+        min-height: 750px;
     }
 
 }

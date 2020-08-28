@@ -22,7 +22,7 @@
           {% if content.field_node_refs|field_value is not empty %}
             <div class="grid-x grid-margin-x">
               <div class="cell large-12">
-                <div class="job-posting-card-list owl-carousel list">
+                <div class="job-posting-card-list job-card owl-carousel">
                   {{ content|without('field_title') }}
                 </div>
               </div>

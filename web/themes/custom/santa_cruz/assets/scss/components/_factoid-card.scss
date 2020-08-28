@@ -51,7 +51,7 @@
 .factoid-card-list {
 
     @include xy-grid;
-
+    width: 100%;
     .factoid {
                
         @include xy-cell(12);

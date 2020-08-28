@@ -1,5 +1,6 @@
 {% set classes = [
   'paragraph',
+  'sidebar-nav',
   'paragraph--type--' ~ paragraph.bundle|clean_id,
   'paragraph--id--' ~ paragraph.id()|clean_id,
   view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_id,
