@@ -16,9 +16,11 @@ dependencies:
     - field.field.node.major.field_media
     - field.field.node.major.field_more_long_txt
     - field.field.node.major.field_opportunities_long_txt
+    - field.field.node.major.field_sidebar_content
     - field.field.node.major.field_transfers_long_txt
     - node.type.major
   module:
+    - entity_reference_revisions
     - fences
     - link
     - text
@@ -218,6 +220,15 @@ content:
         fences_label_tag: none
         fences_label_classes: ''
     type: basic_string
+    region: content
+  field_sidebar_content:
+    weight: 115
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
     region: content
   field_transfers_long_txt:
     weight: 107
