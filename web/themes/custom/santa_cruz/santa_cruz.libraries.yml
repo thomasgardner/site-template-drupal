@@ -2,6 +2,9 @@ global:
   version: VERSION
   css:
     theme:
+      'https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap':
+        type: external
+        minified: false
       css/app.css: {}
   js:
     js/app/app.js: {}
