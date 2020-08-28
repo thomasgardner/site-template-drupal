@@ -10,8 +10,8 @@ _core:
   default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
 id: santa_cruz_messages
 theme: santa_cruz
-region: content
-weight: -12
+region: helper
+weight: -17
 provider: null
 plugin: system_messages_block
 settings:

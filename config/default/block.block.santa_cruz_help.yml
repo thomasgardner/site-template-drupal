@@ -10,8 +10,8 @@ _core:
   default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
 id: santa_cruz_help
 theme: santa_cruz
-region: content
-weight: -13
+region: helper
+weight: -18
 provider: null
 plugin: help_block
 settings:
