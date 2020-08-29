@@ -18,8 +18,10 @@ required: true
 translatable: true
 default_value:
   -
+    options:
+      argument: '[paragraph:id]'
     display_id: block_1
-    data: 'a:5:{s:8:"argument";N;s:5:"limit";N;s:6:"offset";N;s:5:"pager";N;s:5:"title";N;}'
+    data: 'a:5:{s:8:"argument";s:14:"[paragraph:id]";s:5:"limit";N;s:6:"offset";N;s:5:"pager";N;s:5:"title";N;}'
     target_uuid: 9754f24a-29a8-4130-85de-a234ad747b7a
 default_value_callback: ''
 settings:
