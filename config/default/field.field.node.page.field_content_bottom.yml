@@ -37,6 +37,7 @@ dependencies:
     - paragraphs.paragraphs_type.step_grid
     - paragraphs.paragraphs_type.tabs_horizontal
     - paragraphs.paragraphs_type.teaser_card_list
+    - paragraphs.paragraphs_type.views
     - paragraphs.paragraphs_type.wysiwyg
   module:
     - entity_reference_revisions
@@ -87,6 +88,7 @@ settings:
       step_grid: step_grid
       tabs_horizontal: tabs_horizontal
       teaser_card_list: teaser_card_list
+      views: views
       wysiwyg: wysiwyg
     target_bundles_drag_drop:
       2_column_cta:
@@ -257,6 +259,9 @@ settings:
       major_card_list:
         weight: 70
         enabled: false
+      news_card_grid:
+        weight: 147
+        enabled: false
       person_carousel:
         weight: 26
         enabled: false
@@ -351,8 +356,8 @@ settings:
         weight: 31
         enabled: false
       views:
+        enabled: true
         weight: 87
-        enabled: false
       wysiwyg:
         enabled: true
         weight: 88
