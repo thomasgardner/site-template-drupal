@@ -2,6 +2,7 @@
 
 namespace Drupal\viewsreference\Plugin\ViewsReferenceSetting;
 
+use Drupal\Core\Entity\EntityInterface;
 use Drupal\Component\Plugin\PluginBase;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Drupal\views\ViewExecutable;
@@ -30,19 +31,25 @@ class ViewsReferenceArgument extends PluginBase implements ViewsReferenceSetting
   /**
    * {@inheritdoc}
    */
-  public function alterView(ViewExecutable $view, $value) {
+  public function alterView(ViewExecutable $view, $value, EntityInterface $entity) {
     if (!empty($value)) {
       $arguments = [$value];
       if (preg_match('/\//', $value)) {
         $arguments = explode('/', $value);
       }
 
-      $node = \Drupal::routeMatch()->getParameter('node');
+      $replacements = [];
+      $replacements[$entity->getEntityTypeId()] = $entity;
+      if (!array_key_exists('node', $replacements)) {
+        $node = \Drupal::routeMatch()->getParameter('node');
+        $replacements['node'] = $node;
+      }
+
       $token_service = \Drupal::token();
       if (is_array($arguments)) {
         foreach ($arguments as $index => $argument) {
           if (!empty($token_service->scan($argument))) {
-            $arguments[$index] = $token_service->replace($argument, ['node' => $node]);
+            $arguments[$index] = $token_service->replace($argument, $replacements);
           }
         }
       }
