@@ -58,7 +58,7 @@
 
         @include breakpoint(large) {
              @include xy-cell(auto);
-             margin-bottom: 0
+             margin-bottom: 2.5rem;
         }
 
         @include breakpoint(xlarge) {
