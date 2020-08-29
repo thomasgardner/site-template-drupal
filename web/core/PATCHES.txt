@@ -22,7 +22,7 @@ Source: https://www.drupal.org/files/issues/2020-01-13/2949017-62.patch
 
 
 Allow media items to be edited in a modal when using the field widget
-Source: https://www.drupal.org/files/issues/2020-02-21/2985168-31.patch
+Source: https://www.drupal.org/files/issues/2020-06-06/2985168-43.patch
 
 
 Content Edit page jumps when media library item is placed

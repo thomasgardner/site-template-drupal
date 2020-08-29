@@ -33,6 +33,7 @@ use Drupal\views\Plugin\views\cache\CachePluginBase;
 use Drupal\views\ViewExecutable;
 use Drupal\Core\StringTranslation\TranslatableMarkup;
 use Drupal\Component\Serialization\Json;
+use Drupal\Core\Messenger\MessengerInterface;
 
 /**
  * Implements hook_help().
@@ -228,9 +229,6 @@ function media_library_form_media_form_alter(array &$form, FormStateInterface $f
   if (is_object($form_object) && $form_object->getOperation() === 'edit') {
     $wrapper_format = \Drupal::request()->query->get(MainContentViewSubscriber::WRAPPER_FORMAT);
     if ($wrapper_format === 'drupal_modal' || ($wrapper_format === 'drupal_ajax')) {
-      // Save the selected media to update it later.
-      $selection = \Drupal::request()->query->get('selector');
-      $form_state->set('selector', $selection);
       foreach (Element::children($form['actions']) as $key) {
         if ($key === 'submit') {
           // The default name is 'op', but we change it on purpose so that it is
@@ -276,12 +274,13 @@ function media_library_media_form_ajax_submit(array &$form, FormStateInterface $
   $response = new AjaxResponse();
   if (!$form_state->hasAnyErrors()) {
     $media = $form_state->getFormObject()->getEntity();
-    $selector = $form_state->get('selector');
     $render_array = \Drupal::entityTypeManager()->getViewBuilder('media')->view($media, 'media_library');
-    $render_array['#attributes']['data-drupal-selector'] = $selector;
     $html = \Drupal::service('renderer')->render($render_array);
     $response->addCommand(new CloseModalDialogCommand());
-    $response->addCommand(new ReplaceCommand('[data-drupal-selector="' . $selector . '"]', $html));
+    $response->addCommand(new ReplaceCommand('.selected-media', $html));
+
+    // Remove status messages when editing medias.
+    \Drupal::messenger()->deleteByType(MessengerInterface::TYPE_STATUS);
   }
   else {
     $form['status_messages'] = [

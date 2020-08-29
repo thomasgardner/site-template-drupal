@@ -4015,7 +4015,7 @@
                 "Incorrect parent tree shows when the same URL is used in menu links many times": "https://www.drupal.org/files/issues/2859703-find-correct-link-6.patch",
                 "Node revision routes don't convert {node} param": "https://www.drupal.org/files/issues/2019-04-04/2730631_85_0.patch",
                 "There is no way to delete or update file entities of other users incl. user/1": "https://www.drupal.org/files/issues/2020-01-13/2949017-62.patch",
-                "Allow media items to be edited in a modal when using the field widget": "https://www.drupal.org/files/issues/2020-02-21/2985168-31.patch",
+                "Allow media items to be edited in a modal when using the field widget": "https://www.drupal.org/files/issues/2020-06-06/2985168-43.patch",
                 "Content Edit page jumps when media library item is placed": "https://www.drupal.org/files/issues/2019-11-04/3073023-4.patch",
                 "Default theme favicon for administration theme": "https://www.drupal.org/files/issues/2019-12-14/default-theme-favicon-for-administration-theme-2981434-7.patch",
                 "[D8] Chrome 83 cancels jquery.form ajax requests over https": "https://www.drupal.org/files/issues/2020-05-27/3138421-75.patch",

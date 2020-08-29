@@ -39,24 +39,14 @@
 
   Drupal.behaviors.MediaLibraryWidgetEditItem = {
     attach: function attach() {
-      $('.media-library-widget .js-media-library-item a[href]')
+      $('.media-library-widget .edit-media')
         .once('media-library-edit')
-        .each(function() {
-          var mediaEntity = $(this).closest(
-            '.media[data-drupal-selector]',
-          );
-          var elementSettings = {
-            progress: { type: 'throbber' },
-            dialogType: 'modal',
-            dialog: { width: '80%' },
-            dialogRenderer: null,
-            base: $(this).attr('id'),
-            element: this,
-            url: $(this).attr('href').concat("?selector=").concat(mediaEntity.attr('data-drupal-selector')),
-            event: 'click',
-          };
-          Drupal.ajax(elementSettings);
-        });
+        .on('click',function(){
+          // Remove any "selected-media" classes.
+          $(this).parent().parent().find('selected-media').removeClass('selected-media');
+          // Mark the media item as selected to render it properly when submitting an ajax media edit request.
+          $(this).parent().find('article').addClass('selected-media');
+        })
     },
   };
 
