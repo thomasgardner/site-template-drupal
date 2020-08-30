@@ -3,13 +3,24 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.policy_card_list.field_node_refs
     - field.field.paragraph.policy_card_list.field_view_reference
     - paragraphs.paragraphs_type.policy_card_list
 id: paragraph.policy_card_list.default
 targetEntityType: paragraph
 bundle: policy_card_list
 mode: default
-content: {  }
+content:
+  field_node_refs:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
 hidden:
   created: true
   field_view_reference: true
