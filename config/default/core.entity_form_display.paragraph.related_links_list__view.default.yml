@@ -3,16 +3,21 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.related_links_list__view.field_taxonomy
     - field.field.paragraph.related_links_list__view.field_title
     - field.field.paragraph.related_links_list__view.field_view_reference
     - paragraphs.paragraphs_type.related_links_list__view
-  module:
-    - viewsreference
 id: paragraph.related_links_list__view.default
 targetEntityType: paragraph
 bundle: related_links_list__view
 mode: default
 content:
+  field_taxonomy:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_title:
     weight: 0
     settings:
@@ -21,16 +26,7 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_view_reference:
-    weight: 1
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: viewsreference_autocomplete
-    region: content
 hidden:
   created: true
+  field_view_reference: true
   status: true
