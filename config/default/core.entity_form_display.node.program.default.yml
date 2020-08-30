@@ -15,11 +15,13 @@ dependencies:
     - field.field.node.program.field_general_catalog_long_txt
     - field.field.node.program.field_more_long_txt
     - field.field.node.program.field_opportunities_long_txt
+    - field.field.node.program.field_sidebar_content
     - field.field.node.program.field_transfers_long_txt
     - node.type.program
   module:
     - content_moderation
     - field_group
+    - paragraphs
     - path
     - scheduler
     - text
@@ -31,7 +33,7 @@ third_party_settings:
         - field_careers
         - field_degrees
       parent_name: ''
-      weight: 23
+      weight: 13
       format_type: details
       region: content
       format_settings:
@@ -54,7 +56,7 @@ third_party_settings:
         - field_general_catalog_long_txt
         - field_more_long_txt
       parent_name: ''
-      weight: 22
+      weight: 12
       format_type: details
       region: content
       format_settings:
@@ -64,6 +66,20 @@ third_party_settings:
         open: true
         required_fields: true
       label: Information
+    group_sidebar_content:
+      children:
+        - field_sidebar_content
+      parent_name: ''
+      weight: 14
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Sidebar Content'
 id: node.program.default
 targetEntityType: node
 bundle: program
@@ -164,6 +180,18 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
+    region: content
+  field_sidebar_content:
+    weight: 15
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
     region: content
   field_transfers_long_txt:
     weight: 15

@@ -67,9 +67,11 @@
   height: 100%;
   width: 100%;
   display: none;
-  
+
   @include breakpoint(large) {
-      display: block;
+    display: block;
+    width: 100vw;
+    height: 100vh;
   }
 }
 

@@ -16,6 +16,7 @@ dependencies:
     - field.field.node.program.field_general_catalog_long_txt
     - field.field.node.program.field_more_long_txt
     - field.field.node.program.field_opportunities_long_txt
+    - field.field.node.program.field_sidebar_content
     - field.field.node.program.field_transfers_long_txt
     - node.type.program
   module:
@@ -48,5 +49,6 @@ hidden:
   field_general_catalog_long_txt: true
   field_more_long_txt: true
   field_opportunities_long_txt: true
+  field_sidebar_content: true
   field_transfers_long_txt: true
   langcode: true
