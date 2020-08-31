@@ -37,6 +37,7 @@ dependencies:
     - paragraphs.paragraphs_type.step_grid
     - paragraphs.paragraphs_type.tabs_horizontal
     - paragraphs.paragraphs_type.teaser_card_list
+    - paragraphs.paragraphs_type.three_story_teaser
     - paragraphs.paragraphs_type.two_banner_promo
     - paragraphs.paragraphs_type.views
     - paragraphs.paragraphs_type.wysiwyg
@@ -89,6 +90,7 @@ settings:
       step_grid: step_grid
       tabs_horizontal: tabs_horizontal
       teaser_card_list: teaser_card_list
+      three_story_teaser: three_story_teaser
       two_banner_promo: two_banner_promo
       views: views
       wysiwyg: wysiwyg
@@ -124,7 +126,7 @@ settings:
         weight: 33
         enabled: false
       banner_promo:
-        weight: 93
+        weight: 94
         enabled: false
       button_list:
         enabled: true
@@ -265,7 +267,7 @@ settings:
         weight: 70
         enabled: false
       news_card_grid:
-        weight: 94
+        weight: 95
         enabled: false
       person_carousel:
         weight: 26
@@ -325,13 +327,13 @@ settings:
         enabled: true
         weight: 82
       sidebar_button:
-        weight: 90
-        enabled: false
-      sidebar_content_block:
         weight: 91
         enabled: false
-      sidebar_content_block_department:
+      sidebar_content_block:
         weight: 92
+        enabled: false
+      sidebar_content_block_department:
+        weight: 93
         enabled: false
       step:
         weight: 83
@@ -340,7 +342,7 @@ settings:
         enabled: true
         weight: 84
       story_hero:
-        weight: 95
+        weight: 96
         enabled: false
       tabs_horizontal:
         enabled: true
@@ -351,9 +353,12 @@ settings:
       teaser_card_list:
         enabled: true
         weight: 86
-      two_banner_promo:
+      three_story_teaser:
         enabled: true
         weight: 87
+      two_banner_promo:
+        enabled: true
+        weight: 88
       upcoming_events:
         weight: 21
         enabled: false
@@ -368,8 +373,8 @@ settings:
         enabled: false
       views:
         enabled: true
-        weight: 88
+        weight: 89
       wysiwyg:
         enabled: true
-        weight: 89
+        weight: 90
 field_type: entity_reference_revisions
