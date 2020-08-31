@@ -41,6 +41,7 @@ dependencies:
     - paragraphs.paragraphs_type.teaser_card_list
     - paragraphs.paragraphs_type.three_story_teaser
     - paragraphs.paragraphs_type.two_banner_promo
+    - paragraphs.paragraphs_type.two_feature_story_list
     - paragraphs.paragraphs_type.views
     - paragraphs.paragraphs_type.wysiwyg
   module:
@@ -96,6 +97,7 @@ settings:
       teaser_card_list: teaser_card_list
       three_story_teaser: three_story_teaser
       two_banner_promo: two_banner_promo
+      two_feature_story_list: two_feature_story_list
       views: views
       wysiwyg: wysiwyg
     target_bundles_drag_drop:
@@ -130,7 +132,7 @@ settings:
         weight: 33
         enabled: false
       banner_promo:
-        weight: 96
+        weight: 97
         enabled: false
       button_list:
         enabled: true
@@ -331,19 +333,19 @@ settings:
         enabled: true
         weight: 83
       sidebar_button:
-        weight: 93
-        enabled: false
-      sidebar_content_block:
         weight: 94
         enabled: false
-      sidebar_content_block_department:
+      sidebar_content_block:
         weight: 95
+        enabled: false
+      sidebar_content_block_department:
+        weight: 96
         enabled: false
       single_feature_story_list:
         enabled: true
         weight: 85
       single_feature_story_list_interi:
-        weight: 98
+        weight: 99
         enabled: false
       step:
         weight: 84
@@ -352,7 +354,7 @@ settings:
         enabled: true
         weight: 86
       story_hero:
-        weight: 97
+        weight: 98
         enabled: false
       tabs_horizontal:
         enabled: true
@@ -369,6 +371,9 @@ settings:
       two_banner_promo:
         enabled: true
         weight: 90
+      two_feature_story_list:
+        enabled: true
+        weight: 91
       upcoming_events:
         weight: 21
         enabled: false
@@ -383,8 +388,8 @@ settings:
         enabled: false
       views:
         enabled: true
-        weight: 91
+        weight: 92
       wysiwyg:
         enabled: true
-        weight: 92
+        weight: 93
 field_type: entity_reference_revisions
