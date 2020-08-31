@@ -24,6 +24,7 @@ use Drupal\paragraphs\Entity\Paragraph;
 use Drupal\taxonomy\Entity\Term;
 use Drupal\taxonomy\TermInterface;
 use Drupal\views\ViewExecutable;
+use Drupal\Core\Render\Markup;
 
 /**
  * Implements hook_help().
@@ -255,7 +256,7 @@ function custom_module_views_pre_view(ViewExecutable $view, $display_id, array &
   // and add "Read More News" to the footer of the view.
   // TODO: add contextual filter to the view.
   if ($view->id() == 'single_feature_story_list_interior'
-    && $display_id == 'attachment_1'
+    && $display_id == 'block_1'
     && isset($args[0])) {
 
     $term = Term::load($args[0]);
@@ -297,11 +298,9 @@ function custom_module_views_pre_view(ViewExecutable $view, $display_id, array &
     }
   }
 
-
   if ($view->id() == 'single_feature_story_list'
     && $display_id == 'block_1'
     && isset($args[0])) {
-    //    dump($args);
 
     $term = Term::load($args[0]);
     if ($term instanceof TermInterface) {
@@ -323,7 +322,10 @@ function custom_module_views_pre_view(ViewExecutable $view, $display_id, array &
           ],
         ]
       );
-      $link = Link::fromTextAndUrl('<span>' . t('See More @department News', ['@department' => $name]) . '</span>', $url);
+
+      $link_text = '<span>' . 'See More ' . $name . ' News' . '</span>';
+      $link_markup = Markup::create($link_text);
+      $link = Link::fromTextAndUrl($link_markup, $url);
       $content = $link->toString();
 
       $item = [
