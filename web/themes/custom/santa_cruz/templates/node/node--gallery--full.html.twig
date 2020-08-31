@@ -104,13 +104,15 @@
     {% for key, item in content.field_images if key|first != '#' %}
       {% if key matches '/^\\d+$/' %}
         {% set image_url = file_url(item['#item'].entity.uri.value) %}
+        {% set image_url = file_url(item['#media'].field_media_image.entity.uri.value) %}
         <div class="landscape gallery-image wow" id="gallery-image-{{ key }}"
-             style="visibility: visible; animation-name: custom-15;">
+             style="visibility: hidden; animation-name: none;">
           <figure class="img-full">
             <img src="{{ image_url }}" />
             <figcaption>
-              <div class="caption-title"></div>
+              <div class="caption-title">{{ item['#media'].field_media_image.title }}</div>
               <div class="caption-desc">
+                <p>{{ item['#media'].field_caption.value }}</p>
               </div>
             </figcaption>
           </figure>
@@ -119,3 +121,8 @@
     {% endfor %}
   </div>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script>
+  var wow = new WOW();
+  wow.init();
+</script>
