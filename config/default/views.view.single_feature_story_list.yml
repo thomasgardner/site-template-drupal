@@ -1,10 +1,10 @@
-uuid: f39c70ec-503e-452a-b3eb-fe79ff0c45d5
+uuid: d1a4dcc8-2d59-446d-9e25-1185ba956206
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.single_feature_story_list_interior_featured
-    - core.entity_view_mode.node.single_feature_story_list_interior_list
+    - core.entity_view_mode.node.single_feature_story_list_featured
+    - core.entity_view_mode.node.single_feature_story_list_list
     - node.type.article
     - taxonomy.vocabulary.college_department
   module:
@@ -13,8 +13,8 @@ dependencies:
     - node
     - taxonomy
     - user
-id: single_feature_story_list_interior
-label: 'Single-Feature Story List (Interior)'
+id: single_feature_story_list
+label: 'Single-Feature Story List'
 module: views
 description: ''
 tag: ''
@@ -63,7 +63,7 @@ display:
         type: 'entity:node'
         options:
           relationship: none
-          view_mode: single_feature_story_list_interior_featured
+          view_mode: single_feature_story_list_featured
       fields:
         title:
           id: title
@@ -280,7 +280,7 @@ display:
       pager:
         type: some
         options:
-          items_per_page: 4
+          items_per_page: 5
           offset: 1
       displays:
         block_1: block_1
@@ -295,7 +295,7 @@ display:
         type: 'entity:node'
         options:
           relationship: none
-          view_mode: single_feature_story_list_interior_list
+          view_mode: single_feature_story_list_list
     cache_metadata:
       max-age: -1
       contexts:

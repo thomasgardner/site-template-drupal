@@ -1,0 +1,25 @@
+{% set classes = [
+  'paragraph',
+  'paragraph--type--' ~ paragraph.bundle|clean_id,
+  'paragraph--id--' ~ paragraph.id()|clean_id,
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_id,
+  not paragraph.isPublished() ? 'paragraph--unpublished',
+  'paragraph--contains--view--' ~ content.field_view[0].contents['#view_id']|clean_id,
+  'paragraph--contains--display-id--' ~ content.field_view[0].contents['#display_id']|clean_id
+] %}
+
+{% block paragraph %}
+  <section{{ attributes.addClass(classes) }}
+      aria-label="content {{ content.field_view[0].contents['#view_id']|clean_id }}">
+    {% block content %}
+
+      {% if content.field_title|field_value is not empty %}
+        <section class="heading">
+          <h2 class="underline">Space Sciences</h2>
+        </section>
+      {% endif %}
+
+      {{ content|without('field_title') }}
+    {% endblock %}
+  </section>
+{% endblock paragraph %}

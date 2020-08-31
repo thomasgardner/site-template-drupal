@@ -1,0 +1,39 @@
+{% set classes = [
+  dom_id ? 'js-view-dom-id-' ~ dom_id,
+  'grid-container',
+  'large'
+] %}
+
+<div{{ attributes.addClass(classes) }}>
+  <div class="grid-x grid-margin-x">
+    {% if header %}
+      <div class="view-header">
+        {{ header }}
+      </div>
+    {% endif %}
+
+    {% set common_classes = 'cell xlarge-12 large-12' %}
+    {% set attachment_1_classes = 'cell xlarge-6 large-12' %}
+    {% if attachment_after|length == 1 %}
+      {% set common_classes = 'cell xlarge-6 large-12' %}
+    {% endif %}
+
+
+    <div class="{{ common_classes }}">
+      {{ rows }}
+      {{ empty }}
+    </div>
+
+    {% if attachment_after|length == 1 %}
+      <div class="{{ attachment_1_classes }}">
+        {{ attachment_after }}
+      </div>
+    {% endif %}
+
+    {% if footer %}
+      <div class="more no-border">
+        {{ footer }}
+      </div>
+    {% endif %}
+  </div>
+</div>
