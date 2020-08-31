@@ -1,15 +1,15 @@
-uuid: 4c2ad491-50b0-4f59-8648-ccc9d019c43d
+uuid: 97c7b10c-7bce-4db0-b2bf-4d8095ace436
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_department
-    - paragraphs.paragraphs_type.news_card_grid
+    - paragraphs.paragraphs_type.single_feature_story_list_interi
     - taxonomy.vocabulary.college_department
-id: paragraph.news_card_grid.field_department
+id: paragraph.single_feature_story_list_interi.field_department
 field_name: field_department
 entity_type: paragraph
-bundle: news_card_grid
+bundle: single_feature_story_list_interi
 label: Department
 description: ''
 required: true

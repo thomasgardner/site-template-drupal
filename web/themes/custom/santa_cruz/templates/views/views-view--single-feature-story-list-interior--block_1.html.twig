@@ -21,16 +21,14 @@
   <div class="{{ common_classes }}">
     {{ rows }}
     {{ empty }}
-    {% if footer %}
-      <footer>
-        {{ footer }}
-      </footer>
-    {% endif %}
   </div>
 
   {% if attachment_after|length == 1 %}
     <div class="{{ attachment_1_classes }}">
       {{ attachment_after }}
+      {% if footer %}
+        {{ footer }}
+      {% endif %}
     </div>
   {% endif %}
 

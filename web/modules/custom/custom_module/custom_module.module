@@ -21,10 +21,10 @@ use Drupal\Core\Url;
 use Drupal\media\Entity\Media;
 use Drupal\node\NodeInterface;
 use Drupal\paragraphs\Entity\Paragraph;
-use Drupal\paragraphs\ParagraphInterface;
 use Drupal\taxonomy\Entity\Term;
 use Drupal\taxonomy\TermInterface;
 use Drupal\views\ViewExecutable;
+use Drupal\Core\Render\Markup;
 
 /**
  * Implements hook_help().
@@ -255,62 +255,94 @@ function custom_module_views_pre_view(ViewExecutable $view, $display_id, array &
   // Replace argument by using related term
   // and add "Read More News" to the footer of the view.
   // TODO: add contextual filter to the view.
-  if ($view->id() == 'news_card_grid') {
+  if ($view->id() == 'single_feature_story_list_interior'
+    && $display_id == 'block_1'
+    && isset($args[0])) {
 
-    if (isset($args[0])) {
-      $paragraph = Paragraph::load($args[0]);
-      if ($paragraph instanceof ParagraphInterface
-        && $paragraph->hasField('field_department')
-        && !$paragraph->get('field_department')->isEmpty()) {
-        $term = $paragraph->get('field_department')
-          ->first()
-          ->get('entity')
-          ->getTarget()
-          ->getValue();
-        if ($term instanceof TermInterface) {
-          $tid = $term->id();
-          $name = $term->getName();
+    $term = Term::load($args[0]);
+    if ($term instanceof TermInterface) {
+      $tid = $term->id();
+      $name = $term->getName();
 
+      // Attach "Read More News" to the footer of the view.
+      // FIXME: we need update the link ASAP,
+      //  not clear for now which path we should use.
+      $url = Url::fromUserInput('/news',
+        [
+          'query' => [
+            'department' => $tid,
+          ],
+          'attributes' => [
+            'class' => [
+              'btn-link right',
+            ],
+          ],
+        ]
+      );
+      $link = Link::fromTextAndUrl(t('More @department News', ['@department' => $name]), $url);
+      $content = $link->toString();
 
-          // Replace argument by using related term.
-          $args[0] = $tid;
-
-          if ($view->current_display == 'attachment_1') {
-            // Attach "Read More News" to the footer of the view.
-            // FIXME: we need update the link ASAP,
-            //  not clear for now which path we should use.
-            $url = Url::fromUserInput('/news',
-              [
-                'query' => [
-                  'department' => $tid,
-                ],
-                'attributes' => [
-                  'class' => [
-                    'btn-link right',
-                  ],
-                ],
-              ]
-            );
-            $link = Link::fromTextAndUrl(t('More @department News', ['@department' => $name]), $url);
-            $content = $link->toString();
-
-            $options = [
-              'id' => 'area_text_custom',
-              'table' => 'views',
-              'field' => 'area_text_custom',
-              'relationship' => 'none',
-              'group_type' => 'none',
-              'admin_label' => '',
-              'empty' => TRUE,
-              'tokenize' => FALSE,
-              'content' => $content,
-              'plugin_id' => 'text_custom',
-            ];
-            $view->setHandler('attachment_1', 'footer', 'area_text_custom', $options);
-          }
-        }
-      }
+      $item = [
+        'id' => 'area_text_custom',
+        'table' => 'views',
+        'field' => 'area_text_custom',
+        'relationship' => 'none',
+        'group_type' => 'none',
+        'admin_label' => '',
+        'empty' => TRUE,
+        'tokenize' => FALSE,
+        'content' => $content,
+        'plugin_id' => 'text_custom',
+      ];
+      $view->setHandler($display_id, 'footer', 'area_text_custom', $item);
     }
+  }
+
+  if ($view->id() == 'single_feature_story_list'
+    && $display_id == 'block_1'
+    && isset($args[0])) {
+
+    $term = Term::load($args[0]);
+    if ($term instanceof TermInterface) {
+      $tid = $term->id();
+      $name = $term->getName();
+
+      // Attach "Read More News" to the footer of the view.
+      // FIXME: we need update the link ASAP,
+      //  not clear for now which path we should use.
+      $url = Url::fromUserInput('/news',
+        [
+          'query' => [
+            'department' => $tid,
+          ],
+          'attributes' => [
+            'class' => [
+              'button primary',
+            ],
+          ],
+        ]
+      );
+
+      $link_text = '<span>' . 'See More ' . $name . ' News' . '</span>';
+      $link_markup = Markup::create($link_text);
+      $link = Link::fromTextAndUrl($link_markup, $url);
+      $content = $link->toString();
+
+      $item = [
+        'id' => 'area_text_custom',
+        'table' => 'views',
+        'field' => 'area_text_custom',
+        'relationship' => 'none',
+        'group_type' => 'none',
+        'admin_label' => '',
+        'empty' => TRUE,
+        'tokenize' => FALSE,
+        'content' => $content,
+        'plugin_id' => 'text_custom',
+      ];
+      $view->setHandler($display_id, 'footer', 'area_text_custom', $item);
+    }
+
   }
 }
 

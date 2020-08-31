@@ -1,9 +1,9 @@
-uuid: 15e2f71a-92a6-46ad-ba5d-461f3e0792ea
+uuid: c14096f5-8677-4daf-adba-5edc266ea8f6
 langcode: en
 status: true
 dependencies: {  }
-id: news_card_grid
-label: 'News Card Grid'
+id: single_feature_story_list
+label: 'Single-Feature Story List'
 icon_uuid: null
 icon_default: null
 description: ''

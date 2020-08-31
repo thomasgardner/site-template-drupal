@@ -1,0 +1,35 @@
+uuid: d1606efc-61da-48cf-b12a-5648af17ae14
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.single_feature_story_list.field_department
+    - field.field.paragraph.single_feature_story_list.field_title
+    - field.field.paragraph.single_feature_story_list.field_view_reference
+    - paragraphs.paragraphs_type.single_feature_story_list
+  module:
+    - viewsreference
+id: paragraph.single_feature_story_list.default
+targetEntityType: paragraph
+bundle: single_feature_story_list
+mode: default
+content:
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_view_reference:
+    weight: 1
+    label: hidden
+    settings:
+      plugin_types:
+        - block
+    third_party_settings: {  }
+    type: viewsreference_formatter
+    region: content
+hidden:
+  field_department: true

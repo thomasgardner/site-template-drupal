@@ -1,16 +1,16 @@
-uuid: 8212be19-ca74-4161-a220-f7296f229a24
+uuid: 6b5562b1-cd9d-49ed-beeb-b16d979034b9
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.news_card_grid.field_department
-    - field.field.paragraph.news_card_grid.field_view_reference
-    - paragraphs.paragraphs_type.news_card_grid
+    - field.field.paragraph.single_feature_story_list_interi.field_department
+    - field.field.paragraph.single_feature_story_list_interi.field_view_reference
+    - paragraphs.paragraphs_type.single_feature_story_list_interi
   module:
     - viewsreference
-id: paragraph.news_card_grid.default
+id: paragraph.single_feature_story_list_interi.default
 targetEntityType: paragraph
-bundle: news_card_grid
+bundle: single_feature_story_list_interi
 mode: default
 content:
   field_department:
