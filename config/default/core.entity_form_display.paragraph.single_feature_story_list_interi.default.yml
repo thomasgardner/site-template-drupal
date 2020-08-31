@@ -6,8 +6,6 @@ dependencies:
     - field.field.paragraph.single_feature_story_list_interi.field_department
     - field.field.paragraph.single_feature_story_list_interi.field_view_reference
     - paragraphs.paragraphs_type.single_feature_story_list_interi
-  module:
-    - viewsreference
 id: paragraph.single_feature_story_list_interi.default
 targetEntityType: paragraph
 bundle: single_feature_story_list_interi
@@ -19,12 +17,7 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
-  field_view_reference:
-    weight: 1
-    settings: {  }
-    third_party_settings: {  }
-    type: viewsreference_select
-    region: content
 hidden:
   created: true
+  field_view_reference: true
   status: true

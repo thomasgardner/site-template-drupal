@@ -7,8 +7,6 @@ dependencies:
     - field.field.paragraph.single_feature_story_list.field_title
     - field.field.paragraph.single_feature_story_list.field_view_reference
     - paragraphs.paragraphs_type.single_feature_story_list
-  module:
-    - viewsreference
 id: paragraph.single_feature_story_list.default
 targetEntityType: paragraph
 bundle: single_feature_story_list
@@ -28,12 +26,7 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_view_reference:
-    weight: 2
-    settings: {  }
-    third_party_settings: {  }
-    type: viewsreference_select
-    region: content
 hidden:
   created: true
+  field_view_reference: true
   status: true
