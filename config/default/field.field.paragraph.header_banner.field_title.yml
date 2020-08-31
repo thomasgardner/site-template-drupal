@@ -9,7 +9,7 @@ id: paragraph.header_banner.field_title
 field_name: field_title
 entity_type: paragraph
 bundle: header_banner
-label: Title
+label: Headline
 description: ''
 required: true
 translatable: true

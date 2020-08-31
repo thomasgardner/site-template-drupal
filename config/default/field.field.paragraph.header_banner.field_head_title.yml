@@ -9,8 +9,8 @@ id: paragraph.header_banner.field_head_title
 field_name: field_head_title
 entity_type: paragraph
 bundle: header_banner
-label: 'Head Title'
-description: 'A small and short subtitle above the main title.'
+label: 'Eyebrow Headline'
+description: 'A small and short subtitle above the main headline.'
 required: false
 translatable: false
 default_value: {  }
