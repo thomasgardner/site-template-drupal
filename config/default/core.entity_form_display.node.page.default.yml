@@ -14,6 +14,7 @@ dependencies:
     - field.field.node.page.field_sidebar_content
     - field.field.node.page.field_teaser_image
     - field.field.node.page.field_teaser_txt
+    - field.field.node.page.field_view_reference
     - node.type.page
     - workflows.workflow.editorial
   module:
@@ -26,6 +27,7 @@ dependencies:
     - path
     - scheduler
     - text
+    - viewsreference
 third_party_settings:
   field_group:
     group_main_content:
@@ -115,6 +117,20 @@ third_party_settings:
         classes: ''
         open: false
       label: 'Above Content'
+    group_advanced:
+      children:
+        - field_view_reference
+      parent_name: ''
+      weight: 18
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: Advanced
 _core:
   default_config_hash: sb0qCkzU_8mNq29NehYAU8jCBXWPLeX0UN8sYFVGVcw
 id: node.page.default
@@ -229,6 +245,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
+    region: content
+  field_view_reference:
+    weight: 19
+    settings: {  }
+    third_party_settings: {  }
+    type: viewsreference_select
     region: content
   langcode:
     type: language_select

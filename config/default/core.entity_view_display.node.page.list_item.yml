@@ -15,6 +15,7 @@ dependencies:
     - field.field.node.page.field_sidebar_content
     - field.field.node.page.field_teaser_image
     - field.field.node.page.field_teaser_txt
+    - field.field.node.page.field_view_reference
     - node.type.page
   module:
     - fences
@@ -78,6 +79,7 @@ hidden:
   field_meta_tags: true
   field_sidebar_content: true
   field_teaser_txt: true
+  field_view_reference: true
   langcode: true
   links: true
   sharethis: true
