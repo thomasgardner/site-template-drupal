@@ -65,7 +65,7 @@
     <div class="view-content row">
       <ul class="menu vertical">
       {% for key, row in rows.0['#rows'] if key|first != '#' %}
-        <li><a href=" {{ path('entity.node.canonical', {'node': row['#row']._entity.nid}) }}"> {{ row['#row']._entity.title[0].value }}</a></li>
+        <li><a href=" {{ path('entity.node.canonical', {'node': row['#row']._entity.nid[0].value}) }}"> {{ row['#row']._entity.title[0].value }}</a></li>
       {% endfor %}
       </ul>
     </div>
