@@ -1,17 +1,17 @@
-uuid: 0197bea1-13a0-42a1-8de6-00705fe18aae
+uuid: a19377b3-f419-4560-af40-6a9a5ea5c280
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_view_reference
-    - paragraphs.paragraphs_type.news_card_grid
-    - views.view.news_card_grid
+    - paragraphs.paragraphs_type.single_feature_story_list_interi
+    - views.view.single_feature_story_list_interior
   module:
     - viewsreference
-id: paragraph.news_card_grid.field_view_reference
+id: paragraph.single_feature_story_list_interi.field_view_reference
 field_name: field_view_reference
 entity_type: paragraph
-bundle: news_card_grid
+bundle: single_feature_story_list_interi
 label: 'View Reference'
 description: ''
 required: true
@@ -22,7 +22,7 @@ default_value:
       argument: '[paragraph:field_department:target_id]'
     display_id: block_1
     data: 'a:5:{s:8:"argument";s:38:"[paragraph:field_department:target_id]";s:5:"limit";N;s:6:"offset";N;s:5:"pager";N;s:5:"title";N;}'
-    target_uuid: 9754f24a-29a8-4130-85de-a234ad747b7a
+    target_uuid: f39c70ec-503e-452a-b3eb-fe79ff0c45d5
 default_value_callback: ''
 settings:
   handler: 'default:view'
@@ -39,7 +39,7 @@ settings:
     feed: 0
     embed: 0
   preselect_views:
-    news_card_grid: news_card_grid
+    single_feature_story_list_interior: single_feature_story_list_interior
     alerts: 0
     a_z_list: 0
     block_content: 0
@@ -63,6 +63,7 @@ settings:
     media_library: 0
     moderated_content: 0
     news: 0
+    news_card_grid: 0
     podcast_card_list: 0
     policy_card_list: 0
     redirect: 0

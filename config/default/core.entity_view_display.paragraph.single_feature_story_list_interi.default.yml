@@ -1,0 +1,41 @@
+uuid: c39f6694-fbca-4054-9f41-7453cd2d5772
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.single_feature_story_list_interi.field_department
+    - field.field.paragraph.single_feature_story_list_interi.field_view_reference
+    - paragraphs.paragraphs_type.single_feature_story_list_interi
+  module:
+    - fences
+    - viewsreference
+id: paragraph.single_feature_story_list_interi.default
+targetEntityType: paragraph
+bundle: single_feature_story_list_interi
+mode: default
+content:
+  field_view_reference:
+    weight: 0
+    label: hidden
+    settings:
+      plugin_types:
+        block: block
+        default: 0
+        attachment: 0
+        page: 0
+        rest_export: 0
+        entity_browser: 0
+        feed: 0
+        embed: 0
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    type: viewsreference_formatter
+    region: content
+hidden:
+  field_department: true

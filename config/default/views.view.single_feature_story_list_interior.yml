@@ -1,4 +1,4 @@
-uuid: 9754f24a-29a8-4130-85de-a234ad747b7a
+uuid: f39c70ec-503e-452a-b3eb-fe79ff0c45d5
 langcode: en
 status: true
 dependencies:
@@ -13,8 +13,8 @@ dependencies:
     - node
     - taxonomy
     - user
-id: news_card_grid
-label: 'News Card Grid'
+id: single_feature_story_list_interior
+label: 'Single-Feature Story List (Interior)'
 module: views
 description: ''
 tag: ''

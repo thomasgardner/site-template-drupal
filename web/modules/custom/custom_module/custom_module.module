@@ -254,7 +254,7 @@ function custom_module_views_pre_view(ViewExecutable $view, $display_id, array &
   // Replace argument by using related term
   // and add "Read More News" to the footer of the view.
   // TODO: add contextual filter to the view.
-  if ($view->id() == 'news_card_grid'
+  if ($view->id() == 'single_feature_story_list_interior'
     && $view->current_display == 'attachment_1'
     && isset($args[0])) {
 
