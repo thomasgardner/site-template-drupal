@@ -24,6 +24,7 @@ dependencies:
     - paragraphs.paragraphs_type.grid_content_left
     - paragraphs.paragraphs_type.historical_timeline
     - paragraphs.paragraphs_type.job_posting_card_list
+    - paragraphs.paragraphs_type.news_collection
     - paragraphs.paragraphs_type.podcast_card
     - paragraphs.paragraphs_type.podcast_card_list
     - paragraphs.paragraphs_type.policy_card
@@ -77,6 +78,7 @@ settings:
       job_posting_card_list: job_posting_card_list
       article_card: article_card
       article_card_list: article_card_list
+      news_collection: news_collection
       podcast_card: podcast_card
       podcast_card_list: podcast_card_list
       policy_card: policy_card
@@ -126,7 +128,7 @@ settings:
         weight: 33
         enabled: false
       banner_promo:
-        weight: 94
+        weight: 95
         enabled: false
       button_list:
         enabled: true
@@ -267,35 +269,38 @@ settings:
         weight: 70
         enabled: false
       news_card_grid:
-        weight: 95
+        weight: 96
         enabled: false
+      news_collection:
+        enabled: true
+        weight: 73
       person_carousel:
         weight: 26
         enabled: false
       podcast_card:
         enabled: true
-        weight: 73
+        weight: 74
       podcast_card_list:
         enabled: true
-        weight: 74
+        weight: 75
       policy_card:
         enabled: true
-        weight: 75
+        weight: 76
       policy_card_list:
         enabled: true
-        weight: 76
+        weight: 77
       profile_card:
         enabled: true
-        weight: 77
+        weight: 78
       profile_card__fullwidth:
         enabled: true
-        weight: 78
+        weight: 79
       profile_card_details_fields:
         weight: 42
         enabled: false
       profile_list:
         enabled: true
-        weight: 79
+        weight: 80
       quick_link:
         weight: 11
         enabled: false
@@ -319,46 +324,46 @@ settings:
         enabled: false
       related_links_list:
         enabled: true
-        weight: 80
+        weight: 81
       related_links_list__view:
         enabled: true
-        weight: 81
+        weight: 82
       ribbon_image:
         enabled: true
-        weight: 82
+        weight: 83
       sidebar_button:
-        weight: 91
-        enabled: false
-      sidebar_content_block:
         weight: 92
         enabled: false
-      sidebar_content_block_department:
+      sidebar_content_block:
         weight: 93
         enabled: false
+      sidebar_content_block_department:
+        weight: 94
+        enabled: false
       step:
-        weight: 83
+        weight: 84
         enabled: false
       step_grid:
         enabled: true
-        weight: 84
+        weight: 85
       story_hero:
-        weight: 96
+        weight: 97
         enabled: false
       tabs_horizontal:
         enabled: true
-        weight: 85
+        weight: 86
       tabs_horizontal_item:
         weight: 44
         enabled: false
       teaser_card_list:
         enabled: true
-        weight: 86
+        weight: 87
       three_story_teaser:
         enabled: true
-        weight: 87
+        weight: 88
       two_banner_promo:
         enabled: true
-        weight: 88
+        weight: 89
       upcoming_events:
         weight: 21
         enabled: false
@@ -373,8 +378,8 @@ settings:
         enabled: false
       views:
         enabled: true
-        weight: 89
+        weight: 90
       wysiwyg:
         enabled: true
-        weight: 90
+        weight: 91
 field_type: entity_reference_revisions
