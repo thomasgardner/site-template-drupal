@@ -1,0 +1,10 @@
+uuid: 4d44281c-bcb5-46a0-905c-bdcfbaeef0f8
+langcode: en
+status: true
+dependencies: {  }
+id: story_hero
+label: 'Story Hero'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

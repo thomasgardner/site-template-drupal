@@ -2,6 +2,7 @@
 
 namespace Drupal\viewsreference\Plugin;
 
+use Drupal\Core\Entity\EntityInterface;
 use Drupal\Component\Plugin\PluginInspectionInterface;
 use Drupal\views\ViewExecutable;
 
@@ -26,6 +27,6 @@ interface ViewsReferenceSettingInterface extends PluginInspectionInterface {
    * @param mixed $value
    *   The field value.
    */
-  public function alterView(ViewExecutable $view, $value);
+  public function alterView(ViewExecutable $view, $value, EntityInterface $entity);
 
 }

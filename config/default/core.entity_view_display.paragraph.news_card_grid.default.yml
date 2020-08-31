@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.news_card_grid.field_department
     - field.field.paragraph.news_card_grid.field_view_reference
     - paragraphs.paragraphs_type.news_card_grid
   module:
@@ -21,4 +22,5 @@ content:
     third_party_settings: {  }
     type: viewsreference_formatter
     region: content
-hidden: {  }
+hidden:
+  field_department: true

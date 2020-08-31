@@ -14,6 +14,7 @@ dependencies:
     - field.field.node.page.field_sidebar_content
     - field.field.node.page.field_teaser_image
     - field.field.node.page.field_teaser_txt
+    - field.field.node.page.field_view_reference
     - node.type.page
     - workflows.workflow.editorial
   module:
@@ -26,6 +27,7 @@ dependencies:
     - path
     - scheduler
     - text
+    - viewsreference
 third_party_settings:
   field_group:
     group_main_content:
@@ -35,7 +37,7 @@ third_party_settings:
         - body
         - field_body_paragraphs
       parent_name: ''
-      weight: 1
+      weight: 2
       format_type: details
       format_settings:
         open: true
@@ -48,7 +50,7 @@ third_party_settings:
       children:
         - field_content_bottom
       parent_name: ''
-      weight: 5
+      weight: 4
       format_type: details
       format_settings:
         description: ''
@@ -62,7 +64,7 @@ third_party_settings:
       children:
         - field_sidebar_content
       parent_name: ''
-      weight: 4
+      weight: 3
       format_type: details
       format_settings:
         id: ''
@@ -90,7 +92,7 @@ third_party_settings:
         - field_teaser_image
         - field_teaser_txt
       parent_name: ''
-      weight: 6
+      weight: 5
       format_type: details
       region: content
       format_settings:
@@ -104,7 +106,7 @@ third_party_settings:
       children:
         - field_above_content
       parent_name: ''
-      weight: 3
+      weight: 1
       format_type: details
       region: content
       format_settings:
@@ -115,6 +117,20 @@ third_party_settings:
         classes: ''
         open: false
       label: 'Above Content'
+    group_advanced:
+      children:
+        - field_view_reference
+      parent_name: ''
+      weight: 18
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: Advanced
 _core:
   default_config_hash: sb0qCkzU_8mNq29NehYAU8jCBXWPLeX0UN8sYFVGVcw
 id: node.page.default
@@ -134,7 +150,7 @@ content:
     third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 9
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -195,7 +211,7 @@ content:
     type: text_textarea
     region: content
   field_meta_tags:
-    weight: 18
+    weight: 17
     settings:
       sidebar: true
     third_party_settings: {  }
@@ -230,22 +246,28 @@ content:
     third_party_settings: {  }
     type: string_textarea
     region: content
+  field_view_reference:
+    weight: 19
+    settings: {  }
+    third_party_settings: {  }
+    type: viewsreference_select
+    region: content
   langcode:
     type: language_select
-    weight: 7
+    weight: 6
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 13
+    weight: 12
     settings: {  }
     region: content
     third_party_settings: {  }
   path:
     type: path
-    weight: 12
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -253,12 +275,12 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 10
+    weight: 9
     region: content
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 15
+    weight: 14
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -266,14 +288,14 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 14
+    weight: 13
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 11
+    weight: 10
     region: content
     third_party_settings: {  }
   title:
@@ -286,7 +308,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 8
+    weight: 7
     region: content
     settings:
       match_operator: CONTAINS
@@ -296,12 +318,12 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 16
+    weight: 15
     region: content
     settings: {  }
     third_party_settings: {  }
   url_redirects:
-    weight: 17
+    weight: 16
     region: content
     settings: {  }
     third_party_settings: {  }

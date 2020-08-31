@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.news_card_grid.field_department
     - field.field.paragraph.news_card_grid.field_view_reference
     - paragraphs.paragraphs_type.news_card_grid
   module:
@@ -12,8 +13,14 @@ targetEntityType: paragraph
 bundle: news_card_grid
 mode: default
 content:
-  field_view_reference:
+  field_department:
     weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_view_reference:
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     type: viewsreference_select

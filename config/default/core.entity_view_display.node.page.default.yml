@@ -14,12 +14,14 @@ dependencies:
     - field.field.node.page.field_sidebar_content
     - field.field.node.page.field_teaser_image
     - field.field.node.page.field_teaser_txt
+    - field.field.node.page.field_view_reference
     - node.type.page
   module:
     - entity_reference_revisions
     - fences
     - text
     - user
+    - viewsreference
 _core:
   default_config_hash: g1S3_GLaxq4l3I9RIca5Mlz02MxI2KmOquZpHw59akM
 id: node.page.default
@@ -68,6 +70,29 @@ content:
         fences_label_tag: none
         fences_label_classes: ''
     type: text_default
+    region: content
+  field_view_reference:
+    weight: 4
+    label: hidden
+    settings:
+      plugin_types:
+        default: default
+        block: block
+        page: page
+        attachment: 0
+        rest_export: 0
+        entity_browser: 0
+        feed: 0
+        embed: 0
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: viewsreference_formatter
     region: content
 hidden:
   field_above_content: true

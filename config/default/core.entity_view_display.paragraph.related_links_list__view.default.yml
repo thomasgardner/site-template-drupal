@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.related_links_list__view.field_taxonomy
     - field.field.paragraph.related_links_list__view.field_title
     - field.field.paragraph.related_links_list__view.field_view_reference
     - paragraphs.paragraphs_type.related_links_list__view
@@ -14,6 +15,21 @@ targetEntityType: paragraph
 bundle: related_links_list__view
 mode: default
 content:
+  field_taxonomy:
+    weight: 2
+    label: hidden
+    settings:
+      link: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: entity_reference_label
+    region: content
   field_title:
     weight: 0
     label: hidden

@@ -9781,6 +9781,9 @@
                     "status": "not-covered",
                     "message": "Beta releases are not covered by Drupal security advisories."
                 }
+            },
+            "patches_applied": {
+                "Is there any way to pass the token from the current paragraph to the view?": "https://www.drupal.org/files/issues/2020-08-17/viewsreference-argument-tokens-2985364-13.patch"
             }
         },
         "installation-source": "dist",

@@ -765,6 +765,9 @@
             },
             "drupal/multiline_config": {
                 "Multiline doesn't work with Config Split": "https://www.drupal.org/files/issues/2020-01-21/3056560-2.patch"
+            },
+            "drupal/viewsreference": {
+                "Is there any way to pass the token from the current paragraph to the view?": "https://www.drupal.org/files/issues/2020-08-17/viewsreference-argument-tokens-2985364-13.patch"
             }
         }
     }

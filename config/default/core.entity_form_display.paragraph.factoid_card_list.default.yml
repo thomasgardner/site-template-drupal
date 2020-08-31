@@ -3,17 +3,28 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.factoid_card_list.field_link
     - field.field.paragraph.factoid_card_list.field_paragraphs
+    - field.field.paragraph.factoid_card_list.field_title
     - paragraphs.paragraphs_type.factoid_card_list
   module:
+    - link
     - paragraphs
 id: paragraph.factoid_card_list.default
 targetEntityType: paragraph
 bundle: factoid_card_list
 mode: default
 content:
+  field_link:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
   field_paragraphs:
-    weight: 0
+    weight: 1
     settings:
       title: Card
       title_plural: Cards
@@ -23,6 +34,14 @@ content:
       default_paragraph_type: factoid_card
     third_party_settings: {  }
     type: entity_reference_paragraphs
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
 hidden:
   created: true
