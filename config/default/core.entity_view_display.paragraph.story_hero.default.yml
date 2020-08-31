@@ -1,0 +1,31 @@
+uuid: e84921d0-ae56-4208-afdc-309fafe1a4d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.story_hero.field_node_ref
+    - paragraphs.paragraphs_type.story_hero
+  module:
+    - fences
+id: paragraph.story_hero.default
+targetEntityType: paragraph
+bundle: story_hero
+mode: default
+content:
+  field_node_ref:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: story_hero
+      link: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: entity_reference_entity_view
+    region: content
+hidden: {  }
