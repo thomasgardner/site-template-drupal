@@ -10,7 +10,8 @@ use Drupal\paragraphs\Entity\Paragraph;
 /**
  * Implements hook_preprocess_HOOK().
  */
-function santa_cruz_preprocess_paragraph__tabs_horizontal(&$variables) {
+function santa_cruz_preprocess_paragraph__tabs_horizontal(&$variables)
+{
   $paragraph = $variables['paragraph'];
   if ($paragraph instanceof Paragraph) {
     $acc = $paragraph->get('field_paragraphs');
@@ -33,28 +34,32 @@ function santa_cruz_preprocess_paragraph__tabs_horizontal(&$variables) {
 /**
  * Implements hook_preprocess_HOOK().
  */
-function santa_cruz_preprocess_paragraph__content_with_media(&$variables) {
+function santa_cruz_preprocess_paragraph__content_with_media(&$variables)
+{
   $paragraph = $variables['paragraph'];
   if ($paragraph instanceof Paragraph) {
-    if ($paragraph->hasField('field_media_position')
-      && !$paragraph->get('field_media_position')->isEmpty()) {
-      $variables['field__media_position_rawvalue'] = $paragraph->get('field_media_position')
-        ->first()
-        ->getValue()['value'];
-      $variables['field__media_position_class'] = 'left wave-pattern haltered blue';
+    $variables['field__media_position_class'] = '';
+    if ($paragraph->hasField('field_show_background_style') && !$paragraph->get('field_show_background_style')->isEmpty() && $paragraph->get('field_show_background_style')->first()->getValue()['value']) {
+      $variables['field__media_position_class'] = 'wave-pattern blue';
+    }
+    if ($paragraph->hasField('field_media_position') && !$paragraph->get('field_media_position')->isEmpty()) {
       if ($paragraph->get('field_media_position')
           ->first()
           ->getValue()['value'] == "left") {
-        $variables['field__media_position_class'] = 'right';
+        $variables['field__media_position_class'] .= ' right';
+      } else {
+        $variables['field__media_position_class'] .= ' left haltered';
       }
     }
   }
+
 }
 
 /**
  * Implements hook_preprocess_HOOK().
  */
-function santa_cruz_preprocess_paragraph__grid_content_left_item(&$variables) {
+function santa_cruz_preprocess_paragraph__grid_content_left_item(&$variables)
+{
   $paragraph = $variables['paragraph'];
   if ($paragraph instanceof Paragraph) {
     if ($paragraph->hasField('field_cta_style')
@@ -72,7 +77,8 @@ function santa_cruz_preprocess_paragraph__grid_content_left_item(&$variables) {
 /**
  * Implements hook_preprocess_HOOK().
  */
-function santa_cruz_preprocess_paragraph__step(&$variables) {
+function santa_cruz_preprocess_paragraph__step(&$variables)
+{
   $variables['delta'] = NULL;
   foreach ($variables['paragraph']->getParentEntity()
              ->get('field_paragraphs')
@@ -87,7 +93,8 @@ function santa_cruz_preprocess_paragraph__step(&$variables) {
 /**
  * Implements hook_preprocess_HOOK().
  */
-function santa_cruz_preprocess_paragraph__gallery(&$variables) {
+function santa_cruz_preprocess_paragraph__gallery(&$variables)
+{
   $paragraph = $variables['paragraph'];
   if ($paragraph instanceof Paragraph) {
     if ($paragraph->hasField('field_node_ref')
@@ -107,22 +114,19 @@ function santa_cruz_preprocess_paragraph__gallery(&$variables) {
             if ($mode_cou == 1) {
               $img_ref_url_arr[$group_cou]['class'] = 'featured';
               $mode_cou = 2;
-            }
-            else {
+            } else {
               $img_ref_url_arr[$group_cou]['class'] = 'portrait';
               $mode_cou = 1;
             }
             $group_cou++;
-          }
-          else {
+          } else {
             // Here you will get URL of uploaded image.
             $img_ref_url_arr[$group_cou]['image'][$image_cou] = file_create_url($uri);
             $img_ref_url_arr[$group_cou]['class'] = 'landscape';
             if ($image_cou == 2) {
               $image_cou = 1;
               $group_cou++;
-            }
-            else {
+            } else {
               $image_cou++;
             }
           }
@@ -136,7 +140,8 @@ function santa_cruz_preprocess_paragraph__gallery(&$variables) {
 /**
  * Implements hook_preprocess_HOOK().
  */
-function santa_cruz_preprocess_paragraph__factoid_card(&$variables) {
+function santa_cruz_preprocess_paragraph__factoid_card(&$variables)
+{
   $variables['delta'] = NULL;
   $neighbors = $variables['paragraph']->getParentEntity()
     ->get('field_paragraphs')

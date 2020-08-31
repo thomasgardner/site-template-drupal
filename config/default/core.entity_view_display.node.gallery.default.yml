@@ -4,11 +4,9 @@ status: true
 dependencies:
   config:
     - field.field.node.gallery.field_images
-    - image.style.medium
     - node.type.gallery
   module:
     - fences
-    - media
     - user
 id: node.gallery.default
 targetEntityType: node
@@ -16,12 +14,12 @@ bundle: gallery
 mode: default
 content:
   field_images:
-    type: media_thumbnail
+    type: entity_reference_entity_view
     weight: 101
     label: hidden
     settings:
-      image_style: medium
-      image_link: ''
+      view_mode: default
+      link: false
     third_party_settings:
       fences:
         fences_field_tag: none
