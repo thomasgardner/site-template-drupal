@@ -10,7 +10,7 @@ field_name: field_topic_title
 entity_type: paragraph
 bundle: feature_image
 label: 'Topic Title'
-description: ''
+description: 'ex. "Vol 5"'
 required: false
 translatable: false
 default_value: {  }

@@ -10,7 +10,7 @@ field_name: field_topic_title_advanced
 entity_type: paragraph
 bundle: feature_image
 label: 'Topic Title Advanced'
-description: ''
+description: 'ex. "Issue 13"'
 required: false
 translatable: false
 default_value: {  }
