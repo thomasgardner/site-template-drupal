@@ -20,8 +20,8 @@ third_party_settings:
   field_group:
     group_viewport:
       children:
-        - group_caption
         - group_container
+        - group_container_top
       parent_name: ''
       weight: 0
       format_type: html_element
@@ -42,8 +42,8 @@ third_party_settings:
         - field_subtitle
         - field_body_formatted
         - field_link
-      parent_name: group_viewport
-      weight: 6
+      parent_name: group_container_top
+      weight: 3
       format_type: html_element
       region: content
       format_settings:
@@ -59,10 +59,9 @@ third_party_settings:
       label: Caption
     group_container:
       children:
-        - field_title
         - field_image
       parent_name: group_viewport
-      weight: 7
+      weight: 22
       format_type: html_element
       region: content
       format_settings:
@@ -76,6 +75,25 @@ third_party_settings:
         effect: none
         speed: fast
       label: Container
+    group_container_top:
+      children:
+        - field_title
+        - group_caption
+      parent_name: group_viewport
+      weight: 23
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: container_top__full-image
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Container Top'
 id: paragraph.full_image.default
 targetEntityType: paragraph
 bundle: full_image
@@ -113,7 +131,7 @@ content:
     region: content
   field_link:
     weight: 8
-    label: above
+    label: hidden
     settings:
       trim_length: 80
       url_only: false

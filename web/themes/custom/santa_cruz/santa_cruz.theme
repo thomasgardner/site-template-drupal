@@ -48,8 +48,12 @@ function santa_cruz_preprocess_paragraph(&$variables)
       if($media){
         $media_uri = $media->field_media_image->entity->getFileUri(); //
         $media_url = file_create_url($media_uri);
-        $variables['promo_image_url'] =  $media_url;
+        $variables['promo_image_url_'.$key.''] =  $media_url;
       }
     }
+  }
+  if($paragraph->getType() == "header_banner"){
+    $node = \Drupal::request()->attributes->get('node');
+    $variables['node_type'] = $node->getType();
   }
 }
