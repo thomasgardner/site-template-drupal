@@ -31,7 +31,7 @@ content:
     weight: 0
     label: hidden
     settings:
-      view_mode: single_feature_story_list_interior_list
+      view_mode: two_feature_story_list_featured
       link: false
     third_party_settings:
       fences:
@@ -47,7 +47,7 @@ content:
     weight: 1
     label: hidden
     settings:
-      view_mode: single_feature_story_list_interior_list
+      view_mode: two_feature_story_list_list
       link: false
     third_party_settings:
       fences:
