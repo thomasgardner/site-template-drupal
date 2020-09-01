@@ -56,9 +56,8 @@ display:
       style:
         type: default
         options:
-          grouping: {  }
-          row_class: ''
-          default_row_class: true
+          row_class: news-card
+          default_row_class: false
           uses_fields: false
       row:
         type: 'entity:node'
@@ -124,7 +123,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          order: ASC
+          order: DESC
           exposed: false
           expose:
             label: ''
@@ -193,6 +192,7 @@ display:
       display_extenders:
         metatag_display_extender: {  }
       display_description: ''
+      block_hide_empty: true
     cache_metadata:
       max-age: -1
       contexts:
