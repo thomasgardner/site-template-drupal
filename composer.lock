@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b1a46110c372350f57a3230bf2a607e9",
+    "content-hash": "f00eddd52f840411f85dd0ebdff2340d",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -142,7 +142,7 @@
             "version": "3.5.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/jquery/jquery-dist.git",
+                "url": "git@github.com:jquery/jquery-dist.git",
                 "reference": "4c0e4becb8263bb5b3e6dadc448d8e7305ef8215"
             },
             "dist": {
@@ -3861,14 +3861,14 @@
                     "Incorrect parent tree shows when the same URL is used in menu links many times": "https://www.drupal.org/files/issues/2859703-find-correct-link-6.patch",
                     "Node revision routes don't convert {node} param": "https://www.drupal.org/files/issues/2019-04-04/2730631_85_0.patch",
                     "There is no way to delete or update file entities of other users incl. user/1": "https://www.drupal.org/files/issues/2020-01-13/2949017-62.patch",
-                    "Allow media items to be edited in a modal when using the field widget": "https://www.drupal.org/files/issues/2020-02-21/2985168-31.patch",
+                    "Allow media items to be edited in a modal when using the field widget": "https://www.drupal.org/files/issues/2020-06-06/2985168-43.patch",
                     "Content Edit page jumps when media library item is placed": "https://www.drupal.org/files/issues/2019-11-04/3073023-4.patch",
                     "Default theme favicon for administration theme": "https://www.drupal.org/files/issues/2019-12-14/default-theme-favicon-for-administration-theme-2981434-7.patch",
                     "[D8] Chrome 83 cancels jquery.form ajax requests over https": "https://www.drupal.org/files/issues/2020-05-27/3138421-75.patch",
                     "Add Views EntityReference filter to be available for all entity reference fields": "https://www.drupal.org/files/issues/2020-05-23/drupal-generalize-taxonomyindextid-filter-2429699-325.patch",
                     "[regression] Restore styling for embedded media edit button in Seven theme": "https://www.drupal.org/files/issues/2020-02-25/3092795-22.patch",
                     "Constrain the width of aligned images, media, blockquotes etc to a max of 75%": "https://www.drupal.org/files/issues/2019-10-10/3078287-104.patch",
-                    "views row display":  "web/patches/2552541-30.patch"
+                    "views row display": "web/patches/2552541-30.patch"
                 }
             },
             "autoload": {
@@ -6923,54 +6923,6 @@
             }
         },
         {
-            "name": "drupal/media_library_edit",
-            "version": "dev-1.x",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/media_library_edit.git",
-                "reference": "76b887eaeff7051dfe246ff64f1a6853d1c10642"
-            },
-            "require": {
-                "drupal/core": "^8 || ^9"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.0-alpha1+5-dev",
-                    "datestamp": "1591618054",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Project has not opted into security advisory coverage!"
-                    }
-                },
-                "patches_applied": {
-                    "Open in modal": "https://www.drupal.org/files/issues/2020-06-25/open-in-modal-3034205-43.patch"
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "ahebrank",
-                    "homepage": "https://www.drupal.org/user/3190515"
-                }
-            ],
-            "description": "Add an edit button to the Media Library widget when an item is selected.",
-            "homepage": "https://www.drupal.org/project/media_library_edit",
-            "keywords": [
-                "Drupal"
-            ],
-            "support": {
-                "source": "http://cgit.drupalcode.org/media_library_edit",
-                "issues": "https://www.drupal.org/project/issues/media_library_edit"
-            }
-        },
-        {
             "name": "drupal/menu_block",
             "version": "dev-1.x",
             "source": {
@@ -9448,6 +9400,9 @@
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
                     }
+                },
+                "patches_applied": {
+                    "Is there any way to pass the token from the current paragraph to the view?": "https://www.drupal.org/files/issues/2020-08-17/viewsreference-argument-tokens-2985364-13.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -15896,7 +15851,6 @@
         "drupal/inline_entity_form": 5,
         "drupal/markup": 10,
         "drupal/masquerade": 10,
-        "drupal/media_library_edit": 20,
         "drupal/menu_block": 20,
         "drupal/name": 20,
         "drupal/owlcarousel": 20,
