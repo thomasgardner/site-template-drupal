@@ -54,17 +54,21 @@
         <div class="grid-x grid-margin-x">
           {% for key, item in content.field_paragraphs__max_2 if key|first != '#' %}
             {% if key matches '/^\\d+$/' %}
-          <div class="cell large-6">
-            <div class="closing-blocks">
-              <h5>{{ item['#paragraph'].field_title.0.value }}</h5>
-              <a href="{{ item['#paragraph'].field_link.0.uri|replace({'internal:':''})  }}">
-                <div class="image">
-{#                  <img class="overlay" src="../assets/img/content/ucsc-magazine-white.png">#}
-                  <img src="{{ promo_image_url }}">
+              <div class="cell large-6">
+                <div class="closing-blocks">
+                  <h5>{{ item['#paragraph'].field_title.0.value }}</h5>
+                  <a href="{{ item['#paragraph'].field_link.0.uri|replace({'internal:':''}) }}">
+                    <div class="image">
+                      {#                  <img class="overlay" src="../assets/img/content/ucsc-magazine-white.png">#}
+                      {% if key == 1 %}
+                        <img src="{{ promo_image_url_1 }}">
+                      {% else %}
+                        <img src="{{ promo_image_url_2 }}">
+                      {% endif %}
+                    </div>
+                  </a>
                 </div>
-              </a>
-            </div>
-          </div>
+              </div>
             {% endif %}
           {% endfor %}
         </div>
