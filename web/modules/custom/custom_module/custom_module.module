@@ -58,7 +58,12 @@ function custom_module_preprocess_block(&$variables) {
   // Allow to have some HTML for the titles of the blocks.
   if (\Drupal::service('module_handler')->moduleExists('html_title')) {
     // Case - menu block.
-    if (isset($variables['content']['#menu_block_configuration']['label'])
+    if (isset($variables['configuration']['label'])
+      && $variables['configuration']['label'] !== '') {
+      $variables['configuration']['label'] = \Drupal::service('html_title.filter')
+        ->decodeToMarkup($variables['configuration']['label']);
+    }
+    elseif (isset($variables['content']['#menu_block_configuration']['label'])
       && $variables['content']['#menu_block_configuration']['label'] != '') {
       $variables['content']['#menu_block_configuration']['label'] = \Drupal::service('html_title.filter')
         ->decodeToMarkup($variables['content']['#menu_block_configuration']['label']);
