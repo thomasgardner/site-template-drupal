@@ -99,6 +99,26 @@
 {#  {{ content.links }}#}
 {#  {{ content.comment }}#}
 {#</article>#}
+<section id="gallery-description">
+  <div class="grid-container">
+    <!-- <section class="heading">
+        <h2 class="underline">2014 Photo Contest winners</h2>
+    </section> -->
+    <section class="content-centered tighten">
+      <p class="lead">{{ content.field_caption_formatted.0['#text']|striptags }}</p>
+      <div class="hide-for-large">
+        <p>Photographer: <span class="btn-link">John Smith</span></p>
+        <div class="social-sharing">
+          <a class="fab fa-twitter" href=""></a>
+          <a class="fab fa-facebook" href=""></a>
+          <a class="fab fa-youtube" href=""></a>
+          <a class="fab fa-linkedin" href=""></a>
+          <a class="fab fa-reddit" href=""></a>
+        </div>
+      </div>
+    </section>
+  </div>
+</section>
 <div class="gallery-images" id="gallery-images">
   <div class="grid-container large">
     {% for key, item in content.field_images if key|first != '#' %}

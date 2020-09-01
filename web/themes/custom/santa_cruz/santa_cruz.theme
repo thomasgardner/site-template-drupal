@@ -52,4 +52,9 @@ function santa_cruz_preprocess_paragraph(&$variables)
       }
     }
   }
+  if($paragraph->getType() == "header_banner"){
+    $a = '';
+    $node = \Drupal::request()->attributes->get('node');
+    $variables['node_type'] = $node->getType();
+  }
 }
