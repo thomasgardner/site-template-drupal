@@ -12,7 +12,6 @@ dependencies:
     - link
     - markup
     - media_library
-    - media_library_edit
 id: block_content.site_specific_title_or_logo.default
 targetEntityType: block_content
 bundle: site_specific_title_or_logo
@@ -36,9 +35,7 @@ content:
     weight: 3
     settings:
       media_types: {  }
-    third_party_settings:
-      media_library_edit:
-        show_edit: '1'
+    third_party_settings: {  }
     type: media_library_widget
     region: content
   field_title:

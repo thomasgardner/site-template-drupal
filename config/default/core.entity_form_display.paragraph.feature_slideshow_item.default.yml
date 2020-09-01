@@ -11,7 +11,6 @@ dependencies:
   module:
     - link_class
     - media_library
-    - media_library_edit
 id: paragraph.feature_slideshow_item.default
 targetEntityType: paragraph
 bundle: feature_slideshow_item
@@ -40,9 +39,7 @@ content:
     weight: 1
     settings:
       media_types: {  }
-    third_party_settings:
-      media_library_edit:
-        show_edit: '1'
+    third_party_settings: {  }
     type: media_library_widget
     region: content
   field_title:

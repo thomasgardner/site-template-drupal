@@ -10,7 +10,6 @@ dependencies:
   module:
     - address
     - media_library
-    - media_library_edit
     - text
 id: block_content.address_simple.default
 targetEntityType: block_content
@@ -38,9 +37,7 @@ content:
     weight: 1
     settings:
       media_types: {  }
-    third_party_settings:
-      media_library_edit:
-        show_edit: '1'
+    third_party_settings: {  }
     region: content
   info:
     type: string_textfield

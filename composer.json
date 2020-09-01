@@ -740,9 +740,6 @@
             "drupal/media_bulk_upload": {
                 "Undefined index: file_extensions in...": "https://www.drupal.org/files/issues/2019-05-17/3033271-4.media_bulk_upload.Undefined-index-fileextensions-in-DrupalmediabulkuploadMediaTypeManagergetTargetFieldExtensions.patch"
             },
-            "drupal/media_library_edit": {
-                "Open in modal": "https://www.drupal.org/files/issues/2020-06-25/open-in-modal-3034205-43.patch"
-            },
             "drupal/sharethis" : {
                 "Fix: Error: [] operator not supported for strings" : "https://www.drupal.org/files/issues/Error-operator-not-supported-for-strings-2885710-12128018.patch"
             },

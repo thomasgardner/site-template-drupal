@@ -25,7 +25,6 @@ dependencies:
     - field_group
     - link
     - media_library
-    - media_library_edit
     - metatag
     - paragraphs
     - path
@@ -181,9 +180,7 @@ content:
     weight: 6
     settings:
       media_types: {  }
-    third_party_settings:
-      media_library_edit:
-        show_edit: '1'
+    third_party_settings: {  }
     type: media_library_widget
     region: content
   field_meta_tags:
@@ -205,9 +202,7 @@ content:
     weight: 21
     settings:
       media_types: {  }
-    third_party_settings:
-      media_library_edit:
-        show_edit: '1'
+    third_party_settings: {  }
     region: content
   field_teaser_txt:
     weight: 22

@@ -15,7 +15,6 @@ dependencies:
     - file
     - link
     - media_library
-    - media_library_edit
 id: paragraph.hero_slide.default
 targetEntityType: paragraph
 bundle: hero_slide
@@ -33,9 +32,7 @@ content:
     weight: 0
     settings:
       media_types: {  }
-    third_party_settings:
-      media_library_edit:
-        show_edit: '1'
+    third_party_settings: {  }
     type: media_library_widget
     region: content
   field_links:
