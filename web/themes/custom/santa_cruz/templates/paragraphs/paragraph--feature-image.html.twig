@@ -7,7 +7,7 @@
   view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_id,
   not paragraph.isPublished() ? 'paragraph--unpublished',
   'hero-viewport',
-  display_mode == 'Split alignment' ? 'inner-page-standard wave-pattern blue' : 'inner-page'
+  display_mode == 'Split Alignment' ? 'inner-page-standard wave-pattern blue' : 'inner-page'
 ] %}
 
 {# inner-page-standard wave-pattern blue #}
@@ -15,7 +15,7 @@
 {% block paragraph %}
   <section{{ attributes.addClass(classes) }} aria-label="content row">
     {% block content %}
-      {% if display_mode == 'Split alignment' %}
+      {% if display_mode == 'Split Alignment' %}
 
         {% set image_url = file_url(content.field_media[0]['#item'].entity.uri.value|image_style('feature_image')) %}
         {% set image_title = content.field_media[0]['#item'].title %}
