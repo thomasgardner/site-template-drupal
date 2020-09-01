@@ -21,6 +21,9 @@
             display: block;
         }
     }
+    a{
+    text-decoration: none;
+     }
 
     &:last-child {
         margin-bottom: .5rem;

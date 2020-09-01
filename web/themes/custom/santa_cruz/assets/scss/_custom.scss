@@ -33,3 +33,18 @@ max-width: 50%;
 .image-style--inline-media-small{
   max-width: 25%;
 }
+
+/**
+Removed underline
+ */
+.view-teaser-collection-grid{
+  .view-content.news-card-list{
+    .news-card-content{
+      .underline{
+        &:after{
+          display: none;
+        }
+      }
+    }
+  }
+}
