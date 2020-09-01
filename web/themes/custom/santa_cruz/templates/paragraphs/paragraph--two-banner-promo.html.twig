@@ -60,10 +60,10 @@
                   <a href="{{ item['#paragraph'].field_link.0.uri|replace({'internal:':''}) }}">
                     <div class="image">
                       {#                  <img class="overlay" src="../assets/img/content/ucsc-magazine-white.png">#}
-                      {% if key == 1 %}
-                        <img src="{{ promo_image_url_1 }}">
+                      {% if key == 0 %}
+                        <img src="{{ promo_image_url_0 }}">
                       {% else %}
-                        <img src="{{ promo_image_url_2 }}">
+                        <img src="{{ promo_image_url_1 }}">
                       {% endif %}
                     </div>
                   </a>
