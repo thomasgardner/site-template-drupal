@@ -746,3 +746,21 @@
     }
 
 }
+
+
+.hero-viewport.inner-page {
+  .container_top__full-image {
+    position: relative;
+    margin-top: -35%;
+    .header-wrapper {
+      position: relative;
+    }
+    .hero-caption {
+      position: relative;
+      margin: 0 auto;
+      left: initial;
+      bottom: initial;
+      clear: both;
+    }
+  }
+}
