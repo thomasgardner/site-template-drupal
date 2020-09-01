@@ -10,10 +10,16 @@
 
 {% block paragraph %}
   <section{{ attributes.addClass(classes) }} aria-label="content row">
+    <section class="heading">
+      <h2 class="underline">{{ content.field_title.0["#context"].value }}</h2>
+    </section>
     <div class="factoid-card-list">
       {% block content %}
-        {{ content }}
+        {{ content|without('field_title', 'field_link') }}
       {% endblock %}
+    </div>
+    <div class="more no-border" style="width: 100%">
+      <a class="primary button" href="{{ content.field_link.0['#url'] }}">{{ content.field_link.0['#title'] }}</a>
     </div>
   </section>
 {% endblock paragraph %}
