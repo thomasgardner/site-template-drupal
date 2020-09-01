@@ -10,7 +10,7 @@ id: paragraph.two_feature_story_list.field_node_max_4
 field_name: field_node_max_4
 entity_type: paragraph
 bundle: two_feature_story_list
-label: 'Right News Card'
+label: 'Right News Cards'
 description: ''
 required: true
 translatable: false
