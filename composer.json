@@ -464,6 +464,7 @@
         "drupal/asset_injector": "^2.7",
         "drupal/auto_entitylabel": "^3.0@beta",
         "drupal/backup_migrate": "^4.1",
+        "drupal/better_exposed_filters": "^5.0",
         "drupal/block_class": "^1.2",
         "drupal/calendar": "1.x-dev",
         "drupal/captcha": "^1.1",

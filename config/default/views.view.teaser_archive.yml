@@ -7,6 +7,7 @@ dependencies:
     - node.type.article
     - taxonomy.vocabulary.article_category
   module:
+    - better_exposed_filters
     - datetime
     - html_title
     - node
@@ -42,7 +43,7 @@ display:
           query_comment: ''
           query_tags: {  }
       exposed_form:
-        type: basic
+        type: bef
         options:
           submit_button: Apply
           reset_button: false
@@ -51,6 +52,23 @@ display:
           expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc
+          text_input_required: 'Select any filter and click on Apply to see results'
+          text_input_required_format: null
+          bef:
+            general:
+              autosubmit: false
+              autosubmit_exclude_textfield: false
+              autosubmit_textfield_delay: 500
+              autosubmit_hide: false
+              input_required: false
+              allow_secondary: false
+              secondary_label: 'Advanced options'
+              secondary_open: false
+            sort:
+              plugin_id: default
+            filter:
+              field_categories_target_id:
+                plugin_id: default
       pager:
         type: full
         options:
@@ -75,9 +93,8 @@ display:
       style:
         type: default
         options:
-          grouping: {  }
-          row_class: ''
-          default_row_class: true
+          row_class: news-card
+          default_row_class: false
           uses_fields: false
       row:
         type: 'entity:node'
@@ -286,11 +303,43 @@ display:
       defaults:
         filters: false
         filter_groups: false
+        exposed_form: false
       filter_groups:
         operator: AND
         groups:
           1: AND
       display_description: ''
+      exposed_form:
+        type: bef
+        options:
+          submit_button: Apply
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+          text_input_required: 'Select any filter and click on Apply to see results'
+          text_input_required_format: full_html
+          bef:
+            general:
+              autosubmit: true
+              autosubmit_exclude_textfield: false
+              autosubmit_textfield_delay: 500
+              autosubmit_hide: false
+              input_required: false
+              allow_secondary: false
+              secondary_label: 'Advanced options'
+              secondary_open: false
+            filter:
+              field_categories_target_id:
+                plugin_id: bef_links
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: ''
+                  collapsible: false
+                  is_secondary: false
+                select_all_none: false
     cache_metadata:
       max-age: -1
       contexts:
