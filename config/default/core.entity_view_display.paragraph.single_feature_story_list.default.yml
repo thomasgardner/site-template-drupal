@@ -4,32 +4,50 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.single_feature_story_list.field_department
+    - field.field.paragraph.single_feature_story_list.field_link
     - field.field.paragraph.single_feature_story_list.field_title
-    - field.field.paragraph.single_feature_story_list.field_view_reference
+    - field.field.paragraph.single_feature_story_list.field_variation
     - paragraphs.paragraphs_type.single_feature_story_list
   module:
-    - viewsreference
+    - link
+    - options
 id: paragraph.single_feature_story_list.default
 targetEntityType: paragraph
 bundle: single_feature_story_list
 mode: default
 content:
+  field_department:
+    type: entity_reference_entity_id
+    weight: 2
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_link:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
   field_title:
-    weight: 0
+    weight: 1
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
-  field_view_reference:
-    weight: 1
+  field_variation:
+    weight: 0
     label: hidden
-    settings:
-      plugin_types:
-        - block
+    settings: {  }
     third_party_settings: {  }
-    type: viewsreference_formatter
+    type: list_key
     region: content
-hidden:
-  field_department: true
+hidden: {  }
