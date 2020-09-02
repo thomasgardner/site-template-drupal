@@ -52,15 +52,7 @@
 {#      {{ dump(content) }}#}
       <div class="component-wrapper">
         <div class="hero-viewport inner-page">
-          <div class="hero-caption wow">
-            <h3 class="secondary-blue-text">{{ content.field_subtitle.0['#context'].value }}</h3>
-            <p>{{ content.field_body_formatted.0['#text']|striptags }}</p>
-            <a href="{{ content.field_link.0['#url'] }}" class="button primary">{{ content.field_link.0['#title'] }}</a>
-          </div>
           <div class="hero-container">
-            <div class="header-wrapper content-centered">
-              <h1 class="white-text">{{ content.field_title.0['#context'].value }}</h1>
-            </div>
             <div id="hero" class="hero">
               <div class="hero-video">
                 <div class="hero-video-container">
@@ -76,6 +68,16 @@
               {% set image_url = file_url(content.field_image[0]['#media'].field_media_image.entity.uri.value) %}
               {% set img_alt = content.field_image[0]['#media'].field_media_image.alt %}
               <img src="{{ image_url }}" alt="{{ image_alt }}">
+            </div>
+          </div>
+          <div class="container_top__full-image">
+            <div class="header-wrapper content-centered">
+              <h1 class="white-text">{{ content.field_title.0['#context'].value }}</h1>
+            </div>
+            <div class="hero-caption wow">
+              <h3 class="secondary-blue-text">{{ content.field_subtitle.0['#context'].value }}</h3>
+              <p>{{ content.field_body_formatted.0['#text']|striptags }}</p>
+              <a href="{{ content.field_link.0['#url'] }}" class="button primary">{{ content.field_link.0['#title'] }}</a>
             </div>
           </div>
         </div>
