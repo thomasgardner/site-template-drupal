@@ -118,6 +118,7 @@
 
     &.green {
         @include breakpoint(large){ background-image: url('../assets/img/build-resources/wave-pattern-green.png'); }
+        margin: 0 -30px;
 
         &.opaque {
             background-color: lighten($secondary-green, 45%);
