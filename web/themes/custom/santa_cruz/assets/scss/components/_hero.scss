@@ -773,7 +773,7 @@
 .hero-viewport.inner-page {
   .container_top__full-image {
     position: relative;
-    margin-top: -45%;
+    margin-top: -36%;
     @include breakpoint(xlarge) {
       margin-top: calc(420px * -0.55);
     }
