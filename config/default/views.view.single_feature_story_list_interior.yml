@@ -210,7 +210,7 @@ display:
           expose:
             label: ''
           granularity: second
-      title: 'News Card Grid'
+      title: ''
       header: {  }
       footer: {  }
       empty: {  }
@@ -269,10 +269,28 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
-  attachment_1:
-    display_plugin: attachment
-    id: attachment_1
-    display_title: Attachment
+  block_1:
+    display_plugin: block
+    id: block_1
+    display_title: 'Block Feature'
+    position: 1
+    display_options:
+      display_extenders:
+        metatag_display_extender: {  }
+      display_description: ''
+      block_hide_empty: true
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
+        - url
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
+  block_2:
+    display_plugin: block
+    id: block_2
+    display_title: 'Block List'
     position: 2
     display_options:
       display_extenders:
@@ -282,35 +300,19 @@ display:
         options:
           items_per_page: 4
           offset: 1
-      displays:
-        block_1: block_1
-      attachment_position: after
       style:
         type: default
         options: {  }
       defaults:
         style: false
         row: false
+        pager: false
       row:
         type: 'entity:node'
         options:
           relationship: none
           view_mode: single_feature_story_list_interior_list
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_interface'
-        - url
-        - 'user.node_grants:view'
-        - user.permissions
-      tags: {  }
-  block_1:
-    display_plugin: block
-    id: block_1
-    display_title: Block
-    position: 1
-    display_options:
-      display_extenders: {  }
+      display_description: ''
     cache_metadata:
       max-age: -1
       contexts:
