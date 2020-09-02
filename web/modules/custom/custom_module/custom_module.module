@@ -256,55 +256,6 @@ function custom_module_views_pre_view(ViewExecutable $view, $display_id, array &
       }
     }
   }
-
-  // Replace argument by using related term
-  // and add "Read More News" to the footer of the view.
-  if ($view->id() == 'single_feature_story_list'
-    && $display_id == 'block_1'
-    && isset($args[0])) {
-
-    $term = Term::load($args[0]);
-    if ($term instanceof TermInterface) {
-      $tid = $term->id();
-      $name = $term->getName();
-
-      // Attach "Read More News" to the footer of the view.
-      // FIXME: we need update the link ASAP,
-      //  not clear for now which path we should use.
-      $url = Url::fromUserInput('/news',
-        [
-          'query' => [
-            'department' => $tid,
-          ],
-          'attributes' => [
-            'class' => [
-              'button primary',
-            ],
-          ],
-        ]
-      );
-
-      $link_text = '<span>' . 'See More ' . $name . ' News' . '</span>';
-      $link_markup = Markup::create($link_text);
-      $link = Link::fromTextAndUrl($link_markup, $url);
-      $content = $link->toString();
-
-      $item = [
-        'id' => 'area_text_custom',
-        'table' => 'views',
-        'field' => 'area_text_custom',
-        'relationship' => 'none',
-        'group_type' => 'none',
-        'admin_label' => '',
-        'empty' => TRUE,
-        'tokenize' => FALSE,
-        'content' => $content,
-        'plugin_id' => 'text_custom',
-      ];
-      $view->setHandler($display_id, 'footer', 'area_text_custom', $item);
-    }
-
-  }
 }
 
 /**

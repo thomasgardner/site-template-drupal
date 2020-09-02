@@ -313,6 +313,7 @@ display:
           relationship: none
           view_mode: single_feature_story_list_interior_list
       display_description: ''
+      block_hide_empty: true
     cache_metadata:
       max-age: -1
       contexts:

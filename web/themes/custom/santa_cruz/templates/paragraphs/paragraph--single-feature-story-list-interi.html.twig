@@ -4,15 +4,13 @@
   'paragraph--id--' ~ paragraph.id()|clean_id,
   view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_id,
   not paragraph.isPublished() ? 'paragraph--unpublished',
-  'paragraph--contains--view--' ~ content.field_view[0].contents['#view_id']|clean_id,
-  'paragraph--contains--display-id--' ~ content.field_view[0].contents['#display_id']|clean_id,
   'grid-x',
   'grid-margin-x'
 ] %}
 
 {% block paragraph %}
   <section{{ attributes.addClass(classes) }}
-      aria-label="content {{ content.field_view[0].contents['#view_id']|clean_id }}">
+      aria-label="content row">
     {% block content %}
       {% set view = drupal_view_result('single_feature_story_list_interior', 'block_1', content.field_department[0]['#plain_text'])|length %}
       {% if view > 0 %}
@@ -26,8 +24,10 @@
           <div class="news-card-list full-width has-thumbs">
             {{ drupal_view('single_feature_story_list_interior', 'block_2', content.field_department[0]['#plain_text']) }}
           </div>
-          <a href="{{ content.field_link[0]['#url'] }}" class="btn-link right"
-             target="{{ content.field_link[0]['#url'].isExternal() ? '_blank' : '' }}">{{ content.field_link[0]['#title'] }}</a>
+          {% if content.field_link|field_value is not empty %}
+            <a href="{{ content.field_link[0]['#url'] }}" class="btn-link right"
+               target="{{ content.field_link[0]['#url'].isExternal() ? '_blank' : '' }}">{{ content.field_link[0]['#title'] }}</a>
+          {% endif %}
         </div>
       {% endif %}
     {% endblock %}

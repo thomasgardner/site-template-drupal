@@ -210,7 +210,7 @@ display:
           expose:
             label: ''
           granularity: second
-      title: 'News Card Grid'
+      title: ''
       header: {  }
       footer: {  }
       empty: {  }
@@ -269,28 +269,46 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
-  attachment_1:
-    display_plugin: attachment
-    id: attachment_1
-    display_title: Attachment
-    position: 2
+  block_1:
+    display_plugin: block
+    id: block_1
+    display_title: 'Block Feature (Var. #1)'
+    position: 1
     display_options:
       display_extenders:
         metatag_display_extender: {  }
+      display_description: ''
+      block_hide_empty: true
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
+        - url
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
+  block_2:
+    display_plugin: block
+    id: block_2
+    display_title: 'Block List (Var. #1)'
+    position: 1
+    display_options:
+      display_extenders:
+        metatag_display_extender: {  }
+      display_description: ''
       pager:
         type: some
         options:
           items_per_page: 5
           offset: 1
-      displays:
-        block_1: block_1
-      attachment_position: after
+      defaults:
+        pager: false
+        style: false
+        row: false
+      block_hide_empty: true
       style:
         type: default
         options: {  }
-      defaults:
-        style: false
-        row: false
       row:
         type: 'entity:node'
         options:
@@ -304,13 +322,54 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
-  block_1:
+  block_3:
     display_plugin: block
-    id: block_1
-    display_title: Block
+    id: block_3
+    display_title: 'Block Feature (Var. #2)'
     position: 1
     display_options:
-      display_extenders: {  }
+      display_extenders:
+        metatag_display_extender: {  }
+      display_description: ''
+      block_hide_empty: true
+      defaults:
+        style: true
+        row: true
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
+        - url
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
+  block_4:
+    display_plugin: block
+    id: block_4
+    display_title: 'Block List (Var. #2)'
+    position: 1
+    display_options:
+      display_extenders:
+        metatag_display_extender: {  }
+      display_description: ''
+      pager:
+        type: some
+        options:
+          items_per_page: 4
+          offset: 1
+      defaults:
+        pager: false
+        style: false
+        row: false
+      block_hide_empty: true
+      style:
+        type: default
+        options: {  }
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: single_feature_story_list_list
     cache_metadata:
       max-age: -1
       contexts:
