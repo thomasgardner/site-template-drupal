@@ -52,11 +52,29 @@
     {% block content %}
       {% for key, item in content.field_node_refs if key|first != '#' %}
         {% set entity = item['#options']['entity'] %}
+
+        {% set link_split = entity.field_link.uri|replace({'internal:':''})|render|split('.') %}
+        {% set icon = 'fa-file-pdf' %}
+        {% if link_split %}
+          {% set icon = link_split[link_split|length -1] %}
+          {% if icon == 'pdf' %}
+            {% set icon = 'fa-file-pdf' %}
+          {% elseif icon == 'doc' or icon == 'docx' %}
+            {% set icon = 'fa-file-word' %}
+          {% elseif icon == 'xls' %}
+            {% set icon = 'fa-file-excel' %}
+          {% elseif icon == 'ppt' %}
+            {% set icon = 'fa-file-powerpoint' %}
+          {% else %}
+            {% set icon = 'fa-file-pdf' %}
+          {% endif %}
+        {% endif %}
+
         <div class="policy-card">
           <a href="{{ entity.field_link.uri|replace({'internal:':''})|render }}">
             <div class="title">
               <div class="underline">
-                <h4>{{ item['#title'] }} <i class="{{ entity.field_icon.style }} fa-{{ entity.field_icon.icon_name }}"></i></h4>
+                <h4>{{ item['#title'] }} <i class="far {{ icon }}"></i></h4>
               </div>
             </div>
           </a>
