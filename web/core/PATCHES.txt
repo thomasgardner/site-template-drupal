@@ -49,3 +49,7 @@ Constrain the width of aligned images, media, blockquotes etc to a max of 75%
 Source: https://www.drupal.org/files/issues/2019-10-10/3078287-104.patch
 
 
+views row display
+Source: web/patches/2552541-30.patch
+
+
