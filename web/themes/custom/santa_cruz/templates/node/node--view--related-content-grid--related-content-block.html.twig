@@ -69,9 +69,15 @@
 #}
 
 <a href="{{ url }}" aria-label="">
-  <div class="image">
-    {{ content.field_teaser_image }}
-  </div>
+  {% if content.field_teaser_image[0]['#media'].field_media_image %}
+    {% set image_url = file_url(content.field_teaser_image[0]['#media'].field_media_image.entity.uri.value|image_style('full_width')) %}
+    {% set image_alt = content.field_teaser_image[0]['#media'].field_media_image.alt %}
+    {% if image_url %}
+      <div class="image">
+        <img src="{{ image_url }}" alt="{{ image_alt }}"/>
+      </div>
+    {% endif %}
+  {% endif %}
   <div class="news-card-content">
     <div class="category btn-link">{{ content.field_categories }}</div>
     <h4 class="underline isolated">{{ label }}</h4>
