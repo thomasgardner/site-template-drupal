@@ -52,7 +52,7 @@ function santa_cruz_preprocess_paragraph__content_with_media(&$variables)
           ->getValue()['value'] == "left") {
         $variables['field__media_position_class'] .= ' right';
       } else {
-        $variables['field__media_position_class'] .= ' left haltered';
+        $variables['field__media_position_class'] .= ' left';
       }
     }
   }
