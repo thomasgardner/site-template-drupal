@@ -3,17 +3,28 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.profile_list.field_link
     - field.field.paragraph.profile_list.field_paragraphs
+    - field.field.paragraph.profile_list.field_title
     - paragraphs.paragraphs_type.profile_list
   module:
+    - link
     - paragraphs
 id: paragraph.profile_list.default
 targetEntityType: paragraph
 bundle: profile_list
 mode: default
 content:
+  field_link:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
   field_paragraphs:
-    weight: 0
+    weight: 1
     settings:
       title: 'Profile Card'
       title_plural: 'Profile Cards'
@@ -23,6 +34,14 @@ content:
       default_paragraph_type: profile_card
     third_party_settings: {  }
     type: entity_reference_paragraphs
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
 hidden:
   created: true
