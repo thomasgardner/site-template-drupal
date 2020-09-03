@@ -234,6 +234,8 @@
     var $ArchiveForm = $('#views-exposed-form-teaser-archive-news-archive-page');
     var labelValue = $ArchiveForm.find('.form-item-field-categories-target-id label').text();
     $ArchiveForm.find("a.filter-control").prepend(labelValue);
+
+    $('.news-card-list .news-card:first-child, .news-card-list .news-card:nth-child(2)').wrapAll( "<div class='news-card-list split-column'></div>" );
   });
 
 })(jQuery, Drupal, drupalSettings);
