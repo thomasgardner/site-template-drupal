@@ -6,6 +6,8 @@
  */
 
 use Drupal\paragraphs\Entity\Paragraph;
+use Drupal\Core\Render\Markup;
+use Drupal\Core\Render\Renderer;
 
 /**
  * Implements hook_preprocess_HOOK().
@@ -22,9 +24,11 @@ function santa_cruz_preprocess_paragraph__tabs_horizontal(&$variables)
       $tab_hor[$i]['title'] = $para_tab->get('field_title')
         ->first()
         ->getValue()['value'];
-      $tab_hor[$i]['body'] = $para_tab->get('field_body_formatted')
-        ->first()
-        ->getValue()['value'];
+      $tab_hor[$i]['body'] = array(
+        '#type' => 'processed_text',
+        '#text' => $para_tab->get('field_body_formatted')->value,
+        '#format' => $para_tab->get('field_body_formatted')->format,
+      );
     }
 
     $variables['field__tab_hori_array'] = $tab_hor;
@@ -48,7 +52,7 @@ function santa_cruz_preprocess_paragraph__content_with_media(&$variables)
           ->getValue()['value'] == "left") {
         $variables['field__media_position_class'] .= ' right';
       } else {
-        $variables['field__media_position_class'] .= ' left haltered';
+        $variables['field__media_position_class'] .= ' left';
       }
     }
   }

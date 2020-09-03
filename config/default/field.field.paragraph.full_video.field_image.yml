@@ -12,7 +12,7 @@ entity_type: paragraph
 bundle: full_video
 label: Image
 description: ''
-required: false
+required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''

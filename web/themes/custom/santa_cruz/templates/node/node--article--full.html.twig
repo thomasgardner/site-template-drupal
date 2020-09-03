@@ -60,46 +60,12 @@
     {#    {{>social-sharing type='bottom'}}#}
   </div>
 
-
-  {#  <section class="heading">#}
-  {#    <h2 class="underline">Related Podcasts</h2>#}
-  {#  </section>#}
-
-  {#  <div class="grid-container large">#}
-  {#    <div class="news-card-list">#}
-  {#      <a class="news-card" href="javascript:void(0)" aria-label="">#}
-  {#        <div class="image">#}
-  {#          <img src="{{ root }}assets/img/content/news-image-1.jpeg">#}
-  {#        </div>#}
-  {#        <div class="news-card-content">#}
-  {#          <div class="category btn-link">Arts &amp; Sciences</div>#}
-  {#          <h4 class="underline isolated">Guillermo Gómez-Peña returns to UCSC to perform his latest solo work:#}
-  {#            "The Most (un) Documented Mexican Artist"</h4>#}
-  {#        </div>#}
-  {#      </a>#}
-
-  {#      <a class="news-card" href="javascript:void(0)" aria-label="">#}
-  {#        <div class="image">#}
-  {#          <img src="{{ root }}assets/img/content/news-image-2.jpeg">#}
-  {#        </div>#}
-  {#        <div class="news-card-content">#}
-  {#          <div class="category btn-link">Arts &amp; Sciences</div>#}
-  {#          <h4 class="underline isolated">UCSC to bring art/science LASER series downtown for special evening#}
-  {#            at Rio Theater</h4>#}
-
-  {#        </div>#}
-  {#      </a>#}
-
-  {#      <a class="news-card" href="javascript:void(0)" aria-label="">#}
-  {#        <div class="image">#}
-  {#          <img src="{{ root }}assets/img/content/news-image-3.jpeg">#}
-  {#        </div>#}
-  {#        <div class="news-card-content">#}
-  {#          <div class="category btn-link">Humanities</div>#}
-  {#          <h4 class="underline isolated">Borderbus: A community conversation about migration, art, and social#}
-  {#            justice</h4>#}
-  {#        </div>#}
-  {#      </a>#}
-  {#    </div>#}
-  {#  </div>#}
+  {% if relatedcontentgrid is not empty %}
+    <section class="heading">
+      <h2 class="underline">{{ 'Related News'|trans }}</h2>
+    </section>
+    <div class="grid-container large">
+      {{ relatedcontentgrid }}
+    </div>
+  {% endif %}
 </div>

@@ -65,7 +65,7 @@
         {% for tab_info in field__tab_hori_array %}
           <div class="tabs-panel" id="panel{{ loop.index }}">
             <h3>{{ tab_info.title|render|striptags }}</h3>
-            {{ tab_info.body|raw }}
+            {{ tab_info.body }}
           </div>
         {% endfor %}
       </div>
