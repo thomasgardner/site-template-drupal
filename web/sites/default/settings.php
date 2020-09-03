@@ -145,4 +145,4 @@ if (isset($_GET['force-subsite'])) {
 /**
  * Uncomment this string for all subsites.
  */
-//$settings['is_subsite'] = TRUE;
+$settings['is_subsite'] = TRUE;
