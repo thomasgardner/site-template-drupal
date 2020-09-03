@@ -223,5 +223,17 @@
       });
     }
   };
+  /**
+   * Ready Function
+   */
+  $(document).ready(function () {
+    /** Archive Form
+     *
+     * @type {*|jQuery|HTMLElement}
+     */
+    var $ArchiveForm = $('#views-exposed-form-teaser-archive-news-archive-page');
+    var labelValue = $ArchiveForm.find('.form-item-field-categories-target-id label').text();
+    $ArchiveForm.find("a.filter-control").prepend(labelValue);
+  });
 
 })(jQuery, Drupal, drupalSettings);

@@ -54,3 +54,21 @@ Removed underline
     margin: 0 -30px;
   }
 }
+
+
+/**
+Archive Form
+ */
+#views-exposed-form-teaser-archive-news-archive-page{
+  .form-type-select{
+    label{
+      display: none;
+    }
+    .filter-box{
+      top: 0;
+    }
+  }
+  .form-actions{
+    display: none;
+  }
+}
