@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fe372f86a3759e1b91b0e59788f3074c",
+    "content-hash": "46290c9cac03f89a0cc1914d1d0bc20b",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -11328,6 +11328,35 @@
             },
             "type": "drupal-custom-module",
             "homepage": "https://www.kwallcompany.com",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "kwall/kwall_share_bar",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "web/modules/custom/kwall_share_bar",
+                "reference": "6608d053492d0b482c30381009a0bdb5eaded7e6"
+            },
+            "type": "drupal-custom-module",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Ruslan Piskarov",
+                    "email": "ruslan.piskarev@kwallcompany.com",
+                    "role": "Kwall Developer",
+                    "homepage": "https://www.kwallcompany.com"
+                }
+            ],
+            "description": "Provides a Share block on your site.",
+            "homepage": "https://www.kwallcompany.com",
+            "keywords": [
+                "Drupal"
+            ],
             "transport-options": {
                 "relative": true
             }

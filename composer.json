@@ -430,6 +430,10 @@
         {
             "type": "path",
             "url": "web/modules/custom/custom_module"
+        },
+        {
+            "type": "path",
+            "url": "web/modules/custom/kwall_share_bar"
         }
     ],
     "require": {
@@ -573,6 +577,7 @@
         "jquery.textcounter": "^0.8.0",
         "jquery.timepicker": "^1.11.14",
         "kwall/custom_module": "*",
+        "kwall/kwall_share_bar": "*",
         "matchHeight": "^0.7.2",
         "metafizzy/isotope": "^3.0.6",
         "npm-asset/fontawesome-iconpicker": "^3.2",
