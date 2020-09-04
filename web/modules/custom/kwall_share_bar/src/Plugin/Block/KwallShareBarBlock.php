@@ -32,7 +32,7 @@ class KwallShareBarBlock extends BlockBase {
         'facebook' => 'facebook',
         'linkedin' => 'linkedin',
         'reddit' => 'reddit',
-        'email' => 'email',
+        'email' => '0',
       ],
       'use_module_css' => 1,
     ];

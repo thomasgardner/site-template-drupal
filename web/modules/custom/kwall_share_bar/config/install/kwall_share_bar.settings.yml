@@ -9,5 +9,5 @@ providers:
   facebook: facebook
   twitter: twitter
   reddit: reddit
-  linkedin: 0
-  email: email
+  linkedin: linkedin
+  email: 0

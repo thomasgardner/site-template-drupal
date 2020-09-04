@@ -111,7 +111,9 @@
           </div>
           <h5>{{ "Share this story:"|t }}</h5>
           {# {{>social-sharing type='top && right'}} #}
-          {{ drupal_block('kwall_share_bar_block', {'use_module_css': false}) }}
+          <div class="social-sharing top right">
+            {{ drupal_block('kwall_share_bar_block', {'use_module_css': false}) }}
+          </div>
           <a class="button primary" href="{{ content.field_author_link[0]['#url'] }}">
             <i class="fa fa-soundcloud fa-1x"></i> {{ "Listen on Soundcloud"|t }}
           </a>
@@ -143,13 +145,17 @@
       </div>
     {% endif %}
     {{ content.body }}
+
     {# {{>social-sharing type='bottom'}} #}
+    <div class="social-sharing bottom">
+      {{ drupal_block('kwall_share_bar_block', {'use_module_css': false}) }}
+    </div>
   </div>
 
 
   {% if relatedcontentgrid is not empty %}
     <section class="heading">
-      <h2 class="underline">Related Podcasts</h2>
+      <h2 class="underline">{{ "Related Podcasts"|t }}</h2>
     </section>
     <div class="grid-container large">
       {{ relatedcontentgrid }}
