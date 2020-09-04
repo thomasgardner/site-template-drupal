@@ -11,3 +11,5 @@ providers:
   reddit: reddit
   linkedin: 0
   email: email
+_core:
+  default_config_hash: cEPLjyAnKy_91o90dWaqEgD4PwA9csvdnT0CdeAB66U

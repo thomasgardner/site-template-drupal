@@ -23,8 +23,9 @@
             </div>
             <div class="profile-date">{{ node.changedtime|date("F j, Y") }}</div>
           </div>
-          <h5>Share this story:</h5>
-          {#          {{>social-sharing type='top && right'}}#}
+          <h5>{{ "Share this story"|t }}:</h5>
+          {# {{>social-sharing type='top && right'}} #}
+          {{ drupal_block('kwall_share_bar_block', {'use_module_css': false}) }}
         </div>
       </div>
     </div>
