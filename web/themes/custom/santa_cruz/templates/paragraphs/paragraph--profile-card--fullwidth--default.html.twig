@@ -8,13 +8,12 @@
   'paragraph--id--' ~ paragraph.id()|clean_id,
   view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_id,
   not paragraph.isPublished() ? 'paragraph--unpublished',
-  'profile-w-media left'
+  'profile-w-media ' ~ field__media_position_class,
 ] %}
 
 {% block paragraph %}
   <section{{ attributes.addClass(classes) }} aria-label="content row">
     {% block content %}
-
 
 
       <div class="grid-container large">
