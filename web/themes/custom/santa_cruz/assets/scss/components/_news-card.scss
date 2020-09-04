@@ -124,6 +124,8 @@
     max-width: none;
     margin-top: 1.5rem;
 
+    @include xy-cell(12);
+
     @include breakpoint(large) {
       @include xy-cell(6);
     }
