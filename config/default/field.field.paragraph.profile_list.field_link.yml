@@ -11,13 +11,13 @@ id: paragraph.profile_list.field_link
 field_name: field_link
 entity_type: paragraph
 bundle: profile_list
-label: 'Read More Link'
+label: 'CTA Button'
 description: ''
 required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-  link_type: 1
+  link_type: 17
   title: 2
 field_type: link
