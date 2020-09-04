@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.gallery.field_node_ref
+    - field.field.paragraph.gallery.field_title
     - paragraphs.paragraphs_type.gallery
   module:
     - fences
@@ -13,7 +14,7 @@ bundle: gallery
 mode: default
 content:
   field_node_ref:
-    weight: 0
+    weight: 1
     label: hidden
     settings:
       view_mode: teaser
@@ -27,5 +28,20 @@ content:
         fences_label_tag: none
         fences_label_classes: ''
     type: entity_reference_entity_view
+    region: content
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: string
     region: content
 hidden: {  }
