@@ -3,7 +3,8 @@ langcode: en
 status: true
 dependencies: {  }
 id: gridder_item
-label: 'Gridder Item'
+label: 'Zzz - Gridder Item'
 icon_uuid: null
+icon_default: null
 description: ''
 behavior_plugins: {  }

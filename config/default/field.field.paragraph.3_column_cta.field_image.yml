@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_image
-    - media.type.column_cta_image
     - paragraphs.paragraphs_type.3_column_cta
 id: paragraph.3_column_cta.field_image
 field_name: field_image
@@ -19,10 +18,9 @@ default_value_callback: ''
 settings:
   handler: 'default:media'
   handler_settings:
-    target_bundles:
-      column_cta_image: column_cta_image
+    target_bundles: {  }
     sort:
       field: _none
     auto_create: false
-    auto_create_bundle: column_cta_image
+    auto_create_bundle: null
 field_type: entity_reference

@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_image
-    - media.type.inline_media
     - paragraphs.paragraphs_type.adjustable_media_and_content
 id: paragraph.adjustable_media_and_content.field_image
 field_name: field_image
@@ -19,8 +18,7 @@ default_value_callback: ''
 settings:
   handler: 'default:media'
   handler_settings:
-    target_bundles:
-      inline_media: inline_media
+    target_bundles: {  }
     sort:
       field: _none
     auto_create: false

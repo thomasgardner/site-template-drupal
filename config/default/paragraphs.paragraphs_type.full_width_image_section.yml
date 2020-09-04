@@ -3,7 +3,8 @@ langcode: en
 status: true
 dependencies: {  }
 id: full_width_image_section
-label: 'Full-Width Image Section'
+label: 'Zzz - Full-Width Image Section'
 icon_uuid: null
+icon_default: null
 description: ''
 behavior_plugins: {  }

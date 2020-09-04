@@ -3,7 +3,8 @@ langcode: en
 status: true
 dependencies: {  }
 id: adjustable_media_and_content
-label: 'Adjustable Media and Content'
+label: 'Zzz - Adjustable Media and Content'
 icon_uuid: null
+icon_default: null
 description: ''
 behavior_plugins: {  }
