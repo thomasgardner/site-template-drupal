@@ -44,7 +44,8 @@
   'paragraph--id--' ~ paragraph.id()|clean_id,
   view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_id,
   not paragraph.isPublished() ? 'paragraph--unpublished',
-  'policy-card-list','list'
+  'policy-card-list',
+  'list'
 ] %}
 
 {% block paragraph %}

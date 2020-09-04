@@ -8,6 +8,7 @@ dependencies:
     - field.field.paragraph.profile_card__fullwidth.field_link
     - field.field.paragraph.profile_card__fullwidth.field_media_position
     - field.field.paragraph.profile_card__fullwidth.field_pre_title
+    - field.field.paragraph.profile_card__fullwidth.field_read_more_style
     - field.field.paragraph.profile_card__fullwidth.field_show_background_style
     - field.field.paragraph.profile_card__fullwidth.field_title
     - paragraphs.paragraphs_type.profile_card__fullwidth
@@ -21,6 +22,7 @@ third_party_settings:
     group_display_options:
       children:
         - field_media_position
+        - field_read_more_style
         - field_show_background_style
       parent_name: ''
       weight: 6
@@ -74,8 +76,14 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_show_background_style:
+  field_read_more_style:
     weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_show_background_style:
+    weight: 6
     settings:
       display_label: true
     third_party_settings: {  }

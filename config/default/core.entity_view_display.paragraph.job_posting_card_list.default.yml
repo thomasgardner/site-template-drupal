@@ -31,7 +31,7 @@ content:
     weight: 1
     label: hidden
     settings:
-      view_mode: grid_card
+      view_mode: grid_card__minimal
       link: false
     third_party_settings:
       fences:

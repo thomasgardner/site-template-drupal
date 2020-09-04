@@ -6,6 +6,7 @@
 (function ($, Drupal, drupalSettings) {
 
   'use strict';
+
   /**
    * Use for short things.
    *
@@ -46,6 +47,7 @@
 
   /**
    * Profile Owl.
+   *
    * @type {{attach: Drupal.behaviors.profileOwl.attach}}
    */
   Drupal.behaviors.profileOwl = {
@@ -118,6 +120,7 @@
 
   /**
    * "Job Posting Card" Carousel.
+   *
    * @type {{attach: Drupal.behaviors.jobPostingCardOwl.attach}}
    */
   Drupal.behaviors.jobPostingCardOwl = {
@@ -131,38 +134,39 @@
           dots: false,
           items: 3,
           loop: true,
-          responsive:{
-            0:{
-              items:1,
+          responsive: {
+            0: {
+              items: 1
             },
-            640:{
-              items:2,
+            640: {
+              items: 2
             },
-            1024:{
-              items:3,
-              autoWidth: false,
-            },
+            1024: {
+              items: 3,
+              autoWidth: false
+            }
           }
         });
       });
 
-      $context.find('.job-posting-card-list.list.owl-carousel').once('jobPostingCardOwl').each(function () {
+      $context.find('.component-wrapper .job-posting-card-list.list.owl-carousel').once('jobPostingCardMinimalOwl').each(function () {
         $(this).owlCarousel({
           margin: 30,
           nav: true,
           dots: false,
           items: 3,
           loop: true,
-          responsive:{
-            0:{
-              items:1,
+          responsive: {
+            0: {
+              items: 1
             },
-            640:{
-              items:1,
+            640: {
+              items: 2
             },
-            1024:{
-              items:1,
-            },
+            1024: {
+              items: 3,
+              autoWidth: false
+            }
           }
         });
       });
@@ -223,18 +227,19 @@
       });
     }
   };
+
   /**
-   * Ready Function
+   * Ready Function.
    */
   $(document).ready(function () {
-    /** Archive Form
+    /** Archive Form.
      *
      * @type {*|jQuery|HTMLElement}
      */
-    var $ArchiveForm = $('#views-exposed-form-teaser-archive-news-archive-page');
-    var labelValue = $ArchiveForm.find('.form-item-field-categories-target-id label').text();
-    $ArchiveForm.find("a.filter-control").prepend(labelValue);
+    var $archiveForm = $('#views-exposed-form-teaser-archive-news-archive-page'),
+      labelValue = $archiveForm.find('.form-item-field-categories-target-id label').text();
 
+    $archiveForm.find("a.filter-control").prepend(labelValue);
     $('.view-teaser-archive').find('.news-card-list .news-card:first-child, .news-card-list .news-card:nth-child(2)').wrapAll( "<div class='news-card-list split-column'></div>" );
   });
 

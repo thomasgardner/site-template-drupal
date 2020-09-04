@@ -11754,6 +11754,37 @@
         }
     },
     {
+        "name": "kwall/kwall_share_bar",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "dist": {
+            "type": "path",
+            "url": "web/modules/custom/kwall_share_bar",
+            "reference": "6608d053492d0b482c30381009a0bdb5eaded7e6"
+        },
+        "type": "drupal-custom-module",
+        "installation-source": "dist",
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "Ruslan Piskarov",
+                "email": "ruslan.piskarev@kwallcompany.com",
+                "role": "Kwall Developer",
+                "homepage": "https://www.kwallcompany.com"
+            }
+        ],
+        "description": "Provides a Share block on your site.",
+        "homepage": "https://www.kwallcompany.com",
+        "keywords": [
+            "Drupal"
+        ],
+        "transport-options": {
+            "relative": true
+        }
+    },
+    {
         "name": "laminas/laminas-diactoros",
         "version": "1.8.7p2",
         "version_normalized": "1.8.7.0-patch2",
