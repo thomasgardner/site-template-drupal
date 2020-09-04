@@ -8,10 +8,10 @@
     <div class="specs">
       {% if content.field_date|field_value is not empty
         or content.field_date_closing|field_value is not empty %}
-        <p class="date">
+        <div class="date">
           {{ 'Listed'|t }}: {{ content.field_date[0]['#text'] }}<br/>
           {{ 'Apply by'|t }}: {{ content.field_date_closing[0]['#text'] }}
-        </p>
+        </div>
       {% endif %}
       {% if content.field_job_number|field_value is not empty %}
         <div class="tags">
