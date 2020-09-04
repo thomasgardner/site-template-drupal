@@ -56,4 +56,10 @@ function santa_cruz_preprocess_paragraph(&$variables)
     $node = \Drupal::request()->attributes->get('node');
     $variables['node_type'] = $node->getType();
   }
+  if($paragraph->getType() == "gallery"){
+    $node = \Drupal::request()->attributes->get('node');
+    if($node->hasField('field_lead_formatted')){
+      $variables['gallery_description'] = $node->get('field_lead_formatted')->value;
+    }
+  }
 }
