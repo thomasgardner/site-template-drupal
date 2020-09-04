@@ -149,7 +149,7 @@
         });
       });
 
-      $context.find('.job-posting-card-list.list.owl-carousel').once('jobPostingCardMinimalOwl').each(function () {
+      $context.find('.component-wrapper .job-posting-card-list.list.owl-carousel').once('jobPostingCardMinimalOwl').each(function () {
         $(this).owlCarousel({
           margin: 30,
           nav: true,
