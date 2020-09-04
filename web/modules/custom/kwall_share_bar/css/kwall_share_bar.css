@@ -19,7 +19,8 @@
 
 .kwall-share-bar .email,
 .kwall-share-bar .twitter,
-.kwall-share-bar .facebook {
+.kwall-share-bar .facebook,
+.kwall-share-bar .reddit {
   display: inline-block;
   width: 26px;
   height: 26px;
@@ -32,14 +33,16 @@
 
 .kwall-share-bar .email:hover,
 .kwall-share-bar .twitter:hover,
-.kwall-share-bar .facebook:hover {
+.kwall-share-bar .facebook:hover,
+.kwall-share-bar .reddit:hover {
   -webkit-transform: translateY(-4px);
           transform: translateY(-4px);
 }
 
 .kwall-share-bar .email i:before,
 .kwall-share-bar .twitter i:before,
-.kwall-share-bar .facebook i:before {
+.kwall-share-bar .facebook i:before,
+.kwall-share-bar .reddit i:before {
   font-size: .8rem;
 }
 
@@ -53,6 +56,10 @@
 
 .kwall-share-bar .facebook {
   background-color: #3b5998;
+}
+
+.kwall-share-bar .reddit {
+  background-color: #003c6c;
 }
 
 /*# sourceMappingURL=kwall_share_bar.css.map */

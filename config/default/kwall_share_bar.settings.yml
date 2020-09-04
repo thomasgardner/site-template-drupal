@@ -11,3 +11,5 @@ providers:
   reddit: reddit
   linkedin: linkedin
   email: 0
+_core:
+  default_config_hash: EgFr27_QrWnWSV2psdGODzZDuc5Y6oqC5eUxeCBtxoo

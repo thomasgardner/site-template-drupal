@@ -23,8 +23,11 @@
             </div>
             <div class="profile-date">{{ node.changedtime|date("F j, Y") }}</div>
           </div>
-          <h5>Share this story:</h5>
-          {#          {{>social-sharing type='top && right'}}#}
+          <h5>{{ "Share this story"|t }}:</h5>
+          {# {{>social-sharing type='top && right'}} #}
+          <div class="social-sharing top right">
+            {{ drupal_block('kwall_share_bar_block', {'use_module_css': false}) }}
+          </div>
         </div>
       </div>
     </div>
@@ -57,12 +60,17 @@
         {{ content.body }}
       </div>
     </div>
-    {#    {{>social-sharing type='bottom'}}#}
+
+    {# {{>social-sharing type='bottom'}} #}
+    <div class="social-sharing bottom">
+      {{ drupal_block('kwall_share_bar_block', {'use_module_css': false}) }}
+    </div>
+
   </div>
 
   {% if relatedcontentgrid is not empty %}
     <section class="heading">
-      <h2 class="underline">{{ 'Related News'|trans }}</h2>
+      <h2 class="underline">{{ 'Related News'|t }}</h2>
     </section>
     <div class="grid-container large">
       {{ relatedcontentgrid }}

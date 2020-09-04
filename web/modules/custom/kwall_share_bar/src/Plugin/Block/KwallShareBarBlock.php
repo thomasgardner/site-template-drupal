@@ -28,9 +28,11 @@ class KwallShareBarBlock extends BlockBase {
     return [
       'label_display' => FALSE,
       'providers' => [
-        'facebook' => 'facebook',
         'twitter' => 'twitter',
-        'email' => 'email',
+        'facebook' => 'facebook',
+        'linkedin' => 'linkedin',
+        'reddit' => 'reddit',
+        'email' => '0',
       ],
       'use_module_css' => 1,
     ];

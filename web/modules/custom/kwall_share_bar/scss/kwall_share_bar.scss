@@ -16,7 +16,8 @@
 
   .email,
   .twitter,
-  .facebook {
+  .facebook,
+  .reddit {
     display: inline-block;
     width: 26px;
     height: 26px;
@@ -46,5 +47,9 @@
 
   .facebook {
     background-color: rgb(59, 89, 152);
+  }
+
+  .reddit {
+    background-color: #003c6c;
   }
 }
