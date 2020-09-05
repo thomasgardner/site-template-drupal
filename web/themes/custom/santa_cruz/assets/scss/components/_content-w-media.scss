@@ -75,6 +75,7 @@
       @include flex-order(2);
       @include mui-animation(fade, slide($direction: left, $amount: 10%));
       margin-left: 0;
+      width: calc(52.7% - 2.5rem);
     }
 
     &.haltered {
@@ -125,6 +126,7 @@
       @include flex-order(2);
       background: white;
       margin-left: 0;
+      width: calc(52.7% - 2.5rem);
     }
 
     .media {
