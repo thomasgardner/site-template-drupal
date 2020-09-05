@@ -58,6 +58,14 @@
     <div class="grid-x grid-margin-x">
       <div class="cell">
         {{ content.body }}
+        <p>Topics:
+          {% for key, item in content.field_categories if key|first != '#' %}
+            {% if key matches '/^\\d+$/' %}
+              <a class="btn-link"
+                 href="{{ content.field_categories.key['#url'] }}"> {{ content.field_categories.0['#title'] }}</a>
+            {% endif %}
+          {% endfor %}
+        </p>
       </div>
     </div>
 
