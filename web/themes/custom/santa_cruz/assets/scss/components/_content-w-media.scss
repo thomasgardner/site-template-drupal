@@ -13,6 +13,9 @@
 
   .inner {
     @include xy-grid;
+    @media screen and (max-width: 1023px){
+      margin: 0 30px;
+    }
   }
 
   .content {
@@ -45,6 +48,9 @@
 
     @include breakpoint(xlarge) {
       @include xy-cell(6);
+    }
+    img{
+      width: 100%;
     }
 
   }
