@@ -52,8 +52,8 @@
       <section class="gallery-description" id="gallery-description">
         <div class="grid-container large">
           <h1>{{ content.field_title.0["#context"].value }}</h1>
-          {% if gallery_description|length %}
-            <p>{{ gallery_description|striptags }}</p>
+          {% if content.field_node_ref.0["#node"].field_caption_formatted.0.value|length %}
+            <p>{{ content.field_node_ref.0["#node"].field_caption_formatted.0.value|striptags }}</p>
           {% endif %}
         </div>
       </section>
