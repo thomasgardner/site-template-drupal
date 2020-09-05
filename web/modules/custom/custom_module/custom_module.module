@@ -419,6 +419,57 @@ function custom_module_form_views_exposed_form_alter(&$form, FormStateInterface 
         ->getAliasByPath('/node/87');
       $form['#action'] = $currPathAlias;
     }
+
+    /**
+     * year filter
+     */
+    if (isset($form['#id']) && $form['#id'] == 'views-exposed-form-teaser-archive-news-archive-page') {
+
+      $options = &drupal_static(__FUNCTION__);
+      if (is_null($options)) {
+        $cid = 'custom_module:article:year';
+        $data = \Drupal::cache()->get($cid);
+        if (!$data) {
+          $options = [];
+          $options['all'] = new \Drupal\Core\StringTranslation\TranslatableMarkup('- All -');
+          $query = \Drupal::entityQuery('node');
+          $query->condition('type', 'article')
+            ->condition('status', 1)
+            ->sort('field_date', 'ASC');
+          $result = $query->execute();
+          if ($result) {
+            $nodes = \Drupal\node\Entity\Node::loadMultiple($result);
+            foreach ($nodes as $node) {
+              $date = $node->field_date->value;
+              if ($date) {
+                $date = new \Drupal\Core\Datetime\DrupalDateTime($date, new DateTimeZone('UTC'));
+                $year = $date->format('Y');
+                if (!isset($options[$year])) {
+                  $options[$year] = $year;
+                }
+              }
+            }
+          }
+
+          $cache_tags = ['node:article:year'];
+          \Drupal::cache()->set($cid, $options, \Drupal\Core\Cache\CacheBackendInterface::CACHE_PERMANENT, $cache_tags);
+        }
+        else {
+          $options = $data->data;
+        }
+
+      }
+
+      $form['year'] = [
+        '#title' => new \Drupal\Core\StringTranslation\TranslatableMarkup('Year'),
+        '#type' => 'select',
+        '#options' => $options,
+        '#size' => NULL,
+        '#default_value' => end($options),
+      ];
+
+    }
+
   }
 }
 
