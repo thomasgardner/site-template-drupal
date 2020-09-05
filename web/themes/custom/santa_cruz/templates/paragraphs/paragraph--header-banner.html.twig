@@ -152,11 +152,7 @@
                    aria-controls="social-sharing"><i class="fas fa-share-alt"></i> Share</a>
                 <div class="social-sharing hero-docked" id="social-sharing" data-toggler="9fdrup-toggler"
                      data-animate="fade-in fade-out" aria-expanded="false">
-                  <a class="fab fa-twitter" href=""></a>
-                  <a class="fab fa-facebook" href=""></a>
-                  <a class="fab fa-youtube" href=""></a>
-                  <a class="fab fa-linkedin" href=""></a>
-                  <a class="fab fa-reddit" href=""></a>
+                  {{ drupal_block('kwall_share_bar_block', {'use_module_css': false}) }}
                 </div>
               </div>
             {% endif %}
