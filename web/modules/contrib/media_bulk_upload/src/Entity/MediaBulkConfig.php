@@ -30,6 +30,15 @@ use Drupal\Core\Config\Entity\ConfigEntityBase;
  *     "label" = "label",
  *     "uuid" = "uuid"
  *   },
+ *   config_export = {
+ *     "id",
+ *     "label",
+ *     "uuid",
+ *     "media_types",
+ *     "show_alt",
+ *     "show_title",
+ *     "form_mode",
+ *   },
  *   links = {
  *     "canonical" = "/admin/config/media/media-bulk-config/{media_bulk_config}",
  *     "add-form" = "/admin/config/media/media-bulk-config/add",

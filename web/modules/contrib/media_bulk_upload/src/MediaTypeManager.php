@@ -138,7 +138,8 @@ class MediaTypeManager implements MediaTypeManagerInterface {
    */
   public function getTargetFieldMaxSize(MediaTypeInterface $mediaType) {
     $targetFieldSettings = $this->getTargetFieldSettings($mediaType);
-    return $targetFieldSettings['max_filesize'];
+    $filesize = isset($targetFieldSettings['max_filesize']) ? $targetFieldSettings['max_filesize'] : '';
+    return $filesize;
   }
 
   /**

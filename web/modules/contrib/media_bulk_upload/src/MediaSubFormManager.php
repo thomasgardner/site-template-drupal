@@ -4,14 +4,17 @@ namespace Drupal\media_bulk_upload;
 
 use Drupal\Component\Render\PlainTextOutput;
 use Drupal\Component\Utility\Bytes;
+use Drupal\Component\Utility\Environment;
 use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
+use Drupal\Core\File\FileSystemInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Render\Element;
 use Drupal\media\MediaTypeInterface;
 use Drupal\media_bulk_upload\Entity\MediaBulkConfigInterface;
 use Drupal\Core\Utility\Token;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use function in_array;
 
 /**
  * Class MediaSubFormManager.
@@ -63,6 +66,13 @@ class MediaSubFormManager implements ContainerInjectionInterface, MediaSubFormMa
   protected $token;
 
   /**
+   * File system interface.
+   *
+   * @var \Drupal\Core\File\FileSystemInterface
+   */
+  protected $fileSystem;
+
+  /**
    * BulkMediaUploadForm constructor.
    *
    * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entityTypeManager
@@ -75,13 +85,14 @@ class MediaSubFormManager implements ContainerInjectionInterface, MediaSubFormMa
    * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
    * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
    */
-  public function __construct(EntityTypeManagerInterface $entityTypeManager, MediaTypeManager $mediaTypeManager, Token $token) {
+  public function __construct(EntityTypeManagerInterface $entityTypeManager, MediaTypeManager $mediaTypeManager, Token $token, FileSystemInterface $fileSystem) {
     $this->mediaTypeManager = $mediaTypeManager;
     $this->mediaTypeStorage = $entityTypeManager->getStorage('media_type');
     $this->mediaStorage = $entityTypeManager->getStorage('media');
     $this->entityFormDisplayStorage = $entityTypeManager->getStorage('entity_form_display');
     $this->token = $token;
-    $this->defaultMaxFileSize = $this->formatSize(file_upload_max_size());
+    $this->defaultMaxFileSize = $this->formatSize(Environment::getUploadMaxSize());
+    $this->fileSystem = $fileSystem;
   }
 
   /**
@@ -124,7 +135,8 @@ class MediaSubFormManager implements ContainerInjectionInterface, MediaSubFormMa
     return new static(
       $container->get('entity_type.manager'),
       $container->get('media_bulk_upload.media_type_manager'),
-      $container->get('token')
+      $container->get('token'),
+      $container->get('file_system')
     );
   }
 
@@ -136,7 +148,7 @@ class MediaSubFormManager implements ContainerInjectionInterface, MediaSubFormMa
     $fileDirectory = trim($targetFieldSettings['file_directory'], '/');
     $fileDirectory = PlainTextOutput::renderFromHtml($this->token->replace($fileDirectory));
     $targetDirectory = $targetFieldSettings['uri_scheme'] . '://' . $fileDirectory;
-    file_prepare_directory($targetDirectory, FILE_CREATE_DIRECTORY);
+    $this->fileSystem->prepareDirectory($targetDirectory, FileSystemInterface::CREATE_DIRECTORY);
     return $targetDirectory;
   }
 
@@ -153,27 +165,17 @@ class MediaSubFormManager implements ContainerInjectionInterface, MediaSubFormMa
     /** @var \Drupal\media\MediaInterface $dummyMedia */
     $dummyMedia = $this->mediaStorage->create(['bundle' => $mediaType->id()]);
     $mediaFormDisplay = $this->getMediaFormDisplay($mediaBulkConfig, $mediaType);
-    $mediaFormDisplay->buildForm($dummyMedia, $form['fields']['shared'], $form_state);
-
-    $storage = $form_state->getStorage();
-    $field_storage = $storage['field_storage']['#parents'];
-    $storage['field_storage']['#parents'] = [
-      'fields' => [
-        'shared' => $field_storage,
-      ],
-    ];
-    $form_state->setStorage($storage);
+    $mediaFormDisplay->buildForm($dummyMedia, $form, $form_state);
 
     $targetFieldName = $this->mediaTypeManager->getTargetFieldName($mediaType);
-    unset($form['fields']['shared'][$targetFieldName]);
-    unset($form['fields']['shared']['#parents']);
+    unset($form[$targetFieldName]);
 
     $fields = $this->getFields($mediaBulkConfig);
     if (empty($fields)) {
       return $this;
     }
 
-    $this->configureSharedFields($form['fields']['shared'], $fields);
+    $this->configureSharedFields($form, $fields);
 
     return $this;
   }
@@ -221,16 +223,10 @@ class MediaSubFormManager implements ContainerInjectionInterface, MediaSubFormMa
   public function configureSharedFields(array &$elements, array $allowedFields) {
     $children = Element::children($elements);
     foreach ($children as $child) {
-      if (!\in_array($child, $allowedFields, TRUE)) {
+      if (!in_array($child, $allowedFields, TRUE)) {
         unset($elements[$child]);
         continue;
       }
-      unset($elements[$child]['#parents']);
-      $widget_parents = array_merge([
-        'fields',
-        'shared',
-      ], $elements[$child]['widget']['#parents']);
-      $elements[$child]['widget']['#parents'] = $widget_parents;
 
       $this->forceFieldsAsOptional($elements[$child]);
     }

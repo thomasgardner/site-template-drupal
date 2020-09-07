@@ -2,15 +2,17 @@
 
 namespace Drupal\media_bulk_upload\Form;
 
+use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
 use Drupal\Core\Entity\EntityDisplayRepositoryInterface;
 use Drupal\Core\Entity\EntityForm;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Messenger\MessengerInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Class MediaBulkConfigForm.
  */
-class MediaBulkConfigForm extends EntityForm {
+class MediaBulkConfigForm extends EntityForm implements ContainerInjectionInterface {
 
   /**
    * Entity Display Repository.
@@ -24,16 +26,21 @@ class MediaBulkConfigForm extends EntityForm {
    *
    * @param \Drupal\Core\Entity\EntityDisplayRepositoryInterface $entityDisplayRepository
    *   Entity Display repository.
+   * @param \Drupal\Core\Messenger\MessengerInterface $messenger
+   *   The messenger.
    */
-  public function __construct(EntityDisplayRepositoryInterface $entityDisplayRepository) {
+  public function __construct(EntityDisplayRepositoryInterface $entityDisplayRepository, MessengerInterface $messenger) {
     $this->entityDisplayRepository = $entityDisplayRepository;
+    $this->messenger = $messenger;
   }
 
   /**
    * {@inheritdoc}
    */
   public static function create(ContainerInterface $container) {
-    return new static($container->get('entity_display.repository')
+    return new static(
+      $container->get('entity_display.repository'),
+      $container->get('messenger')
     );
   }
 
@@ -68,10 +75,10 @@ class MediaBulkConfigForm extends EntityForm {
     $form['media_types'] = [
       '#type' => 'checkboxes',
       '#title' => $this->t('Media Types'),
-      '#description' => $this->t('Choose the media types that will be 
-        used to create new media entities based on matching extensions. Please be 
-        aware that if file extensions overlap between the media types that are 
-        chosen, that the media entity will be assigned automatically to one of 
+      '#description' => $this->t('Choose the media types that will be
+        used to create new media entities based on matching extensions. Please be
+        aware that if file extensions overlap between the media types that are
+        chosen, that the media entity will be assigned automatically to one of
         these types.'),
       '#options' => $this->getMediaTypeOptions(),
       '#default_value' => isset($media_types) ? $media_types : [],
@@ -82,8 +89,8 @@ class MediaBulkConfigForm extends EntityForm {
     $form['form_mode'] = [
       '#type' => 'select',
       '#title' => $this->t('Form Mode'),
-      '#description' => $this->t('Based on the form mode the upload form 
-        can be enriched with fields that are available, improving the speed and 
+      '#description' => $this->t('Based on the form mode the upload form
+        can be enriched with fields that are available, improving the speed and
         usability to add (meta)data to your media entities.'),
       '#options' => $this->entityDisplayRepository->getFormModeOptions('media'),
       "#empty_option" => t('- None -'),
@@ -125,8 +132,7 @@ class MediaBulkConfigForm extends EntityForm {
       ]);
     }
 
-    drupal_set_message($save_message);
-
+    $this->messenger->addMessage($save_message);
     $form_state->setRedirectUrl($media_bulk_config->toUrl('collection'));
   }
 
