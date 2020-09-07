@@ -1,10 +1,5 @@
 <?php
 
-/**
- * @file
- * Contains \modules\sticky_sharrre_bar\Plugin\Block\StickySharrreBarBlock.
- */
-
 namespace Drupal\kwall_share_bar\Plugin\Block;
 
 use Drupal\Component\Utility\Html;
@@ -56,7 +51,6 @@ class KwallShareBarBlock extends BlockBase {
       '#options' => $config->get('providers_list'),
     ];
 
-
     $form['block_kwall_share_bar']['use_module_css'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Use the css of the module.'),
@@ -71,10 +65,6 @@ class KwallShareBarBlock extends BlockBase {
    * Overrides \Drupal\block\BlockBase::blockSubmit().
    *
    * {@inheritdoc}
-   */
-  /**
-   * @param array $form
-   * @param FormStateInterface $form_state
    */
   public function blockSubmit($form, FormStateInterface $form_state) {
     $values = $form_state->getValue('block_kwall_share_bar');

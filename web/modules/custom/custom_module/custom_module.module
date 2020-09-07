@@ -4,6 +4,9 @@
  * @file
  */
 
+use Drupal\Core\Cache\CacheBackendInterface;
+use Drupal\node\Entity\Node;
+use Drupal\Core\StringTranslation\TranslatableMarkup;
 use Drupal\block\Entity\Block;
 use Drupal\block_content\BlockContentInterface;
 use Drupal\Core\Access\AccessResult;
@@ -14,17 +17,13 @@ use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Link;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Site\Settings;
-use Drupal\Core\Url;
 use Drupal\media\Entity\Media;
 use Drupal\node\NodeInterface;
 use Drupal\paragraphs\Entity\Paragraph;
 use Drupal\taxonomy\Entity\Term;
-use Drupal\taxonomy\TermInterface;
 use Drupal\views\ViewExecutable;
-use Drupal\Core\Render\Markup;
 
 /**
  * Implements hook_help().
@@ -431,18 +430,18 @@ function custom_module_form_views_exposed_form_alter(&$form, FormStateInterface 
         $data = \Drupal::cache()->get($cid);
         if (!$data) {
           $options = [];
-          $options['all'] = new \Drupal\Core\StringTranslation\TranslatableMarkup('- All -');
+          $options['all'] = new TranslatableMarkup('- All -');
           $query = \Drupal::entityQuery('node');
           $query->condition('type', 'article')
             ->condition('status', 1)
             ->sort('field_date', 'ASC');
           $result = $query->execute();
           if ($result) {
-            $nodes = \Drupal\node\Entity\Node::loadMultiple($result);
+            $nodes = Node::loadMultiple($result);
             foreach ($nodes as $node) {
               $date = $node->field_date->value;
               if ($date) {
-                $date = new \Drupal\Core\Datetime\DrupalDateTime($date, new DateTimeZone('UTC'));
+                $date = new DrupalDateTime($date, new DateTimeZone('UTC'));
                 $year = $date->format('Y');
                 if (!isset($options[$year])) {
                   $options[$year] = $year;
@@ -452,7 +451,7 @@ function custom_module_form_views_exposed_form_alter(&$form, FormStateInterface 
           }
 
           $cache_tags = ['node:article:year'];
-          \Drupal::cache()->set($cid, $options, \Drupal\Core\Cache\CacheBackendInterface::CACHE_PERMANENT, $cache_tags);
+          \Drupal::cache()->set($cid, $options, CacheBackendInterface::CACHE_PERMANENT, $cache_tags);
         }
         else {
           $options = $data->data;
@@ -461,7 +460,7 @@ function custom_module_form_views_exposed_form_alter(&$form, FormStateInterface 
       }
 
       $form['year'] = [
-        '#title' => new \Drupal\Core\StringTranslation\TranslatableMarkup('Year'),
+        '#title' => new TranslatableMarkup('Year'),
         '#type' => 'select',
         '#options' => $options,
         '#size' => NULL,
@@ -549,6 +548,7 @@ function _cm_get_nodes_by_term($term_id) {
  * @param string $entity_bundle
  *
  * @return int|void
+ *
  * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
  * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
  */
