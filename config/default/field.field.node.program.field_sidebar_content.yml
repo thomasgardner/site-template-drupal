@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_sidebar_content
     - node.type.program
+    - paragraphs.paragraphs_type.sidebar_button
     - paragraphs.paragraphs_type.sidebar_content_block
   module:
     - entity_reference_revisions
@@ -23,6 +24,7 @@ settings:
   handler_settings:
     negate: 0
     target_bundles:
+      sidebar_button: sidebar_button
       sidebar_content_block: sidebar_content_block
     target_bundles_drag_drop:
       2_column_cta:
@@ -54,6 +56,9 @@ settings:
         enabled: false
       article_slideshow_item:
         weight: 100
+        enabled: false
+      banner_promo:
+        weight: 104
         enabled: false
       button_list:
         weight: 101
@@ -151,15 +156,6 @@ settings:
       header_banner:
         weight: 132
         enabled: false
-      hero_banner:
-        weight: 133
-        enabled: false
-      hero_slide:
-        weight: 134
-        enabled: false
-      hero_slideshow:
-        weight: 135
-        enabled: false
       historical_fact_card:
         weight: 136
         enabled: false
@@ -193,8 +189,8 @@ settings:
       major_card_list:
         weight: 146
         enabled: false
-      news_card_grid:
-        weight: 147
+      news_collection:
+        weight: 148
         enabled: false
       person_carousel:
         weight: 148
@@ -254,13 +250,19 @@ settings:
         weight: 166
         enabled: false
       sidebar_button:
+        enabled: true
         weight: 167
-        enabled: false
       sidebar_content_block:
         enabled: true
         weight: 168
       sidebar_content_block_department:
         weight: 169
+        enabled: false
+      single_feature_story_list:
+        weight: 171
+        enabled: false
+      single_feature_story_list_interi:
+        weight: 172
         enabled: false
       step:
         weight: 170
@@ -276,6 +278,15 @@ settings:
         enabled: false
       teaser_card_list:
         weight: 174
+        enabled: false
+      three_story_teaser:
+        weight: 178
+        enabled: false
+      two_banner_promo:
+        weight: 179
+        enabled: false
+      two_feature_story_list:
+        weight: 180
         enabled: false
       upcoming_events:
         weight: 175
