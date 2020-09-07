@@ -139,3 +139,4 @@ hidden:
   field_migration_url: true
   field_section_title: true
   langcode: true
+  search_api_excerpt: true

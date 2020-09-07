@@ -169,6 +169,9 @@ processor_settings:
       preprocess_query: -20
   language_with_fallback: {  }
   rendered_item: {  }
+  solr_date_range:
+    weights:
+      preprocess_index: 0
   tokenizer:
     all_fields: false
     fields:
@@ -208,9 +211,6 @@ processor_settings:
           location: !!float 0
           page: !!float 0
           person: !!float 0
-    weights:
-      preprocess_index: 0
-  solr_date_range:
     weights:
       preprocess_index: 0
 tracker_settings:

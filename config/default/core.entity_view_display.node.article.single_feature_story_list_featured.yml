@@ -106,4 +106,5 @@ hidden:
   field_topics: true
   langcode: true
   links: true
+  search_api_excerpt: true
   sharethis: true

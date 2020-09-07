@@ -122,4 +122,5 @@ hidden:
   field_teaser_image: true
   langcode: true
   links: true
+  search_api_excerpt: true
   sharethis: true
