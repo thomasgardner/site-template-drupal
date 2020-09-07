@@ -27,7 +27,7 @@
     <div class="profile-info">
       <h4 class="underline tighten">{{ content.field_title[0]['#context'].value }}</h4>
       <p>{{ content.field_subtitle[0]['#context'].value }}</p>
-      <p class="btn-link"><i class="fas fa-envelope"></i> {{ content.field_email[0]['#context'].value }}</p>
+      <p class="btn-link"> {{ content.field_email[0]['#context'].value }}</p>
     </div>
     {% if content.field_link|field_value is not empty %}
       </a>
