@@ -1,47 +1,54 @@
 /**
 Override hero scss
  */
-.paragraph--type--full-image, .paragraph--type--full-video{
+.paragraph--type--full-image, .paragraph--type--full-video {
   margin-bottom: 150px;
-  .hero-viewport{
+
+  .hero-viewport {
     position: relative;
-    .hero-caption{
+
+    .hero-caption {
       bottom: -170px;
     }
   }
 }
 
-.align-center{
+.align-center {
   text-align: center;
 }
-.align-left{
+
+.align-left {
   text-align: left;
 }
-.align-right{
+
+.align-right {
   text-align: right;
 }
 
-.image-style--original{
+.image-style--original {
   max-width: 100%;
 }
-.image-style--inline-media{
+
+.image-style--inline-media {
   max-width: 75%;
 }
-.image-style--inline-media-medium{
-max-width: 50%;
+
+.image-style--inline-media-medium {
+  max-width: 50%;
 }
-.image-style--inline-media-small{
+
+.image-style--inline-media-small {
   max-width: 25%;
 }
 
 /**
 Removed underline
  */
-.view-teaser-collection-grid{
-  .view-content.news-card-list{
-    .news-card-content{
-      .underline{
-        &:after{
+.view-teaser-collection-grid {
+  .view-content.news-card-list {
+    .news-card-content {
+      .underline {
+        &:after {
           display: none;
         }
       }
@@ -49,8 +56,8 @@ Removed underline
   }
 }
 
-.wave-pattern{
-  @media print, screen and (min-width: 40em){
+.wave-pattern {
+  @media print, screen and (min-width: 40em) {
     margin: 0 -30px;
   }
 }
@@ -59,40 +66,44 @@ Removed underline
 /**
 Archive Form
  */
-#views-exposed-form-teaser-archive-news-archive-page{
-  .form-type-select{
-    label{
+#views-exposed-form-teaser-archive-news-archive-page {
+  .form-type-select {
+    label {
       display: none;
     }
-    .filter-box{
+
+    .filter-box {
       top: 40px;
     }
   }
-  .form-actions{
+
+  .form-actions {
     display: none;
   }
 }
 
-.paragraph--type--profile-card-fullwidth{
+.paragraph--type--profile-card-fullwidth {
   margin: 0 -2rem;
 }
 
 /**
 Subsite
  */
-.subsite-header{
-  .large-padding-collapse{
+.subsite-header {
+  .large-padding-collapse {
     align-items: center;
   }
 }
 
-.padding-0{
+.padding-0 {
   padding: 0;
 }
-.margin-0{
+
+.margin-0 {
   margin: 0;
 }
-.paragraph--type--teaser-card-list{
+
+.paragraph--type--teaser-card-list {
   padding-top: 0;
 }
 
@@ -100,21 +111,42 @@ Subsite
 /**
 Image Gllery Social share
  */
-.gallery-featured-links{
-  .social-sharing{
-    a{
+.gallery-featured-links {
+  .social-sharing {
+    a {
       display: inline-block;
-      i{
+
+      i {
         color: #fff;
       }
-      &:hover{
-        i{
+
+      &:hover {
+        i {
           color: $secondary-yellow;
         }
       }
     }
-    &.hero-docked{
+
+    &.hero-docked {
       top: -79.2px;
+    }
+  }
+}
+
+.view-teaser-archive {
+  .news-card-list {
+    .news-card-content {
+      p {
+        display: none;
+      }
+    }
+
+    &.split-column {
+      .news-card-content {
+        p {
+          display: block;
+        }
+      }
     }
   }
 }

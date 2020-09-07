@@ -115,6 +115,13 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: none
         fences_label_classes: ''
+  field_teaser_txt:
+    type: basic_string
+    weight: 3
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   body: true
   field_after_content: true
@@ -126,7 +133,6 @@ hidden:
   field_media: true
   field_meta_tags: true
   field_subtitle_formatted: true
-  field_teaser_txt: true
   field_topics: true
   langcode: true
   links: true
