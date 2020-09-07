@@ -19,9 +19,9 @@ third_party_settings:
         - field_variation
         - field_read_more_style
       parent_name: ''
-      weight: 4
+      weight: 3
       format_type: fieldset
-      region: content
+      region: hidden
       format_settings:
         id: ''
         classes: ''
@@ -34,39 +34,29 @@ bundle: single_feature_story_list
 mode: default
 content:
   field_department:
-    weight: 2
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_link:
-    weight: 3
+    weight: 2
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
     region: content
-  field_read_more_style:
-    weight: 1
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
   field_title:
-    weight: 1
+    weight: 0
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_variation:
-    weight: 0
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
 hidden:
   created: true
+  field_read_more_style: true
+  field_variation: true
   status: true
