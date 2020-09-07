@@ -95,3 +95,26 @@ Subsite
 .paragraph--type--teaser-card-list{
   padding-top: 0;
 }
+
+
+/**
+Image Gllery Social share
+ */
+.gallery-featured-links{
+  .social-sharing{
+    a{
+      display: inline-block;
+      i{
+        color: #fff;
+      }
+      &:hover{
+        i{
+          color: $secondary-yellow;
+        }
+      }
+    }
+    &.hero-docked{
+      top: -79.2px;
+    }
+  }
+}
