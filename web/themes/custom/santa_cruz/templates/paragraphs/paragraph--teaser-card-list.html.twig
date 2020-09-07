@@ -51,12 +51,12 @@
   <section{{ attributes.addClass(classes) }} aria-label="content row">
     {% block content %}
       {#      {{ dump(content) }}#}
-      <section class="content-w-media">
+      <section class="content-w-media padding-0 margin-0">
         <div class="grid-container large">
           <div class="grid-x grid-margin-x">
             <div class="cell xlarge-12">
-              <div class="content-centered tighten">
-                <h2>{{ content.field_title.0['#context'].value }}</h2>
+              <div class="content-centered tighten heading">
+                <h2 class="underline">{{ content.field_title.0['#context'].value }}</h2>
               </div>
               <div class="major-card-list">
                 {% for key, item in content.field_node_refs if key|first != '#' %}
