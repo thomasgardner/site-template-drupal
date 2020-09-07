@@ -42,12 +42,8 @@ module:
   editor: 0
   embed: 0
   entity: 0
-  entity_block: 0
-  entity_browser: 0
-  entity_browser_entity_form: 0
   entity_embed: 0
   entity_reference_revisions: 0
-  facets: 0
   feeds: 0
   feeds_tamper: 0
   fences: 0
@@ -74,7 +70,6 @@ module:
   html_title: 0
   image: 0
   imagemagick: 0
-  inline_entity_form: 0
   jquery_ui: 0
   jquery_ui_datepicker: 0
   jquery_ui_slider: 0

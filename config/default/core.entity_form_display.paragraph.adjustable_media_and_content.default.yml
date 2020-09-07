@@ -9,8 +9,7 @@ dependencies:
     - field.field.paragraph.adjustable_media_and_content.field_video_embed
     - paragraphs.paragraphs_type.adjustable_media_and_content
   module:
-    - entity_browser_entity_form
-    - inline_entity_form
+    - media_library
     - text
     - video_embed_field
 id: paragraph.adjustable_media_and_content.default
@@ -35,20 +34,9 @@ content:
   field_image:
     weight: 1
     settings:
-      form_mode: default
-      label_singular: ''
-      label_plural: ''
-      allow_new: true
-      allow_existing: true
-      match_operator: CONTAINS
-      override_labels: false
-      collapsible: false
-      collapsed: false
-      allow_duplicate: false
-    third_party_settings:
-      entity_browser_entity_form:
-        entity_browser_id: media_entity_browser
-    type: inline_entity_form_complex
+      media_types: {  }
+    third_party_settings: {  }
+    type: media_library_widget
     region: content
   field_video_embed:
     weight: 2

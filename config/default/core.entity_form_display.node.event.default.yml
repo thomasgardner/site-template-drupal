@@ -22,10 +22,9 @@ dependencies:
     - address
     - content_moderation
     - datetime
-    - entity_browser_entity_form
     - field_group
     - geolocation
-    - inline_entity_form
+    - media_library
     - metatag
     - path
     - scheduler
@@ -127,38 +126,16 @@ content:
   field_event_featured_image:
     weight: 1
     settings:
-      form_mode: default
-      label_singular: ''
-      label_plural: ''
-      allow_new: true
-      allow_existing: true
-      match_operator: CONTAINS
-      override_labels: false
-      collapsible: false
-      collapsed: false
-      allow_duplicate: false
-    third_party_settings:
-      entity_browser_entity_form:
-        entity_browser_id: media_entity_browser
-    type: inline_entity_form_complex
+      media_types: {  }
+    third_party_settings: {  }
+    type: media_library_widget
     region: content
   field_event_teaser_image:
     weight: 2
     settings:
-      form_mode: default
-      label_singular: ''
-      label_plural: ''
-      allow_new: true
-      allow_existing: true
-      match_operator: CONTAINS
-      override_labels: false
-      collapsible: false
-      collapsed: false
-      allow_duplicate: false
-    third_party_settings:
-      entity_browser_entity_form:
-        entity_browser_id: media_entity_browser
-    type: inline_entity_form_complex
+      media_types: {  }
+    third_party_settings: {  }
+    type: media_library_widget
     region: content
   field_featured:
     weight: 5
@@ -183,7 +160,8 @@ content:
     region: content
   field_meta_tags:
     weight: 17
-    settings: {  }
+    settings:
+      sidebar: true
     third_party_settings: {  }
     type: metatag_firehose
     region: content
