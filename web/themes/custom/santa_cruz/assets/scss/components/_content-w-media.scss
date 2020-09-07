@@ -13,9 +13,6 @@
 
   .inner {
     @include xy-grid;
-    @media screen and (max-width: 1023px){
-      margin: 0 30px;
-    }
   }
 
   .content {
@@ -49,7 +46,8 @@
     @include breakpoint(xlarge) {
       @include xy-cell(6);
     }
-    img{
+
+    img {
       width: 100%;
     }
 
@@ -64,6 +62,14 @@
     }
   }
 
+  &.wave-pattern {
+    .inner {
+        margin: 0 30px;
+      @media screen and (min-width: 1480px) {
+        margin: 0;
+      }
+    }
+  }
 }
 
 .content-w-media.left {
