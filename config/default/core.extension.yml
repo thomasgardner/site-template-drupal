@@ -2,7 +2,6 @@ module:
   ace_editor: 0
   action: 0
   address: 0
-  addtocalendar: 0
   admin_toolbar: 0
   admin_toolbar_links_access_filter: 0
   admin_toolbar_search: 0
@@ -22,7 +21,6 @@ module:
   calendar_datetime: 0
   captcha: 0
   ckeditor: 0
-  ckeditor_media_embed: 0
   ckeditor_templates: 0
   color: 0
   color_field: 0
@@ -35,32 +33,22 @@ module:
   ctools: 0
   ctools_block: 0
   ctools_views: 0
-  date_popup: 0
   datetime: 0
   dblog: 0
   devel_entity_updates: 0
   dropzonejs: 0
-  dropzonejs_eb_widget: 0
   dynamic_page_cache: 0
   easy_breadcrumb: 0
   editor: 0
-  editor_advanced_link: 0
   embed: 0
   entity: 0
-  entity_block: 0
-  entity_browser: 0
-  entity_browser_entity_form: 0
   entity_embed: 0
   entity_reference_revisions: 0
-  facets: 0
-  feeds: 0
-  feeds_tamper: 0
   fences: 0
   field: 0
   field_group: 0
   field_ui: 0
   file: 0
-  file_browser: 0
   file_mdm: 0
   file_mdm_exif: 0
   filter: 0
@@ -80,7 +68,6 @@ module:
   html_title: 0
   image: 0
   imagemagick: 0
-  inline_entity_form: 0
   jquery_ui: 0
   jquery_ui_datepicker: 0
   jquery_ui_slider: 0
@@ -127,12 +114,7 @@ module:
   recaptcha: 0
   redirect: 0
   rest: 0
-  restui: 0
-  rules: 0
-  scheduler: 0
-  scheduler_rules_integration: 0
   search_api: 0
-  search_api_autocomplete: 0
   search_api_db: 0
   search_api_solr: 0
   serialization: 0
@@ -141,7 +123,6 @@ module:
   soundcloudfield: 0
   switch_page_theme: 0
   system: 0
-  tamper: 0
   taxonomy: 0
   telephone: 0
   text: 0
@@ -152,7 +133,6 @@ module:
   twig_link_attributes: 0
   twig_tweak: 0
   twig_vardumper: 0
-  typed_data: 0
   update: 0
   user: 0
   variationcache: 0
@@ -160,7 +140,6 @@ module:
   video_embed_field: 0
   video_embed_media: 0
   video_embed_wysiwyg: 0
-  views_block_area: 0
   views_bulk_operations: 0
   views_templates: 0
   views_ui: 0
@@ -171,7 +150,6 @@ module:
   webform_submission_log: 0
   webform_templates: 0
   webform_ui: 0
-  workbench_email: 0
   workflows: 0
   wysiwyg_template: 0
   wysiwyg_template_core: 0

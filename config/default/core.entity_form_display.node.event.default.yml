@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.event.body
-    - field.field.node.event.field_add
     - field.field.node.event.field_address
     - field.field.node.event.field_all_day_event
     - field.field.node.event.field_end_date
@@ -21,16 +20,13 @@ dependencies:
     - node.type.event
   module:
     - address
-    - addtocalendar
     - content_moderation
     - datetime
-    - entity_browser_entity_form
     - field_group
     - geolocation
-    - inline_entity_form
+    - media_library
     - metatag
     - path
-    - scheduler
     - text
 third_party_settings:
   field_group:
@@ -101,12 +97,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_add:
-    weight: 4
-    settings: {  }
-    third_party_settings: {  }
-    type: add_to_calendar_widget_type
-    region: content
   field_address:
     weight: 15
     settings: {  }
@@ -135,38 +125,16 @@ content:
   field_event_featured_image:
     weight: 1
     settings:
-      form_mode: default
-      label_singular: ''
-      label_plural: ''
-      allow_new: true
-      allow_existing: true
-      match_operator: CONTAINS
-      override_labels: false
-      collapsible: false
-      collapsed: false
-      allow_duplicate: false
-    third_party_settings:
-      entity_browser_entity_form:
-        entity_browser_id: media_entity_browser
-    type: inline_entity_form_complex
+      media_types: {  }
+    third_party_settings: {  }
+    type: media_library_widget
     region: content
   field_event_teaser_image:
     weight: 2
     settings:
-      form_mode: default
-      label_singular: ''
-      label_plural: ''
-      allow_new: true
-      allow_existing: true
-      match_operator: CONTAINS
-      override_labels: false
-      collapsible: false
-      collapsed: false
-      allow_duplicate: false
-    third_party_settings:
-      entity_browser_entity_form:
-        entity_browser_id: media_entity_browser
-    type: inline_entity_form_complex
+      media_types: {  }
+    third_party_settings: {  }
+    type: media_library_widget
     region: content
   field_featured:
     weight: 5
@@ -191,7 +159,8 @@ content:
     region: content
   field_meta_tags:
     weight: 17
-    settings: {  }
+    settings:
+      sidebar: true
     third_party_settings: {  }
     type: metatag_firehose
     region: content
@@ -244,11 +213,11 @@ content:
     region: content
     third_party_settings: {  }
   publish_on:
-    type: datetime_timestamp_no_default
-    weight: 30
-    region: content
+    weight: 31
     settings: {  }
     third_party_settings: {  }
+    type: datetime_timestamp
+    region: content
   status:
     type: boolean_checkbox
     settings:
@@ -282,11 +251,11 @@ content:
     region: content
     third_party_settings: {  }
   unpublish_on:
-    type: datetime_timestamp_no_default
-    weight: 30
-    region: content
+    weight: 32
     settings: {  }
     third_party_settings: {  }
+    type: datetime_timestamp
+    region: content
   url_redirects:
     weight: 16
     region: content

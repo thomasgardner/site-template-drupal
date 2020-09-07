@@ -2,7 +2,6 @@
 
 namespace Drupal\media_bulk_upload;
 
-use Drupal\Core\Routing\UrlGeneratorTrait;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Drupal\media_bulk_upload\Entity\MediaBulkConfig;
 
@@ -10,9 +9,7 @@ use Drupal\media_bulk_upload\Entity\MediaBulkConfig;
  * Provides dynamic permissions for nodes of different types.
  */
 class MediaBulkConfigPermissions {
-
   use StringTranslationTrait;
-  use UrlGeneratorTrait;
 
   /**
    * Returns an array of node type permissions.

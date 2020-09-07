@@ -9,9 +9,8 @@ dependencies:
     - field.field.paragraph.flexible_bg_image_block.field_title
     - paragraphs.paragraphs_type.flexible_bg_image_block
   module:
-    - entity_browser_entity_form
-    - inline_entity_form
     - link
+    - media_library
 id: paragraph.flexible_bg_image_block.default
 targetEntityType: paragraph
 bundle: flexible_bg_image_block
@@ -20,20 +19,9 @@ content:
   field_image:
     weight: 0
     settings:
-      form_mode: default
-      label_singular: ''
-      label_plural: ''
-      allow_new: true
-      allow_existing: true
-      match_operator: CONTAINS
-      override_labels: false
-      collapsible: false
-      collapsed: false
-      allow_duplicate: false
-    third_party_settings:
-      entity_browser_entity_form:
-        entity_browser_id: media_entity_browser
-    type: inline_entity_form_complex
+      media_types: {  }
+    third_party_settings: {  }
+    type: media_library_widget
     region: content
   field_link:
     weight: 3

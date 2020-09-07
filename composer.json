@@ -486,7 +486,7 @@
         "drupal/date_popup": "^1.0",
         "drupal/devel": "^4.0",
         "drupal/devel_entity_updates": "^3.0",
-        "drupal/dropzonejs": "^2.0",
+        "drupal/dropzonejs": "^2.1",
         "drupal/easy_breadcrumb": "^1.13",
         "drupal/editor_advanced_link": "^1.6",
         "drupal/embed": "^1.4",
@@ -521,7 +521,7 @@
         "drupal/linkit": "^6.0",
         "drupal/markup": "^1.0@beta",
         "drupal/masquerade": "^2.0@beta",
-        "drupal/media_bulk_upload": "^1.0",
+        "drupal/media_bulk_upload": "^1.0@alpha",
         "drupal/media_entity_file_replace": "^1.0",
         "drupal/menu_block": "1.x-dev",
         "drupal/metatag": "^1.14",
@@ -538,9 +538,9 @@
         "drupal/restui": "^1.16",
         "drupal/rules": "^3.0",
         "drupal/scheduler": "^1.0",
-        "drupal/search_api": "^1.11",
+        "drupal/search_api": "^1.17",
         "drupal/search_api_autocomplete": "^1.1",
-        "drupal/search_api_solr": "^2.5",
+        "drupal/search_api_solr": "^4.1",
         "drupal/sharethis": "^2.0@beta",
         "drupal/smart_ip": "^3.6",
         "drupal/smtp": "^1.0@RC",
@@ -741,9 +741,6 @@
             },
             "drupal/masquerade": {
                 "All users, also from not allowed user roles, showing up in auto complete": "https://www.drupal.org/files/issues/2019-06-16/masquerade_filter-roles_3003796_5.patch"
-            },
-            "drupal/media_bulk_upload": {
-                "Undefined index: file_extensions in...": "https://www.drupal.org/files/issues/2019-05-17/3033271-4.media_bulk_upload.Undefined-index-fileextensions-in-DrupalmediabulkuploadMediaTypeManagergetTargetFieldExtensions.patch"
             },
             "drupal/sharethis" : {
                 "Fix: Error: [] operator not supported for strings" : "https://www.drupal.org/files/issues/Error-operator-not-supported-for-strings-2885710-12128018.patch"

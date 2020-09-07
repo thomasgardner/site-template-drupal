@@ -26,7 +26,6 @@ dependencies:
     - media_library
     - paragraphs
     - path
-    - scheduler
     - text
 third_party_settings:
   field_group:
@@ -243,11 +242,11 @@ content:
     region: content
     third_party_settings: {  }
   publish_on:
-    type: datetime_timestamp_no_default
-    weight: 7
-    region: content
+    weight: 26
     settings: {  }
     third_party_settings: {  }
+    type: datetime_timestamp
+    region: content
   status:
     type: boolean_checkbox
     settings:
@@ -281,11 +280,11 @@ content:
     region: content
     third_party_settings: {  }
   unpublish_on:
-    type: datetime_timestamp_no_default
-    weight: 8
-    region: content
+    weight: 27
     settings: {  }
     third_party_settings: {  }
+    type: datetime_timestamp
+    region: content
   url_redirects:
     weight: 9
     region: content

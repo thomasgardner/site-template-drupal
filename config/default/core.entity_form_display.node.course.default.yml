@@ -11,10 +11,8 @@ dependencies:
     - node.type.course
   module:
     - content_moderation
-    - entity_browser_entity_form
-    - inline_entity_form
+    - media_library
     - path
-    - scheduler
     - text
 id: node.course.default
 targetEntityType: node
@@ -38,22 +36,11 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_course_image:
-    type: inline_entity_form_complex
+    type: media_library_widget
     weight: 2
     settings:
-      form_mode: default
-      label_singular: ''
-      label_plural: ''
-      allow_new: true
-      allow_existing: true
-      match_operator: CONTAINS
-      override_labels: false
-      collapsible: false
-      collapsed: false
-      allow_duplicate: false
-    third_party_settings:
-      entity_browser_entity_form:
-        entity_browser_id: media_entity_browser
+      media_types: {  }
+    third_party_settings: {  }
     region: content
   field_course_type:
     weight: 1
@@ -104,11 +91,11 @@ content:
     region: content
     third_party_settings: {  }
   publish_on:
-    type: datetime_timestamp_no_default
-    weight: 30
-    region: content
+    weight: 31
     settings: {  }
     third_party_settings: {  }
+    type: datetime_timestamp
+    region: content
   status:
     type: boolean_checkbox
     settings:
@@ -142,11 +129,11 @@ content:
     region: content
     third_party_settings: {  }
   unpublish_on:
-    type: datetime_timestamp_no_default
-    weight: 30
-    region: content
+    weight: 32
     settings: {  }
     third_party_settings: {  }
+    type: datetime_timestamp
+    region: content
   url_redirects:
     weight: 11
     region: content

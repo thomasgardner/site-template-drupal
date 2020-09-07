@@ -9,7 +9,6 @@ dependencies:
     - core.entity_view_mode.media.original
   module:
     - ace_editor
-    - ckeditor_media_embed
     - editor
     - entity_embed
     - linkit
@@ -74,12 +73,6 @@ filters:
     weight: -49
     settings:
       title: true
-  filter_ckeditor_media_embed:
-    id: filter_ckeditor_media_embed
-    provider: ckeditor_media_embed
-    status: false
-    weight: -42
-    settings: {  }
   filter_url:
     id: filter_url
     provider: filter
@@ -106,17 +99,17 @@ filters:
     weight: -45
     settings:
       default_view_mode: original
+      allowed_view_modes:
+        inline_content_large: inline_content_large
+        inline_content_medium: inline_content_medium
+        inline_content_small: inline_content_small
+        original: original
       allowed_media_types:
         audio: audio
         file: file
         image: image
         remote_video: remote_video
         video: video
-      allowed_view_modes:
-        inline_content_large: inline_content_large
-        inline_content_medium: inline_content_medium
-        inline_content_small: inline_content_small
-        original: original
   video_embed_wysiwyg:
     id: video_embed_wysiwyg
     provider: video_embed_wysiwyg
@@ -141,6 +134,7 @@ filters:
       width: 700px
       font_size: 12pt
       line_numbers: '1'
-      print_margins: '1'
       show_invisibles: '0'
+      print_margins: '1'
+      auto_complete: '1'
       use_wrap_mode: '1'
