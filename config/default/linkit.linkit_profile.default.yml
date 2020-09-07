@@ -19,12 +19,15 @@ matchers:
       metadata: 'by [node:author] | [node:created:medium]'
       bundles:
         article: article
-        course: course
-        event: event
-        location: location
+        department: department
+        division: division
+        gallery: gallery
+        major: major
         page: page
-        person: person
+        podcast: podcast
+        policy: policy
         program: program
+        subsite_page: subsite_page
         webform: webform
       group_by_bundle: true
       include_unpublished: false
@@ -46,3 +49,8 @@ matchers:
       bundles: null
       group_by_bundle: null
       limit: 100
+  414e86e0-06d9-4d80-a276-78e47138566c:
+    uuid: 414e86e0-06d9-4d80-a276-78e47138566c
+    id: email
+    weight: 0
+    settings: {  }
