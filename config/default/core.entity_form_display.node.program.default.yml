@@ -24,7 +24,6 @@ dependencies:
     - field_group
     - paragraphs
     - path
-    - scheduler
     - text
 third_party_settings:
   field_group:
