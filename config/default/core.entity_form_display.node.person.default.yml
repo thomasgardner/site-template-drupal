@@ -27,7 +27,6 @@ dependencies:
     - metatag
     - name
     - path
-    - scheduler
     - telephone
     - text
 id: node.person.default
@@ -206,11 +205,11 @@ content:
     region: content
     third_party_settings: {  }
   publish_on:
-    type: datetime_timestamp_no_default
-    weight: 30
-    region: content
+    weight: 31
     settings: {  }
     third_party_settings: {  }
+    type: datetime_timestamp
+    region: content
   status:
     type: boolean_checkbox
     settings:
@@ -236,11 +235,11 @@ content:
     region: content
     third_party_settings: {  }
   unpublish_on:
-    type: datetime_timestamp_no_default
-    weight: 30
-    region: content
+    weight: 32
     settings: {  }
     third_party_settings: {  }
+    type: datetime_timestamp
+    region: content
   url_redirects:
     weight: 16
     region: content

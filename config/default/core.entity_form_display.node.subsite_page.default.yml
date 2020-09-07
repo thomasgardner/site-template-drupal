@@ -8,14 +8,12 @@ dependencies:
     - field.field.node.subsite_page.field_hero_content
     - field.field.node.subsite_page.field_meta_tags
     - node.type.subsite_page
-    - workflows.workflow.editorial
   module:
     - content_moderation
     - field_group
     - metatag
     - paragraphs
     - path
-    - scheduler
     - text
 third_party_settings:
   field_group:
@@ -138,11 +136,11 @@ content:
     region: content
     third_party_settings: {  }
   publish_on:
-    type: datetime_timestamp_no_default
-    weight: 12
-    region: content
+    weight: 26
     settings: {  }
     third_party_settings: {  }
+    type: datetime_timestamp
+    region: content
   status:
     type: boolean_checkbox
     settings:
@@ -176,11 +174,11 @@ content:
       match_limit: 10
     third_party_settings: {  }
   unpublish_on:
-    type: datetime_timestamp_no_default
-    weight: 13
-    region: content
+    weight: 27
     settings: {  }
     third_party_settings: {  }
+    type: datetime_timestamp
+    region: content
   url_redirects:
     weight: 14
     region: content
