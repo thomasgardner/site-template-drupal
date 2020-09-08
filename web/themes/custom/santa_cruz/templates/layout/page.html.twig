@@ -102,12 +102,6 @@
       {{ page.above_content }}
     </div>
   {% endif %}
-  {% if page.sidebar_first %}
-    <div id="sidebar-first" class="{{ sidebar_first_grid }} columns sidebar">
-      {{ page.sidebar_first }}
-    </div>
-  {% endif %}
-
   <div class="page-content pb-0 {{ main_grid }}" id="main-content" role="main">
     <section class="content">
       {% if page.sidebar_first and page.sidebar_second %}
@@ -122,9 +116,7 @@
           <div class="inner">
             {% if page.sidebar_first %}
               <div class="column-support">
-                <div class="content-block">
-                  {{ page.sidebar_first }}
-                </div>
+                {{ page.sidebar_first }}
               </div>
             {% endif %}
             <div class="column-main">

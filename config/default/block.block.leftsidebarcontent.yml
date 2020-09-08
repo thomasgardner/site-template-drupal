@@ -1,4 +1,4 @@
-uuid: 48667043-79e1-441d-9ce2-7a36f7e864d9
+uuid: b698b754-805f-4089-8912-26658f73e9f1
 langcode: en
 status: true
 dependencies:
@@ -6,15 +6,15 @@ dependencies:
     - ctools_block
   theme:
     - santa_cruz
-id: sidebarcontent
+id: leftsidebarcontent
 theme: santa_cruz
-region: sidebar_second
+region: sidebar_first
 weight: 0
 provider: null
-plugin: 'entity_field:node:field_sidebar_content'
+plugin: 'entity_field:node:field_left_sidebar_content'
 settings:
-  id: 'entity_field:node:field_sidebar_content'
-  label: 'Right Sidebar Content'
+  id: 'entity_field:node:field_left_sidebar_content'
+  label: 'Left Sidebar Content'
   provider: ctools_block
   label_display: '0'
   formatter:

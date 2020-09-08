@@ -57,8 +57,6 @@ settings:
       language_list: un
     stylescombo:
       styles: ''
-    autoembed:
-      status: ''
     video_embed:
       defaults:
         children:

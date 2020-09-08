@@ -19,19 +19,19 @@ settings:
   id: 'menu_block:about-ucsc-left-sidebar'
   label: 'About UCSC Left Sidebar'
   provider: menu_block
-  label_display: '0'
+  label_display: visible
   follow: false
   follow_parent: child
   level: 1
   depth: 0
   expand: true
-  parent: 'about-ucsc-left-sidebar:'
-  suggestion: left_sidebar
-  label_type: block
-  label_link: 0
+  parent: 'about-ucsc-left-sidebar:menu_link_content:4da1430b-7df1-4a2f-a398-9fb8efee5326'
+  suggestion: vertical
+  label_type: fixed_parent
+  label_link: 1
 visibility:
   request_path:
     id: request_path
-    pages: "/about-ucsc\r\n/about-ucsc/*"
+    pages: '/about-ucsc/*'
     negate: false
     context_mapping: {  }
