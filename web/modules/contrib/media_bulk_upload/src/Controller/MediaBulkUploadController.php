@@ -73,7 +73,7 @@ class MediaBulkUploadController extends ControllerBase {
       '#bundles' => [],
     ];
     $entity_type = $this->entityTypeManager->getDefinition('media_bulk_config');
-    $entity_type_label = $entity_type->getLowercaseLabel();
+    $entity_type_label = $entity_type->getSingularLabel();
     $build['#cache']['tags'] = $entity_type->getListCacheTags();
 
     $link_text = $this->t('Add a new @entity_type.', ['@entity_type' => $entity_type_label]);

@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.storage.node.field_hero_content
     - node.type.subsite_page
-    - paragraphs.paragraphs_type.hero_banner
   module:
     - entity_reference_revisions
 id: node.subsite_page.field_hero_content
@@ -22,8 +21,7 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     negate: 0
-    target_bundles:
-      hero_banner: hero_banner
+    target_bundles: {  }
     target_bundles_drag_drop:
       2_column_cta:
         weight: 13
@@ -33,33 +31,6 @@ settings:
         enabled: false
       4_column_cta:
         weight: 15
-        enabled: false
-      column_section:
-        weight: 16
-        enabled: false
-      full_width_image_section:
-        weight: 17
-        enabled: false
-      hero_banner:
-        enabled: true
-        weight: 18
-      hero_slide:
-        weight: 19
-        enabled: false
-      hero_slideshow:
-        weight: 20
-        enabled: false
-      interior_column_section:
-        weight: 21
-        enabled: false
-      interior_slideshow:
-        weight: 22
-        enabled: false
-      interior_slideshow_slide:
-        weight: 23
-        enabled: false
-      quick_link:
-        weight: 24
         enabled: false
       accordion:
         weight: 62
@@ -81,6 +52,9 @@ settings:
         enabled: false
       button_list_item:
         weight: 68
+        enabled: false
+      column_section:
+        weight: 16
         enabled: false
       content_centered:
         weight: 70
@@ -124,11 +98,8 @@ settings:
       full_video:
         weight: 83
         enabled: false
-      gridder:
-        weight: 85
-        enabled: false
-      gridder_item:
-        weight: 86
+      full_width_image_section:
+        weight: 17
         enabled: false
       grid_content_centered:
         weight: 87
@@ -142,8 +113,23 @@ settings:
       grid_content_left_item:
         weight: 90
         enabled: false
+      gridder:
+        weight: 85
+        enabled: false
+      gridder_item:
+        weight: 86
+        enabled: false
       header_banner:
         weight: 91
+        enabled: false
+      hero_banner:
+        enabled: true
+        weight: 18
+      hero_slide:
+        weight: 19
+        enabled: false
+      hero_slideshow:
+        weight: 20
         enabled: false
       image_gallery:
         weight: 95
@@ -151,20 +137,32 @@ settings:
       image_gallery_item:
         weight: 96
         enabled: false
+      interior_column_section:
+        weight: 21
+        enabled: false
+      interior_slideshow:
+        weight: 22
+        enabled: false
+      interior_slideshow_slide:
+        weight: 23
+        enabled: false
       person_carousel:
         weight: 100
         enabled: false
       profile_card_details_fields:
         weight: 101
         enabled: false
-      quicktabs:
-        weight: 102
+      quick_link:
+        weight: 24
+        enabled: false
+      quick_link_minimal:
+        weight: 105
         enabled: false
       quicktab_item:
         weight: 103
         enabled: false
-      quick_link_minimal:
-        weight: 105
+      quicktabs:
+        weight: 102
         enabled: false
       quote:
         weight: 106

@@ -74,9 +74,14 @@
   </div>
   <div class="news-card-content">
     <div class="category btn-link">{{ content.field_categories.0['#title'] }}</div>
-    <div class="underline isolated">
+    <div class="underline">
       <h4>{{ node.title.0.value }}</h4>
       <div class="tags">{{ content.field_date.0['#text'] }}</div>
     </div>
+    {% if content.field_teaser_txt.0["#context"].value|length %}
+      <p>
+        {{ content.field_teaser_txt.0["#context"].value|length > 80 ? content.field_teaser_txt.0["#context"].value|slice(0, 50) ~ '...' : content.field_teaser_txt.0["#context"].value  }}
+      </p>
+    {% endif %}
   </div>
 </a>

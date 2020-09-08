@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.storage.paragraph.field_view_reference
     - paragraphs.paragraphs_type.person_carousel
-    - views.view.carousels
   module:
     - viewsreference
 id: paragraph.person_carousel.field_view_reference
@@ -16,11 +15,7 @@ label: 'View Reference'
 description: ''
 required: false
 translatable: true
-default_value:
-  -
-    display_id: block_1
-    data: 'a:5:{s:5:"pager";N;s:8:"argument";N;s:5:"limit";N;s:6:"offset";N;s:5:"title";N;}'
-    target_uuid: 97a3587c-dbd1-4007-b690-b7222c0f270d
+default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:view'

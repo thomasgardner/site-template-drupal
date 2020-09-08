@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.program.field_facilities_txt
     - field.field.node.program.field_first_year_long_txt
     - field.field.node.program.field_general_catalog_long_txt
+    - field.field.node.program.field_hero_content
     - field.field.node.program.field_more_long_txt
     - field.field.node.program.field_opportunities_long_txt
     - field.field.node.program.field_sidebar_content
@@ -23,7 +24,6 @@ dependencies:
     - field_group
     - paragraphs
     - path
-    - scheduler
     - text
 third_party_settings:
   field_group:
@@ -33,7 +33,7 @@ third_party_settings:
         - field_careers
         - field_degrees
       parent_name: ''
-      weight: 13
+      weight: 14
       format_type: details
       region: content
       format_settings:
@@ -56,7 +56,7 @@ third_party_settings:
         - field_general_catalog_long_txt
         - field_more_long_txt
       parent_name: ''
-      weight: 12
+      weight: 13
       format_type: details
       region: content
       format_settings:
@@ -70,7 +70,7 @@ third_party_settings:
       children:
         - field_sidebar_content
       parent_name: ''
-      weight: 14
+      weight: 15
       format_type: details
       region: content
       format_settings:
@@ -80,6 +80,20 @@ third_party_settings:
         open: false
         required_fields: true
       label: 'Sidebar Content'
+    group_hero_content:
+      children:
+        - field_hero_content
+      parent_name: ''
+      weight: 0
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Hero Content'
 id: node.program.default
 targetEntityType: node
 bundle: program
@@ -87,12 +101,12 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 3
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
   field_alumni_focus_long_txt:
-    weight: 19
+    weight: 20
     settings:
       rows: 5
       placeholder: ''
@@ -100,7 +114,7 @@ content:
     type: string_textarea
     region: content
   field_awards_long_txt:
-    weight: 18
+    weight: 19
     settings:
       rows: 5
       placeholder: ''
@@ -134,7 +148,7 @@ content:
     type: options_select
     region: content
   field_eap_long_txt:
-    weight: 17
+    weight: 18
     settings:
       rows: 5
       placeholder: ''
@@ -158,15 +172,27 @@ content:
     type: string_textarea
     region: content
   field_general_catalog_long_txt:
-    weight: 20
+    weight: 21
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
     region: content
+  field_hero_content:
+    weight: 16
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
   field_more_long_txt:
-    weight: 21
+    weight: 22
     settings:
       rows: 5
       placeholder: ''
@@ -203,20 +229,20 @@ content:
     region: content
   langcode:
     type: language_select
-    weight: 1
+    weight: 2
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 10
+    weight: 11
     settings: {  }
     region: content
     third_party_settings: {  }
   path:
     type: path
-    weight: 8
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -224,12 +250,12 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 4
+    weight: 5
     region: content
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 6
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -237,19 +263,19 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 11
+    weight: 12
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 5
+    weight: 6
     region: content
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 0
+    weight: 1
     region: content
     settings:
       size: 60
@@ -257,7 +283,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 2
+    weight: 3
     settings:
       match_operator: CONTAINS
       size: 60
@@ -267,12 +293,12 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 7
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
   url_redirects:
-    weight: 9
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }

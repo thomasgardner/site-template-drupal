@@ -2,10 +2,8 @@
   <div class="grid-container large">
     <div class="grid-x grid-margin-x">
       <div class="cell large-12">
-        <div class="category">
-          <a class="btn-link" href="{{ content.field_categories[0]['#url'] }}"
-             aria-label="">{{ content.field_categories[0]['#title'] }}</a>
-        </div>
+        <a class="category btn-link" href="{{ content.field_categories[0]['#url'] }}"
+           aria-label="">{{ content.field_categories[0]['#title'] }}</a>
       </div>
       <div class="cell xlarge-8">
         <h1>{{ label }}</h1>
@@ -16,15 +14,18 @@
       <div class="cell xlarge-4">
         <div class="sidebar">
           <div class="profile-info">
-            <!-- <div class="profile-prefix">By </div> -->
+            <div class="profile-prefix">By</div>
             <div class="profile-name">
               <a class="btn-link" href="{{ content.field_author_link[0]['#url'] }}"
                  aria-label="">{{ content.field_author }}</a>
             </div>
             <div class="profile-date">{{ node.changedtime|date("F j, Y") }}</div>
           </div>
-          <h5>Share this story:</h5>
-          {#          {{>social-sharing type='top && right'}}#}
+          <h5>{{ "Share this story"|t }}:</h5>
+          {# {{>social-sharing type='top && right'}} #}
+          <div class="social-sharing top right">
+            {{ drupal_block('kwall_share_bar_block', {'use_module_css': false}) }}
+          </div>
         </div>
       </div>
     </div>
@@ -55,14 +56,27 @@
     <div class="grid-x grid-margin-x">
       <div class="cell">
         {{ content.body }}
+        <p>Topics:
+          {% for key, item in content.field_categories if key|first != '#' %}
+            {% if key matches '/^\\d+$/' %}
+              <a class="btn-link"
+                 href="{{ content.field_categories.key['#url'] }}"> {{ content.field_categories.0['#title'] }}</a>
+            {% endif %}
+          {% endfor %}
+        </p>
       </div>
     </div>
-    {#    {{>social-sharing type='bottom'}}#}
+
+    {# {{>social-sharing type='bottom'}} #}
+    <div class="social-sharing bottom">
+      {{ drupal_block('kwall_share_bar_block', {'use_module_css': false}) }}
+    </div>
+
   </div>
 
   {% if relatedcontentgrid is not empty %}
     <section class="heading">
-      <h2 class="underline">{{ 'Related News'|trans }}</h2>
+      <h2 class="underline">{{ 'Related News'|t }}</h2>
     </section>
     <div class="grid-container large">
       {{ relatedcontentgrid }}

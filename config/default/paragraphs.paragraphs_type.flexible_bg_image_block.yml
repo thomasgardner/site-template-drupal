@@ -3,7 +3,8 @@ langcode: en
 status: true
 dependencies: {  }
 id: flexible_bg_image_block
-label: 'Flexible BG Image Block'
+label: 'Zzz - Flexible BG Image Block'
 icon_uuid: null
+icon_default: null
 description: ''
 behavior_plugins: {  }

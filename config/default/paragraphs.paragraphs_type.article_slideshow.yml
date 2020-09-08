@@ -3,7 +3,8 @@ langcode: en
 status: true
 dependencies: {  }
 id: article_slideshow
-label: 'Article Slideshow'
+label: 'Zzz - Article Slideshow'
 icon_uuid: null
+icon_default: null
 description: ''
 behavior_plugins: {  }

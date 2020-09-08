@@ -8,6 +8,7 @@ dependencies:
     - field.field.paragraph.profile_card__fullwidth.field_link
     - field.field.paragraph.profile_card__fullwidth.field_media_position
     - field.field.paragraph.profile_card__fullwidth.field_pre_title
+    - field.field.paragraph.profile_card__fullwidth.field_read_more_style
     - field.field.paragraph.profile_card__fullwidth.field_show_background_style
     - field.field.paragraph.profile_card__fullwidth.field_title
     - image.style.profile_card_featured
@@ -74,10 +75,10 @@ content:
     region: content
   field_media_position:
     weight: 6
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    type: list_key
     region: content
   field_pre_title:
     weight: 1
@@ -94,9 +95,16 @@ content:
         fences_label_classes: ''
     type: string
     region: content
+  field_read_more_style:
+    weight: 7
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
   field_show_background_style:
     weight: 5
-    label: above
+    label: hidden
     settings:
       format: default
       format_custom_false: ''

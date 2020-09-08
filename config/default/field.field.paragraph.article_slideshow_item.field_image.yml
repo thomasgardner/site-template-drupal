@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_image
-    - media.type.article_slideshow_item
     - paragraphs.paragraphs_type.article_slideshow_item
 id: paragraph.article_slideshow_item.field_image
 field_name: field_image
@@ -19,8 +18,7 @@ default_value_callback: ''
 settings:
   handler: 'default:media'
   handler_settings:
-    target_bundles:
-      article_slideshow_item: article_slideshow_item
+    target_bundles: {  }
     sort:
       field: _none
     auto_create: false

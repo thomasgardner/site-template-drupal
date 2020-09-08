@@ -7,12 +7,12 @@
 ] %}
 
 {% set variation = content.field_variation[0]['#markup'] %}
+{% set read_more_style = content.field_read_more_style[0]['#markup'] %}
 
 {% block paragraph %}
   <section{{ attributes.addClass(classes) }}
       aria-label="content row">
     {% block content %}
-
 
       {% if content.field_title|field_value is not empty %}
         <section class="heading">
@@ -49,7 +49,7 @@
                 {% endif %}
               {% endif %}
             </div>
-            {% if variation == 'advanced' %}
+            {% if read_more_style == 'link' %}
               {% if content.field_link|field_value is not empty %}
                 <a href="{{ content.field_link[0]['#url'] }}" class="btn-link right"
                    target="{{ content.field_link[0]['#url'].isExternal() ? '_blank' : '' }}">{{ content.field_link[0]['#title'] }}</a>
@@ -60,7 +60,7 @@
       </div>
     {% endblock %}
   </section>
-  {% if variation == 'short' %}
+  {% if read_more_style == 'button' %}
     {% if content.field_link|field_value is not empty %}
       <div class="more no-border">
         <a href="{{ content.field_link[0]['#url'] }}" class="button primary"

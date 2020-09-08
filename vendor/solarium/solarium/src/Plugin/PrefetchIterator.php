@@ -1,11 +1,18 @@
 <?php
 
+/*
+ * This file is part of the Solarium package.
+ *
+ * For the full copyright and license information, please view the COPYING
+ * file that was distributed with this source code.
+ */
+
 namespace Solarium\Plugin;
 
 use Solarium\Core\Client\Endpoint;
 use Solarium\Core\Plugin\AbstractPlugin;
+use Solarium\Core\Query\DocumentInterface;
 use Solarium\QueryType\Select\Query\Query as SelectQuery;
-use Solarium\QueryType\Select\Result\DocumentInterface;
 use Solarium\QueryType\Select\Result\Result as SelectResult;
 
 /**
@@ -74,19 +81,21 @@ class PrefetchIterator extends AbstractPlugin implements \Iterator, \Countable
      *
      * @return self Provides fluent interface
      */
-    public function setPrefetch($value)
+    public function setPrefetch(int $value): self
     {
         $this->resetData();
 
-        return $this->setOption('prefetch', $value);
+        $this->setOption('prefetch', $value);
+
+        return $this;
     }
 
     /**
      * Get prefetch option.
      *
-     * @return int
+     * @return int|null
      */
-    public function getPrefetch()
+    public function getPrefetch(): ?int
     {
         return $this->getOption('prefetch');
     }
@@ -98,7 +107,7 @@ class PrefetchIterator extends AbstractPlugin implements \Iterator, \Countable
      *
      * @return self Provides fluent interface
      */
-    public function setQuery($query)
+    public function setQuery(SelectQuery $query): self
     {
         $this->query = $query;
         $this->resetData();
@@ -111,7 +120,7 @@ class PrefetchIterator extends AbstractPlugin implements \Iterator, \Countable
      *
      * @return SelectQuery
      */
-    public function getQuery()
+    public function getQuery(): SelectQuery
     {
         return $this->query;
     }
@@ -125,9 +134,11 @@ class PrefetchIterator extends AbstractPlugin implements \Iterator, \Countable
      *
      * @return self Provides fluent interface
      */
-    public function setEndpoint($endpoint)
+    public function setEndpoint($endpoint): self
     {
-        return $this->setOption('endpoint', $endpoint);
+        $this->setOption('endpoint', $endpoint);
+
+        return $this;
     }
 
     /**
@@ -145,7 +156,7 @@ class PrefetchIterator extends AbstractPlugin implements \Iterator, \Countable
      *
      * @return int
      */
-    public function count()
+    public function count(): int
     {
         // if no results are available yet, get them now
         if (null === $this->result) {
@@ -158,7 +169,7 @@ class PrefetchIterator extends AbstractPlugin implements \Iterator, \Countable
     /**
      * Iterator implementation.
      */
-    public function rewind()
+    public function rewind(): void
     {
         $this->position = 0;
 
@@ -177,7 +188,7 @@ class PrefetchIterator extends AbstractPlugin implements \Iterator, \Countable
      *
      * @return DocumentInterface
      */
-    public function current()
+    public function current(): DocumentInterface
     {
         $adjustedIndex = $this->position % $this->options['prefetch'];
 
@@ -189,7 +200,7 @@ class PrefetchIterator extends AbstractPlugin implements \Iterator, \Countable
      *
      * @return int
      */
-    public function key()
+    public function key(): int
     {
         return $this->position;
     }
@@ -197,7 +208,7 @@ class PrefetchIterator extends AbstractPlugin implements \Iterator, \Countable
     /**
      * Iterator implementation.
      */
-    public function next()
+    public function next(): void
     {
         ++$this->position;
     }
@@ -207,7 +218,7 @@ class PrefetchIterator extends AbstractPlugin implements \Iterator, \Countable
      *
      * @return bool
      */
-    public function valid()
+    public function valid(): bool
     {
         $adjustedIndex = $this->position % $this->options['prefetch'];
 
@@ -221,8 +232,10 @@ class PrefetchIterator extends AbstractPlugin implements \Iterator, \Countable
 
     /**
      * Fetch the next set of results.
+     *
+     * @return self Provides fluent interface
      */
-    protected function fetchNext()
+    protected function fetchNext(): self
     {
         if (null === $this->cursormark && null !== $this->query->getCursormark()) {
             $this->cursormark = '*';
@@ -238,17 +251,23 @@ class PrefetchIterator extends AbstractPlugin implements \Iterator, \Countable
         $this->cursormark = $this->result->getNextCursorMark();
         $this->documents = $this->result->getDocuments();
         $this->start += $this->getPrefetch();
+
+        return $this;
     }
 
     /**
      * Reset any cached data / position.
+     *
+     * @return self Provides fluent interface
      */
-    protected function resetData()
+    protected function resetData(): self
     {
         $this->position = null;
         $this->result = null;
         $this->documents = null;
         $this->start = 0;
         $this->cursormark = null;
+
+        return $this;
     }
 }

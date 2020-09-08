@@ -12,7 +12,6 @@ dependencies:
     - content_moderation
     - datetime
     - path
-    - scheduler
 id: node.job_posting_card.default
 targetEntityType: node
 bundle: job_posting_card
@@ -81,11 +80,11 @@ content:
     region: content
     third_party_settings: {  }
   publish_on:
-    type: datetime_timestamp_no_default
-    weight: 30
-    region: content
+    weight: 125
     settings: {  }
     third_party_settings: {  }
+    type: datetime_timestamp
+    region: content
   status:
     type: boolean_checkbox
     settings:
@@ -119,11 +118,11 @@ content:
     region: content
     third_party_settings: {  }
   unpublish_on:
-    type: datetime_timestamp_no_default
-    weight: 30
-    region: content
+    weight: 126
     settings: {  }
     third_party_settings: {  }
+    type: datetime_timestamp
+    region: content
   url_redirects:
     weight: 50
     region: content

@@ -3,7 +3,8 @@ langcode: en
 status: true
 dependencies: {  }
 id: 3_column_cta
-label: '3 Column CTA'
+label: 'Zzz - 3 Column CTA'
 icon_uuid: null
+icon_default: null
 description: ''
 behavior_plugins: {  }

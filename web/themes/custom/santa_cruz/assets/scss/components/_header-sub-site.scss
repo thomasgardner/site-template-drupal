@@ -99,9 +99,9 @@
         left: 14px;
         margin: 0;
 
-        a {
-            padding: 0;
-        }
+        //a {
+        //    padding: 0;
+        //}
 
         @include breakpoint(large) {
             position: relative;

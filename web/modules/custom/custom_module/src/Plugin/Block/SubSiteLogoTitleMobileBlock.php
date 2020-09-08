@@ -62,10 +62,10 @@ class SubSiteLogoTitleMobileBlock extends BlockBase {
         $linkTitle = $link['title'];
       }
 
-      if ($block->hasField('field_title')
-        && !$block->get('field_title')->isEmpty()) {
-        $subSiteTitle = $block->get('field_title')->getString();
-      }
+      $request = \Drupal::request();
+      $route_match = \Drupal::routeMatch();
+      $subSiteTitle = \Drupal::service('title_resolver')
+        ->getTitle($request, $route_match->getRouteObject());
     }
 
     $markup = '';

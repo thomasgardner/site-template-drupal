@@ -13,7 +13,6 @@ dependencies:
     - field.field.node.job.field_rank_txt
     - node.type.job
   module:
-    - addtocalendar
     - datetime
     - fences
     - user
@@ -43,37 +42,6 @@ content:
       timezone_override: ''
       format_type: site_format_1
     third_party_settings:
-      addtocalendar:
-        addtocalendar_settings:
-          style: '0'
-          display_text: 'Add to Calendar'
-          atc_title:
-            field: token
-            tokenized: Title
-          atc_description:
-            field: token
-            tokenized: Description
-          atc_location:
-            field: token
-            tokenized: Location
-          atc_organizer:
-            field: token
-            tokenized: 'University of California, Santa Cruz'
-          atc_organizer_email:
-            field: token
-            tokenized: info@kwallcompany.com
-          atc_date_end:
-            field: token
-            tokenized: ''
-          atc_privacy: public
-          data_secure: auto
-          data_calendars:
-            iCalendar: 0
-            'Google Calendar': 0
-            Outlook: 0
-            'Outlook Online': 0
-            'Yahoo! Calendar': 0
-        addtocalendar_show: 0
       fences:
         fences_field_tag: none
         fences_field_classes: ''
@@ -90,37 +58,6 @@ content:
       timezone_override: ''
       format_type: site_format_1
     third_party_settings:
-      addtocalendar:
-        addtocalendar_settings:
-          style: '0'
-          display_text: 'Add to Calendar'
-          atc_title:
-            field: token
-            tokenized: Title
-          atc_description:
-            field: token
-            tokenized: Description
-          atc_location:
-            field: token
-            tokenized: Location
-          atc_organizer:
-            field: token
-            tokenized: 'University of California, Santa Cruz'
-          atc_organizer_email:
-            field: token
-            tokenized: info@kwallcompany.com
-          atc_date_end:
-            field: token
-            tokenized: ''
-          atc_privacy: public
-          data_secure: auto
-          data_calendars:
-            iCalendar: 0
-            'Google Calendar': 0
-            Outlook: 0
-            'Outlook Online': 0
-            'Yahoo! Calendar': 0
-        addtocalendar_show: 0
       fences:
         fences_field_tag: none
         fences_field_classes: ''
@@ -217,3 +154,4 @@ content:
     third_party_settings: {  }
 hidden:
   langcode: true
+  search_api_excerpt: true

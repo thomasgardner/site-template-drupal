@@ -4,7 +4,8 @@
   'paragraph--id--' ~ paragraph.id()|clean_id,
   view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_id,
   not paragraph.isPublished() ? 'paragraph--unpublished',
-  'wave-pattern blue'
+  'wave-pattern',
+  'blue'
 ] %}
 
 {% block paragraph %}

@@ -3,7 +3,8 @@ langcode: en
 status: true
 dependencies: {  }
 id: recent_articles_upcoming_events
-label: 'Recent Articles & Upcoming Events'
+label: 'Zzz - Recent Articles & Upcoming Events'
 icon_uuid: null
+icon_default: null
 description: ''
 behavior_plugins: {  }

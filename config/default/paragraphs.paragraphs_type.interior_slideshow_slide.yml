@@ -3,7 +3,8 @@ langcode: en
 status: true
 dependencies: {  }
 id: interior_slideshow_slide
-label: 'Interior Slideshow Slide'
+label: 'Zzz - Interior Slideshow Slide'
 icon_uuid: null
+icon_default: null
 description: ''
 behavior_plugins: {  }

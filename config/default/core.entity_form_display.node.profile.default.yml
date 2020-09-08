@@ -36,7 +36,6 @@ dependencies:
     - link
     - media_library
     - path
-    - scheduler
     - telephone
 third_party_settings:
   field_group:
@@ -351,11 +350,11 @@ content:
     region: content
     third_party_settings: {  }
   publish_on:
-    type: datetime_timestamp_no_default
-    weight: 6
-    region: content
+    weight: 40
     settings: {  }
     third_party_settings: {  }
+    type: datetime_timestamp
+    region: content
   status:
     type: boolean_checkbox
     settings:
@@ -389,11 +388,11 @@ content:
     region: content
     third_party_settings: {  }
   unpublish_on:
-    type: datetime_timestamp_no_default
-    weight: 7
-    region: content
+    weight: 41
     settings: {  }
     third_party_settings: {  }
+    type: datetime_timestamp
+    region: content
   url_redirects:
     weight: 9
     region: content

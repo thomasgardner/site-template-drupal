@@ -117,7 +117,8 @@
                 {% endif %}
               </div>
             </div>
-            <img style="position: relative; top: 50%; margin-top: -10%" src="{{ backup_image_url }}" alt="{{ backup_image_alt }}" title="{{ backup_image_title }}">
+            <img style="position: relative; top: 50%; margin-top: -10%" src="{{ backup_image_url }}"
+                 alt="{{ backup_image_alt }}" title="{{ backup_image_title }}">
           {% endif %}
           {% if content.field_link|field_value is not empty
             and content.field_link_2|field_value is empty
@@ -127,9 +128,13 @@
             {% endif %}
             <div class="angle transparent wow"></div>
             <div class="hero-text">
-              <div class="category">{{ content.field_head_title[0]['#context'].value }}</div>
+              {% if content.field_head_title[0]['#context'].value|length > 0 %}
+                <div class="category">{{ content.field_head_title[0]['#context'].value }}</div>
+              {% endif %}
               <h1 {{ hero_header_attributes.addClass(hero_header_classes) }}>{{ content.field_title[0]['#context'].value }}</h1>
-              <p class="hero-body">{{ content.field_caption[0]['#context'].value }}</p>
+              {% if content.field_caption[0]['#context'].value|length > 0 %}
+                <p class="hero-body">{{ content.field_caption[0]['#context'].value }}</p>
+              {% endif %}
               {% if content.field_link_2|field_value is not empty %}
                 <h4 class="subhead"><a href="{{ content.field_link_2[0]['#url'] }}"
                                        class="yellow-text">{{ content.field_link_2[0]['#title'] }}</a></h4>
@@ -139,17 +144,17 @@
               {% endif %}
             </div>
             {% if node_type == "gallery" %}
-            <div class="gallery-featured-links show-for-large">
-              <a class="button clear show-for-xlarge" href="#gallery-description" data-smooth-scroll="abbh0j-smooth-scroll" id="y4qxyx-smooth-scroll"><i class="fas fa-info"></i> Gallery Description</a>
-              <a class="button clear" href="javascript:void(0)" data-toggle="social-sharing" aria-controls="social-sharing"><i class="fas fa-share-alt"></i> Share</a>
-              <div class="social-sharing hero-docked" id="social-sharing" data-toggler="9fdrup-toggler" data-animate="fade-in fade-out" aria-expanded="false">
-                <a class="fab fa-twitter" href=""></a>
-                <a class="fab fa-facebook" href=""></a>
-                <a class="fab fa-youtube" href=""></a>
-                <a class="fab fa-linkedin" href=""></a>
-                <a class="fab fa-reddit" href=""></a>
+              <div class="gallery-featured-links show-for-large">
+                <a class="button clear show-for-xlarge" href="#gallery-description"
+                   data-smooth-scroll="abbh0j-smooth-scroll" id="y4qxyx-smooth-scroll"><i class="fas fa-info"></i>
+                  Gallery Description</a>
+                <a class="button clear" href="javascript:void(0)" data-toggle="social-sharing"
+                   aria-controls="social-sharing"><i class="fas fa-share-alt"></i> Share</a>
+                <div class="social-sharing hero-docked" id="social-sharing" data-toggler="9fdrup-toggler"
+                     data-animate="fade-in fade-out" aria-expanded="false">
+                  {{ drupal_block('kwall_share_bar_block', {'use_module_css': false}) }}
+                </div>
               </div>
-            </div>
             {% endif %}
             {% if content.field_link|field_value is not empty
               and content.field_link_2|field_value is empty
