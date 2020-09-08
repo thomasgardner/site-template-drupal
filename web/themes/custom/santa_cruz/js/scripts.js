@@ -239,8 +239,32 @@
     var $archiveForm = $('#views-exposed-form-teaser-archive-news-archive-page'),
       labelValue = $archiveForm.find('.form-item-field-categories-target-id label').text();
 
-    $archiveForm.find("a.filter-control").prepend(labelValue);
+    $archiveForm.find("a.filter-category").prepend(labelValue);
     $('.view-teaser-archive').find('.news-card-list .news-card:first-child, .news-card-list .news-card:nth-child(2)').wrapAll( "<div class='news-card-list split-column'></div>" );
+
+    /*
+    Parameter
+     */
+    var getUrlParameter = function getUrlParameter(sParam) {
+      var sPageURL = window.location.search.substring(1),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+      for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+          return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+        }
+      }
+    };
+    var year = getUrlParameter('year');
+    if(year){
+      $archiveForm.find('a.filter-year').prepend(year);
+    } else{
+      $archiveForm.find('a.filter-year').prepend(new Date().getFullYear());
+    }
   });
 
 })(jQuery, Drupal, drupalSettings);
