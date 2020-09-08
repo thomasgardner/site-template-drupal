@@ -8,10 +8,14 @@ dependencies:
 third_party_settings:
   menu_ui:
     available_menus:
+      - about-ucsc-left-sidebar
+      - academics-menu
+      - footer---connect-to-to-ucsc
+      - footer---engage-with-ucsc
+      - footer---legal-links
       - footer
-      - main
-      - sidebar-menu
       - utility-menu
+      - main
     parent: 'main:'
   wysiwyg_template:
     default_template: ''
