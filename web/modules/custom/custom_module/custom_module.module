@@ -471,7 +471,7 @@ function custom_module_form_views_exposed_form_alter(&$form, FormStateInterface 
       $form["year"] = [
         '#prefix' => '<div class="filter-box filter-year-box" id="filter-year" data-toggler="1jx6wi-toggler" data-animate="fade-in fade-out" aria-expanded="false">
                         <div class="grid-container">
-                            <a href="#" class="close-modal" data-toggle="filter-year" aria-controls="filter-year">
+                            <a class="close-modal" data-toggle="filter-year" aria-controls="filter-year">
                                 <i class="fas fa-times"></i>
                             </a>
                             <h4>Filter by Year</h4> 
