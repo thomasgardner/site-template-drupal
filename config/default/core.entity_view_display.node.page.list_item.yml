@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.page.field_content_bottom
     - field.field.node.page.field_hero_content
     - field.field.node.page.field_lead_formatted
+    - field.field.node.page.field_left_sidebar_content
     - field.field.node.page.field_meta_tags
     - field.field.node.page.field_sidebar_content
     - field.field.node.page.field_teaser_image
@@ -76,10 +77,12 @@ hidden:
   field_body_paragraphs: true
   field_content_bottom: true
   field_hero_content: true
+  field_left_sidebar_content: true
   field_meta_tags: true
   field_sidebar_content: true
   field_teaser_txt: true
   field_view_reference: true
   langcode: true
   links: true
+  search_api_excerpt: true
   sharethis: true
