@@ -164,3 +164,20 @@ Image Gllery Social share
     float: right;
   }
 }
+
+
+/**
+Hero
+ */
+.paragraph--type--header-banner{
+  .hero-body{
+    @media screen and (min-width: 1024px){
+      display: -webkit-box;
+      max-width: 100%;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
