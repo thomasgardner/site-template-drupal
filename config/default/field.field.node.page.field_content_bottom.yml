@@ -8,7 +8,6 @@ dependencies:
     - paragraphs.paragraphs_type.accordion
     - paragraphs.paragraphs_type.article_card
     - paragraphs.paragraphs_type.article_card_list
-    - paragraphs.paragraphs_type.button_list
     - paragraphs.paragraphs_type.content_centered
     - paragraphs.paragraphs_type.content_left
     - paragraphs.paragraphs_type.content_quote
@@ -62,7 +61,6 @@ settings:
     negate: 0
     target_bundles:
       accordion: accordion
-      button_list: button_list
       content_centered: content_centered
       content_left: content_left
       content_quote: content_quote
@@ -135,8 +133,8 @@ settings:
         weight: 97
         enabled: false
       button_list:
-        enabled: true
         weight: 47
+        enabled: false
       button_list_item:
         weight: 34
         enabled: false
@@ -229,15 +227,6 @@ settings:
         enabled: false
       header_banner:
         weight: 41
-        enabled: false
-      hero_banner:
-        weight: 12
-        enabled: false
-      hero_slide:
-        weight: 4
-        enabled: false
-      hero_slideshow:
-        weight: 14
         enabled: false
       historical_fact_card:
         weight: 61
@@ -353,9 +342,6 @@ settings:
       step_grid:
         enabled: true
         weight: 86
-      story_hero:
-        weight: 98
-        enabled: false
       tabs_horizontal:
         enabled: true
         weight: 87
