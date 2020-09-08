@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1153e734ee75bbd654c909a47e54781b",
+    "content-hash": "c6d1cb7a4ec8287fc225e424c44c42a2",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -7220,10 +7220,10 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/menu_block.git",
-                "reference": "95dbaf64bfa1ed6f63431caa1d9f3ecf0df731e4"
+                "reference": "3402bb7ed3d95f529b81fac257a370901ea14ac2"
             },
             "require": {
-                "drupal/core": "*"
+                "drupal/core": "^8 || ^9"
             },
             "type": "drupal-module",
             "extra": {
@@ -7231,18 +7231,16 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.5+9-dev",
-                    "datestamp": "1583794180",
+                    "version": "8.x-1.6+5-dev",
+                    "datestamp": "1591593747",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
                     }
                 },
                 "patches_applied": {
-                    "Add configuration options for dynamic block titles": "https://www.drupal.org/files/issues/2019-10-06/2809699-87.menu_block-label_configuration.patch",
-                    "Region showing up, even when there are no sub menu items": "https://www.drupal.org/files/issues/2018-08-30/menu_block-empty_region-2974691-6.patch",
-                    "[PP-1] Add links to menu parent block title": "https://www.drupal.org/files/issues/2019-10-06/2950943-15.menu_block-title_as_link.patch",
-                    "Ability show items on same level if active menu level don't have children": "https://www.drupal.org/files/issues/2019-07-02/3037301-fallback-to-parent-2.patch"
+                    "Hide menu block on pages not included in menu": "https://www.drupal.org/files/issues/2020-08-24/menu_block-hide_on_inactive-3007225-8.patch",
+                    "Ability show items on same level if active menu level don't have children": "https://www.drupal.org/files/issues/2020-06-26/menu_block-active-level-fallback-when-no-children-758184-31-D8.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
