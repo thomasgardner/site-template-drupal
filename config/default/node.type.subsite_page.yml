@@ -9,15 +9,14 @@ third_party_settings:
   menu_ui:
     available_menus:
       - footer
-      - main
-      - sidebar-menu
       - utility-menu
+      - main
     parent: 'main:'
   wysiwyg_template:
     default_template: ''
 _core:
   default_config_hash: KuyA4NHPXcmKAjRtwa0vQc2ZcyrUJy6IlS2TAyMNRbc
-name: 'Subsite page'
+name: 'x. Subsite page'
 type: subsite_page
 description: 'Use <em>subsite pages</em> for your static content, such as an ''About us'' page.'
 help: ''
