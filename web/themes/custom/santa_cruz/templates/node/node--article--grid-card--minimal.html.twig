@@ -69,7 +69,7 @@
 #}
 <a href="{{ path('entity.node.canonical', {'node': node.nid.0.value}) }}" aria-label="">
   <div class="image">
-    {% set image_url = file_url(content.field_teaser_image.0['#media'].field_media_image.entity.uri.value) %}
+    {% set image_url = file_url(content.field_teaser_image.0['#media'].field_media_image.entity.uri.value|image_style('article_grid_card_minimal_408x250')) %}
     <img src="{{ image_url }}">
   </div>
   <div class="news-card-content">
