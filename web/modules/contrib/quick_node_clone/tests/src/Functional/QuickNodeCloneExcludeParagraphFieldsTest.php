@@ -1,19 +1,19 @@
 <?php
 
-namespace Drupal\quick_node_clone\Tests;
+namespace Drupal\Tests\quick_node_clone\Functional;
 
-use Drupal\paragraphs\Tests\Classic\ParagraphsTestBase;
-use Drupal\field_ui\Tests\FieldUiTestTrait;
+use Drupal\Tests\paragraphs\Functional\WidgetLegacy\ParagraphsTestBase;
+use Drupal\Tests\field_ui\Traits\FieldUiTestTrait;
 use Drupal\Tests\paragraphs\FunctionalJavascript\ParagraphsTestBaseTrait;
-use Drupal\paragraphs\Tests\Classic\ParagraphsCoreVersionUiTestTrait;
+
 /**
  * Tests node cloning excluding paragraph fields.
  *
  * @group Quick Node Clone
  */
-class QuickNodeCloneExcludeParagraphFieldsTests extends ParagraphsTestBase {
+class QuickNodeCloneExcludeParagraphFieldsTest extends ParagraphsTestBase {
 
-  use FieldUiTestTrait, ParagraphsCoreVersionUiTestTrait, ParagraphsTestBaseTrait;
+  use FieldUiTestTrait, ParagraphsTestBaseTrait;
 
   /**
    * The installation profile to use with this test.
@@ -27,14 +27,12 @@ class QuickNodeCloneExcludeParagraphFieldsTests extends ParagraphsTestBase {
    *
    * @var array
    */
-  public static $modules = [
-    'quick_node_clone',
-  ];
+  public static $modules = ['paragraphs', 'quick_node_clone'];
 
   /**
    * {@inheritdoc}
    */
-  protected function setUp() {
+  protected function setUp(): void {
     parent::setUp();
 
     // Crete paragraphs.
@@ -59,7 +57,7 @@ class QuickNodeCloneExcludeParagraphFieldsTests extends ParagraphsTestBase {
     // Add two text fields to the text_paragraph type.
     static::fieldUIAddNewField('admin/structure/paragraphs_type/' . $paragraph_type, 'text1', 'Text 1', 'string', [], []);
     static::fieldUIAddNewField('admin/structure/paragraphs_type/' . $paragraph_type, 'text2', 'Text 2', 'string', [], []);
-    $this->drupalPostAjaxForm('node/add/paragraphed_test', [], 'field_paragraphs_text_paragraph_add_more');
+    $this->drupalPostForm('node/add/paragraphed_test', [], 'field_paragraphs_text_paragraph_add_more');
 
     // Add config to exclude text 2 field.
     \Drupal::configFactory()->getEditable('quick_node_clone.settings')
@@ -70,7 +68,7 @@ class QuickNodeCloneExcludeParagraphFieldsTests extends ParagraphsTestBase {
   /**
    * Test node clone excluding fields.
    */
-  function testNodeCloneExcludeParagraphFields() {
+  public function testNodeCloneExcludeParagraphFields() {
 
     $this->loginAsAdmin([
       'create paragraphed_test content',
@@ -81,7 +79,7 @@ class QuickNodeCloneExcludeParagraphFieldsTests extends ParagraphsTestBase {
 
     // Test the form.
     $this->drupalGet('admin/config/quick-node-clone-paragraph');
-    $this->assertFieldByName('text_paragraph[field_text2]', 'field_text2');
+    $this->assertSession()->fieldValueEquals('text_paragraph[field_text2]', 'field_text2');
 
     // Create a node and add two Paragraphs.
     $this->drupalGet('node/add/paragraphed_test');
@@ -93,30 +91,30 @@ class QuickNodeCloneExcludeParagraphFieldsTests extends ParagraphsTestBase {
       'field_paragraphs[0][subform][field_text1][0][value]' => $text1,
       'field_paragraphs[0][subform][field_text2][0][value]' => $text2,
     ];
-    $this->drupalPostAjaxForm(NULL, [], 'field_paragraphs_text_paragraph_add_more');
-    $this->drupalPostForm(NULL, $edit, t('Save'));
+    $this->drupalPostForm(NULL, [], 'field_paragraphs_text_paragraph_add_more');
+    $this->drupalPostForm(NULL, $edit, 'Save');
     $node = $this->drupalGetNodeByTitle($title_value);
 
     $this->drupalGet('node/' . $node->id() . '/edit');
-    $this->assertFieldByName('field_paragraphs[0][subform][field_text1][0][value]', $text1);
-    $this->assertFieldByName('field_paragraphs[0][subform][field_text2][0][value]', $text2);
-    $this->drupalPostForm(NULL, [], t('Save'));
-    $this->assertText($text1);
-    $this->assertText($text2);
+    $this->assertSession()->fieldValueEquals('field_paragraphs[0][subform][field_text1][0][value]', $text1);
+    $this->assertSession()->fieldValueEquals('field_paragraphs[0][subform][field_text2][0][value]', $text2);
+    $this->drupalPostForm(NULL, [], 'Save');
+    $this->assertSession()->pageTextContains($text1);
+    $this->assertSession()->pageTextContains($text2);
 
     // Clone node.
     $this->clickLink('Clone');
     $this->drupalGet('clone/' . $node->id() . '/quick_clone');
-    $this->assertFieldByName('field_paragraphs[0][subform][field_text1][0][value]', $text1);
-    $this->assertFieldByName('field_paragraphs[0][subform][field_text2][0][value]', '');
+    $this->assertSession()->fieldValueEquals('field_paragraphs[0][subform][field_text1][0][value]', $text1);
+    $this->assertSession()->fieldValueEquals('field_paragraphs[0][subform][field_text2][0][value]', '');
     $this->drupalPostForm('clone/' . $node->id() . '/quick_clone', [], 'Save');
-    $this->assertRaw('Clone of ' . $title_value);
+    $this->assertSession()->responseContains('Clone of ' . $title_value);
 
     // Make sure text_2 paragraph was cloned.
-    $this->assertText($text1);
+    $this->assertSession()->pageTextContains($text1);
 
     // Make sure text_2 paragraph was not cloned.
-    $this->assertNoText($text2);
+    $this->assertSession()->pageTextNotContains($text2);
   }
 
 }

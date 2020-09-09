@@ -1,20 +1,18 @@
 <?php
 
-namespace Drupal\quick_node_clone\Tests;
+namespace Drupal\Tests\quick_node_clone\Functional;
 
-use Drupal\simpletest\WebTestBase;
+use Drupal\Tests\BrowserTestBase;
 
 /**
  * Tests node cloning.
  *
  * @group Quick Node Clone
  */
-class QuickNodeCloneTests extends WebTestBase {
+class QuickNodeCloneTest extends BrowserTestBase {
 
   /**
-   * The installation profile to use with this test.
-   *
-   * @var string
+   * {@inheritdoc}
    */
   protected $profile = 'standard';
 
@@ -23,7 +21,7 @@ class QuickNodeCloneTests extends WebTestBase {
    *
    * @var array
    */
-  public static $modules = array('quick_node_clone');
+  public static $modules = ['quick_node_clone'];
 
   /**
    * A user with the 'Administer quick_node_clone' permission.
@@ -35,7 +33,7 @@ class QuickNodeCloneTests extends WebTestBase {
   /**
    * {@inheritdoc}
    */
-  protected function setUp() {
+  protected function setUp(): void {
     parent::setUp();
 
     // Create admin user.
@@ -50,34 +48,32 @@ class QuickNodeCloneTests extends WebTestBase {
   /**
    * Test node clone.
    */
-  function testNodeClone() {
+  public function testNodeClone() {
     $this->drupalLogin($this->adminUser);
 
     // Configure module.
-    //$this->drupalGet('admin/config/quick-node-clone');
     $edit = [
       'text_to_prepend_to_title' => 'Cloned from',
     ];
-    $this->drupalPostForm('admin/config/quick-node-clone', $edit, t('Save configuration'));
+    $this->drupalPostForm('admin/config/quick-node-clone', $edit, 'Save configuration');
 
     // Create a basic page.
     $title_value = $this->randomGenerator->word(10);
-    $body_value =  $this->randomGenerator->sentences(10);
+    $body_value = $this->randomGenerator->sentences(10);
     $edit = [
       'title[0][value]' => $title_value,
       'body[0][value]' => $body_value,
-      'body[0][format]' => 'basic_html',
     ];
-    $this->drupalPostForm('node/add/page', $edit, t('Save'));
-    $this->assertRaw($title_value);
-    $this->assertRaw($body_value);
+    $this->drupalPostForm('node/add/page', $edit, 'Save');
+    $this->assertSession()->responseContains($title_value);
+    $this->assertSession()->responseContains($body_value);
 
     // Clone node.
     $this->clickLink('Clone');
     $node = $this->getNodeByTitle($title_value);
     $this->drupalPostForm('clone/' . $node->id() . '/quick_clone', [], 'Save');
-    $this->assertRaw('Cloned from ' . $title_value);
-    $this->assertRaw($body_value);
+    $this->assertSession()->responseContains('Cloned from ' . $title_value);
+    $this->assertSession()->responseContains($body_value);
   }
 
 }

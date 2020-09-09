@@ -1,15 +1,15 @@
 <?php
 
-namespace Drupal\quick_node_clone\Tests;
+namespace Drupal\Tests\quick_node_clone\Functional;
 
-use Drupal\simpletest\WebTestBase;
+use Drupal\Tests\BrowserTestBase;
 
 /**
  * Tests node cloning excluding node fields.
  *
  * @group Quick Node Clone
  */
-class QuickNodeCloneExcludeNodeFieldsTests extends WebTestBase {
+class QuickNodeCloneExcludeNodeFieldsTest extends BrowserTestBase {
 
   /**
    * The installation profile to use with this test.
@@ -23,7 +23,7 @@ class QuickNodeCloneExcludeNodeFieldsTests extends WebTestBase {
    *
    * @var array
    */
-  public static $modules = array('quick_node_clone');
+  public static $modules = ['quick_node_clone'];
 
   /**
    * A user with the 'Administer quick_node_clone' permission.
@@ -35,7 +35,7 @@ class QuickNodeCloneExcludeNodeFieldsTests extends WebTestBase {
   /**
    * {@inheritdoc}
    */
-  protected function setUp() {
+  protected function setUp(): void {
     parent::setUp();
 
     // Create admin user.
@@ -46,7 +46,8 @@ class QuickNodeCloneExcludeNodeFieldsTests extends WebTestBase {
       'create page content',
     ]);
 
-    // Since we don't have ajax here, we need to set the config manually then test the form.
+    // Since we don't have ajax here, we need to set the config manually then
+    // test the form.
     \Drupal::configFactory()->getEditable('quick_node_clone.settings')
       ->set('exclude.node.page', ['body'])
       ->save();
@@ -55,7 +56,7 @@ class QuickNodeCloneExcludeNodeFieldsTests extends WebTestBase {
   /**
    * Test node clone excluding fields.
    */
-  function testNodeCloneExcludeNodeFields() {
+  public function testNodeCloneExcludeNodeFields() {
     $this->drupalLogin($this->adminUser);
 
     // Test the form.
@@ -64,27 +65,26 @@ class QuickNodeCloneExcludeNodeFieldsTests extends WebTestBase {
       'bundle_names[page]' => TRUE,
       'page[body]' => TRUE,
     ];
-    $this->drupalPostForm('admin/config/quick-node-clone', $edit, t('Save configuration'));
+    $this->drupalPostForm('admin/config/quick-node-clone', $edit, 'Save configuration');
 
     // Create a basic page.
     $title_value = $this->randomGenerator->word(10);
-    $body_value =  $this->randomGenerator->sentences(10);
+    $body_value = $this->randomGenerator->sentences(10);
     $edit = [
       'title[0][value]' => $title_value,
       'body[0][value]' => $body_value,
-      'body[0][format]' => 'basic_html',
     ];
-    $this->drupalPostForm('node/add/page', $edit, t('Save'));
-    $this->assertRaw($title_value);
-    $this->assertRaw($body_value);
+    $this->drupalPostForm('node/add/page', $edit, 'Save');
+    $this->assertSession()->responseContains($title_value);
+    $this->assertSession()->responseContains($body_value);
 
     // Clone node.
     $this->clickLink('Clone');
     $node = $this->getNodeByTitle($title_value);
     $this->drupalGet('clone/' . $node->id() . '/quick_clone');
     $this->drupalPostForm('clone/' . $node->id() . '/quick_clone', [], 'Save');
-    $this->assertRaw('Cloned from ' . $title_value);
-    $this->assertNoRaw($body_value);
+    $this->assertSession()->responseContains('Cloned from ' . $title_value);
+    $this->assertSession()->responseNotContains($body_value);
   }
 
 }
