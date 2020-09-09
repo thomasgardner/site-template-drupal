@@ -24,11 +24,12 @@ settings:
   follow_parent: child
   level: 1
   depth: 0
-  expand: true
+  expand_all_items: true
   parent: 'about-ucsc-left-sidebar:menu_link_content:4da1430b-7df1-4a2f-a398-9fb8efee5326'
   suggestion: vertical
-  label_type: fixed_parent
-  label_link: 1
+  label_type: fixed
+  label_link: true
+  hide_on_nonactive: 0
 visibility:
   request_path:
     id: request_path

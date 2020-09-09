@@ -24,11 +24,13 @@ settings:
   follow_parent: child
   level: 1
   depth: 0
-  expand: false
+  expand_all_items: false
   parent: 'newscenter---filter-3:'
   suggestion: list
   label_type: block
-  label_link: 0
+  label_link: false
+  hide_on_nonactive: 0
+  expand: false
 visibility:
   request_path:
     id: request_path

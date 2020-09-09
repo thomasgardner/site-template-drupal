@@ -27,9 +27,11 @@ settings:
   follow_parent: child
   level: 1
   depth: 0
-  expand: false
+  expand_all_items: false
   parent: 'header-menu---cta-buttons:'
   suggestion: header_menu___cta_buttons
   label_type: block
-  label_link: 0
+  label_link: false
+  hide_on_nonactive: 0
+  expand: false
 visibility: {  }
