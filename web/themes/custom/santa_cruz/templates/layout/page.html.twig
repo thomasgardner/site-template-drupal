@@ -102,6 +102,13 @@
       {{ page.above_content }}
     </div>
   {% endif %}
+
+  {% if page.sidebar_first.mainnavigation %}
+    <div class="grid-container hide-for-xlarge sidebar-navigation-mobile">
+      {{ page.sidebar_first.mainnavigation }}
+    </div>
+  {% endif %}
+
   <div class="page-content pb-0 {{ main_grid }}" id="main-content" role="main">
     <section class="content">
       {% set layout_attribute = create_attribute() %}
@@ -124,12 +131,12 @@
               {{ page.content }}
             </div>
             {% if page.sidebar_first %}
-              <div class="column-support">
+              <div class="column-support sidebar-first">
                 {{ page.sidebar_first }}
               </div>
             {% endif %}
             {% if page.sidebar_second %}
-              <div class="column-support">
+              <div class="column-support sidebar-second">
                 <div class="content-block">
                   {{ page.sidebar_second }}
                 </div>
