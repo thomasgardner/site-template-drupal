@@ -25,7 +25,7 @@
                 <div class="tabs-panel" id="panel-{{ key }}" role="tabpanel" aria-labelledby="panel-{{ key }}-label"
                      aria-hidden="true">
                   <h3>{{ item|field_label }}</h3>
-                  <div>{{ item|field_value }}</div>
+                  {{ item|field_value }}
                 </div>
               {% endif %}
             {% endfor %}

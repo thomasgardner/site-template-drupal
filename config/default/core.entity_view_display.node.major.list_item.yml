@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.major.field_awards_v2
     - field.field.node.major.field_caption_formatted
     - field.field.node.major.field_careers
+    - field.field.node.major.field_careers_information_v2
     - field.field.node.major.field_degrees
     - field.field.node.major.field_eap_v2
     - field.field.node.major.field_facilities_v2
@@ -33,14 +34,14 @@ mode: list_item
 content:
   field_alumni_focus_v2:
     type: text_default
-    weight: 17
+    weight: 12
     region: content
     label: above
     settings: {  }
     third_party_settings: {  }
   field_awards_v2:
     type: text_default
-    weight: 15
+    weight: 11
     region: content
     label: above
     settings: {  }
@@ -60,7 +61,7 @@ content:
     type: text_default
     region: content
   field_careers:
-    weight: 23
+    weight: 15
     label: hidden
     settings:
       link: true
@@ -74,6 +75,13 @@ content:
         fences_label_classes: ''
     type: entity_reference_label
     region: content
+  field_careers_information_v2:
+    type: text_default
+    weight: 8
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
   field_degrees:
     weight: 4
     label: hidden
@@ -91,28 +99,28 @@ content:
     region: content
   field_eap_v2:
     type: text_default
-    weight: 13
+    weight: 10
     region: content
     label: above
     settings: {  }
     third_party_settings: {  }
   field_facilities_v2:
     type: text_default
-    weight: 11
+    weight: 9
     region: content
     label: above
     settings: {  }
     third_party_settings: {  }
   field_first_year_v2:
     type: text_default
-    weight: 7
+    weight: 6
     region: content
     label: above
     settings: {  }
     third_party_settings: {  }
   field_general_catalog_v2:
     type: text_default
-    weight: 19
+    weight: 13
     region: content
     label: above
     settings: {  }
@@ -154,7 +162,7 @@ content:
     region: content
   field_more_v2:
     type: text_default
-    weight: 21
+    weight: 14
     region: content
     label: above
     settings: {  }
@@ -168,7 +176,7 @@ content:
     third_party_settings: {  }
   field_transfers_v2:
     type: text_default
-    weight: 9
+    weight: 7
     region: content
     label: above
     settings: {  }

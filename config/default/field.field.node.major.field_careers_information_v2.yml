@@ -1,0 +1,29 @@
+uuid: d5a6f871-fa16-41f9-b079-b979bcbe0b95
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_careers_information_v2
+    - node.type.major
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    full_html: '0'
+    basic_html: '0'
+    restricted_html: '0'
+    plain_text: '0'
+    code: '0'
+id: node.major.field_careers_information_v2
+field_name: field_careers_information_v2
+entity_type: node
+bundle: major
+label: Careers
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

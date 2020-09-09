@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.major.field_awards_v2
     - field.field.node.major.field_caption_formatted
     - field.field.node.major.field_careers
+    - field.field.node.major.field_careers_information_v2
     - field.field.node.major.field_degrees
     - field.field.node.major.field_eap_v2
     - field.field.node.major.field_facilities_v2
@@ -34,23 +35,15 @@ third_party_settings:
       children:
         - field_caption_formatted
         - field_opportunities_v2
-        - field_opportunities_long_txt
         - field_first_year_v2
-        - field_first_year_long_txt
         - field_transfers_v2
-        - field_transfers_long_txt
+        - field_careers_information_v2
         - field_facilities_v2
-        - field_facilities_txt
         - field_eap_v2
-        - field_eap_long_txt
         - field_awards_v2
-        - field_awards_long_txt
         - field_alumni_focus_v2
-        - field_alumni_focus_long_txt
         - field_general_catalog_v2
-        - field_general_catalog_long_txt
         - field_more_v2
-        - field_more_long_txt
       parent_name: ''
       weight: 14
       format_type: details
@@ -117,7 +110,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_alumni_focus_v2:
-    weight: 28
+    weight: 22
     settings:
       rows: 5
       placeholder: ''
@@ -125,7 +118,7 @@ content:
     type: text_textarea
     region: content
   field_awards_v2:
-    weight: 26
+    weight: 21
     settings:
       rows: 5
       placeholder: ''
@@ -150,6 +143,14 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
+  field_careers_information_v2:
+    weight: 18
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
   field_degrees:
     weight: 19
     settings: {  }
@@ -157,7 +158,7 @@ content:
     type: options_buttons
     region: content
   field_eap_v2:
-    weight: 23
+    weight: 20
     settings:
       rows: 5
       placeholder: ''
@@ -165,7 +166,7 @@ content:
     type: text_textarea
     region: content
   field_facilities_v2:
-    weight: 21
+    weight: 19
     settings:
       rows: 5
       placeholder: ''
@@ -173,7 +174,7 @@ content:
     type: text_textarea
     region: content
   field_first_year_v2:
-    weight: 17
+    weight: 16
     settings:
       rows: 5
       placeholder: ''
@@ -181,7 +182,7 @@ content:
     type: text_textarea
     region: content
   field_general_catalog_v2:
-    weight: 30
+    weight: 23
     settings:
       rows: 5
       placeholder: ''
@@ -216,7 +217,7 @@ content:
     type: media_library_widget
     region: content
   field_more_v2:
-    weight: 32
+    weight: 24
     settings:
       rows: 5
       placeholder: ''
@@ -244,7 +245,7 @@ content:
       default_paragraph_type: ''
     third_party_settings: {  }
   field_transfers_v2:
-    weight: 19
+    weight: 17
     settings:
       rows: 5
       placeholder: ''
