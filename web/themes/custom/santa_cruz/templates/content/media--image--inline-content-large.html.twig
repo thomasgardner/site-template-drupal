@@ -14,6 +14,6 @@
 
 {% set file_url = file_url(content.field_media_image['#object'].field_media_image.entity.uri.value|image_style('inline_media')) %}
 {% set file_name = content.field_media_image['#object'].field_media_image.entity.filename.value %}
-
+<article{{ attributes }}>
 <img src="{{ file_url }}" alt="{{ file_name }}">
-
+</article>
