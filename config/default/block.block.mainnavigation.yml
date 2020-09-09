@@ -1,33 +1,33 @@
-uuid: c404f597-6304-4b82-8ce0-7c8fc7abe3a0
+uuid: 779578a4-1c67-46a0-84fd-9abdfd61902d
 langcode: en
 status: true
 dependencies:
   config:
-    - system.menu.about-ucsc-left-sidebar
+    - system.menu.main
   module:
     - menu_block
     - system
   theme:
     - santa_cruz
-id: aboutucscleftsidebar
+id: mainnavigation
 theme: santa_cruz
 region: sidebar_first
-weight: 0
+weight: -19
 provider: null
-plugin: 'menu_block:about-ucsc-left-sidebar'
+plugin: 'menu_block:main'
 settings:
-  id: 'menu_block:about-ucsc-left-sidebar'
-  label: 'About UCSC Left Sidebar'
+  id: 'menu_block:main'
+  label: 'Left Sidebar Navigation'
   provider: menu_block
   label_display: visible
   follow: false
   follow_parent: child
-  level: 1
-  depth: 0
-  expand_all_items: true
-  parent: 'about-ucsc-left-sidebar:menu_link_content:4da1430b-7df1-4a2f-a398-9fb8efee5326'
+  level: 2
+  depth: 3
+  expand_all_items: false
+  parent: 'main:'
   suggestion: vertical
-  label_type: fixed
+  label_type: root
   label_link: true
   hide_on_nonactive: 0
 visibility:
