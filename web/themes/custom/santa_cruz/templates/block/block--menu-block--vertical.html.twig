@@ -11,10 +11,7 @@
           {% endif %}
           <ul class="vertical menu">
             {{ title_prefix }}
-            {# Fixme: need find a way and use correct href. #}
-            <li><a
-                  href="" {{ title_attributes.setAttribute('id', heading_id).addClass('section-title') }}>{{ configuration.label }}</a>
-            </li>
+            <li class="title">{{ configuration.label }}</li>
             {{ title_suffix }}
           </ul>
           {{ content }}
@@ -33,10 +30,7 @@
           {% endif %}
           <ul class="vertical menu">
             {{ title_prefix }}
-            {# Fixme: need find a way and use correct href. #}
-            <li><a
-                  href="" {{ title_attributes.setAttribute('id', heading_id).addClass('section-title') }}>{{ configuration.label }}</a>
-            </li>
+            <li class="title">{{ configuration.label }}</li>
             {{ title_suffix }}
           </ul>
           {{ content }}

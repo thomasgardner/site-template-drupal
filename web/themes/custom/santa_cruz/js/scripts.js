@@ -214,6 +214,7 @@
     attach: function (context, settings) {
       $(context).find('.sidebar-navigation-mobile .sidebar-navigation-desktop').remove();
       $(context).find('.sidebar-first .sidebar-navigation-mobile').remove();
+      $(context).find('.page-menu li.title a').addClass('section-title');
     }
   };
 
