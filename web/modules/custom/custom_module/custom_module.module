@@ -24,6 +24,7 @@ use Drupal\node\NodeInterface;
 use Drupal\paragraphs\Entity\Paragraph;
 use Drupal\taxonomy\Entity\Term;
 use Drupal\views\ViewExecutable;
+use Drupal\Core\Url;
 
 /**
  * Implements hook_help().
@@ -79,8 +80,7 @@ function custom_module_preprocess_block(&$variables) {
           $variables['label'] = \Drupal::service('html_title.filter')
             ->decodeToMarkup($block->label());
         }
-      }
-      // Case - Plugin block.
+      } // Case - Plugin block.
       else {
         $block = Block::load($variables['elements']['#id']);
         $variables['label'] = \Drupal::service('html_title.filter')
@@ -451,21 +451,57 @@ function custom_module_form_views_exposed_form_alter(&$form, FormStateInterface 
           }
 
           $cache_tags = ['node:article:year'];
-          \Drupal::cache()->set($cid, $options, CacheBackendInterface::CACHE_PERMANENT, $cache_tags);
+          \Drupal::cache()
+            ->set($cid, $options, CacheBackendInterface::CACHE_PERMANENT, $cache_tags);
         }
         else {
           $options = $data->data;
         }
 
       }
-
-      $form['year'] = [
-        '#title' => new TranslatableMarkup('Year'),
-        '#type' => 'select',
-        '#options' => $options,
-        '#size' => NULL,
-        '#default_value' => end($options),
+      $form["year"] = [
+        '#prefix' => '<div class="filter-box filter-year-box" id="filter-year" data-toggler="1jx6wi-toggler" data-animate="fade-in fade-out" aria-expanded="false">
+                        <div class="grid-container">
+                            <a class="close-modal" data-toggle="filter-year" aria-controls="filter-year">
+                                <i class="fas fa-times"></i>
+                            </a>
+                            <h4>Filter by Year</h4> 
+                            <br>
+                            <div class="grid-x grid-margin-x">
+                                <div class="cell">
+                                    <ul class="menu-list" style="column-count: 3">',
+        '#suffix' => '</ul></div></div></div></div>',
       ];
+      foreach ($options as $key => $value) {
+        $current_path = \Drupal::service('path.current')->getPath();
+        $cat = \Drupal::request()->query->get('field_categories_target_id');
+        $yr = \Drupal::request()->query->get('year');
+        if (!empty($cat)) {
+          $url = \Drupal::service('path.alias_manager')
+              ->getAliasByPath($current_path) . "?field_categories_target_id=" . $cat . "&year=" . $key . "";
+        }
+        else {
+          $url = \Drupal::service('path.alias_manager')
+              ->getAliasByPath($current_path) . "?year=" . $key . "";
+        }
+        if (!empty($yr)) {
+          if (!empty($cat)) {
+            $url = $url . "&year=" . $key . "";
+          }
+          else {
+            $url = $url . "?year=" . $key . "";
+          }
+        }
+        if ($key != 'all') {
+          $form['year'][$key] = [
+            '#title' => $key,
+            '#type' => 'link',
+            '#url' => Url::fromUserInput($url),
+            '#prefix' => '<li>',
+            '#suffix' => '</li>',
+          ];
+        }
+      }
 
     }
 

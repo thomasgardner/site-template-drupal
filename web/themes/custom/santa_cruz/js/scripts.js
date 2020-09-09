@@ -206,6 +206,19 @@
   };
 
   /**
+   * Remove duplicates of output for Desktop and Mobile versions.
+   *
+   * @type {{attach: Drupal.behaviors.sidebarNavigation.attach}}
+   */
+  Drupal.behaviors.sidebarNavigation = {
+    attach: function (context, settings) {
+      $(context).find('.sidebar-navigation-mobile .sidebar-navigation-desktop').remove();
+      $(context).find('.sidebar-first .sidebar-navigation-mobile').remove();
+      $(context).find('.page-menu li.title a').addClass('section-title');
+    }
+  };
+
+  /**
    * Subsite Navigation.
    *
    * @type {{attach: Drupal.behaviors.subSiteNavigation.attach}}
@@ -239,8 +252,33 @@
     var $archiveForm = $('#views-exposed-form-teaser-archive-news-archive-page'),
       labelValue = $archiveForm.find('.form-item-field-categories-target-id label').text();
 
-    $archiveForm.find("a.filter-control").prepend(labelValue);
-    $('.view-teaser-archive').find('.news-card-list .news-card:first-child, .news-card-list .news-card:nth-child(2)').wrapAll( "<div class='news-card-list split-column'></div>" );
+    $archiveForm.find("a.filter-category").prepend(labelValue);
+    $('.view-teaser-archive').find('.news-card-list .news-card:first-child, .news-card-list .news-card:nth-child(2)').wrapAll("<div class='news-card-list split-column'></div>");
+
+    /*
+    Parameter
+     */
+    var getUrlParameter = function getUrlParameter(sParam) {
+      var sPageURL = window.location.search.substring(1),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+      for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+          return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+        }
+      }
+    };
+    var year = getUrlParameter('year');
+    if (year) {
+      $archiveForm.find('a.filter-year').prepend(year);
+    }
+    else {
+      $archiveForm.find('a.filter-year').prepend(new Date().getFullYear());
+    }
   });
 
 })(jQuery, Drupal, drupalSettings);

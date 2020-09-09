@@ -18,7 +18,7 @@ id: node.page.field_sidebar_content
 field_name: field_sidebar_content
 entity_type: node
 bundle: page
-label: 'Sidebar Content'
+label: 'Right Sidebar Content'
 description: ''
 required: false
 translatable: false
@@ -66,6 +66,9 @@ settings:
         enabled: false
       article_slideshow_item:
         weight: 49
+        enabled: false
+      banner_promo:
+        weight: 104
         enabled: false
       button_list:
         weight: 50
@@ -163,15 +166,6 @@ settings:
       header_banner:
         weight: 66
         enabled: false
-      hero_banner:
-        weight: 18
-        enabled: false
-      hero_slide:
-        weight: 19
-        enabled: false
-      hero_slideshow:
-        weight: 20
-        enabled: false
       historical_fact_card:
         weight: 87
         enabled: false
@@ -204,6 +198,9 @@ settings:
         enabled: false
       major_card_list:
         weight: 73
+        enabled: false
+      news_collection:
+        weight: 148
         enabled: false
       person_carousel:
         weight: 40
@@ -271,6 +268,12 @@ settings:
       sidebar_content_block_department:
         weight: 96
         enabled: false
+      single_feature_story_list:
+        weight: 171
+        enabled: false
+      single_feature_story_list_interi:
+        weight: 172
+        enabled: false
       step:
         weight: 93
         enabled: false
@@ -285,6 +288,15 @@ settings:
         enabled: false
       teaser_card_list:
         weight: 101
+        enabled: false
+      three_story_teaser:
+        weight: 178
+        enabled: false
+      two_banner_promo:
+        weight: 179
+        enabled: false
+      two_feature_story_list:
+        weight: 180
         enabled: false
       upcoming_events:
         weight: 36

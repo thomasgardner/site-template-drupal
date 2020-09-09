@@ -27,9 +27,11 @@ settings:
   follow_parent: child
   level: 1
   depth: 0
-  expand: false
+  expand_all_items: false
   parent: 'footer---connect-to-to-ucsc:'
   suggestion: layout_footer
   label_type: block
-  label_link: 0
+  label_link: false
+  hide_on_nonactive: 0
+  expand: false
 visibility: {  }

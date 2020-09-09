@@ -102,36 +102,41 @@
       {{ page.above_content }}
     </div>
   {% endif %}
-  {% if page.sidebar_first %}
-    <div id="sidebar-first" class="{{ sidebar_first_grid }} columns sidebar">
-      {{ page.sidebar_first }}
+
+  {% if page.sidebar_first.mainnavigation %}
+    <div class="grid-container hide-for-xlarge sidebar-navigation-mobile">
+      {{ page.sidebar_first.mainnavigation }}
     </div>
   {% endif %}
 
   <div class="page-content pb-0 {{ main_grid }}" id="main-content" role="main">
     <section class="content">
+      {% set layout_attribute = create_attribute() %}
+      {% set layout_classes = [
+        'large',
+      ] %}
       {% if page.sidebar_first and page.sidebar_second %}
-        {% set layout = 'layout-three-column' %}
-      {% elseif page.sidebar_first or page.sidebar_second %}
-        {% set layout = 'layout-two-column' %}
+        {% set layout_classes = layout_classes|merge(['layout-three-column', 'sidebar-left', 'sidebar-right']) %}
+      {% elseif page.sidebar_first and page.sidebar_second is empty %}
+        {% set layout_classes = layout_classes|merge(['layout-two-column', 'sidebar-left']) %}
+      {% elseif page.sidebar_second and page.sidebar_first is empty %}
+        {% set layout_classes = layout_classes|merge(['layout-two-column', 'sidebar-right']) %}
       {% else %}
-        {% set layout = 'layout-one-column' %}
+        {% set layout_classes = layout_classes|merge(['layout-one-column']) %}
       {% endif %}
-      <div class="{{ layout }} large">
+      <div {{ layout_attribute.addClass(layout_classes) }}>
         <div class="wrap">
           <div class="inner">
-            {% if page.sidebar_first %}
-              <div class="column-support">
-                <div class="content-block">
-                  {{ page.sidebar_first }}
-                </div>
-              </div>
-            {% endif %}
             <div class="column-main">
               {{ page.content }}
             </div>
+            {% if page.sidebar_first %}
+              <div class="column-support sidebar-first">
+                {{ page.sidebar_first }}
+              </div>
+            {% endif %}
             {% if page.sidebar_second %}
-              <div class="column-support">
+              <div class="column-support sidebar-second">
                 <div class="content-block">
                   {{ page.sidebar_second }}
                 </div>

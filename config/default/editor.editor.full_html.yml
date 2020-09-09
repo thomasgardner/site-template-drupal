@@ -70,9 +70,7 @@ settings:
     language:
       language_list: un
     stylescombo:
-      styles: "blockquote|blockquote\r\npre|pre\r\ncode|code\r\nsmall|small\r\nimg.img-responsive|Img Responsive\r\ndiv.inline|Inline\r\n"
-    autoembed:
-      status: embed
+      styles: "blockquote|blockquote\r\npre|pre\r\ncode|code\r\nsmall|small\r\nimg.img-responsive|Img Responsive\r\ndiv.inline|Inline\r\ndiv.last-mod-date|Last Modified\r\n"
     video_embed:
       defaults:
         children:

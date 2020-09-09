@@ -5,7 +5,8 @@
 {% set is_nested = true %}
 
 <div class="filter-controls text-center">
-  <a class="filter-control" data-toggle="filter-category" aria-controls="filter-category"> <i class="fas fa-angle-down"></i></a>
+  <a class="filter-control filter-category" data-toggle="filter-category" aria-controls="filter-category"> <i class="fas fa-angle-down"></i></a>
+  <a class="filter-control filter-year" data-toggle="filter-year" aria-controls="filter-year">{{ app.request.get("year") }} <i class="fas fa-angle-down"></i></a>
 </div>
 
 <div class="filter-box" id="filter-category" data-toggler="6ic7t7-toggler" data-animate="fade-in fade-out" aria-expanded="false" style="display: none;">

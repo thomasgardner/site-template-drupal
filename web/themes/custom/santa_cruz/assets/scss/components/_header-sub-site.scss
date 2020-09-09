@@ -113,6 +113,7 @@
 
     .subsite-brand {
         max-width: 260px;
+        width: 100%;
         @include breakpoint(xlarge) {
             float: left;
         }
