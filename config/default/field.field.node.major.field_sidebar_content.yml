@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_sidebar_content
     - node.type.major
+    - paragraphs.paragraphs_type.sidebar_button
     - paragraphs.paragraphs_type.sidebar_content_block
   module:
     - entity_reference_revisions
@@ -12,7 +13,7 @@ id: node.major.field_sidebar_content
 field_name: field_sidebar_content
 entity_type: node
 bundle: major
-label: 'Sidebar Content'
+label: 'Right Sidebar Content'
 description: ''
 required: false
 translatable: true
@@ -23,6 +24,7 @@ settings:
   handler_settings:
     negate: 0
     target_bundles:
+      sidebar_button: sidebar_button
       sidebar_content_block: sidebar_content_block
     target_bundles_drag_drop:
       2_column_cta:
@@ -248,8 +250,8 @@ settings:
         weight: 164
         enabled: false
       sidebar_button:
+        enabled: true
         weight: 165
-        enabled: false
       sidebar_content_block:
         enabled: true
         weight: 166
