@@ -1,0 +1,19 @@
+uuid: 3e381c3d-3bed-41f0-b354-ac513b04397b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_general_catalog_v2
+field_name: field_general_catalog_v2
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

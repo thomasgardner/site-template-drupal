@@ -4,21 +4,22 @@ status: false
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.major.field_alumni_focus_long_txt
-    - field.field.node.major.field_awards_long_txt
+    - field.field.node.major.field_alumni_focus_v2
+    - field.field.node.major.field_awards_v2
     - field.field.node.major.field_caption_formatted
     - field.field.node.major.field_careers
     - field.field.node.major.field_degrees
-    - field.field.node.major.field_eap_long_txt
-    - field.field.node.major.field_facilities_txt
-    - field.field.node.major.field_first_year_long_txt
-    - field.field.node.major.field_general_catalog_long_txt
+    - field.field.node.major.field_eap_v2
+    - field.field.node.major.field_facilities_v2
+    - field.field.node.major.field_first_year_v2
+    - field.field.node.major.field_general_catalog_v2
+    - field.field.node.major.field_hero_content
     - field.field.node.major.field_link
     - field.field.node.major.field_media
-    - field.field.node.major.field_more_long_txt
-    - field.field.node.major.field_opportunities_long_txt
+    - field.field.node.major.field_more_v2
+    - field.field.node.major.field_opportunities_v2
     - field.field.node.major.field_sidebar_content
-    - field.field.node.major.field_transfers_long_txt
+    - field.field.node.major.field_transfers_v2
     - node.type.major
   module:
     - user
@@ -38,19 +39,21 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
-  field_alumni_focus_long_txt: true
-  field_awards_long_txt: true
+  field_alumni_focus_v2: true
+  field_awards_v2: true
   field_caption_formatted: true
   field_careers: true
   field_degrees: true
-  field_eap_long_txt: true
-  field_facilities_txt: true
-  field_first_year_long_txt: true
-  field_general_catalog_long_txt: true
+  field_eap_v2: true
+  field_facilities_v2: true
+  field_first_year_v2: true
+  field_general_catalog_v2: true
+  field_hero_content: true
   field_link: true
   field_media: true
-  field_more_long_txt: true
-  field_opportunities_long_txt: true
+  field_more_v2: true
+  field_opportunities_v2: true
   field_sidebar_content: true
-  field_transfers_long_txt: true
+  field_transfers_v2: true
   langcode: true
+  search_api_excerpt: true
