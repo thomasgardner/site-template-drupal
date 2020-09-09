@@ -149,6 +149,9 @@
       @include xy-cell();
     }
 
+    .paragraph--type--article-card-list &{
+      flex-flow: column;
+    }
   }
 
   &.full-width {
