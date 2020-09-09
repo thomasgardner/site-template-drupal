@@ -1,8 +1,0 @@
-uuid: daf02b22-10d4-488a-a4e0-19c1714f582a
-langcode: en
-status: true
-dependencies: {  }
-id: about-ucsc-left-sidebar
-label: 'About UCSC Left Sidebar'
-description: ''
-locked: false

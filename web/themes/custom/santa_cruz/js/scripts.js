@@ -206,6 +206,18 @@
   };
 
   /**
+   * Remove duplicates of output for Desktop and Mobile versions.
+   *
+   * @type {{attach: Drupal.behaviors.sidebarNavigation.attach}}
+   */
+  Drupal.behaviors.sidebarNavigation = {
+    attach: function (context, settings) {
+      $(context).find('.sidebar-navigation-mobile .sidebar-navigation-desktop').remove();
+      $(context).find('.sidebar-first .sidebar-navigation-mobile').remove();
+    }
+  };
+
+  /**
    * Subsite Navigation.
    *
    * @type {{attach: Drupal.behaviors.subSiteNavigation.attach}}
@@ -240,7 +252,7 @@
       labelValue = $archiveForm.find('.form-item-field-categories-target-id label').text();
 
     $archiveForm.find("a.filter-category").prepend(labelValue);
-    $('.view-teaser-archive').find('.news-card-list .news-card:first-child, .news-card-list .news-card:nth-child(2)').wrapAll( "<div class='news-card-list split-column'></div>" );
+    $('.view-teaser-archive').find('.news-card-list .news-card:first-child, .news-card-list .news-card:nth-child(2)').wrapAll("<div class='news-card-list split-column'></div>");
 
     /*
     Parameter
@@ -260,9 +272,10 @@
       }
     };
     var year = getUrlParameter('year');
-    if(year){
+    if (year) {
       $archiveForm.find('a.filter-year').prepend(year);
-    } else{
+    }
+    else {
       $archiveForm.find('a.filter-year').prepend(new Date().getFullYear());
     }
   });
