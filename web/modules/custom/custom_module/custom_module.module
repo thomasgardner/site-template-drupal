@@ -29,8 +29,7 @@ use Drupal\Core\Url;
 /**
  * Implements hook_help().
  */
-function custom_module_help($path, $arg)
-{
+function custom_module_help($path, $arg) {
   switch ($path) {
     case "help.page.custom_module":
       return '' . t("Nothing to show for now.") . '';
@@ -40,8 +39,7 @@ function custom_module_help($path, $arg)
 /**
  * Implements hook__page_attachments()
  */
-function custom_module_page_attachments(array &$attachments)
-{
+function custom_module_page_attachments(array &$attachments) {
   // Get current route.
   $route = \Drupal::routeMatch()->getRouteName();
   // Check route set in custom_module.routing.yml file.
@@ -56,8 +54,7 @@ function custom_module_page_attachments(array &$attachments)
 /**
  * Implements template_preprocess_block().
  */
-function custom_module_preprocess_block(&$variables)
-{
+function custom_module_preprocess_block(&$variables) {
   // Allow to have some HTML for the titles of the blocks.
   if (\Drupal::service('module_handler')->moduleExists('html_title')) {
     // Case - menu block.
@@ -65,11 +62,13 @@ function custom_module_preprocess_block(&$variables)
       && $variables['configuration']['label'] !== '') {
       $variables['configuration']['label'] = \Drupal::service('html_title.filter')
         ->decodeToMarkup($variables['configuration']['label']);
-    } elseif (isset($variables['content']['#menu_block_configuration']['label'])
+    }
+    elseif (isset($variables['content']['#menu_block_configuration']['label'])
       && $variables['content']['#menu_block_configuration']['label'] != '') {
       $variables['content']['#menu_block_configuration']['label'] = \Drupal::service('html_title.filter')
         ->decodeToMarkup($variables['content']['#menu_block_configuration']['label']);
-    } elseif (isset($variables['label'])
+    }
+    elseif (isset($variables['label'])
       && is_string($variables['label'])
       && $variables['label'] != '') {
       $content = $variables['elements']['content'];
@@ -94,16 +93,14 @@ function custom_module_preprocess_block(&$variables)
 /**
  * Implements hook_block_view_BASE_BLOCK_ID_alter().
  */
-function custom_module_block_view_system_branding_block_alter(array &$build, BlockPluginInterface $block)
-{
+function custom_module_block_view_system_branding_block_alter(array &$build, BlockPluginInterface $block) {
   $build['#pre_render'][] = 'custom_module_block_view_pre_render';
 }
 
 /**
  * #pre_render callback: Sets color preset logo.
  */
-function custom_module_block_view_pre_render(array $build)
-{
+function custom_module_block_view_pre_render(array $build) {
   // Force a sub site logo for debugging by adding /?force-subsite to a request.
   // Or always add $settings['is_subsite'] = TRUE; for each sub site.
   if (Settings::get('is_subsite', FALSE) === TRUE) {
@@ -125,8 +122,7 @@ function custom_module_block_view_pre_render(array $build)
 /**
  * Implements hook_block_access().
  */
-function custom_module_block_access(Block $block, $operation, AccountInterface $account)
-{
+function custom_module_block_access(Block $block, $operation, AccountInterface $account) {
   // Hide a sub site "Site branding" block for main website.
   if ($operation == 'view'
     && $block->getPluginId() == 'system_branding_block'
@@ -141,8 +137,7 @@ function custom_module_block_access(Block $block, $operation, AccountInterface $
 /**
  * Implements hook_entity_bundle_field_info_alter().
  */
-function custom_module_entity_bundle_field_info_alter(&$fields, EntityTypeInterface $entity_type, $bundle)
-{
+function custom_module_entity_bundle_field_info_alter(&$fields, EntityTypeInterface $entity_type, $bundle) {
   if (!empty($fields['field_end_date'])) {
     $fields['field_end_date']->addConstraint('StartEndDateChecking');
   }
@@ -151,8 +146,7 @@ function custom_module_entity_bundle_field_info_alter(&$fields, EntityTypeInterf
 /**
  * Implements hook_preprocess_views_view_field.
  */
-function kwall_preprocess_views_view_field(&$vars)
-{
+function kwall_preprocess_views_view_field(&$vars) {
   if ($vars['view']->storage->id() == 'academics') {
 
     if ($vars['field']->options['id'] == 'term_node_tid_1') {
@@ -174,8 +168,7 @@ function kwall_preprocess_views_view_field(&$vars)
 /**
  * Implements hook_views_pre_view().
  */
-function custom_module_views_pre_view(ViewExecutable $view, $display_id, array &$args)
-{
+function custom_module_views_pre_view(ViewExecutable $view, $display_id, array &$args) {
   // Apply custom arguments to the views.
   // View display in column content paragraph.
   if ($view->id() == 'article_view' && $display_id == 'block_2') {
@@ -270,8 +263,7 @@ function custom_module_views_pre_view(ViewExecutable $view, $display_id, array &
  * @return string
  * @deprecated Use _cm_get_nodes_by_term() or _cm_check_content_field_uses().
  */
-function kwall_get_article_selected_taxonomy($pid)
-{
+function kwall_get_article_selected_taxonomy($pid) {
   $connection = \Drupal::database();
   $cat = '';
   $result = $connection->query("SELECT paragraphs_item_revision_field_data.id AS paragraphs_item_revision_field_data_id, paragraphs_item_field_data_paragraph_revision__field_column_section__paragraph__field_article_category.field_article_category_target_id AS paragraphs_item_field_data_paragraph_revision__field_column_, paragraph_revision__field_article_category.field_article_category_target_id AS paragraph_revision__field_article_category_field_article_cat, MIN(paragraphs_item_revision_field_data.revision_id) AS revision_id, MIN(paragraphs_item_field_data_paragraph_revision__field_column_section.id) AS paragraphs_item_field_data_paragraph_revision__field_column__1
@@ -297,8 +289,7 @@ GROUP BY paragraphs_item_revision_field_data_id, paragraphs_item_field_data_para
  * @return string
  * @deprecated Use _cm_get_nodes_by_term() or _cm_check_content_field_uses().
  */
-function kwall_get_news_selected_taxonomy($pid)
-{
+function kwall_get_news_selected_taxonomy($pid) {
   $connection = \Drupal::database();
   $cat = '';
   $result = $connection->query("SELECT paragraphs_item_field_data.id AS id, paragraphs_item_field_data_paragraph__field_column_section.id AS paragraphs_item_field_data_paragraph__field_column_section_i, taxonomy_term_field_data_paragraph__field_event_category.tid AS taxonomy_term_field_data_paragraph__field_event_category_tid
@@ -320,8 +311,7 @@ WHERE ((paragraphs_item_field_data.id = '" . $pid . "')) AND ((paragraphs_item_f
 /**
  *
  */
-function custom_module_entity_extra_field_info()
-{
+function custom_module_entity_extra_field_info() {
   $extra_field = [];
 
   $extra_field['node']['event']['display']['extra_date_field'] = [
@@ -344,8 +334,7 @@ function custom_module_entity_extra_field_info()
 /**
  *
  */
-function custom_module_node_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode)
-{
+function custom_module_node_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
   if ($view_mode == 'full' && $entity->getType() == 'event') {
     if ($display->getComponent('extra_date_field')) {
 
@@ -371,7 +360,8 @@ function custom_module_node_view(array &$build, EntityInterface $entity, EntityV
           '#type' => 'markup',
           '#markup' => '<div class="time"><div class="label">Time:</div>' . 'ALL DAY' . '</div>',
         ];
-      } else {
+      }
+      else {
 
         date_default_timezone_set("UTC");
 
@@ -406,8 +396,7 @@ function custom_module_node_view(array &$build, EntityInterface $entity, EntityV
 /**
  * Add Class if we have values in Exposed form.
  */
-function custom_module_form_views_exposed_form_alter(&$form, FormStateInterface $form_state, $form_id)
-{
+function custom_module_form_views_exposed_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   $view = $form_state->getStorage('view');
   if ($view) {
     $inputs = $form_state->getUserInput();
@@ -462,8 +451,10 @@ function custom_module_form_views_exposed_form_alter(&$form, FormStateInterface 
           }
 
           $cache_tags = ['node:article:year'];
-          \Drupal::cache()->set($cid, $options, CacheBackendInterface::CACHE_PERMANENT, $cache_tags);
-        } else {
+          \Drupal::cache()
+            ->set($cid, $options, CacheBackendInterface::CACHE_PERMANENT, $cache_tags);
+        }
+        else {
           $options = $data->data;
         }
 
@@ -479,31 +470,35 @@ function custom_module_form_views_exposed_form_alter(&$form, FormStateInterface 
                             <div class="grid-x grid-margin-x">
                                 <div class="cell">
                                     <ul class="menu-list" style="column-count: 3">',
-        '#suffix' => '</ul></div></div></div></div>'
+        '#suffix' => '</ul></div></div></div></div>',
       ];
       foreach ($options as $key => $value) {
         $current_path = \Drupal::service('path.current')->getPath();
         $cat = \Drupal::request()->query->get('field_categories_target_id');
         $yr = \Drupal::request()->query->get('year');
         if (!empty($cat)) {
-          $url = \Drupal::service('path.alias_manager')->getAliasByPath($current_path) . "?field_categories_target_id=" . $cat . "&year=" . $key . "";
-        } else {
-          $url = \Drupal::service('path.alias_manager')->getAliasByPath($current_path) . "?year=" . $key . "";
+          $url = \Drupal::service('path.alias_manager')
+              ->getAliasByPath($current_path) . "?field_categories_target_id=" . $cat . "&year=" . $key . "";
+        }
+        else {
+          $url = \Drupal::service('path.alias_manager')
+              ->getAliasByPath($current_path) . "?year=" . $key . "";
         }
         if (!empty($yr)) {
           if (!empty($cat)) {
             $url = $url . "&year=" . $key . "";
-          } else {
+          }
+          else {
             $url = $url . "?year=" . $key . "";
           }
         }
-        if($key != 'all'){
+        if ($key != 'all') {
           $form['year'][$key] = [
             '#title' => $key,
             '#type' => 'link',
             '#url' => Url::fromUserInput($url),
             '#prefix' => '<li>',
-            '#suffix' => '</li>'
+            '#suffix' => '</li>',
           ];
         }
       }
@@ -516,8 +511,7 @@ function custom_module_form_views_exposed_form_alter(&$form, FormStateInterface 
 /**
  * Implements hook_entity_presave().
  */
-function custom_module_entity_presave(EntityInterface $entity)
-{
+function custom_module_entity_presave(EntityInterface $entity) {
   // For better user experience set a media name the same as image title.
   if ($entity instanceof Media) {
     if ($entity->hasField('field_media_image') && !$entity->get('field_media_image')
@@ -533,8 +527,7 @@ function custom_module_entity_presave(EntityInterface $entity)
 /**
  * Implements hook_preprocess_HOOK().
  */
-function custom_module_preprocess_paragraph(&$variables)
-{
+function custom_module_preprocess_paragraph(&$variables) {
   if (isset($variables['paragraph'])
     && $variables['paragraph']->getType() == 'from_library'
     && $variables['paragraph']->hasField('field_reusable_paragraph')
@@ -572,8 +565,7 @@ function custom_module_preprocess_paragraph(&$variables)
  *
  * @return mixed
  */
-function _cm_get_nodes_by_term($term_id)
-{
+function _cm_get_nodes_by_term($term_id) {
   $query = \Drupal::database()->select('taxonomy_index', 'ti');
   $query->fields('ti', ['nid']);
   $query->condition('ti.tid', $term_id);
@@ -596,8 +588,7 @@ function _cm_get_nodes_by_term($term_id)
  * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
  * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
  */
-function _cm_check_content_field_uses($field_name_1 = '', $value_1 = '', $field_name_2 = '', $value_2 = '', $entity_type = 'node', $entity_bundle = '')
-{
+function _cm_check_content_field_uses($field_name_1 = '', $value_1 = '', $field_name_2 = '', $value_2 = '', $entity_type = 'node', $entity_bundle = '') {
   $params = [
     'status' => 1,
   ];
