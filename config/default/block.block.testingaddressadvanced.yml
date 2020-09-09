@@ -12,7 +12,7 @@ dependencies:
 id: testingaddressadvanced
 theme: santa_cruz
 region: footer_middle
-weight: 0
+weight: -16
 provider: null
 plugin: 'block_content:a65f1daf-db5f-4781-b59f-84e5ca8241b0'
 settings:

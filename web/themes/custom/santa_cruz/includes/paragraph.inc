@@ -177,32 +177,3 @@ function santa_cruz_preprocess_paragraph__factoid_card(&$variables) {
     }
   }
 }
-
-/**
- * Implements hook_preprocess_HOOK().
- */
-function santa_cruz_preprocess_paragraph__profile_card__fullwidth(&$variables) {
-  $paragraph = $variables['paragraph'];
-  if ($paragraph instanceof Paragraph) {
-    $variables['field__media_position_class'] = '';
-    if ($paragraph->hasField('field_show_background_style')
-      && !$paragraph->get('field_show_background_style')
-        ->isEmpty() && $paragraph->get('field_show_background_style')
-        ->first()
-        ->getValue()['value']) {
-      $variables['field__media_position_class'] = 'wave-pattern blue';
-    }
-    if ($paragraph->hasField('field_media_position') && !$paragraph->get('field_media_position')
-        ->isEmpty()) {
-      if ($paragraph->get('field_media_position')
-          ->first()
-          ->getValue()['value'] == "left") {
-        $variables['field__media_position_class'] .= ' left';
-      }
-      else {
-        $variables['field__media_position_class'] .= ' right';
-      }
-    }
-  }
-
-}
