@@ -15,6 +15,9 @@ foreach (glob($includes_path) as $filename) {
   require_once dirname(__FILE__) . '/includes/' . basename($filename);
 }
 
+function santa_cruz_preprocess_html(&$variables) {
+  $variables['is_front'] = \Drupal::service('path.matcher')->isFrontPage();
+}
 /**
  * Implements template_preprocess_paragraph().
  */
