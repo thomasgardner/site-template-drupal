@@ -1,9 +1,9 @@
-uuid: 4c32bc1c-ee40-4444-8275-0a6674ae026b
+uuid: 00de26c8-12b4-4c46-833f-da5d10cdd1f6
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_eap_v2
+    - field.storage.node.field_first_year_html
     - node.type.major
   module:
     - allowed_formats
@@ -15,11 +15,11 @@ third_party_settings:
     restricted_html: '0'
     plain_text: '0'
     code: '0'
-id: node.major.field_eap_v2
-field_name: field_eap_v2
+id: node.major.field_first_year_html
+field_name: field_first_year_html
 entity_type: node
 bundle: major
-label: EAP
+label: 'Information for First-Year Students'
 description: ''
 required: false
 translatable: false

@@ -1,9 +1,9 @@
-uuid: d5a6f871-fa16-41f9-b079-b979bcbe0b95
+uuid: 83fe3667-f85a-4028-aa12-dba9fe5ed005
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_careers_information_v2
+    - field.storage.node.field_transfers_html
     - node.type.major
   module:
     - allowed_formats
@@ -15,11 +15,11 @@ third_party_settings:
     restricted_html: '0'
     plain_text: '0'
     code: '0'
-id: node.major.field_careers_information_v2
-field_name: field_careers_information_v2
+id: node.major.field_transfers_html
+field_name: field_transfers_html
 entity_type: node
 bundle: major
-label: Careers
+label: 'Information for Transfers'
 description: ''
 required: false
 translatable: false

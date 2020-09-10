@@ -1,9 +1,9 @@
-uuid: 09577831-157d-4776-bea4-b3e4ce43aa18
+uuid: cba3ccf8-6171-49ea-b519-c4ddfb731959
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_opportunities_v2
+    - field.storage.node.field_eap_html
     - node.type.major
   module:
     - allowed_formats
@@ -15,11 +15,11 @@ third_party_settings:
     restricted_html: '0'
     plain_text: '0'
     code: '0'
-id: node.major.field_opportunities_v2
-field_name: field_opportunities_v2
+id: node.major.field_eap_html
+field_name: field_eap_html
 entity_type: node
 bundle: major
-label: 'Study & Research Opportunities'
+label: EAP
 description: ''
 required: false
 translatable: false

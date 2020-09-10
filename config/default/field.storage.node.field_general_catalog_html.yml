@@ -1,12 +1,12 @@
-uuid: a382ca71-0c6d-447a-ba2a-8643f6feeed3
+uuid: db237fb4-7ba3-489b-ad04-b0ce1c4c7993
 langcode: en
 status: true
 dependencies:
   module:
     - node
     - text
-id: node.field_awards_v2
-field_name: field_awards_v2
+id: node.field_general_catalog_html
+field_name: field_general_catalog_html
 entity_type: node
 type: text_long
 settings: {  }

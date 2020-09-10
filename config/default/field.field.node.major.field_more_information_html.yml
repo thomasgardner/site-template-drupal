@@ -1,9 +1,9 @@
-uuid: 6c46fa98-c2ec-4c93-b76d-303f0d20b93b
+uuid: 69a094a1-a1f3-41ea-bdf9-2fb0dc877de0
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_first_year_v2
+    - field.storage.node.field_more_information_html
     - node.type.major
   module:
     - allowed_formats
@@ -15,11 +15,11 @@ third_party_settings:
     restricted_html: '0'
     plain_text: '0'
     code: '0'
-id: node.major.field_first_year_v2
-field_name: field_first_year_v2
+id: node.major.field_more_information_html
+field_name: field_more_information_html
 entity_type: node
 bundle: major
-label: 'Information for First-Year Students'
+label: 'More Information'
 description: ''
 required: false
 translatable: false
