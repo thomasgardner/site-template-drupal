@@ -96,7 +96,7 @@
   <section{{ attributes.addClass(classes) }} aria-label="content row">
     {% block content %}
       <div class="hero-container">
-        <div id="hero" class="hero hero-text-{{ text_position }}">
+        <div id="hero" class="hero hero-text-{{ text_position }} {{ is_local_video_banner == true ? 'video-banner' : 'image-banner' }}">
           <div class="gradient-overlay"></div>
           {% if is_imabe_banner == true %}
             <img src="{{ image_url }}" title="{{ image_title }}" alt="{{ image_alt }}">
@@ -117,7 +117,7 @@
                 {% endif %}
               </div>
             </div>
-            <img style="position: relative; top: 50%; margin-top: -10%" src="{{ backup_image_url }}"
+            <img style="position: relative; top: 50%; margin-top: -10%; display: none;" src="{{ backup_image_url }}"
                  alt="{{ backup_image_alt }}" title="{{ backup_image_title }}">
           {% endif %}
           {% if content.field_link|field_value is not empty

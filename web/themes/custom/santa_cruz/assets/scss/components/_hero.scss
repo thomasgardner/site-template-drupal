@@ -32,6 +32,9 @@
 
     .hero-text {
       color: $primary-gray;
+      @media screen and (max-width: 1023px){
+        margin-top: -8px;
+      }
 
       &::after {
         background: $primary-yellow;
@@ -53,6 +56,14 @@
         &.hero-text-right {
           .gradient-overlay {
             background: linear-gradient(to left, rgba(0, 60, 108, 1) 0%, rgba(0, 60, 108, 1) 75%, rgba(0, 60, 108, 0) 100%);
+          }
+        }
+
+        &.video-banner{
+          img{
+            @media screen and (max-width: 1023px){
+              display: none;
+            }
           }
         }
       }
@@ -663,6 +674,12 @@
 
     .hero-video {
       left: 25%;
+      @media screen and (max-width: 1023px){
+        left: 0;
+        width: 100%;
+        height: auto;
+        display: block;
+      }
     }
 
     img {
