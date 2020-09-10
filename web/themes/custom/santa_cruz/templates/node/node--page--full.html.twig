@@ -90,7 +90,7 @@
   {# We hide the comments and links now so that we can render them later. #}
   <div{{ content_attributes }}>
     {{ content|without('comment', 'links', 'field_tags') }}
-    {% if node.field_content_bottom is empty or not is_front %}
+    {% if node.field_content_bottom is empty %}
       <div class="last-mod-date">Last Modified: {{ node.changed.value|date("F j, Y") }}</div>
     {% endif %}
   </div>
