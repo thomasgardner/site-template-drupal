@@ -16,18 +16,15 @@
 <div class="alert-low">
   <div class="callout {{ alert_style }}">
     <div class="grid-container large">
-      <div><strong>{{ label[0]['#context'].value }}</strong>:
-        {% if content.field_link|field_value is not empty %}
-{#          <div class="d-inline">#}
-            {% autoescape false %}
-              {{ content.field_alert_body[0]['#text'] }}
-            {% endautoescape %}
-{#          </div>#}
-        {% endif %}
-        {% if content.field_link|field_value is not empty %}
-          <a href="{{ content.field_link[0]['#url'] }}" class="btn-link"
-             target="{{ content.field_link[0]['#url'].isExternal() ? '_blank' : '' }}">{{ content.field_link[0]['#title'] }}</a>
-        {% endif %}
+      <div><p><strong>{{ label[0]['#context'].value }}</strong>:
+          {% if content.field_link|field_value is not empty %}
+            {{ content.field_alert_body[0]['#text']|striptags }}
+          {% endif %}
+          {% if content.field_link|field_value is not empty %}
+            <a href="{{ content.field_link[0]['#url'] }}" class="btn-link"
+               target="{{ content.field_link[0]['#url'].isExternal() ? '_blank' : '' }}">{{ content.field_link[0]['#title'] }}</a>
+          {% endif %}
+        </p>
       </div>
     </div>
   </div>

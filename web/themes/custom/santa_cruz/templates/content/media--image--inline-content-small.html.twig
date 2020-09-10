@@ -13,6 +13,9 @@
 {#{{ dump(content) }}#}
 
 {% set file_url = file_url(content.field_media_image['#object'].field_media_image.entity.uri.value|image_style('inline_media_small')) %}
-{% set file_name = content.field_media_image['#object'].field_media_image.entity.filename.value %}
+{% set file_alt = content.field_media_image['#object'].field_media_image.alt %}
+{% set file_title = content.field_media_image['#object'].field_media_image.title %}
 
-<img src="{{ file_url }}" alt="{{ file_name }}">
+<article{{ attributes }}>
+  <img src="{{ file_url }}" alt="{{ file_alt }}" title="{{ file_title }}">
+</article>
