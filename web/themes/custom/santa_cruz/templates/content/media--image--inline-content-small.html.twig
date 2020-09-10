@@ -10,7 +10,6 @@
  * @see template_preprocess_media()
  */
 #}
-{#{{ dump(content) }}#}
 
 {% set file_url = file_url(content.field_media_image['#object'].field_media_image.entity.uri.value|image_style('inline_media_small')) %}
 {% set file_alt = content.field_media_image['#object'].field_media_image.alt %}

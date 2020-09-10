@@ -67,9 +67,9 @@
 
 .page-content, #page-content {
     position: relative;
-    padding: 1rem .5rem;
+    //padding: 1rem .5rem;
 
-    @include breakpoint(large){
+    @media screen and (min-width: 1024px){
         padding: 4rem 0;
     }
 
