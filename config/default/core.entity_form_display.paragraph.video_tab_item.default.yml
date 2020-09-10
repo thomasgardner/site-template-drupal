@@ -3,17 +3,24 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.video_tab_item.field_media
     - field.field.paragraph.video_tab_item.field_subtitle
     - field.field.paragraph.video_tab_item.field_title
-    - field.field.paragraph.video_tab_item.field_video_embed
     - paragraphs.paragraphs_type.video_tab_item
   module:
-    - video_embed_field
+    - media_library
 id: paragraph.video_tab_item.default
 targetEntityType: paragraph
 bundle: video_tab_item
 mode: default
 content:
+  field_media:
+    weight: 2
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    type: media_library_widget
+    region: content
   field_subtitle:
     weight: 1
     settings:
@@ -29,12 +36,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-    region: content
-  field_video_embed:
-    weight: 2
-    settings: {  }
-    third_party_settings: {  }
-    type: video_embed_field_textfield
     region: content
 hidden:
   created: true

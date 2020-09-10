@@ -3,7 +3,8 @@ langcode: en
 status: true
 dependencies: {  }
 id: video_tab_item
-label: 'Video Tab Item'
+label: 'Zzz - Video Tab Item'
 icon_uuid: null
+icon_default: null
 description: ''
 behavior_plugins: {  }

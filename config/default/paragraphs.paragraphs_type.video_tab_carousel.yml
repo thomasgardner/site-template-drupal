@@ -3,7 +3,8 @@ langcode: en
 status: true
 dependencies: {  }
 id: video_tab_carousel
-label: 'Video Tab Carousel'
+label: 'Zzz - Video Tab Carousel'
 icon_uuid: null
+icon_default: null
 description: ''
 behavior_plugins: {  }
