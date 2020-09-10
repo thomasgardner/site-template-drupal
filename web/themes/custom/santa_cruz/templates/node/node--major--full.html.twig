@@ -10,9 +10,11 @@
                 data-allow-all-closed="true" id="example-tabs" role="tablist" data-tabs="iugubg-tabs">
               {% for key, item in content.group_information %}
                 {% if item|field_value is not null %}
+                  {% set acordion_id = key|clean_id %}
                   <li class="tabs-title" data-accordion-item="" role="presentation">
-                    <a href="#panel-{{ key }}" role="tab" aria-controls="panel-{{ key }}" aria-selected="false"
-                       id="panel-{{ key }}-label"
+                    <a href="#panel-{{ acordion_id }}" role="tab" aria-controls="panel-{{ acordion_id }}"
+                       aria-selected="false"
+                       id="panel-{{ acordion_id }}-label"
                        tabindex="-1">{{ item|field_label }}</a>
                   </li>
                 {% endif %}
@@ -22,7 +24,9 @@
           <div class="tabs-content" data-tabs-content="example-tabs">
             {% for key, item in content.group_information %}
               {% if item|field_value is not null %}
-                <div class="tabs-panel" id="panel-{{ key }}" role="tabpanel" aria-labelledby="panel-{{ key }}-label"
+                {% set acordion_id = key|clean_id %}
+                <div class="tabs-panel" id="panel-{{ acordion_id }}" role="tabpanel"
+                     aria-labelledby="panel-{{ acordion_id }}-label"
                      aria-hidden="true">
                   <h3>{{ item|field_label }}</h3>
                   {{ item|field_value }}

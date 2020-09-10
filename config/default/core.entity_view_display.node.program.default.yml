@@ -3,62 +3,89 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.program.field_alumni_focus_long_txt
-    - field.field.node.program.field_awards_long_txt
+    - field.field.node.program.field_alumni_focus_html
+    - field.field.node.program.field_awards_html
     - field.field.node.program.field_caption_formatted
     - field.field.node.program.field_careers
+    - field.field.node.program.field_careers_html
     - field.field.node.program.field_degrees
     - field.field.node.program.field_department_ref
-    - field.field.node.program.field_eap_long_txt
+    - field.field.node.program.field_eap_html
+    - field.field.node.program.field_facilities_html
     - field.field.node.program.field_facilities_txt
-    - field.field.node.program.field_first_year_long_txt
-    - field.field.node.program.field_general_catalog_long_txt
+    - field.field.node.program.field_first_year_html
+    - field.field.node.program.field_general_catalog_html
     - field.field.node.program.field_hero_content
-    - field.field.node.program.field_more_long_txt
-    - field.field.node.program.field_opportunities_long_txt
+    - field.field.node.program.field_more_information_html
+    - field.field.node.program.field_opportunities_html
     - field.field.node.program.field_sidebar_content
-    - field.field.node.program.field_transfers_long_txt
+    - field.field.node.program.field_transfers_html
     - node.type.program
   module:
-    - entity_reference_revisions
     - fences
+    - field_group
     - text
     - user
+third_party_settings:
+  field_group:
+    group_information:
+      children:
+        - field_careers_html
+        - field_careers
+        - field_opportunities_html
+        - field_opportunities_long_txt
+        - field_first_year_html
+        - field_first_year_long_txt
+        - field_transfers_html
+        - field_transfers_long_txt
+        - field_facilities_html
+        - field_facilities_txt
+        - field_eap_html
+        - field_eap_long_txt
+        - field_awards_html
+        - field_awards_long_txt
+        - field_alumni_focus_html
+        - field_alumni_focus_long_txt
+        - field_general_catalog_html
+        - field_general_catalog_long_txt
+        - field_more_information_html
+        - field_more_long_txt
+      parent_name: ''
+      weight: 3
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Information
 id: node.program.default
 targetEntityType: node
 bundle: program
 mode: default
 content:
-  field_alumni_focus_long_txt:
-    weight: 114
-    label: hidden
+  field_alumni_focus_html:
+    weight: 19
+    label: above
     settings: {  }
-    third_party_settings:
-      fences:
-        fences_field_tag: none
-        fences_field_classes: ''
-        fences_field_item_tag: none
-        fences_field_item_classes: ''
-        fences_label_tag: none
-        fences_label_classes: ''
-    type: basic_string
+    third_party_settings: {  }
+    type: text_default
     region: content
-  field_awards_long_txt:
-    weight: 113
-    label: hidden
+  field_awards_html:
+    weight: 17
+    label: above
     settings: {  }
-    third_party_settings:
-      fences:
-        fences_field_tag: none
-        fences_field_classes: ''
-        fences_field_item_tag: none
-        fences_field_item_classes: ''
-        fences_label_tag: none
-        fences_label_classes: ''
-    type: basic_string
+    third_party_settings: {  }
+    type: text_default
     region: content
   field_caption_formatted:
-    weight: 102
+    weight: 1
     label: hidden
     settings: {  }
     third_party_settings:
@@ -72,7 +99,7 @@ content:
     type: text_default
     region: content
   field_careers:
-    weight: 107
+    weight: 6
     label: hidden
     settings:
       link: true
@@ -86,8 +113,15 @@ content:
         fences_label_classes: ''
     type: entity_reference_label
     region: content
+  field_careers_html:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
   field_degrees:
-    weight: 118
+    weight: 2
     label: hidden
     settings:
       link: true
@@ -102,7 +136,7 @@ content:
     type: entity_reference_label
     region: content
   field_department_ref:
-    weight: 117
+    weight: 4
     label: hidden
     settings:
       link: true
@@ -116,22 +150,22 @@ content:
         fences_label_classes: ''
     type: entity_reference_label
     region: content
-  field_eap_long_txt:
-    weight: 112
-    label: hidden
+  field_eap_html:
+    weight: 15
+    label: above
     settings: {  }
-    third_party_settings:
-      fences:
-        fences_field_tag: none
-        fences_field_classes: ''
-        fences_field_item_tag: none
-        fences_field_item_classes: ''
-        fences_label_tag: none
-        fences_label_classes: ''
-    type: basic_string
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_facilities_html:
+    weight: 13
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
     region: content
   field_facilities_txt:
-    weight: 111
+    weight: 14
     label: hidden
     settings: {  }
     third_party_settings:
@@ -144,96 +178,43 @@ content:
         fences_label_classes: ''
     type: basic_string
     region: content
-  field_first_year_long_txt:
-    weight: 109
-    label: hidden
-    settings: {  }
-    third_party_settings:
-      fences:
-        fences_field_tag: none
-        fences_field_classes: ''
-        fences_field_item_tag: none
-        fences_field_item_classes: ''
-        fences_label_tag: none
-        fences_label_classes: ''
-    type: basic_string
-    region: content
-  field_general_catalog_long_txt:
-    weight: 115
-    label: hidden
-    settings: {  }
-    third_party_settings:
-      fences:
-        fences_field_tag: none
-        fences_field_classes: ''
-        fences_field_item_tag: none
-        fences_field_item_classes: ''
-        fences_label_tag: none
-        fences_label_classes: ''
-    type: basic_string
-    region: content
-  field_hero_content:
-    weight: 120
+  field_first_year_html:
+    weight: 9
     label: above
-    settings:
-      view_mode: default
-      link: ''
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_revisions_entity_view
+    type: text_default
     region: content
-  field_more_long_txt:
-    weight: 116
-    label: hidden
-    settings: {  }
-    third_party_settings:
-      fences:
-        fences_field_tag: none
-        fences_field_classes: ''
-        fences_field_item_tag: none
-        fences_field_item_classes: ''
-        fences_label_tag: none
-        fences_label_classes: ''
-    type: basic_string
-    region: content
-  field_opportunities_long_txt:
-    weight: 108
-    label: hidden
-    settings: {  }
-    third_party_settings:
-      fences:
-        fences_field_tag: none
-        fences_field_classes: ''
-        fences_field_item_tag: none
-        fences_field_item_classes: ''
-        fences_label_tag: none
-        fences_label_classes: ''
-    type: basic_string
-    region: content
-  field_sidebar_content:
-    weight: 119
+  field_general_catalog_html:
+    weight: 21
     label: above
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    type: entity_reference_revisions_entity_view
-    region: content
-  field_transfers_long_txt:
-    weight: 110
-    label: hidden
     settings: {  }
-    third_party_settings:
-      fences:
-        fences_field_tag: none
-        fences_field_classes: ''
-        fences_field_item_tag: none
-        fences_field_item_classes: ''
-        fences_label_tag: none
-        fences_label_classes: ''
-    type: basic_string
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_more_information_html:
+    weight: 23
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_opportunities_html:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_transfers_html:
+    weight: 11
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
     region: content
   links:
-    weight: 100
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -243,5 +224,7 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_hero_content: true
+  field_sidebar_content: true
   langcode: true
   search_api_excerpt: true

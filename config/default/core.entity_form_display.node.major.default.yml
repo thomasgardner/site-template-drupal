@@ -34,26 +34,16 @@ third_party_settings:
     group_information:
       children:
         - field_caption_formatted
-        - field_opportunities_v2
         - field_opportunities_html
         - field_first_year_html
-        - field_first_year_v2
-        - field_transfers_v2
         - field_transfers_html
         - field_careers_html
-        - field_careers_information_v2
-        - field_facilities_v2
         - field_facilities_html
-        - field_eap_v2
         - field_eap_html
         - field_awards_html
-        - field_awards_v2
-        - field_alumni_focus_v2
-        - field_general_catalog_v2
-        - field_more_information_html
-        - field_more_v2
         - field_alumni_focus_html
         - field_general_catalog_html
+        - field_more_information_html
       parent_name: ''
       weight: 14
       format_type: details
@@ -151,7 +141,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: entity_reference_autocomplete_tags
     region: content
   field_careers_html:
     weight: 18
