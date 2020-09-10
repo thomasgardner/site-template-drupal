@@ -6,7 +6,15 @@ dependencies:
     - field.storage.node.field_lead_formatted
     - node.type.page
   module:
+    - allowed_formats
     - text
+third_party_settings:
+  allowed_formats:
+    basic_html: basic_html
+    full_html: '0'
+    restricted_html: '0'
+    plain_text: '0'
+    code: '0'
 id: node.page.field_lead_formatted
 field_name: field_lead_formatted
 entity_type: node
