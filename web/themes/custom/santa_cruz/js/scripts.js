@@ -15,6 +15,25 @@
   Drupal.behaviors.common = {
     attach: function (context, settings) {
 
+      // A-Z listing Search
+      // Setup before functions
+      var typingTimer;
+      var doneTypingInterval = 500;
+      var $input = $('.search-bar .input-group-field');
+      var $search_input = $('input[name="link"]');
+      if($input.length){
+        $input.on('keyup', function () {
+          clearTimeout(typingTimer);
+          typingTimer = setTimeout(finishTyping, doneTypingInterval);
+        });
+        $input.on('keydown', function () {
+          clearTimeout(typingTimer);
+        });
+        function finishTyping () {
+          $search_input.val($input.val());
+          $search_input.trigger('change');
+        }
+      }
     }
   };
 
