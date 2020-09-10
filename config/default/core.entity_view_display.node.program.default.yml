@@ -11,11 +11,13 @@ dependencies:
     - field.field.node.program.field_degrees
     - field.field.node.program.field_department_ref
     - field.field.node.program.field_eap_html
+    - field.field.node.program.field_education_abroad_html
     - field.field.node.program.field_facilities_html
     - field.field.node.program.field_facilities_txt
     - field.field.node.program.field_first_year_html
     - field.field.node.program.field_general_catalog_html
     - field.field.node.program.field_hero_content
+    - field.field.node.program.field_lead_formatted
     - field.field.node.program.field_more_information_html
     - field.field.node.program.field_opportunities_html
     - field.field.node.program.field_sidebar_content
@@ -33,25 +35,18 @@ third_party_settings:
         - field_careers_html
         - field_careers
         - field_opportunities_html
-        - field_opportunities_long_txt
         - field_first_year_html
-        - field_first_year_long_txt
         - field_transfers_html
-        - field_transfers_long_txt
         - field_facilities_html
         - field_facilities_txt
         - field_eap_html
-        - field_eap_long_txt
         - field_awards_html
-        - field_awards_long_txt
+        - field_education_abroad_html
         - field_alumni_focus_html
-        - field_alumni_focus_long_txt
         - field_general_catalog_html
-        - field_general_catalog_long_txt
         - field_more_information_html
-        - field_more_long_txt
       parent_name: ''
-      weight: 3
+      weight: 4
       format_type: html_element
       region: content
       format_settings:
@@ -71,21 +66,21 @@ bundle: program
 mode: default
 content:
   field_alumni_focus_html:
-    weight: 19
+    weight: 15
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_awards_html:
-    weight: 17
+    weight: 13
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_caption_formatted:
-    weight: 1
+    weight: 2
     label: hidden
     settings: {  }
     third_party_settings:
@@ -121,7 +116,7 @@ content:
     type: text_default
     region: content
   field_degrees:
-    weight: 2
+    weight: 3
     label: hidden
     settings:
       link: true
@@ -136,7 +131,7 @@ content:
     type: entity_reference_label
     region: content
   field_department_ref:
-    weight: 4
+    weight: 5
     label: hidden
     settings:
       link: true
@@ -151,21 +146,28 @@ content:
     type: entity_reference_label
     region: content
   field_eap_html:
-    weight: 15
+    weight: 12
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_education_abroad_html:
+    weight: 14
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_facilities_html:
-    weight: 13
+    weight: 10
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_facilities_txt:
-    weight: 14
+    weight: 11
     label: hidden
     settings: {  }
     third_party_settings:
@@ -179,21 +181,28 @@ content:
     type: basic_string
     region: content
   field_first_year_html:
-    weight: 9
+    weight: 8
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_general_catalog_html:
-    weight: 21
+    weight: 16
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
+  field_lead_formatted:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
   field_more_information_html:
-    weight: 23
+    weight: 17
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -207,7 +216,7 @@ content:
     type: text_default
     region: content
   field_transfers_html:
-    weight: 11
+    weight: 9
     label: above
     settings: {  }
     third_party_settings: {  }
