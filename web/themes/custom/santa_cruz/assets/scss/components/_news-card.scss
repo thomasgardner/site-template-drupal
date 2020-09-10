@@ -149,6 +149,9 @@
       @include xy-cell();
     }
 
+    .paragraph--type--article-card-list &{
+      flex-flow: column;
+    }
   }
 
   &.full-width {
@@ -217,6 +220,7 @@
   }
 
   &.split-column {
+    width: 100%;
     .news-card {
       @include breakpoint(large) {
         @include xy-cell(6, true, 0);

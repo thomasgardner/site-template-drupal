@@ -1,0 +1,19 @@
+uuid: f3e363c6-ab49-4a3a-94ca-4baad545bfc4
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_opportunities_v2
+field_name: field_opportunities_v2
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

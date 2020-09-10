@@ -7,6 +7,23 @@
 	color: $secondary-blue;
 	margin-bottom: 1rem;
 
+  &.a-z-search{
+    .input-group{
+      .input-group-button{
+        & >  button, a {
+          @include breakpoint(large) {
+            padding: .8rem .6rem .6rem 2rem;
+          }
+        }
+      }
+      .input-group-field{
+        @include breakpoint(large) {
+          height: 54px;
+        }
+      }
+    }
+  }
+
 	@include breakpoint(large){
 		padding: 2rem 0;
 	};
@@ -35,7 +52,7 @@
 		.input-group-button {
 			& >  button, a {
 				font-size: .8rem;
-			
+
 				@include breakpoint(large){
 					font-size: inherit;
 					padding: .8rem .6rem 0rem 2rem;
@@ -45,7 +62,7 @@
 					font-size: 1rem;
 					color: $primary-blue;
 					margin-top: 10px;
-		
+
 					@include breakpoint(large){
 						position: absolute;
 						font-size: 1rem;

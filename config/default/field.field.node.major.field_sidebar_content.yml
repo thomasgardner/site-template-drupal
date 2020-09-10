@@ -5,14 +5,15 @@ dependencies:
   config:
     - field.storage.node.field_sidebar_content
     - node.type.major
-    - paragraphs.paragraphs_type.sidebar_content_block_department
+    - paragraphs.paragraphs_type.sidebar_button
+    - paragraphs.paragraphs_type.sidebar_content_block
   module:
     - entity_reference_revisions
 id: node.major.field_sidebar_content
 field_name: field_sidebar_content
 entity_type: node
 bundle: major
-label: 'Sidebar Content'
+label: 'Right Sidebar Content'
 description: ''
 required: false
 translatable: true
@@ -23,7 +24,8 @@ settings:
   handler_settings:
     negate: 0
     target_bundles:
-      sidebar_content_block_department: sidebar_content_block_department
+      sidebar_button: sidebar_button
+      sidebar_content_block: sidebar_content_block
     target_bundles_drag_drop:
       2_column_cta:
         weight: 90
@@ -54,6 +56,9 @@ settings:
         enabled: false
       article_slideshow_item:
         weight: 99
+        enabled: false
+      banner_promo:
+        weight: 104
         enabled: false
       button_list:
         weight: 100
@@ -151,15 +156,6 @@ settings:
       header_banner:
         weight: 131
         enabled: false
-      hero_banner:
-        weight: 132
-        enabled: false
-      hero_slide:
-        weight: 133
-        enabled: false
-      hero_slideshow:
-        weight: 134
-        enabled: false
       historical_fact_card:
         weight: 135
         enabled: false
@@ -192,6 +188,9 @@ settings:
         enabled: false
       major_card_list:
         weight: 145
+        enabled: false
+      news_collection:
+        weight: 148
         enabled: false
       person_carousel:
         weight: 146
@@ -251,14 +250,20 @@ settings:
         weight: 164
         enabled: false
       sidebar_button:
-        weight: 165
-        enabled: false
-      sidebar_content_block:
-        weight: 166
-        enabled: false
-      sidebar_content_block_department:
         enabled: true
+        weight: 165
+      sidebar_content_block:
+        enabled: true
+        weight: 166
+      sidebar_content_block_department:
         weight: 167
+        enabled: false
+      single_feature_story_list:
+        weight: 171
+        enabled: false
+      single_feature_story_list_interi:
+        weight: 172
+        enabled: false
       step:
         weight: 168
         enabled: false
@@ -273,6 +278,15 @@ settings:
         enabled: false
       teaser_card_list:
         weight: 172
+        enabled: false
+      three_story_teaser:
+        weight: 178
+        enabled: false
+      two_banner_promo:
+        weight: 179
+        enabled: false
+      two_feature_story_list:
+        weight: 180
         enabled: false
       upcoming_events:
         weight: 173
