@@ -62,7 +62,6 @@ module:
   groupmenu_block: 0
   gtranslate: 0
   help: 0
-  history: 0
   html_title: 0
   image: 0
   imagemagick: 0
@@ -131,6 +130,7 @@ module:
   twig_link_attributes: 0
   twig_tweak: 0
   twig_vardumper: 0
+  ultimate_cron: 0
   update: 0
   user: 0
   variationcache: 0

@@ -553,6 +553,7 @@
         "drupal/twig_remove_html_comments": "^1.0@alpha",
         "drupal/twig_tweak": "^2.6",
         "drupal/twig_vardumper": "2.2",
+        "drupal/ultimate_cron": "^2.0@alpha",
         "drupal/upgrade_status": "^2.9",
         "drupal/variationcache": "^1.0",
         "drupal/verf": "^1.0@beta",
