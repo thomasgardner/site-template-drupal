@@ -41,7 +41,7 @@ We call a macro which calls itself to render the full tree.
         {{ link(
           item.title,
           item.url,
-          item.attributes.removeClass(item_classes),
+          item.attributes.addClass('transparent').removeClass(item_classes),
           item.attributes.setAttribute("role", "menuitem")
         ) }}
       {% endif %}
