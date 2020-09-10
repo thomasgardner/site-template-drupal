@@ -13,7 +13,6 @@ dependencies:
     - field.field.node.program.field_eap_html
     - field.field.node.program.field_education_abroad_html
     - field.field.node.program.field_facilities_html
-    - field.field.node.program.field_facilities_txt
     - field.field.node.program.field_first_year_html
     - field.field.node.program.field_general_catalog_html
     - field.field.node.program.field_hero_content
@@ -33,12 +32,10 @@ third_party_settings:
     group_information:
       children:
         - field_careers_html
-        - field_careers
         - field_opportunities_html
         - field_first_year_html
         - field_transfers_html
         - field_facilities_html
-        - field_facilities_txt
         - field_eap_html
         - field_awards_html
         - field_education_abroad_html
@@ -166,20 +163,6 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
-  field_facilities_txt:
-    weight: 11
-    label: hidden
-    settings: {  }
-    third_party_settings:
-      fences:
-        fences_field_tag: none
-        fences_field_classes: ''
-        fences_field_item_tag: none
-        fences_field_item_classes: ''
-        fences_label_tag: none
-        fences_label_classes: ''
-    type: basic_string
-    region: content
   field_first_year_html:
     weight: 8
     label: above
@@ -198,7 +181,14 @@ content:
     weight: 1
     label: hidden
     settings: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
     type: text_default
     region: content
   field_more_information_html:

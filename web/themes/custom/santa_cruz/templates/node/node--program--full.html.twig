@@ -1,4 +1,9 @@
 <div class="column-main">
+  {% if content.field_lead_formatted|field_value is not empty %}
+    <div class="lead">
+      {{ content.field_lead_formatted }}
+    </div>
+  {% endif %}
   {{ content.field_caption_formatted.0['#text']|raw }}
   <div class="upper-divider">
     <h2>{{ "More Information"|t }}</h2>

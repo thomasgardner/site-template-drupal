@@ -14,7 +14,6 @@ dependencies:
     - field.field.node.program.field_eap_html
     - field.field.node.program.field_education_abroad_html
     - field.field.node.program.field_facilities_html
-    - field.field.node.program.field_facilities_txt
     - field.field.node.program.field_first_year_html
     - field.field.node.program.field_general_catalog_html
     - field.field.node.program.field_hero_content
@@ -52,7 +51,6 @@ hidden:
   field_eap_html: true
   field_education_abroad_html: true
   field_facilities_html: true
-  field_facilities_txt: true
   field_first_year_html: true
   field_general_catalog_html: true
   field_hero_content: true
