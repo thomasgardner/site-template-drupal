@@ -59,7 +59,11 @@
   {{ title_suffix }}
 
   {% block content %}
-    <p>{% if content.field_address.0.address_line1["#value"]|length %}
+    <p>
+      {%- if content.field_address.0.organization["#value"]|length -%}
+        {{- content.field_address.0.organization["#value"] -}}
+      {%- endif -%}
+      {% if content.field_address.0.address_line1["#value"]|length %}
       {{ content.field_address.0.address_line1["#value"] }}<br>
       {% endif %}
       {% if content.field_address.0.address_line2["#value"]|length %}
@@ -69,7 +73,7 @@
       {{ content.field_address.0.country["#value"] }}<br>
 
       {% if content.field_emails.0["#title"]|length %}
-        <strong>Email:</strong>
+        <strong>Email:&nbsp;</strong>
         {%- for key, item in content.field_emails if key|first != '#' -%}
           {%- if key matches '/^\\d+$/' -%}
             {%- if key > 0 -%}
@@ -82,7 +86,7 @@
         <br>
       {% endif %}
       {% if content.field_phones.0["#title"]|length %}
-        <strong>Phone:</strong>
+        <strong>Phone:&nbsp;</strong>
         {%- for key, item in content.field_phones if key|first != '#' -%}
           {%- if key matches '/^\\d+$/' -%}
             {%- if key > 0 -%}
@@ -95,7 +99,7 @@
         <br>
       {% endif %}
       {% if content.field_faxes.0["#title"]|length %}
-        <strong>Fax:</strong>
+        <strong>Fax:&nbsp;</strong>
         {%- for key, item in content.field_faxes if key|first != '#' -%}
           {%- if key matches '/^\\d+$/' -%}
             {%- if key > 0 -%}
@@ -108,7 +112,7 @@
         <br>
       {% endif %}
     </p>
-
+    {{ content.body.0 }}
     {% if content.field_links.0["#title"]|length %}
       <div class="toggle-trigger" data-toggle="connect" aria-controls="connect">
         <h5 class="underline">Connect<span class="thin"> to History</span> <i class="fas fa-plus hide-for-large"></i>
