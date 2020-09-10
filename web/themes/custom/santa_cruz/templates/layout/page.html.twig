@@ -44,6 +44,7 @@
  */
 #}
 <div id="page">
+  {% include '@santa_cruz/includes/static/mobile-menu-content.html.twig' %}
   {% if page.alert_low %}
     {{ page.alert_low }}
   {% endif %}
@@ -67,7 +68,7 @@
           </div>
         {% endif %}
         <div class="mobile-menu">
-          {% include '@santa_cruz/includes/static/mobile-menu.html.twig' %}
+          {% include '@santa_cruz/includes/static/mobile-menu-toggler.html.twig' %}
         </div>
         {% if page.is_subsite %}
           {% include '@santa_cruz/includes/static/subsite-header.html.twig' %}

@@ -29,14 +29,10 @@ We call a macro which calls itself to render the full tree.
 {% macro menu_links(items, attributes, menu_level) %}
   {% import _self as menus %}
   {% if items %}
-    <ul {{ attributes.addClass('vertical nested') }}>
+    <ul {{ attributes.addClass('vertical') }}>
       {% for item in items %}
         <li{{ item.attributes }}>
-          {% if item.in_active_trail %}
-            {{ link(item.title, item.url)|merge({ '#attributes': { 'class': [ 'subsection-title' ] }}) }}
-          {% else %}
-            {{ link(item.title, item.url) }}
-          {% endif %}
+          {{ link(item.title, item.url) }}
           {% if item.below %}
             {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
           {% endif %}
