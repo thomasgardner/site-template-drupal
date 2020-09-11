@@ -15,7 +15,7 @@ third_party_settings:
 id: santa_cruz_footerengagewithucsc
 theme: santa_cruz
 region: footer_middle
-weight: -17
+weight: -16
 provider: null
 plugin: 'menu_block:footer---engage-with-ucsc'
 settings:

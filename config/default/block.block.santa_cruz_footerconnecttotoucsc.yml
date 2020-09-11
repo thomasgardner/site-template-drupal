@@ -15,7 +15,7 @@ third_party_settings:
 id: santa_cruz_footerconnecttotoucsc
 theme: santa_cruz
 region: footer_middle
-weight: -18
+weight: -17
 provider: null
 plugin: 'menu_block:footer---connect-to-to-ucsc'
 settings:
