@@ -99,7 +99,7 @@
         <div id="hero" class="hero hero-text-{{ text_position }} {{ is_local_video_banner == true ? 'video-banner' : 'image-banner' }}">
           <div class="gradient-overlay"></div>
           {% if is_imabe_banner == true %}
-            <img src="{{ image_url }}" title="{{ image_title }}" alt="{{ image_alt }}">
+            <img src="{{ image_url }}" title="{{ image_title }}" alt="{{ image_alt }}" style="position:relative;top: 50%;margin-top: -10%;">
           {% endif %}
           {% if is_local_video_banner == true or is_remote_video_banner == true %}
             <div class="hero-video">
