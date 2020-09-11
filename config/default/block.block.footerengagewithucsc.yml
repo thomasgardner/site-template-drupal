@@ -1,4 +1,4 @@
-uuid: c3f2d12e-ff63-4c91-9d38-623f0bbfca67
+uuid: 854f28c8-202d-4186-844d-a4e62e2da5f8
 langcode: en
 status: true
 dependencies:
@@ -11,11 +11,11 @@ dependencies:
     - santa_cruz
 third_party_settings:
   block_class:
-    classes: 'cell large-4'
-id: santa_cruz_footerengagewithucsc
+    classes: 'cell large-8'
+id: footerengagewithucsc
 theme: santa_cruz
-region: footer_middle
-weight: -18
+region: subsite_footer_middle
+weight: -19
 provider: null
 plugin: 'menu_block:footer---engage-with-ucsc'
 settings:
@@ -29,9 +29,8 @@ settings:
   depth: 0
   expand_all_items: false
   parent: 'footer---engage-with-ucsc:'
-  suggestion: layout_footer
+  suggestion: footer___engage_with_ucsc
   label_type: block
   label_link: false
   hide_on_nonactive: 0
-  expand: false
 visibility: {  }

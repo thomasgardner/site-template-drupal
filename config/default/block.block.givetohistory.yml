@@ -1,9 +1,9 @@
-uuid: c3f2d12e-ff63-4c91-9d38-623f0bbfca67
+uuid: 8581d375-4357-4fbd-8fc1-5a9188ca2a53
 langcode: en
 status: true
 dependencies:
   config:
-    - system.menu.footer---engage-with-ucsc
+    - system.menu.give-to-history
   module:
     - block_class
     - menu_block
@@ -12,15 +12,15 @@ dependencies:
 third_party_settings:
   block_class:
     classes: 'cell large-4'
-id: santa_cruz_footerengagewithucsc
+id: givetohistory
 theme: santa_cruz
-region: footer_middle
-weight: -18
+region: subsite_footer_first
+weight: -19
 provider: null
-plugin: 'menu_block:footer---engage-with-ucsc'
+plugin: 'menu_block:give-to-history'
 settings:
-  id: 'menu_block:footer---engage-with-ucsc'
-  label: 'Engage <span>with UCSC</span>'
+  id: 'menu_block:give-to-history'
+  label: 'Give to history'
   provider: menu_block
   label_display: visible
   follow: false
@@ -28,10 +28,9 @@ settings:
   level: 1
   depth: 0
   expand_all_items: false
-  parent: 'footer---engage-with-ucsc:'
-  suggestion: layout_footer
+  parent: 'give-to-history:'
+  suggestion: give_to_history
   label_type: block
   label_link: false
   hide_on_nonactive: 0
-  expand: false
 visibility: {  }
