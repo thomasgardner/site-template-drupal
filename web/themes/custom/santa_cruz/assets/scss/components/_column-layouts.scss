@@ -19,7 +19,7 @@
 
 
 .layout-two-column {
-    
+
     .wrap {
         margin: 0 auto;
         max-width: 60em;
@@ -38,22 +38,22 @@
                 max-width: 85em;
                 padding: 0 3rem;
             }
-            
+
             @include breakpoint(xxxlarge){
                 max-width: 90em;
                 padding: 0;
-                
+
             }
         }
-    }  
-    
+    }
+
     .inner  {
         @include xy-grid;
     }
 
     .column-main {
-        @include xy-cell(12);
-        
+        @include xy-cell(12, null, 2.50rem);
+
         margin-bottom: 3rem;
         margin-left: 1.25rem;
         margin-right: 1.25rem;
