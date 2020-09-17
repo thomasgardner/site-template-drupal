@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.three_story_teaser.field_hide_teaser_text
     - field.field.paragraph.three_story_teaser.field_link
     - field.field.paragraph.three_story_teaser.field_taxonomy
     - field.field.paragraph.three_story_teaser.field_title
@@ -18,16 +17,6 @@ targetEntityType: paragraph
 bundle: three_story_teaser
 mode: default
 content:
-  field_hide_teaser_text:
-    weight: 4
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    type: boolean
-    region: content
   field_link:
     weight: 3
     label: hidden
@@ -100,5 +89,4 @@ content:
         fences_label_classes: ''
     type: viewsreference_formatter
     region: content
-hidden:
-  search_api_excerpt: true
+hidden: {  }
