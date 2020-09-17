@@ -54,7 +54,7 @@ class UcscSearchFormBlock extends BlockBase implements ContainerFactoryPluginInt
 
     return [
       '#type' => 'inline_template',
-      '#template' => "<div class=\"global-search-container off-canvas position-top align-center is-transition-overlap is-open\" id=\"global-search\" data-off-canvas=\"huvge0-off-canvas\" aria-hidden=\"false\">
+      '#template' => "<div class=\"global-search-container off-canvas position-top align-center is-transition-overlap is-closed\" id=\"global-search\" data-off-canvas=\"huvge0-off-canvas\" aria-hidden=\"false\">
                           <div class=\"global-search\">
                                <a href=\"javascript:void(0)\" class=\"close-modal\" data-toggle=\"global-search\" aria-expanded=\"true\" aria-controls=\"global-search\">
                                   <i class=\"fa fa-times\" aria-hidden=\"true\"></i>
