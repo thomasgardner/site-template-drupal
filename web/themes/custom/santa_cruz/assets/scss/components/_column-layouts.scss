@@ -58,10 +58,17 @@
         margin-left: 1.25rem;
         margin-right: 1.25rem;
 
+        .column-main{
+          width: 100%;
+          margin-bottom: 0;
+          margin-left: 0;
+          margin-right: 0;
+        }
+
     }
 
     .column-support {
-        @include xy-cell(12);
+        @include xy-cell(12, null, 2.50rem);
         margin-bottom: 3rem;
 
         .content-block {
