@@ -15,3 +15,12 @@ custom_module.content:
     _title: 'Custom Module Page'
   requirements:
     _permission: 'access content'
+
+# Custom google search.
+custom_module.gcse:
+  path: '/search-results'
+  defaults:
+    _controller: '\Drupal\custom_module\Controller\GoogleSearchController::content'
+    _title: 'Google Search'
+  requirements:
+    _permission: 'access content'

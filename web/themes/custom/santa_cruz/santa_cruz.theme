@@ -17,6 +17,11 @@ foreach (glob($includes_path) as $filename) {
 
 function santa_cruz_preprocess_html(&$variables) {
   $variables['is_front'] = \Drupal::service('path.matcher')->isFrontPage();
+
+  /**
+   * google GSE
+   */
+  $variables['cse_token'] = '012090462228956765947:d0ywvq7bxee';
 }
 /**
  * Implements template_preprocess_paragraph().
