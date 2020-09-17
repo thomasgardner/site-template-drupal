@@ -17,6 +17,28 @@
 
 }
 
+.layout-one-column{
+  .block-page-title-block{
+    width: 100%;
+    text-align: center;
+    padding-top: 2rem;
+    h1,h2{
+      color: $primary-gray;
+      padding: 0;
+      margin: 0 0 1.5rem 0;
+      display: inline-block;
+      text-align: center;
+      &:after{
+        content: '';
+        height: 2px;
+        background: $secondary-turquiose;
+        width: 70%;
+        display: block;
+        margin: 10px auto;
+      }
+    }
+  }
+}
 
 .layout-two-column {
 
