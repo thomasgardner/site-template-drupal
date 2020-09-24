@@ -16,12 +16,21 @@
     attach: function (context, settings) {
 
       // A-Z listing Search
-      // Setup before functions
+      // Setup before functions.
       var typingTimer;
       var doneTypingInterval = 500;
       var $input = $('.search-bar .input-group-field');
       var $search_input = $('input[name="link"]');
-      if($input.length){
+      if ($input.length) {
+
+        /**
+         * Finish Typing.
+         */
+        function finishTyping() {
+          $search_input.val($input.val());
+          $search_input.trigger('change');
+        }
+
         $input.on('keyup', function () {
           clearTimeout(typingTimer);
           typingTimer = setTimeout(finishTyping, doneTypingInterval);
@@ -29,10 +38,6 @@
         $input.on('keydown', function () {
           clearTimeout(typingTimer);
         });
-        function finishTyping () {
-          $search_input.val($input.val());
-          $search_input.trigger('change');
-        }
       }
     }
   };
@@ -221,6 +226,34 @@
           }
         });
       });
+    }
+  };
+
+  /**
+   * A common tweaks for global navigation.
+   *
+   * @type {{attach: Drupal.behaviors.globalNavigation.attach}}
+   */
+  Drupal.behaviors.globalNavigation = {
+    attach: function (context, settings) {
+      var $context = $(context),
+        $globalSearchToggler = $context.find('.global-search-toggle');
+
+      $context.find('.global-search-toggle').attr('data-toggle', 'global-search');
+
+      $globalSearchToggler.once('globalSearchToggler').each(function () {
+
+        $(this).on('click', function (event) {
+          event.preventDefault();
+        });
+
+        $(this).attr({
+          'data-toggle': 'global-search',
+          'aria-expanded': 'false',
+          'aria-controls': 'global-search'
+        });
+      })
+
     }
   };
 

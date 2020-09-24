@@ -6,12 +6,10 @@ dependencies:
     - field.field.paragraph.interior_slideshow_slide.field_body_formatted
     - field.field.paragraph.interior_slideshow_slide.field_image
     - field.field.paragraph.interior_slideshow_slide.field_title
-    - field.field.paragraph.interior_slideshow_slide.field_video_embed
     - paragraphs.paragraphs_type.interior_slideshow_slide
   module:
     - media_library
     - text
-    - video_embed_field
 id: paragraph.interior_slideshow_slide.default
 targetEntityType: paragraph
 bundle: interior_slideshow_slide
@@ -39,12 +37,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-    region: content
-  field_video_embed:
-    weight: 0
-    settings: {  }
-    third_party_settings: {  }
-    type: video_embed_field_textfield
     region: content
 hidden:
   created: true

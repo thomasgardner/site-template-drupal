@@ -15,7 +15,7 @@ third_party_settings:
 id: santa_cruz_utilitymenu
 theme: santa_cruz
 region: header
-weight: -13
+weight: -21
 provider: null
 plugin: 'menu_block:utility-menu'
 settings:

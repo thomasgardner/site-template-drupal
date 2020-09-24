@@ -28,7 +28,6 @@
     {% if display_item_tag %}
       <{{ field_item_tag|default('div') }}{{ item.attributes.addClass('field__item') }}>
     {% endif %}
-{#    {{ dump(item.content) }}#}
     <a href="{{ item.content['#url'] }}" class="button {{ item.content['#options'].attributes.class.1 }}"><span>{{ item.content['#title'] }}</span></a>
     {% if display_item_tag %}
       </{{ field_item_tag|default('div') }}>

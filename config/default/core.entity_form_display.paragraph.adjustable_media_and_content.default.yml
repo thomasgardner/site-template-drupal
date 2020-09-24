@@ -6,12 +6,10 @@ dependencies:
     - field.field.paragraph.adjustable_media_and_content.field_body_formatted
     - field.field.paragraph.adjustable_media_and_content.field_display
     - field.field.paragraph.adjustable_media_and_content.field_image
-    - field.field.paragraph.adjustable_media_and_content.field_video_embed
     - paragraphs.paragraphs_type.adjustable_media_and_content
   module:
     - media_library
     - text
-    - video_embed_field
 id: paragraph.adjustable_media_and_content.default
 targetEntityType: paragraph
 bundle: adjustable_media_and_content
@@ -37,12 +35,6 @@ content:
       media_types: {  }
     third_party_settings: {  }
     type: media_library_widget
-    region: content
-  field_video_embed:
-    weight: 2
-    settings: {  }
-    third_party_settings: {  }
-    type: video_embed_field_textfield
     region: content
 hidden:
   created: true

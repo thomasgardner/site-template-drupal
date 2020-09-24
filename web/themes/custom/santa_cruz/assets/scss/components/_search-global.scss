@@ -59,7 +59,10 @@
 
         h2, .footer-links {
             color: white;
-            a { color: white}
+            a { color: white;
+              display: inline-block;
+              padding: 0;
+            }
         }
 
         .button {
@@ -78,6 +81,7 @@
 
         .close-modal {
             color: white;
+            display: inline-block;
         }
 
         @include breakpoint(xlarge) {

@@ -43,6 +43,7 @@ regions:
   subsite_footer_middle: 'Subsite Footer'
   left_off_canvas: 'Left off canvas'
   right_off_canvas: 'Right off canvas'
+  mobile_menus: 'Mobile Menus'
 
 features:
   - slogan

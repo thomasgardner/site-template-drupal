@@ -17,9 +17,31 @@
 
 }
 
+.layout-one-column{
+  .block-page-title-block{
+    width: 100%;
+    text-align: center;
+    padding-top: 2rem;
+    h1,h2{
+      color: $primary-gray;
+      padding: 0;
+      margin: 0 0 1.5rem 0;
+      display: inline-block;
+      text-align: center;
+      &:after{
+        content: '';
+        height: 2px;
+        background: $secondary-turquiose;
+        width: 70%;
+        display: block;
+        margin: 10px auto;
+      }
+    }
+  }
+}
 
 .layout-two-column {
-    
+
     .wrap {
         margin: 0 auto;
         max-width: 60em;
@@ -38,30 +60,37 @@
                 max-width: 85em;
                 padding: 0 3rem;
             }
-            
+
             @include breakpoint(xxxlarge){
                 max-width: 90em;
                 padding: 0;
-                
+
             }
         }
-    }  
-    
+    }
+
     .inner  {
         @include xy-grid;
     }
 
     .column-main {
-        @include xy-cell(12);
-        
+        @include xy-cell(12, null, 2.50rem);
+
         margin-bottom: 3rem;
         margin-left: 1.25rem;
         margin-right: 1.25rem;
 
+        .column-main{
+          width: 100%;
+          margin-bottom: 0;
+          margin-left: 0;
+          margin-right: 0;
+        }
+
     }
 
     .column-support {
-        @include xy-cell(12);
+        @include xy-cell(12, null, 2.50rem);
         margin-bottom: 3rem;
 
         .content-block {

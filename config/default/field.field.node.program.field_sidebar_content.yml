@@ -13,7 +13,7 @@ id: node.program.field_sidebar_content
 field_name: field_sidebar_content
 entity_type: node
 bundle: program
-label: 'Sidebar Content'
+label: 'Right Sidebar Content'
 description: ''
 required: false
 translatable: true

@@ -2,27 +2,30 @@
   <div class="layout-two-column large">
     <div class="wrap">
       <div class="inner">
-        <div class="column-main">
+        <div class="column-main inner-column-main">
           {{ content.field_caption_formatted.0['#text']|raw }}
           <div class="upper-divider">
             <h2>{{ "More Information"|t }}</h2>
             <ul class="tabs" data-responsive-accordion-tabs="tabs small-accordion xlarge-tabs"
-                data-allow-all-closed="true" id="example-tabs" role="tablist" data-tabs="iugubg-tabs">
+                data-allow-all-closed="true" id="more-information-tabs">
               {% for key, item in content.group_information %}
                 {% if item|field_value is not null %}
+                  {% set acordion_id = key|clean_id %}
                   <li class="tabs-title" data-accordion-item="" role="presentation">
-                    <a href="#panel-{{ key }}" role="tab" aria-controls="panel-{{ key }}" aria-selected="false"
-                       id="panel-{{ key }}-label"
+                    <a href="#panel-{{ acordion_id }}" role="tab" aria-controls="panel-{{ acordion_id }}" aria-selected="false"
+                       id="panel-{{ acordion_id }}-label"
                        tabindex="-1">{{ item|field_label }}</a>
                   </li>
                 {% endif %}
               {% endfor %}
             </ul>
           </div>
-          <div class="tabs-content" data-tabs-content="example-tabs">
+          <div class="tabs-content" data-tabs-content="more-information-tabs">
             {% for key, item in content.group_information %}
               {% if item|field_value is not null %}
-                <div class="tabs-panel" id="panel-{{ key }}" role="tabpanel" aria-labelledby="panel-{{ key }}-label"
+                {% set acordion_id = key|clean_id %}
+                <div class="tabs-panel" id="panel-{{ acordion_id }}" role="tabpanel"
+                     aria-labelledby="panel-{{ acordion_id }}-label"
                      aria-hidden="true">
                   <h3>{{ item|field_label }}</h3>
                   {{ item|field_value }}

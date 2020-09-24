@@ -6,13 +6,11 @@ dependencies:
     - field.field.paragraph.adjustable_media_and_content.field_body_formatted
     - field.field.paragraph.adjustable_media_and_content.field_display
     - field.field.paragraph.adjustable_media_and_content.field_image
-    - field.field.paragraph.adjustable_media_and_content.field_video_embed
     - paragraphs.paragraphs_type.adjustable_media_and_content
   module:
     - field_group
     - options
     - text
-    - video_embed_field
 third_party_settings:
   field_group:
     group_container:
@@ -117,15 +115,5 @@ content:
     third_party_settings: {  }
     type: entity_reference_entity_view
     region: content
-  field_video_embed:
-    weight: 23
-    label: hidden
-    settings:
-      responsive: true
-      width: 854
-      height: 480
-      autoplay: false
-    third_party_settings: {  }
-    type: video_embed_field_video
-    region: content
-hidden: {  }
+hidden:
+  search_api_excerpt: true

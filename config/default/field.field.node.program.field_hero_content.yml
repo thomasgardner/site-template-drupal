@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.storage.node.field_hero_content
     - node.type.program
+    - paragraphs.paragraphs_type.feature_image
+    - paragraphs.paragraphs_type.feature_slideshow
     - paragraphs.paragraphs_type.header_banner
   module:
     - entity_reference_revisions
@@ -23,6 +25,8 @@ settings:
   handler_settings:
     negate: 0
     target_bundles:
+      feature_image: feature_image
+      feature_slideshow: feature_slideshow
       header_banner: header_banner
     target_bundles_drag_drop:
       2_column_cta:
@@ -95,11 +99,11 @@ settings:
         weight: 116
         enabled: false
       feature_image:
+        enabled: true
         weight: 117
-        enabled: false
       feature_slideshow:
+        enabled: true
         weight: 118
-        enabled: false
       feature_slideshow_item:
         weight: 119
         enabled: false

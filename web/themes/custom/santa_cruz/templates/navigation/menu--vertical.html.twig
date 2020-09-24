@@ -32,7 +32,6 @@ We call a macro which calls itself to render the full tree.
     <ul {{ attributes.addClass('vertical nested') }}>
       {% for item in items %}
         <li{{ item.attributes }}>
-          {# {{ dump(item) }} #}
           {% if item.in_active_trail %}
             {{ link(item.title, item.url)|merge({ '#attributes': { 'class': [ 'subsection-title' ] }}) }}
           {% else %}

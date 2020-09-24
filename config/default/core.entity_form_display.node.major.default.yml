@@ -3,23 +3,23 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.major.field_alumni_focus_v2
-    - field.field.node.major.field_awards_v2
+    - field.field.node.major.field_alumni_focus_html
+    - field.field.node.major.field_awards_html
     - field.field.node.major.field_caption_formatted
     - field.field.node.major.field_careers
-    - field.field.node.major.field_careers_information_v2
+    - field.field.node.major.field_careers_html
     - field.field.node.major.field_degrees
-    - field.field.node.major.field_eap_v2
-    - field.field.node.major.field_facilities_v2
-    - field.field.node.major.field_first_year_v2
-    - field.field.node.major.field_general_catalog_v2
+    - field.field.node.major.field_eap_html
+    - field.field.node.major.field_facilities_html
+    - field.field.node.major.field_first_year_html
+    - field.field.node.major.field_general_catalog_html
     - field.field.node.major.field_hero_content
     - field.field.node.major.field_link
     - field.field.node.major.field_media
-    - field.field.node.major.field_more_v2
-    - field.field.node.major.field_opportunities_v2
+    - field.field.node.major.field_more_information_html
+    - field.field.node.major.field_opportunities_html
     - field.field.node.major.field_sidebar_content
-    - field.field.node.major.field_transfers_v2
+    - field.field.node.major.field_transfers_html
     - node.type.major
   module:
     - content_moderation
@@ -34,16 +34,16 @@ third_party_settings:
     group_information:
       children:
         - field_caption_formatted
-        - field_opportunities_v2
-        - field_first_year_v2
-        - field_transfers_v2
-        - field_careers_information_v2
-        - field_facilities_v2
-        - field_eap_v2
-        - field_awards_v2
-        - field_alumni_focus_v2
-        - field_general_catalog_v2
-        - field_more_v2
+        - field_opportunities_html
+        - field_first_year_html
+        - field_transfers_html
+        - field_careers_html
+        - field_facilities_html
+        - field_eap_html
+        - field_awards_html
+        - field_alumni_focus_html
+        - field_general_catalog_html
+        - field_more_information_html
       parent_name: ''
       weight: 14
       format_type: details
@@ -109,7 +109,7 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_alumni_focus_v2:
+  field_alumni_focus_html:
     weight: 22
     settings:
       rows: 5
@@ -117,7 +117,7 @@ content:
     third_party_settings: {  }
     type: text_textarea
     region: content
-  field_awards_v2:
+  field_awards_html:
     weight: 21
     settings:
       rows: 5
@@ -141,9 +141,9 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: entity_reference_autocomplete_tags
     region: content
-  field_careers_information_v2:
+  field_careers_html:
     weight: 18
     settings:
       rows: 5
@@ -157,7 +157,7 @@ content:
     third_party_settings: {  }
     type: options_buttons
     region: content
-  field_eap_v2:
+  field_eap_html:
     weight: 20
     settings:
       rows: 5
@@ -165,7 +165,7 @@ content:
     third_party_settings: {  }
     type: text_textarea
     region: content
-  field_facilities_v2:
+  field_facilities_html:
     weight: 19
     settings:
       rows: 5
@@ -173,7 +173,7 @@ content:
     third_party_settings: {  }
     type: text_textarea
     region: content
-  field_first_year_v2:
+  field_first_year_html:
     weight: 16
     settings:
       rows: 5
@@ -181,7 +181,7 @@ content:
     third_party_settings: {  }
     type: text_textarea
     region: content
-  field_general_catalog_v2:
+  field_general_catalog_html:
     weight: 23
     settings:
       rows: 5
@@ -216,7 +216,7 @@ content:
     third_party_settings: {  }
     type: media_library_widget
     region: content
-  field_more_v2:
+  field_more_information_html:
     weight: 24
     settings:
       rows: 5
@@ -224,7 +224,7 @@ content:
     third_party_settings: {  }
     type: text_textarea
     region: content
-  field_opportunities_v2:
+  field_opportunities_html:
     weight: 15
     settings:
       rows: 5
@@ -244,7 +244,7 @@ content:
       form_display_mode: default
       default_paragraph_type: ''
     third_party_settings: {  }
-  field_transfers_v2:
+  field_transfers_html:
     weight: 17
     settings:
       rows: 5

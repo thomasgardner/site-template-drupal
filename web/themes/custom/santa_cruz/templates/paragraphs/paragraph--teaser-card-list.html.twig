@@ -50,7 +50,6 @@
 {% block paragraph %}
   <section{{ attributes.addClass(classes) }} aria-label="content row">
     {% block content %}
-      {#      {{ dump(content) }}#}
       <section class="heading">
         <h2 class="underline">{{ content.field_title.0['#context'].value }}</h2>
       </section>

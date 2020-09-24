@@ -1,3 +1,7 @@
+#___gcse_0{
+  max-width: 90em;
+  padding: 0;
+}
 .search-results {
     @include breakpoint(large){
         background: rgba($white, 0.7);
