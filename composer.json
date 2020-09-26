@@ -527,7 +527,6 @@
         "drupal/search_api": "^1.17",
         "drupal/search_api_autocomplete": "^1.1",
         "drupal/search_api_solr": "^4.1",
-        "drupal/sharethis": "^2.0@beta",
         "drupal/smart_ip": "^3.6",
         "drupal/smtp": "^1.0@RC",
         "drupal/soundcloudfield": "^1.0@alpha",
@@ -722,9 +721,6 @@
             },
             "drupal/masquerade": {
                 "All users, also from not allowed user roles, showing up in auto complete": "https://www.drupal.org/files/issues/2019-06-16/masquerade_filter-roles_3003796_5.patch"
-            },
-            "drupal/sharethis" : {
-                "Fix: Error: [] operator not supported for strings" : "https://www.drupal.org/files/issues/Error-operator-not-supported-for-strings-2885710-12128018.patch"
             },
             "drupal/paragraphs" : {
                 "Integrity constraint violation: 1048 Column 'langcode' cannot be null" : "https://www.drupal.org/files/issues/2019-08-10/paragraphs-set_langcode_widgets-290139_updated.patch"
