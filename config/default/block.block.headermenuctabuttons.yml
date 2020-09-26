@@ -15,7 +15,7 @@ third_party_settings:
 id: headermenuctabuttons
 theme: santa_cruz
 region: header
-weight: -20
+weight: -12
 provider: null
 plugin: 'menu_block:header-menu---cta-buttons'
 settings:

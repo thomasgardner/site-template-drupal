@@ -12,7 +12,7 @@ dependencies:
 id: views_block__alerts_block_2
 theme: santa_cruz
 region: alert_low
-weight: -22
+weight: 0
 provider: null
 plugin: 'views_block:alerts-block_2'
 settings:
