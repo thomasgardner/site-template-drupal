@@ -4479,18 +4479,18 @@
     },
     {
         "name": "drupal/devel",
-        "version": "4.0.0",
-        "version_normalized": "4.0.0.0",
+        "version": "4.0.1",
+        "version_normalized": "4.0.1.0",
         "source": {
             "type": "git",
             "url": "https://git.drupalcode.org/project/devel.git",
-            "reference": "4.0.0"
+            "reference": "4.0.1"
         },
         "dist": {
             "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/devel-4.0.0.zip",
-            "reference": "4.0.0",
-            "shasum": "6c01ef8dd4e926e63b08fe28dea5357c7caa49c9"
+            "url": "https://ftp.drupal.org/files/projects/devel-4.0.1.zip",
+            "reference": "4.0.1",
+            "shasum": "cf2458de1cbac00a88ed26ae3da2cf331e1bc047"
         },
         "require": {
             "doctrine/common": "^2.7",
@@ -4518,8 +4518,8 @@
         "type": "drupal-module",
         "extra": {
             "drupal": {
-                "version": "4.0.0",
-                "datestamp": "1592918748",
+                "version": "4.0.1",
+                "datestamp": "1600300079",
                 "security-coverage": {
                     "status": "covered",
                     "message": "Covered by Drupal's security advisory policy"
@@ -4684,33 +4684,33 @@
     },
     {
         "name": "drupal/dropzonejs",
-        "version": "2.1.0",
-        "version_normalized": "2.1.0.0",
+        "version": "2.3.0",
+        "version_normalized": "2.3.0.0",
         "source": {
             "type": "git",
             "url": "https://git.drupalcode.org/project/dropzonejs.git",
-            "reference": "8.x-2.1"
+            "reference": "8.x-2.3"
         },
         "dist": {
             "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/dropzonejs-8.x-2.1.zip",
-            "reference": "8.x-2.1",
-            "shasum": "a165b70070c320933fdce0c02be3577abce5e938"
+            "url": "https://ftp.drupal.org/files/projects/dropzonejs-8.x-2.3.zip",
+            "reference": "8.x-2.3",
+            "shasum": "c145f2560ed31de32ea8938b0c0378765f70e36a"
         },
         "require": {
             "drupal/core": "^8.8 || ^9"
         },
         "require-dev": {
-            "drupal/entity_browser": "*"
+            "drupal/entity_browser": "^2.5"
         },
         "suggest": {
-            "enyo/dropzone": "Required to user drupal/dropzonejs. Dropzone is an easy to use drag'n'drop library."
+            "enyo/dropzone": "Required to use drupal/dropzonejs. DropzoneJS is an open source library that provides drag’n’drop file uploads with image previews."
         },
         "type": "drupal-module",
         "extra": {
             "drupal": {
-                "version": "8.x-2.1",
-                "datestamp": "1585662324",
+                "version": "8.x-2.3",
+                "datestamp": "1600311980",
                 "security-coverage": {
                     "status": "covered",
                     "message": "Covered by Drupal's security advisory policy"
@@ -4720,7 +4720,7 @@
         "installation-source": "dist",
         "notification-url": "https://packages.drupal.org/8/downloads",
         "license": [
-            "GPL-2.0+"
+            "GPL-2.0-or-later"
         ],
         "authors": [
             {
@@ -4739,13 +4739,14 @@
                 "role": "Maintainer"
             },
             {
+                "name": "Qiangjun Ran",
+                "homepage": "https://drupal.org/u/jungle",
+                "role": "Maintainer"
+            },
+            {
                 "name": "See other contributors",
                 "homepage": "https://www.drupal.org/node/1998478/committers",
                 "role": "contributor"
-            },
-            {
-                "name": "jungle",
-                "homepage": "https://www.drupal.org/user/2919723"
             },
             {
                 "name": "slashrsm",
@@ -4769,7 +4770,7 @@
         "support": {
             "source": "https://www.drupal.org/project/dropzonejs",
             "issues": "https://www.drupal.org/project/issues/dropzonejs",
-            "irc": "irc://irc.freenode.org/drupal-contribute"
+            "#media": "http://drupal.slack.com"
         }
     },
     {
@@ -4778,7 +4779,7 @@
         "version_normalized": "2.1.0.0",
         "require": {
             "drupal/core": "^8.8 || ^9",
-            "drupal/dropzonejs": "self.version",
+            "drupal/dropzonejs": "*",
             "drupal/entity_browser": "*"
         },
         "type": "metapackage",
@@ -9555,37 +9556,42 @@
     },
     {
         "name": "drupal/ultimate_cron",
-        "version": "2.0.0-alpha4",
-        "version_normalized": "2.0.0.0-alpha4",
+        "version": "2.0.0-alpha5",
+        "version_normalized": "2.0.0.0-alpha5",
         "source": {
             "type": "git",
             "url": "https://git.drupalcode.org/project/ultimate_cron.git",
-            "reference": "8.x-2.0-alpha4"
+            "reference": "8.x-2.0-alpha5"
         },
         "dist": {
             "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/ultimate_cron-8.x-2.0-alpha4.zip",
-            "reference": "8.x-2.0-alpha4",
-            "shasum": "50cdadd061f1f6fadb961b04ed04348bcc4719d3"
+            "url": "https://ftp.drupal.org/files/projects/ultimate_cron-8.x-2.0-alpha5.zip",
+            "reference": "8.x-2.0-alpha5",
+            "shasum": "0f10464fff29eca89024e7afa5b6d8d07bd52f75"
         },
         "require": {
-            "drupal/core": "~8.0"
+            "drupal/core": "^8.7.7 || ^9"
         },
         "type": "drupal-module",
         "extra": {
             "drupal": {
-                "version": "8.x-2.0-alpha4",
-                "datestamp": "1527925385",
+                "version": "8.x-2.0-alpha5",
+                "datestamp": "1600928948",
                 "security-coverage": {
                     "status": "not-covered",
                     "message": "Alpha releases are not covered by Drupal security advisories."
+                }
+            },
+            "drush": {
+                "services": {
+                    "drush.services.yml": "^9 || ^10"
                 }
             }
         },
         "installation-source": "dist",
         "notification-url": "https://packages.drupal.org/8/downloads",
         "license": [
-            "GPL-2.0-or-later"
+            "GPL-2.0+"
         ],
         "authors": [
             {
@@ -9613,7 +9619,7 @@
                 "homepage": "https://www.drupal.org/user/227761"
             }
         ],
-        "description": "Cron",
+        "description": "Ultimate cron",
         "homepage": "https://www.drupal.org/project/ultimate_cron",
         "support": {
             "source": "https://git.drupalcode.org/project/ultimate_cron"
@@ -10915,41 +10921,14 @@
     },
     {
         "name": "enyo/dropzone",
-        "version": "v5.5.0",
-        "version_normalized": "5.5.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/enyo/dropzone.git",
-            "reference": "08b9e0a763b54a685404dea523a9c54242fbe1b9"
-        },
+        "version": "5.7.1",
+        "version_normalized": "5.7.1.0",
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/enyo/dropzone/zipball/08b9e0a763b54a685404dea523a9c54242fbe1b9",
-            "reference": "08b9e0a763b54a685404dea523a9c54242fbe1b9",
-            "shasum": ""
+            "url": "https://github.com/enyo/dropzone/archive/v5.7.1.zip"
         },
-        "time": "2018-07-06T14:20:31+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Matias Meno",
-                "email": "m@tias.me",
-                "homepage": "http://www.matiasmeno.com"
-            }
-        ],
-        "description": "Handles drag and drop of files for you.",
-        "homepage": "http://www.dropzonejs.com",
-        "keywords": [
-            "drag and drop",
-            "dragndrop",
-            "file upload",
-            "upload"
-        ]
+        "type": "drupal-library",
+        "installation-source": "dist"
     },
     {
         "name": "fileeye/mimemap",

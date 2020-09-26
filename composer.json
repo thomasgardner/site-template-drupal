@@ -249,19 +249,6 @@
         {
           "type": "package",
           "package": {
-            "name": "enyo/dropzone",
-            "version": "dev-master",
-            "type": "drupal-library",
-            "source": {
-              "url": "https://github.com/enyo/dropzone",
-              "type": "git",
-              "reference": "origin/master"
-            }
-          }
-        },
-        {
-          "type": "package",
-          "package": {
             "name": "intl-tel-input",
             "version": "14.0.6",
             "type": "drupal-library",
@@ -486,7 +473,7 @@
         "drupal/date_popup": "^1.0",
         "drupal/devel": "^4.0",
         "drupal/devel_entity_updates": "^3.0",
-        "drupal/dropzonejs": "^2.1",
+        "drupal/dropzonejs": "^2.3",
         "drupal/easy_breadcrumb": "^1.13",
         "drupal/editor_advanced_link": "^1.6",
         "drupal/embed": "^1.4",
@@ -569,7 +556,6 @@
         "drupal/xmlsitemap": "^1.0",
         "drupal/zurb_foundation": "~6.0",
         "drush/drush": "^10.3",
-        "enyo/dropzone": "^5.5",
         "grasmash/drupal-security-warning": "^1.1",
         "intl-tel-input": "^14.0.6",
         "jquery.inputmask": "^4.0.4",
@@ -649,8 +635,7 @@
                 "type:drupal-library",
                 "type:bower-asset",
                 "type:component",
-                "type:npm-asset",
-                "enyo/dropzone"
+                "type:npm-asset"
             ],
             "web/libraries/ckeditor/plugins/{$name}": ["type:ckeditor-plugin"],
             "web/modules/contrib/{$name}": ["type:drupal-module"],
@@ -683,7 +668,8 @@
         },
         "merge-plugin": {
             "include": [
-                "web/modules/contrib/webform/composer.libraries.json"
+                "web/modules/contrib/webform/composer.libraries.json",
+                "web/modules/contrib/dropzonejs/composer.libraries.json"
             ]
         },
         "drupal-scaffold": {
