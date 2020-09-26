@@ -61,7 +61,7 @@ if ($current_environment !== NULL) {
       $config['advagg.settings']['enabled'] = FALSE;
 
       // Remove it after development. Use a tariff plane instead of.
-      // ini_set('max_execution_time', 720);
+      ini_set('max_execution_time', 720);
       // ini_set('memory_limit', '8192M');
 
       // Verbose errors.
