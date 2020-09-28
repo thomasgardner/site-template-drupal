@@ -116,7 +116,12 @@ else {
 /**
  * Exclude a few configs from exporting/importing.
  */
-$settings['config_exclude_modules'] = ['devel', 'tb_megamenu', 'webform'];
+$settings['config_exclude_modules'] = [
+  'block',
+  'devel',
+  'tb_megamenu',
+  'webform',
+];
 
 /**
  * If there is a local settings file, then include it
