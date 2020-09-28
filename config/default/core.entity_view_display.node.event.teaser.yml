@@ -12,8 +12,9 @@ dependencies:
     - field.field.node.event.field_event_featured_image
     - field.field.node.event.field_event_teaser_image
     - field.field.node.event.field_featured
-    - field.field.node.event.field_geolocation
+    - field.field.node.event.field_intro1
     - field.field.node.event.field_meta_tags
+    - field.field.node.event.field_price
     - field.field.node.event.field_section_title
     - field.field.node.event.field_start_date
     - node.type.event
@@ -33,6 +34,16 @@ content:
       trim_length: 600
     third_party_settings: {  }
     region: content
+  event_time:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  extra_date_field:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   links:
     weight: 100
     settings: {  }
@@ -46,8 +57,10 @@ hidden:
   field_event_featured_image: true
   field_event_teaser_image: true
   field_featured: true
-  field_geolocation: true
+  field_intro1: true
   field_meta_tags: true
+  field_price: true
   field_section_title: true
   field_start_date: true
   langcode: true
+  search_api_excerpt: true

@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.field.node.location.body
     - field.field.node.location.field_address
-    - field.field.node.location.field_geolocation
     - field.field.node.location.field_hero_content
     - field.field.node.location.field_meta_tags
     - field.field.node.location.field_section_title
@@ -14,7 +13,6 @@ dependencies:
     - address
     - entity_reference_revisions
     - fences
-    - geolocation
     - text
     - user
 id: node.location.default
@@ -48,47 +46,6 @@ content:
         fences_label_classes: ''
     type: address_default
     region: content
-  field_geolocation:
-    type: geolocation_map
-    weight: 3
-    region: content
-    label: hidden
-    settings:
-      set_marker: true
-      title: ''
-      info_text: ''
-      use_overridden_map_settings: false
-      common_map: false
-      map_provider_id: google_maps
-      map_provider_settings:
-        height: 400px
-        width: 100%
-        type: ROADMAP
-        zoom: 10
-        maxZoom: 18
-        minZoom: 0
-        mapTypeControl: 1
-        streetViewControl: 1
-        zoomControl: 1
-        scrollwheel: 1
-        gestureHandling: auto
-        draggable: 1
-        style: ''
-        info_auto_display: 1
-        marker_icon_path: ''
-        disableAutoPan: 1
-        rotateControl: false
-        fullscreenControl: 0
-        preferScrollingToZooming: 0
-        disableDoubleClickZoom: 0
-    third_party_settings:
-      fences:
-        fences_field_tag: div
-        fences_field_classes: pt-4
-        fences_field_item_tag: none
-        fences_field_item_classes: ''
-        fences_label_tag: none
-        fences_label_classes: ''
   field_hero_content:
     weight: 4
     label: above
@@ -112,3 +69,4 @@ hidden:
   field_meta_tags: true
   field_section_title: true
   langcode: true
+  search_api_excerpt: true

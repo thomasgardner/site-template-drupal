@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.field.node.location.body
     - field.field.node.location.field_address
-    - field.field.node.location.field_geolocation
     - field.field.node.location.field_hero_content
     - field.field.node.location.field_meta_tags
     - field.field.node.location.field_section_title
@@ -14,7 +13,6 @@ dependencies:
     - address
     - content_moderation
     - field_group
-    - geolocation_google_maps
     - metatag
     - paragraphs
     - path
@@ -62,41 +60,6 @@ content:
     settings:
       default_country: ''
     third_party_settings: {  }
-  field_geolocation:
-    weight: 12
-    settings:
-      default_longitude: ''
-      default_latitude: ''
-      populate_address_field: '1'
-      target_address_field: field_address
-      google_map_settings:
-        height: 400px
-        width: 100%
-        type: ROADMAP
-        zoom: 10
-        maxZoom: 18
-        minZoom: 0
-        mapTypeControl: 1
-        streetViewControl: 1
-        zoomControl: 1
-        scrollwheel: 1
-        gestureHandling: auto
-        draggable: 1
-        style: ''
-        info_auto_display: 1
-        marker_icon_path: ''
-        disableAutoPan: 1
-        rotateControl: false
-        fullscreenControl: 0
-        preferScrollingToZooming: 0
-        disableDoubleClickZoom: 0
-      auto_client_location: '0'
-      auto_client_location_marker: '0'
-      explicite_actions_address_field: '0'
-      allow_override_map_settings: 0
-    third_party_settings: {  }
-    type: geolocation_googlegeocoder
-    region: content
   field_hero_content:
     weight: 1
     settings:
