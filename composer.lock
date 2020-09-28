@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0a75965925bf3e1bc6533fc2a1362df0",
+    "content-hash": "93edc47c58f7911f2602605a6edbdd3f",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -156,6 +156,24 @@
             ]
         },
         {
+            "name": "bower-asset/jquery-gridder",
+            "version": "v1.4.2",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:oriongunning/gridder.git",
+                "reference": "ecf0920d1048ac65704d3d5e8b505c431175f218"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/oriongunning/gridder/zipball/ecf0920d1048ac65704d3d5e8b505c431175f218",
+                "reference": "ecf0920d1048ac65704d3d5e8b505c431175f218"
+            },
+            "type": "bower-asset",
+            "license": [
+                "MIT"
+            ]
+        },
+        {
             "name": "bower-asset/jquery-simple-color",
             "version": "v1.2.2",
             "source": {
@@ -167,6 +185,45 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/recurser/jquery-simple-color/zipball/ebe0b2c0db639584e81499bd29d6619abb9a2599",
                 "reference": "ebe0b2c0db639584e81499bd29d6619abb9a2599"
+            },
+            "type": "bower-asset",
+            "license": [
+                "MIT"
+            ]
+        },
+        {
+            "name": "bower-asset/lightgallery",
+            "version": "1.8.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sachinchoolur/lightGallery.git",
+                "reference": "6c00ef21e72db65b1e98c73adcec255fc703ed19"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sachinchoolur/lightGallery/zipball/6c00ef21e72db65b1e98c73adcec255fc703ed19",
+                "reference": "6c00ef21e72db65b1e98c73adcec255fc703ed19"
+            },
+            "require": {
+                "bower-asset/jquery": ">=1.7.0"
+            },
+            "type": "bower-asset",
+            "license": [
+                "GPLv3"
+            ]
+        },
+        {
+            "name": "bower-asset/matchheight",
+            "version": "0.7.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/liabru/jquery-match-height.git",
+                "reference": "2446ac654f694bc05a1297cbab0b2d875e278bbd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/liabru/jquery-match-height/zipball/2446ac654f694bc05a1297cbab0b2d875e278bbd",
+                "reference": "2446ac654f694bc05a1297cbab0b2d875e278bbd"
             },
             "type": "bower-asset",
             "license": [
