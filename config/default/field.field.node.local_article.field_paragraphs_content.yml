@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.storage.node.field_paragraphs_content
     - node.type.local_article
-    - paragraphs.paragraphs_type.article_slideshow
     - paragraphs.paragraphs_type.quote
   module:
     - entity_reference_revisions
@@ -24,7 +23,6 @@ settings:
   handler_settings:
     negate: 0
     target_bundles:
-      article_slideshow: article_slideshow
       quote: quote
     target_bundles_drag_drop:
       2_column_cta:
@@ -45,20 +43,20 @@ settings:
       adjustable_media_and_content:
         weight: 41
         enabled: false
+      article_slideshow:
+        enabled: true
+        weight: 44
+      article_slideshow_item:
+        weight: 45
+        enabled: false
       column_section:
         weight: 42
         enabled: false
       cta_buttons:
         weight: 43
         enabled: false
-      article_slideshow:
-        enabled: true
-        weight: 44
       flexible_bg_image_block:
         weight: 44
-        enabled: false
-      article_slideshow_item:
-        weight: 45
         enabled: false
       flexible_bg_image_blocks:
         weight: 45

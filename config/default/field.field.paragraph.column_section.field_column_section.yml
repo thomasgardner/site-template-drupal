@@ -4,11 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_column_section
-    - paragraphs.paragraphs_type.2_column_cta
-    - paragraphs.paragraphs_type.3_column_cta
-    - paragraphs.paragraphs_type.4_column_cta
     - paragraphs.paragraphs_type.column_section
-    - paragraphs.paragraphs_type.recent_articles
     - paragraphs.paragraphs_type.upcoming_events
   module:
     - entity_reference_revisions
@@ -27,10 +23,6 @@ settings:
   handler_settings:
     negate: 0
     target_bundles:
-      2_column_cta: 2_column_cta
-      3_column_cta: 3_column_cta
-      4_column_cta: 4_column_cta
-      recent_articles: recent_articles
       upcoming_events: upcoming_events
     target_bundles_drag_drop:
       2_column_cta:
@@ -45,14 +37,14 @@ settings:
       column_section:
         weight: 9
         enabled: false
-      hero_slide:
-        weight: 10
-        enabled: false
       full_width_image_section:
         weight: 19
         enabled: false
       hero_banner:
         weight: 20
+        enabled: false
+      hero_slide:
+        weight: 10
         enabled: false
       hero_slideshow:
         weight: 22
@@ -72,10 +64,10 @@ settings:
       recent_articles:
         enabled: true
         weight: 27
-      wysiwyg:
-        weight: 28
-        enabled: false
       upcoming_events:
         enabled: true
         weight: 29
+      wysiwyg:
+        weight: 28
+        enabled: false
 field_type: entity_reference_revisions

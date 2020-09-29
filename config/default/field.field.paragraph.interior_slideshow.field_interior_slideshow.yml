@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.storage.paragraph.field_interior_slideshow
     - paragraphs.paragraphs_type.interior_slideshow
-    - paragraphs.paragraphs_type.interior_slideshow_slide
   module:
     - entity_reference_revisions
 id: paragraph.interior_slideshow.field_interior_slideshow
@@ -22,8 +21,7 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     negate: 0
-    target_bundles:
-      interior_slideshow_slide: interior_slideshow_slide
+    target_bundles: {  }
     target_bundles_drag_drop:
       2_column_cta:
         weight: 9

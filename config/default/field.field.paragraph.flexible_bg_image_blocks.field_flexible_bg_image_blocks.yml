@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_flexible_bg_image_blocks
-    - paragraphs.paragraphs_type.flexible_bg_image_block
     - paragraphs.paragraphs_type.flexible_bg_image_blocks
   module:
     - entity_reference_revisions
@@ -22,8 +21,7 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     negate: 0
-    target_bundles:
-      flexible_bg_image_block: flexible_bg_image_block
+    target_bundles: {  }
     target_bundles_drag_drop:
       2_column_cta:
         weight: 24

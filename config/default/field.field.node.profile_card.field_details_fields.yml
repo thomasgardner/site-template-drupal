@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.storage.node.field_details_fields
     - node.type.profile_card
-    - paragraphs.paragraphs_type.profile_card_details_fields
   module:
     - entity_reference_revisions
 id: node.profile_card.field_details_fields
@@ -22,8 +21,7 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     negate: 0
-    target_bundles:
-      profile_card_details_fields: profile_card_details_fields
+    target_bundles: {  }
     target_bundles_drag_drop:
       2_column_cta:
         weight: 39
@@ -100,17 +98,17 @@ settings:
       profile_card_details_fields:
         enabled: true
         weight: 63
-      quicktabs:
-        weight: 64
-        enabled: false
-      quicktab_item:
-        weight: 65
-        enabled: false
       quick_link:
         weight: 66
         enabled: false
       quick_link_minimal:
         weight: 67
+        enabled: false
+      quicktab_item:
+        weight: 65
+        enabled: false
+      quicktabs:
+        weight: 64
         enabled: false
       quote:
         weight: 68

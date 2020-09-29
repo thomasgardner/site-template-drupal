@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.storage.paragraph.field_gridder_items
     - paragraphs.paragraphs_type.gridder
-    - paragraphs.paragraphs_type.gridder_item
   module:
     - entity_reference_revisions
 id: paragraph.gridder.field_gridder_items
@@ -22,8 +21,7 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     negate: 0
-    target_bundles:
-      gridder_item: gridder_item
+    target_bundles: {  }
     target_bundles_drag_drop:
       2_column_cta:
         weight: 31
