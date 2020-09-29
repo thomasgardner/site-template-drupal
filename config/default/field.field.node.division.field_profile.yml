@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.storage.node.field_profile
     - node.type.division
-    - node.type.profile
 id: node.division.field_profile
 field_name: field_profile
 entity_type: node
@@ -19,8 +18,7 @@ default_value_callback: ''
 settings:
   handler: 'default:node'
   handler_settings:
-    target_bundles:
-      profile: profile
+    target_bundles: {  }
     sort:
       field: _none
     auto_create: false

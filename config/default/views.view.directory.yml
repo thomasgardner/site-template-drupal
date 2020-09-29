@@ -1,13 +1,9 @@
 uuid: 434696f0-dee1-4fc7-8742-b32d2392745d
 langcode: en
-status: true
+status: false
 dependencies:
   config:
-    - field.storage.node.field_department2
-    - field.storage.node.field_email
     - field.storage.node.field_media
-    - field.storage.node.field_name
-    - field.storage.node.field_telephone_number
     - node.type.person
     - taxonomy.vocabulary.person_department
   module:
@@ -138,264 +134,6 @@ display:
           absolute: true
           entity_type: node
           plugin_id: entity_link
-        field_name:
-          id: field_name
-          table: node__field_name
-          field: field_name
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: true
-          alter:
-            alter_text: true
-            text: "<div class=\"full-name\"><a href=\"{{ view_node }}\">{{ field_name__given }} {{ field_name__family }}</a></div>\n<div class=\"credentials\">{{ field_name__credentials }}</div>\n"
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: title
-          type: name_default
-          settings:
-            format: default
-            list_format: ''
-            markup: none
-            link_target: ''
-            preferred_field_reference: ''
-            preferred_field_reference_separator: ', '
-            alternative_field_reference: ''
-            alternative_field_reference_separator: ', '
-          group_column: ''
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_department2:
-          id: field_department2
-          table: node__field_department2
-          field: field_department2
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: false
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_email:
-          id: field_email
-          table: node__field_email
-          field: field_email
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: true
-          alter:
-            alter_text: true
-            text: '<span class="fa fa-envelope"></span> {{ field_email }}'
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: email_mailto
-          settings: {  }
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: ul
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_telephone_number:
-          id: field_telephone_number
-          table: node__field_telephone_number
-          field: field_telephone_number
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: true
-          alter:
-            alter_text: true
-            text: "  {% set tel = field_telephone_number %}\n  \n  {% set firstSeg = field_telephone_number|slice(0, 3) %}\n  {% set secondSeg = field_telephone_number|slice(3, 3) %}\n  {% set thirdSeg = field_telephone_number|slice(6, 4) %}\n  \n  {% set formattedString = '('~ firstSeg ~ ') ' ~ secondSeg ~ '-' ~ thirdSeg %}\n  \n</i><span class=\"fa fa-phone\"></span> <a href=\"tel:{{ field_phone_1 }}\">{{ formattedString }}</a>\n"
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: ul
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
         field_media:
           id: field_media
           table: node__field_media
@@ -628,11 +366,7 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_department2'
-        - 'config:field.storage.node.field_email'
         - 'config:field.storage.node.field_media'
-        - 'config:field.storage.node.field_name'
-        - 'config:field.storage.node.field_telephone_number'
   block_1:
     display_plugin: block
     id: block_1
@@ -640,77 +374,7 @@ display:
     position: 2
     display_options:
       display_extenders: {  }
-      fields:
-        field_name:
-          id: field_name
-          table: node__field_name
-          field: field_name
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: true
-            text: "<div class=\"full-name\"><a href=\"{{ view_node }}\">{{ field_name__given }} {{ field_name__family }}</a></div>\n<div class=\"credentials\">{{ field_name__credentials }}</div>\n"
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: title
-          type: name_default
-          settings:
-            format: default
-            list_format: ''
-            markup: none
-            link_target: ''
-            preferred_field_reference: ''
-            preferred_field_reference_separator: ', '
-            alternative_field_reference: ''
-            alternative_field_reference_separator: ', '
-          group_column: ''
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
+      fields: {  }
       defaults:
         fields: false
         relationships: false
@@ -799,13 +463,11 @@ display:
     cache_metadata:
       max-age: -1
       contexts:
-        - 'languages:language_content'
         - 'languages:language_interface'
         - url
         - 'user.node_grants:view'
         - user.permissions
-      tags:
-        - 'config:field.storage.node.field_name'
+      tags: {  }
   block_2:
     display_plugin: block
     id: block_2
@@ -1041,11 +703,7 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_department2'
-        - 'config:field.storage.node.field_email'
         - 'config:field.storage.node.field_media'
-        - 'config:field.storage.node.field_name'
-        - 'config:field.storage.node.field_telephone_number'
   page_1:
     display_plugin: page
     id: page_1
@@ -1124,8 +782,4 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_department2'
-        - 'config:field.storage.node.field_email'
         - 'config:field.storage.node.field_media'
-        - 'config:field.storage.node.field_name'
-        - 'config:field.storage.node.field_telephone_number'
