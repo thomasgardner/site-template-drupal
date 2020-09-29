@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.field.node.page.body
     - field.field.node.page.field_above_content
-    - field.field.node.page.field_after_content
     - field.field.node.page.field_body_paragraphs
     - field.field.node.page.field_content_bottom
     - field.field.node.page.field_hero_content
@@ -97,7 +96,6 @@ content:
     region: content
 hidden:
   field_above_content: true
-  field_after_content: true
   field_content_bottom: true
   field_hero_content: true
   field_left_sidebar_content: true

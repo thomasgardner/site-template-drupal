@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.policy.body
     - field.field.node.policy.field_caption_formatted
     - field.field.node.policy.field_category
-    - field.field.node.policy.field_icon
     - field.field.node.policy.field_link
     - field.field.node.policy.field_media
     - node.type.policy
@@ -84,8 +83,8 @@ content:
     type: link
     region: content
 hidden:
-  field_icon: true
   field_media: true
   langcode: true
   links: true
+  search_api_excerpt: true
   sharethis: true
