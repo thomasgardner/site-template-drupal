@@ -6,8 +6,6 @@ dependencies:
     - field.storage.node.field_after_content
     - node.type.page
     - paragraphs.paragraphs_type.accordion
-    - paragraphs.paragraphs_type.interior_column_section
-    - paragraphs.paragraphs_type.interior_slideshow
     - paragraphs.paragraphs_type.views
     - paragraphs.paragraphs_type.wysiwyg
   module:
@@ -27,8 +25,6 @@ settings:
   handler_settings:
     negate: 0
     target_bundles:
-      interior_column_section: interior_column_section
-      interior_slideshow: interior_slideshow
       accordion: accordion
       views: views
       wysiwyg: wysiwyg
