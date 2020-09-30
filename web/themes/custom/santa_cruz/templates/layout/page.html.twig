@@ -155,18 +155,33 @@
   {% endif %}
   <div class="site-footer">
     <div class="grid-container large">
-      {% if page.footer_first %}
+      {% if page.footer_first and not page.is_subsite %}
         <div class="gateway-footer">
           {{ page.footer_first }}
         </div>
       {% endif %}
+      {% if page.is_subsite %}
+        {% if page.subsite_footer_first %}
+          <div class="gateway-footer">
+            {{ page.subsite_footer_first }}
+          </div>
+        {% endif %}
+      {% endif %}
       <div class="global-footer">
-        {% if page.footer_middle %}
+        {% if page.is_subsite %}
+          {% if page.subsite_footer_middle %}
+              {{ page.subsite_footer_middle }}
+          {% endif %}
+        {% endif %}
+
+        {% if page.footer_middle and not page.is_subsite %}
           {{ page.footer_middle }}
         {% endif %}
+
         {% if page.footer_last %}
           {{ page.footer_last }}
         {% endif %}
+
       </div>
     </div>
   </div>

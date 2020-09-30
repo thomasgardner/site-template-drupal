@@ -54,22 +54,22 @@
             @include clearfix;
             padding-top: 1.2rem;
             padding-bottom: 1.2rem;
-        
+
             h1 {
                 display: none;
-        
+
                 @include breakpoint(large) {
                     display: inline-block;
                 }
-            }   
+            }
         }
-    } 
+    }
 
     .menu {
         font-size: 1.15rem;
         margin-top: 0;
-    } 
-    
+    }
+
     .menu.dropdown {
         > li {
             &.is-active {
@@ -119,7 +119,7 @@
         }
 
     }
-    
+
     .subsite-menu-toggle {
         float: right;
         text-align: right;
@@ -127,7 +127,7 @@
         margin-top: 10px;
         margin-right: 10px;
     }
-    
+
     .menu {
         margin-top: 24px;
         font-size: 1.2rem;
@@ -140,4 +140,22 @@
 
     }
 
+}
+
+.subsite-bottom-header-logo{
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 120px;
+  z-index: 1;
+  .subsite-brand-container{
+    margin: 32px 0 6px 0;
+  }
+  a.div{
+    position: relative;
+    top: -6px;
+    left: 0;
+    font-size: .6rem !important;
+    bottom: auto;
+  }
 }
