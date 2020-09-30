@@ -61,7 +61,7 @@ if ($current_environment !== NULL) {
       $config['advagg.settings']['enabled'] = FALSE;
 
       // Remove it after development. Use a tariff plane instead of.
-      // ini_set('max_execution_time', 720);
+      ini_set('max_execution_time', 720);
       // ini_set('memory_limit', '8192M');
 
       // Verbose errors.
@@ -116,7 +116,12 @@ else {
 /**
  * Exclude a few configs from exporting/importing.
  */
-$settings['config_exclude_modules'] = ['devel', 'tb_megamenu', 'webform'];
+$settings['config_exclude_modules'] = [
+  'block',
+  'devel',
+  'tb_megamenu',
+  'webform',
+];
 
 /**
  * If there is a local settings file, then include it

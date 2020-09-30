@@ -13,12 +13,9 @@ module:
   backup_migrate: 0
   better_exposed_filters: 0
   big_pipe: 0
-  block: 0
   block_class: 0
   block_content: 0
   breakpoint: 0
-  calendar: 0
-  calendar_datetime: 0
   captcha: 0
   ckeditor: 0
   ckeditor_templates: 0
@@ -53,8 +50,6 @@ module:
   focal_point: 0
   fontawesome: 0
   fontawesome_menu_icons: 0
-  geolocation: 0
-  geolocation_google_maps: 0
   gnode: 0
   google_analytics: 0
   group: 0

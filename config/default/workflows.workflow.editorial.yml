@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - node.type.page
-    - node.type.subsite_page
   module:
     - content_moderation
 _core:
@@ -80,5 +79,4 @@ type_settings:
   entity_types:
     node:
       - page
-      - subsite_page
   default_moderation_state: draft

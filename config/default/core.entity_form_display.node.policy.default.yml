@@ -6,7 +6,6 @@ dependencies:
     - field.field.node.policy.body
     - field.field.node.policy.field_caption_formatted
     - field.field.node.policy.field_category
-    - field.field.node.policy.field_icon
     - field.field.node.policy.field_link
     - field.field.node.policy.field_media
     - node.type.policy
@@ -173,5 +172,4 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden:
-  field_icon: true
+hidden: {  }

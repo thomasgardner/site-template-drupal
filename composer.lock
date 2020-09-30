@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "75765aa75411b3b3e1457564c2cd27ea",
+    "content-hash": "54aeeacb270825d0479ef70f28ee5622",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -156,6 +156,24 @@
             ]
         },
         {
+            "name": "bower-asset/jquery-gridder",
+            "version": "v1.4.2",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:oriongunning/gridder.git",
+                "reference": "ecf0920d1048ac65704d3d5e8b505c431175f218"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/oriongunning/gridder/zipball/ecf0920d1048ac65704d3d5e8b505c431175f218",
+                "reference": "ecf0920d1048ac65704d3d5e8b505c431175f218"
+            },
+            "type": "bower-asset",
+            "license": [
+                "MIT"
+            ]
+        },
+        {
             "name": "bower-asset/jquery-simple-color",
             "version": "v1.2.2",
             "source": {
@@ -167,6 +185,45 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/recurser/jquery-simple-color/zipball/ebe0b2c0db639584e81499bd29d6619abb9a2599",
                 "reference": "ebe0b2c0db639584e81499bd29d6619abb9a2599"
+            },
+            "type": "bower-asset",
+            "license": [
+                "MIT"
+            ]
+        },
+        {
+            "name": "bower-asset/lightgallery",
+            "version": "1.8.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sachinchoolur/lightGallery.git",
+                "reference": "6c00ef21e72db65b1e98c73adcec255fc703ed19"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sachinchoolur/lightGallery/zipball/6c00ef21e72db65b1e98c73adcec255fc703ed19",
+                "reference": "6c00ef21e72db65b1e98c73adcec255fc703ed19"
+            },
+            "require": {
+                "bower-asset/jquery": ">=1.7.0"
+            },
+            "type": "bower-asset",
+            "license": [
+                "GPLv3"
+            ]
+        },
+        {
+            "name": "bower-asset/matchheight",
+            "version": "0.7.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/liabru/jquery-match-height.git",
+                "reference": "2446ac654f694bc05a1297cbab0b2d875e278bbd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/liabru/jquery-match-height/zipball/2446ac654f694bc05a1297cbab0b2d875e278bbd",
+                "reference": "2446ac654f694bc05a1297cbab0b2d875e278bbd"
             },
             "type": "bower-asset",
             "license": [
@@ -2398,77 +2455,6 @@
             }
         },
         {
-            "name": "drupal/addtocalendar",
-            "version": "3.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/addtocalendar.git",
-                "reference": "8.x-3.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/addtocalendar-8.x-3.1.zip",
-                "reference": "8.x-3.1",
-                "shasum": "c384df6017790173908ee7566e2af22ab5234b9d"
-            },
-            "require": {
-                "drupal/core": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-3.x": "3.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-3.1",
-                    "datestamp": "1511952790",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                },
-                "patches_applied": {
-                    "Field settings Select Style always shows Blue skin if we want to use No Styling": "https://www.drupal.org/files/issues/2018-09-27/field-settings-select-style-always-shows-blue-3002766-2.patch",
-                    "Allow to alter the values in the widget by contrib/custom modules": "https://www.drupal.org/files/issues/2018-09-27/addtocalendar-allow-to-alter-field-in-widget-3002818-4.patch"
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "anand.toshniwal93",
-                    "homepage": "https://www.drupal.org/user/3345088"
-                },
-                {
-                    "name": "gagarine",
-                    "homepage": "https://www.drupal.org/user/162439"
-                },
-                {
-                    "name": "gg24",
-                    "homepage": "https://www.drupal.org/user/3389212"
-                },
-                {
-                    "name": "guptahemant",
-                    "homepage": "https://www.drupal.org/user/3278073"
-                },
-                {
-                    "name": "purushotam.rai",
-                    "homepage": "https://www.drupal.org/user/3193859"
-                },
-                {
-                    "name": "sonvir249",
-                    "homepage": "https://www.drupal.org/user/3225171"
-                }
-            ],
-            "description": "Add to calendar button to be used for event page.",
-            "homepage": "https://www.drupal.org/project/addtocalendar",
-            "support": {
-                "source": "https://git.drupalcode.org/project/addtocalendar"
-            }
-        },
-        {
             "name": "drupal/admin_toolbar",
             "version": "2.3.0",
             "source": {
@@ -3278,29 +3264,26 @@
         },
         {
             "name": "drupal/ckeditor_templates",
-            "version": "1.1.0",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/ckeditor_templates.git",
-                "reference": "8.x-1.1"
+                "reference": "8.x-1.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/ckeditor_templates-8.x-1.1.zip",
-                "reference": "8.x-1.1",
-                "shasum": "f8c793e34a5d6aea769fbc0204e818509a486a94"
+                "url": "https://ftp.drupal.org/files/projects/ckeditor_templates-8.x-1.2.zip",
+                "reference": "8.x-1.2",
+                "shasum": "4957f9d3b1d817433432f00518c18f52980a5376"
             },
             "require": {
-                "drupal/core": "*"
+                "drupal/core": "^8 || ^9"
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
                 "drupal": {
-                    "version": "8.x-1.1",
-                    "datestamp": "1552809780",
+                    "version": "8.x-1.2",
+                    "datestamp": "1601232517",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3315,9 +3298,13 @@
                 {
                     "name": "lucaslg",
                     "homepage": "https://www.drupal.org/user/3128975"
+                },
+                {
+                    "name": "mandclu",
+                    "homepage": "https://www.drupal.org/user/52136"
                 }
             ],
-            "description": "Integrates the CKEdito templates plugin",
+            "description": "Integrates the CKEditor templates plugin.",
             "homepage": "https://www.drupal.org/project/ckeditor_templates",
             "support": {
                 "source": "https://git.drupalcode.org/project/ckeditor_templates"
@@ -3705,16 +3692,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "8.9.5",
+            "version": "8.9.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "c9b9643663b80f02c038f9dea15b8717a22c3339"
+                "reference": "caf4e756d31dfb0c2e52cd0748e900efe4b57766"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/c9b9643663b80f02c038f9dea15b8717a22c3339",
-                "reference": "c9b9643663b80f02c038f9dea15b8717a22c3339",
+                "url": "https://api.github.com/repos/drupal/core/zipball/caf4e756d31dfb0c2e52cd0748e900efe4b57766",
+                "reference": "caf4e756d31dfb0c2e52cd0748e900efe4b57766",
                 "shasum": ""
             },
             "require": {
@@ -3947,7 +3934,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2020-09-03T21:07:45+00:00"
+            "time": "2020-09-16T11:22:21+00:00"
         },
         {
             "name": "drupal/core-composer-scaffold",
@@ -3998,16 +3985,16 @@
         },
         {
             "name": "drupal/core-recommended",
-            "version": "8.9.5",
+            "version": "8.9.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-recommended.git",
-                "reference": "2d320331187e2e5e4945b34fc608263ffb93e2a1"
+                "reference": "6c5c4739afc5549e6089ef34b59c712c8872f154"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/2d320331187e2e5e4945b34fc608263ffb93e2a1",
-                "reference": "2d320331187e2e5e4945b34fc608263ffb93e2a1",
+                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/6c5c4739afc5549e6089ef34b59c712c8872f154",
+                "reference": "6c5c4739afc5549e6089ef34b59c712c8872f154",
                 "shasum": ""
             },
             "require": {
@@ -4019,7 +4006,7 @@
                 "doctrine/common": "v2.7.3",
                 "doctrine/inflector": "v1.2.0",
                 "doctrine/lexer": "1.0.2",
-                "drupal/core": "8.9.5",
+                "drupal/core": "8.9.6",
                 "easyrdf/easyrdf": "0.9.1",
                 "egulias/email-validator": "2.1.17",
                 "guzzlehttp/guzzle": "6.5.4",
@@ -4076,7 +4063,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Locked core dependencies; require this project INSTEAD OF drupal/core.",
-            "time": "2020-09-03T21:07:45+00:00"
+            "time": "2020-09-16T11:22:21+00:00"
         },
         {
             "name": "drupal/core-vendor-hardening",
@@ -4312,17 +4299,17 @@
         },
         {
             "name": "drupal/devel",
-            "version": "4.0.0",
+            "version": "4.0.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/devel.git",
-                "reference": "4.0.0"
+                "reference": "4.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/devel-4.0.0.zip",
-                "reference": "4.0.0",
-                "shasum": "6c01ef8dd4e926e63b08fe28dea5357c7caa49c9"
+                "url": "https://ftp.drupal.org/files/projects/devel-4.0.1.zip",
+                "reference": "4.0.1",
+                "shasum": "cf2458de1cbac00a88ed26ae3da2cf331e1bc047"
             },
             "require": {
                 "doctrine/common": "^2.7",
@@ -4350,8 +4337,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "4.0.0",
-                    "datestamp": "1592918748",
+                    "version": "4.0.1",
+                    "datestamp": "1600300079",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4512,33 +4499,85 @@
             }
         },
         {
-            "name": "drupal/dropzonejs",
-            "version": "2.1.0",
+            "name": "drupal/devel_php",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
-                "url": "https://git.drupalcode.org/project/dropzonejs.git",
-                "reference": "8.x-2.1"
+                "url": "https://git.drupalcode.org/project/devel_php.git",
+                "reference": "8.x-1.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/dropzonejs-8.x-2.1.zip",
-                "reference": "8.x-2.1",
-                "shasum": "a165b70070c320933fdce0c02be3577abce5e938"
+                "url": "https://ftp.drupal.org/files/projects/devel_php-8.x-1.2.zip",
+                "reference": "8.x-1.2",
+                "shasum": "fc80eb90b208e36de01f942382eaea36b56f17a2"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9",
+                "drupal/devel": ">=2.1"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.2",
+                    "datestamp": "1590832060",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Luca Lusso (lussoluca)",
+                    "homepage": "https://www.drupal.org/user/138068",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Florent Torregrosa (Grimreaper)",
+                    "homepage": "https://www.drupal.org/user/2388214",
+                    "role": "Co-maintainer"
+                }
+            ],
+            "description": "Re-add Execute PHP feature to Devel.",
+            "homepage": "https://drupal.org/project/devel_php",
+            "support": {
+                "source": "https://git.drupalcode.org/project/devel_php",
+                "issues": "https://drupal.org/project/issues/devel_php"
+            }
+        },
+        {
+            "name": "drupal/dropzonejs",
+            "version": "2.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/dropzonejs.git",
+                "reference": "8.x-2.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/dropzonejs-8.x-2.3.zip",
+                "reference": "8.x-2.3",
+                "shasum": "c145f2560ed31de32ea8938b0c0378765f70e36a"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9"
             },
             "require-dev": {
-                "drupal/entity_browser": "*"
+                "drupal/entity_browser": "^2.5"
             },
             "suggest": {
-                "enyo/dropzone": "Required to user drupal/dropzonejs. Dropzone is an easy to use drag'n'drop library."
+                "enyo/dropzone": "Required to use drupal/dropzonejs. DropzoneJS is an open source library that provides drag’n’drop file uploads with image previews."
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.1",
-                    "datestamp": "1585662324",
+                    "version": "8.x-2.3",
+                    "datestamp": "1600311980",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4547,7 +4586,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0+"
+                "GPL-2.0-or-later"
             ],
             "authors": [
                 {
@@ -4566,13 +4605,14 @@
                     "role": "Maintainer"
                 },
                 {
+                    "name": "Qiangjun Ran",
+                    "homepage": "https://drupal.org/u/jungle",
+                    "role": "Maintainer"
+                },
+                {
                     "name": "See other contributors",
                     "homepage": "https://www.drupal.org/node/1998478/committers",
                     "role": "contributor"
-                },
-                {
-                    "name": "jungle",
-                    "homepage": "https://www.drupal.org/user/2919723"
                 },
                 {
                     "name": "slashrsm",
@@ -4596,7 +4636,7 @@
             "support": {
                 "source": "https://www.drupal.org/project/dropzonejs",
                 "issues": "https://www.drupal.org/project/issues/dropzonejs",
-                "irc": "irc://irc.freenode.org/drupal-contribute"
+                "#media": "http://drupal.slack.com"
             }
         },
         {
@@ -4604,7 +4644,7 @@
             "version": "2.1.0",
             "require": {
                 "drupal/core": "^8.8 || ^9",
-                "drupal/dropzonejs": "self.version",
+                "drupal/dropzonejs": "*",
                 "drupal/entity_browser": "*"
             },
             "type": "metapackage",
@@ -8364,108 +8404,6 @@
             }
         },
         {
-            "name": "drupal/sharethis",
-            "version": "2.0.0-beta3",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/sharethis.git",
-                "reference": "8.x-2.0-beta3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/sharethis-8.x-2.0-beta3.zip",
-                "reference": "8.x-2.0-beta3",
-                "shasum": "83379c9ee4e9c1dd8a8e31032edd8b267a84155b"
-            },
-            "require": {
-                "drupal/core": "~8.0"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-2.x": "2.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-2.0-beta3",
-                    "datestamp": "1468313039",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Beta releases are not covered by Drupal security advisories."
-                    }
-                },
-                "patches_applied": {
-                    "Fix: Error: [] operator not supported for strings": "https://www.drupal.org/files/issues/Error-operator-not-supported-for-strings-2885710-12128018.patch"
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Clark Zhang",
-                    "homepage": "https://www.drupal.org/user/2911755"
-                },
-                {
-                    "name": "Gaofengzzz",
-                    "homepage": "https://www.drupal.org/user/1478184"
-                },
-                {
-                    "name": "RobLoach",
-                    "homepage": "https://www.drupal.org/user/61114"
-                },
-                {
-                    "name": "abhishek-anand",
-                    "homepage": "https://www.drupal.org/user/468982"
-                },
-                {
-                    "name": "bhavikshah9",
-                    "homepage": "https://www.drupal.org/user/2784353"
-                },
-                {
-                    "name": "himerus",
-                    "homepage": "https://www.drupal.org/user/159141"
-                },
-                {
-                    "name": "jvalencia",
-                    "homepage": "https://www.drupal.org/user/1259538"
-                },
-                {
-                    "name": "manu.mukerji",
-                    "homepage": "https://www.drupal.org/user/639872"
-                },
-                {
-                    "name": "naveenvalecha",
-                    "homepage": "https://www.drupal.org/user/2665733"
-                },
-                {
-                    "name": "neetu morwani",
-                    "homepage": "https://www.drupal.org/user/2632025"
-                },
-                {
-                    "name": "pankaj.shukla",
-                    "homepage": "https://www.drupal.org/user/2720739"
-                },
-                {
-                    "name": "purushotam.rai",
-                    "homepage": "https://www.drupal.org/user/3193859"
-                },
-                {
-                    "name": "ronsharethis",
-                    "homepage": "https://www.drupal.org/user/1448422"
-                },
-                {
-                    "name": "sagarpgaikwad",
-                    "homepage": "https://www.drupal.org/user/3133879"
-                }
-            ],
-            "description": "Add the ShareThis widget to nodes on your site",
-            "homepage": "http://drupal.org/project/sharethis",
-            "support": {
-                "source": "https://git.drupalcode.org/project/sharethis"
-            }
-        },
-        {
             "name": "drupal/smart_ip",
             "version": "3.6.0",
             "source": {
@@ -9231,35 +9169,40 @@
         },
         {
             "name": "drupal/ultimate_cron",
-            "version": "2.0.0-alpha4",
+            "version": "2.0.0-alpha5",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/ultimate_cron.git",
-                "reference": "8.x-2.0-alpha4"
+                "reference": "8.x-2.0-alpha5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/ultimate_cron-8.x-2.0-alpha4.zip",
-                "reference": "8.x-2.0-alpha4",
-                "shasum": "50cdadd061f1f6fadb961b04ed04348bcc4719d3"
+                "url": "https://ftp.drupal.org/files/projects/ultimate_cron-8.x-2.0-alpha5.zip",
+                "reference": "8.x-2.0-alpha5",
+                "shasum": "0f10464fff29eca89024e7afa5b6d8d07bd52f75"
             },
             "require": {
-                "drupal/core": "~8.0"
+                "drupal/core": "^8.7.7 || ^9"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.0-alpha4",
-                    "datestamp": "1527925385",
+                    "version": "8.x-2.0-alpha5",
+                    "datestamp": "1600928948",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9 || ^10"
                     }
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0-or-later"
+                "GPL-2.0+"
             ],
             "authors": [
                 {
@@ -9287,7 +9230,7 @@
                     "homepage": "https://www.drupal.org/user/227761"
                 }
             ],
-            "description": "Cron",
+            "description": "Ultimate cron",
             "homepage": "https://www.drupal.org/project/ultimate_cron",
             "support": {
                 "source": "https://git.drupalcode.org/project/ultimate_cron"
@@ -9814,17 +9757,17 @@
         },
         {
             "name": "drupal/webform",
-            "version": "5.19.0",
+            "version": "5.20.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/webform.git",
-                "reference": "8.x-5.19"
+                "reference": "8.x-5.20"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/webform-8.x-5.19.zip",
-                "reference": "8.x-5.19",
-                "shasum": "90a2084c2647bca791cc8b18a7e2a3b49f3da7ea"
+                "url": "https://ftp.drupal.org/files/projects/webform-8.x-5.20.zip",
+                "reference": "8.x-5.20",
+                "shasum": "986dc0ba571e926a156390aca8138602dfc285e9"
             },
             "require": {
                 "drupal/core": "^8.8"
@@ -9834,12 +9777,13 @@
                 "drupal/bootstrap": "~3.0",
                 "drupal/captcha": "~1.0",
                 "drupal/chosen": "~2.0",
-                "drupal/clientside_validation": "~3.0",
+                "drupal/clientside_validation": "*",
                 "drupal/clientside_validation_jquery": "*",
-                "drupal/devel": "~3.0",
-                "drupal/entity_print": "~2.0",
+                "drupal/devel": "*",
+                "drupal/entity": "~1.0",
+                "drupal/entity_print": "*",
                 "drupal/gnode": "*",
-                "drupal/group": "~1.0",
+                "drupal/group": "*",
                 "drupal/lingotek": "~3.0",
                 "drupal/mailsystem": "~4.0",
                 "drupal/paragraphs": "~1.0",
@@ -9847,7 +9791,8 @@
                 "drupal/smtp": "~1.0",
                 "drupal/styleguide": "~1.0",
                 "drupal/telephone_validation": "~2.0",
-                "drupal/token": "~1.0",
+                "drupal/token": "*",
+                "drupal/variationcache": "~1.0",
                 "drupal/webform_access": "*",
                 "drupal/webform_attachment": "*",
                 "drupal/webform_clientside_validation": "*",
@@ -9863,8 +9808,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-5.19",
-                    "datestamp": "1593681136",
+                    "version": "8.x-5.20",
+                    "datestamp": "1599851752",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -10554,39 +10499,12 @@
         },
         {
             "name": "enyo/dropzone",
-            "version": "v5.5.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/enyo/dropzone.git",
-                "reference": "08b9e0a763b54a685404dea523a9c54242fbe1b9"
-            },
+            "version": "5.7.1",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/enyo/dropzone/zipball/08b9e0a763b54a685404dea523a9c54242fbe1b9",
-                "reference": "08b9e0a763b54a685404dea523a9c54242fbe1b9",
-                "shasum": ""
+                "url": "https://github.com/enyo/dropzone/archive/v5.7.1.zip"
             },
-            "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Matias Meno",
-                    "email": "m@tias.me",
-                    "homepage": "http://www.matiasmeno.com"
-                }
-            ],
-            "description": "Handles drag and drop of files for you.",
-            "homepage": "http://www.dropzonejs.com",
-            "keywords": [
-                "drag and drop",
-                "dragndrop",
-                "file upload",
-                "upload"
-            ],
-            "time": "2018-07-06T14:20:31+00:00"
+            "type": "drupal-library"
         },
         {
             "name": "fileeye/mimemap",
@@ -16303,7 +16221,6 @@
         "drupal/menu_block": 20,
         "drupal/name": 20,
         "drupal/owlcarousel": 20,
-        "drupal/sharethis": 10,
         "drupal/smtp": 5,
         "drupal/soundcloudfield": 15,
         "drupal/tb_megamenu": 20,

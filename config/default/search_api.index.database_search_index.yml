@@ -10,7 +10,6 @@ dependencies:
     - field.storage.node.body
     - field.storage.node.field_after_content
     - field.storage.node.field_content_bottom
-    - field.storage.node.field_email
     - search_api.server.database_search
     - core.entity_view_mode.node.search_result
 third_party_settings:
@@ -64,14 +63,6 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_content_bottom
-  field_email:
-    label: Email
-    datasource_id: 'entity:node'
-    property_path: field_email
-    type: text
-    dependencies:
-      config:
-        - field.storage.node.field_email
   node_grants:
     label: 'Node access information'
     property_path: search_api_node_grants
@@ -160,7 +151,6 @@ processor_settings:
       - body
       - field_after_content
       - field_content_bottom
-      - field_email
       - rendered_item
       - rendered_item_1
       - title
@@ -178,7 +168,6 @@ processor_settings:
       - body
       - field_after_content
       - field_content_bottom
-      - field_email
       - rendered_item
       - rendered_item_1
       - title
@@ -194,7 +183,6 @@ processor_settings:
       - body
       - field_after_content
       - field_content_bottom
-      - field_email
       - rendered_item
       - rendered_item_1
       - title
