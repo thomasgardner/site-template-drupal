@@ -6,8 +6,10 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Twig_Extensions_' => array($vendorDir . '/twig/extensions/lib'),
     'Twig_' => array($vendorDir . '/twig/twig/lib'),
     'Stack' => array($vendorDir . '/stack/builder/src'),
+    'SimpleSamlPhp\\Composer' => array($vendorDir . '/simplesamlphp/composer-module-installer/src'),
     'EasyRdf_' => array($vendorDir . '/easyrdf/easyrdf/lib'),
     'Drupal\\Composer' => array($vendorDir . '/drupal/drupal-library-installer-plugin/src'),
     'Doctrine\\Common\\Collections\\' => array($vendorDir . '/doctrine/collections/lib'),
