@@ -39,6 +39,14 @@ use Drupal\workbench_email\TemplateInterface;
  *     "edit-form" = "/admin/structure/workbench-moderation/workbench-email-template/{workbench_email_template}/edit",
  *     "delete-form" = "/admin/structure/workbench-moderation/workbench-email-template/{workbench_email_template}/delete",
  *     "collection" = "/admin/structure/workbench-moderation/workbench-email-template"
+ *   },
+ *   config_export = {
+ *     "id",
+ *     "label",
+ *     "subject",
+ *     "body",
+ *     "bundles",
+ *     "recipient_types",
  *   }
  * )
  */

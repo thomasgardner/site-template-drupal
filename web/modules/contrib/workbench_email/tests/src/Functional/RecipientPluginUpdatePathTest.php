@@ -2,6 +2,7 @@
 
 namespace Drupal\Tests\workbench_email\Functional;
 
+use Composer\Semver\Semver;
 use Drupal\FunctionalTests\Update\UpdatePathTestBase;
 
 /**
@@ -24,6 +25,9 @@ class RecipientPluginUpdatePathTest extends UpdatePathTestBase {
    * Tests workbench_email_update_8001().
    */
   public function testUpdatePath() {
+    if (Semver::satisfies(\Drupal::VERSION, '~9')) {
+      $this->markTestSkipped('This test is only for Drupal 8');
+    }
     $this->container->get('module_installer')->install(['block']);
     $this->runUpdates();
     $entity_type_manager = $this->container->get('entity_type.manager');

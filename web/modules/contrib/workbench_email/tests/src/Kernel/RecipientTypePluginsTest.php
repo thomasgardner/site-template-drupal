@@ -234,12 +234,12 @@ class RecipientTypePluginsTest extends KernelTestBase {
 
     // Check mail goes to recipients.
     $captured_emails = $this->container->get('state')->get('system.test_mail_collector') ?: [];
-    $this->assertEquals($expectedRecipients, array_map(function (array $mail) {
+    $this->assertSame($expectedRecipients, array_map(function (array $mail) {
       return $mail['to'];
     }, $captured_emails));
     foreach ($captured_emails as $email) {
       $this->assertEquals(sprintf('Content needs review: %s', $node->getTitle()), $email['subject']);
-      $this->assertContains(sprintf('Content with title %s needs review.', $node->label()), preg_replace('/\s+/', ' ', $email['body']));
+      $this->assertStringContainsString(sprintf('Content with title %s needs review.', $node->label()), preg_replace('/\s+/', ' ', $email['body']));
     }
   }
 

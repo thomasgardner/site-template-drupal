@@ -348,10 +348,10 @@ abstract class WorkbenchEmailTestBase extends BrowserTestBase {
     $this->assertEquals($expected, $mails);
     $this->assertEquals(sprintf('Content approved: %s', $node->getTitle()), $last['subject']);
     $this->assertEquals(sprintf('Content approved: %s', $node->getTitle()), $prev['subject']);
-    $this->assertContains(sprintf('Content with title %s was approved. You can view it at', $node->label()), preg_replace('/\s+/', ' ', $prev['body']));
-    $this->assertContains(sprintf('Content with title %s was approved. You can view it at', $node->label()), preg_replace('/\s+/', ' ', $last['body']));
-    $this->assertContains($node->toUrl('canonical', ['absolute' => TRUE])->toString(), preg_replace('/\s+/', ' ', $prev['body']));
-    $this->assertContains($node->toUrl('canonical', ['absolute' => TRUE])->toString(), preg_replace('/\s+/', ' ', $last['body']));
+    $this->assertStringContainsString(sprintf('Content with title %s was approved. You can view it at', $node->label()), preg_replace('/\s+/', ' ', $prev['body']));
+    $this->assertStringContainsString(sprintf('Content with title %s was approved. You can view it at', $node->label()), preg_replace('/\s+/', ' ', $last['body']));
+    $this->assertStringContainsString($node->toUrl('canonical', ['absolute' => TRUE])->toString(), preg_replace('/\s+/', ' ', $prev['body']));
+    $this->assertStringContainsString($node->toUrl('canonical', ['absolute' => TRUE])->toString(), preg_replace('/\s+/', ' ', $last['body']));
 
     // Test again with node that was previously published.
     // Log back in as editor.
@@ -418,10 +418,10 @@ abstract class WorkbenchEmailTestBase extends BrowserTestBase {
     $this->assertEquals($expected, $mails);
     $this->assertEquals(sprintf('Content needs review: %s', $node->getTitle()), $last['subject']);
     $this->assertEquals(sprintf('Content needs review: %s', $node->getTitle()), $prev['subject']);
-    $this->assertContains(sprintf('Content with title %s needs review. You can view it at', $node->label()), preg_replace('/\s+/', ' ', $prev['body']));
-    $this->assertContains(sprintf('Content with title %s needs review. You can view it at', $node->label()), preg_replace('/\s+/', ' ', $last['body']));
-    $this->assertContains($node->toUrl('canonical', ['absolute' => TRUE])->toString(), preg_replace('/\s+/', ' ', $prev['body']));
-    $this->assertContains($node->toUrl('canonical', ['absolute' => TRUE])->toString(), preg_replace('/\s+/', ' ', $last['body']));
+    $this->assertStringContainsString(sprintf('Content with title %s needs review. You can view it at', $node->label()), preg_replace('/\s+/', ' ', $prev['body']));
+    $this->assertStringContainsString(sprintf('Content with title %s needs review. You can view it at', $node->label()), preg_replace('/\s+/', ' ', $last['body']));
+    $this->assertStringContainsString($node->toUrl('canonical', ['absolute' => TRUE])->toString(), preg_replace('/\s+/', ' ', $prev['body']));
+    $this->assertStringContainsString($node->toUrl('canonical', ['absolute' => TRUE])->toString(), preg_replace('/\s+/', ' ', $last['body']));
   }
 
 }
