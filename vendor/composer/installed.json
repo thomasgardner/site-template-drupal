@@ -142,7 +142,7 @@
         "version_normalized": "3.5.1.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/jquery/jquery-dist.git",
+            "url": "git@github.com:jquery/jquery-dist.git",
             "reference": "4c0e4becb8263bb5b3e6dadc448d8e7305ef8215"
         },
         "dist": {
@@ -692,64 +692,6 @@
             "internationalization",
             "localization",
             "postal"
-        ]
-    },
-    {
-        "name": "composer/ca-bundle",
-        "version": "1.2.6",
-        "version_normalized": "1.2.6.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/composer/ca-bundle.git",
-            "reference": "47fe531de31fca4a1b997f87308e7d7804348f7e"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/composer/ca-bundle/zipball/47fe531de31fca4a1b997f87308e7d7804348f7e",
-            "reference": "47fe531de31fca4a1b997f87308e7d7804348f7e",
-            "shasum": ""
-        },
-        "require": {
-            "ext-openssl": "*",
-            "ext-pcre": "*",
-            "php": "^5.3.2 || ^7.0 || ^8.0"
-        },
-        "require-dev": {
-            "phpunit/phpunit": "^4.8.35 || ^5.7 || 6.5 - 8",
-            "psr/log": "^1.0",
-            "symfony/process": "^2.5 || ^3.0 || ^4.0 || ^5.0"
-        },
-        "time": "2020-01-13T10:02:55+00:00",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "1.x-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Composer\\CaBundle\\": "src"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Jordi Boggiano",
-                "email": "j.boggiano@seld.be",
-                "homepage": "http://seld.be"
-            }
-        ],
-        "description": "Lets you find a path to the system CA bundle, and includes a fallback to the Mozilla CA bundle.",
-        "keywords": [
-            "cabundle",
-            "cacert",
-            "certificate",
-            "ssl",
-            "tls"
         ]
     },
     {
@@ -3353,60 +3295,6 @@
         }
     },
     {
-        "name": "drupal/ckeditor_media_embed",
-        "version": "1.7.0",
-        "version_normalized": "1.7.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://git.drupalcode.org/project/ckeditor_media_embed.git",
-            "reference": "8.x-1.7"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/ckeditor_media_embed-8.x-1.7.zip",
-            "reference": "8.x-1.7",
-            "shasum": "194b79f8aec7ab27ea7677f03e03c3d226e88457"
-        },
-        "require": {
-            "drupal/core": "*"
-        },
-        "type": "drupal-module",
-        "extra": {
-            "branch-alias": {
-                "dev-1.x": "1.x-dev"
-            },
-            "drupal": {
-                "version": "8.x-1.7",
-                "datestamp": "1568732287",
-                "security-coverage": {
-                    "status": "covered",
-                    "message": "Covered by Drupal's security advisory policy"
-                }
-            }
-        },
-        "installation-source": "dist",
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0+"
-        ],
-        "authors": [
-            {
-                "name": "Jody Lynn",
-                "homepage": "https://www.drupal.org/user/112500"
-            },
-            {
-                "name": "grndlvl",
-                "homepage": "https://www.drupal.org/user/103553"
-            }
-        ],
-        "description": "Adds the Media Embed CKEditor plugins to Drupal.",
-        "homepage": "https://www.drupal.org/project/embed",
-        "support": {
-            "source": "https://drupal.org/project/ckeditor_media_embed",
-            "issues": "https://drupal.org/project/issues/ckeditor_media_embed"
-        }
-    },
-    {
         "name": "drupal/ckeditor_templates",
         "version": "1.2.0",
         "version_normalized": "1.2.0.0",
@@ -4421,30 +4309,27 @@
     },
     {
         "name": "drupal/date_popup",
-        "version": "1.0.0",
-        "version_normalized": "1.0.0.0",
+        "version": "1.1.0",
+        "version_normalized": "1.1.0.0",
         "source": {
             "type": "git",
             "url": "https://git.drupalcode.org/project/date_popup.git",
-            "reference": "8.x-1.0"
+            "reference": "8.x-1.1"
         },
         "dist": {
             "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/date_popup-8.x-1.0.zip",
-            "reference": "8.x-1.0",
-            "shasum": "7a950c593e185bdf677f87b5d724b55a00768d67"
+            "url": "https://ftp.drupal.org/files/projects/date_popup-8.x-1.1.zip",
+            "reference": "8.x-1.1",
+            "shasum": "b877b29cf11414e600b154eeea5c9078e0b125c6"
         },
         "require": {
-            "drupal/core": "~8.0"
+            "drupal/core": "^8 || ^9"
         },
         "type": "drupal-module",
         "extra": {
-            "branch-alias": {
-                "dev-1.x": "1.x-dev"
-            },
             "drupal": {
-                "version": "8.x-1.0",
-                "datestamp": "1496370243",
+                "version": "8.x-1.1",
+                "datestamp": "1591849806",
                 "security-coverage": {
                     "status": "covered",
                     "message": "Covered by Drupal's security advisory policy"
@@ -4460,6 +4345,10 @@
             {
                 "name": "benjy",
                 "homepage": "https://www.drupal.org/user/1852732"
+            },
+            {
+                "name": "larowlan",
+                "homepage": "https://www.drupal.org/user/395439"
             }
         ],
         "description": "Provides a HTML 5 date popup for all views filters.",
@@ -4819,70 +4708,6 @@
         }
     },
     {
-        "name": "drupal/dropzonejs_eb_widget",
-        "version": "2.1.0",
-        "version_normalized": "2.1.0.0",
-        "require": {
-            "drupal/core": "^8.8 || ^9",
-            "drupal/dropzonejs": "*",
-            "drupal/entity_browser": "*"
-        },
-        "type": "metapackage",
-        "extra": {
-            "drupal": {
-                "version": "8.x-2.1",
-                "datestamp": "1585662324",
-                "security-coverage": {
-                    "status": "covered",
-                    "message": "Covered by Drupal's security advisory policy"
-                }
-            }
-        },
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0-or-later"
-        ],
-        "authors": [
-            {
-                "name": "Drupal Media Team",
-                "homepage": "https://www.drupal.org/user/3260690"
-            },
-            {
-                "name": "Drupal media CI",
-                "homepage": "https://www.drupal.org/user/3057985"
-            },
-            {
-                "name": "Primsi",
-                "homepage": "https://www.drupal.org/user/282629"
-            },
-            {
-                "name": "chr.fritsch",
-                "homepage": "https://www.drupal.org/user/2103716"
-            },
-            {
-                "name": "jungle",
-                "homepage": "https://www.drupal.org/user/2919723"
-            },
-            {
-                "name": "slashrsm",
-                "homepage": "https://www.drupal.org/user/744628"
-            },
-            {
-                "name": "wouters_f",
-                "homepage": "https://www.drupal.org/user/721548"
-            },
-            {
-                "name": "zkday",
-                "homepage": "https://www.drupal.org/user/888644"
-            }
-        ],
-        "description": "DropzoneJS Entity browser widget",
-        "homepage": "https://www.drupal.org/project/dropzonejs",
-        "support": {
-            "source": "https://git.drupalcode.org/project/dropzonejs"
-        }
-    },
-    {
         "name": "drupal/drupal-library-installer-plugin",
         "version": "0.3",
         "version_normalized": "0.3.0.0",
@@ -5001,121 +4826,6 @@
         }
     },
     {
-        "name": "drupal/editor_advanced_link",
-        "version": "1.6.0",
-        "version_normalized": "1.6.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://git.drupalcode.org/project/editor_advanced_link.git",
-            "reference": "8.x-1.6"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/editor_advanced_link-8.x-1.6.zip",
-            "reference": "8.x-1.6",
-            "shasum": "920f22fd7841bc1c77b56c6ae51436319b47636e"
-        },
-        "require": {
-            "drupal/core": "*"
-        },
-        "type": "drupal-module",
-        "extra": {
-            "branch-alias": {
-                "dev-1.x": "1.x-dev"
-            },
-            "drupal": {
-                "version": "8.x-1.6",
-                "datestamp": "1577188383",
-                "security-coverage": {
-                    "status": "covered",
-                    "message": "Covered by Drupal's security advisory policy"
-                }
-            }
-        },
-        "installation-source": "dist",
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0-or-later"
-        ],
-        "authors": [
-            {
-                "name": "DuaelFr",
-                "homepage": "https://www.drupal.org/user/931394"
-            }
-        ],
-        "description": "Add title, target etc. attributes to Text Editor's link dialog if the text format allows them.",
-        "homepage": "https://www.drupal.org/project/editor_advanced_link",
-        "support": {
-            "source": "https://git.drupalcode.org/project/editor_advanced_link"
-        }
-    },
-    {
-        "name": "drupal/embed",
-        "version": "1.4.0",
-        "version_normalized": "1.4.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://git.drupalcode.org/project/embed.git",
-            "reference": "8.x-1.4"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/embed-8.x-1.4.zip",
-            "reference": "8.x-1.4",
-            "shasum": "09a2bda039bfbb3fff01c91964384bf3d924b8c5"
-        },
-        "require": {
-            "drupal/core": "^8.7.7 || ^9"
-        },
-        "type": "drupal-module",
-        "extra": {
-            "drupal": {
-                "version": "8.x-1.4",
-                "datestamp": "1590176831",
-                "security-coverage": {
-                    "status": "covered",
-                    "message": "Covered by Drupal's security advisory policy"
-                }
-            }
-        },
-        "installation-source": "dist",
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0-or-later"
-        ],
-        "authors": [
-            {
-                "name": "Dave Reid",
-                "homepage": "https://www.drupal.org/user/53892"
-            },
-            {
-                "name": "Devin Carlson",
-                "homepage": "https://www.drupal.org/user/290182"
-            },
-            {
-                "name": "Drupal Media Team",
-                "homepage": "https://www.drupal.org/user/3260690"
-            },
-            {
-                "name": "cs_shadow",
-                "homepage": "https://www.drupal.org/user/2828287"
-            },
-            {
-                "name": "phenaproxima",
-                "homepage": "https://www.drupal.org/user/205645"
-            },
-            {
-                "name": "slashrsm",
-                "homepage": "https://www.drupal.org/user/744628"
-            }
-        ],
-        "description": "Provides a framework for different types of embeds in text editors.",
-        "homepage": "https://www.drupal.org/project/embed",
-        "support": {
-            "source": "https://git.drupalcode.org/project/embed"
-        }
-    },
-    {
         "name": "drupal/entity",
         "version": "1.1.0",
         "version_normalized": "1.1.0.0",
@@ -5179,241 +4889,6 @@
         "homepage": "http://drupal.org/project/entity",
         "support": {
             "source": "https://git.drupalcode.org/project/entity"
-        }
-    },
-    {
-        "name": "drupal/entity_block",
-        "version": "1.0.0-beta2",
-        "version_normalized": "1.0.0.0-beta2",
-        "source": {
-            "type": "git",
-            "url": "https://git.drupalcode.org/project/entity_block.git",
-            "reference": "8.x-1.0-beta2"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/entity_block-8.x-1.0-beta2.zip",
-            "reference": "8.x-1.0-beta2",
-            "shasum": "626c2ac5d471383d068b06a24ff2e4fd842d9887"
-        },
-        "require": {
-            "drupal/core": "^8 || ^9"
-        },
-        "type": "drupal-module",
-        "extra": {
-            "branch-alias": {
-                "dev-1.x": "1.x-dev"
-            },
-            "drupal": {
-                "version": "8.x-1.0-beta2",
-                "datestamp": "1580800935",
-                "security-coverage": {
-                    "status": "not-covered",
-                    "message": "Beta releases are not covered by Drupal security advisories."
-                }
-            }
-        },
-        "installation-source": "dist",
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0-or-later"
-        ],
-        "authors": [
-            {
-                "name": "Jaesin",
-                "homepage": "https://www.drupal.org/user/841054"
-            },
-            {
-                "name": "arshadcn",
-                "homepage": "https://www.drupal.org/user/571032"
-            },
-            {
-                "name": "floretan",
-                "homepage": "https://www.drupal.org/user/66163"
-            },
-            {
-                "name": "rrrob",
-                "homepage": "https://www.drupal.org/user/273533"
-            }
-        ],
-        "description": "Let site administrators place content entities as blocks.",
-        "homepage": "https://www.drupal.org/project/entity_block",
-        "support": {
-            "source": "https://git.drupalcode.org/project/entity_block"
-        }
-    },
-    {
-        "name": "drupal/entity_browser",
-        "version": "2.4.0",
-        "version_normalized": "2.4.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://git.drupalcode.org/project/entity_browser.git",
-            "reference": "8.x-2.4"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/entity_browser-8.x-2.4.zip",
-            "reference": "8.x-2.4",
-            "shasum": "28dd5eb28284ff218ad3aed2414817e9fa5b7bb9"
-        },
-        "require": {
-            "drupal/core": "^8.7.7 || ^9"
-        },
-        "require-dev": {
-            "drupal/embed": "~1.0",
-            "drupal/entity_embed": "~1.0",
-            "drupal/entityqueue": "~1.0",
-            "drupal/inline_entity_form": "~1.0",
-            "drupal/paragraphs": "~1.0",
-            "drupal/token": "~1.0"
-        },
-        "type": "drupal-module",
-        "extra": {
-            "branch-alias": {
-                "dev-2.x": "2.x-dev"
-            },
-            "drupal": {
-                "version": "8.x-2.4",
-                "datestamp": "1579563787",
-                "security-coverage": {
-                    "status": "covered",
-                    "message": "Covered by Drupal's security advisory policy"
-                }
-            }
-        },
-        "installation-source": "dist",
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0+"
-        ],
-        "authors": [
-            {
-                "name": "Janez Urevc",
-                "homepage": "https://github.com/slashrsm",
-                "role": "Maintainer"
-            },
-            {
-                "name": "Primoz Hmeljak",
-                "homepage": "https://github.com/primsi",
-                "role": "Maintainer"
-            },
-            {
-                "name": "See other contributors",
-                "homepage": "https://www.drupal.org/node/1943336/committers",
-                "role": "contributor"
-            },
-            {
-                "name": "Drupal Media Team",
-                "homepage": "https://www.drupal.org/user/3260690"
-            },
-            {
-                "name": "Primsi",
-                "homepage": "https://www.drupal.org/user/282629"
-            },
-            {
-                "name": "marcingy",
-                "homepage": "https://www.drupal.org/user/77320"
-            },
-            {
-                "name": "oknate",
-                "homepage": "https://www.drupal.org/user/471638"
-            },
-            {
-                "name": "samuel.mortenson",
-                "homepage": "https://www.drupal.org/user/2582268"
-            },
-            {
-                "name": "slashrsm",
-                "homepage": "https://www.drupal.org/user/744628"
-            }
-        ],
-        "description": "Entity browsing and selecting component.",
-        "homepage": "http://drupal.org/project/entity_browser",
-        "support": {
-            "source": "https://git.drupalcode.org/project/entity_browser",
-            "issues": "https://www.drupal.org/project/issues/entity_browser",
-            "irc": "irc://irc.freenode.org/drupal-contribute"
-        }
-    },
-    {
-        "name": "drupal/entity_embed",
-        "version": "1.1.0",
-        "version_normalized": "1.1.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://git.drupalcode.org/project/entity_embed.git",
-            "reference": "8.x-1.1"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/entity_embed-8.x-1.1.zip",
-            "reference": "8.x-1.1",
-            "shasum": "f2c3f4b3071cbd69db94c5255e1db89510995b5d"
-        },
-        "require": {
-            "drupal/core": "^8.8 || ^9",
-            "drupal/embed": "^1.3"
-        },
-        "require-dev": {
-            "drupal/entity_browser": "^2.2"
-        },
-        "type": "drupal-module",
-        "extra": {
-            "drupal": {
-                "version": "8.x-1.1",
-                "datestamp": "1585252806",
-                "security-coverage": {
-                    "status": "covered",
-                    "message": "Covered by Drupal's security advisory policy"
-                }
-            }
-        },
-        "installation-source": "dist",
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0+"
-        ],
-        "authors": [
-            {
-                "name": "Dave Reid",
-                "homepage": "https://www.drupal.org/user/53892"
-            },
-            {
-                "name": "Devin Carlson",
-                "homepage": "https://www.drupal.org/user/290182"
-            },
-            {
-                "name": "Drupal Media Team",
-                "homepage": "https://www.drupal.org/user/3260690"
-            },
-            {
-                "name": "Wim Leers",
-                "homepage": "https://www.drupal.org/user/99777"
-            },
-            {
-                "name": "cs_shadow",
-                "homepage": "https://www.drupal.org/user/2828287"
-            },
-            {
-                "name": "oknate",
-                "homepage": "https://www.drupal.org/user/471638"
-            },
-            {
-                "name": "phenaproxima",
-                "homepage": "https://www.drupal.org/user/205645"
-            },
-            {
-                "name": "slashrsm",
-                "homepage": "https://www.drupal.org/user/744628"
-            }
-        ],
-        "description": "Allows any entity to be embedded within a text area using a WYSIWYG editor.",
-        "homepage": "https://www.drupal.org/project/entity_embed",
-        "support": {
-            "source": "https://git.drupalcode.org/project/entity_embed",
-            "issues": "https://www.drupal.org/project/issues/entity_embed",
-            "irc": "irc://irc.freenode.org/drupal-media"
         }
     },
     {
@@ -5527,34 +5002,28 @@
         }
     },
     {
-        "name": "drupal/facets",
-        "version": "1.4.0",
-        "version_normalized": "1.4.0.0",
+        "name": "drupal/externalauth",
+        "version": "1.3.0",
+        "version_normalized": "1.3.0.0",
         "source": {
             "type": "git",
-            "url": "https://git.drupalcode.org/project/facets.git",
-            "reference": "8.x-1.4"
+            "url": "https://git.drupalcode.org/project/externalauth.git",
+            "reference": "8.x-1.3"
         },
         "dist": {
             "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/facets-8.x-1.4.zip",
-            "reference": "8.x-1.4",
-            "shasum": "ee2d584b8a225ab981e313f6050e13bc9c98e40b"
+            "url": "https://ftp.drupal.org/files/projects/externalauth-8.x-1.3.zip",
+            "reference": "8.x-1.3",
+            "shasum": "b1b38e6718fe66bd38fc894dab1f9d7a7d60f10b"
         },
         "require": {
-            "drupal/core": "~8.0"
-        },
-        "require-dev": {
-            "drupal/search_api": "~1.5"
+            "drupal/core": "^8 || ^9"
         },
         "type": "drupal-module",
         "extra": {
-            "branch-alias": {
-                "dev-1.x": "1.x-dev"
-            },
             "drupal": {
-                "version": "8.x-1.4",
-                "datestamp": "1556645881",
+                "version": "8.x-1.3",
+                "datestamp": "1587629529",
                 "security-coverage": {
                     "status": "covered",
                     "message": "Covered by Drupal's security advisory policy"
@@ -5564,197 +5033,26 @@
         "installation-source": "dist",
         "notification-url": "https://packages.drupal.org/8/downloads",
         "license": [
-            "GPL-2.0+"
+            "GPL-2.0-or-later"
         ],
         "authors": [
             {
-                "name": "See all contributors",
-                "homepage": "https://www.drupal.org/node/2348769/committers"
+                "name": "rgristroph",
+                "homepage": "https://www.drupal.org/user/516442"
             },
             {
-                "name": "StryKaizer",
-                "homepage": "https://www.drupal.org/user/462700"
+                "name": "snufkin",
+                "homepage": "https://www.drupal.org/user/58645"
             },
             {
-                "name": "borisson_",
-                "homepage": "https://www.drupal.org/user/2393360"
+                "name": "svendecabooter",
+                "homepage": "https://www.drupal.org/user/35369"
             }
         ],
-        "description": "The Facet module allows site builders to easily create and manage faceted search interfaces.",
-        "homepage": "https://www.drupal.org/project/facets",
+        "description": "Helper module to authenticate users using an external site / service and storing identification details",
+        "homepage": "https://www.drupal.org/project/externalauth",
         "support": {
-            "source": "git://git.drupal.org/project/facets.git",
-            "issues": "https://www.drupal.org/project/issues/facets",
-            "irc": "irc://irc.freenode.org/drupal-search-api"
-        }
-    },
-    {
-        "name": "drupal/feeds",
-        "version": "dev-3.x",
-        "version_normalized": "dev-3.x",
-        "source": {
-            "type": "git",
-            "url": "https://git.drupalcode.org/project/feeds.git",
-            "reference": "80a034454c909304ef3f457f83f3c73176272229"
-        },
-        "require": {
-            "drupal/core": "^8.7.0"
-        },
-        "type": "drupal-module",
-        "extra": {
-            "branch-alias": {
-                "dev-3.x": "3.x-dev"
-            },
-            "drupal": {
-                "version": "8.x-3.x-dev",
-                "datestamp": "1581605829",
-                "security-coverage": {
-                    "status": "not-covered",
-                    "message": "Project has not opted into security advisory coverage!"
-                }
-            }
-        },
-        "installation-source": "source",
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0+"
-        ],
-        "authors": [
-            {
-                "name": "Dave Reid",
-                "homepage": "https://www.drupal.org/user/53892"
-            },
-            {
-                "name": "Ian Ward",
-                "homepage": "https://www.drupal.org/user/4736"
-            },
-            {
-                "name": "MegaChriz",
-                "homepage": "https://www.drupal.org/user/654114"
-            },
-            {
-                "name": "Will White",
-                "homepage": "https://www.drupal.org/user/32237"
-            },
-            {
-                "name": "alex_b",
-                "homepage": "https://www.drupal.org/user/53995"
-            },
-            {
-                "name": "e2thex",
-                "homepage": "https://www.drupal.org/user/189123"
-            },
-            {
-                "name": "febbraro",
-                "homepage": "https://www.drupal.org/user/43670"
-            },
-            {
-                "name": "franz",
-                "homepage": "https://www.drupal.org/user/581844"
-            },
-            {
-                "name": "jmiccolis",
-                "homepage": "https://www.drupal.org/user/31731"
-            },
-            {
-                "name": "kking",
-                "homepage": "https://www.drupal.org/user/24399"
-            },
-            {
-                "name": "tobby",
-                "homepage": "https://www.drupal.org/user/154797"
-            },
-            {
-                "name": "tristanoneil",
-                "homepage": "https://www.drupal.org/user/340659"
-            },
-            {
-                "name": "twistor",
-                "homepage": "https://www.drupal.org/user/473738"
-            },
-            {
-                "name": "yhahn",
-                "homepage": "https://www.drupal.org/user/264833"
-            }
-        ],
-        "description": "Aggregates RSS/Atom/RDF feeds, imports CSV files and more.",
-        "homepage": "https://www.drupal.org/project/feeds",
-        "keywords": [
-            "Drupal"
-        ],
-        "support": {
-            "source": "http://cgit.drupalcode.org/feeds",
-            "issues": "https://www.drupal.org/project/issues/feeds"
-        }
-    },
-    {
-        "name": "drupal/feeds_tamper",
-        "version": "dev-2.x",
-        "version_normalized": "dev-2.x",
-        "source": {
-            "type": "git",
-            "url": "https://git.drupalcode.org/project/feeds_tamper.git",
-            "reference": "ecb78e6e3271bbb7b736158e2af1e2228205d9a2"
-        },
-        "require": {
-            "drupal/core": "^8.5.0",
-            "drupal/feeds": "~3.0",
-            "drupal/tamper": "~1.0"
-        },
-        "require-dev": {
-            "drupal/feeds": "3.x-dev"
-        },
-        "type": "drupal-module",
-        "extra": {
-            "branch-alias": {
-                "dev-2.x": "2.x-dev"
-            },
-            "drupal": {
-                "version": "8.x-2.x-dev",
-                "datestamp": "1561048985",
-                "security-coverage": {
-                    "status": "not-covered",
-                    "message": "Dev releases are not covered by Drupal security advisories."
-                }
-            }
-        },
-        "installation-source": "source",
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0+"
-        ],
-        "authors": [
-            {
-                "name": "Bobík",
-                "homepage": "https://www.drupal.org/user/123612"
-            },
-            {
-                "name": "MegaChriz",
-                "homepage": "https://www.drupal.org/user/654114"
-            },
-            {
-                "name": "franz",
-                "homepage": "https://www.drupal.org/user/581844"
-            },
-            {
-                "name": "mausolos",
-                "homepage": "https://www.drupal.org/user/642118"
-            },
-            {
-                "name": "twistor",
-                "homepage": "https://www.drupal.org/user/473738"
-            }
-        ],
-        "description": "Modify feeds data before it gets saved.",
-        "homepage": "http://drupal.org/project/feeds_tamper",
-        "keywords": [
-            "Drupal",
-            "feeds",
-            "tamper"
-        ],
-        "support": {
-            "source": "http://cgit.drupalcode.org/feeds_tamper",
-            "issues": "http://drupal.org/project/issues/feeds_tamper"
+            "source": "https://git.drupalcode.org/project/externalauth"
         }
     },
     {
@@ -5887,63 +5185,6 @@
         "support": {
             "source": "https://git.drupalcode.org/project/field_group",
             "issues": "https://www.drupal.org/project/issues/field_group"
-        }
-    },
-    {
-        "name": "drupal/file_browser",
-        "version": "1.2.0",
-        "version_normalized": "1.2.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://git.drupalcode.org/project/file_browser.git",
-            "reference": "8.x-1.2"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/file_browser-8.x-1.2.zip",
-            "reference": "8.x-1.2",
-            "shasum": "18f85c02508885afeec50f74fd3b997b7cd577fe"
-        },
-        "require": {
-            "drupal/core": "~8",
-            "drupal/dropzonejs": "^2",
-            "drupal/dropzonejs_eb_widget": "*",
-            "drupal/embed": "^1",
-            "drupal/entity_browser": "^2 || ^1",
-            "drupal/entity_embed": "^1"
-        },
-        "require-dev": {
-            "drupal/coder": "~8.3"
-        },
-        "type": "drupal-module",
-        "extra": {
-            "branch-alias": {
-                "dev-1.x": "1.x-dev"
-            },
-            "drupal": {
-                "version": "8.x-1.2",
-                "datestamp": "1569940086",
-                "security-coverage": {
-                    "status": "covered",
-                    "message": "Covered by Drupal's security advisory policy"
-                }
-            }
-        },
-        "installation-source": "dist",
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0"
-        ],
-        "authors": [
-            {
-                "name": "samuel.mortenson",
-                "homepage": "https://www.drupal.org/user/2582268"
-            }
-        ],
-        "description": "This module provides a default Entity Browser that lets you browse and select your files in a nice-looking, mobile-ready Masonry based interface, and upload files using the Dropzonejs module.",
-        "homepage": "https://www.drupal.org/project/file_browser",
-        "support": {
-            "source": "https://git.drupalcode.org/project/file_browser"
         }
     },
     {
@@ -6163,124 +5404,6 @@
         "homepage": "https://www.drupal.org/project/fontawesome_menu_icons",
         "support": {
             "source": "https://git.drupalcode.org/project/fontawesome_menu_icons"
-        }
-    },
-    {
-        "name": "drupal/geolocation",
-        "version": "3.2.0",
-        "version_normalized": "3.2.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://git.drupalcode.org/project/geolocation.git",
-            "reference": "8.x-3.2"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/geolocation-8.x-3.2.zip",
-            "reference": "8.x-3.2",
-            "shasum": "ed6b1e594dd0ad95e52681130a8bcae85d68c305"
-        },
-        "require": {
-            "drupal/core": "^8.7.7 || ^9",
-            "gasparesganga/php-shapefile": ">=3.2",
-            "sibyx/phpgpx": "^1.0"
-        },
-        "require-dev": {
-            "drupal/address": "*",
-            "drupal/geofield": "*",
-            "drupal/geolocation_demo": "*",
-            "drupal/geolocation_geometry": "*",
-            "drupal/geolocation_geometry_data": "*",
-            "drupal/geolocation_geometry_natural_earth_countries": "*",
-            "drupal/geolocation_google_maps": "*",
-            "drupal/geolocation_google_maps_demo": "*",
-            "drupal/geolocation_google_static_maps": "*",
-            "drupal/geolocation_leaflet": "*",
-            "drupal/search_api": "*",
-            "drupal/search_api_location": "*",
-            "drupal/search_api_location_views": "*"
-        },
-        "type": "drupal-module",
-        "extra": {
-            "drupal": {
-                "version": "8.x-3.2",
-                "datestamp": "1590319155",
-                "security-coverage": {
-                    "status": "covered",
-                    "message": "Covered by Drupal's security advisory policy"
-                }
-            }
-        },
-        "installation-source": "dist",
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0-or-later"
-        ],
-        "authors": [
-            {
-                "name": "derjochenmeyer",
-                "homepage": "https://www.drupal.org/u/derjochenmeyer"
-            },
-            {
-                "name": "cadamski",
-                "homepage": "https://www.drupal.org/u/cadamski"
-            }
-        ],
-        "description": "Provides a simple geolocation Drupal field type to store and display location data (lat, lng).",
-        "homepage": "https://www.drupal.org/project/geolocation",
-        "support": {
-            "source": "http://git.drupal.org/project/geolocation.git",
-            "issues": "https://www.drupal.org/project/issues/geolocation"
-        }
-    },
-    {
-        "name": "drupal/geotimezone",
-        "version": "2.1.0",
-        "version_normalized": "2.1.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://git.drupalcode.org/project/geotimezone.git",
-            "reference": "8.x-2.1"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/geotimezone-8.x-2.1.zip",
-            "reference": "8.x-2.1",
-            "shasum": "766c24c2279f756ab413cc4759ff29856d75cabc"
-        },
-        "require": {
-            "drupal/core": "~8.0"
-        },
-        "type": "drupal-module",
-        "extra": {
-            "branch-alias": {
-                "dev-2.x": "2.x-dev"
-            },
-            "drupal": {
-                "version": "8.x-2.1",
-                "datestamp": "1536234185",
-                "security-coverage": {
-                    "status": "covered",
-                    "message": "Covered by Drupal's security advisory policy"
-                }
-            }
-        },
-        "installation-source": "dist",
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0+"
-        ],
-        "authors": [
-            {
-                "name": "Roland Michael dela Peña (arpeggio)",
-                "homepage": "https://www.webfoobar.com",
-                "role": "Maintainer"
-            }
-        ],
-        "description": "API that determines the time zone based on geo location.",
-        "homepage": "https://drupal.org/project/geotimezone",
-        "support": {
-            "source": "https://git.drupalcode.org/project/geotimezone"
         }
     },
     {
@@ -6664,94 +5787,6 @@
         "homepage": "https://www.drupal.org/project/imagemagick",
         "support": {
             "source": "https://git.drupalcode.org/project/imagemagick"
-        }
-    },
-    {
-        "name": "drupal/inline_entity_form",
-        "version": "1.0.0-rc3",
-        "version_normalized": "1.0.0.0-RC3",
-        "source": {
-            "type": "git",
-            "url": "https://git.drupalcode.org/project/inline_entity_form.git",
-            "reference": "8.x-1.0-rc3"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/inline_entity_form-8.x-1.0-rc3.zip",
-            "reference": "8.x-1.0-rc3",
-            "shasum": "f0508db2d64133e2df0af24e7fc914cbb5492211"
-        },
-        "require": {
-            "drupal/core": "^8.7.7 || ^9"
-        },
-        "require-dev": {
-            "drupal/entity_reference_revisions": "*"
-        },
-        "type": "drupal-module",
-        "extra": {
-            "branch-alias": {
-                "dev-1.x": "1.x-dev"
-            },
-            "drupal": {
-                "version": "8.x-1.0-rc3",
-                "datestamp": "1581640483",
-                "security-coverage": {
-                    "status": "not-covered",
-                    "message": "RC releases are not covered by Drupal security advisories."
-                }
-            }
-        },
-        "installation-source": "dist",
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0+"
-        ],
-        "authors": [
-            {
-                "name": "bojanz",
-                "homepage": "https://www.drupal.org/user/86106"
-            },
-            {
-                "name": "dawehner",
-                "homepage": "https://www.drupal.org/user/99340"
-            },
-            {
-                "name": "geek-merlin",
-                "homepage": "https://www.drupal.org/user/229048"
-            },
-            {
-                "name": "joachim",
-                "homepage": "https://www.drupal.org/user/107701"
-            },
-            {
-                "name": "jsacksick",
-                "homepage": "https://www.drupal.org/user/972218"
-            },
-            {
-                "name": "kaythay",
-                "homepage": "https://www.drupal.org/user/2182186"
-            },
-            {
-                "name": "oknate",
-                "homepage": "https://www.drupal.org/user/471638"
-            },
-            {
-                "name": "rszrama",
-                "homepage": "https://www.drupal.org/user/49344"
-            },
-            {
-                "name": "slashrsm",
-                "homepage": "https://www.drupal.org/user/744628"
-            },
-            {
-                "name": "webflo",
-                "homepage": "https://www.drupal.org/user/254778"
-            }
-        ],
-        "description": "Provides a widget for inline management (creation, modification, removal) of referenced entities.",
-        "homepage": "https://www.drupal.org/project/inline_entity_form",
-        "support": {
-            "source": "https://git.drupalcode.org/project/inline_entity_form"
         }
     },
     {
@@ -8274,155 +7309,33 @@
         }
     },
     {
-        "name": "drupal/restui",
-        "version": "1.17.0",
-        "version_normalized": "1.17.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://git.drupalcode.org/project/restui.git",
-            "reference": "8.x-1.17"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/restui-8.x-1.17.zip",
-            "reference": "8.x-1.17",
-            "shasum": "2fff1b74759d5e490884d002330ad04d1bf241ba"
-        },
-        "require": {
-            "drupal/core": "^8.2.0"
-        },
-        "type": "drupal-module",
-        "extra": {
-            "branch-alias": {
-                "dev-1.x": "1.x-dev"
-            },
-            "drupal": {
-                "version": "8.x-1.17",
-                "datestamp": "1557845581",
-                "security-coverage": {
-                    "status": "covered",
-                    "message": "Covered by Drupal's security advisory policy"
-                }
-            }
-        },
-        "installation-source": "dist",
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0-or-later"
-        ],
-        "authors": [
-            {
-                "name": "-enzo-",
-                "homepage": "https://www.drupal.org/user/294937"
-            },
-            {
-                "name": "clemens.tolboom",
-                "homepage": "https://www.drupal.org/user/125814"
-            },
-            {
-                "name": "juampynr",
-                "homepage": "https://www.drupal.org/user/682736"
-            },
-            {
-                "name": "klausi",
-                "homepage": "https://www.drupal.org/user/262198"
-            }
-        ],
-        "description": "Provides a user interface to manage REST resources.",
-        "homepage": "https://www.drupal.org/project/restui",
-        "support": {
-            "source": "https://git.drupalcode.org/project/restui"
-        }
-    },
-    {
-        "name": "drupal/rules",
-        "version": "3.0.0-alpha5",
-        "version_normalized": "3.0.0.0-alpha5",
-        "source": {
-            "type": "git",
-            "url": "https://git.drupalcode.org/project/rules.git",
-            "reference": "8.x-3.0-alpha5"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/rules-8.x-3.0-alpha5.zip",
-            "reference": "8.x-3.0-alpha5",
-            "shasum": "7c88959b047986783aa9d4afc992093df08ce0ee"
-        },
-        "require": {
-            "drupal/core": "~8.0",
-            "drupal/typed_data": "*"
-        },
-        "type": "drupal-module",
-        "extra": {
-            "branch-alias": {
-                "dev-3.x": "3.x-dev"
-            },
-            "drupal": {
-                "version": "8.x-3.0-alpha5",
-                "datestamp": "1566193991",
-                "security-coverage": {
-                    "status": "not-covered",
-                    "message": "Alpha releases are not covered by Drupal security advisories."
-                }
-            }
-        },
-        "installation-source": "dist",
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0+"
-        ],
-        "authors": [
-            {
-                "name": "TR",
-                "homepage": "https://www.drupal.org/user/202830"
-            },
-            {
-                "name": "fago",
-                "homepage": "https://www.drupal.org/user/16747"
-            },
-            {
-                "name": "klausi",
-                "homepage": "https://www.drupal.org/user/262198"
-            }
-        ],
-        "description": "React on events and conditionally evaluate actions.",
-        "homepage": "https://www.drupal.org/project/rules",
-        "support": {
-            "source": "https://git.drupalcode.org/project/rules"
-        }
-    },
-    {
         "name": "drupal/scheduler",
-        "version": "1.1.0",
-        "version_normalized": "1.1.0.0",
+        "version": "1.3.0",
+        "version_normalized": "1.3.0.0",
         "source": {
             "type": "git",
             "url": "https://git.drupalcode.org/project/scheduler.git",
-            "reference": "8.x-1.1"
+            "reference": "8.x-1.3"
         },
         "dist": {
             "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/scheduler-8.x-1.1.zip",
-            "reference": "8.x-1.1",
-            "shasum": "52ff9c778f183d970ec2d57dfc1ba45282054e97"
+            "url": "https://ftp.drupal.org/files/projects/scheduler-8.x-1.3.zip",
+            "reference": "8.x-1.3",
+            "shasum": "704f9e289c7a42ddfb65297beb0be02e324f02c6"
         },
         "require": {
-            "drupal/core": "*"
+            "drupal/core": "^8 || ^9"
         },
         "require-dev": {
-            "drupal/coder": "^8.3.3",
-            "drupal/devel_generate": "^2.0",
-            "drupal/rules": "*"
+            "drupal/devel_generate": "^2.0 || 3.x-dev",
+            "drupal/rules": "^3",
+            "drush/drush": "^9.0 || ^10"
         },
         "type": "drupal-module",
         "extra": {
-            "branch-alias": {
-                "dev-1.x": "1.x-dev"
-            },
             "drupal": {
-                "version": "8.x-1.1",
-                "datestamp": "1566578555",
+                "version": "8.x-1.3",
+                "datestamp": "1591436219",
                 "security-coverage": {
                     "status": "covered",
                     "message": "Covered by Drupal's security advisory policy"
@@ -8437,7 +7350,7 @@
         "installation-source": "dist",
         "notification-url": "https://packages.drupal.org/8/downloads",
         "license": [
-            "GPL-2.0+"
+            "GPL-2.0-or-later"
         ],
         "authors": [
             {
@@ -8464,7 +7377,7 @@
         "description": "Automatically publish and unpublish content at specified dates and times.",
         "homepage": "https://drupal.org/project/scheduler",
         "support": {
-            "source": "http://cgit.drupalcode.org/scheduler",
+            "source": "https://git.drupalcode.org/project/scheduler",
             "issues": "https://www.drupal.org/project/issues/scheduler"
         }
     },
@@ -8539,65 +7452,6 @@
         "support": {
             "source": "https://git.drupalcode.org/project/search_api",
             "issues": "https://www.drupal.org/project/issues/search_api",
-            "irc": "irc://irc.freenode.org/drupal-search-api"
-        }
-    },
-    {
-        "name": "drupal/search_api_autocomplete",
-        "version": "1.2.0",
-        "version_normalized": "1.2.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://git.drupalcode.org/project/search_api_autocomplete.git",
-            "reference": "8.x-1.2"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/search_api_autocomplete-8.x-1.2.zip",
-            "reference": "8.x-1.2",
-            "shasum": "606908583c1e0aff57a4215355d1d3e07a1d50d2"
-        },
-        "require": {
-            "drupal/core": "~8.0",
-            "drupal/search_api": "1.x"
-        },
-        "require-dev": {
-            "drupal/search_api_page": "@dev"
-        },
-        "type": "drupal-module",
-        "extra": {
-            "branch-alias": {
-                "dev-1.x": "1.x-dev"
-            },
-            "drupal": {
-                "version": "8.x-1.2",
-                "datestamp": "1552333980",
-                "security-coverage": {
-                    "status": "covered",
-                    "message": "Covered by Drupal's security advisory policy"
-                }
-            }
-        },
-        "installation-source": "dist",
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0+"
-        ],
-        "authors": [
-            {
-                "name": "Thomas Seidl",
-                "homepage": "https://www.drupal.org/u/drunken-monkey"
-            },
-            {
-                "name": "See other contributors",
-                "homepage": "https://www.drupal.org/node/1142202/committers"
-            }
-        ],
-        "description": "Adds autocomplete functionality to searches.",
-        "homepage": "https://www.drupal.org/project/search_api_autocomplete",
-        "support": {
-            "source": "http://git.drupal.org/project/search_api_autocomplete.git",
-            "issues": "https://www.drupal.org/project/issues/search_api_autocomplete",
             "irc": "irc://irc.freenode.org/drupal-search-api"
         }
     },
@@ -8704,34 +7558,30 @@
         }
     },
     {
-        "name": "drupal/smart_ip",
-        "version": "3.6.0",
-        "version_normalized": "3.6.0.0",
+        "name": "drupal/simplesamlphp_auth",
+        "version": "3.2.0",
+        "version_normalized": "3.2.0.0",
         "source": {
             "type": "git",
-            "url": "https://git.drupalcode.org/project/smart_ip.git",
-            "reference": "8.x-3.6"
+            "url": "https://git.drupalcode.org/project/simplesamlphp_auth.git",
+            "reference": "8.x-3.2"
         },
         "dist": {
             "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/smart_ip-8.x-3.6.zip",
-            "reference": "8.x-3.6",
-            "shasum": "a85a15f817af935015a0731d26409f6cd22b1bf0"
+            "url": "https://ftp.drupal.org/files/projects/simplesamlphp_auth-8.x-3.2.zip",
+            "reference": "8.x-3.2",
+            "shasum": "a5a2b10fc873eb8669929ad1a6d9599e47a2ca99"
         },
         "require": {
-            "drupal/core": "~8.0",
-            "drupal/geotimezone": "~2.0",
-            "geoip2/geoip2": "~2.0",
-            "ip2location/ip2location-php": "~8.0"
+            "drupal/core": "^8.7|^9.0",
+            "drupal/externalauth": "^1.1",
+            "simplesamlphp/simplesamlphp": "^1.18.2"
         },
         "type": "drupal-module",
         "extra": {
-            "branch-alias": {
-                "dev-3.x": "3.x-dev"
-            },
             "drupal": {
-                "version": "8.x-3.6",
-                "datestamp": "1536388084",
+                "version": "8.x-3.2",
+                "datestamp": "1580423953",
                 "security-coverage": {
                     "status": "covered",
                     "message": "Covered by Drupal's security advisory policy"
@@ -8745,47 +7595,54 @@
         ],
         "authors": [
             {
-                "name": "Roland Michael dela Peña (arpeggio)",
-                "homepage": "https://www.webfoobar.com",
-                "role": "Maintainer"
+                "name": "Berdir",
+                "homepage": "https://www.drupal.org/user/214652"
             },
             {
-                "name": "birdsnbees",
-                "homepage": "https://www.drupal.org/user/1242622"
+                "name": "colan",
+                "homepage": "https://www.drupal.org/user/58704"
             },
             {
-                "name": "lance.gliser",
-                "homepage": "https://www.drupal.org/user/424339"
+                "name": "dakku",
+                "homepage": "https://www.drupal.org/user/97634"
             },
             {
-                "name": "mertres",
-                "homepage": "https://www.drupal.org/user/3513520"
+                "name": "geekwisdom",
+                "homepage": "https://www.drupal.org/user/1662"
+            },
+            {
+                "name": "snufkin",
+                "homepage": "https://www.drupal.org/user/58645"
+            },
+            {
+                "name": "svendecabooter",
+                "homepage": "https://www.drupal.org/user/35369"
             }
         ],
-        "description": "Smart IP identify visitor's geographical location (longitude/latitude), country, region, city and postal code based on the IP address of the visitor.",
-        "homepage": "https://drupal.org/project/smart_ip",
+        "description": "Allows users to authenticate to a remote SAML identity provider (IdP) via a locally configured SimpleSAMLphp service point (SP).",
+        "homepage": "https://www.drupal.org/project/simplesamlphp_auth",
         "support": {
-            "source": "https://git.drupalcode.org/project/smart_ip"
+            "source": "https://git.drupalcode.org/project/simplesamlphp_auth"
         }
     },
     {
         "name": "drupal/smtp",
-        "version": "1.0.0-rc4",
-        "version_normalized": "1.0.0.0-RC4",
+        "version": "1.0.0",
+        "version_normalized": "1.0.0.0",
         "source": {
             "type": "git",
             "url": "https://git.drupalcode.org/project/smtp.git",
-            "reference": "8.x-1.0-rc4"
+            "reference": "8.x-1.0"
         },
         "dist": {
             "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/smtp-8.x-1.0-rc4.zip",
-            "reference": "8.x-1.0-rc4",
-            "shasum": "2879396e26bb356b1d17646c324d455eda3044af"
+            "url": "https://ftp.drupal.org/files/projects/smtp-8.x-1.0.zip",
+            "reference": "8.x-1.0",
+            "shasum": "c40cc7a3c20d3f743e3a4e53f4cc296748da89fd"
         },
         "require": {
-            "drupal/core": "^8.7.7 || ^9",
-            "phpmailer/phpmailer": "^6.1.5"
+            "drupal/core": "^8.8 || ^9",
+            "phpmailer/phpmailer": "^6.1.7"
         },
         "suggest": {
             "drupal/mailsystem": "Allows using SMTP alongside other mail modules."
@@ -8793,11 +7650,11 @@
         "type": "drupal-module",
         "extra": {
             "drupal": {
-                "version": "8.x-1.0-rc4",
-                "datestamp": "1595628445",
+                "version": "8.x-1.0",
+                "datestamp": "1601070985",
                 "security-coverage": {
-                    "status": "not-covered",
-                    "message": "RC releases are not covered by Drupal security advisories."
+                    "status": "covered",
+                    "message": "Covered by Drupal's security advisory policy"
                 }
             },
             "branch-alias": {
@@ -8825,6 +7682,10 @@
             {
                 "name": "oadaeh",
                 "homepage": "https://www.drupal.org/user/4649"
+            },
+            {
+                "name": "sadashiv",
+                "homepage": "https://www.drupal.org/user/1773304"
             },
             {
                 "name": "wundo",
@@ -8995,126 +7856,6 @@
         }
     },
     {
-        "name": "drupal/tamper",
-        "version": "1.0.0-alpha1",
-        "version_normalized": "1.0.0.0-alpha1",
-        "source": {
-            "type": "git",
-            "url": "https://git.drupalcode.org/project/tamper.git",
-            "reference": "8.x-1.0-alpha1"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/tamper-8.x-1.0-alpha1.zip",
-            "reference": "8.x-1.0-alpha1",
-            "shasum": "e4853c29a4dc2f6dd03e959523adfa93f1a86f4b"
-        },
-        "require": {
-            "drupal/core": "~8.0"
-        },
-        "type": "drupal-module",
-        "extra": {
-            "branch-alias": {
-                "dev-1.x": "1.x-dev"
-            },
-            "drupal": {
-                "version": "8.x-1.0-alpha1",
-                "datestamp": "1563627485",
-                "security-coverage": {
-                    "status": "not-covered",
-                    "message": "Project has not opted into security advisory coverage!"
-                }
-            }
-        },
-        "installation-source": "dist",
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0+"
-        ],
-        "authors": [
-            {
-                "name": "MegaChriz",
-                "homepage": "https://www.drupal.org/user/654114"
-            },
-            {
-                "name": "ericgsmith",
-                "homepage": "https://www.drupal.org/user/1649952"
-            },
-            {
-                "name": "jamesdixon",
-                "homepage": "https://www.drupal.org/user/762570"
-            },
-            {
-                "name": "twistor",
-                "homepage": "https://www.drupal.org/user/473738"
-            }
-        ],
-        "description": "Generic plugin to modify data.",
-        "homepage": "https://www.drupal.org/project/tamper",
-        "keywords": [
-            "Drupal",
-            "tamper"
-        ],
-        "support": {
-            "source": "http://cgit.drupalcode.org/tamper",
-            "issues": "http://drupal.org/project/issues/tamper"
-        }
-    },
-    {
-        "name": "drupal/tb_megamenu",
-        "version": "dev-1.x",
-        "version_normalized": "dev-1.x",
-        "source": {
-            "type": "git",
-            "url": "https://git.drupalcode.org/project/tb_megamenu.git",
-            "reference": "b34b1a0c98e65604adf4306db0e37b68aa29060a"
-        },
-        "require": {
-            "drupal/core": "~8.0"
-        },
-        "type": "drupal-module",
-        "extra": {
-            "branch-alias": {
-                "dev-1.x": "1.x-dev"
-            },
-            "drupal": {
-                "version": "8.x-1.x-dev",
-                "datestamp": "1512972185",
-                "security-coverage": {
-                    "status": "not-covered",
-                    "message": "Project has not opted into security advisory coverage!"
-                }
-            },
-            "patches_applied": {
-                "Missing array keys cause notices": "https://www.drupal.org/files/issues/missing_array_keys-2921195-3.patch"
-            }
-        },
-        "installation-source": "source",
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0-or-later"
-        ],
-        "authors": [
-            {
-                "name": "cgmonroe",
-                "homepage": "https://www.drupal.org/user/563114"
-            },
-            {
-                "name": "themebrain",
-                "homepage": "https://www.drupal.org/user/1446728"
-            },
-            {
-                "name": "williampham",
-                "homepage": "https://www.drupal.org/user/2320884"
-            }
-        ],
-        "description": "Megamenu solutions for Drupal",
-        "homepage": "https://www.drupal.org/project/tb_megamenu",
-        "support": {
-            "source": "https://git.drupalcode.org/project/tb_megamenu"
-        }
-    },
-    {
         "name": "drupal/token",
         "version": "1.7.0",
         "version_normalized": "1.7.0.0",
@@ -9275,78 +8016,19 @@
         }
     },
     {
-        "name": "drupal/twig_remove_html_comments",
-        "version": "1.0.0-alpha2",
-        "version_normalized": "1.0.0.0-alpha2",
-        "source": {
-            "type": "git",
-            "url": "https://git.drupalcode.org/project/twig_remove_html_comments.git",
-            "reference": "8.x-1.0-alpha2"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/twig_remove_html_comments-8.x-1.0-alpha2.zip",
-            "reference": "8.x-1.0-alpha2",
-            "shasum": "5aecbd8c1cf1386c4e621df2480cbb5bf387dba0"
-        },
-        "require": {
-            "drupal/core": "^8.7"
-        },
-        "conflict": {
-            "drupal/drupal": "*"
-        },
-        "type": "drupal-module",
-        "extra": {
-            "branch-alias": {
-                "dev-1.x": "1.x-dev"
-            },
-            "drupal": {
-                "version": "8.x-1.0-alpha2",
-                "datestamp": "1573052885",
-                "security-coverage": {
-                    "status": "not-covered",
-                    "message": "Project has not opted into security advisory coverage!"
-                }
-            }
-        },
-        "installation-source": "dist",
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0-or-later"
-        ],
-        "authors": [
-            {
-                "name": "Orlando Thöny",
-                "homepage": "https://www.drupal.org/user/3558789",
-                "email": "orlando.thoeny@gmail.com",
-                "role": "Maintainer"
-            }
-        ],
-        "description": "Provides a Twig filter that removes HTML comments.",
-        "homepage": "https://drupal.org/project/twig_remove_html_comments",
-        "keywords": [
-            "Drupal",
-            "Remove HTML comments",
-            "Twig"
-        ],
-        "support": {
-            "source": "https://git.drupalcode.org/project/twig_remove_html_comments"
-        }
-    },
-    {
         "name": "drupal/twig_tweak",
-        "version": "2.6.0",
-        "version_normalized": "2.6.0.0",
+        "version": "2.7.0",
+        "version_normalized": "2.7.0.0",
         "source": {
             "type": "git",
             "url": "https://git.drupalcode.org/project/twig_tweak.git",
-            "reference": "8.x-2.6"
+            "reference": "8.x-2.7"
         },
         "dist": {
             "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/twig_tweak-8.x-2.6.zip",
-            "reference": "8.x-2.6",
-            "shasum": "a877de315bbf8603f146b55e7ca345d8fe70e234"
+            "url": "https://ftp.drupal.org/files/projects/twig_tweak-8.x-2.7.zip",
+            "reference": "8.x-2.7",
+            "shasum": "fcae9c94996022af9e8f993aee11e4b0cbd5ed98"
         },
         "require": {
             "drupal/core": "^8.7 || ^9.0",
@@ -9358,8 +8040,8 @@
         "type": "drupal-module",
         "extra": {
             "drupal": {
-                "version": "8.x-2.6",
-                "datestamp": "1589992479",
+                "version": "8.x-2.7",
+                "datestamp": "1601530189",
                 "security-coverage": {
                     "status": "covered",
                     "message": "Covered by Drupal's security advisory policy"
@@ -9443,59 +8125,6 @@
         }
     },
     {
-        "name": "drupal/typed_data",
-        "version": "1.0.0-alpha4",
-        "version_normalized": "1.0.0.0-alpha4",
-        "source": {
-            "type": "git",
-            "url": "https://git.drupalcode.org/project/typed_data.git",
-            "reference": "8.x-1.0-alpha4"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/typed_data-8.x-1.0-alpha4.zip",
-            "reference": "8.x-1.0-alpha4",
-            "shasum": "3f1db6d65098b03fc4ef9702305c3fd4ec88e0d5"
-        },
-        "require": {
-            "drupal/core": "^8.7"
-        },
-        "type": "drupal-module",
-        "extra": {
-            "branch-alias": {
-                "dev-1.x": "1.x-dev"
-            },
-            "drupal": {
-                "version": "8.x-1.0-alpha4",
-                "datestamp": "1579072387",
-                "security-coverage": {
-                    "status": "not-covered",
-                    "message": "Alpha releases are not covered by Drupal security advisories."
-                }
-            }
-        },
-        "installation-source": "dist",
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0+"
-        ],
-        "authors": [
-            {
-                "name": "TR",
-                "homepage": "https://www.drupal.org/user/202830"
-            },
-            {
-                "name": "fago",
-                "homepage": "https://www.drupal.org/user/16747"
-            }
-        ],
-        "description": "Extends the core Typed Data API with new APIS and features.",
-        "homepage": "https://www.drupal.org/project/typed_data",
-        "support": {
-            "source": "https://git.drupalcode.org/project/typed_data"
-        }
-    },
-    {
         "name": "drupal/ultimate_cron",
         "version": "2.0.0-alpha5",
         "version_normalized": "2.0.0.0-alpha5",
@@ -9568,21 +8197,21 @@
     },
     {
         "name": "drupal/upgrade_status",
-        "version": "2.9.0",
-        "version_normalized": "2.9.0.0",
+        "version": "2.10.0",
+        "version_normalized": "2.10.0.0",
         "source": {
             "type": "git",
             "url": "https://git.drupalcode.org/project/upgrade_status.git",
-            "reference": "8.x-2.9"
+            "reference": "8.x-2.10"
         },
         "dist": {
             "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/upgrade_status-8.x-2.9.zip",
-            "reference": "8.x-2.9",
-            "shasum": "3751062ba6192cbed94c3c970fa3adbe308fb450"
+            "url": "https://ftp.drupal.org/files/projects/upgrade_status-8.x-2.10.zip",
+            "reference": "8.x-2.10",
+            "shasum": "f6bfed46b0916e20dfcdbf6cb0ea44317b903a31"
         },
         "require": {
-            "drupal/core": "^8.7.7 || ^9",
+            "drupal/core": "^8",
             "mathieuviossat/arraytotexttable": "~1.0.0",
             "mglaman/phpstan-drupal": "^0.12.0",
             "nikic/php-parser": "^4.0.0",
@@ -9592,8 +8221,8 @@
         "type": "drupal-module",
         "extra": {
             "drupal": {
-                "version": "8.x-2.9",
-                "datestamp": "1592678651",
+                "version": "8.x-2.10",
+                "datestamp": "1600786113",
                 "security-coverage": {
                     "status": "covered",
                     "message": "Covered by Drupal's security advisory policy"
@@ -9697,33 +8326,30 @@
     },
     {
         "name": "drupal/verf",
-        "version": "1.0.0-beta7",
-        "version_normalized": "1.0.0.0-beta7",
+        "version": "1.0.0",
+        "version_normalized": "1.0.0.0",
         "source": {
             "type": "git",
             "url": "https://git.drupalcode.org/project/verf.git",
-            "reference": "8.x-1.0-beta7"
+            "reference": "8.x-1.0"
         },
         "dist": {
             "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/verf-8.x-1.0-beta7.zip",
-            "reference": "8.x-1.0-beta7",
-            "shasum": "5e6e3ed49530c8d792a9cb60f9e5e72da4f8ff0d"
+            "url": "https://ftp.drupal.org/files/projects/verf-8.x-1.0.zip",
+            "reference": "8.x-1.0",
+            "shasum": "ac894cf041ae51170e619d60b9c2884c50fc5cfc"
         },
         "require": {
-            "drupal/core": "~8.0"
+            "drupal/core": "^8 || ^9"
         },
         "type": "drupal-module",
         "extra": {
-            "branch-alias": {
-                "dev-1.x": "1.x-dev"
-            },
             "drupal": {
-                "version": "8.x-1.0-beta7",
-                "datestamp": "1556796785",
+                "version": "8.x-1.0",
+                "datestamp": "1601470515",
                 "security-coverage": {
-                    "status": "not-covered",
-                    "message": "Project has not opted into security advisory coverage!"
+                    "status": "covered",
+                    "message": "Covered by Drupal's security advisory policy"
                 }
             }
         },
@@ -9742,176 +8368,6 @@
         "homepage": "https://www.drupal.org/project/verf",
         "support": {
             "source": "https://git.drupalcode.org/project/verf"
-        }
-    },
-    {
-        "name": "drupal/video_embed_field",
-        "version": "2.4.0",
-        "version_normalized": "2.4.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://git.drupalcode.org/project/video_embed_field.git",
-            "reference": "8.x-2.4"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/video_embed_field-8.x-2.4.zip",
-            "reference": "8.x-2.4",
-            "shasum": "96b14bb93c1bb6a07b84315a4f87367870f8b574"
-        },
-        "require": {
-            "drupal/core": "^8.8 || ^9"
-        },
-        "require-dev": {
-            "drupal/colorbox": "^1.0",
-            "drupal/video_embed_media": "*"
-        },
-        "type": "drupal-module",
-        "extra": {
-            "drupal": {
-                "version": "8.x-2.4",
-                "datestamp": "1587686337",
-                "security-coverage": {
-                    "status": "covered",
-                    "message": "Covered by Drupal's security advisory policy"
-                }
-            }
-        },
-        "installation-source": "dist",
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0+"
-        ],
-        "authors": [
-            {
-                "name": "Sam152",
-                "homepage": "https://www.drupal.org/user/1485048"
-            },
-            {
-                "name": "jec006",
-                "homepage": "https://www.drupal.org/user/855980"
-            },
-            {
-                "name": "plopesc",
-                "homepage": "https://www.drupal.org/user/282415"
-            }
-        ],
-        "description": "A pluggable field type for storing videos from external video hosts such as Vimeo and YouTube.",
-        "homepage": "https://www.drupal.org/project/video_embed_field",
-        "support": {
-            "source": "https://git.drupalcode.org/project/video_embed_field"
-        }
-    },
-    {
-        "name": "drupal/views_block_area",
-        "version": "1.0.0-beta2",
-        "version_normalized": "1.0.0.0-beta2",
-        "source": {
-            "type": "git",
-            "url": "https://git.drupalcode.org/project/views_block_area.git",
-            "reference": "8.x-1.0-beta2"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/views_block_area-8.x-1.0-beta2.zip",
-            "reference": "8.x-1.0-beta2",
-            "shasum": "d4f041e2120a73e6596870769049d047103acecc"
-        },
-        "require": {
-            "drupal/core": "*"
-        },
-        "type": "drupal-module",
-        "extra": {
-            "branch-alias": {
-                "dev-1.x": "1.x-dev"
-            },
-            "drupal": {
-                "version": "8.x-1.0-beta2",
-                "datestamp": "1570716484",
-                "security-coverage": {
-                    "status": "not-covered",
-                    "message": "Beta releases are not covered by Drupal security advisories."
-                }
-            }
-        },
-        "installation-source": "dist",
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0-or-later"
-        ],
-        "authors": [
-            {
-                "name": "Leon Kessler",
-                "homepage": "https://www.drupal.org/user/595374"
-            },
-            {
-                "name": "cafuego",
-                "homepage": "https://www.drupal.org/user/218525"
-            },
-            {
-                "name": "zuuperman",
-                "homepage": "https://www.drupal.org/user/361625"
-            }
-        ],
-        "description": "Exposes all blocks as a views area.",
-        "homepage": "https://www.drupal.org/project/views_block_area",
-        "support": {
-            "source": "https://git.drupalcode.org/project/views_block_area"
-        }
-    },
-    {
-        "name": "drupal/views_bulk_edit",
-        "version": "2.4.0",
-        "version_normalized": "2.4.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://git.drupalcode.org/project/views_bulk_edit.git",
-            "reference": "8.x-2.4"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/views_bulk_edit-8.x-2.4.zip",
-            "reference": "8.x-2.4",
-            "shasum": "039ebf9c6ae3cdd0555c7bfb97c629ebfee61ddb"
-        },
-        "require": {
-            "drupal/core": "*",
-            "drupal/views_bulk_operations": "~1.0 | ~2.0 | ~3.0"
-        },
-        "type": "drupal-module",
-        "extra": {
-            "branch-alias": {
-                "dev-2.x": "2.x-dev"
-            },
-            "drupal": {
-                "version": "8.x-2.4",
-                "datestamp": "1570030085",
-                "security-coverage": {
-                    "status": "covered",
-                    "message": "Covered by Drupal's security advisory policy"
-                }
-            }
-        },
-        "installation-source": "dist",
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0+"
-        ],
-        "authors": [
-            {
-                "name": "Marcin Grabias",
-                "homepage": "https://www.drupal.org/u/graber"
-            },
-            {
-                "name": "benjy",
-                "homepage": "https://www.drupal.org/user/1852732"
-            }
-        ],
-        "description": "Allows bulk edition of entity field values.",
-        "homepage": "https://www.drupal.org/project/views_bulk_edit",
-        "support": {
-            "source": "https://git.drupalcode.org/project/views_bulk_edit",
-            "issues": "https://www.drupal.org/project/issues/views_bulk_edit?version=8.x"
         }
     },
     {
@@ -10105,18 +8561,18 @@
     },
     {
         "name": "drupal/webform",
-        "version": "5.20.0",
-        "version_normalized": "5.20.0.0",
+        "version": "5.21.0",
+        "version_normalized": "5.21.0.0",
         "source": {
             "type": "git",
             "url": "https://git.drupalcode.org/project/webform.git",
-            "reference": "8.x-5.20"
+            "reference": "8.x-5.21"
         },
         "dist": {
             "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/webform-8.x-5.20.zip",
-            "reference": "8.x-5.20",
-            "shasum": "986dc0ba571e926a156390aca8138602dfc285e9"
+            "url": "https://ftp.drupal.org/files/projects/webform-8.x-5.21.zip",
+            "reference": "8.x-5.21",
+            "shasum": "5505c8b85e73fbb1a4a55635b8a9568d143697c0"
         },
         "require": {
             "drupal/core": "^8.8"
@@ -10126,13 +8582,13 @@
             "drupal/bootstrap": "~3.0",
             "drupal/captcha": "~1.0",
             "drupal/chosen": "~2.0",
-            "drupal/clientside_validation": "*",
+            "drupal/clientside_validation": "~3.0",
             "drupal/clientside_validation_jquery": "*",
-            "drupal/devel": "*",
+            "drupal/devel": "~3.0",
             "drupal/entity": "~1.0",
-            "drupal/entity_print": "*",
+            "drupal/entity_print": "~2.0",
             "drupal/gnode": "*",
-            "drupal/group": "*",
+            "drupal/group": "1.0",
             "drupal/lingotek": "~3.0",
             "drupal/mailsystem": "~4.0",
             "drupal/paragraphs": "~1.0",
@@ -10140,7 +8596,7 @@
             "drupal/smtp": "~1.0",
             "drupal/styleguide": "~1.0",
             "drupal/telephone_validation": "~2.0",
-            "drupal/token": "*",
+            "drupal/token": "~1.0",
             "drupal/variationcache": "~1.0",
             "drupal/webform_access": "*",
             "drupal/webform_attachment": "*",
@@ -10157,8 +8613,8 @@
         "type": "drupal-module",
         "extra": {
             "drupal": {
-                "version": "8.x-5.20",
-                "datestamp": "1599851752",
+                "version": "8.x-5.21",
+                "datestamp": "1601385690",
                 "security-coverage": {
                     "status": "covered",
                     "message": "Covered by Drupal's security advisory policy"
@@ -10231,18 +8687,18 @@
     },
     {
         "name": "drupal/workbench_email",
-        "version": "1.6.0",
-        "version_normalized": "1.6.0.0",
+        "version": "1.7.0",
+        "version_normalized": "1.7.0.0",
         "source": {
             "type": "git",
             "url": "https://git.drupalcode.org/project/workbench_email.git",
-            "reference": "8.x-1.6"
+            "reference": "8.x-1.7"
         },
         "dist": {
             "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/workbench_email-8.x-1.6.zip",
-            "reference": "8.x-1.6",
-            "shasum": "e4fe11679eeaf34439dff718e5d83372cb973199"
+            "url": "https://ftp.drupal.org/files/projects/workbench_email-8.x-1.7.zip",
+            "reference": "8.x-1.7",
+            "shasum": "a381e3d6c8a470a08469049bf7c7dd911556a493"
         },
         "require": {
             "drupal/core": "^8 || ^9"
@@ -10252,12 +8708,9 @@
         },
         "type": "drupal-module",
         "extra": {
-            "branch-alias": {
-                "dev-1.x": "1.x-dev"
-            },
             "drupal": {
-                "version": "8.x-1.6",
-                "datestamp": "1585615668",
+                "version": "8.x-1.7",
+                "datestamp": "1594680642",
                 "security-coverage": {
                     "status": "covered",
                     "message": "Covered by Drupal's security advisory policy"
@@ -10931,29 +9384,44 @@
         ]
     },
     {
-        "name": "gasparesganga/php-shapefile",
-        "version": "v3.3.2",
-        "version_normalized": "3.3.2.0",
+        "name": "gettext/gettext",
+        "version": "v4.8.2",
+        "version_normalized": "4.8.2.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/gasparesganga/php-shapefile.git",
-            "reference": "ae86a406f9a8191adc00724f032587b2287a8310"
+            "url": "https://github.com/php-gettext/Gettext.git",
+            "reference": "e474f872f2c8636cf53fd283ec4ce1218f3d236a"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/gasparesganga/php-shapefile/zipball/ae86a406f9a8191adc00724f032587b2287a8310",
-            "reference": "ae86a406f9a8191adc00724f032587b2287a8310",
+            "url": "https://api.github.com/repos/php-gettext/Gettext/zipball/e474f872f2c8636cf53fd283ec4ce1218f3d236a",
+            "reference": "e474f872f2c8636cf53fd283ec4ce1218f3d236a",
             "shasum": ""
         },
         "require": {
+            "gettext/languages": "^2.3",
             "php": ">=5.4.0"
         },
-        "time": "2020-08-17T13:52:01+00:00",
+        "require-dev": {
+            "illuminate/view": "*",
+            "phpunit/phpunit": "^4.8|^5.7|^6.5",
+            "squizlabs/php_codesniffer": "^3.0",
+            "symfony/yaml": "~2",
+            "twig/extensions": "*",
+            "twig/twig": "^1.31|^2.0"
+        },
+        "suggest": {
+            "illuminate/view": "Is necessary if you want to use the Blade extractor",
+            "symfony/yaml": "Is necessary if you want to use the Yaml extractor/generator",
+            "twig/extensions": "Is necessary if you want to use the Twig extractor",
+            "twig/twig": "Is necessary if you want to use the Twig extractor"
+        },
+        "time": "2019-12-02T10:21:14+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
             "psr-4": {
-                "Shapefile\\": "src/Shapefile/"
+                "Gettext\\": "src"
             }
         },
         "notification-url": "https://packagist.org/downloads/",
@@ -10962,77 +9430,84 @@
         ],
         "authors": [
             {
-                "name": "Gaspare Sganga",
-                "email": "contact@gasparesganga.com",
-                "homepage": "https://gasparesganga.com/labs/php-shapefile/",
+                "name": "Oscar Otero",
+                "email": "oom@oscarotero.com",
+                "homepage": "http://oscarotero.com",
                 "role": "Developer"
             }
         ],
-        "description": "PHP library to read and write ESRI Shapefiles, compatible with WKT and GeoJSON",
-        "homepage": "https://gasparesganga.com/labs/php-shapefile/",
+        "description": "PHP gettext manager",
+        "homepage": "https://github.com/oscarotero/Gettext",
         "keywords": [
-            "ESRI",
-            "Shapefile",
-            "dbf",
-            "geojson",
-            "shape",
-            "shp",
-            "wkt"
+            "JS",
+            "gettext",
+            "i18n",
+            "mo",
+            "po",
+            "translation"
         ]
     },
     {
-        "name": "geoip2/geoip2",
-        "version": "v2.10.0",
-        "version_normalized": "2.10.0.0",
+        "name": "gettext/languages",
+        "version": "2.6.0",
+        "version_normalized": "2.6.0.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/maxmind/GeoIP2-php.git",
-            "reference": "419557cd21d9fe039721a83490701a58c8ce784a"
+            "url": "https://github.com/php-gettext/Languages.git",
+            "reference": "38ea0482f649e0802e475f0ed19fa993bcb7a618"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/maxmind/GeoIP2-php/zipball/419557cd21d9fe039721a83490701a58c8ce784a",
-            "reference": "419557cd21d9fe039721a83490701a58c8ce784a",
+            "url": "https://api.github.com/repos/php-gettext/Languages/zipball/38ea0482f649e0802e475f0ed19fa993bcb7a618",
+            "reference": "38ea0482f649e0802e475f0ed19fa993bcb7a618",
             "shasum": ""
         },
         "require": {
-            "ext-json": "*",
-            "maxmind-db/reader": "~1.5",
-            "maxmind/web-service-common": "~0.6",
-            "php": ">=5.6"
+            "php": ">=5.3"
         },
         "require-dev": {
-            "friendsofphp/php-cs-fixer": "2.*",
-            "phpunit/phpunit": "5.*",
-            "squizlabs/php_codesniffer": "3.*"
+            "friendsofphp/php-cs-fixer": "^2.16.0",
+            "phpunit/phpunit": "^4.8 || ^5.7 || ^6.5 || ^7.5 || ^8.4"
         },
-        "time": "2019-12-12T18:48:39+00:00",
+        "time": "2019-11-13T10:30:21+00:00",
+        "bin": [
+            "bin/export-plural-rules"
+        ],
         "type": "library",
         "installation-source": "dist",
         "autoload": {
             "psr-4": {
-                "GeoIp2\\": "src"
+                "Gettext\\Languages\\": "src/"
             }
         },
         "notification-url": "https://packagist.org/downloads/",
         "license": [
-            "Apache-2.0"
+            "MIT"
         ],
         "authors": [
             {
-                "name": "Gregory J. Oschwald",
-                "email": "goschwald@maxmind.com",
-                "homepage": "https://www.maxmind.com/"
+                "name": "Michele Locati",
+                "email": "mlocati@gmail.com",
+                "role": "Developer"
             }
         ],
-        "description": "MaxMind GeoIP2 PHP API",
-        "homepage": "https://github.com/maxmind/GeoIP2-php",
+        "description": "gettext languages with plural rules",
+        "homepage": "https://github.com/php-gettext/Languages",
         "keywords": [
-            "IP",
-            "geoip",
-            "geoip2",
-            "geolocation",
-            "maxmind"
+            "cldr",
+            "i18n",
+            "internationalization",
+            "l10n",
+            "language",
+            "languages",
+            "localization",
+            "php",
+            "plural",
+            "plural rules",
+            "plurals",
+            "translate",
+            "translations",
+            "unicode"
         ]
     },
     {
@@ -11442,48 +9917,6 @@
         },
         "type": "drupal-library",
         "installation-source": "dist"
-    },
-    {
-        "name": "ip2location/ip2location-php",
-        "version": "8.1.1",
-        "version_normalized": "8.1.1.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/chrislim2888/IP2Location-PHP-Module.git",
-            "reference": "e0e7a98e2826bda3260cd8bd36b006e1479c8cf3"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/chrislim2888/IP2Location-PHP-Module/zipball/e0e7a98e2826bda3260cd8bd36b006e1479c8cf3",
-            "reference": "e0e7a98e2826bda3260cd8bd36b006e1479c8cf3",
-            "shasum": ""
-        },
-        "time": "2019-10-09T01:00:20+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "classmap": [
-                "IP2Location.php"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "IP2Location",
-                "email": "support@ip2location.com",
-                "homepage": "http://www.ip2location.com"
-            }
-        ],
-        "description": "[Official Release] IP2Location PHP API to get location info from IPv4 and IPv6 address.",
-        "homepage": "http://www.ip2location.com",
-        "keywords": [
-            "geolocation",
-            "ip2location",
-            "ip2locationlite"
-        ]
     },
     {
         "name": "jquery.inputmask",
@@ -12279,12 +10712,6 @@
         "keywords": [
             "stream",
             "zip"
-        ],
-        "funding": [
-            {
-                "url": "https://opencollective.com/zipstream",
-                "type": "open_collective"
-            }
         ]
     },
     {
@@ -12413,116 +10840,6 @@
             "text",
             "unicode"
         ]
-    },
-    {
-        "name": "maxmind-db/reader",
-        "version": "v1.6.0",
-        "version_normalized": "1.6.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/maxmind/MaxMind-DB-Reader-php.git",
-            "reference": "febd4920bf17c1da84cef58e56a8227dfb37fbe4"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/maxmind/MaxMind-DB-Reader-php/zipball/febd4920bf17c1da84cef58e56a8227dfb37fbe4",
-            "reference": "febd4920bf17c1da84cef58e56a8227dfb37fbe4",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.6"
-        },
-        "conflict": {
-            "ext-maxminddb": "<1.6.0,>=2.0.0"
-        },
-        "require-dev": {
-            "friendsofphp/php-cs-fixer": "2.*",
-            "php-coveralls/php-coveralls": "^2.1",
-            "phpunit/phpcov": "^3.0",
-            "phpunit/phpunit": "5.*",
-            "squizlabs/php_codesniffer": "3.*"
-        },
-        "suggest": {
-            "ext-bcmath": "bcmath or gmp is required for decoding larger integers with the pure PHP decoder",
-            "ext-gmp": "bcmath or gmp is required for decoding larger integers with the pure PHP decoder",
-            "ext-maxminddb": "A C-based database decoder that provides significantly faster lookups"
-        },
-        "time": "2019-12-19T22:59:03+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "MaxMind\\Db\\": "src/MaxMind/Db"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "Apache-2.0"
-        ],
-        "authors": [
-            {
-                "name": "Gregory J. Oschwald",
-                "email": "goschwald@maxmind.com",
-                "homepage": "https://www.maxmind.com/"
-            }
-        ],
-        "description": "MaxMind DB Reader API",
-        "homepage": "https://github.com/maxmind/MaxMind-DB-Reader-php",
-        "keywords": [
-            "database",
-            "geoip",
-            "geoip2",
-            "geolocation",
-            "maxmind"
-        ]
-    },
-    {
-        "name": "maxmind/web-service-common",
-        "version": "v0.6.0",
-        "version_normalized": "0.6.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/maxmind/web-service-common-php.git",
-            "reference": "40c928bb0194c45088b369a17f9baef9c3fc7460"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/maxmind/web-service-common-php/zipball/40c928bb0194c45088b369a17f9baef9c3fc7460",
-            "reference": "40c928bb0194c45088b369a17f9baef9c3fc7460",
-            "shasum": ""
-        },
-        "require": {
-            "composer/ca-bundle": "^1.0.3",
-            "ext-curl": "*",
-            "ext-json": "*",
-            "php": ">=5.6"
-        },
-        "require-dev": {
-            "friendsofphp/php-cs-fixer": "2.*",
-            "phpunit/phpunit": "^4.8.36 || ^5.7 || ^6.5 || ^7.0",
-            "squizlabs/php_codesniffer": "3.*"
-        },
-        "time": "2019-12-12T15:56:05+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "MaxMind\\Exception\\": "src/Exception",
-                "MaxMind\\WebService\\": "src/WebService"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "Apache-2.0"
-        ],
-        "authors": [
-            {
-                "name": "Gregory Oschwald",
-                "email": "goschwald@maxmind.com"
-            }
-        ],
-        "description": "Internal MaxMind Web Service API",
-        "homepage": "https://github.com/maxmind/web-service-common-php"
     },
     {
         "name": "metafizzy/isotope",
@@ -13253,6 +11570,80 @@
         "homepage": "https://github.com/PhenX/php-font-lib"
     },
     {
+        "name": "phpfastcache/riak-client",
+        "version": "3.4.3",
+        "version_normalized": "3.4.3.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/PHPSocialNetwork/riak-php-client.git",
+            "reference": "d771f75d16196006604a30bb15adc1c6a9b0fcc9"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/PHPSocialNetwork/riak-php-client/zipball/d771f75d16196006604a30bb15adc1c6a9b0fcc9",
+            "reference": "d771f75d16196006604a30bb15adc1c6a9b0fcc9",
+            "shasum": ""
+        },
+        "require": {
+            "ext-curl": "*",
+            "ext-json": "*",
+            "php": ">=5.4"
+        },
+        "conflict": {
+            "basho/riak": "*"
+        },
+        "require-dev": {
+            "apigen/apigen": "4.1.*",
+            "phpunit/phpunit": "4.8.*"
+        },
+        "time": "2017-11-23T21:33:15+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Basho\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Apache-2.0"
+        ],
+        "authors": [
+            {
+                "name": "Georges.L",
+                "email": "contact@geolim4.com",
+                "homepage": "https://github.com/Geolim4",
+                "role": "Maintainer"
+            },
+            {
+                "name": "Christopher Mancini",
+                "email": "cmancini@basho.com",
+                "homepage": "https://github.com/christophermancini",
+                "role": "Former Lead Developer"
+            },
+            {
+                "name": "Alex Moore",
+                "email": "amoore@basho.com",
+                "homepage": "https://github.com/alexmoore",
+                "role": "Former Developer"
+            }
+        ],
+        "description": "Riak client for PHP (Fork of the official basho/riak due to maintainer significant inactivity)",
+        "homepage": "https://github.com/PHPSocialNetwork/riak-php-client",
+        "keywords": [
+            "basho",
+            "client",
+            "crdt",
+            "data",
+            "database",
+            "datatype",
+            "driver",
+            "kv",
+            "nosql",
+            "riak"
+        ]
+    },
+    {
         "name": "phpmailer/phpmailer",
         "version": "v6.1.7",
         "version_normalized": "6.1.7.0",
@@ -13922,48 +12313,44 @@
         "description": "A polyfill for getallheaders."
     },
     {
-        "name": "sibyx/phpgpx",
-        "version": "1.0-RC5",
-        "version_normalized": "1.0.0.0-RC5",
+        "name": "robrichards/xmlseclibs",
+        "version": "3.1.1",
+        "version_normalized": "3.1.1.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/Sibyx/phpGPX.git",
-            "reference": "0bb616dda0b6ff3e78c72167087c8ffe8b1cbf2e"
+            "url": "https://github.com/robrichards/xmlseclibs.git",
+            "reference": "f8f19e58f26cdb42c54b214ff8a820760292f8df"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/Sibyx/phpGPX/zipball/0bb616dda0b6ff3e78c72167087c8ffe8b1cbf2e",
-            "reference": "0bb616dda0b6ff3e78c72167087c8ffe8b1cbf2e",
+            "url": "https://api.github.com/repos/robrichards/xmlseclibs/zipball/f8f19e58f26cdb42c54b214ff8a820760292f8df",
+            "reference": "f8f19e58f26cdb42c54b214ff8a820760292f8df",
             "shasum": ""
         },
         "require": {
-            "lib-libxml": "*",
-            "php": ">=5.4"
+            "ext-openssl": "*",
+            "php": ">= 5.4"
         },
-        "require-dev": {
-            "evert/phpdoc-md": "~0.2.0",
-            "phpunit/phpunit": "^6.5"
-        },
-        "time": "2018-01-25T12:25:51+00:00",
+        "time": "2020-09-05T13:00:25+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
             "psr-4": {
-                "phpGPX\\": "src/phpGPX/"
+                "RobRichards\\XMLSecLibs\\": "src"
             }
         },
         "notification-url": "https://packagist.org/downloads/",
         "license": [
-            "MIT"
+            "BSD-3-Clause"
         ],
-        "authors": [
-            {
-                "name": "Jakub Dubec",
-                "email": "jakub.dubec@gmail.com",
-                "homepage": "https://jakubdubec.me"
-            }
-        ],
-        "description": "A simple PHP library for GPX import/export"
+        "description": "A PHP library for XML Security",
+        "homepage": "https://github.com/robrichards/xmlseclibs",
+        "keywords": [
+            "security",
+            "signature",
+            "xml",
+            "xmldsig"
+        ]
     },
     {
         "name": "signature_pad",
@@ -13992,6 +12379,1664 @@
             "installer-name": "signature_pad"
         },
         "installation-source": "dist"
+    },
+    {
+        "name": "simplesamlphp/composer-module-installer",
+        "version": "v1.1.8",
+        "version_normalized": "1.1.8.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/simplesamlphp/composer-module-installer.git",
+            "reference": "45161b5406f3e9c82459d0f9a5a1dba064953cfa"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/simplesamlphp/composer-module-installer/zipball/45161b5406f3e9c82459d0f9a5a1dba064953cfa",
+            "reference": "45161b5406f3e9c82459d0f9a5a1dba064953cfa",
+            "shasum": ""
+        },
+        "require": {
+            "composer-plugin-api": "^1.1|^2.0",
+            "simplesamlphp/simplesamlphp": "*"
+        },
+        "time": "2020-08-25T19:04:33+00:00",
+        "type": "composer-plugin",
+        "extra": {
+            "class": "SimpleSamlPhp\\Composer\\ModuleInstallerPlugin"
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "SimpleSamlPhp\\Composer": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "LGPL-2.1-only"
+        ],
+        "description": "A Composer plugin that allows installing SimpleSAMLphp modules through Composer."
+    },
+    {
+        "name": "simplesamlphp/saml2",
+        "version": "v4.1.10",
+        "version_normalized": "4.1.10.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/simplesamlphp/saml2.git",
+            "reference": "1f0c32fca12a625ba24eb55fe3c08f6565bc6e6a"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/simplesamlphp/saml2/zipball/1f0c32fca12a625ba24eb55fe3c08f6565bc6e6a",
+            "reference": "1f0c32fca12a625ba24eb55fe3c08f6565bc6e6a",
+            "shasum": ""
+        },
+        "require": {
+            "ext-dom": "*",
+            "ext-openssl": "*",
+            "ext-zlib": "*",
+            "php": ">=7.1",
+            "psr/log": "~1.1",
+            "robrichards/xmlseclibs": "^3.1.0",
+            "webmozart/assert": "^1.5"
+        },
+        "require-dev": {
+            "mockery/mockery": "~1.2",
+            "phpunit/phpunit": "^7.5",
+            "sebastian/phpcpd": "~4.1",
+            "sensiolabs/security-checker": "~6.0",
+            "simplesamlphp/simplesamlphp-test-framework": "~0.1.0",
+            "squizlabs/php_codesniffer": "~3.5"
+        },
+        "time": "2020-09-04T22:31:58+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "v4.0.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "SAML2\\": "src/SAML2"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "LGPL-2.1-or-later"
+        ],
+        "authors": [
+            {
+                "name": "Andreas Åkre Solberg",
+                "email": "andreas.solberg@uninett.no"
+            }
+        ],
+        "description": "SAML2 PHP library from SimpleSAMLphp"
+    },
+    {
+        "name": "simplesamlphp/simplesamlphp",
+        "version": "v1.18.8",
+        "version_normalized": "1.18.8.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/simplesamlphp/simplesamlphp.git",
+            "reference": "ebb6d15bb8e8b45504adc26fd3872073d1e5cd9b"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/simplesamlphp/simplesamlphp/zipball/ebb6d15bb8e8b45504adc26fd3872073d1e5cd9b",
+            "reference": "ebb6d15bb8e8b45504adc26fd3872073d1e5cd9b",
+            "shasum": ""
+        },
+        "require": {
+            "ext-date": "*",
+            "ext-dom": "*",
+            "ext-hash": "*",
+            "ext-json": "*",
+            "ext-mbstring": "*",
+            "ext-openssl": "*",
+            "ext-pcre": "*",
+            "ext-spl": "*",
+            "ext-zlib": "*",
+            "gettext/gettext": "^4.6",
+            "php": ">=5.6",
+            "phpmailer/phpmailer": "^6.0",
+            "robrichards/xmlseclibs": "^3.0.4",
+            "simplesamlphp/saml2": "^3.4 || ^4.0",
+            "simplesamlphp/simplesamlphp-module-adfs": "^0.9",
+            "simplesamlphp/simplesamlphp-module-authcrypt": "^0.9",
+            "simplesamlphp/simplesamlphp-module-authfacebook": "^0.9",
+            "simplesamlphp/simplesamlphp-module-authorize": "^0.9",
+            "simplesamlphp/simplesamlphp-module-authtwitter": "^0.9",
+            "simplesamlphp/simplesamlphp-module-authwindowslive": "^0.9",
+            "simplesamlphp/simplesamlphp-module-authx509": "^0.9",
+            "simplesamlphp/simplesamlphp-module-authyubikey": "^0.9",
+            "simplesamlphp/simplesamlphp-module-cas": "^0.9",
+            "simplesamlphp/simplesamlphp-module-cdc": "^0.9",
+            "simplesamlphp/simplesamlphp-module-consent": "^0.9",
+            "simplesamlphp/simplesamlphp-module-consentadmin": "^0.9",
+            "simplesamlphp/simplesamlphp-module-discopower": "^0.9",
+            "simplesamlphp/simplesamlphp-module-exampleattributeserver": "^1.0",
+            "simplesamlphp/simplesamlphp-module-expirycheck": "^0.9",
+            "simplesamlphp/simplesamlphp-module-ldap": "^0.9",
+            "simplesamlphp/simplesamlphp-module-memcachemonitor": "^0.9",
+            "simplesamlphp/simplesamlphp-module-memcookie": "^1.2",
+            "simplesamlphp/simplesamlphp-module-metarefresh": "^0.9",
+            "simplesamlphp/simplesamlphp-module-negotiate": "^0.9",
+            "simplesamlphp/simplesamlphp-module-oauth": "^0.9",
+            "simplesamlphp/simplesamlphp-module-preprodwarning": "^0.9",
+            "simplesamlphp/simplesamlphp-module-radius": "^0.9",
+            "simplesamlphp/simplesamlphp-module-riak": "^0.9",
+            "simplesamlphp/simplesamlphp-module-sanitycheck": "^0.9",
+            "simplesamlphp/simplesamlphp-module-smartattributes": "^0.9",
+            "simplesamlphp/simplesamlphp-module-sqlauth": "^0.9",
+            "simplesamlphp/simplesamlphp-module-statistics": "^0.9",
+            "simplesamlphp/twig-configurable-i18n": "^2.2",
+            "symfony/config": "^3.4 || ^4.0",
+            "symfony/dependency-injection": "^3.4 || ^4.0",
+            "symfony/http-foundation": "^3.4 || ^4.0",
+            "symfony/http-kernel": "^3.4 || ^4.0",
+            "symfony/routing": "^3.4 || ^4.0",
+            "symfony/yaml": "^3.4 || ^4.0",
+            "twig/twig": "~1.0 || ~2.0"
+        },
+        "require-dev": {
+            "ext-curl": "*",
+            "mikey179/vfsstream": "~1.6",
+            "phpunit/phpunit": "~5.7",
+            "sensiolabs/security-checker": "^5.0.3",
+            "simplesamlphp/simplesamlphp-test-framework": "^0.0.14",
+            "squizlabs/php_codesniffer": "^3.5",
+            "vimeo/psalm": "~1.1.9"
+        },
+        "suggest": {
+            "ext-curl": "Needed in order to check for updates automatically",
+            "ext-ldap": "Needed if an LDAP backend is used",
+            "ext-memcache": "Needed if a Memcache server is used to store session information",
+            "ext-mysql": "Needed if a MySQL backend is used, either for authentication or to store session information",
+            "ext-pdo": "Needed if a database backend is used, either for authentication or to store session information",
+            "ext-pgsql": "Needed if a PostgreSQL backend is used, either for authentication or to store session information",
+            "ext-radius": "Needed if a Radius backend is used",
+            "predis/predis": "Needed if a Redis server is used to store session information"
+        },
+        "time": "2020-09-02T12:07:28+00:00",
+        "type": "project",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "SimpleSAML\\": "lib/SimpleSAML"
+            },
+            "files": [
+                "lib/_autoload_modules.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "LGPL-2.1-or-later"
+        ],
+        "authors": [
+            {
+                "name": "Andreas Åkre Solberg",
+                "email": "andreas.solberg@uninett.no"
+            },
+            {
+                "name": "Olav Morken",
+                "email": "olav.morken@uninett.no"
+            },
+            {
+                "name": "Jaime Perez",
+                "email": "jaime.perez@uninett.no"
+            }
+        ],
+        "description": "A PHP implementation of a SAML 2.0 service provider and identity provider, also compatible with Shibboleth 1.3 and 2.0.",
+        "homepage": "http://simplesamlphp.org",
+        "keywords": [
+            "SAML2",
+            "idp",
+            "oauth",
+            "shibboleth",
+            "sp",
+            "ws-federation"
+        ]
+    },
+    {
+        "name": "simplesamlphp/simplesamlphp-module-adfs",
+        "version": "v0.9.6",
+        "version_normalized": "0.9.6.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/simplesamlphp/simplesamlphp-module-adfs.git",
+            "reference": "425e5ebbdd097c92fe5265a6b48d32a3095c7237"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/simplesamlphp/simplesamlphp-module-adfs/zipball/425e5ebbdd097c92fe5265a6b48d32a3095c7237",
+            "reference": "425e5ebbdd097c92fe5265a6b48d32a3095c7237",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.6",
+            "simplesamlphp/composer-module-installer": "~1.1"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~5.7",
+            "simplesamlphp/simplesamlphp": "^1.17",
+            "webmozart/assert": "<1.7"
+        },
+        "time": "2020-03-31T14:29:24+00:00",
+        "type": "simplesamlphp-module",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "SimpleSAML\\Module\\adfs\\": "lib/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "LGPL-2.1-or-later"
+        ],
+        "authors": [
+            {
+                "name": "Tim van Dijen",
+                "email": "tvdijen@gmail.com"
+            }
+        ],
+        "description": "A module that implements the WS-federation IDP",
+        "keywords": [
+            "adfs",
+            "simplesamlphp"
+        ]
+    },
+    {
+        "name": "simplesamlphp/simplesamlphp-module-authcrypt",
+        "version": "v0.9.1",
+        "version_normalized": "0.9.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/simplesamlphp/simplesamlphp-module-authcrypt.git",
+            "reference": "cc2950cf710933063192e883ba2804321b8af6db"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/simplesamlphp/simplesamlphp-module-authcrypt/zipball/cc2950cf710933063192e883ba2804321b8af6db",
+            "reference": "cc2950cf710933063192e883ba2804321b8af6db",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.6",
+            "simplesamlphp/composer-module-installer": "~1.1",
+            "webmozart/assert": "~1.4"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~5.7",
+            "simplesamlphp/simplesamlphp": "^1.17"
+        },
+        "time": "2019-12-03T08:56:36+00:00",
+        "type": "simplesamlphp-module",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "SimpleSAML\\Module\\authcrypt\\": "lib/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "LGPL-3.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "Olav Morken",
+                "email": "olavmrk@gmail.com"
+            }
+        ],
+        "description": "This module provides authentication against password hashes or .htpasswd files",
+        "keywords": [
+            "authcrypt",
+            "simplesamlphp"
+        ]
+    },
+    {
+        "name": "simplesamlphp/simplesamlphp-module-authfacebook",
+        "version": "v0.9.3",
+        "version_normalized": "0.9.3.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/simplesamlphp/simplesamlphp-module-authfacebook.git",
+            "reference": "9152731e939ad4a49e0f06da5f0009ebde0d2b5c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/simplesamlphp/simplesamlphp-module-authfacebook/zipball/9152731e939ad4a49e0f06da5f0009ebde0d2b5c",
+            "reference": "9152731e939ad4a49e0f06da5f0009ebde0d2b5c",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.6",
+            "simplesamlphp/composer-module-installer": "~1.1"
+        },
+        "require-dev": {
+            "simplesamlphp/simplesamlphp": "^1.17",
+            "simplesamlphp/simplesamlphp-test-framework": "^0.0.10"
+        },
+        "time": "2020-03-13T11:29:21+00:00",
+        "type": "simplesamlphp-module",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "SimpleSAML\\Module\\authfacebook\\": "lib/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "LGPL-3.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "Andjelko Horvat",
+                "email": "comel@vingd.com"
+            },
+            {
+                "name": "Tim van Dijen",
+                "email": "tvdijen@gmail.com"
+            }
+        ],
+        "description": "A module that is able to authenticate against Facebook",
+        "keywords": [
+            "facebook",
+            "simplesamlphp"
+        ]
+    },
+    {
+        "name": "simplesamlphp/simplesamlphp-module-authorize",
+        "version": "v0.9.2",
+        "version_normalized": "0.9.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/simplesamlphp/simplesamlphp-module-authorize.git",
+            "reference": "c2607a5252ee1256b50ce7795e35513b116998d4"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/simplesamlphp/simplesamlphp-module-authorize/zipball/c2607a5252ee1256b50ce7795e35513b116998d4",
+            "reference": "c2607a5252ee1256b50ce7795e35513b116998d4",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.6",
+            "simplesamlphp/composer-module-installer": "~1.1"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~5.7",
+            "simplesamlphp/simplesamlphp": "^1.17"
+        },
+        "time": "2020-02-25T15:16:57+00:00",
+        "type": "simplesamlphp-module",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "SimpleSAML\\Module\\authorize\\": "lib/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "LGPL-3.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "Ernesto Revilla",
+                "email": "erny@yaco.es"
+            }
+        ],
+        "description": "This module provides a user authorization filter based on attribute matching",
+        "keywords": [
+            "authorize",
+            "simplesamlphp"
+        ]
+    },
+    {
+        "name": "simplesamlphp/simplesamlphp-module-authtwitter",
+        "version": "v0.9.1",
+        "version_normalized": "0.9.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/simplesamlphp/simplesamlphp-module-authtwitter.git",
+            "reference": "29a15e58061222632fea9eb2c807aef5e2c0d54a"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/simplesamlphp/simplesamlphp-module-authtwitter/zipball/29a15e58061222632fea9eb2c807aef5e2c0d54a",
+            "reference": "29a15e58061222632fea9eb2c807aef5e2c0d54a",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.5",
+            "simplesamlphp/composer-module-installer": "~1.0",
+            "simplesamlphp/simplesamlphp-module-oauth": "^0.9"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~4.8.35",
+            "simplesamlphp/simplesamlphp": "^1.17"
+        },
+        "time": "2019-12-03T09:00:09+00:00",
+        "type": "simplesamlphp-module",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "SimpleSAML\\Module\\authtwitter\\": "lib/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "LGPL-3.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "Olav Morken",
+                "email": "olavmrk@gmail.com"
+            },
+            {
+                "name": "Tim van Dijen",
+                "email": "tvdijen@gmail.com"
+            }
+        ],
+        "description": "A module that is able to perform authentication against Twitter",
+        "keywords": [
+            "simplesamlphp",
+            "twitter"
+        ]
+    },
+    {
+        "name": "simplesamlphp/simplesamlphp-module-authwindowslive",
+        "version": "v0.9.1",
+        "version_normalized": "0.9.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/simplesamlphp/simplesamlphp-module-authwindowslive.git",
+            "reference": "f40aecec6c0adaedb6693309840c98cec783876e"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/simplesamlphp/simplesamlphp-module-authwindowslive/zipball/f40aecec6c0adaedb6693309840c98cec783876e",
+            "reference": "f40aecec6c0adaedb6693309840c98cec783876e",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.6",
+            "simplesamlphp/composer-module-installer": "~1.1"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~5.7",
+            "simplesamlphp/simplesamlphp": "^1.17"
+        },
+        "time": "2019-12-03T09:01:13+00:00",
+        "type": "simplesamlphp-module",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "SimpleSAML\\Module\\authwindowslive\\": "lib/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "LGPL-3.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "Olav Morken",
+                "email": "olavmrk@gmail.com"
+            },
+            {
+                "name": "Tim van Dijen",
+                "email": "tvdijen@gmail.com"
+            }
+        ],
+        "description": "A module that is able to perform authentication against Windows Live",
+        "keywords": [
+            "live",
+            "simplesamlphp",
+            "windows",
+            "windowslive"
+        ]
+    },
+    {
+        "name": "simplesamlphp/simplesamlphp-module-authx509",
+        "version": "v0.9.5",
+        "version_normalized": "0.9.5.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/simplesamlphp/simplesamlphp-module-authX509.git",
+            "reference": "d4bae5d1c02f291d420607c14a157cef3bc36f5c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/simplesamlphp/simplesamlphp-module-authX509/zipball/d4bae5d1c02f291d420607c14a157cef3bc36f5c",
+            "reference": "d4bae5d1c02f291d420607c14a157cef3bc36f5c",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.5",
+            "simplesamlphp/composer-module-installer": "~1.1",
+            "simplesamlphp/simplesamlphp-module-ldap": "^0.9"
+        },
+        "require-dev": {
+            "simplesamlphp/simplesamlphp": "^1.17",
+            "simplesamlphp/simplesamlphp-test-framework": "^0.0.15"
+        },
+        "time": "2020-07-31T14:36:54+00:00",
+        "type": "simplesamlphp-module",
+        "extra": {
+            "ssp-mixedcase-module-name": "authX509"
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "SimpleSAML\\Module\\authX509\\": "lib/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "LGPL-2.1-or-later"
+        ],
+        "authors": [
+            {
+                "name": "Joost van Dijk",
+                "email": "Joost.vanDijk@surfnet.nl"
+            },
+            {
+                "name": "Tim van Dijen",
+                "email": "tvdijen@gmail.com"
+            }
+        ],
+        "description": "A module that is able to authenticate users based on X509 client certificates",
+        "keywords": [
+            "simplesamlphp",
+            "x509"
+        ]
+    },
+    {
+        "name": "simplesamlphp/simplesamlphp-module-authyubikey",
+        "version": "v0.9.1",
+        "version_normalized": "0.9.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/simplesamlphp/simplesamlphp-module-authyubikey.git",
+            "reference": "8c27bfeb4981d2e6fa40a831e945f40c5a4ad3d2"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/simplesamlphp/simplesamlphp-module-authyubikey/zipball/8c27bfeb4981d2e6fa40a831e945f40c5a4ad3d2",
+            "reference": "8c27bfeb4981d2e6fa40a831e945f40c5a4ad3d2",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.6",
+            "simplesamlphp/composer-module-installer": "~1.1",
+            "webmozart/assert": "~1.4"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~5.7",
+            "simplesamlphp/simplesamlphp": "^1.17"
+        },
+        "time": "2019-12-03T08:52:49+00:00",
+        "type": "simplesamlphp-module",
+        "extra": {
+            "ssp-mixedcase-module-name": "authYubikey"
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "SimpleSAML\\modules\\yubikey\\": "lib/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "LGPL-3.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "Tim van Dijen",
+                "email": "tvdijen@gmail.com"
+            }
+        ],
+        "description": "A module that is able to authenticate against YubiKey",
+        "keywords": [
+            "authyubikey",
+            "simplesamlphp"
+        ]
+    },
+    {
+        "name": "simplesamlphp/simplesamlphp-module-cas",
+        "version": "v0.9.1",
+        "version_normalized": "0.9.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/simplesamlphp/simplesamlphp-module-cas.git",
+            "reference": "63b72e4600550c507cdfc32fdd208ad59a64321e"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/simplesamlphp/simplesamlphp-module-cas/zipball/63b72e4600550c507cdfc32fdd208ad59a64321e",
+            "reference": "63b72e4600550c507cdfc32fdd208ad59a64321e",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.6",
+            "simplesamlphp/composer-module-installer": "~1.1",
+            "simplesamlphp/simplesamlphp-module-ldap": "^0.9",
+            "webmozart/assert": "~1.4"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~5.7",
+            "simplesamlphp/simplesamlphp": "^1.17"
+        },
+        "time": "2019-12-03T09:03:06+00:00",
+        "type": "simplesamlphp-module",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "SimpleSAML\\Module\\cas\\": "lib/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "LGPL-3.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "Olav Morken",
+                "email": "olavmrk@gmail.com"
+            }
+        ],
+        "description": "A module that provides CAS authentication",
+        "keywords": [
+            "cas",
+            "simplesamlphp"
+        ]
+    },
+    {
+        "name": "simplesamlphp/simplesamlphp-module-cdc",
+        "version": "v0.9.1",
+        "version_normalized": "0.9.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/simplesamlphp/simplesamlphp-module-cdc.git",
+            "reference": "16a5bfac7299e04e5feb472af328e07598708166"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/simplesamlphp/simplesamlphp-module-cdc/zipball/16a5bfac7299e04e5feb472af328e07598708166",
+            "reference": "16a5bfac7299e04e5feb472af328e07598708166",
+            "shasum": ""
+        },
+        "require": {
+            "simplesamlphp/composer-module-installer": ">=1.1.6"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~5.7",
+            "simplesamlphp/simplesamlphp": "^1.17"
+        },
+        "time": "2019-12-03T09:04:11+00:00",
+        "type": "simplesamlphp-module",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "SimpleSAML\\Module\\cdc\\": "lib/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "LGPL-3.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "Olav Morken",
+                "email": "olav.morken@uninett.no"
+            },
+            {
+                "name": "Jaime Perez Crespo",
+                "email": "jaime.perez@uninett.no"
+            }
+        ],
+        "description": "A SimpleSAMLphp module that allows integration with CDC",
+        "homepage": "https://simplesamlphp.org/",
+        "keywords": [
+            "cdc",
+            "simplesamlphp"
+        ]
+    },
+    {
+        "name": "simplesamlphp/simplesamlphp-module-consent",
+        "version": "v0.9.6",
+        "version_normalized": "0.9.6.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/simplesamlphp/simplesamlphp-module-consent.git",
+            "reference": "2f84d15e96afb5a32b6d1cff93370f501ca7867d"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/simplesamlphp/simplesamlphp-module-consent/zipball/2f84d15e96afb5a32b6d1cff93370f501ca7867d",
+            "reference": "2f84d15e96afb5a32b6d1cff93370f501ca7867d",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.6",
+            "simplesamlphp/composer-module-installer": "~1.1"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~5.7",
+            "simplesamlphp/simplesamlphp": "^1.17",
+            "webmozart/assert": "<1.7"
+        },
+        "time": "2020-06-15T14:26:23+00:00",
+        "type": "simplesamlphp-module",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "SimpleSAML\\Module\\consent\\": "lib/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "LGPL-2.1-or-later"
+        ],
+        "authors": [
+            {
+                "name": "Olav Morken",
+                "email": "lavmrk@gmail.com"
+            }
+        ],
+        "description": "A module that will ask for user consent before releasing attributes",
+        "keywords": [
+            "consent",
+            "simplesamlphp"
+        ]
+    },
+    {
+        "name": "simplesamlphp/simplesamlphp-module-consentadmin",
+        "version": "v0.9.1",
+        "version_normalized": "0.9.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/simplesamlphp/simplesamlphp-module-consentadmin.git",
+            "reference": "466e8d0d751f0080162d78e63ab2e125b24d17a1"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/simplesamlphp/simplesamlphp-module-consentadmin/zipball/466e8d0d751f0080162d78e63ab2e125b24d17a1",
+            "reference": "466e8d0d751f0080162d78e63ab2e125b24d17a1",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.6",
+            "simplesamlphp/composer-module-installer": "~1.1",
+            "simplesamlphp/simplesamlphp-module-consent": "^0.9",
+            "webmozart/assert": "~1.4"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~5.7",
+            "simplesamlphp/simplesamlphp": "^1.17"
+        },
+        "time": "2019-12-03T09:06:40+00:00",
+        "type": "simplesamlphp-module",
+        "extra": {
+            "ssp-mixedcase-module-name": "consentAdmin"
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "LGPL-3.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "Jacob Christiansen",
+                "email": "jach@wayf.dk"
+            },
+            {
+                "name": "Olav Morken",
+                "email": "olav.morken@uninett.no"
+            }
+        ],
+        "description": "A module that allows users to manage their consent",
+        "keywords": [
+            "consentadmin",
+            "simplesamlphp"
+        ]
+    },
+    {
+        "name": "simplesamlphp/simplesamlphp-module-discopower",
+        "version": "v0.9.1",
+        "version_normalized": "0.9.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/simplesamlphp/simplesamlphp-module-discopower.git",
+            "reference": "006c0617610f1bae11cf4d17e8ce4c509239a60e"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/simplesamlphp/simplesamlphp-module-discopower/zipball/006c0617610f1bae11cf4d17e8ce4c509239a60e",
+            "reference": "006c0617610f1bae11cf4d17e8ce4c509239a60e",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.6",
+            "simplesamlphp/composer-module-installer": "~1.1",
+            "webmozart/assert": "~1.4"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~5.7",
+            "simplesamlphp/simplesamlphp": "^1.17"
+        },
+        "time": "2019-11-27T20:34:37+00:00",
+        "type": "simplesamlphp-module",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "SimpleSAML\\modules\\discopower\\": "lib/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "LGPL-3.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "Andreas Åkre Solberg",
+                "email": "andreas.solberg@uninett.no"
+            }
+        ],
+        "description": "Fancy tabbed discovery service with filtering capabilities where SPs can have different sets of metadata listed",
+        "keywords": [
+            "discopower",
+            "discovery",
+            "simplesamlphp"
+        ]
+    },
+    {
+        "name": "simplesamlphp/simplesamlphp-module-exampleattributeserver",
+        "version": "v1.0.0",
+        "version_normalized": "1.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/simplesamlphp/simplesamlphp-module-exampleattributeserver.git",
+            "reference": "63e0323e81c32bc3c9eaa01ea45194bb10153708"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/simplesamlphp/simplesamlphp-module-exampleattributeserver/zipball/63e0323e81c32bc3c9eaa01ea45194bb10153708",
+            "reference": "63e0323e81c32bc3c9eaa01ea45194bb10153708",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.6",
+            "simplesamlphp/composer-module-installer": "~1.1"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~5.7",
+            "simplesamlphp/simplesamlphp": "^1.17"
+        },
+        "time": "2019-05-28T12:37:15+00:00",
+        "type": "simplesamlphp-module",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "SimpleSAML\\Module\\exampleattributeserver\\": "lib/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "LGPL-3.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "Olav Morken",
+                "email": "olavmrk@gmail.com"
+            }
+        ],
+        "description": "An example for SAML attributes queries",
+        "keywords": [
+            "exampleattributeserver",
+            "simplesamlphp"
+        ]
+    },
+    {
+        "name": "simplesamlphp/simplesamlphp-module-expirycheck",
+        "version": "v0.9.3",
+        "version_normalized": "0.9.3.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/simplesamlphp/simplesamlphp-module-expirycheck.git",
+            "reference": "59c59cdf87e2679257b46c07bb4c27666a11cc20"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/simplesamlphp/simplesamlphp-module-expirycheck/zipball/59c59cdf87e2679257b46c07bb4c27666a11cc20",
+            "reference": "59c59cdf87e2679257b46c07bb4c27666a11cc20",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.6",
+            "simplesamlphp/composer-module-installer": "~1.1",
+            "webmozart/assert": "~1.4"
+        },
+        "require-dev": {
+            "simplesamlphp/simplesamlphp": "^1.17",
+            "simplesamlphp/simplesamlphp-test-framework": "^0.0.10"
+        },
+        "time": "2019-12-14T13:20:46+00:00",
+        "type": "simplesamlphp-module",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "SimpleSAML\\Module\\expirycheck\\": "lib/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "LGPL-3.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "Alex Mihičinac",
+                "email": "alexm@arnes.si"
+            }
+        ],
+        "description": "The expirycheck module validates user's expiry date",
+        "keywords": [
+            "expirycheck",
+            "simplesamlphp"
+        ]
+    },
+    {
+        "name": "simplesamlphp/simplesamlphp-module-ldap",
+        "version": "v0.9.10",
+        "version_normalized": "0.9.10.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/simplesamlphp/simplesamlphp-module-ldap.git",
+            "reference": "78f04cbe41bfb9dcbcdeff4b5f12e67c060e1a77"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/simplesamlphp/simplesamlphp-module-ldap/zipball/78f04cbe41bfb9dcbcdeff4b5f12e67c060e1a77",
+            "reference": "78f04cbe41bfb9dcbcdeff4b5f12e67c060e1a77",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.6",
+            "simplesamlphp/composer-module-installer": "~1.1"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~5.7",
+            "simplesamlphp/simplesamlphp": "^1.17"
+        },
+        "suggest": {
+            "ext-ldap": "Needed when using LDAP authentication in SimpleSAMLphp"
+        },
+        "time": "2020-09-16T21:09:07+00:00",
+        "type": "simplesamlphp-module",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "SimpleSAML\\Module\\ldap\\": "lib/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "LGPL-2.1-or-later"
+        ],
+        "authors": [
+            {
+                "name": "Olav Morken",
+                "email": "olavmrk@gmail.com"
+            },
+            {
+                "name": "Tim van Dijen",
+                "email": "tvdijen@gmail.com"
+            }
+        ],
+        "description": "A module that provides authentication against LDAP stores",
+        "keywords": [
+            "ldap",
+            "simplesamlphp"
+        ]
+    },
+    {
+        "name": "simplesamlphp/simplesamlphp-module-memcachemonitor",
+        "version": "v0.9.1",
+        "version_normalized": "0.9.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/simplesamlphp/simplesamlphp-module-memcachemonitor.git",
+            "reference": "0e08e87707cd7b1fb91bbcf65cc454d8849571b0"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/simplesamlphp/simplesamlphp-module-memcachemonitor/zipball/0e08e87707cd7b1fb91bbcf65cc454d8849571b0",
+            "reference": "0e08e87707cd7b1fb91bbcf65cc454d8849571b0",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.6",
+            "simplesamlphp/composer-module-installer": "~1.1"
+        },
+        "require-dev": {
+            "simplesamlphp/simplesamlphp": "^1.17",
+            "simplesamlphp/simplesamlphp-test-framework": "~0.0.6"
+        },
+        "time": "2019-12-03T09:19:35+00:00",
+        "type": "simplesamlphp-module",
+        "extra": {
+            "ssp-mixedcase-module-name": "memcacheMonitor"
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "LGPL-3.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "Andreas Åkre Solberg",
+                "email": "andreas.solberg@uninett.no"
+            },
+            {
+                "name": "Tim van Dijen",
+                "email": "tvdijen@gmail.com"
+            }
+        ],
+        "description": "A module that is able display usage statistics of a memcache(d) store",
+        "keywords": [
+            "memcachemonitor",
+            "simplesamlphp"
+        ]
+    },
+    {
+        "name": "simplesamlphp/simplesamlphp-module-memcookie",
+        "version": "v1.2.2",
+        "version_normalized": "1.2.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/simplesamlphp/simplesamlphp-module-memcookie.git",
+            "reference": "39535304e8d464b7baa1e82cb441fa432947ff57"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/simplesamlphp/simplesamlphp-module-memcookie/zipball/39535304e8d464b7baa1e82cb441fa432947ff57",
+            "reference": "39535304e8d464b7baa1e82cb441fa432947ff57",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.6",
+            "simplesamlphp/composer-module-installer": ">=1.1.6"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~5.7",
+            "simplesamlphp/simplesamlphp": "^1.17",
+            "simplesamlphp/simplesamlphp-test-framework": "^0.0.6"
+        },
+        "time": "2019-08-08T18:33:47+00:00",
+        "type": "simplesamlphp-module",
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "LGPL-2.1"
+        ],
+        "authors": [
+            {
+                "name": "Olav Morken",
+                "email": "olav.morken@uninett.no"
+            },
+            {
+                "name": "Jaime Perez Crespo",
+                "email": "jaime.perez@uninett.no"
+            }
+        ],
+        "description": "A SimpleSAMLphp module that allows integration with Auth MemCookie, allowing web applications written in other languages than PHP to integrate with SimpleSAMLphp.",
+        "homepage": "https://simplesamlphp.org/",
+        "keywords": [
+            "Auth MemCookie",
+            "apache",
+            "cookies",
+            "simplesamlphp"
+        ]
+    },
+    {
+        "name": "simplesamlphp/simplesamlphp-module-metarefresh",
+        "version": "v0.9.6",
+        "version_normalized": "0.9.6.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/simplesamlphp/simplesamlphp-module-metarefresh.git",
+            "reference": "e284306a7097297765b5b78a4e28f19f18d4e001"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/simplesamlphp/simplesamlphp-module-metarefresh/zipball/e284306a7097297765b5b78a4e28f19f18d4e001",
+            "reference": "e284306a7097297765b5b78a4e28f19f18d4e001",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.6",
+            "simplesamlphp/composer-module-installer": "~1.1"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~5.7",
+            "simplesamlphp/simplesamlphp": "^1.18"
+        },
+        "time": "2020-07-31T14:43:37+00:00",
+        "type": "simplesamlphp-module",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "SimpleSAML\\Module\\metarefresh\\": "lib/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "LGPL-2.1-or-later"
+        ],
+        "authors": [
+            {
+                "name": "Andreas Åkre Solberg",
+                "email": "andreas.solberg@uninett.no"
+            }
+        ],
+        "description": "The metarefresh module will download and parse metadata documents and store them locally",
+        "keywords": [
+            "metarefresh",
+            "simplesamlphp"
+        ]
+    },
+    {
+        "name": "simplesamlphp/simplesamlphp-module-negotiate",
+        "version": "v0.9.9",
+        "version_normalized": "0.9.9.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/simplesamlphp/simplesamlphp-module-negotiate.git",
+            "reference": "68c9a1a2b81c68978ba6cfe19f0a7527300768ba"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/simplesamlphp/simplesamlphp-module-negotiate/zipball/68c9a1a2b81c68978ba6cfe19f0a7527300768ba",
+            "reference": "68c9a1a2b81c68978ba6cfe19f0a7527300768ba",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.6",
+            "simplesamlphp/composer-module-installer": "~1.1",
+            "simplesamlphp/simplesamlphp-module-ldap": "^0.9",
+            "webmozart/assert": "~1.4"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~5.7",
+            "sensiolabs/security-checker": "^5.0.3",
+            "simplesamlphp/simplesamlphp": "dev-testing-1.18",
+            "simplesamlphp/simplesamlphp-test-framework": "^0.0.14",
+            "squizlabs/php_codesniffer": "^3.5"
+        },
+        "suggest": {
+            "ext-krb5": "Needed in case the SimpleSAMLphp negotiate module is used"
+        },
+        "time": "2020-08-03T13:02:36+00:00",
+        "type": "simplesamlphp-module",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "SimpleSAML\\Module\\negotiate\\": "lib/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "LGPL-2.1-or-later"
+        ],
+        "authors": [
+            {
+                "name": "Olav Morken",
+                "email": "olavmrk@gmail.com"
+            }
+        ],
+        "description": "The Negotiate module implements Microsofts Kerberos SPNEGO mechanism",
+        "keywords": [
+            "negotiate",
+            "simplesamlphp"
+        ]
+    },
+    {
+        "name": "simplesamlphp/simplesamlphp-module-oauth",
+        "version": "v0.9.2",
+        "version_normalized": "0.9.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/simplesamlphp/simplesamlphp-module-oauth.git",
+            "reference": "d14d7aca6e699ec12b3f4dd0128373faa1a2cc61"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/simplesamlphp/simplesamlphp-module-oauth/zipball/d14d7aca6e699ec12b3f4dd0128373faa1a2cc61",
+            "reference": "d14d7aca6e699ec12b3f4dd0128373faa1a2cc61",
+            "shasum": ""
+        },
+        "require": {
+            "simplesamlphp/composer-module-installer": ">=1.1.6"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~4.8.36",
+            "simplesamlphp/simplesamlphp": "^1.17"
+        },
+        "time": "2020-04-29T19:37:43+00:00",
+        "type": "simplesamlphp-module",
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "LGPL-2.1-or-later"
+        ],
+        "authors": [
+            {
+                "name": "Olav Morken",
+                "email": "olav.morken@uninett.no"
+            },
+            {
+                "name": "Jaime Perez Crespo",
+                "email": "jaime.perez@uninett.no"
+            }
+        ],
+        "description": "A SimpleSAMLphp module that allows integration with OAuth1,",
+        "homepage": "https://simplesamlphp.org/",
+        "keywords": [
+            "oauth1",
+            "simplesamlphp"
+        ]
+    },
+    {
+        "name": "simplesamlphp/simplesamlphp-module-preprodwarning",
+        "version": "v0.9.2",
+        "version_normalized": "0.9.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/simplesamlphp/simplesamlphp-module-preprodwarning.git",
+            "reference": "8e032de33a75eb44857dc06d886ad94ee3af4638"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/simplesamlphp/simplesamlphp-module-preprodwarning/zipball/8e032de33a75eb44857dc06d886ad94ee3af4638",
+            "reference": "8e032de33a75eb44857dc06d886ad94ee3af4638",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.6",
+            "simplesamlphp/composer-module-installer": "~1.1"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~5.7",
+            "simplesamlphp/simplesamlphp": "^1.17",
+            "webmozart/assert": "^1.4"
+        },
+        "time": "2020-04-09T13:05:27+00:00",
+        "type": "simplesamlphp-module",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "SimpleSAML\\Module\\preprodwarning\\": "lib/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "LGPL-2.1-or-later"
+        ],
+        "authors": [
+            {
+                "name": "Andreas Åkre Solberg",
+                "email": "andreas.solberg@uninett.no"
+            }
+        ],
+        "description": "Display a warning when using a pre-production environment",
+        "keywords": [
+            "preprodwarning",
+            "simplesamlphp"
+        ]
+    },
+    {
+        "name": "simplesamlphp/simplesamlphp-module-radius",
+        "version": "v0.9.3",
+        "version_normalized": "0.9.3.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/simplesamlphp/simplesamlphp-module-radius.git",
+            "reference": "36bd0f39f9a13f7eb96ead97c97c3634aa1c3f2d"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/simplesamlphp/simplesamlphp-module-radius/zipball/36bd0f39f9a13f7eb96ead97c97c3634aa1c3f2d",
+            "reference": "36bd0f39f9a13f7eb96ead97c97c3634aa1c3f2d",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.6",
+            "simplesamlphp/composer-module-installer": "~1.1"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~5.7",
+            "simplesamlphp/simplesamlphp": "^1.17",
+            "simplesamlphp/simplesamlphp-test-framework": "^0.0.7"
+        },
+        "time": "2019-10-03T18:13:07+00:00",
+        "type": "simplesamlphp-module",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "SimpleSAML\\Module\\radius\\": "lib/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "LGPL-3.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "Olav Morken",
+                "email": "olavmrk@gmail.com"
+            }
+        ],
+        "description": "A module that is able perform authentication against a RADIUS server",
+        "keywords": [
+            "radius",
+            "simplesamlphp"
+        ]
+    },
+    {
+        "name": "simplesamlphp/simplesamlphp-module-riak",
+        "version": "v0.9.1",
+        "version_normalized": "0.9.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/simplesamlphp/simplesamlphp-module-riak.git",
+            "reference": "c1a9d9545cb4e05b9205b34624850bb777aca991"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/simplesamlphp/simplesamlphp-module-riak/zipball/c1a9d9545cb4e05b9205b34624850bb777aca991",
+            "reference": "c1a9d9545cb4e05b9205b34624850bb777aca991",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.6",
+            "phpfastcache/riak-client": "^3.4",
+            "simplesamlphp/composer-module-installer": "~1.1"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~5.7",
+            "simplesamlphp/simplesamlphp": "^1.17"
+        },
+        "time": "2019-12-03T08:28:45+00:00",
+        "type": "simplesamlphp-module",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "SimpleSAML\\Module\\riak\\": "lib/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "LGPL-3.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "Tim van Dijen",
+                "email": "tvdijen@gmail.com"
+            }
+        ],
+        "description": "A module that is able to store key/value pairs in a Riak store",
+        "keywords": [
+            "riak",
+            "simplesamlphp"
+        ]
+    },
+    {
+        "name": "simplesamlphp/simplesamlphp-module-sanitycheck",
+        "version": "v0.9.1",
+        "version_normalized": "0.9.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/simplesamlphp/simplesamlphp-module-sanitycheck.git",
+            "reference": "15d6664eae73a233c3c4c72fd8a5c2be72b6ed2a"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/simplesamlphp/simplesamlphp-module-sanitycheck/zipball/15d6664eae73a233c3c4c72fd8a5c2be72b6ed2a",
+            "reference": "15d6664eae73a233c3c4c72fd8a5c2be72b6ed2a",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.6",
+            "simplesamlphp/composer-module-installer": "~1.1",
+            "webmozart/assert": "~1.4"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~5.7",
+            "simplesamlphp/simplesamlphp": "^1.17"
+        },
+        "time": "2020-05-07T11:34:29+00:00",
+        "type": "simplesamlphp-module",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "SimpleSAML\\Module\\sanitycheck\\": "lib/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "LGPL-2.1-or-later"
+        ],
+        "authors": [
+            {
+                "name": "Andreas Åkre Solberg",
+                "email": "andreas.solberg@uninett.no"
+            }
+        ],
+        "description": "Perform sanity checks on configuration",
+        "keywords": [
+            "sanitycheck",
+            "simplesamlphp"
+        ]
+    },
+    {
+        "name": "simplesamlphp/simplesamlphp-module-smartattributes",
+        "version": "v0.9.1",
+        "version_normalized": "0.9.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/simplesamlphp/simplesamlphp-module-smartattributes.git",
+            "reference": "b45d3ecd916e359a9cae05f9ae9df09b5c42f4e6"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/simplesamlphp/simplesamlphp-module-smartattributes/zipball/b45d3ecd916e359a9cae05f9ae9df09b5c42f4e6",
+            "reference": "b45d3ecd916e359a9cae05f9ae9df09b5c42f4e6",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.6",
+            "simplesamlphp/composer-module-installer": "~1.1"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~5.7",
+            "simplesamlphp/simplesamlphp": "^1.17"
+        },
+        "time": "2019-12-03T09:24:09+00:00",
+        "type": "simplesamlphp-module",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "SimpleSAML\\Module\\smartattributes\\": "lib/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "LGPL-3.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "Andreas Åkre Solberg",
+                "email": "andreas.solberg@uninett.no"
+            }
+        ],
+        "description": "The SmartAttributes module provides additional authentication processing filters to manipulate attributes.",
+        "keywords": [
+            "simplesamlphp",
+            "smartattributes"
+        ]
+    },
+    {
+        "name": "simplesamlphp/simplesamlphp-module-sqlauth",
+        "version": "v0.9.1",
+        "version_normalized": "0.9.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/simplesamlphp/simplesamlphp-module-sqlauth.git",
+            "reference": "31bce8763ad97f4b4473e4ad4a5a96ddc136ef6b"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/simplesamlphp/simplesamlphp-module-sqlauth/zipball/31bce8763ad97f4b4473e4ad4a5a96ddc136ef6b",
+            "reference": "31bce8763ad97f4b4473e4ad4a5a96ddc136ef6b",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.6",
+            "simplesamlphp/composer-module-installer": "~1.1"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~5.7",
+            "simplesamlphp/simplesamlphp": "^1.17",
+            "webmozart/assert": "^1.4"
+        },
+        "time": "2019-12-03T09:07:09+00:00",
+        "type": "simplesamlphp-module",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "SimpleSAML\\Module\\sqlauth\\": "lib/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "LGPL-3.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "Olav Morken",
+                "email": "olavmrk@gmail.com"
+            }
+        ],
+        "description": "This is a authentication module for authenticating a user against a SQL database",
+        "keywords": [
+            "simplesamlphp",
+            "sqlauth"
+        ]
+    },
+    {
+        "name": "simplesamlphp/simplesamlphp-module-statistics",
+        "version": "v0.9.4",
+        "version_normalized": "0.9.4.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/simplesamlphp/simplesamlphp-module-statistics.git",
+            "reference": "1bb1e46921d8dc84707bc9cd3c307c8abd723ac7"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/simplesamlphp/simplesamlphp-module-statistics/zipball/1bb1e46921d8dc84707bc9cd3c307c8abd723ac7",
+            "reference": "1bb1e46921d8dc84707bc9cd3c307c8abd723ac7",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.6",
+            "simplesamlphp/composer-module-installer": "~1.1",
+            "webmozart/assert": "^1.4"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~5.7",
+            "simplesamlphp/simplesamlphp": "^1.17",
+            "simplesamlphp/simplesamlphp-test-framework": "^0.0.12"
+        },
+        "time": "2019-12-03T08:42:27+00:00",
+        "type": "simplesamlphp-module",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "SimpleSAML\\Module\\statistics\\": "lib/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "LGPL-3.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "Andreas Åkre Solberg",
+                "email": "andreas.solberg@uninett.no"
+            }
+        ],
+        "description": "The SimpleSAMLphp statistics module",
+        "keywords": [
+            "simplesamlphp",
+            "statistics"
+        ]
+    },
+    {
+        "name": "simplesamlphp/twig-configurable-i18n",
+        "version": "v2.3.4",
+        "version_normalized": "2.3.4.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/simplesamlphp/twig-configurable-i18n.git",
+            "reference": "e2bffc7eed3112a0b3870ef5b4da0fd74c7c4b8a"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/simplesamlphp/twig-configurable-i18n/zipball/e2bffc7eed3112a0b3870ef5b4da0fd74c7c4b8a",
+            "reference": "e2bffc7eed3112a0b3870ef5b4da0fd74c7c4b8a",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=7.1",
+            "twig/extensions": "@dev"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^7.5",
+            "sensiolabs/security-checker": "~6.0.3",
+            "simplesamlphp/simplesamlphp-test-framework": "~0.1.2",
+            "squizlabs/php_codesniffer": "^3.5",
+            "twig/twig": "^2.13"
+        },
+        "time": "2020-08-27T12:51:10+00:00",
+        "type": "project",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "SimpleSAML\\TwigConfigurableI18n\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "LGPL-2.1"
+        ],
+        "authors": [
+            {
+                "name": "Jaime Perez",
+                "email": "jaime.perez@uninett.no"
+            }
+        ],
+        "description": "This is an extension on top of Twig's i18n extension, allowing you to customize which functions to use for translations.",
+        "keywords": [
+            "extension",
+            "gettext",
+            "i18n",
+            "internationalization",
+            "translation",
+            "twig"
+        ]
     },
     {
         "name": "slick",
@@ -14520,20 +14565,6 @@
             "interfaces",
             "interoperability",
             "standards"
-        ],
-        "funding": [
-            {
-                "url": "https://symfony.com/sponsor",
-                "type": "custom"
-            },
-            {
-                "url": "https://github.com/fabpot",
-                "type": "github"
-            },
-            {
-                "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                "type": "tidelift"
-            }
         ]
     },
     {
@@ -15095,21 +15126,7 @@
             }
         ],
         "description": "Symfony HttpKernel Component",
-        "homepage": "https://symfony.com",
-        "funding": [
-            {
-                "url": "https://symfony.com/sponsor",
-                "type": "custom"
-            },
-            {
-                "url": "https://github.com/fabpot",
-                "type": "github"
-            },
-            {
-                "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                "type": "tidelift"
-            }
-        ]
+        "homepage": "https://symfony.com"
     },
     {
         "name": "symfony/polyfill-ctype",
@@ -16269,6 +16286,63 @@
             "GPL-2.0+"
         ],
         "description": "Automatically deletes .git directories in newly installed or updated dependencies."
+    },
+    {
+        "name": "twig/extensions",
+        "version": "v1.5.4",
+        "version_normalized": "1.5.4.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/twigphp/Twig-extensions.git",
+            "reference": "57873c8b0c1be51caa47df2cdb824490beb16202"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/twigphp/Twig-extensions/zipball/57873c8b0c1be51caa47df2cdb824490beb16202",
+            "reference": "57873c8b0c1be51caa47df2cdb824490beb16202",
+            "shasum": ""
+        },
+        "require": {
+            "twig/twig": "^1.27|^2.0"
+        },
+        "require-dev": {
+            "symfony/phpunit-bridge": "^3.4",
+            "symfony/translation": "^2.7|^3.4"
+        },
+        "suggest": {
+            "symfony/translation": "Allow the time_diff output to be translated"
+        },
+        "time": "2018-12-05T18:34:18+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.5-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Twig_Extensions_": "lib/"
+            },
+            "psr-4": {
+                "Twig\\Extensions\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
+            }
+        ],
+        "description": "Common additional features for Twig that do not directly belong in core",
+        "keywords": [
+            "i18n",
+            "text"
+        ]
     },
     {
         "name": "twig/twig",

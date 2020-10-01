@@ -31,3 +31,9 @@ function workbench_email_moderation_requirements($phase) {
 function workbench_email_update_8001() {
 }
 
+/**
+ * Empty update to trigger config schema cache update.
+ */
+function workbench_email_update_8002() {
+}
+

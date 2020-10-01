@@ -206,19 +206,24 @@ class TemplateForm extends EntityForm {
 
     // Bundles.
     $bundle_options = [];
-    foreach ($this->entityTypeManager->getDefinitions() as $entity_type) {
-      if (!$this->isModeratableEntityType($entity_type) || !($bundle_entity_type = $entity_type->getBundleEntityType())) {
+    foreach ($this->entityTypeManager->getDefinitions() as $entity_type_id => $entity_type) {
+      if (!$this->isModeratableEntityType($entity_type)) {
         // Irrelevant - continue.
         continue;
       }
-      $entity_type_id = $entity_type->id();
       $bundles = $this->entityBundleInfo->getBundleInfo($entity_type_id);
-      $bundle_storage = $this->entityTypeManager->getStorage($bundle_entity_type);
-      $bundle_entities = $bundle_storage->loadMultiple(array_keys($bundles));
-      foreach ($bundle_entities as $bundle_id => $bundle) {
-        if ($this->isModeratableBundle($entity_type, $bundle_id)) {
-          $bundle_options["$entity_type_id:$bundle_id"] = $bundle->label() . ' (' . $entity_type->getLabel() . ')';
+      if ($bundle_entity_type = $entity_type->getBundleEntityType()) {
+        $bundle_storage = $this->entityTypeManager->getStorage($bundle_entity_type);
+        $bundle_entities = $bundle_storage->loadMultiple(array_keys($bundles));
+        foreach ($bundle_entities as $bundle_id => $bundle) {
+          if ($this->isModeratableBundle($entity_type, $bundle_id)) {
+            $bundle_options["$entity_type_id:$bundle_id"] = $bundle->label() . ' (' . $entity_type->getLabel() . ')';
+          }
         }
+      }
+      // For non-bundleable entities bundle ID is same as entity type ID.
+      elseif ($this->isModeratableBundle($entity_type, $entity_type_id)) {
+        $bundle_options["$entity_type_id:$entity_type_id"] = $entity_type->getLabel() . ' (' . $entity_type->getLabel() . ')';
       }
     }
     $form['bundles'] = [

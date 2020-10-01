@@ -1,9 +1,0 @@
-uuid: 2cee2e9a-7033-433e-9966-f99bf946e479
-langcode: en
-status: true
-dependencies: {  }
-id: hero_slide
-label: 'Hero Slide'
-icon_uuid: null
-description: ''
-behavior_plugins: {  }
