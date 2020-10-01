@@ -1,7 +1,0 @@
-name: 'Feeds test events'
-type: module
-description: 'Provides subscribers to feeds events.'
-package: Testing
-core: 8.x
-dependencies:
-  - feeds

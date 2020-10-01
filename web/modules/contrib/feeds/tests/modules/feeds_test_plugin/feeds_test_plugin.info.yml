@@ -1,7 +1,0 @@
-name: 'Feeds test plugin'
-type: module
-description: 'Provides plugins for testing Feeds functionality.'
-package: Testing
-core: 8.x
-dependencies:
-  - feeds
