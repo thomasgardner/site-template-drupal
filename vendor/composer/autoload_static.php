@@ -12,9 +12,9 @@ class ComposerStaticInitDrupal8
         '023d27dca8066ef29e6739335ea73bad' => __DIR__ . '/..' . '/symfony/polyfill-php70/bootstrap.php',
         'bd9634f2d41831496de0d3dfe4c94881' => __DIR__ . '/..' . '/symfony/polyfill-php56/bootstrap.php',
         '25072dd6e2470089de65ae7bf11d3109' => __DIR__ . '/..' . '/symfony/polyfill-php72/bootstrap.php',
-        '7e9bd612cc444b3eed788ebbe46263a0' => __DIR__ . '/..' . '/laminas/laminas-zendframework-bridge/src/autoload.php',
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
+        '7e9bd612cc444b3eed788ebbe46263a0' => __DIR__ . '/..' . '/laminas/laminas-zendframework-bridge/src/autoload.php',
         'f598d06aa772fa33d905e87be6398fb1' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/bootstrap.php',
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
@@ -50,10 +50,6 @@ class ComposerStaticInitDrupal8
         'z' => 
         array (
             'zaporylie\\ComposerDrupalOptimizations\\' => 38,
-        ),
-        'p' => 
-        array (
-            'phpGPX\\' => 7,
         ),
         'l' => 
         array (
@@ -151,7 +147,6 @@ class ComposerStaticInitDrupal8
             'SimpleSAML\\Module\\authX509\\' => 27,
             'SimpleSAML\\Module\\adfs\\' => 23,
             'SimpleSAML\\' => 11,
-            'Shapefile\\' => 10,
             'SelfUpdate\\' => 11,
             'SAML2\\' => 6,
         ),
@@ -181,9 +176,6 @@ class ComposerStaticInitDrupal8
         'M' => 
         array (
             'MyCLabs\\Enum\\' => 13,
-            'MaxMind\\WebService\\' => 19,
-            'MaxMind\\Exception\\' => 18,
-            'MaxMind\\Db\\' => 11,
             'MathieuViossat\\Util\\' => 20,
             'Masterminds\\' => 12,
         ),
@@ -209,7 +201,6 @@ class ComposerStaticInitDrupal8
             'Grasmash\\Expander\\' => 18,
             'Gettext\\Languages\\' => 18,
             'Gettext\\' => 8,
-            'GeoIp2\\' => 7,
         ),
         'F' => 
         array (
@@ -253,7 +244,6 @@ class ComposerStaticInitDrupal8
             'Consolidation\\AnnotatedCommand\\' => 31,
             'Composer\\Semver\\' => 16,
             'Composer\\Installers\\' => 20,
-            'Composer\\CaBundle\\' => 18,
             'CommerceGuys\\Addressing\\' => 24,
         ),
         'B' => 
@@ -271,10 +261,6 @@ class ComposerStaticInitDrupal8
         'zaporylie\\ComposerDrupalOptimizations\\' => 
         array (
             0 => __DIR__ . '/..' . '/zaporylie/composer-drupal-optimizations/src',
-        ),
-        'phpGPX\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX',
         ),
         'lsolesen\\pel\\' => 
         array (
@@ -568,10 +554,6 @@ class ComposerStaticInitDrupal8
         array (
             0 => __DIR__ . '/..' . '/simplesamlphp/simplesamlphp/lib/SimpleSAML',
         ),
-        'Shapefile\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/gasparesganga/php-shapefile/src/Shapefile',
-        ),
         'SelfUpdate\\' => 
         array (
             0 => __DIR__ . '/..' . '/consolidation/self-update/src',
@@ -642,18 +624,6 @@ class ComposerStaticInitDrupal8
         array (
             0 => __DIR__ . '/..' . '/myclabs/php-enum/src',
         ),
-        'MaxMind\\WebService\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/maxmind/web-service-common/src/WebService',
-        ),
-        'MaxMind\\Exception\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/maxmind/web-service-common/src/Exception',
-        ),
-        'MaxMind\\Db\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/maxmind-db/reader/src/MaxMind/Db',
-        ),
         'MathieuViossat\\Util\\' => 
         array (
             0 => __DIR__ . '/..' . '/mathieuviossat/arraytotexttable/src',
@@ -717,10 +687,6 @@ class ComposerStaticInitDrupal8
         'Gettext\\' => 
         array (
             0 => __DIR__ . '/..' . '/gettext/gettext/src',
-        ),
-        'GeoIp2\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/geoip2/geoip2/src',
         ),
         'FontLib\\' => 
         array (
@@ -845,10 +811,6 @@ class ComposerStaticInitDrupal8
         'Composer\\Installers\\' => 
         array (
             0 => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers',
-        ),
-        'Composer\\CaBundle\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/composer/ca-bundle/src',
         ),
         'CommerceGuys\\Addressing\\' => 
         array (
@@ -1184,7 +1146,6 @@ class ComposerStaticInitDrupal8
         'CommerceGuys\\Addressing\\Validator\\Constraints\\CountryConstraintValidator' => __DIR__ . '/..' . '/commerceguys/addressing/src/Validator/Constraints/CountryConstraintValidator.php',
         'CommerceGuys\\Addressing\\Zone\\Zone' => __DIR__ . '/..' . '/commerceguys/addressing/src/Zone/Zone.php',
         'CommerceGuys\\Addressing\\Zone\\ZoneTerritory' => __DIR__ . '/..' . '/commerceguys/addressing/src/Zone/ZoneTerritory.php',
-        'Composer\\CaBundle\\CaBundle' => __DIR__ . '/..' . '/composer/ca-bundle/src/CaBundle.php',
         'Composer\\Installers\\AglInstaller' => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers/AglInstaller.php',
         'Composer\\Installers\\AimeosInstaller' => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers/AimeosInstaller.php',
         'Composer\\Installers\\AnnotateCmsInstaller' => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers/AnnotateCmsInstaller.php',
@@ -4242,37 +4203,6 @@ class ComposerStaticInitDrupal8
         'FontLib\\WOFF\\File' => __DIR__ . '/..' . '/phenx/php-font-lib/src/FontLib/WOFF/File.php',
         'FontLib\\WOFF\\Header' => __DIR__ . '/..' . '/phenx/php-font-lib/src/FontLib/WOFF/Header.php',
         'FontLib\\WOFF\\TableDirectoryEntry' => __DIR__ . '/..' . '/phenx/php-font-lib/src/FontLib/WOFF/TableDirectoryEntry.php',
-        'GeoIp2\\Database\\Reader' => __DIR__ . '/..' . '/geoip2/geoip2/src/Database/Reader.php',
-        'GeoIp2\\Exception\\AddressNotFoundException' => __DIR__ . '/..' . '/geoip2/geoip2/src/Exception/AddressNotFoundException.php',
-        'GeoIp2\\Exception\\AuthenticationException' => __DIR__ . '/..' . '/geoip2/geoip2/src/Exception/AuthenticationException.php',
-        'GeoIp2\\Exception\\GeoIp2Exception' => __DIR__ . '/..' . '/geoip2/geoip2/src/Exception/GeoIp2Exception.php',
-        'GeoIp2\\Exception\\HttpException' => __DIR__ . '/..' . '/geoip2/geoip2/src/Exception/HttpException.php',
-        'GeoIp2\\Exception\\InvalidRequestException' => __DIR__ . '/..' . '/geoip2/geoip2/src/Exception/InvalidRequestException.php',
-        'GeoIp2\\Exception\\OutOfQueriesException' => __DIR__ . '/..' . '/geoip2/geoip2/src/Exception/OutOfQueriesException.php',
-        'GeoIp2\\Model\\AbstractModel' => __DIR__ . '/..' . '/geoip2/geoip2/src/Model/AbstractModel.php',
-        'GeoIp2\\Model\\AnonymousIp' => __DIR__ . '/..' . '/geoip2/geoip2/src/Model/AnonymousIp.php',
-        'GeoIp2\\Model\\Asn' => __DIR__ . '/..' . '/geoip2/geoip2/src/Model/Asn.php',
-        'GeoIp2\\Model\\City' => __DIR__ . '/..' . '/geoip2/geoip2/src/Model/City.php',
-        'GeoIp2\\Model\\ConnectionType' => __DIR__ . '/..' . '/geoip2/geoip2/src/Model/ConnectionType.php',
-        'GeoIp2\\Model\\Country' => __DIR__ . '/..' . '/geoip2/geoip2/src/Model/Country.php',
-        'GeoIp2\\Model\\Domain' => __DIR__ . '/..' . '/geoip2/geoip2/src/Model/Domain.php',
-        'GeoIp2\\Model\\Enterprise' => __DIR__ . '/..' . '/geoip2/geoip2/src/Model/Enterprise.php',
-        'GeoIp2\\Model\\Insights' => __DIR__ . '/..' . '/geoip2/geoip2/src/Model/Insights.php',
-        'GeoIp2\\Model\\Isp' => __DIR__ . '/..' . '/geoip2/geoip2/src/Model/Isp.php',
-        'GeoIp2\\ProviderInterface' => __DIR__ . '/..' . '/geoip2/geoip2/src/ProviderInterface.php',
-        'GeoIp2\\Record\\AbstractPlaceRecord' => __DIR__ . '/..' . '/geoip2/geoip2/src/Record/AbstractPlaceRecord.php',
-        'GeoIp2\\Record\\AbstractRecord' => __DIR__ . '/..' . '/geoip2/geoip2/src/Record/AbstractRecord.php',
-        'GeoIp2\\Record\\City' => __DIR__ . '/..' . '/geoip2/geoip2/src/Record/City.php',
-        'GeoIp2\\Record\\Continent' => __DIR__ . '/..' . '/geoip2/geoip2/src/Record/Continent.php',
-        'GeoIp2\\Record\\Country' => __DIR__ . '/..' . '/geoip2/geoip2/src/Record/Country.php',
-        'GeoIp2\\Record\\Location' => __DIR__ . '/..' . '/geoip2/geoip2/src/Record/Location.php',
-        'GeoIp2\\Record\\MaxMind' => __DIR__ . '/..' . '/geoip2/geoip2/src/Record/MaxMind.php',
-        'GeoIp2\\Record\\Postal' => __DIR__ . '/..' . '/geoip2/geoip2/src/Record/Postal.php',
-        'GeoIp2\\Record\\RepresentedCountry' => __DIR__ . '/..' . '/geoip2/geoip2/src/Record/RepresentedCountry.php',
-        'GeoIp2\\Record\\Subdivision' => __DIR__ . '/..' . '/geoip2/geoip2/src/Record/Subdivision.php',
-        'GeoIp2\\Record\\Traits' => __DIR__ . '/..' . '/geoip2/geoip2/src/Record/Traits.php',
-        'GeoIp2\\Util' => __DIR__ . '/..' . '/geoip2/geoip2/src/Util.php',
-        'GeoIp2\\WebService\\Client' => __DIR__ . '/..' . '/geoip2/geoip2/src/WebService/Client.php',
         'Gettext\\BaseTranslator' => __DIR__ . '/..' . '/gettext/gettext/src/BaseTranslator.php',
         'Gettext\\Extractors\\Blade' => __DIR__ . '/..' . '/gettext/gettext/src/Extractors/Blade.php',
         'Gettext\\Extractors\\Csv' => __DIR__ . '/..' . '/gettext/gettext/src/Extractors/Csv.php',
@@ -4410,7 +4340,6 @@ class ComposerStaticInitDrupal8
         'GuzzleHttp\\TransferStats' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/TransferStats.php',
         'GuzzleHttp\\UriTemplate' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/UriTemplate.php',
         'GuzzleHttp\\Utils' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/Utils.php',
-        'IP2Location\\Database' => __DIR__ . '/..' . '/ip2location/ip2location-php/IP2Location.php',
         'Interop\\Container\\ContainerInterface' => __DIR__ . '/..' . '/container-interop/container-interop/src/Interop/Container/ContainerInterface.php',
         'Interop\\Container\\Exception\\ContainerException' => __DIR__ . '/..' . '/container-interop/container-interop/src/Interop/Container/Exception/ContainerException.php',
         'Interop\\Container\\Exception\\NotFoundException' => __DIR__ . '/..' . '/container-interop/container-interop/src/Interop/Container/Exception/NotFoundException.php',
@@ -4669,23 +4598,6 @@ class ComposerStaticInitDrupal8
         'Masterminds\\HTML5\\Serializer\\RulesInterface' => __DIR__ . '/..' . '/masterminds/html5/src/HTML5/Serializer/RulesInterface.php',
         'Masterminds\\HTML5\\Serializer\\Traverser' => __DIR__ . '/..' . '/masterminds/html5/src/HTML5/Serializer/Traverser.php',
         'MathieuViossat\\Util\\ArrayToTextTable' => __DIR__ . '/..' . '/mathieuviossat/arraytotexttable/src/ArrayToTextTable.php',
-        'MaxMind\\Db\\Reader' => __DIR__ . '/..' . '/maxmind-db/reader/src/MaxMind/Db/Reader.php',
-        'MaxMind\\Db\\Reader\\Decoder' => __DIR__ . '/..' . '/maxmind-db/reader/src/MaxMind/Db/Reader/Decoder.php',
-        'MaxMind\\Db\\Reader\\InvalidDatabaseException' => __DIR__ . '/..' . '/maxmind-db/reader/src/MaxMind/Db/Reader/InvalidDatabaseException.php',
-        'MaxMind\\Db\\Reader\\Metadata' => __DIR__ . '/..' . '/maxmind-db/reader/src/MaxMind/Db/Reader/Metadata.php',
-        'MaxMind\\Db\\Reader\\Util' => __DIR__ . '/..' . '/maxmind-db/reader/src/MaxMind/Db/Reader/Util.php',
-        'MaxMind\\Exception\\AuthenticationException' => __DIR__ . '/..' . '/maxmind/web-service-common/src/Exception/AuthenticationException.php',
-        'MaxMind\\Exception\\HttpException' => __DIR__ . '/..' . '/maxmind/web-service-common/src/Exception/HttpException.php',
-        'MaxMind\\Exception\\InsufficientFundsException' => __DIR__ . '/..' . '/maxmind/web-service-common/src/Exception/InsufficientFundsException.php',
-        'MaxMind\\Exception\\InvalidInputException' => __DIR__ . '/..' . '/maxmind/web-service-common/src/Exception/InvalidInputException.php',
-        'MaxMind\\Exception\\InvalidRequestException' => __DIR__ . '/..' . '/maxmind/web-service-common/src/Exception/InvalidRequestException.php',
-        'MaxMind\\Exception\\IpAddressNotFoundException' => __DIR__ . '/..' . '/maxmind/web-service-common/src/Exception/IpAddressNotFoundException.php',
-        'MaxMind\\Exception\\PermissionRequiredException' => __DIR__ . '/..' . '/maxmind/web-service-common/src/Exception/PermissionRequiredException.php',
-        'MaxMind\\Exception\\WebServiceException' => __DIR__ . '/..' . '/maxmind/web-service-common/src/Exception/WebServiceException.php',
-        'MaxMind\\WebService\\Client' => __DIR__ . '/..' . '/maxmind/web-service-common/src/WebService/Client.php',
-        'MaxMind\\WebService\\Http\\CurlRequest' => __DIR__ . '/..' . '/maxmind/web-service-common/src/WebService/Http/CurlRequest.php',
-        'MaxMind\\WebService\\Http\\Request' => __DIR__ . '/..' . '/maxmind/web-service-common/src/WebService/Http/Request.php',
-        'MaxMind\\WebService\\Http\\RequestFactory' => __DIR__ . '/..' . '/maxmind/web-service-common/src/WebService/Http/RequestFactory.php',
         'MyCLabs\\Enum\\Enum' => __DIR__ . '/..' . '/myclabs/php-enum/src/Enum.php',
         'MyCLabs\\Enum\\PHPUnit\\Comparator' => __DIR__ . '/..' . '/myclabs/php-enum/src/PHPUnit/Comparator.php',
         'Nette\\ArgumentOutOfRangeException' => __DIR__ . '/..' . '/nette/utils/src/Utils/exceptions.php',
@@ -5517,19 +5429,6 @@ class ComposerStaticInitDrupal8
         'SAML2\\XML\\shibmd\\Scope' => __DIR__ . '/..' . '/simplesamlphp/saml2/src/SAML2/XML/shibmd/Scope.php',
         'SelfUpdate\\SelfUpdateCommand' => __DIR__ . '/..' . '/consolidation/self-update/src/SelfUpdateCommand.php',
         'SessionUpdateTimestampHandlerInterface' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/SessionUpdateTimestampHandlerInterface.php',
-        'Shapefile\\Geometry\\Geometry' => __DIR__ . '/..' . '/gasparesganga/php-shapefile/src/Shapefile/Geometry/Geometry.php',
-        'Shapefile\\Geometry\\GeometryCollection' => __DIR__ . '/..' . '/gasparesganga/php-shapefile/src/Shapefile/Geometry/GeometryCollection.php',
-        'Shapefile\\Geometry\\Linestring' => __DIR__ . '/..' . '/gasparesganga/php-shapefile/src/Shapefile/Geometry/Linestring.php',
-        'Shapefile\\Geometry\\MultiLinestring' => __DIR__ . '/..' . '/gasparesganga/php-shapefile/src/Shapefile/Geometry/MultiLinestring.php',
-        'Shapefile\\Geometry\\MultiPoint' => __DIR__ . '/..' . '/gasparesganga/php-shapefile/src/Shapefile/Geometry/MultiPoint.php',
-        'Shapefile\\Geometry\\MultiPolygon' => __DIR__ . '/..' . '/gasparesganga/php-shapefile/src/Shapefile/Geometry/MultiPolygon.php',
-        'Shapefile\\Geometry\\Point' => __DIR__ . '/..' . '/gasparesganga/php-shapefile/src/Shapefile/Geometry/Point.php',
-        'Shapefile\\Geometry\\Polygon' => __DIR__ . '/..' . '/gasparesganga/php-shapefile/src/Shapefile/Geometry/Polygon.php',
-        'Shapefile\\Shapefile' => __DIR__ . '/..' . '/gasparesganga/php-shapefile/src/Shapefile/Shapefile.php',
-        'Shapefile\\ShapefileAutoloader' => __DIR__ . '/..' . '/gasparesganga/php-shapefile/src/Shapefile/ShapefileAutoloader.php',
-        'Shapefile\\ShapefileException' => __DIR__ . '/..' . '/gasparesganga/php-shapefile/src/Shapefile/ShapefileException.php',
-        'Shapefile\\ShapefileReader' => __DIR__ . '/..' . '/gasparesganga/php-shapefile/src/Shapefile/ShapefileReader.php',
-        'Shapefile\\ShapefileWriter' => __DIR__ . '/..' . '/gasparesganga/php-shapefile/src/Shapefile/ShapefileWriter.php',
         'SimpleSAML\\Auth\\AuthenticationFactory' => __DIR__ . '/..' . '/simplesamlphp/simplesamlphp/lib/SimpleSAML/Auth/AuthenticationFactory.php',
         'SimpleSAML\\Auth\\DefaultAuth' => __DIR__ . '/..' . '/simplesamlphp/simplesamlphp/lib/SimpleSAML/Auth/DefaultAuth.php',
         'SimpleSAML\\Auth\\ProcessingChain' => __DIR__ . '/..' . '/simplesamlphp/simplesamlphp/lib/SimpleSAML/Auth/ProcessingChain.php',
@@ -7831,41 +7730,6 @@ class ComposerStaticInitDrupal8
         'lsolesen\\pel\\PelTiff' => __DIR__ . '/..' . '/lsolesen/pel/src/PelTiff.php',
         'lsolesen\\pel\\PelUnexpectedFormatException' => __DIR__ . '/..' . '/lsolesen/pel/src/PelUnexpectedFormatException.php',
         'lsolesen\\pel\\PelWrongComponentCountException' => __DIR__ . '/..' . '/lsolesen/pel/src/PelWrongComponentCountException.php',
-        'phpGPX\\Helpers\\DateTimeHelper' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Helpers/DateTimeHelper.php',
-        'phpGPX\\Helpers\\GeoHelper' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Helpers/GeoHelper.php',
-        'phpGPX\\Helpers\\SerializationHelper' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Helpers/SerializationHelper.php',
-        'phpGPX\\Models\\Bounds' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Models/Bounds.php',
-        'phpGPX\\Models\\Collection' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Models/Collection.php',
-        'phpGPX\\Models\\Copyright' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Models/Copyright.php',
-        'phpGPX\\Models\\Email' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Models/Email.php',
-        'phpGPX\\Models\\Extensions' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Models/Extensions.php',
-        'phpGPX\\Models\\Extensions\\AbstractExtension' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Models/Extensions/AbstractExtension.php',
-        'phpGPX\\Models\\Extensions\\TrackPointExtension' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Models/Extensions/TrackPointExtension.php',
-        'phpGPX\\Models\\GpxFile' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Models/GpxFile.php',
-        'phpGPX\\Models\\Link' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Models/Link.php',
-        'phpGPX\\Models\\Metadata' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Models/Metadata.php',
-        'phpGPX\\Models\\Person' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Models/Person.php',
-        'phpGPX\\Models\\Point' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Models/Point.php',
-        'phpGPX\\Models\\Route' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Models/Route.php',
-        'phpGPX\\Models\\Segment' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Models/Segment.php',
-        'phpGPX\\Models\\Stats' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Models/Stats.php',
-        'phpGPX\\Models\\StatsCalculator' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Models/StatsCalculator.php',
-        'phpGPX\\Models\\Summarizable' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Models/Summarizable.php',
-        'phpGPX\\Models\\Track' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Models/Track.php',
-        'phpGPX\\Parsers\\BoundsParser' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Parsers/BoundsParser.php',
-        'phpGPX\\Parsers\\CopyrightParser' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Parsers/CopyrightParser.php',
-        'phpGPX\\Parsers\\EmailParser' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Parsers/EmailParser.php',
-        'phpGPX\\Parsers\\ExtensionParser' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Parsers/ExtensionParser.php',
-        'phpGPX\\Parsers\\Extensions\\TrackPointExtensionParser' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Parsers/Extensions/TrackPointExtensionParser.php',
-        'phpGPX\\Parsers\\LinkParser' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Parsers/LinkParser.php',
-        'phpGPX\\Parsers\\MetadataParser' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Parsers/MetadataParser.php',
-        'phpGPX\\Parsers\\PersonParser' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Parsers/PersonParser.php',
-        'phpGPX\\Parsers\\PointParser' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Parsers/PointParser.php',
-        'phpGPX\\Parsers\\RouteParser' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Parsers/RouteParser.php',
-        'phpGPX\\Parsers\\SegmentParser' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Parsers/SegmentParser.php',
-        'phpGPX\\Parsers\\TrackParser' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Parsers/TrackParser.php',
-        'phpGPX\\Parsers\\WaypointParser' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/Parsers/WaypointParser.php',
-        'phpGPX\\phpGPX' => __DIR__ . '/..' . '/sibyx/phpgpx/src/phpGPX/phpGPX.php',
         'zaporylie\\ComposerDrupalOptimizations\\Cache' => __DIR__ . '/..' . '/zaporylie/composer-drupal-optimizations/src/Cache.php',
         'zaporylie\\ComposerDrupalOptimizations\\Plugin' => __DIR__ . '/..' . '/zaporylie/composer-drupal-optimizations/src/Plugin.php',
         'zaporylie\\ComposerDrupalOptimizations\\TruncatedComposerRepository' => __DIR__ . '/..' . '/zaporylie/composer-drupal-optimizations/src/TruncatedComposerRepository.php',

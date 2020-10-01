@@ -71,9 +71,7 @@
         "version_normalized": "1.18.2.0",
         "dist": {
             "type": "tar",
-            "url": "https://registry.npmjs.org/places.js/-/places.js-1.18.2.tgz",
-            "reference": null,
-            "shasum": null
+            "url": "https://registry.npmjs.org/places.js/-/places.js-1.18.2.tgz"
         },
         "require": {
             "composer/installers": "~1.0"
@@ -150,8 +148,7 @@
         "dist": {
             "type": "zip",
             "url": "https://api.github.com/repos/jquery/jquery-dist/zipball/4c0e4becb8263bb5b3e6dadc448d8e7305ef8215",
-            "reference": "4c0e4becb8263bb5b3e6dadc448d8e7305ef8215",
-            "shasum": null
+            "reference": "4c0e4becb8263bb5b3e6dadc448d8e7305ef8215"
         },
         "type": "bower-asset",
         "installation-source": "dist",
@@ -171,8 +168,7 @@
         "dist": {
             "type": "zip",
             "url": "https://api.github.com/repos/oriongunning/gridder/zipball/ecf0920d1048ac65704d3d5e8b505c431175f218",
-            "reference": "ecf0920d1048ac65704d3d5e8b505c431175f218",
-            "shasum": null
+            "reference": "ecf0920d1048ac65704d3d5e8b505c431175f218"
         },
         "type": "bower-asset",
         "installation-source": "dist",
@@ -192,8 +188,7 @@
         "dist": {
             "type": "zip",
             "url": "https://api.github.com/repos/recurser/jquery-simple-color/zipball/ebe0b2c0db639584e81499bd29d6619abb9a2599",
-            "reference": "ebe0b2c0db639584e81499bd29d6619abb9a2599",
-            "shasum": null
+            "reference": "ebe0b2c0db639584e81499bd29d6619abb9a2599"
         },
         "type": "bower-asset",
         "installation-source": "dist",
@@ -213,8 +208,7 @@
         "dist": {
             "type": "zip",
             "url": "https://api.github.com/repos/sachinchoolur/lightGallery/zipball/6c00ef21e72db65b1e98c73adcec255fc703ed19",
-            "reference": "6c00ef21e72db65b1e98c73adcec255fc703ed19",
-            "shasum": null
+            "reference": "6c00ef21e72db65b1e98c73adcec255fc703ed19"
         },
         "require": {
             "bower-asset/jquery": ">=1.7.0"
@@ -237,8 +231,7 @@
         "dist": {
             "type": "zip",
             "url": "https://api.github.com/repos/liabru/jquery-match-height/zipball/2446ac654f694bc05a1297cbab0b2d875e278bbd",
-            "reference": "2446ac654f694bc05a1297cbab0b2d875e278bbd",
-            "shasum": null
+            "reference": "2446ac654f694bc05a1297cbab0b2d875e278bbd"
         },
         "type": "bower-asset",
         "installation-source": "dist",
@@ -258,8 +251,7 @@
         "dist": {
             "type": "zip",
             "url": "https://api.github.com/repos/OwlFonk/OwlCarousel2/zipball/af851f9b567630d115930abd5480ffebccc72372",
-            "reference": "af851f9b567630d115930abd5480ffebccc72372",
-            "shasum": null
+            "reference": "af851f9b567630d115930abd5480ffebccc72372"
         },
         "require": {
             "bower-asset/jquery": ">=1.8.3"
@@ -279,8 +271,7 @@
         "dist": {
             "type": "zip",
             "url": "https://api.github.com/repos/bgrins/spectrum/zipball/9aa028de7e8039c41ac792485a928edb97d4ac40",
-            "reference": "9aa028de7e8039c41ac792485a928edb97d4ac40",
-            "shasum": null
+            "reference": "9aa028de7e8039c41ac792485a928edb97d4ac40"
         },
         "require": {
             "bower-asset/jquery": ">=1.7.2"
@@ -341,9 +332,7 @@
         "version_normalized": "9.0.1.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/jshjohnson/Choices/archive/v9.0.1.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://github.com/jshjohnson/Choices/archive/v9.0.1.zip"
         },
         "require": {
             "composer/installers": "~1.0"
@@ -360,9 +349,7 @@
         "version_normalized": "4.11.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/autoembed/releases/autoembed_4.11.4.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://download.ckeditor.com/autoembed/releases/autoembed_4.11.4.zip"
         },
         "type": "ckeditor-plugin",
         "installation-source": "dist"
@@ -373,9 +360,7 @@
         "version_normalized": "4.11.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/autolink/releases/autolink_4.11.4.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://download.ckeditor.com/autolink/releases/autolink_4.11.4.zip"
         },
         "type": "ckeditor-plugin",
         "installation-source": "dist"
@@ -386,9 +371,7 @@
         "version_normalized": "4.11.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/embed/releases/embed_4.11.4.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://download.ckeditor.com/embed/releases/embed_4.11.4.zip"
         },
         "type": "ckeditor-plugin",
         "installation-source": "dist"
@@ -399,9 +382,7 @@
         "version_normalized": "4.11.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/embedbase/releases/embedbase_4.11.4.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://download.ckeditor.com/embedbase/releases/embedbase_4.11.4.zip"
         },
         "type": "ckeditor-plugin",
         "installation-source": "dist"
@@ -412,9 +393,7 @@
         "version_normalized": "4.11.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/embedsemantic/releases/embedsemantic_4.11.4.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://download.ckeditor.com/embedsemantic/releases/embedsemantic_4.11.4.zip"
         },
         "type": "ckeditor-plugin",
         "installation-source": "dist"
@@ -425,9 +404,7 @@
         "version_normalized": "4.11.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/filetools/releases/filetools_4.11.4.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://download.ckeditor.com/filetools/releases/filetools_4.11.4.zip"
         },
         "type": "ckeditor-plugin",
         "installation-source": "dist"
@@ -438,9 +415,7 @@
         "version_normalized": "4.11.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/notification/releases/notification_4.11.4.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://download.ckeditor.com/notification/releases/notification_4.11.4.zip"
         },
         "type": "ckeditor-plugin",
         "installation-source": "dist"
@@ -451,9 +426,7 @@
         "version_normalized": "4.11.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/notificationaggregator/releases/notificationaggregator_4.11.4.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://download.ckeditor.com/notificationaggregator/releases/notificationaggregator_4.11.4.zip"
         },
         "type": "ckeditor-plugin",
         "installation-source": "dist"
@@ -464,9 +437,7 @@
         "version_normalized": "4.11.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/uploadimage/releases/uploadimage_4.11.4.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://download.ckeditor.com/uploadimage/releases/uploadimage_4.11.4.zip"
         },
         "type": "ckeditor-plugin",
         "installation-source": "dist"
@@ -477,9 +448,7 @@
         "version_normalized": "4.11.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/uploadwidget/releases/uploadwidget_4.11.4.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://download.ckeditor.com/uploadwidget/releases/uploadwidget_4.11.4.zip"
         },
         "type": "ckeditor-plugin",
         "installation-source": "dist"
@@ -490,9 +459,7 @@
         "version_normalized": "4.11.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/autogrow/releases/autogrow_4.11.4.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://download.ckeditor.com/autogrow/releases/autogrow_4.11.4.zip"
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -503,9 +470,7 @@
         "version_normalized": "1.17.2.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/w8tcha/CKEditor-CodeMirror-Plugin/archive/v1.17.2.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://github.com/w8tcha/CKEditor-CodeMirror-Plugin/archive/v1.17.2.zip"
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -516,9 +481,7 @@
         "version_normalized": "4.11.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/fakeobjects/releases/fakeobjects_4.11.4.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://download.ckeditor.com/fakeobjects/releases/fakeobjects_4.11.4.zip"
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -529,9 +492,7 @@
         "version_normalized": "4.11.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/image/releases/image_4.11.4.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://download.ckeditor.com/image/releases/image_4.11.4.zip"
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -542,9 +503,7 @@
         "version_normalized": "4.11.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/link/releases/link_4.11.4.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://download.ckeditor.com/link/releases/link_4.11.4.zip"
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -555,9 +514,7 @@
         "version_normalized": "4.14.0.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/autogrow/releases/autogrow_4.14.0.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://download.ckeditor.com/autogrow/releases/autogrow_4.14.0.zip"
         },
         "require": {
             "composer/installers": "~1.0"
@@ -574,9 +531,7 @@
         "version_normalized": "1.17.12.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/w8tcha/CKEditor-CodeMirror-Plugin/releases/download/v1.17.12/CKEditor-CodeMirror-Plugin.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://github.com/w8tcha/CKEditor-CodeMirror-Plugin/releases/download/v1.17.12/CKEditor-CodeMirror-Plugin.zip"
         },
         "require": {
             "composer/installers": "~1.0"
@@ -593,9 +548,7 @@
         "version_normalized": "4.14.0.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/fakeobjects/releases/fakeobjects_4.14.0.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://download.ckeditor.com/fakeobjects/releases/fakeobjects_4.14.0.zip"
         },
         "require": {
             "composer/installers": "~1.0"
@@ -612,9 +565,7 @@
         "version_normalized": "4.14.0.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/image/releases/image_4.14.0.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://download.ckeditor.com/image/releases/image_4.14.0.zip"
         },
         "require": {
             "composer/installers": "~1.0"
@@ -631,9 +582,7 @@
         "version_normalized": "4.14.0.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/link/releases/link_4.14.0.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://download.ckeditor.com/link/releases/link_4.14.0.zip"
         },
         "require": {
             "composer/installers": "~1.0"
@@ -651,8 +600,7 @@
         "dist": {
             "type": "zip",
             "url": "https://download.ckeditor.com/templates/releases/templates_4.11.1.zip",
-            "reference": "master",
-            "shasum": null
+            "reference": "master"
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -663,9 +611,7 @@
         "version_normalized": "5.42.0.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/codemirror/CodeMirror/archive/5.42.0.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://github.com/codemirror/CodeMirror/archive/5.42.0.zip"
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -676,9 +622,7 @@
         "version_normalized": "5.53.2.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/components/codemirror/archive/5.53.2.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://github.com/components/codemirror/archive/5.53.2.zip"
         },
         "require": {
             "composer/installers": "~1.0"
@@ -748,64 +692,6 @@
             "internationalization",
             "localization",
             "postal"
-        ]
-    },
-    {
-        "name": "composer/ca-bundle",
-        "version": "1.2.6",
-        "version_normalized": "1.2.6.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/composer/ca-bundle.git",
-            "reference": "47fe531de31fca4a1b997f87308e7d7804348f7e"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/composer/ca-bundle/zipball/47fe531de31fca4a1b997f87308e7d7804348f7e",
-            "reference": "47fe531de31fca4a1b997f87308e7d7804348f7e",
-            "shasum": ""
-        },
-        "require": {
-            "ext-openssl": "*",
-            "ext-pcre": "*",
-            "php": "^5.3.2 || ^7.0 || ^8.0"
-        },
-        "require-dev": {
-            "phpunit/phpunit": "^4.8.35 || ^5.7 || 6.5 - 8",
-            "psr/log": "^1.0",
-            "symfony/process": "^2.5 || ^3.0 || ^4.0 || ^5.0"
-        },
-        "time": "2020-01-13T10:02:55+00:00",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "1.x-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Composer\\CaBundle\\": "src"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Jordi Boggiano",
-                "email": "j.boggiano@seld.be",
-                "homepage": "http://seld.be"
-            }
-        ],
-        "description": "Lets you find a path to the system CA bundle, and includes a fallback to the Mozilla CA bundle.",
-        "keywords": [
-            "cabundle",
-            "cacert",
-            "certificate",
-            "ssl",
-            "tls"
         ]
     },
     {
@@ -1837,9 +1723,7 @@
         "version_normalized": "3.2.0.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/desandro/imagesloaded/archive/v3.2.0.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://github.com/desandro/imagesloaded/archive/v3.2.0.zip"
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -3411,60 +3295,6 @@
         }
     },
     {
-        "name": "drupal/ckeditor_media_embed",
-        "version": "1.7.0",
-        "version_normalized": "1.7.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://git.drupalcode.org/project/ckeditor_media_embed.git",
-            "reference": "8.x-1.7"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/ckeditor_media_embed-8.x-1.7.zip",
-            "reference": "8.x-1.7",
-            "shasum": "194b79f8aec7ab27ea7677f03e03c3d226e88457"
-        },
-        "require": {
-            "drupal/core": "*"
-        },
-        "type": "drupal-module",
-        "extra": {
-            "branch-alias": {
-                "dev-1.x": "1.x-dev"
-            },
-            "drupal": {
-                "version": "8.x-1.7",
-                "datestamp": "1568732287",
-                "security-coverage": {
-                    "status": "covered",
-                    "message": "Covered by Drupal's security advisory policy"
-                }
-            }
-        },
-        "installation-source": "dist",
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0+"
-        ],
-        "authors": [
-            {
-                "name": "Jody Lynn",
-                "homepage": "https://www.drupal.org/user/112500"
-            },
-            {
-                "name": "grndlvl",
-                "homepage": "https://www.drupal.org/user/103553"
-            }
-        ],
-        "description": "Adds the Media Embed CKEditor plugins to Drupal.",
-        "homepage": "https://www.drupal.org/project/embed",
-        "support": {
-            "source": "https://drupal.org/project/ckeditor_media_embed",
-            "issues": "https://drupal.org/project/issues/ckeditor_media_embed"
-        }
-    },
-    {
         "name": "drupal/ckeditor_templates",
         "version": "1.2.0",
         "version_normalized": "1.2.0.0",
@@ -4207,6 +4037,17 @@
         "name": "drupal/core-recommended",
         "version": "8.9.6",
         "version_normalized": "8.9.6.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/drupal/core-recommended.git",
+            "reference": "6c5c4739afc5549e6089ef34b59c712c8872f154"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/drupal/core-recommended/zipball/6c5c4739afc5549e6089ef34b59c712c8872f154",
+            "reference": "6c5c4739afc5549e6089ef34b59c712c8872f154",
+            "shasum": ""
+        },
         "require": {
             "asm89/stack-cors": "1.3.0",
             "composer/semver": "1.5.1",
@@ -4866,70 +4707,6 @@
         }
     },
     {
-        "name": "drupal/dropzonejs_eb_widget",
-        "version": "2.1.0",
-        "version_normalized": "2.1.0.0",
-        "require": {
-            "drupal/core": "^8.8 || ^9",
-            "drupal/dropzonejs": "*",
-            "drupal/entity_browser": "*"
-        },
-        "type": "metapackage",
-        "extra": {
-            "drupal": {
-                "version": "8.x-2.1",
-                "datestamp": "1585662324",
-                "security-coverage": {
-                    "status": "covered",
-                    "message": "Covered by Drupal's security advisory policy"
-                }
-            }
-        },
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0-or-later"
-        ],
-        "authors": [
-            {
-                "name": "Drupal Media Team",
-                "homepage": "https://www.drupal.org/user/3260690"
-            },
-            {
-                "name": "Drupal media CI",
-                "homepage": "https://www.drupal.org/user/3057985"
-            },
-            {
-                "name": "Primsi",
-                "homepage": "https://www.drupal.org/user/282629"
-            },
-            {
-                "name": "chr.fritsch",
-                "homepage": "https://www.drupal.org/user/2103716"
-            },
-            {
-                "name": "jungle",
-                "homepage": "https://www.drupal.org/user/2919723"
-            },
-            {
-                "name": "slashrsm",
-                "homepage": "https://www.drupal.org/user/744628"
-            },
-            {
-                "name": "wouters_f",
-                "homepage": "https://www.drupal.org/user/721548"
-            },
-            {
-                "name": "zkday",
-                "homepage": "https://www.drupal.org/user/888644"
-            }
-        ],
-        "description": "DropzoneJS Entity browser widget",
-        "homepage": "https://www.drupal.org/project/dropzonejs",
-        "support": {
-            "source": "https://git.drupalcode.org/project/dropzonejs"
-        }
-    },
-    {
         "name": "drupal/drupal-library-installer-plugin",
         "version": "0.3",
         "version_normalized": "0.3.0.0",
@@ -5048,121 +4825,6 @@
         }
     },
     {
-        "name": "drupal/editor_advanced_link",
-        "version": "1.6.0",
-        "version_normalized": "1.6.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://git.drupalcode.org/project/editor_advanced_link.git",
-            "reference": "8.x-1.6"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/editor_advanced_link-8.x-1.6.zip",
-            "reference": "8.x-1.6",
-            "shasum": "920f22fd7841bc1c77b56c6ae51436319b47636e"
-        },
-        "require": {
-            "drupal/core": "*"
-        },
-        "type": "drupal-module",
-        "extra": {
-            "branch-alias": {
-                "dev-1.x": "1.x-dev"
-            },
-            "drupal": {
-                "version": "8.x-1.6",
-                "datestamp": "1577188383",
-                "security-coverage": {
-                    "status": "covered",
-                    "message": "Covered by Drupal's security advisory policy"
-                }
-            }
-        },
-        "installation-source": "dist",
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0-or-later"
-        ],
-        "authors": [
-            {
-                "name": "DuaelFr",
-                "homepage": "https://www.drupal.org/user/931394"
-            }
-        ],
-        "description": "Add title, target etc. attributes to Text Editor's link dialog if the text format allows them.",
-        "homepage": "https://www.drupal.org/project/editor_advanced_link",
-        "support": {
-            "source": "https://git.drupalcode.org/project/editor_advanced_link"
-        }
-    },
-    {
-        "name": "drupal/embed",
-        "version": "1.4.0",
-        "version_normalized": "1.4.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://git.drupalcode.org/project/embed.git",
-            "reference": "8.x-1.4"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/embed-8.x-1.4.zip",
-            "reference": "8.x-1.4",
-            "shasum": "09a2bda039bfbb3fff01c91964384bf3d924b8c5"
-        },
-        "require": {
-            "drupal/core": "^8.7.7 || ^9"
-        },
-        "type": "drupal-module",
-        "extra": {
-            "drupal": {
-                "version": "8.x-1.4",
-                "datestamp": "1590176831",
-                "security-coverage": {
-                    "status": "covered",
-                    "message": "Covered by Drupal's security advisory policy"
-                }
-            }
-        },
-        "installation-source": "dist",
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0-or-later"
-        ],
-        "authors": [
-            {
-                "name": "Dave Reid",
-                "homepage": "https://www.drupal.org/user/53892"
-            },
-            {
-                "name": "Devin Carlson",
-                "homepage": "https://www.drupal.org/user/290182"
-            },
-            {
-                "name": "Drupal Media Team",
-                "homepage": "https://www.drupal.org/user/3260690"
-            },
-            {
-                "name": "cs_shadow",
-                "homepage": "https://www.drupal.org/user/2828287"
-            },
-            {
-                "name": "phenaproxima",
-                "homepage": "https://www.drupal.org/user/205645"
-            },
-            {
-                "name": "slashrsm",
-                "homepage": "https://www.drupal.org/user/744628"
-            }
-        ],
-        "description": "Provides a framework for different types of embeds in text editors.",
-        "homepage": "https://www.drupal.org/project/embed",
-        "support": {
-            "source": "https://git.drupalcode.org/project/embed"
-        }
-    },
-    {
         "name": "drupal/entity",
         "version": "1.1.0",
         "version_normalized": "1.1.0.0",
@@ -5226,241 +4888,6 @@
         "homepage": "http://drupal.org/project/entity",
         "support": {
             "source": "https://git.drupalcode.org/project/entity"
-        }
-    },
-    {
-        "name": "drupal/entity_block",
-        "version": "1.0.0-beta2",
-        "version_normalized": "1.0.0.0-beta2",
-        "source": {
-            "type": "git",
-            "url": "https://git.drupalcode.org/project/entity_block.git",
-            "reference": "8.x-1.0-beta2"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/entity_block-8.x-1.0-beta2.zip",
-            "reference": "8.x-1.0-beta2",
-            "shasum": "626c2ac5d471383d068b06a24ff2e4fd842d9887"
-        },
-        "require": {
-            "drupal/core": "^8 || ^9"
-        },
-        "type": "drupal-module",
-        "extra": {
-            "branch-alias": {
-                "dev-1.x": "1.x-dev"
-            },
-            "drupal": {
-                "version": "8.x-1.0-beta2",
-                "datestamp": "1580800935",
-                "security-coverage": {
-                    "status": "not-covered",
-                    "message": "Beta releases are not covered by Drupal security advisories."
-                }
-            }
-        },
-        "installation-source": "dist",
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0-or-later"
-        ],
-        "authors": [
-            {
-                "name": "Jaesin",
-                "homepage": "https://www.drupal.org/user/841054"
-            },
-            {
-                "name": "arshadcn",
-                "homepage": "https://www.drupal.org/user/571032"
-            },
-            {
-                "name": "floretan",
-                "homepage": "https://www.drupal.org/user/66163"
-            },
-            {
-                "name": "rrrob",
-                "homepage": "https://www.drupal.org/user/273533"
-            }
-        ],
-        "description": "Let site administrators place content entities as blocks.",
-        "homepage": "https://www.drupal.org/project/entity_block",
-        "support": {
-            "source": "https://git.drupalcode.org/project/entity_block"
-        }
-    },
-    {
-        "name": "drupal/entity_browser",
-        "version": "2.4.0",
-        "version_normalized": "2.4.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://git.drupalcode.org/project/entity_browser.git",
-            "reference": "8.x-2.4"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/entity_browser-8.x-2.4.zip",
-            "reference": "8.x-2.4",
-            "shasum": "28dd5eb28284ff218ad3aed2414817e9fa5b7bb9"
-        },
-        "require": {
-            "drupal/core": "^8.7.7 || ^9"
-        },
-        "require-dev": {
-            "drupal/embed": "~1.0",
-            "drupal/entity_embed": "~1.0",
-            "drupal/entityqueue": "~1.0",
-            "drupal/inline_entity_form": "~1.0",
-            "drupal/paragraphs": "~1.0",
-            "drupal/token": "~1.0"
-        },
-        "type": "drupal-module",
-        "extra": {
-            "branch-alias": {
-                "dev-2.x": "2.x-dev"
-            },
-            "drupal": {
-                "version": "8.x-2.4",
-                "datestamp": "1579563787",
-                "security-coverage": {
-                    "status": "covered",
-                    "message": "Covered by Drupal's security advisory policy"
-                }
-            }
-        },
-        "installation-source": "dist",
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0+"
-        ],
-        "authors": [
-            {
-                "name": "Janez Urevc",
-                "homepage": "https://github.com/slashrsm",
-                "role": "Maintainer"
-            },
-            {
-                "name": "Primoz Hmeljak",
-                "homepage": "https://github.com/primsi",
-                "role": "Maintainer"
-            },
-            {
-                "name": "See other contributors",
-                "homepage": "https://www.drupal.org/node/1943336/committers",
-                "role": "contributor"
-            },
-            {
-                "name": "Drupal Media Team",
-                "homepage": "https://www.drupal.org/user/3260690"
-            },
-            {
-                "name": "Primsi",
-                "homepage": "https://www.drupal.org/user/282629"
-            },
-            {
-                "name": "marcingy",
-                "homepage": "https://www.drupal.org/user/77320"
-            },
-            {
-                "name": "oknate",
-                "homepage": "https://www.drupal.org/user/471638"
-            },
-            {
-                "name": "samuel.mortenson",
-                "homepage": "https://www.drupal.org/user/2582268"
-            },
-            {
-                "name": "slashrsm",
-                "homepage": "https://www.drupal.org/user/744628"
-            }
-        ],
-        "description": "Entity browsing and selecting component.",
-        "homepage": "http://drupal.org/project/entity_browser",
-        "support": {
-            "source": "https://git.drupalcode.org/project/entity_browser",
-            "issues": "https://www.drupal.org/project/issues/entity_browser",
-            "irc": "irc://irc.freenode.org/drupal-contribute"
-        }
-    },
-    {
-        "name": "drupal/entity_embed",
-        "version": "1.1.0",
-        "version_normalized": "1.1.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://git.drupalcode.org/project/entity_embed.git",
-            "reference": "8.x-1.1"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/entity_embed-8.x-1.1.zip",
-            "reference": "8.x-1.1",
-            "shasum": "f2c3f4b3071cbd69db94c5255e1db89510995b5d"
-        },
-        "require": {
-            "drupal/core": "^8.8 || ^9",
-            "drupal/embed": "^1.3"
-        },
-        "require-dev": {
-            "drupal/entity_browser": "^2.2"
-        },
-        "type": "drupal-module",
-        "extra": {
-            "drupal": {
-                "version": "8.x-1.1",
-                "datestamp": "1585252806",
-                "security-coverage": {
-                    "status": "covered",
-                    "message": "Covered by Drupal's security advisory policy"
-                }
-            }
-        },
-        "installation-source": "dist",
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0+"
-        ],
-        "authors": [
-            {
-                "name": "Dave Reid",
-                "homepage": "https://www.drupal.org/user/53892"
-            },
-            {
-                "name": "Devin Carlson",
-                "homepage": "https://www.drupal.org/user/290182"
-            },
-            {
-                "name": "Drupal Media Team",
-                "homepage": "https://www.drupal.org/user/3260690"
-            },
-            {
-                "name": "Wim Leers",
-                "homepage": "https://www.drupal.org/user/99777"
-            },
-            {
-                "name": "cs_shadow",
-                "homepage": "https://www.drupal.org/user/2828287"
-            },
-            {
-                "name": "oknate",
-                "homepage": "https://www.drupal.org/user/471638"
-            },
-            {
-                "name": "phenaproxima",
-                "homepage": "https://www.drupal.org/user/205645"
-            },
-            {
-                "name": "slashrsm",
-                "homepage": "https://www.drupal.org/user/744628"
-            }
-        ],
-        "description": "Allows any entity to be embedded within a text area using a WYSIWYG editor.",
-        "homepage": "https://www.drupal.org/project/entity_embed",
-        "support": {
-            "source": "https://git.drupalcode.org/project/entity_embed",
-            "issues": "https://www.drupal.org/project/issues/entity_embed",
-            "irc": "irc://irc.freenode.org/drupal-media"
         }
     },
     {
@@ -5625,68 +5052,6 @@
         "homepage": "https://www.drupal.org/project/externalauth",
         "support": {
             "source": "https://git.drupalcode.org/project/externalauth"
-        }
-    },
-    {
-        "name": "drupal/facets",
-        "version": "1.4.0",
-        "version_normalized": "1.4.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://git.drupalcode.org/project/facets.git",
-            "reference": "8.x-1.4"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/facets-8.x-1.4.zip",
-            "reference": "8.x-1.4",
-            "shasum": "ee2d584b8a225ab981e313f6050e13bc9c98e40b"
-        },
-        "require": {
-            "drupal/core": "~8.0"
-        },
-        "require-dev": {
-            "drupal/search_api": "~1.5"
-        },
-        "type": "drupal-module",
-        "extra": {
-            "branch-alias": {
-                "dev-1.x": "1.x-dev"
-            },
-            "drupal": {
-                "version": "8.x-1.4",
-                "datestamp": "1556645881",
-                "security-coverage": {
-                    "status": "covered",
-                    "message": "Covered by Drupal's security advisory policy"
-                }
-            }
-        },
-        "installation-source": "dist",
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0+"
-        ],
-        "authors": [
-            {
-                "name": "See all contributors",
-                "homepage": "https://www.drupal.org/node/2348769/committers"
-            },
-            {
-                "name": "StryKaizer",
-                "homepage": "https://www.drupal.org/user/462700"
-            },
-            {
-                "name": "borisson_",
-                "homepage": "https://www.drupal.org/user/2393360"
-            }
-        ],
-        "description": "The Facet module allows site builders to easily create and manage faceted search interfaces.",
-        "homepage": "https://www.drupal.org/project/facets",
-        "support": {
-            "source": "git://git.drupal.org/project/facets.git",
-            "issues": "https://www.drupal.org/project/issues/facets",
-            "irc": "irc://irc.freenode.org/drupal-search-api"
         }
     },
     {
@@ -5991,63 +5356,6 @@
         }
     },
     {
-        "name": "drupal/file_browser",
-        "version": "1.2.0",
-        "version_normalized": "1.2.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://git.drupalcode.org/project/file_browser.git",
-            "reference": "8.x-1.2"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/file_browser-8.x-1.2.zip",
-            "reference": "8.x-1.2",
-            "shasum": "18f85c02508885afeec50f74fd3b997b7cd577fe"
-        },
-        "require": {
-            "drupal/core": "~8",
-            "drupal/dropzonejs": "^2",
-            "drupal/dropzonejs_eb_widget": "*",
-            "drupal/embed": "^1",
-            "drupal/entity_browser": "^2 || ^1",
-            "drupal/entity_embed": "^1"
-        },
-        "require-dev": {
-            "drupal/coder": "~8.3"
-        },
-        "type": "drupal-module",
-        "extra": {
-            "branch-alias": {
-                "dev-1.x": "1.x-dev"
-            },
-            "drupal": {
-                "version": "8.x-1.2",
-                "datestamp": "1569940086",
-                "security-coverage": {
-                    "status": "covered",
-                    "message": "Covered by Drupal's security advisory policy"
-                }
-            }
-        },
-        "installation-source": "dist",
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0"
-        ],
-        "authors": [
-            {
-                "name": "samuel.mortenson",
-                "homepage": "https://www.drupal.org/user/2582268"
-            }
-        ],
-        "description": "This module provides a default Entity Browser that lets you browse and select your files in a nice-looking, mobile-ready Masonry based interface, and upload files using the Dropzonejs module.",
-        "homepage": "https://www.drupal.org/project/file_browser",
-        "support": {
-            "source": "https://git.drupalcode.org/project/file_browser"
-        }
-    },
-    {
         "name": "drupal/file_mdm",
         "version": "2.1.0",
         "version_normalized": "2.1.0.0",
@@ -6264,124 +5572,6 @@
         "homepage": "https://www.drupal.org/project/fontawesome_menu_icons",
         "support": {
             "source": "https://git.drupalcode.org/project/fontawesome_menu_icons"
-        }
-    },
-    {
-        "name": "drupal/geolocation",
-        "version": "3.2.0",
-        "version_normalized": "3.2.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://git.drupalcode.org/project/geolocation.git",
-            "reference": "8.x-3.2"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/geolocation-8.x-3.2.zip",
-            "reference": "8.x-3.2",
-            "shasum": "ed6b1e594dd0ad95e52681130a8bcae85d68c305"
-        },
-        "require": {
-            "drupal/core": "^8.7.7 || ^9",
-            "gasparesganga/php-shapefile": ">=3.2",
-            "sibyx/phpgpx": "^1.0"
-        },
-        "require-dev": {
-            "drupal/address": "*",
-            "drupal/geofield": "*",
-            "drupal/geolocation_demo": "*",
-            "drupal/geolocation_geometry": "*",
-            "drupal/geolocation_geometry_data": "*",
-            "drupal/geolocation_geometry_natural_earth_countries": "*",
-            "drupal/geolocation_google_maps": "*",
-            "drupal/geolocation_google_maps_demo": "*",
-            "drupal/geolocation_google_static_maps": "*",
-            "drupal/geolocation_leaflet": "*",
-            "drupal/search_api": "*",
-            "drupal/search_api_location": "*",
-            "drupal/search_api_location_views": "*"
-        },
-        "type": "drupal-module",
-        "extra": {
-            "drupal": {
-                "version": "8.x-3.2",
-                "datestamp": "1590319155",
-                "security-coverage": {
-                    "status": "covered",
-                    "message": "Covered by Drupal's security advisory policy"
-                }
-            }
-        },
-        "installation-source": "dist",
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0-or-later"
-        ],
-        "authors": [
-            {
-                "name": "derjochenmeyer",
-                "homepage": "https://www.drupal.org/u/derjochenmeyer"
-            },
-            {
-                "name": "cadamski",
-                "homepage": "https://www.drupal.org/u/cadamski"
-            }
-        ],
-        "description": "Provides a simple geolocation Drupal field type to store and display location data (lat, lng).",
-        "homepage": "https://www.drupal.org/project/geolocation",
-        "support": {
-            "source": "http://git.drupal.org/project/geolocation.git",
-            "issues": "https://www.drupal.org/project/issues/geolocation"
-        }
-    },
-    {
-        "name": "drupal/geotimezone",
-        "version": "2.1.0",
-        "version_normalized": "2.1.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://git.drupalcode.org/project/geotimezone.git",
-            "reference": "8.x-2.1"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/geotimezone-8.x-2.1.zip",
-            "reference": "8.x-2.1",
-            "shasum": "766c24c2279f756ab413cc4759ff29856d75cabc"
-        },
-        "require": {
-            "drupal/core": "~8.0"
-        },
-        "type": "drupal-module",
-        "extra": {
-            "branch-alias": {
-                "dev-2.x": "2.x-dev"
-            },
-            "drupal": {
-                "version": "8.x-2.1",
-                "datestamp": "1536234185",
-                "security-coverage": {
-                    "status": "covered",
-                    "message": "Covered by Drupal's security advisory policy"
-                }
-            }
-        },
-        "installation-source": "dist",
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0+"
-        ],
-        "authors": [
-            {
-                "name": "Roland Michael dela Peña (arpeggio)",
-                "homepage": "https://www.webfoobar.com",
-                "role": "Maintainer"
-            }
-        ],
-        "description": "API that determines the time zone based on geo location.",
-        "homepage": "https://drupal.org/project/geotimezone",
-        "support": {
-            "source": "https://git.drupalcode.org/project/geotimezone"
         }
     },
     {
@@ -6765,94 +5955,6 @@
         "homepage": "https://www.drupal.org/project/imagemagick",
         "support": {
             "source": "https://git.drupalcode.org/project/imagemagick"
-        }
-    },
-    {
-        "name": "drupal/inline_entity_form",
-        "version": "1.0.0-rc3",
-        "version_normalized": "1.0.0.0-RC3",
-        "source": {
-            "type": "git",
-            "url": "https://git.drupalcode.org/project/inline_entity_form.git",
-            "reference": "8.x-1.0-rc3"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/inline_entity_form-8.x-1.0-rc3.zip",
-            "reference": "8.x-1.0-rc3",
-            "shasum": "f0508db2d64133e2df0af24e7fc914cbb5492211"
-        },
-        "require": {
-            "drupal/core": "^8.7.7 || ^9"
-        },
-        "require-dev": {
-            "drupal/entity_reference_revisions": "*"
-        },
-        "type": "drupal-module",
-        "extra": {
-            "branch-alias": {
-                "dev-1.x": "1.x-dev"
-            },
-            "drupal": {
-                "version": "8.x-1.0-rc3",
-                "datestamp": "1581640483",
-                "security-coverage": {
-                    "status": "not-covered",
-                    "message": "RC releases are not covered by Drupal security advisories."
-                }
-            }
-        },
-        "installation-source": "dist",
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0+"
-        ],
-        "authors": [
-            {
-                "name": "bojanz",
-                "homepage": "https://www.drupal.org/user/86106"
-            },
-            {
-                "name": "dawehner",
-                "homepage": "https://www.drupal.org/user/99340"
-            },
-            {
-                "name": "geek-merlin",
-                "homepage": "https://www.drupal.org/user/229048"
-            },
-            {
-                "name": "joachim",
-                "homepage": "https://www.drupal.org/user/107701"
-            },
-            {
-                "name": "jsacksick",
-                "homepage": "https://www.drupal.org/user/972218"
-            },
-            {
-                "name": "kaythay",
-                "homepage": "https://www.drupal.org/user/2182186"
-            },
-            {
-                "name": "oknate",
-                "homepage": "https://www.drupal.org/user/471638"
-            },
-            {
-                "name": "rszrama",
-                "homepage": "https://www.drupal.org/user/49344"
-            },
-            {
-                "name": "slashrsm",
-                "homepage": "https://www.drupal.org/user/744628"
-            },
-            {
-                "name": "webflo",
-                "homepage": "https://www.drupal.org/user/254778"
-            }
-        ],
-        "description": "Provides a widget for inline management (creation, modification, removal) of referenced entities.",
-        "homepage": "https://www.drupal.org/project/inline_entity_form",
-        "support": {
-            "source": "https://git.drupalcode.org/project/inline_entity_form"
         }
     },
     {
@@ -8873,71 +7975,6 @@
         }
     },
     {
-        "name": "drupal/smart_ip",
-        "version": "3.6.0",
-        "version_normalized": "3.6.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://git.drupalcode.org/project/smart_ip.git",
-            "reference": "8.x-3.6"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/smart_ip-8.x-3.6.zip",
-            "reference": "8.x-3.6",
-            "shasum": "a85a15f817af935015a0731d26409f6cd22b1bf0"
-        },
-        "require": {
-            "drupal/core": "~8.0",
-            "drupal/geotimezone": "~2.0",
-            "geoip2/geoip2": "~2.0",
-            "ip2location/ip2location-php": "~8.0"
-        },
-        "type": "drupal-module",
-        "extra": {
-            "branch-alias": {
-                "dev-3.x": "3.x-dev"
-            },
-            "drupal": {
-                "version": "8.x-3.6",
-                "datestamp": "1536388084",
-                "security-coverage": {
-                    "status": "covered",
-                    "message": "Covered by Drupal's security advisory policy"
-                }
-            }
-        },
-        "installation-source": "dist",
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0+"
-        ],
-        "authors": [
-            {
-                "name": "Roland Michael dela Peña (arpeggio)",
-                "homepage": "https://www.webfoobar.com",
-                "role": "Maintainer"
-            },
-            {
-                "name": "birdsnbees",
-                "homepage": "https://www.drupal.org/user/1242622"
-            },
-            {
-                "name": "lance.gliser",
-                "homepage": "https://www.drupal.org/user/424339"
-            },
-            {
-                "name": "mertres",
-                "homepage": "https://www.drupal.org/user/3513520"
-            }
-        ],
-        "description": "Smart IP identify visitor's geographical location (longitude/latitude), country, region, city and postal code based on the IP address of the visitor.",
-        "homepage": "https://drupal.org/project/smart_ip",
-        "support": {
-            "source": "https://git.drupalcode.org/project/smart_ip"
-        }
-    },
-    {
         "name": "drupal/smtp",
         "version": "1.0.0-rc4",
         "version_normalized": "1.0.0.0-RC4",
@@ -9444,65 +8481,6 @@
         }
     },
     {
-        "name": "drupal/twig_remove_html_comments",
-        "version": "1.0.0-alpha2",
-        "version_normalized": "1.0.0.0-alpha2",
-        "source": {
-            "type": "git",
-            "url": "https://git.drupalcode.org/project/twig_remove_html_comments.git",
-            "reference": "8.x-1.0-alpha2"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/twig_remove_html_comments-8.x-1.0-alpha2.zip",
-            "reference": "8.x-1.0-alpha2",
-            "shasum": "5aecbd8c1cf1386c4e621df2480cbb5bf387dba0"
-        },
-        "require": {
-            "drupal/core": "^8.7"
-        },
-        "conflict": {
-            "drupal/drupal": "*"
-        },
-        "type": "drupal-module",
-        "extra": {
-            "branch-alias": {
-                "dev-1.x": "1.x-dev"
-            },
-            "drupal": {
-                "version": "8.x-1.0-alpha2",
-                "datestamp": "1573052885",
-                "security-coverage": {
-                    "status": "not-covered",
-                    "message": "Project has not opted into security advisory coverage!"
-                }
-            }
-        },
-        "installation-source": "dist",
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0-or-later"
-        ],
-        "authors": [
-            {
-                "name": "Orlando Thöny",
-                "homepage": "https://www.drupal.org/user/3558789",
-                "email": "orlando.thoeny@gmail.com",
-                "role": "Maintainer"
-            }
-        ],
-        "description": "Provides a Twig filter that removes HTML comments.",
-        "homepage": "https://drupal.org/project/twig_remove_html_comments",
-        "keywords": [
-            "Drupal",
-            "Remove HTML comments",
-            "Twig"
-        ],
-        "support": {
-            "source": "https://git.drupalcode.org/project/twig_remove_html_comments"
-        }
-    },
-    {
         "name": "drupal/twig_tweak",
         "version": "2.6.0",
         "version_normalized": "2.6.0.0",
@@ -9911,176 +8889,6 @@
         "homepage": "https://www.drupal.org/project/verf",
         "support": {
             "source": "https://git.drupalcode.org/project/verf"
-        }
-    },
-    {
-        "name": "drupal/video_embed_field",
-        "version": "2.4.0",
-        "version_normalized": "2.4.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://git.drupalcode.org/project/video_embed_field.git",
-            "reference": "8.x-2.4"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/video_embed_field-8.x-2.4.zip",
-            "reference": "8.x-2.4",
-            "shasum": "96b14bb93c1bb6a07b84315a4f87367870f8b574"
-        },
-        "require": {
-            "drupal/core": "^8.8 || ^9"
-        },
-        "require-dev": {
-            "drupal/colorbox": "^1.0",
-            "drupal/video_embed_media": "*"
-        },
-        "type": "drupal-module",
-        "extra": {
-            "drupal": {
-                "version": "8.x-2.4",
-                "datestamp": "1587686337",
-                "security-coverage": {
-                    "status": "covered",
-                    "message": "Covered by Drupal's security advisory policy"
-                }
-            }
-        },
-        "installation-source": "dist",
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0+"
-        ],
-        "authors": [
-            {
-                "name": "Sam152",
-                "homepage": "https://www.drupal.org/user/1485048"
-            },
-            {
-                "name": "jec006",
-                "homepage": "https://www.drupal.org/user/855980"
-            },
-            {
-                "name": "plopesc",
-                "homepage": "https://www.drupal.org/user/282415"
-            }
-        ],
-        "description": "A pluggable field type for storing videos from external video hosts such as Vimeo and YouTube.",
-        "homepage": "https://www.drupal.org/project/video_embed_field",
-        "support": {
-            "source": "https://git.drupalcode.org/project/video_embed_field"
-        }
-    },
-    {
-        "name": "drupal/views_block_area",
-        "version": "1.0.0-beta2",
-        "version_normalized": "1.0.0.0-beta2",
-        "source": {
-            "type": "git",
-            "url": "https://git.drupalcode.org/project/views_block_area.git",
-            "reference": "8.x-1.0-beta2"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/views_block_area-8.x-1.0-beta2.zip",
-            "reference": "8.x-1.0-beta2",
-            "shasum": "d4f041e2120a73e6596870769049d047103acecc"
-        },
-        "require": {
-            "drupal/core": "*"
-        },
-        "type": "drupal-module",
-        "extra": {
-            "branch-alias": {
-                "dev-1.x": "1.x-dev"
-            },
-            "drupal": {
-                "version": "8.x-1.0-beta2",
-                "datestamp": "1570716484",
-                "security-coverage": {
-                    "status": "not-covered",
-                    "message": "Beta releases are not covered by Drupal security advisories."
-                }
-            }
-        },
-        "installation-source": "dist",
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0-or-later"
-        ],
-        "authors": [
-            {
-                "name": "Leon Kessler",
-                "homepage": "https://www.drupal.org/user/595374"
-            },
-            {
-                "name": "cafuego",
-                "homepage": "https://www.drupal.org/user/218525"
-            },
-            {
-                "name": "zuuperman",
-                "homepage": "https://www.drupal.org/user/361625"
-            }
-        ],
-        "description": "Exposes all blocks as a views area.",
-        "homepage": "https://www.drupal.org/project/views_block_area",
-        "support": {
-            "source": "https://git.drupalcode.org/project/views_block_area"
-        }
-    },
-    {
-        "name": "drupal/views_bulk_edit",
-        "version": "2.4.0",
-        "version_normalized": "2.4.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://git.drupalcode.org/project/views_bulk_edit.git",
-            "reference": "8.x-2.4"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/views_bulk_edit-8.x-2.4.zip",
-            "reference": "8.x-2.4",
-            "shasum": "039ebf9c6ae3cdd0555c7bfb97c629ebfee61ddb"
-        },
-        "require": {
-            "drupal/core": "*",
-            "drupal/views_bulk_operations": "~1.0 | ~2.0 | ~3.0"
-        },
-        "type": "drupal-module",
-        "extra": {
-            "branch-alias": {
-                "dev-2.x": "2.x-dev"
-            },
-            "drupal": {
-                "version": "8.x-2.4",
-                "datestamp": "1570030085",
-                "security-coverage": {
-                    "status": "covered",
-                    "message": "Covered by Drupal's security advisory policy"
-                }
-            }
-        },
-        "installation-source": "dist",
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0+"
-        ],
-        "authors": [
-            {
-                "name": "Marcin Grabias",
-                "homepage": "https://www.drupal.org/u/graber"
-            },
-            {
-                "name": "benjy",
-                "homepage": "https://www.drupal.org/user/1852732"
-            }
-        ],
-        "description": "Allows bulk edition of entity field values.",
-        "homepage": "https://www.drupal.org/project/views_bulk_edit",
-        "support": {
-            "source": "https://git.drupalcode.org/project/views_bulk_edit",
-            "issues": "https://www.drupal.org/project/issues/views_bulk_edit?version=8.x"
         }
     },
     {
@@ -11037,9 +9845,7 @@
         "version_normalized": "5.7.1.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/enyo/dropzone/archive/v5.7.1.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://github.com/enyo/dropzone/archive/v5.7.1.zip"
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -11099,111 +9905,6 @@
             "mime-database",
             "mime-parser",
             "mime-type"
-        ]
-    },
-    {
-        "name": "gasparesganga/php-shapefile",
-        "version": "v3.3.2",
-        "version_normalized": "3.3.2.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/gasparesganga/php-shapefile.git",
-            "reference": "ae86a406f9a8191adc00724f032587b2287a8310"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/gasparesganga/php-shapefile/zipball/ae86a406f9a8191adc00724f032587b2287a8310",
-            "reference": "ae86a406f9a8191adc00724f032587b2287a8310",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.4.0"
-        },
-        "time": "2020-08-17T13:52:01+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Shapefile\\": "src/Shapefile/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Gaspare Sganga",
-                "email": "contact@gasparesganga.com",
-                "homepage": "https://gasparesganga.com/labs/php-shapefile/",
-                "role": "Developer"
-            }
-        ],
-        "description": "PHP library to read and write ESRI Shapefiles, compatible with WKT and GeoJSON",
-        "homepage": "https://gasparesganga.com/labs/php-shapefile/",
-        "keywords": [
-            "ESRI",
-            "Shapefile",
-            "dbf",
-            "geojson",
-            "shape",
-            "shp",
-            "wkt"
-        ]
-    },
-    {
-        "name": "geoip2/geoip2",
-        "version": "v2.10.0",
-        "version_normalized": "2.10.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/maxmind/GeoIP2-php.git",
-            "reference": "419557cd21d9fe039721a83490701a58c8ce784a"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/maxmind/GeoIP2-php/zipball/419557cd21d9fe039721a83490701a58c8ce784a",
-            "reference": "419557cd21d9fe039721a83490701a58c8ce784a",
-            "shasum": ""
-        },
-        "require": {
-            "ext-json": "*",
-            "maxmind-db/reader": "~1.5",
-            "maxmind/web-service-common": "~0.6",
-            "php": ">=5.6"
-        },
-        "require-dev": {
-            "friendsofphp/php-cs-fixer": "2.*",
-            "phpunit/phpunit": "5.*",
-            "squizlabs/php_codesniffer": "3.*"
-        },
-        "time": "2019-12-12T18:48:39+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "GeoIp2\\": "src"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "Apache-2.0"
-        ],
-        "authors": [
-            {
-                "name": "Gregory J. Oschwald",
-                "email": "goschwald@maxmind.com",
-                "homepage": "https://www.maxmind.com/"
-            }
-        ],
-        "description": "MaxMind GeoIP2 PHP API",
-        "homepage": "https://github.com/maxmind/GeoIP2-php",
-        "keywords": [
-            "IP",
-            "geoip",
-            "geoip2",
-            "geolocation",
-            "maxmind"
         ]
     },
     {
@@ -11736,54 +10437,10 @@
         "version_normalized": "14.0.6.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/jackocnr/intl-tel-input/archive/v14.0.6.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://github.com/jackocnr/intl-tel-input/archive/v14.0.6.zip"
         },
         "type": "drupal-library",
         "installation-source": "dist"
-    },
-    {
-        "name": "ip2location/ip2location-php",
-        "version": "8.1.1",
-        "version_normalized": "8.1.1.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/chrislim2888/IP2Location-PHP-Module.git",
-            "reference": "e0e7a98e2826bda3260cd8bd36b006e1479c8cf3"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/chrislim2888/IP2Location-PHP-Module/zipball/e0e7a98e2826bda3260cd8bd36b006e1479c8cf3",
-            "reference": "e0e7a98e2826bda3260cd8bd36b006e1479c8cf3",
-            "shasum": ""
-        },
-        "time": "2019-10-09T01:00:20+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "classmap": [
-                "IP2Location.php"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "IP2Location",
-                "email": "support@ip2location.com",
-                "homepage": "http://www.ip2location.com"
-            }
-        ],
-        "description": "[Official Release] IP2Location PHP API to get location info from IPv4 and IPv6 address.",
-        "homepage": "http://www.ip2location.com",
-        "keywords": [
-            "geolocation",
-            "ip2location",
-            "ip2locationlite"
-        ]
     },
     {
         "name": "jquery.inputmask",
@@ -11791,9 +10448,7 @@
         "version_normalized": "4.0.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/RobinHerbots/Inputmask/archive/4.0.4.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://github.com/RobinHerbots/Inputmask/archive/4.0.4.zip"
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -11804,9 +10459,7 @@
         "version_normalized": "1.1.1.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/gjunge/rateit.js/archive/1.1.1.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://github.com/gjunge/rateit.js/archive/1.1.1.zip"
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -11817,9 +10470,7 @@
         "version_normalized": "4.0.5.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/select2/select2/archive/4.0.5.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://github.com/select2/select2/archive/4.0.5.zip"
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -11830,9 +10481,7 @@
         "version_normalized": "0.8.0.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/ractoon/jQuery-Text-Counter/archive/0.8.0.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://github.com/ractoon/jQuery-Text-Counter/archive/0.8.0.zip"
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -11843,9 +10492,7 @@
         "version_normalized": "1.11.14.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/jonthornton/jquery-timepicker/archive/1.11.14.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://github.com/jonthornton/jquery-timepicker/archive/1.11.14.zip"
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -11856,9 +10503,7 @@
         "version_normalized": "1.8.7.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/harvesthq/chosen/releases/download/v1.8.7/chosen_v1.8.7.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://github.com/harvesthq/chosen/releases/download/v1.8.7/chosen_v1.8.7.zip"
         },
         "require": {
             "composer/installers": "~1.0"
@@ -11875,9 +10520,7 @@
         "version_normalized": "1.7.0.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/ubilabs/geocomplete/archive/1.7.0.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://github.com/ubilabs/geocomplete/archive/1.7.0.zip"
         },
         "require": {
             "composer/installers": "~1.0"
@@ -11894,9 +10537,7 @@
         "version_normalized": "0.2.0.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/jeresig/jquery.hotkeys/archive/0.2.0.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://github.com/jeresig/jquery.hotkeys/archive/0.2.0.zip"
         },
         "require": {
             "composer/installers": "~1.0"
@@ -11913,9 +10554,7 @@
         "version_normalized": "1.0.2.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/fronteed/icheck/archive/1.0.2.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://github.com/fronteed/icheck/archive/1.0.2.zip"
         },
         "require": {
             "composer/installers": "~1.0"
@@ -11932,9 +10571,7 @@
         "version_normalized": "0.3.1.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/rvera/image-picker/archive/0.3.1.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://github.com/rvera/image-picker/archive/0.3.1.zip"
         },
         "require": {
             "composer/installers": "~1.0"
@@ -11951,9 +10588,7 @@
         "version_normalized": "5.0.3.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/RobinHerbots/jquery.inputmask/archive/5.0.3.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://github.com/RobinHerbots/jquery.inputmask/archive/5.0.3.zip"
         },
         "require": {
             "composer/installers": "~1.0"
@@ -11970,9 +10605,7 @@
         "version_normalized": "16.1.0.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/jackocnr/intl-tel-input/archive/v16.1.0.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://github.com/jackocnr/intl-tel-input/archive/v16.1.0.zip"
         },
         "require": {
             "composer/installers": "~1.0"
@@ -11989,9 +10622,7 @@
         "version_normalized": "1.1.3.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/gjunge/rateit.js/archive/1.1.3.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://github.com/gjunge/rateit.js/archive/1.1.3.zip"
         },
         "require": {
             "composer/installers": "~1.0"
@@ -12008,9 +10639,7 @@
         "version_normalized": "4.0.13.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/select2/select2/archive/4.0.13.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://github.com/select2/select2/archive/4.0.13.zip"
         },
         "require": {
             "composer/installers": "~1.0"
@@ -12027,9 +10656,7 @@
         "version_normalized": "0.9.0.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/ractoon/jQuery-Text-Counter/archive/0.9.0.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://github.com/ractoon/jQuery-Text-Counter/archive/0.9.0.zip"
         },
         "require": {
             "composer/installers": "~1.0"
@@ -12046,9 +10673,7 @@
         "version_normalized": "1.13.10.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/jonthornton/jquery-timepicker/archive/1.13.10.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://github.com/jonthornton/jquery-timepicker/archive/1.13.10.zip"
         },
         "require": {
             "composer/installers": "~1.0"
@@ -12065,9 +10690,7 @@
         "version_normalized": "4.0.0.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/simontabor/jquery-toggles/archive/v4.0.0.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://github.com/simontabor/jquery-toggles/archive/v4.0.0.zip"
         },
         "require": {
             "composer/installers": "~1.0"
@@ -12085,8 +10708,7 @@
         "dist": {
             "type": "path",
             "url": "web/modules/custom/custom_module",
-            "reference": "49032fd8ff10ff832d973be3adda1f46e1ba435c",
-            "shasum": null
+            "reference": "49032fd8ff10ff832d973be3adda1f46e1ba435c"
         },
         "type": "drupal-custom-module",
         "installation-source": "dist",
@@ -12102,8 +10724,7 @@
         "dist": {
             "type": "path",
             "url": "web/modules/custom/kwall_share_bar",
-            "reference": "6608d053492d0b482c30381009a0bdb5eaded7e6",
-            "shasum": null
+            "reference": "6608d053492d0b482c30381009a0bdb5eaded7e6"
         },
         "type": "drupal-custom-module",
         "installation-source": "dist",
@@ -12690,9 +11311,7 @@
         "version_normalized": "0.7.2.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/liabru/jquery-match-height/archive/0.7.2.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://github.com/liabru/jquery-match-height/archive/0.7.2.zip"
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -12747,124 +11366,12 @@
         ]
     },
     {
-        "name": "maxmind-db/reader",
-        "version": "v1.6.0",
-        "version_normalized": "1.6.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/maxmind/MaxMind-DB-Reader-php.git",
-            "reference": "febd4920bf17c1da84cef58e56a8227dfb37fbe4"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/maxmind/MaxMind-DB-Reader-php/zipball/febd4920bf17c1da84cef58e56a8227dfb37fbe4",
-            "reference": "febd4920bf17c1da84cef58e56a8227dfb37fbe4",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.6"
-        },
-        "conflict": {
-            "ext-maxminddb": "<1.6.0,>=2.0.0"
-        },
-        "require-dev": {
-            "friendsofphp/php-cs-fixer": "2.*",
-            "php-coveralls/php-coveralls": "^2.1",
-            "phpunit/phpcov": "^3.0",
-            "phpunit/phpunit": "5.*",
-            "squizlabs/php_codesniffer": "3.*"
-        },
-        "suggest": {
-            "ext-bcmath": "bcmath or gmp is required for decoding larger integers with the pure PHP decoder",
-            "ext-gmp": "bcmath or gmp is required for decoding larger integers with the pure PHP decoder",
-            "ext-maxminddb": "A C-based database decoder that provides significantly faster lookups"
-        },
-        "time": "2019-12-19T22:59:03+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "MaxMind\\Db\\": "src/MaxMind/Db"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "Apache-2.0"
-        ],
-        "authors": [
-            {
-                "name": "Gregory J. Oschwald",
-                "email": "goschwald@maxmind.com",
-                "homepage": "https://www.maxmind.com/"
-            }
-        ],
-        "description": "MaxMind DB Reader API",
-        "homepage": "https://github.com/maxmind/MaxMind-DB-Reader-php",
-        "keywords": [
-            "database",
-            "geoip",
-            "geoip2",
-            "geolocation",
-            "maxmind"
-        ]
-    },
-    {
-        "name": "maxmind/web-service-common",
-        "version": "v0.6.0",
-        "version_normalized": "0.6.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/maxmind/web-service-common-php.git",
-            "reference": "40c928bb0194c45088b369a17f9baef9c3fc7460"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/maxmind/web-service-common-php/zipball/40c928bb0194c45088b369a17f9baef9c3fc7460",
-            "reference": "40c928bb0194c45088b369a17f9baef9c3fc7460",
-            "shasum": ""
-        },
-        "require": {
-            "composer/ca-bundle": "^1.0.3",
-            "ext-curl": "*",
-            "ext-json": "*",
-            "php": ">=5.6"
-        },
-        "require-dev": {
-            "friendsofphp/php-cs-fixer": "2.*",
-            "phpunit/phpunit": "^4.8.36 || ^5.7 || ^6.5 || ^7.0",
-            "squizlabs/php_codesniffer": "3.*"
-        },
-        "time": "2019-12-12T15:56:05+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "MaxMind\\Exception\\": "src/Exception",
-                "MaxMind\\WebService\\": "src/WebService"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "Apache-2.0"
-        ],
-        "authors": [
-            {
-                "name": "Gregory Oschwald",
-                "email": "goschwald@maxmind.com"
-            }
-        ],
-        "description": "Internal MaxMind Web Service API",
-        "homepage": "https://github.com/maxmind/web-service-common-php"
-    },
-    {
         "name": "metafizzy/isotope",
         "version": "3.0.6",
         "version_normalized": "3.0.6.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/metafizzy/isotope/archive/v3.0.6.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://github.com/metafizzy/isotope/archive/v3.0.6.zip"
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -13203,9 +11710,7 @@
         "version_normalized": "1.4.12.0",
         "dist": {
             "type": "tar",
-            "url": "https://registry.npmjs.org/ace-builds/-/ace-builds-1.4.12.tgz",
-            "reference": null,
-            "shasum": null
+            "url": "https://registry.npmjs.org/ace-builds/-/ace-builds-1.4.12.tgz"
         },
         "type": "npm-asset",
         "installation-source": "dist",
@@ -13219,9 +11724,7 @@
         "version_normalized": "3.2.0.0",
         "dist": {
             "type": "tar",
-            "url": "https://registry.npmjs.org/fontawesome-iconpicker/-/fontawesome-iconpicker-3.2.0.tgz",
-            "reference": null,
-            "shasum": null
+            "url": "https://registry.npmjs.org/fontawesome-iconpicker/-/fontawesome-iconpicker-3.2.0.tgz"
         },
         "type": "npm-asset",
         "installation-source": "dist",
@@ -13279,9 +11782,7 @@
         "version_normalized": "1.4.2.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/oriongunning/gridder/archive/v1.4.2.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://github.com/oriongunning/gridder/archive/v1.4.2.zip"
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -13833,9 +12334,7 @@
         "version_normalized": "1.15.0.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/algolia/places/archive/v1.15.0.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://github.com/algolia/places/archive/v1.15.0.zip"
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -13846,9 +12345,7 @@
         "version_normalized": "1.2.0.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/NigelOToole/progress-tracker/archive/v1.2.0.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://github.com/NigelOToole/progress-tracker/archive/v1.2.0.zip"
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -13859,9 +12356,7 @@
         "version_normalized": "1.4.0.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/NigelOToole/progress-tracker/archive/v1.4.0.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://github.com/NigelOToole/progress-tracker/archive/v1.4.0.zip"
         },
         "require": {
             "composer/installers": "~1.0"
@@ -14382,58 +12877,12 @@
         ]
     },
     {
-        "name": "sibyx/phpgpx",
-        "version": "1.0-RC5",
-        "version_normalized": "1.0.0.0-RC5",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/Sibyx/phpGPX.git",
-            "reference": "0bb616dda0b6ff3e78c72167087c8ffe8b1cbf2e"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/Sibyx/phpGPX/zipball/0bb616dda0b6ff3e78c72167087c8ffe8b1cbf2e",
-            "reference": "0bb616dda0b6ff3e78c72167087c8ffe8b1cbf2e",
-            "shasum": ""
-        },
-        "require": {
-            "lib-libxml": "*",
-            "php": ">=5.4"
-        },
-        "require-dev": {
-            "evert/phpdoc-md": "~0.2.0",
-            "phpunit/phpunit": "^6.5"
-        },
-        "time": "2018-01-25T12:25:51+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "phpGPX\\": "src/phpGPX/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Jakub Dubec",
-                "email": "jakub.dubec@gmail.com",
-                "homepage": "https://jakubdubec.me"
-            }
-        ],
-        "description": "A simple PHP library for GPX import/export"
-    },
-    {
         "name": "signature_pad",
         "version": "2.3.0",
         "version_normalized": "2.3.0.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/szimek/signature_pad/archive/v2.3.0.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://github.com/szimek/signature_pad/archive/v2.3.0.zip"
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -14444,9 +12893,7 @@
         "version_normalized": "2.3.0.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/szimek/signature_pad/archive/v2.3.0.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://github.com/szimek/signature_pad/archive/v2.3.0.zip"
         },
         "require": {
             "composer/installers": "~1.0"
@@ -16121,9 +14568,7 @@
         "version_normalized": "1.8.1.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/kenwheeler/slick/archive/v1.8.1.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://github.com/kenwheeler/slick/archive/v1.8.1.zip"
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -16293,9 +14738,7 @@
         "version_normalized": "3.6.1.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/ariutta/svg-pan-zoom/archive/3.6.1.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://github.com/ariutta/svg-pan-zoom/archive/3.6.1.zip"
         },
         "require": {
             "composer/installers": "~1.0"
@@ -18805,9 +17248,7 @@
         "version_normalized": "2.7.1.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/woocommerce/FlexSlider/archive/2.7.1.zip",
-            "reference": null,
-            "shasum": null
+            "url": "https://github.com/woocommerce/FlexSlider/archive/2.7.1.zip"
         },
         "type": "drupal-library",
         "installation-source": "dist"
