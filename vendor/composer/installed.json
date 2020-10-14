@@ -3508,6 +3508,9 @@
                     "status": "not-covered",
                     "message": "Dev releases are not covered by Drupal security advisories."
                 }
+            },
+            "patches_applied": {
+                "Support for export filtering via Drush": "https://www.drupal.org/files/issues/2020-08-18/support-for-export-2857247-54.patch"
             }
         },
         "installation-source": "source",

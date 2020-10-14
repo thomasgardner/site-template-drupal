@@ -315,7 +315,11 @@
             },
             "drupal/viewsreference": {
                 "Is there any way to pass the token from the current paragraph to the view?": "https://www.drupal.org/files/issues/2020-08-17/viewsreference-argument-tokens-2985364-13.patch"
+            },
+            "drupal/config_ignore": {
+                "Support for export filtering via Drush": "https://www.drupal.org/files/issues/2020-08-18/support-for-export-2857247-54.patch"
             }
+
         }
     }
 }
