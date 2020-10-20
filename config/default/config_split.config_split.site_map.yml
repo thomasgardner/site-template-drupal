@@ -1,0 +1,17 @@
+uuid: ddddc73f-8b3c-442b-b343-6d5dca144abf
+langcode: en
+status: true
+dependencies: {  }
+id: site_map
+label: 'Site Map'
+description: ''
+folder: ../config/config_sitemap
+module:
+  xmlsitemap_engines: 0
+  xmlsitemap: 1
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: false
+weight: 0

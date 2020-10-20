@@ -1,0 +1,32 @@
+uuid: c9703019-d1b6-416a-a269-d5950e08aea8
+langcode: en
+status: true
+dependencies: {  }
+id: general_menu
+label: 'General Menu'
+description: ''
+folder: ../config/config_menus
+module: {  }
+theme: {  }
+blacklist:
+  - system.menu.academics-menu
+  - system.menu.event-calendar
+  - system.menu.footer
+  - system.menu.footer---connect-to-to-ucsc
+  - system.menu.footer---engage-with-ucsc
+  - system.menu.footer---legal-links
+  - system.menu.give-to-history
+  - system.menu.header-menu---cta-buttons
+  - system.menu.main-navigation-subsite-version1
+  - system.menu.main-navigation-subsite-version2
+  - system.menu.main-navigation-subsite-version3
+  - system.menu.newscenter---featured
+  - system.menu.newscenter---filter-1
+  - system.menu.newscenter---filter-2
+  - system.menu.newscenter---filter-3
+  - system.menu.quicklinks
+  - system.menu.utility-menu
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: false
+weight: 0

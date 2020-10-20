@@ -1,0 +1,28 @@
+uuid: bf67adcc-e58a-4a35-8e7d-1e60f87a4a3b
+langcode: en
+status: true
+dependencies: {  }
+id: config_views
+label: 'General Views'
+description: ''
+folder: ../config/config_views
+module: {  }
+theme: {  }
+blacklist:
+  - views.view.alerts
+  - views.view.a_z_list
+  - views.view.major_card_list
+  - views.view.podcast_card_list
+  - views.view.policy_card_list
+  - views.view.related_content_grid
+  - views.view.related_links_list
+  - views.view.single_feature_story_list
+  - views.view.single_feature_story_list_interior
+  - views.view.teaser_archive
+  - views.view.teaser_card_list
+  - views.view.teaser_collection_grid
+  - views.view.three_story_teaser_grid
+graylist: {  }
+graylist_dependents: false
+graylist_skip_equal: false
+weight: 0
