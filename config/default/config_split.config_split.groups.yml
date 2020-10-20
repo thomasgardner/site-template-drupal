@@ -1,0 +1,19 @@
+uuid: 48ce889b-8b20-482f-af7c-8415a8e339be
+langcode: en
+status: true
+dependencies: {  }
+id: groups
+label: Groups
+description: ''
+folder: ../config/config_groups
+module:
+  gnode: 0
+  group: 0
+  groupmenu: 0
+  groupmenu_block: 0
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: false
+graylist_skip_equal: false
+weight: 0

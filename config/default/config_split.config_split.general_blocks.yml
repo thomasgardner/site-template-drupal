@@ -1,0 +1,55 @@
+uuid: 6ec2cfbe-6eb3-456b-ba27-cbaba46ce180
+langcode: en
+status: true
+dependencies: {  }
+id: general_blocks
+label: 'General Blocks'
+description: ''
+folder: ../config/config_blocks
+module: {  }
+theme: {  }
+blacklist:
+  - block.block.abovecontent
+  - block.block.copyright
+  - block.block.footerengagewithucsc
+  - block.block.footerlegallinks
+  - block.block.givetohistory
+  - block.block.headermenuctabuttons
+  - block.block.headermenuctabuttons_2
+  - block.block.headermenuutilitymenu
+  - block.block.herocontent
+  - block.block.leftsidebarcontent
+  - block.block.mainnavigation
+  - block.block.mainnavigationsubsiteversionone
+  - block.block.mainnavigationsubsiteversionone_2
+  - block.block.mainnavigationsubsiteversionthree
+  - block.block.mainnavigationsubsiteversiontwo
+  - block.block.mainnavigation_2
+  - block.block.newscenterfeatured
+  - block.block.newscenterfilter1
+  - block.block.newscenterfilter2
+  - block.block.newscenterfilter3
+  - block.block.quicklinks
+  - block.block.santa_cruz_content
+  - block.block.santa_cruz_contentbottom
+  - block.block.santa_cruz_footer
+  - block.block.santa_cruz_footerconnecttotoucsc
+  - block.block.santa_cruz_footerengagewithucsc
+  - block.block.santa_cruz_mainnavigation_3
+  - block.block.santa_cruz_page_title
+  - block.block.santa_cruz_sidebarcontent
+  - block.block.santa_cruz_utilitymenu
+  - block.block.sidebarcontent
+  - block.block.sitebranding
+  - block.block.subsitelogoortitlefordesktop
+  - block.block.subsitelogoortitleformobile
+  - block.block.testingaddressadvanced
+  - block.block.testingaddresssimple
+  - block.block.testingaddresssimple_2
+  - block.block.testingaddresssimple_3
+  - block.block.testingaddresssimple_4
+  - block.block.ucscsearchformblock
+graylist: {  }
+graylist_dependents: false
+graylist_skip_equal: false
+weight: 0
