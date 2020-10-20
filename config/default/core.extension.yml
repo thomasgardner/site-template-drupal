@@ -52,7 +52,11 @@ module:
   focal_point: 0
   fontawesome: 0
   fontawesome_menu_icons: 0
+  gnode: 0
   google_analytics: 0
+  group: 0
+  groupmenu: 0
+  groupmenu_block: 0
   gtranslate: 0
   help: 0
   html_title: 0
