@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 id: site_specific
-label: 'Site specific'
+label: 'Site Specific'
 description: ''
 folder: ../config/config_site_specific
 module: {  }
