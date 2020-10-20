@@ -1,0 +1,17 @@
+uuid: b335b741-9480-47c4-b73f-be8eba1d8ed8
+langcode: en
+status: true
+dependencies: {  }
+id: site_specific
+label: 'Site specific'
+description: ''
+folder: ../config/config_site_specific
+module: {  }
+theme: {  }
+blacklist:
+  - media.settings
+  - system.site
+graylist: {  }
+graylist_dependents: false
+graylist_skip_equal: false
+weight: 1

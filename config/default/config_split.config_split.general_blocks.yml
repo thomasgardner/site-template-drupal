@@ -50,6 +50,6 @@ blacklist:
   - block.block.testingaddresssimple_4
   - block.block.ucscsearchformblock
 graylist: {  }
-graylist_dependents: true
+graylist_dependents: false
 graylist_skip_equal: false
 weight: 0
