@@ -10,7 +10,6 @@ module: {  }
 theme: {  }
 blacklist:
   - media.settings
-  - system.site
 graylist: {  }
 graylist_dependents: false
 graylist_skip_equal: false

@@ -17,6 +17,7 @@ blacklist:
   - system.menu.footer---legal-links
   - system.menu.give-to-history
   - system.menu.header-menu---cta-buttons
+  - system.menu.main
   - system.menu.main-navigation-subsite-version1
   - system.menu.main-navigation-subsite-version2
   - system.menu.main-navigation-subsite-version3
