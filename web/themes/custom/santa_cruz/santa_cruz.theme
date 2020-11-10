@@ -73,13 +73,10 @@ function santa_cruz_preprocess_paragraph(&$variables) {
 }
 
 /**
- * Implements hook_form_alter().
- * @param $form
- * @param \Drupal\Core\Form\FormStateInterface $form_state
- * @param $form_id
+ * Implements template_preprocess_form().
  */
-function santa_cruz_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
-  if ($form_id == 'user_login_form' ) {
-    $form['element']['#attributes'] = array('class' => array('grid-container', 'large'));
+function santa_cruz_preprocess_form(&$variables) {
+  if ($variables["attributes"]["id"] === "user-login-form") {
+    $variables['attributes']['class'] = 'grid-container large';
   }
 }
