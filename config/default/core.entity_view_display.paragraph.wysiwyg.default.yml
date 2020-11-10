@@ -8,14 +8,36 @@ dependencies:
     - paragraphs.paragraphs_type.wysiwyg
   module:
     - fences
+    - field_group
     - text
+third_party_settings:
+  field_group:
+    group_container:
+      children:
+        - field_lead_body
+        - field_body_formatted
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: 'grid-container large'
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Container
 id: paragraph.wysiwyg.default
 targetEntityType: paragraph
 bundle: wysiwyg
 mode: default
 content:
   field_body_formatted:
-    weight: 1
+    weight: 2
     label: hidden
     settings: {  }
     third_party_settings:
@@ -29,7 +51,7 @@ content:
     type: text_default
     region: content
   field_lead_body:
-    weight: 0
+    weight: 1
     label: hidden
     settings: {  }
     third_party_settings:
@@ -42,4 +64,5 @@ content:
         fences_label_classes: ''
     type: text_default
     region: content
-hidden: {  }
+hidden:
+  search_api_excerpt: true

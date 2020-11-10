@@ -71,3 +71,15 @@ function santa_cruz_preprocess_paragraph(&$variables) {
     $variables['node_type'] = $node->getType();
   }
 }
+
+/**
+ * Implements hook_form_alter().
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ * @param $form_id
+ */
+function santa_cruz_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if ($form_id == 'user_login_form' ) {
+    $form['element']['#attributes'] = array('class' => array('grid-container', 'large'));
+  }
+}
