@@ -1,4 +1,0 @@
-administer html title settings:
-  title: 'Administer HTML Title settings'
-  description: 'Allows users to administer the settings provided by the HTML Title module.'
-  restrict access: true
