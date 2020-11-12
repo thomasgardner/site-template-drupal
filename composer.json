@@ -32,11 +32,27 @@
         },
         {
             "type": "path",
+            "url": "web/modules/custom/curator"
+        },
+        {
+            "type": "path",
             "url": "web/modules/custom/custom_module"
         },
         {
             "type": "path",
+            "url": "web/modules/custom/kwall_alert_system"
+        },
+        {
+            "type": "path",
+            "url": "web/modules/custom/kwall_map"
+        },
+        {
+            "type": "path",
             "url": "web/modules/custom/kwall_share_bar"
+        },
+        {
+            "type": "path",
+            "url": "web/themes/custom/santa_cruz"
         }
     ],
     "require": {
@@ -128,9 +144,15 @@
         "drupal/zurb_foundation": "~6.0",
         "drush/drush": "^10.3",
         "grasmash/drupal-security-warning": "^1.1",
+        "kwall/curator": "*",
         "kwall/custom_module": "*",
+        "kwall/kwall_alert_system": "*",
+        "kwall/kwall_map": "*",
         "kwall/kwall_share_bar": "*",
+        "kwall/santa_cruz": "*",
+        "npm-asset/dropzone": "^5.7",
         "npm-asset/fontawesome-iconpicker": "^3.2",
+        "npm-asset/jquery-ui-touch-punch": "^0.2.3",
         "oomphinc/composer-installers-extender": "^1.1",
         "topfloor/composer-cleanup-vcs-dirs": "^1.0",
         "vlucas/phpdotenv": "^2.4",
@@ -195,6 +217,7 @@
                 "type:npm-asset"
             ],
             "web/libraries/ckeditor/plugins/{$name}": ["type:ckeditor-plugin"],
+            "web/libraries/chosen": ["npm-asset/chosen-js"],
             "web/modules/contrib/{$name}": ["type:drupal-module"],
             "web/profiles/contrib/{$name}": ["type:drupal-profile"],
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
@@ -225,8 +248,9 @@
         },
         "merge-plugin": {
             "include": [
-                "web/modules/contrib/webform/composer.libraries.json",
-                "web/modules/contrib/dropzonejs/composer.libraries.json"
+                "web/modules/contrib/*/composer.libraries.json",
+                "web/modules/custom/*/composer.json",
+                "web/themes/custom/*/composer.json"
             ]
         },
         "drupal-scaffold": {
@@ -240,7 +264,11 @@
             "file-mapping": {
                 "[web-root]/.htaccess": {
                     "mode": "skip"
-                }
+                },
+                "[web-root]/robots.txt": {
+                    "mode": "skip"
+                },
+                "[project-root]/.editorconfig": false
             }
         },
         "patches": {

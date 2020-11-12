@@ -1,5 +1,5 @@
 {
-    "name": "kwall/custom_module",
+    "name": "kwall/kwall_map",
     "type": "drupal-custom-module",
     "authors": [
         {
@@ -7,12 +7,6 @@
             "email": "info@kwallcompany.com",
             "role": "Kwall Developer",
             "homepage": "https://www.kwallcompany.com"
-        },
-        {
-            "name": "Ruslan Piskarov",
-            "email": "ruslan.piskarev@kwallcompany.com",
-            "role": "Kwall Developer",
-            "homepage": "https://makedrupaleasy.com/"
         }
     ],
     "homepage": "https://www.kwallcompany.com",

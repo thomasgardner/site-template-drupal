@@ -1,7 +1,13 @@
 {
-    "name": "kwall/kwall_share_bar",
-    "type": "drupal-custom-module",
+    "name": "kwall/santa_cruz",
+    "type": "drupal-custom-theme",
     "authors": [
+        {
+            "name": "Kwall",
+            "email": "info@kwallcompany.com",
+            "role": "Kwall Developer",
+            "homepage": "https://www.kwallcompany.com"
+        },
         {
             "name": "Ruslan Piskarov",
             "email": "ruslan.piskarev@kwallcompany.com",
@@ -10,12 +16,11 @@
         }
     ],
     "homepage": "https://www.kwallcompany.com",
-    "description": "Provides a Share block on your site.",
-    "keywords": [
-        "Drupal"
-    ],
-    "license": "GPL-2.0+",
     "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "preferred-install": "dist"
+    },
     "support": {},
     "require": {}
 }
