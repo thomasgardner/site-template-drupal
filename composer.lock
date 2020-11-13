@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9185f9cfc9a2f28d443e32df7d88d7b2",
+    "content-hash": "cc3813bf5b481e25a1737257fea4c38e",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -4272,17 +4272,17 @@
         },
         {
             "name": "drupal/devel_php",
-            "version": "1.2.0",
+            "version": "1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/devel_php.git",
-                "reference": "8.x-1.2"
+                "reference": "8.x-1.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/devel_php-8.x-1.2.zip",
-                "reference": "8.x-1.2",
-                "shasum": "fc80eb90b208e36de01f942382eaea36b56f17a2"
+                "url": "https://ftp.drupal.org/files/projects/devel_php-8.x-1.3.zip",
+                "reference": "8.x-1.3",
+                "shasum": "73282d23331c36c0460bfb0c1efd124fe89549b4"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9",
@@ -4291,8 +4291,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.2",
-                    "datestamp": "1590832060",
+                    "version": "8.x-1.3",
+                    "datestamp": "1601974470",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -9232,150 +9232,6 @@
             "type": "drupal-library",
             "extra": {
                 "installer-name": "jquery.toggles"
-            }
-        },
-        {
-            "name": "kwall/curator",
-            "version": "dev-develop",
-            "dist": {
-                "type": "path",
-                "url": "web/modules/custom/curator",
-                "reference": "896ffda1274dce6a449a60391e05382c5acb4d51"
-            },
-            "type": "drupal-custom-module",
-            "authors": [
-                {
-                    "name": "Kwall",
-                    "email": "info@kwallcompany.com",
-                    "role": "Kwall Developer",
-                    "homepage": "https://www.kwallcompany.com"
-                }
-            ],
-            "description": "Curator Social.",
-            "homepage": "https://www.kwallcompany.com",
-            "transport-options": {
-                "relative": true
-            }
-        },
-        {
-            "name": "kwall/custom_module",
-            "version": "dev-master",
-            "dist": {
-                "type": "path",
-                "url": "web/modules/custom/custom_module",
-                "reference": "49032fd8ff10ff832d973be3adda1f46e1ba435c"
-            },
-            "type": "drupal-custom-module",
-            "homepage": "https://www.kwallcompany.com",
-            "transport-options": {
-                "relative": true
-            }
-        },
-        {
-            "name": "kwall/kwall_alert_system",
-            "version": "dev-develop",
-            "dist": {
-                "type": "path",
-                "url": "web/modules/custom/kwall_alert_system",
-                "reference": "570174fea4e2adce4edaf42c4931f4dbd2265683"
-            },
-            "type": "drupal-custom-module",
-            "authors": [
-                {
-                    "name": "Kwall",
-                    "email": "info@kwallcompany.com",
-                    "role": "Kwall Developer",
-                    "homepage": "https://www.kwallcompany.com"
-                },
-                {
-                    "name": "Ruslan Piskarov",
-                    "email": "ruslan.piskarev@kwallcompany.com",
-                    "role": "Kwall Developer",
-                    "homepage": "https://makedrupaleasy.com/"
-                }
-            ],
-            "homepage": "https://www.kwallcompany.com",
-            "transport-options": {
-                "relative": true
-            }
-        },
-        {
-            "name": "kwall/kwall_map",
-            "version": "dev-develop",
-            "dist": {
-                "type": "path",
-                "url": "web/modules/custom/kwall_map",
-                "reference": "088b1f2e5b11d69dab8218e161195f2694ee4967"
-            },
-            "type": "drupal-custom-module",
-            "authors": [
-                {
-                    "name": "Kwall",
-                    "email": "info@kwallcompany.com",
-                    "role": "Kwall Developer",
-                    "homepage": "https://www.kwallcompany.com"
-                }
-            ],
-            "homepage": "https://www.kwallcompany.com",
-            "transport-options": {
-                "relative": true
-            }
-        },
-        {
-            "name": "kwall/kwall_share_bar",
-            "version": "dev-master",
-            "dist": {
-                "type": "path",
-                "url": "web/modules/custom/kwall_share_bar",
-                "reference": "6608d053492d0b482c30381009a0bdb5eaded7e6"
-            },
-            "type": "drupal-custom-module",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Ruslan Piskarov",
-                    "email": "ruslan.piskarev@kwallcompany.com",
-                    "role": "Kwall Developer",
-                    "homepage": "https://www.kwallcompany.com"
-                }
-            ],
-            "description": "Provides a Share block on your site.",
-            "homepage": "https://www.kwallcompany.com",
-            "keywords": [
-                "Drupal"
-            ],
-            "transport-options": {
-                "relative": true
-            }
-        },
-        {
-            "name": "kwall/santa_cruz",
-            "version": "dev-develop",
-            "dist": {
-                "type": "path",
-                "url": "web/themes/custom/santa_cruz",
-                "reference": "31744956ff63b5a0769af087ab4680b7a9574dfe"
-            },
-            "type": "drupal-custom-theme",
-            "authors": [
-                {
-                    "name": "Kwall",
-                    "email": "info@kwallcompany.com",
-                    "role": "Kwall Developer",
-                    "homepage": "https://www.kwallcompany.com"
-                },
-                {
-                    "name": "Ruslan Piskarov",
-                    "email": "ruslan.piskarev@kwallcompany.com",
-                    "role": "Kwall Developer",
-                    "homepage": "https://makedrupaleasy.com/"
-                }
-            ],
-            "homepage": "https://www.kwallcompany.com",
-            "transport-options": {
-                "relative": true
             }
         },
         {
