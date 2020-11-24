@@ -119,8 +119,8 @@ else {
 $settings['config_exclude_modules'] = [
 ];
 
-$conf['simplesamlphp_auth_installdir'] = $_ENV['HOME'] .'/web/private/simplesamlphp';
-$settings['simplesamlphp_dir'] = $_ENV['HOME'] .'/web/private/simplesamlphp';
+$conf['simplesamlphp_auth_installdir'] = $_ENV['HOME'] .'web/private/simplesamlphp';
+$settings['simplesamlphp_dir'] = $_ENV['HOME'] .'web/private/simplesamlphp';
 
 /**
  * If there is a local settings file, then include it
