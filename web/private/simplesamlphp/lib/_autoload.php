@@ -8,7 +8,7 @@
  * @package SimpleSAMLphp
  */
 
-// SSP is loaded as a separate project
+// SSP is loaded as a separate project test
 if (file_exists(dirname(dirname(__FILE__)) . '/vendor/autoload.php')) {
     require_once dirname(dirname(__FILE__)) . '/vendor/autoload.php';
 } else {
