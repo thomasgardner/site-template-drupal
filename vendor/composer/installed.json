@@ -71,7 +71,9 @@
         "version_normalized": "1.18.2.0",
         "dist": {
             "type": "tar",
-            "url": "https://registry.npmjs.org/places.js/-/places.js-1.18.2.tgz"
+            "url": "https://registry.npmjs.org/places.js/-/places.js-1.18.2.tgz",
+            "reference": null,
+            "shasum": null
         },
         "require": {
             "composer/installers": "~1.0"
@@ -142,13 +144,14 @@
         "version_normalized": "3.5.1.0",
         "source": {
             "type": "git",
-            "url": "git@github.com:jquery/jquery-dist.git",
+            "url": "https://github.com/jquery/jquery-dist.git",
             "reference": "4c0e4becb8263bb5b3e6dadc448d8e7305ef8215"
         },
         "dist": {
             "type": "zip",
             "url": "https://api.github.com/repos/jquery/jquery-dist/zipball/4c0e4becb8263bb5b3e6dadc448d8e7305ef8215",
-            "reference": "4c0e4becb8263bb5b3e6dadc448d8e7305ef8215"
+            "reference": "4c0e4becb8263bb5b3e6dadc448d8e7305ef8215",
+            "shasum": null
         },
         "type": "bower-asset",
         "installation-source": "dist",
@@ -168,7 +171,8 @@
         "dist": {
             "type": "zip",
             "url": "https://api.github.com/repos/oriongunning/gridder/zipball/ecf0920d1048ac65704d3d5e8b505c431175f218",
-            "reference": "ecf0920d1048ac65704d3d5e8b505c431175f218"
+            "reference": "ecf0920d1048ac65704d3d5e8b505c431175f218",
+            "shasum": null
         },
         "type": "bower-asset",
         "installation-source": "dist",
@@ -188,7 +192,8 @@
         "dist": {
             "type": "zip",
             "url": "https://api.github.com/repos/recurser/jquery-simple-color/zipball/ebe0b2c0db639584e81499bd29d6619abb9a2599",
-            "reference": "ebe0b2c0db639584e81499bd29d6619abb9a2599"
+            "reference": "ebe0b2c0db639584e81499bd29d6619abb9a2599",
+            "shasum": null
         },
         "type": "bower-asset",
         "installation-source": "dist",
@@ -208,7 +213,8 @@
         "dist": {
             "type": "zip",
             "url": "https://api.github.com/repos/sachinchoolur/lightGallery/zipball/6c00ef21e72db65b1e98c73adcec255fc703ed19",
-            "reference": "6c00ef21e72db65b1e98c73adcec255fc703ed19"
+            "reference": "6c00ef21e72db65b1e98c73adcec255fc703ed19",
+            "shasum": null
         },
         "require": {
             "bower-asset/jquery": ">=1.7.0"
@@ -231,7 +237,8 @@
         "dist": {
             "type": "zip",
             "url": "https://api.github.com/repos/liabru/jquery-match-height/zipball/2446ac654f694bc05a1297cbab0b2d875e278bbd",
-            "reference": "2446ac654f694bc05a1297cbab0b2d875e278bbd"
+            "reference": "2446ac654f694bc05a1297cbab0b2d875e278bbd",
+            "shasum": null
         },
         "type": "bower-asset",
         "installation-source": "dist",
@@ -251,7 +258,8 @@
         "dist": {
             "type": "zip",
             "url": "https://api.github.com/repos/OwlFonk/OwlCarousel2/zipball/af851f9b567630d115930abd5480ffebccc72372",
-            "reference": "af851f9b567630d115930abd5480ffebccc72372"
+            "reference": "af851f9b567630d115930abd5480ffebccc72372",
+            "shasum": null
         },
         "require": {
             "bower-asset/jquery": ">=1.8.3"
@@ -265,13 +273,14 @@
         "version_normalized": "1.8.1.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/bgrins/spectrum.git",
+            "url": "git@github.com:bgrins/spectrum.git",
             "reference": "9aa028de7e8039c41ac792485a928edb97d4ac40"
         },
         "dist": {
             "type": "zip",
             "url": "https://api.github.com/repos/bgrins/spectrum/zipball/9aa028de7e8039c41ac792485a928edb97d4ac40",
-            "reference": "9aa028de7e8039c41ac792485a928edb97d4ac40"
+            "reference": "9aa028de7e8039c41ac792485a928edb97d4ac40",
+            "shasum": null
         },
         "require": {
             "bower-asset/jquery": ">=1.7.2"
@@ -332,7 +341,9 @@
         "version_normalized": "9.0.1.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/jshjohnson/Choices/archive/v9.0.1.zip"
+            "url": "https://github.com/jshjohnson/Choices/archive/v9.0.1.zip",
+            "reference": null,
+            "shasum": null
         },
         "require": {
             "composer/installers": "~1.0"
@@ -349,7 +360,9 @@
         "version_normalized": "4.11.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/autoembed/releases/autoembed_4.11.4.zip"
+            "url": "https://download.ckeditor.com/autoembed/releases/autoembed_4.11.4.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "ckeditor-plugin",
         "installation-source": "dist"
@@ -360,7 +373,9 @@
         "version_normalized": "4.11.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/autolink/releases/autolink_4.11.4.zip"
+            "url": "https://download.ckeditor.com/autolink/releases/autolink_4.11.4.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "ckeditor-plugin",
         "installation-source": "dist"
@@ -371,7 +386,9 @@
         "version_normalized": "4.11.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/embed/releases/embed_4.11.4.zip"
+            "url": "https://download.ckeditor.com/embed/releases/embed_4.11.4.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "ckeditor-plugin",
         "installation-source": "dist"
@@ -382,7 +399,9 @@
         "version_normalized": "4.11.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/embedbase/releases/embedbase_4.11.4.zip"
+            "url": "https://download.ckeditor.com/embedbase/releases/embedbase_4.11.4.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "ckeditor-plugin",
         "installation-source": "dist"
@@ -393,7 +412,9 @@
         "version_normalized": "4.11.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/embedsemantic/releases/embedsemantic_4.11.4.zip"
+            "url": "https://download.ckeditor.com/embedsemantic/releases/embedsemantic_4.11.4.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "ckeditor-plugin",
         "installation-source": "dist"
@@ -404,7 +425,9 @@
         "version_normalized": "4.11.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/filetools/releases/filetools_4.11.4.zip"
+            "url": "https://download.ckeditor.com/filetools/releases/filetools_4.11.4.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "ckeditor-plugin",
         "installation-source": "dist"
@@ -415,7 +438,9 @@
         "version_normalized": "4.11.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/notification/releases/notification_4.11.4.zip"
+            "url": "https://download.ckeditor.com/notification/releases/notification_4.11.4.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "ckeditor-plugin",
         "installation-source": "dist"
@@ -426,7 +451,9 @@
         "version_normalized": "4.11.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/notificationaggregator/releases/notificationaggregator_4.11.4.zip"
+            "url": "https://download.ckeditor.com/notificationaggregator/releases/notificationaggregator_4.11.4.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "ckeditor-plugin",
         "installation-source": "dist"
@@ -437,7 +464,9 @@
         "version_normalized": "4.11.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/uploadimage/releases/uploadimage_4.11.4.zip"
+            "url": "https://download.ckeditor.com/uploadimage/releases/uploadimage_4.11.4.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "ckeditor-plugin",
         "installation-source": "dist"
@@ -448,7 +477,9 @@
         "version_normalized": "4.11.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/uploadwidget/releases/uploadwidget_4.11.4.zip"
+            "url": "https://download.ckeditor.com/uploadwidget/releases/uploadwidget_4.11.4.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "ckeditor-plugin",
         "installation-source": "dist"
@@ -459,7 +490,9 @@
         "version_normalized": "4.11.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/autogrow/releases/autogrow_4.11.4.zip"
+            "url": "https://download.ckeditor.com/autogrow/releases/autogrow_4.11.4.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -470,7 +503,9 @@
         "version_normalized": "1.17.2.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/w8tcha/CKEditor-CodeMirror-Plugin/archive/v1.17.2.zip"
+            "url": "https://github.com/w8tcha/CKEditor-CodeMirror-Plugin/archive/v1.17.2.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -481,7 +516,9 @@
         "version_normalized": "4.11.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/fakeobjects/releases/fakeobjects_4.11.4.zip"
+            "url": "https://download.ckeditor.com/fakeobjects/releases/fakeobjects_4.11.4.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -492,7 +529,9 @@
         "version_normalized": "4.11.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/image/releases/image_4.11.4.zip"
+            "url": "https://download.ckeditor.com/image/releases/image_4.11.4.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -503,7 +542,9 @@
         "version_normalized": "4.11.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/link/releases/link_4.11.4.zip"
+            "url": "https://download.ckeditor.com/link/releases/link_4.11.4.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -514,7 +555,9 @@
         "version_normalized": "4.14.0.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/autogrow/releases/autogrow_4.14.0.zip"
+            "url": "https://download.ckeditor.com/autogrow/releases/autogrow_4.14.0.zip",
+            "reference": null,
+            "shasum": null
         },
         "require": {
             "composer/installers": "~1.0"
@@ -531,7 +574,9 @@
         "version_normalized": "1.17.12.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/w8tcha/CKEditor-CodeMirror-Plugin/releases/download/v1.17.12/CKEditor-CodeMirror-Plugin.zip"
+            "url": "https://github.com/w8tcha/CKEditor-CodeMirror-Plugin/releases/download/v1.17.12/CKEditor-CodeMirror-Plugin.zip",
+            "reference": null,
+            "shasum": null
         },
         "require": {
             "composer/installers": "~1.0"
@@ -548,7 +593,9 @@
         "version_normalized": "4.14.0.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/fakeobjects/releases/fakeobjects_4.14.0.zip"
+            "url": "https://download.ckeditor.com/fakeobjects/releases/fakeobjects_4.14.0.zip",
+            "reference": null,
+            "shasum": null
         },
         "require": {
             "composer/installers": "~1.0"
@@ -565,7 +612,9 @@
         "version_normalized": "4.14.0.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/image/releases/image_4.14.0.zip"
+            "url": "https://download.ckeditor.com/image/releases/image_4.14.0.zip",
+            "reference": null,
+            "shasum": null
         },
         "require": {
             "composer/installers": "~1.0"
@@ -582,7 +631,9 @@
         "version_normalized": "4.14.0.0",
         "dist": {
             "type": "zip",
-            "url": "https://download.ckeditor.com/link/releases/link_4.14.0.zip"
+            "url": "https://download.ckeditor.com/link/releases/link_4.14.0.zip",
+            "reference": null,
+            "shasum": null
         },
         "require": {
             "composer/installers": "~1.0"
@@ -600,7 +651,8 @@
         "dist": {
             "type": "zip",
             "url": "https://download.ckeditor.com/templates/releases/templates_4.11.1.zip",
-            "reference": "master"
+            "reference": "master",
+            "shasum": null
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -611,7 +663,9 @@
         "version_normalized": "5.42.0.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/codemirror/CodeMirror/archive/5.42.0.zip"
+            "url": "https://github.com/codemirror/CodeMirror/archive/5.42.0.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -622,7 +676,9 @@
         "version_normalized": "5.53.2.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/components/codemirror/archive/5.53.2.zip"
+            "url": "https://github.com/components/codemirror/archive/5.53.2.zip",
+            "reference": null,
+            "shasum": null
         },
         "require": {
             "composer/installers": "~1.0"
@@ -821,16 +877,6 @@
             "yawik",
             "zend",
             "zikula"
-        ],
-        "funding": [
-            {
-                "url": "https://packagist.com",
-                "type": "custom"
-            },
-            {
-                "url": "https://tidelift.com/funding/github/packagist/composer/composer",
-                "type": "tidelift"
-            }
         ]
     },
     {
@@ -1733,7 +1779,9 @@
         "version_normalized": "3.2.0.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/desandro/imagesloaded/archive/v3.2.0.zip"
+            "url": "https://github.com/desandro/imagesloaded/archive/v3.2.0.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -3961,17 +4009,6 @@
         "name": "drupal/core-recommended",
         "version": "8.9.7",
         "version_normalized": "8.9.7.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/drupal/core-recommended.git",
-            "reference": "7895ddd703101bdec91fb6ae58381036a9768e1f"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/drupal/core-recommended/zipball/7895ddd703101bdec91fb6ae58381036a9768e1f",
-            "reference": "7895ddd703101bdec91fb6ae58381036a9768e1f",
-            "shasum": ""
-        },
         "require": {
             "asm89/stack-cors": "1.3.0",
             "composer/semver": "1.5.1",
@@ -7237,6 +7274,84 @@
         }
     },
     {
+        "name": "drupal/smtp",
+        "version": "1.0.0",
+        "version_normalized": "1.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupalcode.org/project/smtp.git",
+            "reference": "8.x-1.0"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://ftp.drupal.org/files/projects/smtp-8.x-1.0.zip",
+            "reference": "8.x-1.0",
+            "shasum": "c40cc7a3c20d3f743e3a4e53f4cc296748da89fd"
+        },
+        "require": {
+            "drupal/core": "^8.8 || ^9",
+            "phpmailer/phpmailer": "^6.1.7"
+        },
+        "suggest": {
+            "drupal/mailsystem": "Allows using SMTP alongside other mail modules."
+        },
+        "type": "drupal-module",
+        "extra": {
+            "drupal": {
+                "version": "8.x-1.0",
+                "datestamp": "1601070985",
+                "security-coverage": {
+                    "status": "covered",
+                    "message": "Covered by Drupal's security advisory policy"
+                }
+            },
+            "branch-alias": {
+                "dev-8.x-1.x": "1.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "LukeLast",
+                "homepage": "https://www.drupal.org/user/30151"
+            },
+            {
+                "name": "japerry",
+                "homepage": "https://www.drupal.org/user/45640"
+            },
+            {
+                "name": "josesanmartin",
+                "homepage": "https://www.drupal.org/user/72012"
+            },
+            {
+                "name": "oadaeh",
+                "homepage": "https://www.drupal.org/user/4649"
+            },
+            {
+                "name": "sadashiv",
+                "homepage": "https://www.drupal.org/user/1773304"
+            },
+            {
+                "name": "wundo",
+                "homepage": "https://www.drupal.org/user/25523"
+            },
+            {
+                "name": "yettyn",
+                "homepage": "https://www.drupal.org/user/93281"
+            }
+        ],
+        "description": "Allow for site emails to be sent through an SMTP server of your choice.",
+        "homepage": "https://www.drupal.org/project/smtp",
+        "support": {
+            "source": "https://git.drupalcode.org/project/smtp",
+            "issues": "https://www.drupal.org/project/issues/smtp"
+        }
+    },
+    {
         "name": "drupal/sophron",
         "version": "1.0.0",
         "version_normalized": "1.0.0.0",
@@ -8576,13 +8691,7 @@
             }
         ],
         "description": "Drush is a command line shell and scripting interface for Drupal, a veritable Swiss Army knife designed to make life easier for those of us who spend some of our working hours hacking away at the command prompt.",
-        "homepage": "http://www.drush.org",
-        "funding": [
-            {
-                "url": "https://github.com/weitzman",
-                "type": "github"
-            }
-        ]
+        "homepage": "http://www.drush.org"
     },
     {
         "name": "easyrdf/easyrdf",
@@ -8715,7 +8824,8 @@
         "dist": {
             "type": "zip",
             "url": "https://github.com/enyo/dropzone/archive/v5.7.1.zip",
-            "reference": "b2a50bc61c55ff4f22663a6754020d967305c973"
+            "reference": "b2a50bc61c55ff4f22663a6754020d967305c973",
+            "shasum": null
         },
         "time": "2020-06-04T08:25:15+00:00",
         "type": "library",
@@ -9327,7 +9437,9 @@
         "version_normalized": "14.0.6.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/jackocnr/intl-tel-input/archive/v14.0.6.zip"
+            "url": "https://github.com/jackocnr/intl-tel-input/archive/v14.0.6.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -9338,7 +9450,9 @@
         "version_normalized": "4.0.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/RobinHerbots/Inputmask/archive/4.0.4.zip"
+            "url": "https://github.com/RobinHerbots/Inputmask/archive/4.0.4.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -9349,7 +9463,9 @@
         "version_normalized": "1.1.1.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/gjunge/rateit.js/archive/1.1.1.zip"
+            "url": "https://github.com/gjunge/rateit.js/archive/1.1.1.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -9360,7 +9476,9 @@
         "version_normalized": "4.0.5.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/select2/select2/archive/4.0.5.zip"
+            "url": "https://github.com/select2/select2/archive/4.0.5.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -9371,7 +9489,9 @@
         "version_normalized": "0.8.0.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/ractoon/jQuery-Text-Counter/archive/0.8.0.zip"
+            "url": "https://github.com/ractoon/jQuery-Text-Counter/archive/0.8.0.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -9382,7 +9502,9 @@
         "version_normalized": "1.11.14.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/jonthornton/jquery-timepicker/archive/1.11.14.zip"
+            "url": "https://github.com/jonthornton/jquery-timepicker/archive/1.11.14.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -9393,7 +9515,9 @@
         "version_normalized": "1.8.7.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/harvesthq/chosen/releases/download/v1.8.7/chosen_v1.8.7.zip"
+            "url": "https://github.com/harvesthq/chosen/releases/download/v1.8.7/chosen_v1.8.7.zip",
+            "reference": null,
+            "shasum": null
         },
         "require": {
             "composer/installers": "~1.0"
@@ -9410,7 +9534,9 @@
         "version_normalized": "1.7.0.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/ubilabs/geocomplete/archive/1.7.0.zip"
+            "url": "https://github.com/ubilabs/geocomplete/archive/1.7.0.zip",
+            "reference": null,
+            "shasum": null
         },
         "require": {
             "composer/installers": "~1.0"
@@ -9427,7 +9553,9 @@
         "version_normalized": "0.2.0.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/jeresig/jquery.hotkeys/archive/0.2.0.zip"
+            "url": "https://github.com/jeresig/jquery.hotkeys/archive/0.2.0.zip",
+            "reference": null,
+            "shasum": null
         },
         "require": {
             "composer/installers": "~1.0"
@@ -9444,7 +9572,9 @@
         "version_normalized": "1.0.2.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/fronteed/icheck/archive/1.0.2.zip"
+            "url": "https://github.com/fronteed/icheck/archive/1.0.2.zip",
+            "reference": null,
+            "shasum": null
         },
         "require": {
             "composer/installers": "~1.0"
@@ -9461,7 +9591,9 @@
         "version_normalized": "0.3.1.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/rvera/image-picker/archive/0.3.1.zip"
+            "url": "https://github.com/rvera/image-picker/archive/0.3.1.zip",
+            "reference": null,
+            "shasum": null
         },
         "require": {
             "composer/installers": "~1.0"
@@ -9478,7 +9610,9 @@
         "version_normalized": "5.0.3.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/RobinHerbots/jquery.inputmask/archive/5.0.3.zip"
+            "url": "https://github.com/RobinHerbots/jquery.inputmask/archive/5.0.3.zip",
+            "reference": null,
+            "shasum": null
         },
         "require": {
             "composer/installers": "~1.0"
@@ -9495,7 +9629,9 @@
         "version_normalized": "16.1.0.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/jackocnr/intl-tel-input/archive/v16.1.0.zip"
+            "url": "https://github.com/jackocnr/intl-tel-input/archive/v16.1.0.zip",
+            "reference": null,
+            "shasum": null
         },
         "require": {
             "composer/installers": "~1.0"
@@ -9512,7 +9648,9 @@
         "version_normalized": "1.1.3.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/gjunge/rateit.js/archive/1.1.3.zip"
+            "url": "https://github.com/gjunge/rateit.js/archive/1.1.3.zip",
+            "reference": null,
+            "shasum": null
         },
         "require": {
             "composer/installers": "~1.0"
@@ -9529,7 +9667,9 @@
         "version_normalized": "4.0.13.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/select2/select2/archive/4.0.13.zip"
+            "url": "https://github.com/select2/select2/archive/4.0.13.zip",
+            "reference": null,
+            "shasum": null
         },
         "require": {
             "composer/installers": "~1.0"
@@ -9546,7 +9686,9 @@
         "version_normalized": "0.9.0.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/ractoon/jQuery-Text-Counter/archive/0.9.0.zip"
+            "url": "https://github.com/ractoon/jQuery-Text-Counter/archive/0.9.0.zip",
+            "reference": null,
+            "shasum": null
         },
         "require": {
             "composer/installers": "~1.0"
@@ -9563,7 +9705,9 @@
         "version_normalized": "1.13.10.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/jonthornton/jquery-timepicker/archive/1.13.10.zip"
+            "url": "https://github.com/jonthornton/jquery-timepicker/archive/1.13.10.zip",
+            "reference": null,
+            "shasum": null
         },
         "require": {
             "composer/installers": "~1.0"
@@ -9580,7 +9724,9 @@
         "version_normalized": "4.0.0.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/simontabor/jquery-toggles/archive/v4.0.0.zip"
+            "url": "https://github.com/simontabor/jquery-toggles/archive/v4.0.0.zip",
+            "reference": null,
+            "shasum": null
         },
         "require": {
             "composer/installers": "~1.0"
@@ -9598,7 +9744,8 @@
         "dist": {
             "type": "path",
             "url": "web/modules/custom/custom_module",
-            "reference": "49032fd8ff10ff832d973be3adda1f46e1ba435c"
+            "reference": "49032fd8ff10ff832d973be3adda1f46e1ba435c",
+            "shasum": null
         },
         "type": "drupal-custom-module",
         "installation-source": "dist",
@@ -9614,7 +9761,8 @@
         "dist": {
             "type": "path",
             "url": "web/modules/custom/kwall_share_bar",
-            "reference": "6608d053492d0b482c30381009a0bdb5eaded7e6"
+            "reference": "6608d053492d0b482c30381009a0bdb5eaded7e6",
+            "shasum": null
         },
         "type": "drupal-custom-module",
         "installation-source": "dist",
@@ -9939,12 +10087,6 @@
             "autoloading",
             "laminas",
             "zf"
-        ],
-        "funding": [
-            {
-                "url": "https://funding.communitybridge.org/projects/laminas-project",
-                "type": "community_bridge"
-            }
         ]
     },
     {
@@ -10132,12 +10274,6 @@
         "keywords": [
             "stream",
             "zip"
-        ],
-        "funding": [
-            {
-                "url": "https://opencollective.com/zipstream",
-                "type": "open_collective"
-            }
         ]
     },
     {
@@ -10213,7 +10349,9 @@
         "version_normalized": "0.7.2.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/liabru/jquery-match-height/archive/0.7.2.zip"
+            "url": "https://github.com/liabru/jquery-match-height/archive/0.7.2.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -10224,7 +10362,9 @@
         "version_normalized": "3.0.6.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/metafizzy/isotope/archive/v3.0.6.zip"
+            "url": "https://github.com/metafizzy/isotope/archive/v3.0.6.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -10337,7 +10477,9 @@
         "version_normalized": "1.4.12.0",
         "dist": {
             "type": "tar",
-            "url": "https://registry.npmjs.org/ace-builds/-/ace-builds-1.4.12.tgz"
+            "url": "https://registry.npmjs.org/ace-builds/-/ace-builds-1.4.12.tgz",
+            "reference": null,
+            "shasum": null
         },
         "type": "npm-asset",
         "installation-source": "dist",
@@ -10351,7 +10493,9 @@
         "version_normalized": "3.2.0.0",
         "dist": {
             "type": "tar",
-            "url": "https://registry.npmjs.org/fontawesome-iconpicker/-/fontawesome-iconpicker-3.2.0.tgz"
+            "url": "https://registry.npmjs.org/fontawesome-iconpicker/-/fontawesome-iconpicker-3.2.0.tgz",
+            "reference": null,
+            "shasum": null
         },
         "type": "npm-asset",
         "installation-source": "dist",
@@ -10409,7 +10553,9 @@
         "version_normalized": "1.4.2.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/oriongunning/gridder/archive/v1.4.2.zip"
+            "url": "https://github.com/oriongunning/gridder/archive/v1.4.2.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -10857,13 +11003,7 @@
                 "name": "Brent R. Matzelle"
             }
         ],
-        "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
-        "funding": [
-            {
-                "url": "https://github.com/synchro",
-                "type": "github"
-            }
-        ]
+        "description": "PHPMailer is a full-featured email creation and transfer class for PHP"
     },
     {
         "name": "places",
@@ -10871,7 +11011,9 @@
         "version_normalized": "1.15.0.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/algolia/places/archive/v1.15.0.zip"
+            "url": "https://github.com/algolia/places/archive/v1.15.0.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -10882,7 +11024,9 @@
         "version_normalized": "1.2.0.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/NigelOToole/progress-tracker/archive/v1.2.0.zip"
+            "url": "https://github.com/NigelOToole/progress-tracker/archive/v1.2.0.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -10893,7 +11037,9 @@
         "version_normalized": "1.4.0.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/NigelOToole/progress-tracker/archive/v1.4.0.zip"
+            "url": "https://github.com/NigelOToole/progress-tracker/archive/v1.4.0.zip",
+            "reference": null,
+            "shasum": null
         },
         "require": {
             "composer/installers": "~1.0"
@@ -11419,7 +11565,9 @@
         "version_normalized": "2.3.0.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/szimek/signature_pad/archive/v2.3.0.zip"
+            "url": "https://github.com/szimek/signature_pad/archive/v2.3.0.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -11430,7 +11578,9 @@
         "version_normalized": "2.3.0.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/szimek/signature_pad/archive/v2.3.0.zip"
+            "url": "https://github.com/szimek/signature_pad/archive/v2.3.0.zip",
+            "reference": null,
+            "shasum": null
         },
         "require": {
             "composer/installers": "~1.0"
@@ -13105,7 +13255,9 @@
         "version_normalized": "1.8.1.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/kenwheeler/slick/archive/v1.8.1.zip"
+            "url": "https://github.com/kenwheeler/slick/archive/v1.8.1.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "drupal-library",
         "installation-source": "dist"
@@ -13275,7 +13427,9 @@
         "version_normalized": "3.6.1.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/ariutta/svg-pan-zoom/archive/3.6.1.zip"
+            "url": "https://github.com/ariutta/svg-pan-zoom/archive/3.6.1.zip",
+            "reference": null,
+            "shasum": null
         },
         "require": {
             "composer/installers": "~1.0"
@@ -13403,21 +13557,7 @@
             }
         ],
         "description": "Symfony ClassLoader Component",
-        "homepage": "https://symfony.com",
-        "funding": [
-            {
-                "url": "https://symfony.com/sponsor",
-                "type": "custom"
-            },
-            {
-                "url": "https://github.com/fabpot",
-                "type": "github"
-            },
-            {
-                "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                "type": "tidelift"
-            }
-        ]
+        "homepage": "https://symfony.com"
     },
     {
         "name": "symfony/config",
@@ -13557,21 +13697,7 @@
             }
         ],
         "description": "Symfony Console Component",
-        "homepage": "https://symfony.com",
-        "funding": [
-            {
-                "url": "https://symfony.com/sponsor",
-                "type": "custom"
-            },
-            {
-                "url": "https://github.com/fabpot",
-                "type": "github"
-            },
-            {
-                "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                "type": "tidelift"
-            }
-        ]
+        "homepage": "https://symfony.com"
     },
     {
         "name": "symfony/contracts",
@@ -13654,20 +13780,6 @@
             "interfaces",
             "interoperability",
             "standards"
-        ],
-        "funding": [
-            {
-                "url": "https://symfony.com/sponsor",
-                "type": "custom"
-            },
-            {
-                "url": "https://github.com/fabpot",
-                "type": "github"
-            },
-            {
-                "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                "type": "tidelift"
-            }
         ]
     },
     {
@@ -13781,21 +13893,7 @@
             }
         ],
         "description": "Symfony Debug Component",
-        "homepage": "https://symfony.com",
-        "funding": [
-            {
-                "url": "https://symfony.com/sponsor",
-                "type": "custom"
-            },
-            {
-                "url": "https://github.com/fabpot",
-                "type": "github"
-            },
-            {
-                "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                "type": "tidelift"
-            }
-        ]
+        "homepage": "https://symfony.com"
     },
     {
         "name": "symfony/dependency-injection",
@@ -13868,21 +13966,7 @@
             }
         ],
         "description": "Symfony DependencyInjection Component",
-        "homepage": "https://symfony.com",
-        "funding": [
-            {
-                "url": "https://symfony.com/sponsor",
-                "type": "custom"
-            },
-            {
-                "url": "https://github.com/fabpot",
-                "type": "github"
-            },
-            {
-                "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                "type": "tidelift"
-            }
-        ]
+        "homepage": "https://symfony.com"
     },
     {
         "name": "symfony/dom-crawler",
@@ -14006,21 +14090,7 @@
             }
         ],
         "description": "Symfony EventDispatcher Component",
-        "homepage": "https://symfony.com",
-        "funding": [
-            {
-                "url": "https://symfony.com/sponsor",
-                "type": "custom"
-            },
-            {
-                "url": "https://github.com/fabpot",
-                "type": "github"
-            },
-            {
-                "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                "type": "tidelift"
-            }
-        ]
+        "homepage": "https://symfony.com"
     },
     {
         "name": "symfony/filesystem",
@@ -14072,21 +14142,7 @@
             }
         ],
         "description": "Symfony Filesystem Component",
-        "homepage": "https://symfony.com",
-        "funding": [
-            {
-                "url": "https://symfony.com/sponsor",
-                "type": "custom"
-            },
-            {
-                "url": "https://github.com/fabpot",
-                "type": "github"
-            },
-            {
-                "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                "type": "tidelift"
-            }
-        ]
+        "homepage": "https://symfony.com"
     },
     {
         "name": "symfony/finder",
@@ -14137,21 +14193,7 @@
             }
         ],
         "description": "Symfony Finder Component",
-        "homepage": "https://symfony.com",
-        "funding": [
-            {
-                "url": "https://symfony.com/sponsor",
-                "type": "custom"
-            },
-            {
-                "url": "https://github.com/fabpot",
-                "type": "github"
-            },
-            {
-                "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                "type": "tidelift"
-            }
-        ]
+        "homepage": "https://symfony.com"
     },
     {
         "name": "symfony/http-foundation",
@@ -14207,21 +14249,7 @@
             }
         ],
         "description": "Symfony HttpFoundation Component",
-        "homepage": "https://symfony.com",
-        "funding": [
-            {
-                "url": "https://symfony.com/sponsor",
-                "type": "custom"
-            },
-            {
-                "url": "https://github.com/fabpot",
-                "type": "github"
-            },
-            {
-                "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                "type": "tidelift"
-            }
-        ]
+        "homepage": "https://symfony.com"
     },
     {
         "name": "symfony/http-kernel",
@@ -14313,21 +14341,7 @@
             }
         ],
         "description": "Symfony HttpKernel Component",
-        "homepage": "https://symfony.com",
-        "funding": [
-            {
-                "url": "https://symfony.com/sponsor",
-                "type": "custom"
-            },
-            {
-                "url": "https://github.com/fabpot",
-                "type": "github"
-            },
-            {
-                "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                "type": "tidelift"
-            }
-        ]
+        "homepage": "https://symfony.com"
     },
     {
         "name": "symfony/polyfill-ctype",
@@ -14387,20 +14401,6 @@
             "ctype",
             "polyfill",
             "portable"
-        ],
-        "funding": [
-            {
-                "url": "https://symfony.com/sponsor",
-                "type": "custom"
-            },
-            {
-                "url": "https://github.com/fabpot",
-                "type": "github"
-            },
-            {
-                "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                "type": "tidelift"
-            }
         ]
     },
     {
@@ -14462,20 +14462,6 @@
             "polyfill",
             "portable",
             "shim"
-        ],
-        "funding": [
-            {
-                "url": "https://symfony.com/sponsor",
-                "type": "custom"
-            },
-            {
-                "url": "https://github.com/fabpot",
-                "type": "github"
-            },
-            {
-                "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                "type": "tidelift"
-            }
         ]
     },
     {
@@ -14540,20 +14526,6 @@
             "polyfill",
             "portable",
             "shim"
-        ],
-        "funding": [
-            {
-                "url": "https://symfony.com/sponsor",
-                "type": "custom"
-            },
-            {
-                "url": "https://github.com/fabpot",
-                "type": "github"
-            },
-            {
-                "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                "type": "tidelift"
-            }
         ]
     },
     {
@@ -14615,20 +14587,6 @@
             "polyfill",
             "portable",
             "shim"
-        ],
-        "funding": [
-            {
-                "url": "https://symfony.com/sponsor",
-                "type": "custom"
-            },
-            {
-                "url": "https://github.com/fabpot",
-                "type": "github"
-            },
-            {
-                "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                "type": "tidelift"
-            }
         ]
     },
     {
@@ -14687,20 +14645,6 @@
             "polyfill",
             "portable",
             "shim"
-        ],
-        "funding": [
-            {
-                "url": "https://symfony.com/sponsor",
-                "type": "custom"
-            },
-            {
-                "url": "https://github.com/fabpot",
-                "type": "github"
-            },
-            {
-                "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                "type": "tidelift"
-            }
         ]
     },
     {
@@ -14762,20 +14706,6 @@
             "polyfill",
             "portable",
             "shim"
-        ],
-        "funding": [
-            {
-                "url": "https://symfony.com/sponsor",
-                "type": "custom"
-            },
-            {
-                "url": "https://github.com/fabpot",
-                "type": "github"
-            },
-            {
-                "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                "type": "tidelift"
-            }
         ]
     },
     {
@@ -14833,20 +14763,6 @@
             "polyfill",
             "portable",
             "shim"
-        ],
-        "funding": [
-            {
-                "url": "https://symfony.com/sponsor",
-                "type": "custom"
-            },
-            {
-                "url": "https://github.com/fabpot",
-                "type": "github"
-            },
-            {
-                "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                "type": "tidelift"
-            }
         ]
     },
     {
@@ -14915,20 +14831,6 @@
             "polyfill",
             "portable",
             "shim"
-        ],
-        "funding": [
-            {
-                "url": "https://symfony.com/sponsor",
-                "type": "custom"
-            },
-            {
-                "url": "https://github.com/fabpot",
-                "type": "github"
-            },
-            {
-                "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                "type": "tidelift"
-            }
         ]
     },
     {
@@ -14983,20 +14885,6 @@
             "compatibility",
             "polyfill",
             "shim"
-        ],
-        "funding": [
-            {
-                "url": "https://symfony.com/sponsor",
-                "type": "custom"
-            },
-            {
-                "url": "https://github.com/fabpot",
-                "type": "github"
-            },
-            {
-                "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                "type": "tidelift"
-            }
         ]
     },
     {
@@ -15048,21 +14936,7 @@
             }
         ],
         "description": "Symfony Process Component",
-        "homepage": "https://symfony.com",
-        "funding": [
-            {
-                "url": "https://symfony.com/sponsor",
-                "type": "custom"
-            },
-            {
-                "url": "https://github.com/fabpot",
-                "type": "github"
-            },
-            {
-                "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                "type": "tidelift"
-            }
-        ]
+        "homepage": "https://symfony.com"
     },
     {
         "name": "symfony/psr-http-message-bridge",
@@ -15205,20 +15079,6 @@
             "routing",
             "uri",
             "url"
-        ],
-        "funding": [
-            {
-                "url": "https://symfony.com/sponsor",
-                "type": "custom"
-            },
-            {
-                "url": "https://github.com/fabpot",
-                "type": "github"
-            },
-            {
-                "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                "type": "tidelift"
-            }
         ]
     },
     {
@@ -15300,21 +15160,7 @@
             }
         ],
         "description": "Symfony Serializer Component",
-        "homepage": "https://symfony.com",
-        "funding": [
-            {
-                "url": "https://symfony.com/sponsor",
-                "type": "custom"
-            },
-            {
-                "url": "https://github.com/fabpot",
-                "type": "github"
-            },
-            {
-                "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                "type": "tidelift"
-            }
-        ]
+        "homepage": "https://symfony.com"
     },
     {
         "name": "symfony/translation",
@@ -15386,21 +15232,7 @@
             }
         ],
         "description": "Symfony Translation Component",
-        "homepage": "https://symfony.com",
-        "funding": [
-            {
-                "url": "https://symfony.com/sponsor",
-                "type": "custom"
-            },
-            {
-                "url": "https://github.com/fabpot",
-                "type": "github"
-            },
-            {
-                "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                "type": "tidelift"
-            }
-        ]
+        "homepage": "https://symfony.com"
     },
     {
         "name": "symfony/validator",
@@ -15488,21 +15320,7 @@
             }
         ],
         "description": "Symfony Validator Component",
-        "homepage": "https://symfony.com",
-        "funding": [
-            {
-                "url": "https://symfony.com/sponsor",
-                "type": "custom"
-            },
-            {
-                "url": "https://github.com/fabpot",
-                "type": "github"
-            },
-            {
-                "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                "type": "tidelift"
-            }
-        ]
+        "homepage": "https://symfony.com"
     },
     {
         "name": "symfony/var-dumper",
@@ -15581,20 +15399,6 @@
         "keywords": [
             "debug",
             "dump"
-        ],
-        "funding": [
-            {
-                "url": "https://symfony.com/sponsor",
-                "type": "custom"
-            },
-            {
-                "url": "https://github.com/fabpot",
-                "type": "github"
-            },
-            {
-                "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                "type": "tidelift"
-            }
         ]
     },
     {
@@ -15656,21 +15460,7 @@
             }
         ],
         "description": "Symfony Yaml Component",
-        "homepage": "https://symfony.com",
-        "funding": [
-            {
-                "url": "https://symfony.com/sponsor",
-                "type": "custom"
-            },
-            {
-                "url": "https://github.com/fabpot",
-                "type": "github"
-            },
-            {
-                "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                "type": "tidelift"
-            }
-        ]
+        "homepage": "https://symfony.com"
     },
     {
         "name": "topfloor/composer-cleanup-vcs-dirs",
@@ -15950,16 +15740,6 @@
             "dotenv",
             "env",
             "environment"
-        ],
-        "funding": [
-            {
-                "url": "https://github.com/GrahamCampbell",
-                "type": "github"
-            },
-            {
-                "url": "https://tidelift.com/funding/github/packagist/vlucas/phpdotenv",
-                "type": "tidelift"
-            }
         ]
     },
     {
@@ -16160,7 +15940,9 @@
         "version_normalized": "2.7.1.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/woocommerce/FlexSlider/archive/2.7.1.zip"
+            "url": "https://github.com/woocommerce/FlexSlider/archive/2.7.1.zip",
+            "reference": null,
+            "shasum": null
         },
         "type": "drupal-library",
         "installation-source": "dist"

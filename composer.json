@@ -109,6 +109,7 @@
         "drupal/search_api": "^1.17",
         "drupal/search_api_solr": "^4.1",
         "drupal/simplesamlphp_auth": "^3.2",
+        "drupal/smtp": "^1.0",
         "drupal/soundcloudfield": "^1.0@alpha",
         "drupal/switch_page_theme": "^1.0",
         "drupal/token": "^1.7",
