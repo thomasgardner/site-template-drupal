@@ -1,0 +1,23 @@
+uuid: 81c517c7-88bc-4d12-9cf2-40ef49862486
+langcode: en
+status: false
+dependencies: {  }
+id: test_subsite
+label: 'Test Subsite'
+description: ''
+folder: ../config/test_subsite
+module: {  }
+theme: {  }
+blacklist:
+  - core.entity_form_display.node.test_content.default
+  - core.entity_view_display.node.test_content.default
+  - core.entity_view_display.node.test_content.teaser
+  - field.field.node.test_content.body
+  - field.field.node.test_content.field_teaser_image
+  - field.field.node.test_content.field_teaser_txt
+  - language.content_settings.node.test_content
+  - node.type.test_content
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: false
+weight: 0
