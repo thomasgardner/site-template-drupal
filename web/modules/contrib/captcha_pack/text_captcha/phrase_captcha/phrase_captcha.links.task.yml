@@ -1,4 +1,0 @@
-phrase_captcha.settings:
-  title: Phrase Captcha
-  route_name: phrase_captcha.settings
-  base_route: captcha_settings

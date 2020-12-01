@@ -1,4 +1,0 @@
-ascii_art_captcha.settings:
-  title: Ascii Art Captcha
-  route_name: ascii_art_captcha.settings
-  base_route: captcha_settings
