@@ -1,0 +1,23 @@
+uuid: 73910a64-a099-4da5-83a2-7aba36749635
+langcode: en
+status: false
+dependencies: {  }
+id: test_blog_feature
+label: 'Test Blog Feature'
+description: ''
+folder: ../config/test_blog_feature
+module: {  }
+theme: {  }
+blacklist:
+  - core.entity_form_display.node.blog_post.default
+  - core.entity_view_display.node.blog_post.default
+  - core.entity_view_display.node.blog_post.teaser
+  - field.field.node.blog_post.body
+  - field.field.node.blog_post.field_teaser_image
+  - field.field.node.blog_post.field_teaser_txt
+  - language.content_settings.node.blog_post
+  - node.type.blog_post
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: false
+weight: 0
